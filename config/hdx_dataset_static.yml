@@ -1,0 +1,8 @@
+license_id: eg. "cc-by-igo"
+subnational: eg. 1  # has to be 0 or 1
+notes: eg. "Contains data from World Health Organization's [data portal](http://www.who.int/gho/en/) covering various indicators (one per resource)."
+caveats: eg. "More details about the indicators are available in the links in the resource descriptions."
+methodology: eg. "Registry"
+dataset_source: eg. "World Health Organization"
+package_creator: eg. "mcarans"
+private: eg. False  # has to be True or False
