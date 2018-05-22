@@ -9,11 +9,11 @@ from os.path import join
 import pytest
 from hdx.hdx_configuration import Configuration
 from hdx.hdx_locations import Locations
-from scrapername import generate_dataset_and_showcase, get_countriesdata
+from wfpfood import generate_dataset_and_showcase, get_countriesdata
 
 
 class TestScraperName:
-    countrydata = {...}
+    countrydata = {}
 
     @pytest.fixture(scope='function')
     def configuration(self):
@@ -39,16 +39,18 @@ class TestScraperName:
                 return response
         return Download()
 
+    #def test_country_load(self):
+
     def test_get_countriesdata(self, downloader):
         countriesdata = get_countriesdata('http://xxx/', downloader)
         assert countriesdata == [TestScraperName.countrydata]
 
     def test_generate_dataset_and_showcase(self, configuration, downloader):
         dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)
-        assert dataset == {...}
+        assert dataset == {}
 
         resources = dataset.get_resources()
-        assert resources == [...]
+        assert resources == []
 
-        assert showcase == {...}
+        assert showcase == {}
 

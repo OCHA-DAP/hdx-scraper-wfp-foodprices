@@ -10,7 +10,7 @@ from os.path import join, expanduser
 from hdx.hdx_configuration import Configuration
 from hdx.utilities.downloader import Download
 
-from scrapername import generate_dataset_and_showcase, get_countriesdata
+from wfpfood import generate_dataset_and_showcase, get_countriesdata
 
 # Remove 2 lines below if you don't want emails when there are errors
 from hdx.facades import logging_kwargs
@@ -31,8 +31,9 @@ def main():
     # The file should contain username:password based64 encoded. Remember to create it on the server eg. ScraperWiki box!
     # If you need to add extra parameters to every url, you can use extra_params_yaml and point to a YAML file with
     # key value pairs. Remember to create it on the server!
-    with Download(basic_auth_file=join(expanduser("~"), '.scrapernamefile'),
-                  extra_params_yaml=join(expanduser("~"), 'scrapernamefile.yml') as downloader:
+    with Download(basic_auth_file=join(expanduser("~"), '.wfpfooduseragent.yml'),
+                  #extra_params_yaml=join(expanduser("~"), 'scrapernamefile.yml')
+                  ) as downloader:
         countriesdata = get_countriesdata(base_url, downloader)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
         for countrydata in countriesdata:
