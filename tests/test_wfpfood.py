@@ -1,18 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 '''
-Unit tests for scrapername.
+Unit tests for wfpfood scraper.
 
 '''
 from os.path import join
 
 import pytest
 from hdx.hdx_configuration import Configuration
-from hdx.hdx_locations import Locations
 from wfpfood import generate_dataset_and_showcase, get_countriesdata
+from hdx.location.country import Country
 
-
-class TestScraperName:
+class TestWfpFood:
     countrydata = {}
 
     @pytest.fixture(scope='function')
@@ -34,23 +33,27 @@ class TestScraperName:
                 response = Response()
                 if url == 'http://xxx':
                     def fn():
-                        return {'key': [TestScraperName.countrydata]}
+                        return {'key': [TestWfpFood.countrydata]}
                     response.json = fn
                 return response
         return Download()
 
     #def test_country_load(self):
 
-    def test_get_countriesdata(self, downloader):
-        countriesdata = get_countriesdata('http://xxx/', downloader)
-        assert countriesdata == [TestScraperName.countrydata]
+    def test_country_conversion(self):
+        assert Country.get_iso3_country_code("Afghanistan") == "AFG"
+        
 
-    def test_generate_dataset_and_showcase(self, configuration, downloader):
-        dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)
-        assert dataset == {}
+#    def test_get_countriesdata(self, downloader):
+#        countriesdata = get_countriesdata('http://xxx/', downloader)
+#        assert countriesdata == [TestWfpFood.countrydata]
 
-        resources = dataset.get_resources()
-        assert resources == []
-
-        assert showcase == {}
+#    def test_generate_dataset_and_showcase(self, configuration, downloader):
+#        dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)
+#        assert dataset == {}
+#
+#        resources = dataset.get_resources()
+#        assert resources == []
+#
+#        assert showcase == {}
 
