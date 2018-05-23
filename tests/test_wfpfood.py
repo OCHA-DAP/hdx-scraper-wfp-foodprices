@@ -12,7 +12,11 @@ from wfpfood import generate_dataset_and_showcase, get_countriesdata
 from hdx.location.country import Country
 
 class TestWfpFood:
-    countrydata = {}
+    countrydata = [
+        ["Afghanistan", "1"],
+        ["Aksai Chin", "2"],
+        ["Albania", "3"]
+    ]
 
     @pytest.fixture(scope='function')
     def configuration(self):
@@ -22,31 +26,22 @@ class TestWfpFood:
 
     @pytest.fixture(scope='function')
     def downloader(self):
-        class Response:
-            @staticmethod
-            def json():
-                pass
-
         class Download:
-            @staticmethod
-            def download(url):
-                response = Response()
+            def get_tabular_rows(self, url, **kwargs):
                 if url == 'http://xxx':
-                    def fn():
-                        return {'key': [TestWfpFood.countrydata]}
-                    response.json = fn
-                return response
+                    return TestWfpFood.countrydata
         return Download()
-
-    #def test_country_load(self):
 
     def test_country_conversion(self):
         assert Country.get_iso3_country_code("Afghanistan") == "AFG"
         
 
-#    def test_get_countriesdata(self, downloader):
-#        countriesdata = get_countriesdata('http://xxx/', downloader)
-#        assert countriesdata == [TestWfpFood.countrydata]
+    def test_get_countriesdata(self, downloader):
+        countriesdata = get_countriesdata('http://xxx', downloader)
+        assert countriesdata == [
+            dict(name="Afghanistan", code="1", iso3="AFG"),
+            dict(name="Albania",     code="3", iso3="ALB")
+        ]
 
 #    def test_generate_dataset_and_showcase(self, configuration, downloader):
 #        dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)
