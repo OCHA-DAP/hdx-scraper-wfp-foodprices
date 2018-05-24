@@ -66,6 +66,7 @@ def months_between(fromdate,todate):
             d=datetime.date(year=year,month=month,day=d.day)
 
 def read_flattened_data(wfpfood_url, downloader, countrydata):
+    logging.debug("Start reading %s data"%countrydata["name"])
     url = wfpfood_url + countrydata['code']
     for row in downloader.get_tabular_rows(url,file_type='json',dict_rows=True,headers=1):
         dates =list(months_between(row["startdate"],row["enddate"]))
@@ -79,6 +80,7 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
                     {key:value for key, value in row.items() if key not in ("startdate","enddate","mp_price")},
                     date = date,
                     price = float(price))
+    logging.debug("Finished reading %s data"%countrydata["name"])
 
 def flattened_data_to_dataframe(data):
     column_definition="""date  #date
@@ -97,13 +99,10 @@ def flattened_data_to_dataframe(data):
     catid
     sn
     default """.split('\n')
+
     columns = [x.split()[0] for x in column_definition]
-    hxl     = [" ".join(x.split()[1:]) for x in column_definition]
-    df = pd.DataFrame(data=[hxl],columns=columns)
-    for row in data:
-        #df.loc[df.shape[0]] = row
-        df=df.append(row,ignore_index=True)
-    return df
+    hxl     = {x.split()[0]:" ".join(x.split()[1:]) for x in column_definition}
+    return pd.DataFrame(data=[hxl] + list(data),columns=columns)
 
 def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     """Parse json of the form:

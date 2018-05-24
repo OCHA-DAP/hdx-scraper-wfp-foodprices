@@ -22,7 +22,6 @@ from hdx.facades.simple import facade
 
 logger = logging.getLogger(__name__)
 
-
 def main():
     """Generate dataset and create it in HDX"""
 
@@ -39,9 +38,9 @@ def main():
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
         for countrydata in countriesdata:
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata)
-#            if dataset:
-#                dataset.update_from_yaml()
-#                dataset.create_in_hdx()
+            if dataset:
+                dataset.update_from_yaml()
+                dataset.create_in_hdx()
 #                showcase.create_in_hdx()
 #                showcase.add_dataset(dataset)
 
