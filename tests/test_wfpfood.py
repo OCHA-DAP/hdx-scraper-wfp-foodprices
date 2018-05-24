@@ -8,7 +8,7 @@ from os.path import join
 
 import pytest
 from hdx.hdx_configuration import Configuration
-from wfpfood import generate_dataset_and_showcase, get_countriesdata
+from wfpfood import *
 from hdx.location.country import Country
 
 class TestWfpFood:
@@ -42,6 +42,11 @@ class TestWfpFood:
             dict(name="Afghanistan", code="1", iso3="AFG"),
             dict(name="Albania",     code="3", iso3="ALB")
         ]
+
+    def test_months_between(self):
+        assert [] == list(months_between("2008/05/01", "2008/04/01"))
+        assert ["2008-05-01"] == list(months_between("2008/05/01", "2008/05/01"))
+        assert ["2008-05-01","2008-06-01","2008-07-01","2008-08-01"] == list(months_between("2008/05/01", "2008/08/01"))
 
 #    def test_generate_dataset_and_showcase(self, configuration, downloader):
 #        dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)

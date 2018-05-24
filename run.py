@@ -30,7 +30,6 @@ def main():
 
     countries_url = config['countries_url']
     wfpfood_url   = config['wfpfood_url']
-    hxlproxy_url  = config['hxlproxy_url']
     # If website being scraped requires username and password, you can supply one in a file in your home directory.
     # The file should contain username:password based64 encoded. Remember to create it on the server eg. ScraperWiki box!
     # If you need to add extra parameters to every url, you can use extra_params_yaml and point to a YAML file with
@@ -39,7 +38,7 @@ def main():
         countriesdata = get_countriesdata(countries_url, downloader)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
         for countrydata in countriesdata:
-            dataset, showcase = generate_dataset_and_showcase(wfpfood_url, hxlproxy_url, downloader, countrydata)
+            dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata)
             if dataset:
                 dataset.update_from_yaml()
                 dataset.create_in_hdx()

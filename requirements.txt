@@ -1,3 +1,4 @@
 awesome-slugify==1.6.5
 # Update version below to latest from https://pypi.python.org/pypi/hdx-python-api/
 hdx-python-api==2.9.9
+pandas==0.20.3

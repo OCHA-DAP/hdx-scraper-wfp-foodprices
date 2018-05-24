@@ -1,4 +1,3 @@
 # Collector specific configuration
 wfpfood_url: "http://dataviz.vam.wfp.org/api/getfoodprices?ac="
 countries_url: "http://vam.wfp.org/sites/data/api/adm0code.csv"
-hxlproxy_url: "https://data.humdata.org/hxlproxy/data.csv?"
