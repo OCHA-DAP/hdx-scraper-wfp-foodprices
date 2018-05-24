@@ -82,15 +82,15 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
 
 def flattened_data_to_dataframe(data):
     column_definition="""date  #date
-    cmname    #name +commodity
-    unit
-    category
-    price
-    currency
+    cmname    #item +commodity
+    unit      
+    category  #name +category
+    price     #value +commodity +price
+    currency  #currency
     admname   #adm1 +name
     adm1id    #adm1 +code
-    mktname
-    mktid
+    mktname   #name +market
+    mktid     
     cmid
     ptid
     umid
@@ -130,7 +130,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         'name': slugified_name,
         'title': title,
     })
-#    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b")
+#    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
     dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 

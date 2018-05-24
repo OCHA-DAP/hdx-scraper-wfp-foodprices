@@ -1,3 +1,6 @@
 # Collector specific configuration
-wfpfood_url: "http://dataviz.vam.wfp.org/api/getfoodprices?ac="
-countries_url: "http://vam.wfp.org/sites/data/api/adm0code.csv"
+#wfpfood_url: "http://dataviz.vam.wfp.org/api/getfoodprices?ac="
+#countries_url: "http://vam.wfp.org/sites/data/api/adm0code.csv"
+
+wfpfood_url:   "file:///home/orest/spyder-workspace/hdx/hdxscraper-wfp-food-prices/local/"
+countries_url: "file:///home/orest/spyder-workspace/hdx/hdxscraper-wfp-food-prices/local/adm0code.csv"
