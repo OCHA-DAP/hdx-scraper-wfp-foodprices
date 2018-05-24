@@ -4,27 +4,21 @@
 WFP food prices:
 ------------
 
-Creates a proxy to the WFP food prices dataset. 
+Creates datasets with flattened tables of WFP food prices.
 
 """
 
 import logging
-from urllib.parse import quote_plus
 
 from hdx.data.dataset import Dataset
-from hdx.data.resource_view import ResourceView
-from hdx.data.hdxobject import HDXError
+from hdx.data.resource import Resource
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
-#from hdx.utilities.location import Location
 from slugify import slugify
 import pandas as pd
 
 logger = logging.getLogger(__name__)
 
-hxlate = '&name=ACLEDHXL&tagger-match-all=on&tagger-02-header=iso&tagger-02-tag=%23country%2Bcode&tagger-03-header=event_id_cnty&tagger-03-tag=%23event%2Bcode&tagger-05-header=event_date&tagger-05-tag=%23date%2Boccurred+&tagger-08-header=event_type&tagger-08-tag=%23event%2Btype&tagger-09-header=actor1&tagger-09-tag=%23group%2Bname%2Bfirst&tagger-10-header=assoc_actor_1&tagger-10-tag=%23group%2Bname%2Bfirst%2Bassoc&tagger-12-header=actor2&tagger-12-tag=%23group%2Bname%2Bsecond&tagger-13-header=assoc_actor_2&tagger-13-tag=%23group%2Bname%2Bsecond%2Bassoc&tagger-16-header=region&tagger-16-tag=%23region%2Bname&tagger-17-header=country&tagger-17-tag=%23country%2Bname&tagger-18-header=admin1&tagger-18-tag=%23adm1%2Bname&tagger-19-header=admin2&tagger-19-tag=%23adm2%2Bname&tagger-20-header=admin3&tagger-20-tag=%23adm3%2Bname&tagger-21-header=location&tagger-21-tag=%23loc%2Bname&tagger-22-header=latitude&tagger-22-tag=%23geo%2Blat&tagger-23-header=longitude&tagger-23-tag=%23geo%2Blon&tagger-25-header=source&tagger-25-tag=%23meta%2Bsource&tagger-27-header=notes&tagger-27-tag=%23description&tagger-28-header=fatalities&tagger-28-tag=%23affected%2Bkilled&header-row=1'
-urlexample = "https://proxy.hxlstandard.org/data.csv?tagger-match-all=on&tagger-01-header=currency&tagger-01-tag=%23x_currency&tagger-02-header=startdate&tagger-02-tag=%23date+%2Bstart&tagger-03-header=enddate&tagger-03-tag=%23date+%2Bend&url=http%3A%2F%2Fdataviz.vam.wfp.org%2Fapi%2Fgetfoodprices%3Fac%3D1&header-row=1"
-hxlate = "&tagger-match-all=on&tagger-01-header=currency&tagger-01-tag=%23x_currency&tagger-02-header=startdate&tagger-02-tag=%23date+%2Bstart&tagger-03-header=enddate&tagger-03-tag=%23date+%2Bend&header-row=1"
 
 def get_countriesdata(countries_url, downloader):
     countries=[]
@@ -87,15 +81,15 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
                     price = float(price))
 
 def flattened_data_to_dataframe(data):
-    column_definition="""date  #date,
+    column_definition="""date  #date
     cmname    #name +commodity
     unit
     category
     price
     currency
+    admname   #adm1 +name
+    adm1id    #adm1 +code
     mktname
-    admname
-    adm1id
     mktid
     cmid
     ptid
@@ -131,25 +125,25 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         'name': slugified_name,
         'title': title,
     })
-    dataset.set_maintainer()
-    dataset.set_organization()
-    dataset.set_dataset_date()
-    dataset.set_expected_update_frequency()
-    dataset.add_country_location(countrydata["iso3"])
-    dataset.add_tags([])
+    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b")
+    dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
-    resource = {
+    dataset.set_dataset_date(df.ix[1:].date.min(),df.ix[1:].date.max(),"%Y-%m-%d")
+    dataset.set_expected_update_frequency("weekly")
+    dataset.add_country_location(countrydata["name"])
+    dataset.add_tags(["food","prices","wages"])
+
+    resource = Resource({
         'name': title,
-        'url': None,
-        'description': None
-    }
+        'description': "Food prices data with HXL tags"
+    })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
     dataset.add_update_resource(resource)
 
     showcase = Showcase({
         'name': '%s-showcase' % slugified_name,
-        'title': None,
+        'title': title+" showcase",
         'notes': None,
         'url': None,
         'image_url': None
