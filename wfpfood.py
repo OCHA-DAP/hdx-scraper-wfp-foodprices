@@ -95,13 +95,14 @@ def flattened_data_to_dataframe(data):
     ptid
     umid
     catid
-    sn                                    """.split('\n')
+    sn
+    default """.split('\n')
     columns = [x.split()[0] for x in column_definition]
     hxl     = [" ".join(x.split()[1:]) for x in column_definition]
     df = pd.DataFrame(data=[hxl],columns=columns)
     for row in data:
-        df.loc[df.shape[0]] = row
-        #df=df.append(row,ignore_index=True)
+        #df.loc[df.shape[0]] = row
+        df=df.append(row,ignore_index=True)
     return df
 
 def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
@@ -118,6 +119,10 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         read_flattened_data(wfpfood_url, downloader, countrydata)
     )
 
+    if len(df)<=1:
+        logger.warning('Dataset "%s" is empty' % title)
+        return None, None
+
     file_csv = "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-")
     df.to_csv(file_csv,index=False)
 
@@ -125,7 +130,8 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         'name': slugified_name,
         'title': title,
     })
-    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b")
+#    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b")
+    dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
     dataset.set_dataset_date(df.ix[1:].date.min(),df.ix[1:].date.max(),"%Y-%m-%d")
