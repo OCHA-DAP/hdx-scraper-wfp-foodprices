@@ -1,27 +1,13 @@
-### Template Usage
+### WFP Food Prices Scraper
 
-Replace scrapername everywhere with your scraper's name eg. worldbank
-Replace ScraperName everywhere with your scraper's name eg. World Bank
-Look for xxx and ... and replace add text accordingly.
-
-Scrapers can be installed on QuickCode and set up to run on a schedule 
+Scrapers can be installed on QuickCode and set up to run on a schedule
 using the command in the file "crontab".
 
-Collector designed to collect ScraperName datasets from the [ScraperName](http://) website.
+Collector designed to collect WFP Food Prices datasets from the [WFP](http://dataviz.vam.wfp.org/) website
+via provided [API](http://dataviz.vam.wfp.org/api/getfoodprices?ac=1)
 
-For full scrapers following this template see:
-[ACLED](https://github.com/OCHA-DAP/hdxscraper-acled-africa),
-[FTS](https://github.com/OCHA-DAP/hdxscraper-fts),
-[WHO](https://github.com/OCHA-DAP/hdxscraper-who),
-[World Bank](https://github.com/OCHA-DAP/hdxscraper-worldbank),
-[WorldPop](https://github.com/OCHA-DAP/hdxscraper-worldpop)
-
-For a scraper that also creates datasets disaggregated by indicator (not just country) and
-reads metadata from a Google spreadsheet exported as csv, see:
-[IDMC](https://github.com/OCHA-DAP/hdxscraper-idmc)
-
-### Collector for ScraperName's Datasets
-[![Build Status](https://travis-ci.org/OCHA-DAP/hdxscraper-scrapername.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdxscraper-scrapername) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdxscraper-scrapername/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdxscraper-scrapername?branch=master)
+### Collector for WFP Food Prices's Datasets
+[![Build Status](https://travis-ci.org/OCHA-DAP/hdxscraper-wfp-food-prices.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdxscraper-wfp-food-prices) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdxscraper-wfp-food-prices/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdxscraper-wfp-food-prices?branch=master)
 
 ### Usage
 python run.py

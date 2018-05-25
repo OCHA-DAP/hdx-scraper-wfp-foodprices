@@ -84,20 +84,20 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
 
 def flattened_data_to_dataframe(data):
     column_definition="""date  #date
-    cmname    #item +commodity
-    unit      
-    category  #name +category
+    cmname    #item +commodity +name
+    unit      #item +commodity +unit
+    category  #item +commodity +type
     price     #value +commodity +price
-    currency  #currency
+    currency  #currency +commodity +price
     admname   #adm1 +name
     adm1id    #adm1 +code
     mktname   #name +market
-    mktid     
-    cmid
+    mktid     #name 
+    cmid      #item +commodity +code
     ptid
     umid
-    catid
-    sn
+    catid     #item +commodity +type +code
+    sn        #meta +id
     default """.split('\n')
 
     columns = [x.split()[0] for x in column_definition]

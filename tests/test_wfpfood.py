@@ -48,12 +48,3 @@ class TestWfpFood:
         assert ["2008-05-01"] == list(months_between("2008/05/01", "2008/05/01"))
         assert ["2008-05-01","2008-06-01","2008-07-01","2008-08-01"] == list(months_between("2008/05/01", "2008/08/01"))
 
-#    def test_generate_dataset_and_showcase(self, configuration, downloader):
-#        dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)
-#        assert dataset == {}
-#
-#        resources = dataset.get_resources()
-#        assert resources == []
-#
-#        assert showcase == {}
-
