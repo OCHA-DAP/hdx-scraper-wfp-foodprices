@@ -83,7 +83,7 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
     logging.debug("Finished reading %s data"%countrydata["name"])
 
 def flattened_data_to_dataframe(data):
-    column_definition=""" #date
+    column_definition="""date #date
   cmname    #item+name
   unit      #item+unit
   category  #item+type
