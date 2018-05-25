@@ -83,22 +83,22 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
     logging.debug("Finished reading %s data"%countrydata["name"])
 
 def flattened_data_to_dataframe(data):
-    column_definition="""date  #date
-    cmname    #item +commodity +name
-    unit      #item +commodity +unit
-    category  #item +commodity +type
-    price     #value +commodity +price
-    currency  #currency +commodity +price
-    admname   #adm1 +name
-    adm1id    #adm1 +code
-    mktname   #name +market
-    mktid     #name 
-    cmid      #item +commodity +code
-    ptid
-    umid
-    catid     #item +commodity +type +code
-    sn        #meta +id
-    default """.split('\n')
+    column_definition=""" #date
+  cmname    #item+name
+  unit      #item+unit
+  category  #item+type
+  price     #value
+  currency  #currency
+  admname   #adm1+name
+  adm1id    #adm1+code
+  mktname   #name+market
+  mktid     
+  cmid      #item+code
+  ptid
+  umid
+  catid     #item+type+code
+  sn        #meta+id
+  default   """.split('\n')
 
     columns = [x.split()[0] for x in column_definition]
     hxl     = {x.split()[0]:" ".join(x.split()[1:]) for x in column_definition}
