@@ -153,5 +153,5 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         'url': "http://dataviz.vam.wfp.org/economic_explorer/prices",
         'image_url': None
     })
-    showcase.add_tags([])
+    showcase.add_tags(["food","prices","wages"])
     return dataset, showcase
