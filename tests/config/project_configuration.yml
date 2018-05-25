@@ -1,4 +1,4 @@
 # Collector specific configuration
-wfpfood_url:   "file:///home/orest/spyder-workspace/hdx/hdxscraper-wfp-food-prices/local/"
-countries_url: "file:///home/orest/spyder-workspace/hdx/hdxscraper-wfp-food-prices/local/adm0code.csv"
+wfpfood_url:   "http://yyy?ac="
+countries_url: "http://xxx"
 
