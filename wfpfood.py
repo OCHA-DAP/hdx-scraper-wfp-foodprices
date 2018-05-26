@@ -20,25 +20,32 @@ import pandas as pd
 logger = logging.getLogger(__name__)
 
 
-def get_countriesdata(countries_url, downloader):
-    countries=[]
+def get_countriesdata(countries_url, downloader, country_correspondence):
+    countries={}
     unknown=[]
 
 
     for row in downloader.get_tabular_rows(countries_url, dict_rows=False, headers=1, format='csv'):
         name = row[0]
+        sub_name = name
         code = row[1]
+        new_wfp_countries=[dict(name=sub_name,code=code)]
         iso3, fuzzy = Country.get_iso3_country_code_fuzzy(name)
         if iso3 is None:
-            unknown.append(name)
-        else:
-            countries.append(dict(name=name, code=code, iso3=iso3))
+            name = country_correspondence.get(sub_name)
+            if name is None:
+                unknown.append(sub_name)
+                continue
+            else:
+                iso3, fuzzy = Country.get_iso3_country_code_fuzzy(name)
+
+        countries[iso3] = countries.get(iso3,dict(name=name,iso3=iso3,wfp_countries=[]))
+        countries[iso3]["wfp_countries"] = countries[iso3]["wfp_countries"] + new_wfp_countries
 
     if len(unknown):
         logger.warning("Some countries were not recognized and are ignored:\n"+",\n".join(unknown))
 
-
-    return countries
+    return [countries[iso3] for name, iso3 in sorted([(x["name"],x["iso3"]) for x in countries.values()])]
 
 def months_between(fromdate,todate):
     """Returns an iterator of iso-formatted dates between fromdate and todate (inclusive) with the step of 1 month."""
@@ -66,21 +73,22 @@ def months_between(fromdate,todate):
             d=datetime.date(year=year,month=month,day=d.day)
 
 def read_flattened_data(wfpfood_url, downloader, countrydata):
-    logging.debug("Start reading %s data"%countrydata["name"])
-    url = wfpfood_url + countrydata['code']
-    for row in downloader.get_tabular_rows(url,file_type='json',dict_rows=True,headers=1):
-        dates =list(months_between(row["startdate"],row["enddate"]))
-        if len(dates)!=len(row["mp_price"]):
-            logging.warning("Number of prices %d does not match with number of expected dates (%d) between %s and %s"%(
-                len(dates),len(row["mp_price"]),row["startdate"],row["enddate"]
-            ))
-        for date, price in zip(dates,row["mp_price"]):
-            if price is not None:
-                yield dict(
-                    {key:value for key, value in row.items() if key not in ("startdate","enddate","mp_price")},
-                    date = date,
-                    price = float(price))
-    logging.debug("Finished reading %s data"%countrydata["name"])
+    for wfp_countrydata in countrydata["wfp_countries"]:
+        logging.debug("Start reading %s data"%countrydata["name"])
+        url = wfpfood_url + wfp_countrydata['code']
+        for row in downloader.get_tabular_rows(url,file_type='json',dict_rows=True,headers=1):
+            dates =list(months_between(row["startdate"],row["enddate"]))
+            if len(dates)!=len(row["mp_price"]):
+                logging.warning("Number of prices %d does not match with number of expected dates (%d) between %s and %s"%(
+                    len(dates),len(row["mp_price"]),row["startdate"],row["enddate"]
+                ))
+            for date, price in zip(dates,row["mp_price"]):
+                if price is not None:
+                    yield dict(
+                        {key:value for key, value in row.items() if key not in ("startdate","enddate","mp_price")},
+                        date = date,
+                        price = float(price))
+        logging.debug("Finished reading %s data"%countrydata["name"])
 
 def flattened_data_to_dataframe(data):
     column_definition="""date #date

@@ -15,9 +15,20 @@ from hdx.location.country import Country
 class TestWfpFood:
     countrydata = [
         ["Afghanistan", "1"],
-        ["Aksai Chin", "2"],
-        ["Albania", "3"]
+        ["Aksai Chin",  "2"],
+        ["Albania",     "3"]
     ]
+    countrydata1 = [
+        ["Afghanistan", "1"],
+        ["Aksai Chin",  "2"],
+        ["Albania",     "3"],
+        ["China",       "4"]
+    ]
+
+    country_correspondence = {
+        "Aksai Chin" : "China"
+    }
+
     Afghanistan_data = [
         {"currency": "AFN", "startdate": "2014/01/15", "enddate": "2014/04/15", "mktid": 266, "cmid": 55, "ptid": 15,
          "umid": 5, "catid": 1, "unit": "KG", "cmname": "Bread - Retail", "category": "cereals and tubers",
@@ -52,12 +63,30 @@ class TestWfpFood:
 
     def test_country_conversion(self):
         assert Country.get_iso3_country_code("Afghanistan") == "AFG"
+        assert Country.get_iso3_country_code("China") == "CHN"
 
     def test_get_countriesdata(self, downloader):
-        countriesdata = get_countriesdata('http://xxx', downloader)
+        countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
         assert countriesdata == [
-            dict(name="Afghanistan", code="1", iso3="AFG"),
-            dict(name="Albania", code="3", iso3="ALB")
+            dict(name="Afghanistan", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
+            dict(name="Albania",     iso3="ALB", wfp_countries=[dict(name="Albania",     code="3")]),
+            dict(name="China",       iso3="CHN", wfp_countries=[dict(name="Aksai Chin",  code="2")]),
+        ]
+
+    def test_get_countriesdata1(self):
+        class Download1:
+            def get_tabular_rows(self, url, **kwargs):
+                if url == 'http://xxx':
+                    return TestWfpFood.countrydata1
+                if url == 'http://yyy?ac=1':
+                    return TestWfpFood.Afghanistan_data
+                return []
+        countriesdata = get_countriesdata('http://xxx', Download1(), self.country_correspondence)
+        assert countriesdata == [
+            dict(name="Afghanistan", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
+            dict(name="Albania",     iso3="ALB", wfp_countries=[dict(name="Albania",     code="3")]),
+            dict(name="China",       iso3="CHN", wfp_countries=[dict(name="Aksai Chin",  code="2"),
+                                                                dict(name="China",       code="4")]),
         ]
 
     def test_months_between(self):
@@ -67,7 +96,7 @@ class TestWfpFood:
             months_between("2008/05/01", "2008/08/01"))
 
     def test_read_flattened_data(self, downloader):
-        countriesdata = get_countriesdata('http://xxx', downloader)
+        countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
         countrydata = countriesdata[0]
         data = read_flattened_data('http://yyy?ac=', downloader, countrydata)
         data = list(data)
@@ -80,7 +109,7 @@ class TestWfpFood:
         assert data[2]["date"]=="2014-04-15"
 
     def test_dataframe(self, downloader):
-        countriesdata = get_countriesdata('http://xxx', downloader)
+        countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
         countrydata = countriesdata[0]
         df = flattened_data_to_dataframe(read_flattened_data('http://yyy?ac=', downloader, countrydata))
         assert len(df) == 50

@@ -25,16 +25,14 @@ logger = logging.getLogger(__name__)
 def main():
     """Generate dataset and create it in HDX"""
 
-    config = Configuration.read()
+    config                 = Configuration.read()
 
-    countries_url = config['countries_url']
-    wfpfood_url   = config['wfpfood_url']
-    # If website being scraped requires username and password, you can supply one in a file in your home directory.
-    # The file should contain username:password based64 encoded. Remember to create it on the server eg. ScraperWiki box!
-    # If you need to add extra parameters to every url, you can use extra_params_yaml and point to a YAML file with
-    # key value pairs. Remember to create it on the server!
+    countries_url          = config['countries_url']
+    wfpfood_url            = config['wfpfood_url']
+    country_correspondence = config['country_correspondence']
+
     with Download() as downloader:
-        countriesdata = get_countriesdata(countries_url, downloader)
+        countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
         for countrydata in countriesdata:
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata)

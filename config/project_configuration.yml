@@ -5,3 +5,6 @@ countries_url: "http://vam.wfp.org/sites/data/api/adm0code.csv"
 ## Scraper can be configured to feed from local data, that can be created by a prefetch.py script
 #wfpfood_url:   "file:///home/orest/spyder-workspace/hdx/hdxscraper-wfp-food-prices/local/"
 #countries_url: "file:///home/orest/spyder-workspace/hdx/hdxscraper-wfp-food-prices/local/adm0code.csv"
+
+country_correspondence:
+    Aksai Chin : China
