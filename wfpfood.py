@@ -87,7 +87,9 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
                     yield dict(
                         {key:value for key, value in row.items() if key not in ("startdate","enddate","mp_price")},
                         date = date,
-                        price = float(price))
+                        price = float(price),
+                        country=wfp_countrydata['name']
+                    )
         logging.debug("Finished reading %s data"%countrydata["name"])
 
 def flattened_data_to_dataframe(data):
@@ -97,6 +99,7 @@ def flattened_data_to_dataframe(data):
   category  #item+type
   price     #value
   currency  #currency
+  country   #country+name
   admname   #adm1+name
   adm1id    #adm1+code
   mktname   #name+market

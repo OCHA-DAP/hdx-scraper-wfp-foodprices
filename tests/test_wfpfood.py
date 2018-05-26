@@ -101,6 +101,7 @@ class TestWfpFood:
         data = read_flattened_data('http://yyy?ac=', downloader, countrydata)
         data = list(data)
         assert len(data) == 49
+        assert data[0]["country"]=="Afghanistan"
         assert data[0]["price"]==50
         assert data[1]["price"]==51
         assert data[2]["price"]==52
