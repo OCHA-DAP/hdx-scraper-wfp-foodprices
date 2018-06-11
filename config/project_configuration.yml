@@ -8,3 +8,4 @@ countries_url: "http://vam.wfp.org/sites/data/api/adm0code.csv"
 
 country_correspondence:
     Aksai Chin : China
+    Jammu and Kashmir : India
