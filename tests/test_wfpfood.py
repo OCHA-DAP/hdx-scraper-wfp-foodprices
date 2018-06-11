@@ -7,9 +7,10 @@ Unit tests for wfpfood scraper.
 from os.path import join
 
 import pytest
-from hdx.hdx_configuration import Configuration
 from wfpfood import *
 from hdx.location.country import Country
+from hdx.hdx_configuration import Configuration
+from hdx.hdx_locations import Locations
 
 
 class TestWfpFood:
@@ -44,7 +45,7 @@ class TestWfpFood:
 
     @pytest.fixture(scope='function')
     def configuration(self):
-        Configuration._create(hdx_read_only=True,
+        Configuration._create(hdx_read_only=True, user_agent='test',
                               project_config_yaml=join('tests', 'config', 'project_configuration.yml'))
         Locations.set_validlocations([{'name': 'afg', 'title': 'Afghanistan'}])  # add locations used in tests
 
@@ -123,14 +124,16 @@ class TestWfpFood:
         assert df.ix[2].date=="2014-02-15"
         assert df.ix[3].date=="2014-04-15"
 
-#    def test_generate_dataset_and_showcase(self, downloader, configuration):
-#        countriesdata = get_countriesdata('http://xxx', downloader)
-#        countrydata = countriesdata[0]
-#        dataset, showcase = generate_dataset_and_showcase('http://yyy?ac=', downloader, countrydata)
+    def test_generate_dataset_and_showcase(self, downloader, configuration):
+        countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
+        countrydata = countriesdata[0]
+        dataset, showcase = generate_dataset_and_showcase('http://yyy?ac=', downloader, countrydata)
 
-#        assert dataset == {...}
-#
-#        resources = dataset.get_resources()
-#        assert resources == [...]
-#
-#        assert showcase == {...}
+        assert dataset["name"]   == "wfp-food-prices-for-afghanistan"
+        assert dataset["title"]  == "Afghanistan - Food Prices"
+
+        resources = dataset.get_resources()
+        assert resources         == [{'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices'}]
+
+        assert showcase["title"] == "Afghanistan - Food Prices showcase"
+        assert showcase["url"]   == "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0=1"
