@@ -21,6 +21,19 @@ logger = logging.getLogger(__name__)
 
 
 def get_countriesdata(countries_url, downloader, country_correspondence):
+    """Download a list of countries and provide mapping if necessary.
+
+    A list of dictionaries is returned, each containing the following keys:
+    iso3 - ISO 3 country code
+    name - country name
+    code - WFP country code
+    wfp_countries - a list of dictionaries describing WFP countries that are part of the "ISO 3" country.
+
+    Note: The data source (WFP countries) may contain countries that do not have its own ISO 3 code.
+    Such WFP countries can be mapped to ISO 3 country using the
+    country_correspondence attribute in the project_configuration.yml. All WFP countries mapped to the same ISO 3 country
+    will be listed in wfp_countries. Each ISO 3 country will appear at most once in the output.
+    """
     countries={}
     unknown=[]
 
@@ -74,6 +87,11 @@ def months_between(fromdate,todate):
             d=datetime.date(year=year,month=month,day=d.day)
 
 def read_flattened_data(wfpfood_url, downloader, countrydata):
+    """Reads the WFP food prices data from the source and flattens them to a plain table structure.
+
+    WFP data structure contains monthly prices for a continuous time period, which need to be flattened in order
+    to fit into a plain table structure. This function creates an iterator which both reads and flattens the data in one go.
+    """
     for wfp_countrydata in countrydata["wfp_countries"]:
         logging.debug("Start reading %s data"%countrydata["name"])
         url = wfpfood_url + wfp_countrydata['code']
@@ -94,6 +112,8 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
         logging.debug("Finished reading %s data"%countrydata["name"])
 
 def flattened_data_to_dataframe(data):
+    """Converts data to a Pandas DataFrame format and adds the HXL taggs.
+    """
     column_definition="""date #date
   cmname    #item+name
   unit      #item+unit
@@ -159,7 +179,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     showcase = Showcase({
         'name': '%s-showcase' % slugified_name,
         'title': title+" showcase",
-        'notes': None,
+        'notes': countrydata["name"] + " food prices data from World Food Programme displayed through VAM Economic Explorer",
         'url': "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0="+countrydata["code"],
         'image_url': "http://dataviz.vam.wfp.org/_images/home/economic_2-4.jpg"
     })
