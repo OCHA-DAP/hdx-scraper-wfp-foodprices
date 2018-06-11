@@ -68,9 +68,9 @@ class TestWfpFood:
     def test_get_countriesdata(self, downloader):
         countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
         assert countriesdata == [
-            dict(name="Afghanistan", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
-            dict(name="Albania",     iso3="ALB", wfp_countries=[dict(name="Albania",     code="3")]),
-            dict(name="China",       iso3="CHN", wfp_countries=[dict(name="Aksai Chin",  code="2")]),
+            dict(name="Afghanistan", code="1", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
+            dict(name="Albania",     code="3", iso3="ALB", wfp_countries=[dict(name="Albania",     code="3")]),
+            dict(name="China",       code="2", iso3="CHN", wfp_countries=[dict(name="Aksai Chin",  code="2")]),
         ]
 
     def test_get_countriesdata1(self):
@@ -83,9 +83,9 @@ class TestWfpFood:
                 return []
         countriesdata = get_countriesdata('http://xxx', Download1(), self.country_correspondence)
         assert countriesdata == [
-            dict(name="Afghanistan", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
-            dict(name="Albania",     iso3="ALB", wfp_countries=[dict(name="Albania",     code="3")]),
-            dict(name="China",       iso3="CHN", wfp_countries=[dict(name="Aksai Chin",  code="2"),
+            dict(name="Afghanistan", code="1", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
+            dict(name="Albania",     code="3", iso3="ALB", wfp_countries=[dict(name="Albania",     code="3")]),
+            dict(name="China",       code="4", iso3="CHN", wfp_countries=[dict(name="Aksai Chin",  code="2"),
                                                                 dict(name="China",       code="4")]),
         ]
 

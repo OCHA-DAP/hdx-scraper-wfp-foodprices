@@ -41,6 +41,7 @@ def get_countriesdata(countries_url, downloader, country_correspondence):
 
         countries[iso3] = countries.get(iso3,dict(name=name,iso3=iso3,wfp_countries=[]))
         countries[iso3]["wfp_countries"] = countries[iso3]["wfp_countries"] + new_wfp_countries
+        countries[iso3]["code"] = ([x for x in countries[iso3]["wfp_countries"] if x["name"] == name] + countries[iso3]["wfp_countries"])[0]["code"]
 
     if len(unknown):
         logger.warning("Some countries were not recognized and are ignored:\n"+",\n".join(unknown))
@@ -116,9 +117,7 @@ def flattened_data_to_dataframe(data):
     return pd.DataFrame(data=[hxl] + list(data),columns=columns)
 
 def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
-    """Parse json of the form:
-    {
-    },
+    """Generate datasets and showcases for each country.
     """
     title = '%s - Food Prices' % countrydata['name']
     logger.info('Creating dataset: %s' % title)
@@ -147,7 +146,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     dataset.set_dataset_date(df.ix[1:].date.min(),df.ix[1:].date.max(),"%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_location(countrydata["name"])
-    dataset.add_tags(["food","prices","wages"])
+    dataset.add_tags(["food","food consumption","food and nutrition","food crisis","health","monitoring","nutrition","wages"])
 
     resource = Resource({
         'name': title,
@@ -161,8 +160,8 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         'name': '%s-showcase' % slugified_name,
         'title': title+" showcase",
         'notes': None,
-        'url': "http://dataviz.vam.wfp.org/economic_explorer/prices",
-        'image_url': None
+        'url': "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0="+countrydata["code"],
+        'image_url': "http://dataviz.vam.wfp.org/_images/home/economic_2-4.jpg"
     })
-    showcase.add_tags(["food","prices","wages"])
+    showcase.add_tags(["food","food and nutrition","monitoring","nutrition","wages"])
     return dataset, showcase
