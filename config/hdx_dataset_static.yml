@@ -1,6 +1,6 @@
 license_id: "cc-by-igo"
 subnational: 1  # has to be 0 or 1
-notes: Contains data from World Food Programme [data portal](http://dataviz.vam.wfp.org/) focusing on prices of basic food commodities.
+notes: Contains data from World Food Programme - Vulnerability Analysis and Mapping (VAM) [data portal](http://dataviz.vam.wfp.org/) providing food security monitoring and assessments.
 caveats: ""
 methodology: "Registry"
 dataset_source: "World Food Programme - VAM"
