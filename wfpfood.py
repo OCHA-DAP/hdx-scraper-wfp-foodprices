@@ -16,6 +16,7 @@ from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from slugify import slugify
 import pandas as pd
+import math
 
 logger = logging.getLogger(__name__)
 
@@ -134,7 +135,41 @@ def flattened_data_to_dataframe(data):
 
     columns = [x.split()[0] for x in column_definition]
     hxl     = {x.split()[0]:" ".join(x.split()[1:]) for x in column_definition}
-    return pd.DataFrame(data=[hxl] + list(data),columns=columns)
+    df = pd.DataFrame(data=[hxl] + list(data),columns=columns)
+    return df
+
+def preprocess_dataframe(df):
+    hxl = df.ix[:1]
+    df=df.ix[1:]
+    df1=hxl.copy()
+    df1.iloc[0,"label"]="#item+label"
+    df.loc[:,"price"] = df.price.apply(float)
+    processed_data=[]
+    for key, index in sorted(df.groupby(["cmname","unit"]).groups.items()):
+        commodity, unit = key
+        g=df.loc[index]
+        gd = g.groupby(["date"])
+
+        invmean = 100.0 / g.price.mean()
+        quantity = math.pow(10, math.trunc(math.log10(invmean)))
+        qunit = "%d %s"%(quantity,unit)
+        if quantity < 1:
+            qunit = "1/%d %s"%(int(1/quantity),unit)
+        if quantity == 1:
+            qunit = unit
+
+        for date,median in gd.price.median().items():
+            gg = g.loc[g.date==date]
+            median = gg.loc[gg.price<=median].price.max()
+
+            row = dict(gg.loc[gg.price==median].iloc[0])
+            row["price"]*=quantity
+            row["unit"]=qunit
+            row["label"]="%(cmname)s (%(unit)s)"%row
+            row["scaling"]=quantity
+            processed_data.append(row)
+    df1=df1.append(pd.DataFrame(processed_data), ignore_index=True)
+    return df1
 
 def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     """Generate datasets and showcases for each country.
@@ -152,8 +187,6 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
         logger.warning('Dataset "%s" is empty' % title)
         return None, None
 
-    file_csv = "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-")
-    df.to_csv(file_csv,index=False)
 
     dataset = Dataset({
         'name': slugified_name,
@@ -168,9 +201,30 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     dataset.add_country_location(countrydata["name"])
     dataset.add_tags(["food","food consumption","food and nutrition","food crisis","health","monitoring","nutrition","wages"])
 
+
+    file_csv = "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-")
+    df.to_csv(file_csv,index=False)
     resource = Resource({
         'name': title,
         'description': "Food prices data with HXL tags"
+    })
+    resource.set_file_type('csv')  # set the file type to eg. csv
+    resource.set_file_to_upload(file_csv)
+    dataset.add_update_resource(resource)
+
+    df1 = preprocess_dataframe(df)
+    file_csv = "WFP_food_median_prices_%s.csv"%countrydata["name"].replace(" ","-")
+    df1.to_csv(file_csv,index=False)
+    resource = Resource({
+        'name': '%s - Food Median Prices' % countrydata['name'],
+        'description':
+"""Food median prices data with HXL tags.
+Median of all prices for a given commodity observed on different markets is shown, together with the market where
+it was observed. This reduces the amount of data and allows to make cleaner charts.
+Note however, that there might be large price differences between different markets.
+Units are adapted and prices are rescaled in order to yield comparable values (close to 100) so that they
+can be displayed and compared in a single chart.  
+"""
     })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
