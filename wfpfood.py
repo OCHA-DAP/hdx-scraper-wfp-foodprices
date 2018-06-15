@@ -142,15 +142,40 @@ def flattened_data_to_dataframe(data):
     df = pd.DataFrame(data=[hxl] + list(data),columns=columns)
     return df
 
+_cache={}
+def read_dataframe(wfpfood_url, downloader, countrydata):
+    global _cache
+
+    if _cache is not None:
+        if countrydata["name"] in _cache:
+            df = _cache[countrydata["name"]]
+        else:
+            df = flattened_data_to_dataframe(
+                read_flattened_data(wfpfood_url, downloader, countrydata)
+            )
+            _cache[countrydata["name"]] = df
+        return df.copy()
+
+
+    return flattened_data_to_dataframe(
+      read_flattened_data(wfpfood_url, downloader, countrydata)
+    )
+
+
+def year_from_date(d):
+    try:
+        return datetime.datetime.strptime(d, "%Y-%m-%d").year
+    except:
+        return 0
+def month_from_date(d):
+    try:
+        return datetime.datetime.strptime(d, "%Y-%m-%d").month
+    except:
+        return 0
+
 def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True):
     """This function creates filtered dataframe with scaled median prices and short names suitable for quickchart.
     """
-    def year_from_date(d):
-        try:
-            return datetime.datetime.strptime(d, "%Y-%m-%d").year
-        except:
-            return 0
-
     def sinceEpoch(d):
         try:
             return time.mktime(datetime.datetime.strptime(d, "%Y-%m-%d").timetuple())
@@ -236,9 +261,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcut
     name = 'WFP food prices for %s' % countrydata['name']  #  Example name which should be unique so can include organisation name and country
     slugified_name = slugify(name).lower()
 
-    df = flattened_data_to_dataframe(
-        read_flattened_data(wfpfood_url, downloader, countrydata)
-    )
+    df = read_dataframe(wfpfood_url, downloader, countrydata)
 
     if len(df)<=1:
         logger.warning('Dataset "%s" is empty' % title)
@@ -250,8 +273,8 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcut
         'title': title,
         "dataset_preview": "resource_id"
     })
-#    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
-    dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
+    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
+#    dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
     dataset.set_dataset_date(df.loc[1:].date.min(),df.loc[1:].date.max(),"%Y-%m-%d")
@@ -306,4 +329,104 @@ This reduces the amount of data and allows to make cleaner charts.
         'image_url': "http://dataviz.vam.wfp.org/_images/home/economic_2-4.jpg"
     })
     showcase.add_tags(["food","food and nutrition","monitoring","nutrition","wages"])
+    return dataset, showcase
+
+def joint_dataframe(wfpfood_url, downloader, countriesdata):
+    def ptid_to_ptname(ptid):
+        return {15:"Retail", 14:"Wholesale", 17:"Producer", 18:"Farm Gate"}.get(ptid,"")
+
+    df = None
+    for countrydata in countriesdata:
+        logging.info("Loading %s into a joint dataset"%(countrydata["name"]))
+        df_country = read_dataframe(wfpfood_url, downloader, countrydata)
+
+        df_country = df_country.loc[1:]
+
+        dff = pd.DataFrame(dict(
+            adm0_id   = [int(countrydata["code"])]*len(df_country),
+            adm0_name = [str(countrydata["name"])]*len(df_country),
+            adm1_id   = df_country.adm1id,
+            adm1_name = df_country.admname,
+            mkt_id    = df_country.mktid,
+            mkt_name  = df_country.mktname,
+            cm_id     = df_country.cmid,
+            cm_name   = df_country.cmname,
+            cur_id    = [0]*len(df_country),
+            cur_name  = df_country.currency,
+            pt_id     = df_country.ptid,
+            pt_name   = df_country.ptid.apply(ptid_to_ptname),
+            um_id     = df_country.umid,
+            um_name   = df_country.unit,
+            mp_month  = df_country.date.apply(month_from_date),
+            mp_year   = df_country.date.apply(year_from_date),
+            mp_price  = df_country.price,
+            mp_commoditysource = [""]*len(df_country),
+        ), columns ="""adm0_id
+            adm0_name
+            adm1_id
+            adm1_name
+            mkt_id
+            mkt_name
+            cm_id
+            cm_name
+            cur_id
+            cur_name
+            pt_id
+            pt_name
+            um_id
+            um_name
+            mp_month
+            mp_year
+            mp_price
+            mp_commoditysource""".split()
+        )
+        df = dff if df is None else df.append(dff,ignore_index=True)
+    return df
+
+def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
+    """Generate single joint datasets and showcases containing data for all countries.
+    """
+    title = 'Global Food Prices Database (WFP) - NEW'
+    logger.info('Creating joint dataset: %s' % title)
+    name = title
+    slugified_name = slugify(name).lower()
+
+    df = joint_dataframe(wfpfood_url, downloader, countriesdata)
+
+    if len(df)<=1:
+        logger.warning('Dataset "%s" is empty' % title)
+        return None, None
+
+    dataset = Dataset({
+        'name': slugified_name,
+        'title': title
+    })
+    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
+#    dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
+    dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
+
+    maxmonth = (100*df.mp_year+df.mp_month).max()%100
+    dataset.set_dataset_date("%04d-01-01"%df.mp_year.min(),"%04d-%02d-15"%(df.mp_year.max(),maxmonth),"%Y-%m-%d")
+    dataset.set_expected_update_frequency("weekly")
+    dataset.add_country_location([countrydata["name"] for countrydata in countriesdata][0]) # FIXME - NOT SURE HOW TO SPECIFY MULTIPLE COUNTREIS
+    dataset.add_tags(["food","food consumption","health","monitoring","nutrition"])
+
+    file_csv = "WFPVAM_FoodPrices.csv"
+    df.to_csv(file_csv,index=False)
+    resource = Resource({
+        'name': title,
+        'description': "Word Food Programme – Food Prices  Data Source: WFP Vulnerability Analysis and Mapping (VAM)."
+    })
+    resource.set_file_type('csv')  # set the file type to eg. csv
+    resource.set_file_to_upload(file_csv)
+    dataset.add_update_resource(resource)
+
+    showcase = Showcase({
+        'name': '%s-showcase' % slugified_name,
+        'title': title+" showcase",
+        'notes': "Interactive data visualisation of WFP's Food Market Prices dataset",
+        'url': "https://data.humdata.org/organization/wfp#interactive-data",
+        'image_url': "https://docs.humdata.org/wp-content/uploads/wfp_food_prices_data_viz.gif"
+    })
+    showcase.add_tags(["food","food consumption","health","monitoring","nutrition"])
     return dataset, showcase
