@@ -9,6 +9,7 @@ Creates datasets with flattened tables of WFP food prices.
 """
 
 import logging
+from math import sin
 
 from hdx.data.dataset import Dataset
 from hdx.data.resource import Resource
@@ -16,8 +17,10 @@ from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from slugify import slugify
 import pandas as pd
+import numpy as np
 import math
 import datetime
+import time
 
 logger = logging.getLogger(__name__)
 
@@ -147,6 +150,12 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
             return datetime.datetime.strptime(d, "%Y-%m-%d").year
         except:
             return 0
+
+    def sinceEpoch(d):
+        try:
+            return time.mktime(datetime.datetime.strptime(d, "%Y-%m-%d").timetuple())
+        except:
+            return 0
     df=df.assign(year = df.date.apply(year_from_date))
     hxl = df.loc[:0]
     df=df.loc[1:]
@@ -159,13 +168,18 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
     df.loc[:,"unit"] = df.unit.apply(str)
     from_year = df["year"].max() - keep_last_years
     df=df.loc[df["year"] >= from_year]  # keep only last keep_last_years years
+    df=df.assign(x = df.date.apply(sinceEpoch))
+
+    dates = sorted(df.date.unique())
+    x = np.array([sinceEpoch(d) for d in dates])
+
     if remove_nonfood:
         df.loc[:, "catid"] = pd.to_numeric(df.catid, errors='coerce')
         df=df.loc[df.catid != 8]
 
     processed_data=[]
-    for key, index in sorted(df.groupby(["cmname","unit"]).groups.items()):
-        commodity, unit = key
+    for key, index in sorted(df.groupby(["cmname","unit","category"]).groups.items()):
+        commodity, unit, category = key
         g=df.loc[index]
         gd = g.groupby(["date"])
 
@@ -177,17 +191,40 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
         if quantity == 1:
             qunit = unit
 
+        label="%(commodity)s (%(qunit)s)"%locals()
+        short_commodity = shortcuts.get(commodity,commodity)
+        series = {}
         for date,median in gd.price.median().items():
             gg = g.loc[g.date==date]
             median = gg.loc[gg.price<=median].price.max()
-
-            row = dict(gg.loc[gg.price==median].iloc[0])
-            row["price"]*=quantity
-            row["unit"]=qunit
-            row["label"]="%(cmname)s (%(unit)s)"%row
-            row["cmnameshort"] = shortcuts.get(commodity,commodity)
-            row["scaling"]=quantity
-            processed_data.append(row)
+            if median > 0:
+                row = dict(gg.loc[gg.price==median].iloc[0])
+                row["price"]*=quantity
+                row["unit"]=qunit
+                row["label"]=label
+                row["cmnameshort"] = short_commodity
+                row["scaling"]=quantity
+                row["interpolated"]=0
+                series[date]=row
+        source_dates = sorted(series.keys())
+        xp = np.array([series[d]["x"] for d in source_dates])
+        yp = np.array([series[d]["price"] for d in source_dates])
+        y = np.interp(x,xp,yp)
+        for date,price in zip(dates,y):
+            if date in series:
+                processed_data.append(series[date])
+            else:
+                processed_data.append(dict(
+                    date         = date,
+                    price        = price,
+                    unit         = qunit,
+                    label        = label,
+                    cmname       = commodity,
+                    cmnameshort  = short_commodity,
+                    scaling      = quantity,
+                    category     = category,
+                    interpolated = 1
+                ))
     df1=df1.append(pd.DataFrame(processed_data), ignore_index=True)
     return df1
 
