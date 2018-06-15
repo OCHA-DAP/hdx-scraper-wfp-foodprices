@@ -127,13 +127,14 @@ class TestWfpFood:
     def test_generate_dataset_and_showcase(self, downloader, configuration):
         countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
         countrydata = countriesdata[0]
-        dataset, showcase = generate_dataset_and_showcase('http://yyy?ac=', downloader, countrydata)
+        dataset, showcase = generate_dataset_and_showcase('http://yyy?ac=', downloader, countrydata,{})
 
         assert dataset["name"]   == "wfp-food-prices-for-afghanistan"
         assert dataset["title"]  == "Afghanistan - Food Prices"
 
         resources = dataset.get_resources()
-        assert resources         == [{'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices'}]
+        assert resources[0]         == {'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices', 'dataset_preview_enabled': 'False'}
+        assert resources[1]["name"] == 'Afghanistan - Food Median Prices'
 
         assert showcase["title"] == "Afghanistan - Food Prices showcase"
         assert showcase["url"]   == "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0=1"

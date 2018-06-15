@@ -17,6 +17,7 @@ from hdx.location.country import Country
 from slugify import slugify
 import pandas as pd
 import math
+import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -138,12 +139,30 @@ def flattened_data_to_dataframe(data):
     df = pd.DataFrame(data=[hxl] + list(data),columns=columns)
     return df
 
-def preprocess_dataframe(df):
-    hxl = df.ix[:1]
-    df=df.ix[1:]
+def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True):
+    """This function creates filtered dataframe with scaled median prices and short names suitable for quickchart.
+    """
+    def year_from_date(d):
+        try:
+            return datetime.datetime.strptime(d, "%Y-%m-%d").year
+        except:
+            return 0
+    df=df.assign(year = df.date.apply(year_from_date))
+    hxl = df.loc[:0]
+    df=df.loc[1:]
     df1=hxl.copy()
-    df1.iloc[0,"label"]="#item+label"
-    df.loc[:,"price"] = df.price.apply(float)
+    df1=df1.assign(label="#item+label")
+    df1=df1.assign(cmnameshort = "#item+name+short")
+
+    df.loc[:,"price"] = pd.to_numeric(df.price, errors='coerce')
+    df.loc[:,"cmname"] = df.cmname.apply(str)
+    df.loc[:,"unit"] = df.unit.apply(str)
+    from_year = df["year"].max() - keep_last_years
+    df=df.loc[df["year"] >= from_year]  # keep only last keep_last_years years
+    if remove_nonfood:
+        df.loc[:, "catid"] = pd.to_numeric(df.catid, errors='coerce')
+        df=df.loc[df.catid != 8]
+
     processed_data=[]
     for key, index in sorted(df.groupby(["cmname","unit"]).groups.items()):
         commodity, unit = key
@@ -166,12 +185,13 @@ def preprocess_dataframe(df):
             row["price"]*=quantity
             row["unit"]=qunit
             row["label"]="%(cmname)s (%(unit)s)"%row
+            row["cmnameshort"] = shortcuts.get(commodity,commodity)
             row["scaling"]=quantity
             processed_data.append(row)
     df1=df1.append(pd.DataFrame(processed_data), ignore_index=True)
     return df1
 
-def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
+def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts):
     """Generate datasets and showcases for each country.
     """
     title = '%s - Food Prices' % countrydata['name']
@@ -191,12 +211,13 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     dataset = Dataset({
         'name': slugified_name,
         'title': title,
+        "dataset_preview": "resource_id"
     })
 #    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
     dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
-    dataset.set_dataset_date(df.ix[1:].date.min(),df.ix[1:].date.max(),"%Y-%m-%d")
+    dataset.set_dataset_date(df.loc[1:].date.min(),df.loc[1:].date.max(),"%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_location(countrydata["name"])
     dataset.add_tags(["food","food consumption","food and nutrition","food crisis","health","monitoring","nutrition","wages"])
@@ -206,25 +227,35 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata):
     df.to_csv(file_csv,index=False)
     resource = Resource({
         'name': title,
+        "dataset_preview_enabled": "False",
         'description': "Food prices data with HXL tags"
     })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
     dataset.add_update_resource(resource)
 
-    df1 = preprocess_dataframe(df)
+    df1 = quickchart_dataframe(df, shortcuts)
     file_csv = "WFP_food_median_prices_%s.csv"%countrydata["name"].replace(" ","-")
     df1.to_csv(file_csv,index=False)
     resource = Resource({
         'name': '%s - Food Median Prices' % countrydata['name'],
+        "dataset_preview_enabled": "True",
         'description':
 """Food median prices data with HXL tags.
 Median of all prices for a given commodity observed on different markets is shown, together with the market where
-it was observed. This reduces the amount of data and allows to make cleaner charts.
-Note however, that there might be large price differences between different markets.
-Units are adapted and prices are rescaled in order to yield comparable values (close to 100) so that they
-can be displayed and compared in a single chart.  
-"""
+it was observed. Data are shortened in multiple ways:
+
+- Rather that prices on all markets, only median price across all markets is shown, together with the market
+  where it has been observed.
+- Only food commodities are displayed (non-food commodities like fuel and wages are not shown).
+- Only data after %s are shown. Missing data are interpolated.
+- Column with shorter commodity names "cmnshort" are available to be used as chart labels.
+- Units are adapted and prices are rescaled in order to yield comparable values (so that they
+  can be displayed and compared in a single chart). Scaling factor is present in scaling column.
+  Label with full commodity name and a unit (with scale if applicable) is in column "label".  
+
+This reduces the amount of data and allows to make cleaner charts.
+"""%(df1.loc[1:].date.min())
     })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
