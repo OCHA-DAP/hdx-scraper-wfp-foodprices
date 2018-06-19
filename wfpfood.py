@@ -408,17 +408,19 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     maxmonth = (100*df.mp_year+df.mp_month).max()%100
     dataset.set_dataset_date("%04d-01-01"%df.mp_year.min(),"%04d-%02d-15"%(df.mp_year.max(),maxmonth),"%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
-    dataset.add_country_location([countrydata["name"] for countrydata in countriesdata][0]) # FIXME - NOT SURE HOW TO SPECIFY MULTIPLE COUNTREIS
+    dataset.add_country_locations(sorted(df.adm0_name.unique()))
     dataset.add_tags(["food","food consumption","health","monitoring","nutrition"])
 
     file_csv = "WFPVAM_FoodPrices.csv"
     df.to_csv(file_csv,index=False)
     resource = Resource({
+        'id':title,
         'name': title,
         'description': "Word Food Programme – Food Prices  Data Source: WFP Vulnerability Analysis and Mapping (VAM)."
     })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
+    resource.create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv)
     dataset.add_update_resource(resource)
 
     showcase = Showcase({
@@ -429,4 +431,5 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
         'image_url': "https://docs.humdata.org/wp-content/uploads/wfp_food_prices_data_viz.gif"
     })
     showcase.add_tags(["food","food consumption","health","monitoring","nutrition"])
+
     return dataset, showcase
