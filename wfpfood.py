@@ -414,13 +414,11 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     file_csv = "WFPVAM_FoodPrices.csv"
     df.to_csv(file_csv,index=False)
     resource = Resource({
-        'id':title,
         'name': title,
         'description': "Word Food Programme – Food Prices  Data Source: WFP Vulnerability Analysis and Mapping (VAM)."
     })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
-    resource.create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv)
     dataset.add_update_resource(resource)
 
     showcase = Showcase({
@@ -431,5 +429,11 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
         'image_url': "https://docs.humdata.org/wp-content/uploads/wfp_food_prices_data_viz.gif"
     })
     showcase.add_tags(["food","food consumption","health","monitoring","nutrition"])
+
+    dataset.update_from_yaml()
+    dataset.create_in_hdx()
+    showcase.create_in_hdx()
+    showcase.add_dataset(dataset)
+    dataset.get_resource().create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv)
 
     return dataset, showcase
