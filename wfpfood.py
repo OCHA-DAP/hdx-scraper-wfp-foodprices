@@ -203,8 +203,8 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
         df=df.loc[df.catid != 8]
 
     processed_data=[]
-    for key, index in sorted(df.groupby(["cmname","unit","category"]).groups.items()):
-        commodity, unit, category = key
+    for key, index in sorted(df.groupby(["cmname","unit","category","cmid","catid"]).groups.items()):
+        commodity, unit, category, cmid, catid = key
         g=df.loc[index]
         gd = g.groupby(["date"])
 
@@ -248,7 +248,9 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
                     cmnameshort  = short_commodity,
                     scaling      = quantity,
                     category     = category,
-                    interpolated = 1
+                    interpolated = 1,
+                    cmid         = cmid,
+                    catid        = catid
                 ))
     df1=df1.append(pd.DataFrame(processed_data), ignore_index=True)
     return df1

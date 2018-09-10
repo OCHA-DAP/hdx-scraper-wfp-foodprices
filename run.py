@@ -35,7 +35,6 @@ def main():
     with Download() as downloader:
         countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
-        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
 
         for countrydata in countriesdata:
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
@@ -44,6 +43,9 @@ def main():
                 dataset.create_in_hdx()
                 showcase.create_in_hdx()
                 showcase.add_dataset(dataset)
+
+        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
+
 if __name__ == '__main__':
 #    facade(main, hdx_site='test', user_agent_config_yaml = join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
     facade(main, hdx_site='test', user_agent_config_yaml = join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
