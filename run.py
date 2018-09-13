@@ -10,7 +10,8 @@ from os.path import join, expanduser
 from hdx.hdx_configuration import Configuration
 from hdx.utilities.downloader import Download
 
-from wfpfood import generate_dataset_and_showcase, get_countriesdata, generate_joint_dataset_and_showcase
+from wfpfood import generate_dataset_and_showcase, get_countriesdata, generate_joint_dataset_and_showcase, generate_resource_view
+
 
 # Remove 2 lines below if you don't want emails when there are errors
 from hdx.facades import logging_kwargs
@@ -36,6 +37,8 @@ def main():
         countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
 
+        #generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
+
         for countrydata in countriesdata:
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
             if dataset:
@@ -43,6 +46,9 @@ def main():
                 dataset.create_in_hdx()
                 showcase.create_in_hdx()
                 showcase.add_dataset(dataset)
+                resource_view = generate_resource_view(dataset)
+                resource_view.create_in_hdx()
+
         logger.info('Individual country datasets finished.')
 
         generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
@@ -50,7 +56,7 @@ def main():
 
 if __name__ == '__main__':
 #    facade(main, hdx_site='test', user_agent_config_yaml = join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
-    facade(main, hdx_site='test', user_agent_config_yaml = join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
+    facade(main, hdx_site='feature', user_agent_config_yaml = join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
     ## CHANGE THE BOT ID to a proper ID !!!!!
 
 

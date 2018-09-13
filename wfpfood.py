@@ -12,7 +12,7 @@ import logging
 from math import sin
 
 from hdx.data.dataset import Dataset
-from hdx.data.resource import Resource
+from hdx.data.resource import Resource, ResourceView
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from slugify import slugify
@@ -142,7 +142,7 @@ def flattened_data_to_dataframe(data):
     df = pd.DataFrame(data=[hxl] + list(data),columns=columns)
     return df
 
-_cache={}
+_cache=None
 def read_dataframe(wfpfood_url, downloader, countrydata):
     global _cache
 
@@ -333,6 +333,11 @@ This reduces the amount of data and allows to make cleaner charts.
     showcase.add_tags(["food","food and nutrition","monitoring","nutrition","wages"])
     return dataset, showcase
 
+def generate_resource_view(dataset):
+    resource_view = ResourceView({'resource_id': dataset.get_resource(1)['id']})
+    resource_view.update_from_yaml()
+    return resource_view
+
 def joint_dataframe(wfpfood_url, downloader, countriesdata):
     def ptid_to_ptname(ptid):
         return {15:"Retail", 14:"Wholesale", 17:"Producer", 18:"Farm Gate"}.get(ptid,"")
@@ -388,7 +393,7 @@ def joint_dataframe(wfpfood_url, downloader, countriesdata):
 def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     """Generate single joint datasets and showcases containing data for all countries.
     """
-    title = 'Global Food Prices Database (WFP) - NEW'
+    title = 'Global Food Prices Database (WFP)'
     logger.info('Creating joint dataset: %s' % title)
     name = title
     slugified_name = slugify(name).lower()

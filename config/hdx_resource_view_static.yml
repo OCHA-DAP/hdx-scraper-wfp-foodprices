@@ -1,0 +1,29 @@
+description: ""
+title: "Quick Charts"
+view_type: "hdx_hxl_preview"
+hxl_preview_config: '{"configVersion":3,"bites":[{"tempShowSaveCancelButtons":false,"ingredient":{
+  "aggregateColumn":null,"valueColumn":"#value","aggregateFunction":"sum","dateColumn":"#date",
+  "comparisonValueColumn":null,"comparisonOperator":null,"filters":{},
+  "description":"Prices of food commodities. Median prices across various markets are shown."},
+  "type":"timeseries","errorMsg":null,"computedProperties":{"pieChart":false,
+  "title":"Sum of price by date","dataTitle":"price"},
+  "uiProperties":{"swapAxis":true,"showGrid":false,"color":"#0077ce","sorting":"DESC",
+  "title":"Overall Commodity Price Trend",
+  "description":"Sum of prices for all food commodities - a general trend in food prices. (Note: prices are in local currency and are not weighted. Displayed values depend on units and selection of commodities.) "},
+  "dataProperties":{},"displayCategory":"Timeseries","hashCode":411788767,"_configOrder":0},
+  {"tempShowSaveCancelButtons":false,"ingredient":{"aggregateColumn":"#item+type","valueColumn":"#value",
+  "aggregateFunction":"sum","dateColumn":"#date","comparisonValueColumn":null,"comparisonOperator":null,
+  "filters":{},"description":"Prices of food commodities. Median prices across various markets are shown."},
+  "type":"timeseries","errorMsg":null,"computedProperties":{"pieChart":false,"title":"Sum of price by category by date",
+  "dataTitle":"price"},"uiProperties":{"swapAxis":true,"showGrid":false,"color":"#0077ce","sorting":"DESC",
+  "title":"Commodity Price Trends per Category",
+  "description":"Chart compares sum of prices in each category of food commodities. (Note: prices are in local currency and are not weighted. Displayed values depend on units and selection of commodities.) "},
+  "dataProperties":{},"displayCategory":"Timeseries","hashCode":-1991624752,"_configOrder":1},
+  {"tempShowSaveCancelButtons":false,"ingredient":{"aggregateColumn":"#item+name+short","valueColumn":"#value",
+  "aggregateFunction":"sum","dateColumn":"#date","comparisonValueColumn":null,"comparisonOperator":null,"filters":{},
+  "description":"Prices of food commodities. Median prices across various markets are shown."},
+  "type":"timeseries","errorMsg":null,"computedProperties":{"pieChart":false,
+  "title":"Sum of price by cmnameshort by date","dataTitle":"price"},"uiProperties":{"swapAxis":true,"showGrid":false,
+  "color":"#0077ce","sorting":"DESC","title":"Commodity Prices",
+  "description":"Evolution of prices for food commodities. Median prices across various markets are shown. (Prices are in local currency. See the label column in the resource for units.) "},
+  "dataProperties":{},"displayCategory":"Timeseries","hashCode":-1110944754,"_configOrder":2}],"cookbookName":"historicvalues"}'
