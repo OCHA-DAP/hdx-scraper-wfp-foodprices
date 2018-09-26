@@ -38,8 +38,6 @@ def main():
         countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
 
-        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
-
         for countrydata in countriesdata:
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
             if dataset:
@@ -52,11 +50,12 @@ def main():
                 resource_view.create_in_hdx()
 
         logger.info('Individual country datasets finished.')
+
+        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
     logger.info('Done')
 
+
 if __name__ == '__main__':
-#    facade(main, hdx_site='test', user_agent_config_yaml = join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
-    facade(main, hdx_site='feature', user_agent_config_yaml=join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
-    ## CHANGE THE BOT ID to a proper ID !!!!!
+    facade(main, user_agent_config_yaml=join(expanduser('~'), '.wfpfooduseragent.yml'), project_config_yaml=join('config', 'project_configuration.yml'))
 
 
