@@ -23,6 +23,7 @@ import datetime
 import time
 
 logger = logging.getLogger(__name__)
+tags = ["food","health","monitoring","nutrition,wages"]
 
 
 def get_countriesdata(countries_url, downloader, country_correspondence):
@@ -66,9 +67,11 @@ def get_countriesdata(countries_url, downloader, country_correspondence):
 
     return [countries[iso3] for name, iso3 in sorted([(x["name"],x["iso3"]) for x in countries.values()])]
 
+
 def months_between(fromdate,todate):
     """Returns an iterator of iso-formatted dates between fromdate and todate (inclusive) with the step of 1 month."""
     import datetime
+
     def to_date(d):
         if isinstance(d, datetime.date):
             return d
@@ -90,6 +93,7 @@ def months_between(fromdate,todate):
                 year+=1
                 month=1
             d=datetime.date(year=year,month=month,day=d.day)
+
 
 def read_flattened_data(wfpfood_url, downloader, countrydata):
     """Reads the WFP food prices data from the source and flattens them to a plain table structure.
@@ -115,6 +119,7 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
                         country=wfp_countrydata['name']
                     )
         logging.debug("Finished reading %s data"%countrydata["name"])
+
 
 def flattened_data_to_dataframe(data):
     """Converts data to a Pandas DataFrame format and adds the HXL taggs.
@@ -143,6 +148,8 @@ def flattened_data_to_dataframe(data):
     return df
 
 _cache=None
+
+
 def read_dataframe(wfpfood_url, downloader, countrydata):
     global _cache
 
@@ -167,11 +174,14 @@ def year_from_date(d):
         return datetime.datetime.strptime(d, "%Y-%m-%d").year
     except:
         return 0
+
+
 def month_from_date(d):
     try:
         return datetime.datetime.strptime(d, "%Y-%m-%d").month
     except:
         return 0
+
 
 def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True):
     """This function creates filtered dataframe with scaled median prices and short names suitable for quickchart.
@@ -255,6 +265,7 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
     df1=df1.append(pd.DataFrame(processed_data), ignore_index=True)
     return df1
 
+
 def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts):
     """Generate datasets and showcases for each country.
     """
@@ -282,7 +293,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcut
     dataset.set_dataset_date(df.loc[1:].date.min(),df.loc[1:].date.max(),"%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_location(countrydata["name"])
-    dataset.add_tags(["food","food consumption","food and nutrition","food crisis","health","monitoring","nutrition","wages"])
+    dataset.add_tags(tags)
 
 
     file_csv = "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-")
@@ -330,13 +341,15 @@ This reduces the amount of data and allows to make cleaner charts.
         'url': "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0="+countrydata["code"],
         'image_url': "http://dataviz.vam.wfp.org/_images/home/economic_2-4.jpg"
     })
-    showcase.add_tags(["food","food and nutrition","monitoring","nutrition","wages"])
+    showcase.add_tags(tags)
     return dataset, showcase
+
 
 def generate_resource_view(dataset):
     resource_view = ResourceView({'resource_id': dataset.get_resource(1)['id']})
     resource_view.update_from_yaml()
     return resource_view
+
 
 def joint_dataframe(wfpfood_url, downloader, countriesdata):
     def ptid_to_ptname(ptid):
@@ -390,6 +403,7 @@ def joint_dataframe(wfpfood_url, downloader, countriesdata):
         df = dff if df is None else df.append(dff,ignore_index=True)
     return df
 
+
 def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     """Generate single joint datasets and showcases containing data for all countries.
     """
@@ -416,7 +430,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     dataset.set_dataset_date("%04d-01-01"%df.mp_year.min(),"%04d-%02d-15"%(df.mp_year.max(),maxmonth),"%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_locations(sorted(df.adm0_name.unique()))
-    dataset.add_tags(["food","food consumption","health","monitoring","nutrition"])
+    dataset.add_tags(tags)
 
     file_csv = "WFPVAM_FoodPrices.csv"
     df.to_csv(file_csv,index=False)
@@ -435,9 +449,10 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
         'url': "https://data.humdata.org/organization/wfp#interactive-data",
         'image_url': "https://docs.humdata.org/wp-content/uploads/wfp_food_prices_data_viz.gif"
     })
-    showcase.add_tags(["food","food consumption","health","monitoring","nutrition"])
+    showcase.add_tags(tags)
 
     dataset.update_from_yaml()
+    dataset['notes'] = dataset['notes'] % 'Global Food Prices data'
     dataset.create_in_hdx()
     showcase.create_in_hdx()
     showcase.add_dataset(dataset)
