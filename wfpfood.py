@@ -443,7 +443,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
 
     showcase = Showcase({
         'name': '%s-showcase' % slugified_name,
-        'title': title+" showcase",
+        'title': 'Global Food Prices',
         'notes': "Interactive data visualisation of WFP's Food Market Prices dataset",
         'url': "https://data.humdata.org/organization/wfp#interactive-data",
         'image_url': "https://docs.humdata.org/wp-content/uploads/wfp_food_prices_data_viz.gif"
