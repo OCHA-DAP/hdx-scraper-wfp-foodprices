@@ -409,8 +409,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     """
     title = 'Global Food Prices Database (WFP)'
     logger.info('Creating joint dataset: %s' % title)
-    name = title
-    slugified_name = slugify(name).lower()
+    slugified_name = 'wfp-food-prices'
 
     df = joint_dataframe(wfpfood_url, downloader, countriesdata)
 
