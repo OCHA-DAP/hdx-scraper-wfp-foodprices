@@ -40,7 +40,6 @@ def main():
         countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
 
-        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
         for countrydata in countriesdata:
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
             if dataset:
@@ -53,6 +52,8 @@ def main():
                 resource_view.create_in_hdx()
 
         logger.info('Individual country datasets finished.')
+
+        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
 
     logger.info('Done')
 
