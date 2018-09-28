@@ -41,16 +41,16 @@ def main():
         logger.info('Number of datasets to upload: %d' % len(countriesdata))
 
         generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
-        # for countrydata in countriesdata:
-        #     dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
-        #     if dataset:
-        #         dataset.update_from_yaml()
-        #         dataset['notes'] = dataset['notes'] % 'Food Prices data for %s' % countrydata['name']
-        #         dataset.create_in_hdx()
-        #         showcase.create_in_hdx()
-        #         showcase.add_dataset(dataset)
-        #         resource_view = generate_resource_view(dataset)
-        #         resource_view.create_in_hdx()
+        for countrydata in countriesdata:
+            dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
+            if dataset:
+                dataset.update_from_yaml()
+                dataset['notes'] = dataset['notes'] % 'Food Prices data for %s' % countrydata['name']
+                dataset.create_in_hdx()
+                showcase.create_in_hdx()
+                showcase.add_dataset(dataset)
+                resource_view = generate_resource_view(dataset)
+                resource_view.create_in_hdx()
 
         logger.info('Individual country datasets finished.')
 
