@@ -1,6 +1,6 @@
 license_id: "cc-by-igo"
 subnational: 1  # has to be 0 or 1
-notes: This dataset contains %s from the World Food Programme covering foods such as maize, rice, beans, fish, and sugar for 76 countries and some 1,500 markets. It is updated weekly but contains to a large extent monthly data. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter.
+notes: This dataset contains %s foods such as maize, rice, beans, fish, and sugar for 76 countries and some 1,500 markets. It is updated weekly but contains to a large extent monthly data. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter.
 caveats: ""
 methodology: "Registry"
 dataset_source: "World Food Programme - VAM"

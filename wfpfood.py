@@ -451,7 +451,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     showcase.add_tags(tags)
 
     dataset.update_from_yaml()
-    dataset['notes'] = dataset['notes'] % 'Global Food Prices data'
+    dataset['notes'] = dataset['notes'] % 'Global Food Prices data from the World Food Programme covering'
     dataset.create_in_hdx()
     showcase.create_in_hdx()
     showcase.add_dataset(dataset)

@@ -42,7 +42,7 @@ def main():
             dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
             if dataset:
                 dataset.update_from_yaml()
-                dataset['notes'] = dataset['notes'] % 'Food Prices data for %s' % countrydata['name']
+                dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % countrydata['name']
                 dataset.create_in_hdx()
                 showcase.create_in_hdx()
                 showcase.add_dataset(dataset)
