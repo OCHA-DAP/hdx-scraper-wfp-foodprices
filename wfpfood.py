@@ -294,6 +294,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcut
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_location(countrydata["name"])
     dataset.add_tags(tags)
+    dataset.add_tag('hxl')
 
 
     file_csv = "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-")
