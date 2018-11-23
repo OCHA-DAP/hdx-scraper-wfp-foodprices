@@ -7,7 +7,7 @@ Collector designed to collect WFP Food Prices datasets from the [WFP](http://dat
 via provided [API](http://dataviz.vam.wfp.org/api/getfoodprices?ac=1)
 
 ### Collector for WFP Food Prices's Datasets
-[![Build Status](https://travis-ci.org/OCHA-DAP/hdxscraper-wfp-food-prices.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdxscraper-wfp-food-prices) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdxscraper-wfp-food-prices/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdxscraper-wfp-food-prices?branch=master)
+[![Build Status](https://travis-ci.org/OCHA-DAP/hdx-scraper-wfp-food-prices.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdx-scraper-wfp-food-prices) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdx-scraper-wfp-food-prices/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdx-scraper-wfp-food-prices?branch=master)
 
 ### Usage
 python run.py
