@@ -10,6 +10,7 @@ Creates datasets with flattened tables of WFP food prices.
 
 import logging
 from math import sin
+from os.path import join
 
 from hdx.data.dataset import Dataset
 from hdx.data.resource import Resource, ResourceView
@@ -266,7 +267,7 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
     return df1
 
 
-def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts):
+def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, shortcuts):
     """Generate datasets and showcases for each country.
     """
     title = '%s - Food Prices' % countrydata['name']
@@ -296,8 +297,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcut
     dataset.add_tags(tags)
     dataset.add_tag('hxl')
 
-
-    file_csv = "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-")
+    file_csv = join(folder, "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-"))
     df.to_csv(file_csv,index=False)
     resource = Resource({
         'name': title,
@@ -309,7 +309,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcut
     dataset.add_update_resource(resource)
 
     df1 = quickchart_dataframe(df, shortcuts)
-    file_csv = "WFP_food_median_prices_%s.csv"%countrydata["name"].replace(" ","-")
+    file_csv = join(folder, "WFP_food_median_prices_%s.csv"%countrydata["name"].replace(" ","-"))
     df1.to_csv(file_csv,index=False)
     resource = Resource({
         'name': '%s - Food Median Prices' % countrydata['name'],
@@ -405,7 +405,7 @@ def joint_dataframe(wfpfood_url, downloader, countriesdata):
     return df
 
 
-def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
+def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countriesdata):
     """Generate single joint datasets and showcases containing data for all countries.
     """
     title = 'Global Food Prices Database (WFP)'
@@ -432,7 +432,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata):
     dataset.add_country_locations(sorted(df.adm0_name.unique()))
     dataset.add_tags(tags)
 
-    file_csv = "WFPVAM_FoodPrices.csv"
+    file_csv = join(folder, "WFPVAM_FoodPrices.csv")
     df.to_csv(file_csv,index=False)
     resource = Resource({
         'name': title,

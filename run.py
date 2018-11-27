@@ -9,6 +9,7 @@ from os.path import join, expanduser
 
 from hdx.hdx_configuration import Configuration
 from hdx.utilities.downloader import Download
+from hdx.utilities.path import temp_dir
 
 from wfpfood import generate_dataset_and_showcase, get_countriesdata, generate_joint_dataset_and_showcase, generate_resource_view
 
@@ -21,37 +22,38 @@ from hdx.facades.hdx_scraperwiki import facade
 
 logger = logging.getLogger(__name__)
 
-lookup = 'hdxscraper-wfp-food-prices'
+lookup = 'hdx-scraper-wfp-foodprices'
 
 
 def main():
     """Generate dataset and create it in HDX"""
 
-    config                 = Configuration.read()
+    with temp_dir('wfp-foodprices') as folder:
+        with Download() as downloader:
+            config = Configuration.read()
 
-    countries_url          = config['countries_url']
-    wfpfood_url            = config['wfpfood_url']
-    country_correspondence = config['country_correspondence']
-    shortcuts              = config['shortcuts']
+            countries_url = config['countries_url']
+            wfpfood_url = config['wfpfood_url']
+            country_correspondence = config['country_correspondence']
+            shortcuts = config['shortcuts']
 
-    with Download() as downloader:
-        countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
-        logger.info('Number of datasets to upload: %d' % len(countriesdata))
+            countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
+            logger.info('Number of datasets to upload: %d' % len(countriesdata))
 
-        for countrydata in countriesdata:
-            dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, countrydata, shortcuts)
-            if dataset:
-                dataset.update_from_yaml()
-                dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % countrydata['name']
-                dataset.create_in_hdx()
-                showcase.create_in_hdx()
-                showcase.add_dataset(dataset)
-                resource_view = generate_resource_view(dataset)
-                resource_view.create_in_hdx()
+            for countrydata in countriesdata:
+                dataset, showcase = generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, shortcuts)
+                if dataset:
+                    dataset.update_from_yaml()
+                    dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % countrydata['name']
+                    dataset.create_in_hdx()
+                    showcase.create_in_hdx()
+                    showcase.add_dataset(dataset)
+                    resource_view = generate_resource_view(dataset)
+                    resource_view.create_in_hdx()
 
-        logger.info('Individual country datasets finished.')
+            logger.info('Individual country datasets finished.')
 
-        generate_joint_dataset_and_showcase(wfpfood_url, downloader, countriesdata)
+            generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countriesdata)
 
     logger.info('Done')
 

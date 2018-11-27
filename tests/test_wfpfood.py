@@ -7,6 +7,8 @@ Unit tests for wfpfood scraper.
 from os.path import join
 
 import pytest
+from hdx.utilities.path import temp_dir
+
 from wfpfood import *
 from hdx.location.country import Country
 from hdx.hdx_configuration import Configuration
@@ -127,14 +129,15 @@ class TestWfpFood:
     def test_generate_dataset_and_showcase(self, downloader, configuration):
         countriesdata = get_countriesdata('http://xxx', downloader, self.country_correspondence)
         countrydata = countriesdata[0]
-        dataset, showcase = generate_dataset_and_showcase('http://yyy?ac=', downloader, countrydata,{})
+        with temp_dir('wfp-foodprices') as folder:
+            dataset, showcase = generate_dataset_and_showcase('http://yyy?ac=', downloader, folder, countrydata, {})
 
-        assert dataset["name"]   == "wfp-food-prices-for-afghanistan"
-        assert dataset["title"]  == "Afghanistan - Food Prices"
+            assert dataset["name"]   == "wfp-food-prices-for-afghanistan"
+            assert dataset["title"]  == "Afghanistan - Food Prices"
 
-        resources = dataset.get_resources()
-        assert resources[0]         == {'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices', 'dataset_preview_enabled': 'False'}
-        assert resources[1]["name"] == 'Afghanistan - Food Median Prices'
+            resources = dataset.get_resources()
+            assert resources[0]         == {'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices', 'dataset_preview_enabled': 'False'}
+            assert resources[1]["name"] == 'Afghanistan - Food Median Prices'
 
-        assert showcase["title"] == "Afghanistan - Food Prices showcase"
-        assert showcase["url"]   == "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0=1"
+            assert showcase["title"] == "Afghanistan - Food Prices showcase"
+            assert showcase["url"]   == "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0=1"

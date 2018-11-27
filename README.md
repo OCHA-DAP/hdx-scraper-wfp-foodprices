@@ -1,14 +1,21 @@
-### WFP Food Prices Scraper
-
-Scrapers can be installed on QuickCode and set up to run on a schedule
-using the command in the file "crontab".
-
-Collector designed to collect WFP Food Prices datasets from the [WFP](http://dataviz.vam.wfp.org/) website
-via provided [API](http://dataviz.vam.wfp.org/api/getfoodprices?ac=1)
-
 ### Collector for WFP Food Prices's Datasets
-[![Build Status](https://travis-ci.org/OCHA-DAP/hdx-scraper-wfp-food-prices.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdx-scraper-wfp-food-prices) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdx-scraper-wfp-food-prices/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdx-scraper-wfp-food-prices?branch=master)
+[![Build Status](https://travis-ci.org/OCHA-DAP/hdx-scraper-wfp-foodprices.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdx-scraper-wfp-foodprices) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdx-scraper-wfp-foodprices/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdx-scraper-wfp-foodprices?branch=master)
 
+This collector connects to the [WFP](http://dataviz.vam.wfp.org/) website via provided [API](http://dataviz.vam.wfp.org/api/getfoodprices?ac=1)  and extracts food prices data country by country creating a dataset per country in HDX. It makes in the order of 400 reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It saves 2 temporary files per country each less than 100Kb and these are what are uploaded to HDX. These files are then deleted. It runs every month. 
+
+### Usage
+
+    python run.py
+
+For the script to run, you will need to have a file called .hdx_configuration.yml in your home directory containing your HDX key eg.
+
+    hdx_key: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+    hdx_read_only: false
+    hdx_site: prod
+    
+ You will also need to supply the universal .useragents.yml file in your home directory as specified in the parameter *user_agent_config_yaml* passed to facade in run.py. The collector reads the key **hdx-scraper-wfp-foodprices** as specified in the parameter *user_agent_lookup*.
+ 
+ Alternatively, you can set up environment variables: USER_AGENT, HDX_KEY, HDX_SITE, TEMP_DIR, LOG_FILE_ONLY
 ### Usage
 python run.py
 
