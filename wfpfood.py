@@ -24,7 +24,7 @@ import datetime
 import time
 
 logger = logging.getLogger(__name__)
-tags = ["food","health","monitoring","nutrition","wages"]
+tags = ["food","health","monitoring","nutrition","wages","food prices"]
 
 
 def get_countriesdata(countries_url, downloader, country_correspondence):
@@ -294,6 +294,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     dataset.set_dataset_date(df.loc[1:].date.min(),df.loc[1:].date.max(),"%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_location(countrydata["name"])
+    dataset.set_subnational(True)
     dataset.add_tags(tags)
     dataset.add_tag('hxl')
 
