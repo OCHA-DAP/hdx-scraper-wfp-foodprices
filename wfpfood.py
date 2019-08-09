@@ -24,7 +24,7 @@ import datetime
 import time
 
 logger = logging.getLogger(__name__)
-tags = ["food","health","monitoring","nutrition","wages","food prices"]
+tags = ["commodities","prices","markets"]
 
 
 def get_countriesdata(countries_url, downloader, country_correspondence):
