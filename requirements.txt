@@ -1,4 +1,4 @@
-python-slugify==1.2.6
+python-slugify==3.0.2
 pandas==0.23.4
-hdx-python-api==3.4.9
+hdx-python-api==3.7.4
 -r docker-requirements.txt
