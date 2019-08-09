@@ -7,6 +7,7 @@ Unit tests for wfpfood scraper.
 from os.path import join
 
 import pytest
+from hdx.data.vocabulary import Vocabulary
 from hdx.utilities.path import temp_dir
 
 from wfpfood import *
@@ -50,7 +51,9 @@ class TestWfpFood:
         Configuration._create(hdx_read_only=True, user_agent='test',
                               project_config_yaml=join('tests', 'config', 'project_configuration.yml'))
         Locations.set_validlocations([{'name': 'afg', 'title': 'Afghanistan'}])  # add locations used in tests
-
+        Country.countriesdata(use_live=False)
+        Vocabulary._tags_dict = True
+        Vocabulary._approved_vocabulary = {'tags': [{'name': 'hxl'}, {'name': 'commodities'}, {'name': 'prices'}, {'name': 'markets'}], 'id': '4e61d464-4943-4e97-973a-84673c1aaa87', 'name': 'approved'}
 
     @pytest.fixture(scope='function')
     def downloader(self):
@@ -136,7 +139,7 @@ class TestWfpFood:
             assert dataset["title"]  == "Afghanistan - Food Prices"
 
             resources = dataset.get_resources()
-            assert resources[0]         == {'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices', 'dataset_preview_enabled': 'False'}
+            assert resources[0]         == {'format': 'csv', 'description': 'Food prices data with HXL tags', 'name': 'Afghanistan - Food Prices', 'dataset_preview_enabled': 'False', 'resource_type': 'file.upload', 'url_type': 'upload'}
             assert resources[1]["name"] == 'Afghanistan - Food Median Prices'
 
             assert showcase["title"] == "Afghanistan - Food Prices showcase"
