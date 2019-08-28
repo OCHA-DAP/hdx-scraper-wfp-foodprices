@@ -13,11 +13,6 @@ from hdx.utilities.path import temp_dir
 
 from wfpfood import generate_dataset_and_showcase, get_countriesdata, generate_joint_dataset_and_showcase, generate_resource_view
 
-
-# Remove 2 lines below if you don't want emails when there are errors
-#from hdx.facades import logging_kwargs
-#logging_kwargs['smtp_config_yaml'] = join('config', 'smtp_configuration.yml')
-
 from hdx.facades.simple import facade
 
 logger = logging.getLogger(__name__)
@@ -59,6 +54,6 @@ def main():
 
 
 if __name__ == '__main__':
-    facade(main, user_agent_config_yaml=join(expanduser('~'), '.useragents.yml'), user_agent_lookup=lookup, project_config_yaml=join('config', 'project_configuration.yml'))
+    facade(main, hdx_site='test', user_agent_config_yaml=join(expanduser('~'), '.useragents.yml'), user_agent_lookup=lookup, project_config_yaml=join('config', 'project_configuration.yml'))
 
 
