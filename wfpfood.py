@@ -9,6 +9,7 @@ Creates datasets with flattened tables of WFP food prices.
 """
 
 import logging
+from json import JSONDecodeError
 from math import sin
 from os.path import join
 
@@ -270,12 +271,17 @@ def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True
 def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, shortcuts):
     """Generate datasets and showcases for each country.
     """
-    title = '%s - Food Prices' % countrydata['name']
+    countryname = countrydata['name']
+    title = '%s - Food Prices' % countryname
     logger.info('Creating dataset: %s' % title)
     name = 'WFP food prices for %s' % countrydata['name']  #  Example name which should be unique so can include organisation name and country
     slugified_name = slugify(name).lower()
 
-    df = read_dataframe(wfpfood_url, downloader, countrydata)
+    try:
+        df = read_dataframe(wfpfood_url, downloader, countrydata)
+    except JSONDecodeError:
+        logger.exception('Error with %s! URL: %s' % (wfpfood_url, countryname))
+        return None, None
 
     if len(df)<=1:
         logger.warning('Dataset "%s" is empty' % title)
@@ -298,7 +304,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     dataset.add_tags(tags)
     dataset.add_tag('hxl')
 
-    file_csv = join(folder, "WFP_food_prices_%s.csv"%countrydata["name"].replace(" ","-"))
+    file_csv = join(folder, "WFP_food_prices_%s.csv"%countryname.replace(" ","-"))
     df.to_csv(file_csv,index=False)
     resource = Resource({
         'name': title,
@@ -310,7 +316,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     dataset.add_update_resource(resource)
 
     df1 = quickchart_dataframe(df, shortcuts)
-    file_csv = join(folder, "WFP_food_median_prices_%s.csv"%countrydata["name"].replace(" ","-"))
+    file_csv = join(folder, "WFP_food_median_prices_%s.csv"%countryname.replace(" ","-"))
     df1.to_csv(file_csv,index=False)
     resource = Resource({
         'name': '%s - Food Median Prices' % countrydata['name'],
@@ -339,7 +345,7 @@ This reduces the amount of data and allows to make cleaner charts.
     showcase = Showcase({
         'name': '%s-showcase' % slugified_name,
         'title': title+" showcase",
-        'notes': countrydata["name"] + " food prices data from World Food Programme displayed through VAM Economic Explorer",
+        'notes': countryname + " food prices data from World Food Programme displayed through VAM Economic Explorer",
         'url': "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0="+countrydata["code"],
         'image_url': "http://dataviz.vam.wfp.org/_images/home/economic_2-4.jpg"
     })
