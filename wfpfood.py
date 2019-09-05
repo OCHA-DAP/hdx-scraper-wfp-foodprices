@@ -365,8 +365,13 @@ def joint_dataframe(wfpfood_url, downloader, countriesdata):
 
     df = None
     for countrydata in countriesdata:
-        logging.info("Loading %s into a joint dataset"%(countrydata["name"]))
-        df_country = read_dataframe(wfpfood_url, downloader, countrydata)
+        countryname = countrydata["name"]
+        logging.info("Loading %s into a joint dataset"%countryname)
+        try:
+            df_country = read_dataframe(wfpfood_url, downloader, countrydata)
+        except JSONDecodeError:
+            logger.exception('Error with %s! URL: %s' % (wfpfood_url, countryname))
+            return None, None
 
         df_country = df_country.loc[1:]
 
