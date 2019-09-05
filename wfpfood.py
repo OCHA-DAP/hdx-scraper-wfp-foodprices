@@ -468,7 +468,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countri
     dataset.create_in_hdx()
     showcase.create_in_hdx()
     showcase.add_dataset(dataset)
-    dataset.get_resource().create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv)
+    dataset.get_resource().create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv, delete_first=1)
     logger.info('Finished joint dataset')
 
     return dataset, showcase
