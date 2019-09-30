@@ -277,11 +277,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     name = 'WFP food prices for %s' % countrydata['name']  #  Example name which should be unique so can include organisation name and country
     slugified_name = slugify(name).lower()
 
-    try:
-        df = read_dataframe(wfpfood_url, downloader, countrydata)
-    except JSONDecodeError:
-        logger.exception('Error with %s! URL: %s' % (wfpfood_url, countryname))
-        return None, None
+    df = read_dataframe(wfpfood_url, downloader, countrydata)
 
     if len(df)<=1:
         logger.warning('Dataset "%s" is empty' % title)
@@ -293,8 +289,7 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
         'title': title,
         "dataset_preview": "resource_id"
     })
-    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
-#    dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
+    dataset.set_maintainer("eda0ee04-7436-47f0-87ab-d1b9edcd3bb9")  # Wael
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
     dataset.set_dataset_date(df.loc[1:].date.min(),df.loc[1:].date.max(),"%Y-%m-%d")
@@ -367,11 +362,7 @@ def joint_dataframe(wfpfood_url, downloader, countriesdata):
     for countrydata in countriesdata:
         countryname = countrydata["name"]
         logging.info("Loading %s into a joint dataset"%countryname)
-        try:
-            df_country = read_dataframe(wfpfood_url, downloader, countrydata)
-        except JSONDecodeError:
-            logger.exception('Error with %s! URL: %s' % (wfpfood_url, countryname))
-            continue
+        df_country = read_dataframe(wfpfood_url, downloader, countrydata)
 
         df_country = df_country.loc[1:]
 
@@ -434,8 +425,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countri
         'name': slugified_name,
         'title': title
     })
-    dataset.set_maintainer("9957c0e9-cd38-40f1-900b-22c91276154b") # Orest Dubay
-#    dataset.set_maintainer("154de241-38d6-47d3-a77f-0a9848a61df3")
+    dataset.set_maintainer("eda0ee04-7436-47f0-87ab-d1b9edcd3bb9")  # Wael
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
     maxmonth = (100*df.mp_year+df.mp_month).max()%100
