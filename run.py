@@ -11,7 +11,7 @@ from hdx.hdx_configuration import Configuration
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
 
-from wfpfood import generate_dataset_and_showcase, get_countriesdata, generate_joint_dataset_and_showcase, generate_resource_view
+from wfpfood import generate_dataset_and_showcase, get_countriesdata, generate_joint_dataset_and_showcase
 
 from hdx.facades.simple import facade
 
@@ -43,8 +43,7 @@ def main():
                     dataset.create_in_hdx()
                     showcase.create_in_hdx()
                     showcase.add_dataset(dataset)
-                    resource_view = generate_resource_view(dataset)
-                    resource_view.create_in_hdx()
+                    dataset.generate_resource_view(1)
 
             logger.info('Individual country datasets finished.')
 

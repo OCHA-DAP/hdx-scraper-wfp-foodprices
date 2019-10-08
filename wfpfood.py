@@ -9,8 +9,6 @@ Creates datasets with flattened tables of WFP food prices.
 """
 
 import logging
-from json import JSONDecodeError
-from math import sin
 from os.path import join
 
 from hdx.data.dataset import Dataset
@@ -346,12 +344,6 @@ This reduces the amount of data and allows to make cleaner charts.
     })
     showcase.add_tags(tags)
     return dataset, showcase
-
-
-def generate_resource_view(dataset):
-    resource_view = ResourceView({'resource_id': dataset.get_resource(1)['id']})
-    resource_view.update_from_yaml()
-    return resource_view
 
 
 def joint_dataframe(wfpfood_url, downloader, countriesdata):
