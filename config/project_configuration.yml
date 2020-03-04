@@ -1,10 +1,10 @@
 # Collector specific configuration
 wfpfood_url: "http://dataviz.vam.wfp.org/api/getfoodprices?ac="
-countries_url: "http://vam.wfp.org/sites/data/api/adm0code.csv"
+countries_filename: "Adm0Code.csv"
 
 ## Scraper can be configured to feed from local data, that can be created by a prefetch.py script
 #wfpfood_url:   "file:///home/orest/PycharmProjects/hdx/hdxscraper-wfp-food-prices/local/"
-#countries_url: "file:///home/orest/PycharmProjects/hdx/hdxscraper-wfp-food-prices/local/adm0code.csv"
+#countries_path: "file:///home/orest/PycharmProjects/hdx/hdxscraper-wfp-food-prices/local/adm0code.csv"
 
 country_correspondence:
     Aksai Chin : China

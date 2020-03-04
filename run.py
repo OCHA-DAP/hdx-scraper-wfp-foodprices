@@ -25,14 +25,14 @@ def main():
 
     with temp_dir('wfp-foodprices') as folder:
         with Download() as downloader:
-            config = Configuration.read()
+            configuration = Configuration.read()
 
-            countries_url = config['countries_url']
-            wfpfood_url = config['wfpfood_url']
-            country_correspondence = config['country_correspondence']
-            shortcuts = config['shortcuts']
+            countries_path = join('config', configuration['countries_filename'])
+            wfpfood_url = configuration['wfpfood_url']
+            country_correspondence = configuration['country_correspondence']
+            shortcuts = configuration['shortcuts']
 
-            countriesdata = get_countriesdata(countries_url, downloader, country_correspondence)
+            countriesdata = get_countriesdata(countries_path, downloader, country_correspondence)
             logger.info('Number of datasets to upload: %d' % len(countriesdata))
 
             for countrydata in countriesdata:
@@ -40,7 +40,7 @@ def main():
                 if dataset:
                     dataset.update_from_yaml()
                     dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % countrydata['name']
-                    dataset.create_in_hdx()
+                    dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False, updated_by_script='HDX Scraper: WFP Food Prices')
                     showcase.create_in_hdx()
                     showcase.add_dataset(dataset)
                     dataset.generate_resource_view(1)

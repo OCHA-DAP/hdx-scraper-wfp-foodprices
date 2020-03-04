@@ -23,10 +23,10 @@ import datetime
 import time
 
 logger = logging.getLogger(__name__)
-tags = ["commodities","prices","markets"]
+tags = ["commodities", "prices", "markets"]
 
 
-def get_countriesdata(countries_url, downloader, country_correspondence):
+def get_countriesdata(countries_path, downloader, country_correspondence):
     """Download a list of countries and provide mapping if necessary.
 
     A list of dictionaries is returned, each containing the following keys:
@@ -40,15 +40,15 @@ def get_countriesdata(countries_url, downloader, country_correspondence):
     country_correspondence attribute in the project_configuration.yml. All WFP countries mapped to the same ISO 3 country
     will be listed in wfp_countries. Each ISO 3 country will appear at most once in the output.
     """
-    countries={}
-    unknown=[]
+    countries = {}
+    unknown = []
 
-
-    for row in downloader.get_tabular_rows(countries_url, dict_rows=False, headers=1, format='csv'):
+    headers, iterator = downloader.get_tabular_rows(countries_path, headers=1, dict_form=False, format='csv')
+    for row in iterator:
         name = row[0]
         sub_name = name
         code = row[1]
-        new_wfp_countries=[dict(name=sub_name,code=code)]
+        new_wfp_countries = [dict(name=sub_name, code=code)]
         iso3, fuzzy = Country.get_iso3_country_code_fuzzy(name)
         if iso3 is None:
             name = country_correspondence.get(sub_name)
@@ -58,17 +58,19 @@ def get_countriesdata(countries_url, downloader, country_correspondence):
             else:
                 iso3, fuzzy = Country.get_iso3_country_code_fuzzy(name)
 
-        countries[iso3] = countries.get(iso3,dict(name=name,iso3=iso3,wfp_countries=[]))
+        countries[iso3] = countries.get(iso3, dict(name=name, iso3=iso3, wfp_countries=[]))
         countries[iso3]["wfp_countries"] = countries[iso3]["wfp_countries"] + new_wfp_countries
-        countries[iso3]["code"] = ([x for x in countries[iso3]["wfp_countries"] if x["name"] == name] + countries[iso3]["wfp_countries"])[0]["code"]
+        countries[iso3]["code"] = \
+        ([x for x in countries[iso3]["wfp_countries"] if x["name"] == name] + countries[iso3]["wfp_countries"])[0][
+            "code"]
 
     if len(unknown):
-        logger.warning("Some countries were not recognized and are ignored:\n"+",\n".join(unknown))
+        logger.warning("Some countries were not recognized and are ignored:\n" + ",\n".join(unknown))
 
-    return [countries[iso3] for name, iso3 in sorted([(x["name"],x["iso3"]) for x in countries.values()])]
+    return [countries[iso3] for name, iso3 in sorted([(x["name"], x["iso3"]) for x in countries.values()])]
 
 
-def months_between(fromdate,todate):
+def months_between(fromdate, todate):
     """Returns an iterator of iso-formatted dates between fromdate and todate (inclusive) with the step of 1 month."""
     import datetime
 
@@ -76,23 +78,23 @@ def months_between(fromdate,todate):
         if isinstance(d, datetime.date):
             return d
         if isinstance(d, str):
-            d=datetime.datetime.strptime(d, "%Y/%m/%d")
+            d = datetime.datetime.strptime(d, "%Y/%m/%d")
         if isinstance(d, datetime.datetime):
-            return datetime.date(year = d.year, month = d.month, day=d.day)
-        logging.error("Unexpected date type: "+repr(d))
+            return datetime.date(year=d.year, month=d.month, day=d.day)
+        logging.error("Unexpected date type: " + repr(d))
 
     fromdate = to_date(fromdate)
     todate = to_date(todate)
     if fromdate is not None and todate is not None:
-        d=fromdate
-        while d<=todate:
+        d = fromdate
+        while d <= todate:
             yield d.isoformat()
             year = d.year
-            month=d.month+1
-            if month>12:
-                year+=1
-                month=1
-            d=datetime.date(year=year,month=month,day=d.day)
+            month = d.month + 1
+            if month > 12:
+                year += 1
+                month = 1
+            d = datetime.date(year=year, month=month, day=d.day)
 
 
 def read_flattened_data(wfpfood_url, downloader, countrydata):
@@ -102,29 +104,31 @@ def read_flattened_data(wfpfood_url, downloader, countrydata):
     to fit into a plain table structure. This function creates an iterator which both reads and flattens the data in one go.
     """
     for wfp_countrydata in countrydata["wfp_countries"]:
-        logging.debug("Start reading %s data"%countrydata["name"])
+        logging.debug("Start reading %s data" % countrydata["name"])
         url = wfpfood_url + wfp_countrydata['code']
-        for row in downloader.get_tabular_rows(url,file_type='json',dict_rows=True,headers=1):
-            dates =list(months_between(row["startdate"],row["enddate"]))
-            if len(dates)!=len(row["mp_price"]):
-                logging.warning("Number of prices %d does not match with number of expected dates (%d) between %s and %s"%(
-                    len(dates),len(row["mp_price"]),row["startdate"],row["enddate"]
-                ))
-            for date, price in zip(dates,row["mp_price"]):
+        headers, iterator = downloader.get_tabular_rows(url, headers=1, dict_form=True, file_type='json')
+        for row in iterator:
+            dates = list(months_between(row["startdate"], row["enddate"]))
+            if len(dates) != len(row["mp_price"]):
+                logging.warning(
+                    "Number of prices %d does not match with number of expected dates (%d) between %s and %s" % (
+                        len(dates), len(row["mp_price"]), row["startdate"], row["enddate"]
+                    ))
+            for date, price in zip(dates, row["mp_price"]):
                 if price is not None:
                     yield dict(
-                        {key:value for key, value in row.items() if key not in ("startdate","enddate","mp_price")},
-                        date = date,
-                        price = float(price),
+                        {key: value for key, value in row.items() if key not in ("startdate", "enddate", "mp_price")},
+                        date=date,
+                        price=float(price),
                         country=wfp_countrydata['name']
                     )
-        logging.debug("Finished reading %s data"%countrydata["name"])
+        logging.debug("Finished reading %s data" % countrydata["name"])
 
 
 def flattened_data_to_dataframe(data):
     """Converts data to a Pandas DataFrame format and adds the HXL taggs.
     """
-    column_definition="""date #date
+    column_definition = """date #date
   cmname    #item+name
   unit      #item+unit
   category  #item+type
@@ -143,11 +147,12 @@ def flattened_data_to_dataframe(data):
   default   """.split('\n')
 
     columns = [x.split()[0] for x in column_definition]
-    hxl     = {x.split()[0]:" ".join(x.split()[1:]) for x in column_definition}
-    df = pd.DataFrame(data=[hxl] + list(data),columns=columns)
+    hxl = {x.split()[0]: " ".join(x.split()[1:]) for x in column_definition}
+    df = pd.DataFrame(data=[hxl] + list(data), columns=columns)
     return df
 
-_cache=None
+
+_cache = None
 
 
 def read_dataframe(wfpfood_url, downloader, countrydata):
@@ -163,9 +168,8 @@ def read_dataframe(wfpfood_url, downloader, countrydata):
             _cache[countrydata["name"]] = df
         return df.copy()
 
-
     return flattened_data_to_dataframe(
-      read_flattened_data(wfpfood_url, downloader, countrydata)
+        read_flattened_data(wfpfood_url, downloader, countrydata)
     )
 
 
@@ -183,86 +187,88 @@ def month_from_date(d):
         return 0
 
 
-def quickchart_dataframe(df, shortcuts, keep_last_years = 5, remove_nonfood=True):
+def quickchart_dataframe(df, shortcuts, keep_last_years=5, remove_nonfood=True):
     """This function creates filtered dataframe with scaled median prices and short names suitable for quickchart.
     """
+
     def sinceEpoch(d):
         try:
             return time.mktime(datetime.datetime.strptime(d, "%Y-%m-%d").timetuple())
         except:
             return 0
-    df=df.assign(year = df.date.apply(year_from_date))
-    hxl = df.loc[:0]
-    df=df.loc[1:]
-    df1=hxl.copy()
-    df1=df1.assign(label="#item+label")
-    df1=df1.assign(cmnameshort = "#item+name+short")
 
-    df.loc[:,"price"] = pd.to_numeric(df.price, errors='coerce')
-    df.loc[:,"cmname"] = df.cmname.apply(str)
-    df.loc[:,"unit"] = df.unit.apply(str)
+    df = df.assign(year=df.date.apply(year_from_date))
+    hxl = df.loc[:0]
+    df = df.loc[1:]
+    df1 = hxl.copy()
+    df1 = df1.assign(label="#item+label")
+    df1 = df1.assign(cmnameshort="#item+name+short")
+
+    df.loc[:, "price"] = pd.to_numeric(df.price, errors='coerce')
+    df.loc[:, "cmname"] = df.cmname.apply(str)
+    df.loc[:, "unit"] = df.unit.apply(str)
     from_year = df["year"].max() - keep_last_years
-    df=df.loc[df["year"] >= from_year]  # keep only last keep_last_years years
-    df=df.assign(x = df.date.apply(sinceEpoch))
+    df = df.loc[df["year"] >= from_year]  # keep only last keep_last_years years
+    df = df.assign(x=df.date.apply(sinceEpoch))
 
     dates = sorted(df.date.unique())
     x = np.array([sinceEpoch(d) for d in dates])
 
     if remove_nonfood:
         df.loc[:, "catid"] = pd.to_numeric(df.catid, errors='coerce')
-        df=df.loc[df.catid != 8]
+        df = df.loc[df.catid != 8]
 
-    processed_data=[]
-    for key, index in sorted(df.groupby(["cmname","unit","category","cmid","catid"]).groups.items()):
+    processed_data = []
+    for key, index in sorted(df.groupby(["cmname", "unit", "category", "cmid", "catid"]).groups.items()):
         commodity, unit, category, cmid, catid = key
-        g=df.loc[index]
+        g = df.loc[index]
         gd = g.groupby(["date"])
 
         invmean = 100.0 / g.price.mean()
         quantity = math.pow(10, math.trunc(math.log10(invmean)))
-        qunit = "%d %s"%(quantity,unit)
+        qunit = "%d %s" % (quantity, unit)
         if quantity < 1:
-            qunit = "1/%d %s"%(int(1/quantity),unit)
+            qunit = "1/%d %s" % (int(1 / quantity), unit)
         if quantity == 1:
             qunit = unit
 
-        label="%(commodity)s (%(qunit)s)"%locals()
-        short_commodity = shortcuts.get(commodity,commodity)
+        label = "%(commodity)s (%(qunit)s)" % locals()
+        short_commodity = shortcuts.get(commodity, commodity)
         series = {}
-        for date,median in gd.price.median().items():
-            gg = g.loc[g.date==date]
-            median = gg.loc[gg.price<=median].price.max()
+        for date, median in gd.price.median().items():
+            gg = g.loc[g.date == date]
+            median = gg.loc[gg.price <= median].price.max()
             if median > 0:
-                row = dict(gg.loc[gg.price==median].iloc[0])
-                row["price"]*=quantity
-                row["unit"]=qunit
-                row["label"]=label
+                row = dict(gg.loc[gg.price == median].iloc[0])
+                row["price"] *= quantity
+                row["unit"] = qunit
+                row["label"] = label
                 row["cmnameshort"] = short_commodity
-                row["scaling"]=quantity
-                row["interpolated"]=0
-                series[date]=row
+                row["scaling"] = quantity
+                row["interpolated"] = 0
+                series[date] = row
         source_dates = sorted(series.keys())
         xp = np.array([series[d]["x"] for d in source_dates])
         yp = np.array([series[d]["price"] for d in source_dates])
-        y = np.interp(x,xp,yp)
-        for date,price in zip(dates,y):
+        y = np.interp(x, xp, yp)
+        for date, price in zip(dates, y):
             if date in series:
                 processed_data.append(series[date])
             else:
                 processed_data.append(dict(
-                    date         = date,
-                    price        = price,
-                    unit         = qunit,
-                    label        = label,
-                    cmname       = commodity,
-                    cmnameshort  = short_commodity,
-                    scaling      = quantity,
-                    category     = category,
-                    interpolated = 1,
-                    cmid         = cmid,
-                    catid        = catid
+                    date=date,
+                    price=price,
+                    unit=qunit,
+                    label=label,
+                    cmname=commodity,
+                    cmnameshort=short_commodity,
+                    scaling=quantity,
+                    category=category,
+                    interpolated=1,
+                    cmid=cmid,
+                    catid=catid
                 ))
-    df1=df1.append(pd.DataFrame(processed_data), ignore_index=True)
+    df1 = df1.append(pd.DataFrame(processed_data), ignore_index=True)
     return df1
 
 
@@ -272,15 +278,15 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     countryname = countrydata['name']
     title = '%s - Food Prices' % countryname
     logger.info('Creating dataset: %s' % title)
-    name = 'WFP food prices for %s' % countrydata['name']  #  Example name which should be unique so can include organisation name and country
+    name = 'WFP food prices for %s' % countrydata[
+        'name']  # Example name which should be unique so can include organisation name and country
     slugified_name = slugify(name).lower()
 
     df = read_dataframe(wfpfood_url, downloader, countrydata)
 
-    if len(df)<=1:
+    if len(df) <= 1:
         logger.warning('Dataset "%s" is empty' % title)
         return None, None
-
 
     dataset = Dataset({
         'name': slugified_name,
@@ -290,15 +296,15 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     dataset.set_maintainer("eda0ee04-7436-47f0-87ab-d1b9edcd3bb9")  # Wael
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
-    dataset.set_dataset_date(df.loc[1:].date.min(),df.loc[1:].date.max(),"%Y-%m-%d")
+    dataset.set_dataset_date(df.loc[1:].date.min(), df.loc[1:].date.max(), "%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_location(countrydata["name"])
     dataset.set_subnational(True)
     dataset.add_tags(tags)
     dataset.add_tag('hxl')
 
-    file_csv = join(folder, "WFP_food_prices_%s.csv"%countryname.replace(" ","-"))
-    df.to_csv(file_csv,index=False)
+    file_csv = join(folder, "WFP_food_prices_%s.csv" % countryname.replace(" ", "-"))
+    df.to_csv(file_csv, index=False)
     resource = Resource({
         'name': title,
         "dataset_preview_enabled": "False",
@@ -309,27 +315,27 @@ def generate_dataset_and_showcase(wfpfood_url, downloader, folder, countrydata, 
     dataset.add_update_resource(resource)
 
     df1 = quickchart_dataframe(df, shortcuts)
-    file_csv = join(folder, "WFP_food_median_prices_%s.csv"%countryname.replace(" ","-"))
-    df1.to_csv(file_csv,index=False)
+    file_csv = join(folder, "WFP_food_median_prices_%s.csv" % countryname.replace(" ", "-"))
+    df1.to_csv(file_csv, index=False)
     resource = Resource({
         'name': '%s - Food Median Prices' % countrydata['name'],
         "dataset_preview_enabled": "True",
         'description':
-"""Food median prices data with HXL tags.
-Median of all prices for a given commodity observed on different markets is shown, together with the market where
-it was observed. Data are shortened in multiple ways:
-
-- Rather that prices on all markets, only median price across all markets is shown, together with the market
-  where it has been observed.
-- Only food commodities are displayed (non-food commodities like fuel and wages are not shown).
-- Only data after %s are shown. Missing data are interpolated.
-- Column with shorter commodity names "cmnshort" are available to be used as chart labels.
-- Units are adapted and prices are rescaled in order to yield comparable values (so that they
-  can be displayed and compared in a single chart). Scaling factor is present in scaling column.
-  Label with full commodity name and a unit (with scale if applicable) is in column "label".  
-
-This reduces the amount of data and allows to make cleaner charts.
-"""%(df1.loc[1:].date.min())
+            """Food median prices data with HXL tags.
+            Median of all prices for a given commodity observed on different markets is shown, together with the market where
+            it was observed. Data are shortened in multiple ways:
+            
+            - Rather that prices on all markets, only median price across all markets is shown, together with the market
+              where it has been observed.
+            - Only food commodities are displayed (non-food commodities like fuel and wages are not shown).
+            - Only data after %s are shown. Missing data are interpolated.
+            - Column with shorter commodity names "cmnshort" are available to be used as chart labels.
+            - Units are adapted and prices are rescaled in order to yield comparable values (so that they
+              can be displayed and compared in a single chart). Scaling factor is present in scaling column.
+              Label with full commodity name and a unit (with scale if applicable) is in column "label".  
+            
+            This reduces the amount of data and allows to make cleaner charts.
+            """ % (df1.loc[1:].date.min())
     })
     resource.set_file_type('csv')  # set the file type to eg. csv
     resource.set_file_to_upload(file_csv)
@@ -337,9 +343,9 @@ This reduces the amount of data and allows to make cleaner charts.
 
     showcase = Showcase({
         'name': '%s-showcase' % slugified_name,
-        'title': title+" showcase",
+        'title': title + " showcase",
         'notes': countryname + " food prices data from World Food Programme displayed through VAM Economic Explorer",
-        'url': "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0="+countrydata["code"],
+        'url': "http://dataviz.vam.wfp.org/economic_explorer/prices?adm0=" + countrydata["code"],
         'image_url': "http://dataviz.vam.wfp.org/_images/home/economic_2-4.jpg"
     })
     showcase.add_tags(tags)
@@ -348,36 +354,36 @@ This reduces the amount of data and allows to make cleaner charts.
 
 def joint_dataframe(wfpfood_url, downloader, countriesdata):
     def ptid_to_ptname(ptid):
-        return {15:"Retail", 14:"Wholesale", 17:"Producer", 18:"Farm Gate"}.get(ptid,"")
+        return {15: "Retail", 14: "Wholesale", 17: "Producer", 18: "Farm Gate"}.get(ptid, "")
 
     df = None
     for countrydata in countriesdata:
         countryname = countrydata["name"]
-        logging.info("Loading %s into a joint dataset"%countryname)
+        logging.info("Loading %s into a joint dataset" % countryname)
         df_country = read_dataframe(wfpfood_url, downloader, countrydata)
 
         df_country = df_country.loc[1:]
 
         dff = pd.DataFrame(dict(
-            adm0_id   = [int(countrydata["code"])]*len(df_country),
-            adm0_name = [str(countrydata["name"])]*len(df_country),
-            adm1_id   = df_country.adm1id,
-            adm1_name = df_country.admname,
-            mkt_id    = df_country.mktid,
-            mkt_name  = df_country.mktname,
-            cm_id     = df_country.cmid,
-            cm_name   = df_country.cmname,
-            cur_id    = [0]*len(df_country),
-            cur_name  = df_country.currency,
-            pt_id     = df_country.ptid,
-            pt_name   = df_country.ptid.apply(ptid_to_ptname),
-            um_id     = df_country.umid,
-            um_name   = df_country.unit,
-            mp_month  = df_country.date.apply(month_from_date),
-            mp_year   = df_country.date.apply(year_from_date),
-            mp_price  = df_country.price,
-            mp_commoditysource = [""]*len(df_country),
-        ), columns ="""adm0_id
+            adm0_id=[int(countrydata["code"])] * len(df_country),
+            adm0_name=[str(countrydata["name"])] * len(df_country),
+            adm1_id=df_country.adm1id,
+            adm1_name=df_country.admname,
+            mkt_id=df_country.mktid,
+            mkt_name=df_country.mktname,
+            cm_id=df_country.cmid,
+            cm_name=df_country.cmname,
+            cur_id=[0] * len(df_country),
+            cur_name=df_country.currency,
+            pt_id=df_country.ptid,
+            pt_name=df_country.ptid.apply(ptid_to_ptname),
+            um_id=df_country.umid,
+            um_name=df_country.unit,
+            mp_month=df_country.date.apply(month_from_date),
+            mp_year=df_country.date.apply(year_from_date),
+            mp_price=df_country.price,
+            mp_commoditysource=[""] * len(df_country),
+        ), columns="""adm0_id
             adm0_name
             adm1_id
             adm1_name
@@ -396,7 +402,7 @@ def joint_dataframe(wfpfood_url, downloader, countriesdata):
             mp_price
             mp_commoditysource""".split()
         )
-        df = dff if df is None else df.append(dff,ignore_index=True)
+        df = dff if df is None else df.append(dff, ignore_index=True)
     return df
 
 
@@ -409,7 +415,7 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countri
 
     df = joint_dataframe(wfpfood_url, downloader, countriesdata)
 
-    if len(df)<=1:
+    if len(df) <= 1:
         logger.warning('Dataset "%s" is empty' % title)
         return None, None
 
@@ -420,14 +426,14 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countri
     dataset.set_maintainer("eda0ee04-7436-47f0-87ab-d1b9edcd3bb9")  # Wael
     dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
-    maxmonth = (100*df.mp_year+df.mp_month).max()%100
-    dataset.set_dataset_date("%04d-01-01"%df.mp_year.min(),"%04d-%02d-15"%(df.mp_year.max(),maxmonth),"%Y-%m-%d")
+    maxmonth = (100 * df.mp_year + df.mp_month).max() % 100
+    dataset.set_dataset_date("%04d-01-01" % df.mp_year.min(), "%04d-%02d-15" % (df.mp_year.max(), maxmonth), "%Y-%m-%d")
     dataset.set_expected_update_frequency("weekly")
     dataset.add_country_locations(sorted(df.adm0_name.unique()))
     dataset.add_tags(tags)
 
     file_csv = join(folder, "WFPVAM_FoodPrices.csv")
-    df.to_csv(file_csv,index=False)
+    df.to_csv(file_csv, index=False)
     resource = Resource({
         'name': title,
         'description': "Word Food Programme – Food Prices  Data Source: WFP Vulnerability Analysis and Mapping (VAM)."
@@ -447,10 +453,11 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countri
 
     dataset.update_from_yaml()
     dataset['notes'] = dataset['notes'] % 'Global Food Prices data from the World Food Programme covering'
-    dataset.create_in_hdx()
+    dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False, updated_by_script='HDX Scraper: WFP Food Prices')
     showcase.create_in_hdx()
     showcase.add_dataset(dataset)
-    dataset.get_resource().create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv, delete_first=1)
+    dataset.get_resource().create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv,
+                                                             delete_first=1)
     logger.info('Finished joint dataset')
 
     return dataset, showcase
