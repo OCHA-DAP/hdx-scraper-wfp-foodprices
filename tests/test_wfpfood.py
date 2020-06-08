@@ -80,7 +80,7 @@ class TestWfpFood:
         assert Country.get_iso3_country_code("China") == "CHN"
 
     def test_get_countriesdata(self, downloader):
-        countriesdata = get_countriesdata('config/adm0code.csv', downloader, self.country_correspondence)
+        countriesdata = get_countries('config/adm0code.csv', downloader, self.country_correspondence)
         assert countriesdata == TestWfpFood.countriesdata
 
     def test_get_countriesdata1(self):
@@ -92,7 +92,7 @@ class TestWfpFood:
                     return TestWfpFood.Afghanistan_data
                 return []
 
-        countriesdata = get_countriesdata('config/adm0code.csv', Download1(), self.country_correspondence)
+        countriesdata = get_countries('config/adm0code.csv', Download1(), self.country_correspondence)
         assert countriesdata == [
             dict(name="Afghanistan", code="1", iso3="AFG", wfp_countries=[dict(name="Afghanistan", code="1")]),
             dict(name="Albania", code="3", iso3="ALB", wfp_countries=[dict(name="Albania", code="3")]),

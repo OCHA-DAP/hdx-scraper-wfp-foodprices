@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 tags = ["commodities", "prices", "markets"]
 
 
-def get_countriesdata(countries_path, downloader, country_correspondence):
+def get_countries(countries_path, downloader, country_correspondence):
     """Download a list of countries and provide mapping if necessary.
 
     A list of dictionaries is returned, each containing the following keys:
@@ -451,13 +451,6 @@ def generate_joint_dataset_and_showcase(wfpfood_url, downloader, folder, countri
     })
     showcase.add_tags(tags)
 
-    dataset.update_from_yaml()
-    dataset['notes'] = dataset['notes'] % 'Global Food Prices data from the World Food Programme covering'
-    dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False, updated_by_script='HDX Scraper: WFP Food Prices')
-    showcase.create_in_hdx()
-    showcase.add_dataset(dataset)
-    dataset.get_resource().create_datastore_from_yaml_schema(yaml_path="wfp_food_prices.yml", path=file_csv,
-                                                             delete_first=1)
     logger.info('Finished joint dataset')
 
-    return dataset, showcase
+    return dataset, showcase, file_csv
