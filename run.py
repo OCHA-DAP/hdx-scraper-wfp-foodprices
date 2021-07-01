@@ -35,14 +35,10 @@ def main(save, use_saved, **ignore):
 
     with Download(extra_params_yaml=join(expanduser('~'), '.extraparams.yml'), extra_params_lookup=lookup) as token_downloader:
         configuration = Configuration.read()
-        token_downloader.download(configuration['token_url'], post=True,
-                                  parameters={'grant_type': 'client_credentials'})
-        access_token = token_downloader.get_json()['access_token']
-        headers = {'Accept': 'application/json', 'Authorization': f'Bearer {access_token}'}
         with Download() as downloader:
             folder = temp_dir(lookup)
             retriever = Retrieve(downloader, folder, 'saved_data', folder, save, use_saved)
-            wfp = WFPFood(configuration, retriever, headers)
+            wfp = WFPFood(configuration, token_downloader, retriever)
             countries = wfp.get_countries()
             logger.info('Number of country datasets to upload: %d' % len(countries))
             wfp.build_mappings()

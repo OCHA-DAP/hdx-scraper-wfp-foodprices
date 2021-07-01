@@ -7,12 +7,14 @@ WFP food prices:
 Creates datasets with flattened tables of WFP food prices.
 
 """
-
+import difflib
 import logging
+import re
 
 from hdx.data.dataset import Dataset
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
+from hdx.utilities.downloader import DownloadError
 from slugify import slugify
 
 logger = logging.getLogger(__name__)
@@ -24,15 +26,34 @@ headers = list(hxltags.keys())
 
 
 class WFPFood:
-    def __init__(self, configuration, retriever, headers):
+    def __init__(self, configuration, token_downloader, retriever):
         self.configuration = configuration
+        self.token_downloader = token_downloader
         self.retriever = retriever
-        self.headers = headers
+        self.headers = None
         self.commodity_to_category = dict()
+
+    def refresh_headers(self):
+        self.token_downloader.download(self.configuration['token_url'], post=True,
+                                       parameters={'grant_type': 'client_credentials'})
+        access_token = self.token_downloader.get_json()['access_token']
+        self.headers = {'Accept': 'application/json', 'Authorization': f'Bearer {access_token}'}
+
+    def retrieve(self, url, filename, log, parameters=None):
+        try:
+            results = self.retriever.retrieve_json(url, filename, log, False, parameters=parameters,
+                                                   headers=self.headers)
+        except DownloadError:
+            if self.retriever.downloader.response.status_code != 401:
+                raise
+            self.refresh_headers()
+            results = self.retriever.retrieve_json(url, filename, log, False, parameters=parameters,
+                                                   headers=self.headers)
+        return results
 
     def get_countries(self):
         url = self.configuration['countries_url']
-        json = self.retriever.retrieve_json(url, 'countries.json', 'countries', headers=self.headers)
+        json = self.retrieve(url, 'countries.json', 'countries')
         countries = set()
         for country in json['response']:
             countries.add((country['iso3'], country['adm0_name']))
@@ -56,8 +77,7 @@ class WFPFood:
             if startdate:
                 parameters['startDate'] = startdate
             try:
-                json = self.retriever.retrieve_json(url, filename, log, False, parameters=parameters,
-                                                    headers=self.headers)
+                json = self.retrieve(url, filename, log, parameters)
             except FileNotFoundError:
                 json = {'items': list()}
             data = json['items']
@@ -72,6 +92,21 @@ class WFPFood:
         for commodity in self.get_list('Commodities/List'):
             self.commodity_to_category[commodity['id']] = categoryid_to_name[commodity['categoryId']]
 
+    @staticmethod
+    def match_source(sources, source):
+        words = source.split(' ')
+        if len(words) < 2:
+            return False
+        found = False
+        for cursource in sources:
+            words = cursource.split(' ')
+            if len(words) < 2:
+                continue
+            seq = difflib.SequenceMatcher(None, source, cursource)
+            if seq.ratio() > 0.9:
+                found = True
+        return found
+
     def generate_dataset_and_showcase(self, countryiso3, folder):
         countryname = Country.get_country_name_from_iso3(countryiso3)
         title = f'{countryname} - Food Prices'
@@ -83,7 +118,7 @@ class WFPFood:
             'name': slugified_name,
             'title': title,
         })
-        dataset.set_maintainer('eda0ee04-7436-47f0-87ab-d1b9edcd3bb9')  # Wael
+        dataset.set_maintainer('f1921552-8c3e-47e9-9804-579b14a83ee3')
         dataset.set_organization('3ecac442-7fed-448d-8f78-b385ef6f84e7')
 
         dataset.set_expected_update_frequency('weekly')
@@ -102,7 +137,7 @@ class WFPFood:
                                                 market['marketLongitude']
 
         rows = dict()
-        sources = set()
+        sources = dict()
         for price_data in prices_data:
             if price_data['commodityPriceFlag'] not in ('actual', 'aggregate'):
                 continue
@@ -117,8 +152,13 @@ class WFPFood:
                     adm1, adm2, lat, lon = market_to_adm[market_id]
                 else:
                     adm1 = adm2 = lat = lon = ''
-            orig_source = price_data['commodityPriceSourceName'].replace('+', '/').replace(',', '/')
-            split_sources = orig_source.split('/')
+            orig_source = price_data['commodityPriceSourceName'].replace('M/o', 'Ministry of').replace('+', '/')
+            regex = r'Government.*,(Ministry.*)'
+            match = re.search(regex, orig_source)
+            if match:
+                split_sources = [match.group(1)]
+            else:
+                split_sources = orig_source.replace(',', '/').replace(';', '/').split('/')
             for source in split_sources:
                 source = source.strip()
                 if source[-1] == '.':
@@ -128,7 +168,9 @@ class WFPFood:
                     source = 'WFP mVAM'
                 elif '?stica' in source:
                     source = source.replace('?stica', 'ística')
-                sources.add(source)
+                source_lower = source.lower()
+                if not self.match_source(sources.keys(), source_lower):
+                    sources[source_lower] = source
             commodity = price_data['commodityName']
             unit = price_data['commodityUnitName']
             price = price_data['commodityPrice']
@@ -141,7 +183,7 @@ class WFPFood:
         if not rows:
             logger.info(f'{countryiso3} has no prices!')
             return None, None
-        dataset['dataset_source'] = ', '.join(sorted(sources))
+        dataset['dataset_source'] = ', '.join(sorted(sources.values()))
         filename = f'wfp_food_prices_{countryiso3.lower()}.csv'
         resourcedata = {
             'name': title,
