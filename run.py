@@ -44,10 +44,11 @@ def main(save, use_saved, **ignore):
             wfp.build_mappings()
             for info, country in progress_storing_tempdir(lookup, countries, 'iso3'):
 
-                dataset, showcase = wfp.generate_dataset_and_showcase(country['iso3'], info['folder'])
+                dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(country['iso3'], info['folder'])
                 if dataset:
                     dataset.update_from_yaml()
                     dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % country['name']
+                    dataset.generate_resource_view(-1, indicators=qc_indicators)
                     dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False,
                                           updated_by_script='HDX Scraper: WFP Food Prices', batch=info['batch'])
                     showcase.create_in_hdx()
