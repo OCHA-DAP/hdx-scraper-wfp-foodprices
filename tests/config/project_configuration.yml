@@ -1,4 +1,4 @@
 # Collector specific configuration
-wfpfood_url:   "http://yyy?ac="
-countries_url: "http://xxx"
+countries_url: "http://xxx/"
+base_url: "http://yyy/"
 
