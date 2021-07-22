@@ -8,9 +8,10 @@ import argparse
 import logging
 from os.path import join, expanduser
 
+from hdx.database import Database
 from hdx.hdx_configuration import Configuration
 from hdx.utilities.downloader import Download
-from hdx.utilities.path import temp_dir, progress_storing_tempdir
+from hdx.utilities.path import get_temp_dir, progress_storing_tempdir
 
 from hdx.facades.keyword_arguments import facade
 from hdx.utilities.retriever import Retrieve
@@ -36,23 +37,25 @@ def main(save, use_saved, **ignore):
     with Download(extra_params_yaml=join(expanduser('~'), '.extraparams.yml'), extra_params_lookup=lookup) as token_downloader:
         configuration = Configuration.read()
         with Download() as downloader:
-            folder = temp_dir(lookup)
+            folder = get_temp_dir(lookup)
             retriever = Retrieve(downloader, folder, 'saved_data', folder, save, use_saved)
-            wfp = WFPFood(configuration, token_downloader, retriever)
-            countries = wfp.get_countries()
-            logger.info('Number of country datasets to upload: %d' % len(countries))
-            wfp.build_mappings()
-            for info, country in progress_storing_tempdir(lookup, countries, 'iso3'):
-
-                dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(country['iso3'], info['folder'])
-                if dataset:
-                    dataset.update_from_yaml()
-                    dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % country['name']
-                    dataset.generate_resource_view(-1, indicators=qc_indicators)
-                    dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False,
-                                          updated_by_script='HDX Scraper: WFP Food Prices', batch=info['batch'])
-                    showcase.create_in_hdx()
-                    showcase.add_dataset(dataset)
+            params = {'driver': 'sqlite', 'database': 'freshness.db'}
+            with Database(**params) as session:
+                wfp = WFPFood(configuration, token_downloader, retriever, session)
+                countries = wfp.get_countries()
+                logger.info('Number of country datasets to upload: %d' % len(countries))
+                wfp.build_mappings()
+                for info, country in progress_storing_tempdir(lookup, countries, 'iso3'):
+                    dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(country['iso3'], info['folder'])
+                    if dataset:
+                        dataset.update_from_yaml()
+                        dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % country['name']
+                        dataset.generate_resource_view(-1, indicators=qc_indicators)
+                        dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False,
+                                              updated_by_script='HDX Scraper: WFP Food Prices', batch=info['batch'])
+                        showcase.create_in_hdx()
+                        showcase.add_dataset(dataset)
+                wfp.generate_global_dataset_and_showcase(countries, info['folder'])
 
 
 if __name__ == '__main__':
