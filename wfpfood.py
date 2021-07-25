@@ -32,6 +32,25 @@ headers = list(hxltags.keys())
 qc_hxltags = {'date': '#date', 'code': '#meta+code', 'usdprice': '#value+usd'}
 
 
+def get_usdprice(fxrates, date, price):
+    if date in fxrates:
+        return price / fxrates[date]
+    date0 = None
+    for date1 in sorted(fxrates):
+        if date1 < date:
+            date0 = date1
+        else:
+            break
+    rate0 = fxrates[date0]
+    rate1 = fxrates[date1]
+    date0 = date0.timestamp()
+    date1 = date1.timestamp()
+    date = date.timestamp()
+    dydx = (rate1 - rate0) / (date1 - date0)
+    rate = rate0 + (date - date0) * dydx
+    return price / rate
+
+
 class WFPFood:
     def __init__(self, configuration, token_downloader, retriever, session):
         self.configuration = configuration
@@ -168,35 +187,24 @@ class WFPFood:
         logger.info(f'{len(prices_data)} prices rows')
         prices = dict()
         fxrates = dict()
-        duplicates = dict()
         for price_data in prices_data:
             if price_data['commodityPriceFlag'] not in ('actual', 'aggregate'):
                 continue
-            date = price_data['commodityPriceDate']
+            date = parse_date(price_data['commodityPriceDate'])
             id = price_data['commodityID']
             name = price_data['commodityName']
             unitid = price_data['commodityUnitID']
             marketid = price_data['marketID']
             key = date, id, unitid, marketid
-            if key in prices:
-                dict_of_lists_add(duplicates, key, price_data)
-            else:
-                prices[key] = price_data
+            prices[key] = price_data
             if name == 'Exchange rate':
-                currency = price_data['currencyName']
                 price = price_data['commodityPrice']
-                dict_of_dicts_add(fxrates, currency, date, price)
-        logger.info(f'{len(prices)} unique prices rows')
-        for key in duplicates:
-            dict_of_lists_add(duplicates, key, prices[key])
+                fxrates[date] = price
+        logger.info(f'{len(prices)} unique prices rows of price type actual or aggregate')
         rows = dict()
         sources = dict()
         markets = dict()
-        for price_data in prices_data:
-            pricetype = price_data['commodityPriceFlag']
-            if pricetype not in ('actual', 'aggregate'):
-                continue
-            date = price_data['commodityPriceDate']
+        for price_data in prices.values():
             category = self.commodity_to_category[price_data['commodityID']]
             market = price_data['marketName']
             if market == 'National Average':
@@ -228,18 +236,21 @@ class WFPFood:
                 source_lower = source.lower()
                 if not self.match_source(sources.keys(), source_lower):
                     sources[source_lower] = source
+            date_str = price_data['commodityPriceDate']
+            date = parse_date(date_str)
             commodity = price_data['commodityName']
             unit = price_data['commodityUnitName']
-            price = price_data['commodityPrice']
-            currency = price_data['currencyName']
-            key = date, adm1, adm2, market, category, commodity, unit, pricetype, currency
+            key = date, adm1, adm2, market, category, commodity, unit
             if key in rows:
                 logger.warning(f'Overwriting row key {key}')
-            usdprice = Currency.get_historic_value_in_usd(price, currency, parse_date(date))
-            rows[key] = {'date': date, 'adm1name': adm1, 'adm2name': adm2, 'market': market, 'latitude': lat,
+            pricetype = price_data['commodityPriceFlag']
+            price = price_data['commodityPrice']
+            usdprice = get_usdprice(fxrates, date, price)
+            currency = price_data['currencyName']
+            rows[key] = {'date': date_str, 'adm1name': adm1, 'adm2name': adm2, 'market': market, 'latitude': lat,
                          'longitude': lon, 'category': category, 'commodity': commodity, 'unit': unit,
                          'pricetype': pricetype, 'currency': currency, 'price': price, 'usdprice': usdprice}
-            dbfoodprice = DBFoodPrice(countryiso3=countryiso3, date=parse_date(date), adm1name=adm1, adm2name=adm2, market=market,
+            dbfoodprice = DBFoodPrice(countryiso3=countryiso3, date=date, adm1name=adm1, adm2name=adm2, market=market,
                                       latitude=lat, longitude=lon, category=category, commodity=commodity, unit=unit,
                                       pricetype=pricetype, currency=currency, price=price, usdprice=usdprice)
             self.session.add(dbfoodprice)

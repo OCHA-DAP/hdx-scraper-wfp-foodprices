@@ -39,7 +39,7 @@ def main(save, use_saved, **ignore):
         with Download() as downloader:
             folder = get_temp_dir(lookup)
             retriever = Retrieve(downloader, folder, 'saved_data', folder, save, use_saved)
-            params = {'driver': 'sqlite', 'database': 'freshness.db'}
+            params = {'driver': 'sqlite', 'database': 'foodprices.sqlite'}
             with Database(**params) as session:
                 wfp = WFPFood(configuration, token_downloader, retriever, session)
                 countries = wfp.get_countries()
@@ -55,7 +55,8 @@ def main(save, use_saved, **ignore):
                                               updated_by_script='HDX Scraper: WFP Food Prices', batch=info['batch'])
                         showcase.create_in_hdx()
                         showcase.add_dataset(dataset)
-                wfp.generate_global_dataset_and_showcase(countries, info['folder'])
+                    wfp.update_database()
+                wfp.generate_global_dataset_and_showcase()
 
 
 if __name__ == '__main__':
