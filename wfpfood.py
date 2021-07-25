@@ -16,14 +16,16 @@ from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from hdx.location.currency import Currency
 from hdx.utilities.dateparse import parse_date
-from hdx.utilities.dictandlist import dict_of_lists_add
+from hdx.utilities.dictandlist import dict_of_lists_add, dict_of_dicts_add, dict_of_sets_add
 from hdx.utilities.downloader import DownloadError
 from slugify import slugify
 
+from dbfoodprice import DBFoodPrice
+
 logger = logging.getLogger(__name__)
 
-hxltags = {'date': '#date', 'adm1name': '#adm1+name', 'adm2name': '#adm2+name', 'latitude': '#geo+lat',
-           'longitude': '#geo+lon', 'market': '#name+market', 'category': '#item+type', 'commodity': '#item+name',
+hxltags = {'date': '#date', 'adm1name': '#adm1+name', 'adm2name': '#adm2+name', 'market': '#name+market',
+           'latitude': '#geo+lat', 'longitude': '#geo+lon', 'category': '#item+type', 'commodity': '#item+name',
            'unit': '#item+unit', 'pricetype': '#item+price+type', 'currency': '#currency', 'price': '#value',
            'usdprice': '#value+usd'}
 headers = list(hxltags.keys())
@@ -163,11 +165,36 @@ class WFPFood:
         for market in self.get_list('Markets/List', countryiso3):
             market_to_adm[market['marketId']] = market['admin1Name'], market['admin2Name'], market['marketLatitude'],\
                                                 market['marketLongitude']
+        logger.info(f'{len(prices_data)} prices rows')
+        prices = dict()
+        fxrates = dict()
+        duplicates = dict()
+        for price_data in prices_data:
+            if price_data['commodityPriceFlag'] not in ('actual', 'aggregate'):
+                continue
+            date = price_data['commodityPriceDate']
+            id = price_data['commodityID']
+            name = price_data['commodityName']
+            unitid = price_data['commodityUnitID']
+            marketid = price_data['marketID']
+            key = date, id, unitid, marketid
+            if key in prices:
+                dict_of_lists_add(duplicates, key, price_data)
+            else:
+                prices[key] = price_data
+            if name == 'Exchange rate':
+                currency = price_data['currencyName']
+                price = price_data['commodityPrice']
+                dict_of_dicts_add(fxrates, currency, date, price)
+        logger.info(f'{len(prices)} unique prices rows')
+        for key in duplicates:
+            dict_of_lists_add(duplicates, key, prices[key])
         rows = dict()
         sources = dict()
         markets = dict()
         for price_data in prices_data:
-            if price_data['commodityPriceFlag'] not in ('actual', 'aggregate'):
+            pricetype = price_data['commodityPriceFlag']
+            if pricetype not in ('actual', 'aggregate'):
                 continue
             date = price_data['commodityPriceDate']
             category = self.commodity_to_category[price_data['commodityID']]
@@ -205,12 +232,17 @@ class WFPFood:
             unit = price_data['commodityUnitName']
             price = price_data['commodityPrice']
             currency = price_data['currencyName']
-            pricetype = price_data['commodityPriceFlag']
-            key = date, adm1, adm2, market, category, commodity, unit
+            key = date, adm1, adm2, market, category, commodity, unit, pricetype, currency
+            if key in rows:
+                logger.warning(f'Overwriting row key {key}')
             usdprice = Currency.get_historic_value_in_usd(price, currency, parse_date(date))
             rows[key] = {'date': date, 'adm1name': adm1, 'adm2name': adm2, 'market': market, 'latitude': lat,
                          'longitude': lon, 'category': category, 'commodity': commodity, 'unit': unit,
                          'pricetype': pricetype, 'currency': currency, 'price': price, 'usdprice': usdprice}
+            dbfoodprice = DBFoodPrice(countryiso3=countryiso3, date=parse_date(date), adm1name=adm1, adm2name=adm2, market=market,
+                                      latitude=lat, longitude=lon, category=category, commodity=commodity, unit=unit,
+                                      pricetype=pricetype, currency=currency, price=price, usdprice=usdprice)
+            self.session.add(dbfoodprice)
             if adm1 and adm2 and category:
                 adm1adm2market = adm1, adm2, market
                 commodities = markets.get(adm1adm2market, dict())
@@ -276,11 +308,9 @@ class WFPFood:
         dataset.generate_resource_from_rows(folder, filename, qc_rows, resourcedata, headers=list(qc_hxltags.keys()))
         return dataset, showcase, qc_indicators
 
-    def generate_global_dataset_and_showcase(self, countries, folder):
+    def update_database(self):
+        self.session.commit()
+
+    def generate_global_dataset_and_showcase(self):
         dataset, showcase = self.get_dataset_and_showcase('global')
-        for country in countries:
-            countryname = Country.get_country_name_from_iso3(country['iso3'])
-            name = f'WFP food prices for {countryname}'
-            slugified_name = slugify(name).lower()
-            country_dataset = Dataset.read_from_hdx(slugified_name)
-                        
+
