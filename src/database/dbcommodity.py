@@ -9,11 +9,11 @@ class DBCommodity(Base):
     def __tablename__(cls):
         return 'dbcommodities'
 
-    id = Column(Integer, primary_key=True)
+    commodity_id = Column(Integer, primary_key=True)
     category = Column(String, nullable=False)
-    name = Column(String, nullable=False)
+    commodity = Column(String, nullable=False)
 
     def __repr__(self):
-        output = '<Category(id=%d, category=%s, ' % (self.id, self.category)
-        output += 'name=%s)>' % self.name
+        output = '<Category(id=%d, category=%s, ' % (self.commodity_id, self.category)
+        output += 'name=%s)>' % self.commodity
         return output

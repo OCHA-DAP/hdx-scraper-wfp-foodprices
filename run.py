@@ -47,7 +47,6 @@ def main(save, use_saved, **ignore):
                 wfp.build_mappings()
                 for info, country in progress_storing_tempdir(lookup, countries, 'iso3'):
                     countryiso3 = country['iso3']
-                    wfp.remove_rows(countryiso3)
                     folder = info['folder']
                     batch = info['batch']
                     dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(countryiso3, folder)
@@ -63,7 +62,7 @@ def main(save, use_saved, **ignore):
                 dataset, showcase = wfp.generate_global_dataset_and_showcase(folder)
                 if dataset:
                     dataset.update_from_yaml()
-                    dataset['notes'] = dataset['notes'] % 'Food Prices data which comes from the World Food Programme and covers'
+                    dataset['notes'] = dataset['notes'] % 'Countries, Commodities and Markets data which comes from the World Food Programme. The volume of data means that the actual Food Prices data is in country level datasets. These cover'
                     dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False,
                                           updated_by_script='HDX Scraper: WFP Food Prices', batch=batch)
                     showcase.create_in_hdx()
