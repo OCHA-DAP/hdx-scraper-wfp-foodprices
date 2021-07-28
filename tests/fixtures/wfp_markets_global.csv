@@ -1,0 +1,22 @@
+market_id,market,countryiso3,admin1,admin2,latitude,longitude
+#loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
+701,Moungali,COG,Brazzaville,Brazzaville,-4.259167,15.284722
+702,Ouenzé,COG,Brazzaville,Brazzaville,-4.2452176,15.2809247
+703,Mikalou,COG,Brazzaville,Brazzaville,-4.259167,15.284722
+704,Bakandi,COG,Likouala,Impfondo,1.638056,18.066667
+705,Monzombo,COG,Likouala,Betou,3.431111,18.596944
+706,Total,COG,Brazzaville,Brazzaville,-4.259167,15.284722
+707,Grand marché/Fond Ntié-Ntié/Nkouikou,COG,Point-Noire,Pointe-Noire,-4.794722080230713,11.846111297607422
+1820,Sibiti,COG,Lekoumou,Sibiti,-3.68465129999999,13.3500652
+1821,Nkayi,COG,Bouenza,Nkayi,-4.1828379,13.2865504
+1822,Owando,COG,Cuvette,Owando,-0.4829632,15.8936224
+2095,Kinkala,COG,Pool,Kinkala,-4.361388683319092,14.764444351196289
+2618,Minsk,BLR,Minsk City,Minsk City,53.91,27.56
+3738,Mossaka Centre,COG,Cuvette,Mossaka,-1.228812,16.79632
+3739,Loukolela Centre,COG,Cuvette,Loukolela,-1.039356,17.10848
+3740,Liranga Centre,COG,Likouala,Liranga,-0.6646576,17.61073
+3741,Impfondo Centre,COG,Likouala,Impfondo,1.613293,18.06229
+3742,Dongou Centre,COG,Likouala,Dongou,2.041945,18.05422
+3743,Betou Centre,COG,Likouala,Betou,3.057103,18.51775
+4158,Gamboma,COG,Plateaux,Gamboma,-1.874795,15.870313
+4159,Mindouli,COG,Pool,Mindouli,-4.273433,14.358015
