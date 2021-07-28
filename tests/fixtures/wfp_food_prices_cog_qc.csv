@@ -1,256 +1,187 @@
 date,code,usdprice
 #date,#meta+code,#value+usd
-2013-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9941216739239593
-2013-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9941216739239593
-2013-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6602723207737735
-2013-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6602723207737735
-2013-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6602723207737735
-2013-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6602723207737735
-2013-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6602723207737735
-2013-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6602723207737735
-2013-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2013-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2014-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2014-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8271969973488664
-2015-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.9559353459301585
-2015-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,5.601848554740483
-2015-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,5.601848554740483
-2015-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,6.409548602684481
-2015-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,6.409548602684481
-2015-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.085167353601198
-2015-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.085167353601198
-2015-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.130039578486976
-2015-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.130039578486976
-2015-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.241322696203705
-2015-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.241322696203705
-2015-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.252092030176291
-2015-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.4348117299111784
-2015-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.4348117299111784
-2015-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.311323367025517
-2015-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.311323367025517
-2016-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.128244689491545
-2016-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.128244689491545
-2016-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.469273598623455
-2016-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.469273598623455
-2016-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.602095384285357
-2016-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.602095384285357
-2016-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.3077335890346555
-2016-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.9487557899484345
-2016-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.589777990862213
-2016-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.589777990862213
-2016-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.6923334931466596
-2016-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.6923334931466596
-2016-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.4231001438319937
-2016-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.4231001438319937
-2016-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.243611244288883
-2016-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.316708034011811
-2016-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,4.316708034011811
-2017-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.589777990862213
-2017-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.589777990862213
-2017-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.230800191775992
-2017-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.230800191775992
-2017-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.230800191775992
-2017-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.230800191775992
-2017-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.37439131141048
-2017-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,3.37439131141048
-2017-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.8718223926897704
-2017-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.8718223926897704
-2017-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.8718223926897704
-2017-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.8718223926897704
-2017-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2017-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2017-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.243611244288883
-2017-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.243611244288883
-2017-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2017-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2017-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2017-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2017-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.3333556940604385
-2017-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.3333556940604385
-2018-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.5128445936035493
-2018-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.5128445936035493
-2018-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.374638140955354
-2018-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.53079348355786
-2018-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.53079348355786
-2018-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1538667945173278
-2018-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7948889954311065
-2018-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7948889954311065
-2018-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7948889954311065
-2018-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7948889954311065
-2018-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.3333556940604385
-2018-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.3333556940604385
-2018-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9743778949742172
-2018-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9743778949742172
-2018-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.938480115065595
-2018-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.938480115065595
-2018-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.705144545659551
-2018-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.615400095887996
-2018-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7141189906367067
-2018-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7141189906367067
-2019-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9923267849285282
-2019-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.272329468215781
-2019-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1359179045630166
-2019-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.207713464380261
-2019-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7230934356138623
-2019-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.7230934356138623
-2019-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.620784762874289
-2019-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.620784762874289
-2019-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6243745408651513
-2019-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.6243745408651513
-2019-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9743778949742172
-2019-08-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.9743778949742172
-2019-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.4412958633311785
-2019-09-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.4412958633311785
-2019-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.364115636527641
-2019-10-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.364115636527641
-2019-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.2564222968017746
-2019-11-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.2564222968017746
-2019-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.755401437531622
-2019-12-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.755401437531622
-2020-01-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,2.1610463504990522
-2020-02-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.8936078901798172
-2020-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.548989203057045
-2020-03-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.548989203057045
-2020-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.5795023159793737
-2020-04-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.5795023159793737
-2020-05-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.633348985842307
-2020-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.5256556461164406
-2020-06-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.5256556461164406
-2020-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.4359111963448852
-2020-07-15T00:00:00,Brazzaville-Brazzaville-Total-Groundnuts (shelled)-KG-XAF,1.4359111963448852
-2015-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2492427408200502
-2015-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2492427408200502
-2015-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2618069637880678
-2015-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2618069637880678
-2015-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.245652962829188
-2015-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.245652962829188
-2015-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1218056221444415
-2015-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1343698451124593
-2015-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1343698451124593
-2015-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1666778470302193
-2015-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1666778470302193
-2015-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1218056221444415
-2015-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1218056221444415
-2015-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.0769333972586639
-2015-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.0769333972586639
-2015-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.0769333972586639
-2016-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.7351191918832507
-2016-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.7351191918832507
-2016-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.7351191918832507
-2016-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.7351191918832507
-2016-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2259091838794458
-2016-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2259091838794458
-2016-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3910389714591076
-2016-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.9743778949742172
-2016-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2016-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2016-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2016-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2017-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2017-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2017-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2017-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2017-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2017-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2017-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2017-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2017-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3910389714591076
-2017-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3910389714591076
-2017-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3910389714591076
-2017-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3910389714591076
-2017-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4448856413220408
-2017-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3748849705002275
-2017-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2017-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2017-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2017-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2017-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2017-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.705144545659551
-2017-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.705144545659551
-2018-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2018-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2018-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2018-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2018-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2018-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2018-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2018-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2018-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2018-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2018-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2018-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1666778470302193
-2018-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.1666778470302193
-2018-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2018-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2018-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2019-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2019-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2019-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.615400095887996
-2019-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2019-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2019-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-08-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-09-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2019-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-10-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-11-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2019-12-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2020-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2020-01-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2020-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2020-02-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2020-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2020-03-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2020-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2020-04-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.4359111963448852
-2020-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2020-05-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.5256556461164406
-2020-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2020-06-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.3461667465733298
-2020-07-15T00:00:00,Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Oil (vegetable)-L-XAF,1.2564222968017746
-2017-07-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.3551411915504854
-2017-08-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.26539674177893
-2017-09-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.2833456317332412
-2017-10-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.2833456317332412
-2017-11-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.3461667465733298
-2017-12-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.4718089762535074
-2018-01-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.4574498642900584
-2018-02-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.5112965341529916
-2018-03-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.4807834212306628
-2018-04-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.5256556461164406
-2018-05-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.615400095887996
-2018-06-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.8056583294036932
-2018-07-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.615400095887996
-2018-08-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.5328352020981648
-2018-09-15T00:00:00,"Pool-Kinkala-Kinkala-Rice (mixed, low quality)-KG-XAF",1.4718089762535074
+2011-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.06
+2011-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.89
+2011-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.35
+2011-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2011-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.36
+2012-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.36
+2012-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.36
+2012-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2012-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.07
+2012-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,1.81
+2012-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.5
+2012-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.19
+2012-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.2
+2012-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.57
+2013-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.57
+2013-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,1.98
+2013-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,1.8
+2013-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2013-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2013-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2013-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2013-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.23
+2013-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.99
+2013-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.21
+2013-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.26
+2013-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2014-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.32
+2015-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.28
+2015-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.42
+2015-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.7
+2015-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.22
+2015-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.16
+2015-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.16
+2015-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.16
+2015-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.99
+2015-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.03
+2016-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.15
+2016-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.15
+2016-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.88
+2016-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.98
+2016-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.84
+2016-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.35
+2016-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.3
+2016-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.34
+2016-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.17
+2016-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.07
+2016-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.07
+2016-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.24
+2017-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,3.07
+2017-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.72
+2017-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.7
+2017-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.75
+2017-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.85
+2017-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.85
+2017-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.49
+2017-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.45
+2017-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.52
+2017-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.52
+2017-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.52
+2017-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.65
+2018-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.71
+2018-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.79
+2018-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.7
+2018-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.52
+2018-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.34
+2018-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.34
+2018-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.7
+2018-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.5
+2018-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.62
+2018-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.81
+2018-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.45
+2018-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.35
+2019-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.4
+2019-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.56
+2019-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,1.84
+2019-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.27
+2019-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.79
+2019-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.84
+2019-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.83
+2019-08-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.63
+2019-09-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.43
+2019-10-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.16
+2019-11-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.16
+2019-12-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.3
+2020-01-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.45
+2020-02-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.54
+2020-03-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.55
+2020-04-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.57
+2020-05-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.73
+2020-06-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.68
+2020-07-15,Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF,2.7
+2011-02-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.8
+2011-03-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.13
+2011-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.13
+2011-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.99
+2011-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.08
+2011-08-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.17
+2011-09-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.9
+2011-10-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.9
+2011-11-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.9
+2011-12-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.9
+2015-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.11
+2015-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.83
+2015-06-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.85
+2015-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.13
+2015-08-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.18
+2015-09-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.23
+2015-10-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.23
+2015-11-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.22
+2015-12-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.08
+2016-01-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.75
+2016-02-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.96
+2016-03-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2016-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2016-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.84
+2016-06-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2016-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.75
+2016-08-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.95
+2016-09-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.73
+2016-10-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2016-12-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.99
+2017-01-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.77
+2017-02-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.72
+2017-03-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.76
+2017-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.72
+2017-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2017-06-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2017-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.73
+2017-08-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2017-09-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.77
+2017-10-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.77
+2017-11-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2017-12-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.85
+2018-01-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.87
+2018-02-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.98
+2018-03-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.86
+2018-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.04
+2018-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.08
+2018-06-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.16
+2018-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.99
+2018-08-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.96
+2018-09-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.99
+2018-10-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.92
+2018-11-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.12
+2018-12-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",1.17
+2019-01-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.92
+2019-02-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.91
+2019-03-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.86
+2019-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.88
+2019-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.68
+2019-06-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.75
+2019-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.77
+2019-08-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.72
+2019-09-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.68
+2019-10-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.72
+2019-11-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.74
+2019-12-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.78
+2020-01-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2020-02-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.81
+2020-03-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.99
+2020-04-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.9
+2020-05-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.99
+2020-06-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.94
+2020-07-15,"Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",0.86
+2017-07-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.85
+2017-08-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.98
+2017-09-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.98
+2017-10-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.98
+2017-11-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,2.1
+2017-12-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,2.16
+2018-01-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.8
+2018-02-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.8
+2018-03-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.8
+2018-04-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.98
+2018-05-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.98
+2018-06-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.8
+2018-07-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.8
+2018-08-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.8
+2018-09-15,Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF,1.71

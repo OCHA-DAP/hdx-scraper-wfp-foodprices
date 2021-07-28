@@ -38,8 +38,9 @@ qc_hxltags = {'date': '#date', 'code': '#meta+code', 'usdprice': '#value+usd'}
 
 
 class WFPFood:
-    def __init__(self, configuration, token_downloader, retriever, session):
+    def __init__(self, configuration, folder, token_downloader, retriever, session):
         self.configuration = configuration
+        self.folder = folder
         self.token_downloader = token_downloader
         self.retriever = retriever
         self.session = session
@@ -174,7 +175,7 @@ class WFPFood:
 
         return dataset, showcase
 
-    def generate_dataset_and_showcase(self, countryiso3, folder):
+    def generate_dataset_and_showcase(self, countryiso3):
         dataset, showcase = self.get_dataset_and_showcase(countryiso3)
         if not dataset:
             return None, None, None
@@ -315,14 +316,14 @@ class WFPFood:
         }
         rows = [rows[key] for key in sorted(rows)]
         country_hxltags = {header: hxltags[header] for header in country_headers}
-        dataset.generate_resource_from_iterator(country_headers, rows, country_hxltags, folder, filename, resourcedata, datecol='date')
+        dataset.generate_resource_from_iterator(country_headers, rows, country_hxltags, self.folder, filename, resourcedata, datecol='date')
         filename = f'wfp_food_prices_{countryiso3.lower()}_qc.csv'
         resourcedata = {
             'name': f'QuickCharts: {dataset["title"]}',
             'description': 'Food prices QuickCharts data with HXL tags',
             'format': 'csv'
         }
-        dataset.generate_resource_from_rows(folder, filename, qc_rows, resourcedata, headers=list(qc_hxltags.keys()))
+        dataset.generate_resource_from_rows(self.folder, filename, qc_rows, resourcedata, headers=list(qc_hxltags.keys()))
         dataset_date = dataset.get_date_of_dataset()
         self.session.query(DBCountry).filter(DBCountry.countryiso3 == countryiso3).delete()
         self.session.query(DBMarket).filter(DBMarket.countryiso3 == countryiso3).delete()
@@ -338,7 +339,7 @@ class WFPFood:
     def update_database(self):
         self.session.commit()
 
-    def generate_global_dataset_and_showcase(self, folder):
+    def generate_global_dataset_and_showcase(self):
         dataset, showcase = self.get_dataset_and_showcase('global')
         dataset['dataset_source'] = 'WFP'
 
@@ -361,7 +362,7 @@ class WFPFood:
                 rows.append(row)
             hdrs = cls.__table__.columns.keys()
             htgs = {header: hxltags[header] for header in hdrs}
-            dataset.generate_resource_from_iterator(hdrs, rows, htgs, folder, fn, rsdata)
+            dataset.generate_resource_from_iterator(hdrs, rows, htgs, self.folder, fn, rsdata)
 
         filename = f'wfp_countries_global.csv'
         resourcedata = {

@@ -41,15 +41,14 @@ def main(save, use_saved, **ignore):
             retriever = Retrieve(downloader, folder, 'saved_data', folder, save, use_saved)
             params = {'driver': 'sqlite', 'database': f'/{folder}/foodprices.sqlite'}
             with Database(**params) as session:
-                wfp = WFPFood(configuration, token_downloader, retriever, session)
+                wfp = WFPFood(configuration, folder, token_downloader, retriever, session)
                 countries = wfp.get_countries()
                 logger.info('Number of country datasets to upload: %d' % len(countries))
                 wfp.build_mappings()
                 for info, country in progress_storing_tempdir(lookup, countries, 'iso3'):
                     countryiso3 = country['iso3']
-                    folder = info['folder']
                     batch = info['batch']
-                    dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(countryiso3, folder)
+                    dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(countryiso3)
                     if dataset:
                         dataset.update_from_yaml()
                         dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % country['name']
@@ -59,7 +58,7 @@ def main(save, use_saved, **ignore):
                         showcase.create_in_hdx()
                         showcase.add_dataset(dataset)
                     wfp.update_database()
-                dataset, showcase = wfp.generate_global_dataset_and_showcase(folder)
+                dataset, showcase = wfp.generate_global_dataset_and_showcase()
                 if dataset:
                     dataset.update_from_yaml()
                     dataset['notes'] = dataset['notes'] % 'Countries, Commodities and Markets data which comes from the World Food Programme. The volume of data means that the actual Food Prices data is in country level datasets. These cover'
