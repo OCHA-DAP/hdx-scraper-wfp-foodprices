@@ -1,2 +1,1 @@
-# WFP food prices has no additional requirements to the base image
 hdx-python-database==1.0.6
