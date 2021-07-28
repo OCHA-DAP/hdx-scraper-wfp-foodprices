@@ -12,7 +12,7 @@ from hdx.hdx_configuration import Configuration
 from hdx.hdx_locations import Locations
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
-from hdx.utilities.path import temp_dir, get_temp_dir
+from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
 
 from wfpfood import WFPFood
