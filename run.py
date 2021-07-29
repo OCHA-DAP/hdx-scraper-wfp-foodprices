@@ -34,7 +34,7 @@ def parse_args():
 def main(save, use_saved, **ignore):
     """Generate dataset and create it in HDX"""
 
-    with Download(extra_params_yaml=join(expanduser('~'), '.extraparams.yml'), extra_params_lookup=lookup) as token_downloader:
+    with Download(fail_on_missing_file=False, extra_params_yaml=join(expanduser('~'), '.extraparams.yml'), extra_params_lookup=lookup) as token_downloader:
         configuration = Configuration.read()
         with Download() as downloader:
             folder = get_temp_dir(lookup)
