@@ -35,12 +35,12 @@ def main(save, use_saved, **ignore):
     """Generate dataset and create it in HDX"""
 
     with Download(fail_on_missing_file=False, extra_params_yaml=join(expanduser('~'), '.extraparams.yml'), extra_params_lookup=lookup) as token_downloader:
-        configuration = Configuration.read()
         with Download() as downloader:
             folder = get_temp_dir(lookup)
             retriever = Retrieve(downloader, folder, 'saved_data', folder, save, use_saved)
             params = {'driver': 'sqlite', 'database': f'/{folder}/foodprices.sqlite'}
             with Database(**params) as session:
+                configuration = Configuration.read()
                 wfp = WFPFood(configuration, folder, token_downloader, retriever, session)
                 countries = wfp.get_countries()
                 logger.info('Number of country datasets to upload: %d' % len(countries))
