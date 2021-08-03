@@ -43,29 +43,28 @@ def main(save, use_saved, **ignore):
                 configuration = Configuration.read()
                 wfp = WFPFood(configuration, folder, token_downloader, retriever, session)
                 countries = wfp.get_countries()
+                countries.append({'iso3': 'global'})
                 logger.info('Number of country datasets to upload: %d' % len(countries))
                 wfp.build_mappings()
                 for info, country in progress_storing_tempdir(lookup, countries, 'iso3'):
                     countryiso3 = country['iso3']
                     batch = info['batch']
-                    dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(countryiso3)
+                    if countryiso3 == 'global':
+                        dataset, showcase = wfp.generate_global_dataset_and_showcase()
+                        notes = 'Countries, Commodities and Markets data which comes from the World Food Programme. The volume of data means that the actual Food Prices data is in country level datasets. These cover'
+                    else:
+                        dataset, showcase, qc_indicators = wfp.generate_dataset_and_showcase(countryiso3)
+                        notes = 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % country['name']
                     if dataset:
                         dataset.update_from_yaml()
-                        dataset['notes'] = dataset['notes'] % 'Food Prices data for %s. Food prices data comes from the World Food Programme and covers' % country['name']
-                        dataset.generate_resource_view(-1, indicators=qc_indicators)
+                        dataset['notes'] = dataset['notes'] % notes
+                        if countryiso3 != 'global':
+                            dataset.generate_resource_view(-1, indicators=qc_indicators)
                         dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False,
                                               updated_by_script='HDX Scraper: WFP Food Prices', batch=batch)
                         showcase.create_in_hdx()
                         showcase.add_dataset(dataset)
                     wfp.update_database()
-                dataset, showcase = wfp.generate_global_dataset_and_showcase()
-                if dataset:
-                    dataset.update_from_yaml()
-                    dataset['notes'] = dataset['notes'] % 'Countries, Commodities and Markets data which comes from the World Food Programme. The volume of data means that the actual Food Prices data is in country level datasets. These cover'
-                    dataset.create_in_hdx(remove_additional_resources=True, hxl_update=False,
-                                          updated_by_script='HDX Scraper: WFP Food Prices', batch=batch)
-                    showcase.create_in_hdx()
-                    showcase.add_dataset(dataset)
 
 
 if __name__ == '__main__':
