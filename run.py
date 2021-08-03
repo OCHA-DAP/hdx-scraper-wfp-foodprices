@@ -35,7 +35,7 @@ def main(save, use_saved, **ignore):
     """Generate dataset and create it in HDX"""
 
     with Download(fail_on_missing_file=False, extra_params_yaml=join(expanduser('~'), '.extraparams.yml'), extra_params_lookup=lookup) as token_downloader:
-        with Download() as downloader:
+        with Download(use_env=False) as downloader:
             folder = get_temp_dir(lookup)
             retriever = Retrieve(downloader, folder, 'saved_data', folder, save, use_saved)
             params = {'driver': 'sqlite', 'database': f'/{folder}/foodprices.sqlite'}
