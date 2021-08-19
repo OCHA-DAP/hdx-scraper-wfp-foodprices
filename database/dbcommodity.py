@@ -14,6 +14,6 @@ class DBCommodity(Base):
     commodity = Column(String, nullable=False)
 
     def __repr__(self):
-        output = '<Category(id=%d, category=%s, ' % (self.commodity_id, self.category)
+        output = '<Commodity(id=%d, category=%s, ' % (self.commodity_id, self.category)
         output += 'name=%s)>' % self.commodity
         return output
