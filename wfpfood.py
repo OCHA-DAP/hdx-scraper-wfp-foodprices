@@ -207,20 +207,17 @@ class WFPFood:
             category = self.commodity_to_category[commodity_id]
             market_id = price_data['marketID']
             market_name = price_data['marketName']
-            result = market_to_adm.get(market_id)
-            if result:
-                adm1, adm2, lat, lon = result
-            else:
-                adm1 = adm2 = lat = lon = ''
-                market_to_adm[market_id] = adm1, adm2, lat, lon
-                dbmarkets.append(DBMarket(market_id=market_id, market=market_name, countryiso3=countryiso3))
             if market_name == 'National Average':
                 adm1 = adm2 = lat = lon = ''
             else:
-                if market_id in market_to_adm:
-                    adm1, adm2, lat, lon = market_to_adm[market_id]
+                result = market_to_adm.get(market_id)
+                if result:
+                    adm1, adm2, lat, lon = result
                 else:
                     adm1 = adm2 = lat = lon = ''
+                    market_to_adm[market_id] = adm1, adm2, lat, lon
+                    dbmarkets.append(DBMarket(market_id=market_id, market=market_name, countryiso3=countryiso3))
+
             orig_source = price_data['commodityPriceSourceName'].replace('M/o', 'Ministry of').replace('+', '/')
             regex = r'Government.*,(Ministry.*)'
             match = re.search(regex, orig_source)
