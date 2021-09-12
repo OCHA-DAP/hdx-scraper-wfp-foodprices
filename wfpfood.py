@@ -75,29 +75,34 @@ class WFPFood:
         return [{'iso3': x[0], 'name': x[1]} for x in sorted(countries)]
 
     def get_list(self, endpoint, countryiso3=None, startdate=None):
+        all_data = list()
         url = f'{self.configuration["base_url"]}{endpoint}'
         base_filename = url.split('/')[-2]
-        page = 1
-        all_data = []
-        data = None
-        while data is None or len(data) > 0:
-            parameters = {'page': page}
-            if countryiso3 is None:
-                filename = f'{base_filename}_{page}.json'
-                log = f'{base_filename} page {page}'
-            else:
-                filename = f'{base_filename}_{countryiso3}_{page}.json'
-                log = f'{base_filename} for {countryiso3} page {page}'
-                parameters['CountryCode'] = countryiso3
-            if startdate:
-                parameters['startDate'] = startdate
-            try:
-                json = self.retrieve(url, filename, log, parameters)
-            except FileNotFoundError:
-                json = {'items': list()}
-            data = json['items']
-            all_data.extend(data)
-            page = page + 1
+        if countryiso3 == 'PSE':  # hack as PSE is treated by WFP as 2 areas
+            countryiso3s = ['PSW', 'PSG']
+        else:
+            countryiso3s = [countryiso3]
+        for countryiso3 in countryiso3s:
+            page = 1
+            data = None
+            while data is None or len(data) > 0:
+                parameters = {'page': page}
+                if countryiso3 is None:
+                    filename = f'{base_filename}_{page}.json'
+                    log = f'{base_filename} page {page}'
+                else:
+                    filename = f'{base_filename}_{countryiso3}_{page}.json'
+                    log = f'{base_filename} for {countryiso3} page {page}'
+                    parameters['CountryCode'] = countryiso3
+                if startdate:
+                    parameters['startDate'] = startdate
+                try:
+                    json = self.retrieve(url, filename, log, parameters)
+                except FileNotFoundError:
+                    json = {'items': list()}
+                data = json['items']
+                all_data.extend(data)
+                page = page + 1
         return all_data
 
     def build_mappings(self):
