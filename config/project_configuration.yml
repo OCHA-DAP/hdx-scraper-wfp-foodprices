@@ -2,3 +2,5 @@
 countries_url: "https://api.wfp.org/gefs/1.1.0/geoless/collections/geographicalnames/items/countries?limit=1000"
 token_url: "https://api.wfp.org/token"
 base_url: "https://api.wfp.org/vam-data-bridges/1.1.0/"
+currency_mappings:
+  NIS: ILS

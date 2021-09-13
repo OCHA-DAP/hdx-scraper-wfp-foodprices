@@ -251,6 +251,7 @@ class WFPFood:
             unit = price_data['commodityUnitName']
             price = round(price_data['commodityPrice'], 2)
             currency = price_data['currencyName']
+            currency = self.configuration['currency_mappings'].get(currency, currency)
             try:
                 usdprice = Currency.get_historic_value_in_usd(price, currency, date)
                 usdprice = round(usdprice, 2)

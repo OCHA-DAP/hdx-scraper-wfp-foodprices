@@ -1,4 +1,4 @@
 # Collector specific configuration
 countries_url: "http://xxx/"
 base_url: "http://yyy/"
-
+currency_mappings: {}
