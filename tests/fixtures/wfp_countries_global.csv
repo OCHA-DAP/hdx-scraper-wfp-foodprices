@@ -2,3 +2,4 @@ countryiso3,url,start_date,end_date
 #country+code,#country+url,#date+start,#date+end
 COG,https://data.humdata.org/dataset/wfp-food-prices-for-congo,2011-01-15 00:00:00,2020-07-15 00:00:00
 BLR,https://data.humdata.org/dataset/wfp-food-prices-for-belarus,2009-01-15 00:00:00,2021-04-15 00:00:00
+PSE,https://data.humdata.org/dataset/wfp-food-prices-for-state-of-palestine,2007-01-15 00:00:00,2021-07-15 00:00:00
