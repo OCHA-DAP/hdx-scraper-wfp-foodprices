@@ -21,13 +21,6 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: peep
-        run: |
-          apt-get -qq update
-          apt-get -qqy install python3-pip
-          pip install awscli
-
-
       - name: Tag Info
         id: tag_info
         run: |
