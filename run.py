@@ -9,7 +9,7 @@ from os.path import expanduser, join
 
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
-from hdx.hdx_configuration import Configuration
+from hdx.api.configuration import Configuration
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
@@ -71,10 +71,10 @@ def main(save, use_saved, **ignore):
                             showcase,
                             qc_indicators,
                         ) = wfp.generate_dataset_and_showcase(countryiso3)
-                        notes = f"Food Prices data for {country['name']}. Food prices data comes from the World Food Programme and covers"
+                        snippet = f"Food Prices data for {country['name']}"
                         if dataset:
                             dataset.update_from_yaml()
-                            dataset["notes"] = dataset["notes"] % notes
+                            dataset["notes"] = dataset["notes"] % (snippet, "")
                             dataset.generate_resource_view(-1, indicators=qc_indicators)
                             dataset.create_in_hdx(
                                 remove_additional_resources=True,
@@ -86,9 +86,10 @@ def main(save, use_saved, **ignore):
                             showcase.add_dataset(dataset)
                         wfp.update_database()
                     dataset, showcase = wfp.generate_global_dataset_and_showcase()
-                    notes = "Countries, Commodities and Markets data which comes from the World Food Programme. The volume of data means that the actual Food Prices data is in country level datasets. These cover"
+                    snippet = "Countries, Commodities and Markets data"
+                    snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "
                     dataset.update_from_yaml()
-                    dataset["notes"] = dataset["notes"] % notes
+                    dataset["notes"] = dataset["notes"] % (snippet, snippet2)
                     dataset.create_in_hdx(
                         remove_additional_resources=True,
                         hxl_update=False,

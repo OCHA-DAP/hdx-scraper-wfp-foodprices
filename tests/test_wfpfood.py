@@ -7,8 +7,8 @@ from os.path import join
 
 import pytest
 from hdx.database import Database
-from hdx.hdx_configuration import Configuration
-from hdx.hdx_locations import Locations
+from hdx.api.configuration import Configuration
+from hdx.api.locations import Locations
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
