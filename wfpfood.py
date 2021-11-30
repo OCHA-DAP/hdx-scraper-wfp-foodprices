@@ -58,6 +58,7 @@ country_headers = [
     "category",
     "commodity",
     "unit",
+    "priceflag",
     "pricetype",
     "currency",
     "price",
@@ -319,6 +320,7 @@ class WFPFood:
             date_str = date.date().isoformat()
             commodity = price_data["commodityName"]
             unit = price_data["commodityUnitName"]
+            pricetype = price_data["priceTypeName"]
             price = round(price_data["commodityPrice"], 2)
             currency = price_data["currencyName"]
             currency = self.configuration["currency_mappings"].get(currency, currency)
@@ -339,7 +341,8 @@ class WFPFood:
                     "category": category,
                     "commodity": commodity,
                     "unit": unit,
-                    "pricetype": priceflag,
+                    "priceflag": priceflag,
+                    "pricetype": pricetype,
                     "currency": currency,
                     "price": price,
                     "usdprice": usdprice,
