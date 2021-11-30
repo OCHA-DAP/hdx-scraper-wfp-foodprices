@@ -39,6 +39,7 @@ hxltags = {
     "commodity_id": "#item+code",
     "commodity": "#item+name",
     "unit": "#item+unit",
+    "priceflag": "#item+price+flag",
     "pricetype": "#item+price+type",
     "currency": "#currency",
     "price": "#value",
@@ -262,8 +263,8 @@ class WFPFood:
         sources = dict()
         markets = dict()
         for price_data in prices_data:
-            pricetype = price_data["commodityPriceFlag"]
-            if pricetype not in ("actual", "aggregate"):
+            priceflag = price_data["commodityPriceFlag"]
+            if priceflag not in ("actual", "aggregate"):
                 continue
             commodity_id = price_data["commodityID"]
             category = self.commodity_to_category[commodity_id]
@@ -338,7 +339,7 @@ class WFPFood:
                     "category": category,
                     "commodity": commodity,
                     "unit": unit,
-                    "pricetype": pricetype,
+                    "pricetype": priceflag,
                     "currency": currency,
                     "price": price,
                     "usdprice": usdprice,

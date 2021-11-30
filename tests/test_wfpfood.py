@@ -3,6 +3,7 @@
 Unit tests for wfpfood scraper.
 
 """
+from os import remove
 from os.path import join
 
 import pytest
@@ -52,9 +53,14 @@ class TestWFP:
                 retriever = Retrieve(
                     downloader, tempdir, input_dir, tempdir, save=False, use_saved=True
                 )
+                dbpath = f"/{tempdir}/foodprices.sqlite"
+                try:
+                    remove(dbpath)
+                except OSError:
+                    pass
                 params = {
                     "driver": "sqlite",
-                    "database": f"/{tempdir}/foodprices.sqlite",
+                    "database": dbpath,
                 }
                 with Database(**params) as session:
                     wfp = WFPFood(configuration, tempdir, None, retriever, session)
