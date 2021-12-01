@@ -321,15 +321,16 @@ class WFPFood:
             commodity = price_data["commodityName"]
             unit = price_data["commodityUnitName"]
             pricetype = price_data["priceTypeName"]
-            price = round(price_data["commodityPrice"], 2)
+            price = price_data["commodityPrice"]
             currency = price_data["currencyName"]
             currency = self.configuration["currency_mappings"].get(currency, currency)
             try:
                 usdprice = Currency.get_historic_value_in_usd(price, currency, date)
-                usdprice = round(usdprice, 2)
+                usdprice = round(usdprice, 4)
             except CurrencyError:
                 usdprice = None
-            key = date, adm1, adm2, market_name, category, commodity, unit
+            price = round(price, 2)
+            key = date, adm1, adm2, market_name, category, commodity, unit, pricetype
             if key not in rows:
                 rows[key] = {
                     "date": date_str,
