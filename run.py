@@ -7,13 +7,12 @@ import argparse
 import logging
 from os.path import expanduser, join
 
+from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
-from hdx.api.configuration import Configuration
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
-
 from wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)

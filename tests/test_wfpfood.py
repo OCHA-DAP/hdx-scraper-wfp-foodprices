@@ -7,14 +7,13 @@ from os import remove
 from os.path import join
 
 import pytest
-from hdx.database import Database
 from hdx.api.configuration import Configuration
 from hdx.api.locations import Locations
+from hdx.database import Database
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
-
 from wfpfood import WFPFood
 
 

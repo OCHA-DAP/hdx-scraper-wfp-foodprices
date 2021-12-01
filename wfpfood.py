@@ -10,6 +10,9 @@ import difflib
 import logging
 import re
 
+from database.dbcommodity import DBCommodity
+from database.dbcountry import DBCountry
+from database.dbmarket import DBMarket
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
@@ -19,10 +22,6 @@ from hdx.utilities.dateparse import default_date, default_enddate, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
 from hdx.utilities.downloader import DownloadError
 from slugify import slugify
-
-from database.dbcommodity import DBCommodity
-from database.dbcountry import DBCountry
-from database.dbmarket import DBMarket
 
 logger = logging.getLogger(__name__)
 
@@ -225,7 +224,9 @@ class WFPFood:
         if countryiso3 == "global":
             showcase["url"] = "http://dataviz.vam.wfp.org/economic_explorer/prices"
         else:
-            showcase["url"] = f"http://dataviz.vam.wfp.org/economic_explorer/prices?iso3={countryiso3}"
+            showcase[
+                "url"
+            ] = f"http://dataviz.vam.wfp.org/economic_explorer/prices?iso3={countryiso3}"
         showcase.add_tags(tags)
 
         return dataset, showcase
@@ -330,7 +331,17 @@ class WFPFood:
             except CurrencyError:
                 usdprice = None
             price = round(price, 2)
-            key = date, adm1, adm2, market_name, category, commodity, unit, pricetype
+            key = (
+                date,
+                adm1,
+                adm2,
+                market_name,
+                category,
+                commodity,
+                unit,
+                priceflag,
+                pricetype,
+            )
             if key not in rows:
                 rows[key] = {
                     "date": date_str,
