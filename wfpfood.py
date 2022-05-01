@@ -95,14 +95,14 @@ class WFPFood:
 
     def retrieve(self, url, filename, log, parameters=None):
         try:
-            results = self.retriever.retrieve_json(
+            results = self.retriever.download_json(
                 url, filename, log, False, parameters=parameters, headers=self.headers
             )
         except DownloadError:
-            if self.retriever.downloader.response.status_code != 401:
+            if self.retriever.downloader.response.status_code != 403:
                 raise
             self.refresh_headers()
-            results = self.retriever.retrieve_json(
+            results = self.retriever.download_json(
                 url, filename, log, False, parameters=parameters, headers=self.headers
             )
         return results
