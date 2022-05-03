@@ -3,6 +3,7 @@
 Unit tests for wfpfood scraper.
 
 """
+import logging
 from os import remove
 from os.path import join
 
@@ -15,6 +16,9 @@ from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
 from wfpfood import WFPFood
+
+
+logger = logging.getLogger(__name__)
 
 
 class TestWFP:
@@ -48,6 +52,7 @@ class TestWFP:
         with temp_dir(
             "TestWFPFoodPrices", delete_on_success=True, delete_on_failure=False
         ) as tempdir:
+            logger.info("Starting")
             with Download(user_agent="test") as downloader:
                 retriever = Retrieve(
                     downloader, tempdir, input_dir, tempdir, save=False, use_saved=True
@@ -75,6 +80,7 @@ class TestWFP:
                         showcase,
                         qc_indicators,
                     ) = wfp.generate_dataset_and_showcase("COG")
+                    logger.info("Generated COG")
                     assert dataset == {
                         "name": "wfp-food-prices-for-congo",
                         "title": "Congo - Food Prices",
@@ -180,6 +186,7 @@ class TestWFP:
                         showcase,
                         qc_indicators,
                     ) = wfp.generate_dataset_and_showcase("BLR")
+                    logger.info("Generated BLR")
                     assert dataset == {
                         "name": "wfp-food-prices-for-belarus",
                         "title": "Belarus - Food Prices",
@@ -257,6 +264,7 @@ class TestWFP:
                         showcase,
                         qc_indicators,
                     ) = wfp.generate_dataset_and_showcase("PSE")
+                    logger.info("Generated PSE")
                     assert dataset == {
                         "name": "wfp-food-prices-for-state-of-palestine",
                         "title": "State of Palestine - Food Prices",
@@ -330,6 +338,7 @@ class TestWFP:
                     }
                     assert qc_indicators == []
                     dataset, showcase = wfp.generate_global_dataset_and_showcase()
+                    logger.info("Generated global")
                     assert dataset == {
                         "name": "global-wfp-food-prices",
                         "title": "Global - Food Prices",
@@ -398,4 +407,5 @@ class TestWFP:
                         csv_filename = f"{filename}.csv"
                         expected_file = join(fixtures_dir, csv_filename)
                         actual_file = join(tempdir, csv_filename)
+                        logger.info(f"Comparing {actual_file} with {expected_file}")
                         assert_files_same(expected_file, actual_file)
