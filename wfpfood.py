@@ -99,7 +99,7 @@ class WFPFood:
                 url, filename, log, False, parameters=parameters, headers=self.headers
             )
         except DownloadError:
-            if self.retriever.downloader.response.status_code != 403:
+            if self.retriever.downloader.response.status_code not in (401, 403):
                 raise
             self.refresh_headers()
             results = self.retriever.download_json(
