@@ -40,7 +40,9 @@ def main(save, use_saved, **ignore):
         extra_params_yaml=join(expanduser("~"), ".extraparams.yml"),
         extra_params_lookup=lookup,
     ) as token_downloader:
-        with Download(use_env=False) as downloader:
+        with Download(
+            use_env=False, rate_limit={"calls": 1, "period": 0.1}
+        ) as downloader:
             with wheretostart_tempdir_batch(lookup) as info:
                 folder = info["folder"]
                 batch = info["batch"]
