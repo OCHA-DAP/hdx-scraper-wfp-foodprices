@@ -1,6 +1,7 @@
 from hdx.database import Base
-from sqlalchemy import Column, DateTime, String
+from sqlalchemy import Column, String
 from sqlalchemy.orm import declared_attr
+from sqlalchemy_utc import UtcDateTime
 
 
 class DBCountry(Base):
@@ -10,8 +11,8 @@ class DBCountry(Base):
 
     countryiso3 = Column(String, primary_key=True)
     url = Column(String, nullable=False)
-    start_date = Column(DateTime, nullable=False)
-    end_date = Column(DateTime, nullable=False)
+    start_date = Column(UtcDateTime(), nullable=False)
+    end_date = Column(UtcDateTime(), nullable=False)
 
     def __repr__(self):
         output = f"<Country(country={self.countryiso3}, url={self.url},\n"

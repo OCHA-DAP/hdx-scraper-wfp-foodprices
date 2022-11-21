@@ -659,7 +659,7 @@ commodity_id,category,commodity
 826,vegetables and fruits,Bananas (fruit)
 827,miscellaneous food,Bananas (beer)
 828,miscellaneous food,Beer (sorghum)
-829,pulses and nuts,"Beans (haricot, yellow)"
+829,vegetables and fruits,"Beans (haricot, yellow)"
 830,vegetables and fruits,Mandarins
 831,cereals and tubers,Cassava tubers
 832,"meat, fish and eggs","Fish (mukeke, fresh, local) "
@@ -728,3 +728,273 @@ commodity_id,category,commodity
 896,pulses and nuts,Beans (dolichos)
 897,pulses and nuts,Beans (rosecoco)
 898,vegetables and fruits,Cowpea leaves
+899,pulses and nuts,Beans (nhemba)
+900,cereals and tubers,Millet flour
+901,pulses and nuts,Cowpeas (dry)
+902,cereals and tubers,"Wheat flour (high quality, imported)"
+903,cereals and tubers,"Wheat flour (first grade, imported)"
+905,vegetables and fruits,Chili (bongo)
+906,"meat, fish and eggs","Meat (chicken, fillet)"
+907,non-food,Fuel (LPG)
+908,non-food,Antibiotics (local)
+909,non-food,Antibiotics (imported)
+910,non-food,Vasodilating agents (imported)
+911,non-food,Vasodilating agents (local)
+912,non-food,Antipyretic (local)
+913,non-food,Antipyretic (imported)
+914,non-food,"Fuel (petrol-gasoline, 92 octane)"
+915,miscellaneous food,"Kava (roots, pounded)"
+916,miscellaneous food,"Kava (roots, unpounded)"
+917,miscellaneous food,"Kava (lower stems, pounded)"
+918,miscellaneous food,"Kava (roots, raw)"
+919,miscellaneous food,Coriander (wild)
+920,vegetables and fruits,Apples (tahitian)
+921,vegetables and fruits,Watermelons (chinese gragon)
+922,vegetables and fruits,Watercress
+923,pulses and nuts,Beans (black gram)
+924,miscellaneous food,Turmeric (powder)
+925,miscellaneous food,Turmeric
+926,vegetables and fruits,Tamarind
+927,vegetables and fruits,Starfruit
+928,vegetables and fruits,Onions (spring)
+929,vegetables and fruits,Sponge gourd
+930,vegetables and fruits,Soursop
+931,vegetables and fruits,Limes (sour)
+932,vegetables and fruits,Rosella leaves
+933,pulses and nuts,Peanuts (roasted)
+934,vegetables and fruits,Ridge gourd (Tori/Turai)
+935,vegetables and fruits,Chili (red fire)
+936,vegetables and fruits,Cabbage (purple)
+937,pulses and nuts,Pigeon peas (dry)
+938,vegetables and fruits,Cucumber (pickle)
+939,vegetables and fruits,Papaya (pieces)
+940,vegetables and fruits,Young fern
+941,vegetables and fruits,Okra
+942,vegetables and fruits,Noni
+943,vegetables and fruits,"Cabbage (mustard, mosita)"
+944,miscellaneous food,Mint
+945,miscellaneous food,Mangoes (powder)
+946,miscellaneous food,Mangoes (pickle)
+947,vegetables and fruits,Cucumbers (long)
+948,pulses and nuts,"Beans (white, long)"
+949,pulses and nuts,Beans (long)
+950,vegetables and fruits,Limes
+951,miscellaneous food,"Ginger (wild, local)"
+952,vegetables and fruits,Kumquat
+953,vegetables and fruits,Apples (malay)
+954,vegetables and fruits,Cabbage (joy sum)
+955,vegetables and fruits,Jackfruit (pieces)
+956,vegetables and fruits,Jackfruit
+957,vegetables and fruits,Mangoes (hybrid)
+958,pulses and nuts,Beans (guart)
+959,vegetables and fruits,Cabbage (english)
+960,miscellaneous food,Saccharum edule (dule)
+961,vegetables and fruits,Drumstick
+962,vegetables and fruits,Mangoes (dried)
+963,cereals and tubers,Taro (dalo ni tana)
+964,vegetables and fruits,Curry leaves
+965,miscellaneous food,Coriander
+966,oil and fats,"Oil (coconut, virgin)"
+967,miscellaneous food,Kava (kasa loa)
+968,non-food,Kava bowl
+969,non-food,Broom (local)
+970,vegetables and fruits,Citrus (late valencia)
+971,vegetables and fruits,Chili (Jungli)
+972,pulses and nuts,"Chestnut (tahitian, ivi)"
+973,vegetables and fruits,Chili (cherry)
+974,vegetables and fruits,Coconut (green)
+975,vegetables and fruits,Breadfruit
+976,vegetables and fruits,Cabbage (bok choy)
+977,non-food,Betel nut
+978,vegetables and fruits,Cabbage (slippery)
+979,vegetables and fruits,Bananas (green)
+980,non-food,Tobacco
+981,vegetables and fruits,"Beans (haricot, green)"
+982,"meat, fish and eggs","Meat (chicken, fresh)"
+983,vegetables and fruits,Dragon fruit
+984,vegetables and fruits,Breadfruit (cooked)
+985,miscellaneous food,Kava
+986,vegetables and fruits,Peaches
+987,non-food,Basin
+988,non-food,Jerrycan (20 L)
+989,non-food,Jerrycan (5 L)
+990,non-food,Batteries
+991,non-food,Exercise Book (48 pages)
+992,non-food,Hoe
+993,non-food,Panga
+994,non-food,Pen
+995,non-food,Pencil
+996,non-food,Mug (plastic)
+997,non-food,Plate (plastic)
+998,non-food,Pole
+999,non-food,Nails
+1001,non-food,Saucepan
+1002,non-food,Underwear
+1003,non-food,Rope
+1004,non-food,Serving spoon
+1005,non-food,Torch
+1006,non-food,Wooden mingle
+1007,vegetables and fruits,Tomatoes (big size)
+1008,vegetables and fruits,Tomatoes (medium size)
+1009,vegetables and fruits,Chili (big size)
+1010,vegetables and fruits,Chili (medium size)
+1011,pulses and nuts,"Beans (white, North)"
+1012,pulses and nuts,"Beans (white, East)"
+1013,pulses and nuts,"Beans (black, North)"
+1014,pulses and nuts,"Beans (black, East)"
+1015,pulses and nuts,"Beans (red, North)"
+1016,pulses and nuts,"Beans (red, East)"
+1017,cereals and tubers,"Maize (white, North)"
+1018,cereals and tubers,"Maize (white, East)"
+1019,cereals and tubers,"Maize (white, biofortified)"
+1020,vegetables and fruits,"Avocados (Hass, medium size)"
+1021,miscellaneous food,Jalapeño pepper (big size)
+1022,miscellaneous food,Jalapeño pepper (medium size)
+1023,vegetables and fruits,Oranges (Piña)
+1024,vegetables and fruits,"Oranges (Valencia, medium size)"
+1025,vegetables and fruits,Plantains (big size)
+1026,vegetables and fruits,Peach (medium size)
+1027,vegetables and fruits,"Lemons (Persa, medium size)"
+1028,miscellaneous food,"Lemons (Criollo, medium size)"
+1029,vegetables and fruits,"Avocados (Criollo, big size)"
+1030,vegetables and fruits,Cauliflower (medium size)
+1031,vegetables and fruits,Plantains (medium size)
+1032,non-food,Alcohol
+1033,non-food,Antibiotics
+1034,non-food,Antipyretic
+1035,non-food,Broom
+1036,pulses and nuts,Chestnut
+1037,pulses and nuts,"Cowpeas (whole, average)"
+1038,cereals and tubers,Potatoes (desirée)
+1039,non-food,Jerrycan
+1040,non-food,Vasodilating agents
+1041,non-food,Fuel (petrol)
+1042,cereals and tubers,Semolina (Semovita)
+1043,miscellaneous food,Seasoning (maggi cube)
+1044,miscellaneous food,Seasoning (ajino moto)
+1045,miscellaneous food,Seasoning (onga)
+1046,miscellaneous food,Curry powder
+1047,miscellaneous food,Baobab Leave Powder
+1048,miscellaneous food,Ginger powder
+1049,miscellaneous food,Soft drink (malta guinness)
+1050,cereals and tubers,Amaranthus (red)
+1051,cereals and tubers,Amaranthus (stem)
+1052,vegetables and fruits,Apples (Fuji)
+1053,vegetables and fruits,Apples (Queen)
+1054,vegetables and fruits,Apples (royal gala)
+1055,cereals and tubers,Arum root
+1056,pulses and nuts,"Beans (kidney, dry)"
+1057,pulses and nuts,"Beans (kidney, raw)"
+1058,pulses and nuts,"Beans (mung, large grain)"
+1059,"meat, fish and eggs","Meat (chicken, sonali)"
+1060,miscellaneous food,"Chili (powdered, Bashundhara)"
+1061,miscellaneous food,"Chili (powdered, fresh)"
+1062,miscellaneous food,"Chili (powdered, Pran)"
+1063,miscellaneous food,"Chili (powdered, Radhuni)"
+1064,miscellaneous food,"Chili (whole, dry, Bangladeshi Bindu)"
+1065,miscellaneous food,"Chili (whole, dry, Indian LC)"
+1066,miscellaneous food,"Chili (whole, dry, Indian Teja)"
+1067,miscellaneous food,"Chili (whole, dry, Panchagarh)"
+1068,miscellaneous food,"Chili (whole, dry, Panchoghor)"
+1069,miscellaneous food,"Chili (whole, fresh)"
+1070,miscellaneous food,Coriander leaves
+1071,vegetables and fruits,"Cucumber (short, khira)"
+1072,vegetables and fruits,Cucumber (short)
+1073,"meat, fish and eggs",Eggs (brown)
+1074,"meat, fish and eggs",Eggs (white)
+1075,"meat, fish and eggs","Fish (dry, anchovy)"
+1076,"meat, fish and eggs","Fish (dry, belt 10-12"")"
+1077,"meat, fish and eggs","Fish (tilapia, fresh)"
+1078,"meat, fish and eggs","Fish (tilapia, frozen)"
+1079,"meat, fish and eggs","Fish (live, carp)"
+1080,"meat, fish and eggs","Fish (live, pangasius)"
+1081,"meat, fish and eggs","Fish (live, tilapia)"
+1082,vegetables and fruits,"Garlic (imported, China)"
+1083,vegetables and fruits,Gourd (ash)
+1084,vegetables and fruits,Gourd (bitter)
+1085,vegetables and fruits,Gourd (pointed)
+1086,vegetables and fruits,Gourd (ridge)
+1087,vegetables and fruits,Gourd (teasel)
+1088,miscellaneous food,Hyacinth (sim)
+1089,vegetables and fruits,Lemons (large)
+1090,vegetables and fruits,Lemon (medium size)
+1091,pulses and nuts,"Lentils (whole, red, medium)"
+1092,vegetables and fruits,Mangoes (Amra Pali)
+1093,vegetables and fruits,Mangoes (BARI-4)
+1094,vegetables and fruits,Mangoes (Burmese)
+1095,vegetables and fruits,Mangoes (Fazli)
+1096,vegetables and fruits,Mangoes (Gopal Vog)
+1097,vegetables and fruits,Mangoes (Green)
+1098,vegetables and fruits,Mangoes (Haem Sagor)
+1099,vegetables and fruits,Mangoes (Harivanga)
+1100,vegetables and fruits,Mangoes (Mallika)
+1101,oil and fats,"Oil (soybean, fortified, Bashundhara)"
+1102,oil and fats,"Oil (soybean, fortified, Fresh)"
+1103,oil and fats,"Oil (soybean, fortified, Rupchanda)"
+1104,oil and fats,"Oil (soybean, fortified, Teer)"
+1105,oil and fats,"Oil (soybean, fortified, Pusti)"
+1106,vegetables and fruits,Olives
+1107,vegetables and fruits,Onions leaves
+1108,vegetables and fruits,"Onions (imported, China)"
+1109,vegetables and fruits,"Onions (imported, Egypt)"
+1110,vegetables and fruits,"Onions (imported, India)"
+1111,vegetables and fruits,"Onions (imported, Myanmar)"
+1112,vegetables and fruits,"Onions (imported, Turkey)"
+1113,vegetables and fruits,Oranges (malta)
+1114,vegetables and fruits,Papaya (green)
+1115,cereals and tubers,Potatoes (hybrid)
+1116,vegetables and fruits,Radish (leaves)
+1117,cereals and tubers,Rice (BRRI-14)
+1118,cereals and tubers,Rice (BRRI-28)
+1119,cereals and tubers,Rice (BRRI-29)
+1120,cereals and tubers,Rice (BRRI-49)
+1121,cereals and tubers,Rice (Swarna)
+1122,cereals and tubers,Rice (Vietnamese)
+1123,miscellaneous food,"Salt (fortified, ACI)"
+1124,miscellaneous food,"Salt (fortified, Confidence)"
+1125,miscellaneous food,"Salt (fortified, Fresh)"
+1126,miscellaneous food,"Salt (fortified, IFAD)"
+1127,miscellaneous food,"Salt (fortified, Molla)"
+1128,miscellaneous food,"Salt (iodized, ACI)"
+1129,miscellaneous food,"Salt (iodized, Confidence)"
+1130,miscellaneous food,"Salt (iodized, Fresh)"
+1131,miscellaneous food,"Salt (iodized, IFAD)"
+1132,miscellaneous food,"Salt (iodized, Molla)"
+1133,miscellaneous food,Shemai (Banoful)
+1134,miscellaneous food,Shemai (Bashundhara)
+1135,miscellaneous food,Shemai (Kolson)
+1136,miscellaneous food,Shemai (Pran)
+1137,miscellaneous food,Shemai (Radhuni)
+1138,vegetables and fruits,Spinach (indian)
+1139,miscellaneous food,"Sugar (white, Abdul Monem ltd (Igloo))"
+1140,miscellaneous food,"Sugar (white, Fresh)"
+1141,miscellaneous food,"Sugar (white, S.Alam)"
+1142,miscellaneous food,"Sugar (white, TK Group)"
+1143,vegetables and fruits,Tamarind (green)
+1144,vegetables and fruits,Tamarind (ripe)
+1145,cereals and tubers,Taro (small)
+1146,vegetables and fruits,Tomatoes (green)
+1147,vegetables and fruits,Tomatoes (red)
+1148,miscellaneous food,"Turmeric (powder, Bashundhara)"
+1149,miscellaneous food,"Turmeric (powder, Fresh)"
+1150,miscellaneous food,"Turmeric (powder, Pran)"
+1151,miscellaneous food,"Turmeric (powder, Radhuni)"
+1152,miscellaneous food,"Turmeric (whole, dry, imported, India)"
+1153,miscellaneous food,"Turmeric (whole, dry, local)"
+1154,cereals and tubers,Vermicelli (Bashundara)
+1155,cereals and tubers,Vermicelli (Bonoful)
+1156,cereals and tubers,Vermicelli (Kolson)
+1157,cereals and tubers,Vermicelli (Pran)
+1158,cereals and tubers,Vermicelli (Radhuni)
+1159,cereals and tubers,Wheat flour (ACI)
+1160,cereals and tubers,Wheat flour (Bashundhara)
+1161,cereals and tubers,Wheat flour (Fresh)
+1162,cereals and tubers,Wheat flour (IFAD)
+1163,cereals and tubers,Wheat flour (Teer)
+1164,non-food,Antibacterial wipes
+1166,miscellaneous food,Chili (powdered)
+1167,miscellaneous food,"Chili (whole, dry)"
+1168,vegetables and fruits,Gourd
+1169,miscellaneous food,Salt (fortified)
+1170,miscellaneous food,Shemai
+1171,miscellaneous food,Vermicelli

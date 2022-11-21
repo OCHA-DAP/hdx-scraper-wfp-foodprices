@@ -17,7 +17,6 @@ from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
 from wfpfood import WFPFood
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -108,7 +107,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "CARITAS, GOV, Gvt, National Institute Of Statistics (INS), WFP",
-                        "dataset_date": "[2011-01-15T00:00:00 TO 2020-07-15T00:00:00]",
+                        "dataset_date": "[2011-01-15T00:00:00 TO 2022-04-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -155,30 +154,34 @@ class TestWFP:
                     assert qc_indicators == [
                         {
                             "code": "Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Beans (white) ($/KG) in Brazzaville/Total",
                             "title": "Price of Beans (white) in Total",
                             "unit": "US Dollars ($)",
-                            "description": "Price of Beans (white) ($/KG) in Brazzaville/Total",
-                            "code_col": "#meta+code",
                             "value_col": "#value+usd",
-                            "date_col": "#date",
                         },
                         {
-                            "code": "Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice (mixed, low quality)-KG-XAF",
-                            "title": "Price of Rice (mixed, low quality) in Grand marché/Fond Ntié-Ntié/Nkouikou",
-                            "unit": "US Dollars ($)",
-                            "description": "Price of Rice (mixed, low quality) ($/KG) in Point-Noire/Pointe-Noire/Grand marché/Fond Ntié-Ntié/Nkouikou",
+                            "code": "Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice "
+                            "(mixed, low quality)-KG-XAF",
                             "code_col": "#meta+code",
-                            "value_col": "#value+usd",
                             "date_col": "#date",
+                            "description": "Price of Rice (mixed, low quality) ($/KG) in "
+                            "Point-Noire/Pointe-Noire/Grand marché/Fond "
+                            "Ntié-Ntié/Nkouikou",
+                            "title": "Price of Rice (mixed, low quality) in Grand marché/Fond "
+                            "Ntié-Ntié/Nkouikou",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
                         },
                         {
                             "code": "Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Oil (vegetable) ($/L) in Pool/Kinkala",
                             "title": "Price of Oil (vegetable) in Kinkala",
                             "unit": "US Dollars ($)",
-                            "description": "Price of Oil (vegetable) ($/L) in Pool/Kinkala",
-                            "code_col": "#meta+code",
                             "value_col": "#value+usd",
-                            "date_col": "#date",
                         },
                     ]
                     (
@@ -214,7 +217,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "FPMA, National Statistical Committee of the Republic of Belarus via FAO: GIEWS",
-                        "dataset_date": "[2009-01-15T00:00:00 TO 2021-04-15T00:00:00]",
+                        "dataset_date": "[2009-01-15T00:00:00 TO 2022-05-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -292,7 +295,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "FPMA, PCBS, Palestinian Central Bureau of Statistics via FAO: GIEWS, VAM",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2021-07-15T00:00:00]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2021-12-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -336,7 +339,37 @@ class TestWFP:
                             },
                         ],
                     }
-                    assert qc_indicators == []
+                    assert qc_indicators == [
+                        {
+                            "code": "Gaza Strip-Gaza-Gaza-Oil (olive)-KG-ILS",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Oil (olive) ($/KG) in Gaza Strip/Gaza",
+                            "title": "Price of Oil (olive) in Gaza",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        },
+                        {
+                            "code": "West Bank-Tulkarm-Tulkarem-Water (drinking)-Cubic meter-ILS",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Water (drinking) ($/Cubic meter) in West "
+                            "Bank/Tulkarm/Tulkarem",
+                            "title": "Price of Water (drinking) in Tulkarem",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        },
+                        {
+                            "code": "West Bank-Ramallah and Albireh-Ramallah-Tea-KG-ILS",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Tea ($/KG) in West Bank/Ramallah and "
+                            "Albireh/Ramallah",
+                            "title": "Price of Tea in Ramallah",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        },
+                    ]
                     dataset, showcase = wfp.generate_global_dataset_and_showcase()
                     logger.info("Generated global")
                     assert dataset == {
@@ -366,7 +399,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "WFP",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2021-07-15T00:00:00]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-05-15T23:59:59]",
                     }
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",

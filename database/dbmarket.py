@@ -1,7 +1,6 @@
+from database.dbcountry import DBCountry
 from hdx.database import Base
 from sqlalchemy import Column, Float, ForeignKey, Integer, String
-
-from database.dbcountry import DBCountry
 
 
 class DBMarket(Base):

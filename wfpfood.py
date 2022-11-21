@@ -9,6 +9,7 @@ Creates datasets with flattened tables of WFP food prices.
 import difflib
 import logging
 import re
+from os.path import join
 
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
@@ -18,9 +19,11 @@ from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from hdx.location.currency import Currency, CurrencyError
-from hdx.utilities.dateparse import default_date, default_enddate, parse_date
+from hdx.utilities.dateparse import default_date, default_enddate, now_utc, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
 from hdx.utilities.downloader import DownloadError
+from hdx.utilities.loader import load_text
+from hdx.utilities.saver import save_text
 from slugify import slugify
 
 logger = logging.getLogger(__name__)
@@ -75,10 +78,22 @@ class WFPFood:
         self.session = session
         self.headers = None
         self.commodity_to_category = dict()
+        if retriever.save:
+            fixed_now = now_utc()
+            datestring = fixed_now.isoformat()
+            path = join(retriever.saved_dir, "now.txt")
+            save_text(datestring, path)
+        elif retriever.use_saved:
+            path = join(retriever.saved_dir, "now.txt")
+            datestring = load_text(path)
+            fixed_now = parse_date(datestring, include_microseconds=True)
+        else:
+            fixed_now = None
         Currency.setup(
             retriever=retriever,
             fallback_historic_to_current=True,
             fallback_current_to_static=False,
+            fixed_now=fixed_now,
         )
 
     def refresh_headers(self):
@@ -112,6 +127,8 @@ class WFPFood:
         json = self.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
+            if self.retriever.save and country["iso3"] not in ("BLR", "COG", "PSE"):
+                continue
             countries.add((country["iso3"], country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
