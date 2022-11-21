@@ -218,7 +218,7 @@ class WFPFood:
         dataset.set_maintainer("f1921552-8c3e-47e9-9804-579b14a83ee3")
         dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
-        dataset.set_expected_update_frequency("weekly")
+        dataset.set_expected_update_frequency("As Needed")
         try:
             dataset.add_country_location(location)
         except HDXError:
@@ -282,9 +282,6 @@ class WFPFood:
         sources = dict()
         markets = dict()
         for price_data in prices_data:
-            priceflag = price_data["commodityPriceFlag"]
-            if priceflag not in ("actual", "aggregate"):
-                continue
             commodity_id = price_data["commodityID"]
             category = self.commodity_to_category[commodity_id]
             market_id = price_data["marketID"]
@@ -338,6 +335,7 @@ class WFPFood:
             date_str = date.date().isoformat()
             commodity = price_data["commodityName"]
             unit = price_data["commodityUnitName"]
+            priceflag = price_data["commodityPriceFlag"]
             pricetype = price_data["priceTypeName"]
             price = price_data["commodityPrice"]
             currency = price_data["currencyName"]
@@ -349,6 +347,7 @@ class WFPFood:
                 usdprice = None
             price = round(price, 2)
             key = (
+                priceflag,
                 date,
                 adm1,
                 adm2,
@@ -356,7 +355,6 @@ class WFPFood:
                 category,
                 commodity,
                 unit,
-                priceflag,
                 pricetype,
             )
             if key not in rows:

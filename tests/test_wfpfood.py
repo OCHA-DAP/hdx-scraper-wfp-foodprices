@@ -85,7 +85,7 @@ class TestWFP:
                         "title": "Congo - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "7",
+                        "data_update_frequency": "-2",
                         "groups": [{"name": "cog"}],
                         "subnational": "1",
                         "tags": [
@@ -195,7 +195,7 @@ class TestWFP:
                         "title": "Belarus - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "7",
+                        "data_update_frequency": "-2",
                         "groups": [{"name": "blr"}],
                         "subnational": "1",
                         "tags": [
@@ -273,7 +273,7 @@ class TestWFP:
                         "title": "State of Palestine - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "7",
+                        "data_update_frequency": "-2",
                         "groups": [{"name": "pse"}],
                         "subnational": "1",
                         "tags": [
@@ -295,7 +295,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "FPMA, PCBS, Palestinian Central Bureau of Statistics via FAO: GIEWS, VAM",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2021-12-15T23:59:59]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-06-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -377,7 +377,7 @@ class TestWFP:
                         "title": "Global - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "7",
+                        "data_update_frequency": "-2",
                         "groups": [{"name": "world"}],
                         "subnational": "1",
                         "tags": [
@@ -399,7 +399,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "WFP",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-05-15T23:59:59]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-06-15T23:59:59]",
                     }
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",
