@@ -1,16 +1,18 @@
+from sqlalchemy.orm import Mapped, mapped_column
+
 from database.dbcountry import DBCountry
-from hdx.database import Base
-from sqlalchemy import Column, Float, ForeignKey, Integer, String
+from hdx.database import NoTZBase
+from sqlalchemy import ForeignKey
 
 
-class DBMarket(Base):
-    market_id = Column(Integer, primary_key=True)
-    market = Column(String, nullable=False)
-    countryiso3 = Column(String, ForeignKey(DBCountry.countryiso3))
-    admin1 = Column(String)
-    admin2 = Column(String)
-    latitude = Column(Float)
-    longitude = Column(Float)
+class DBMarket(NoTZBase):
+    market_id: Mapped[int] = mapped_column(primary_key=True)
+    market: Mapped[str] = mapped_column(nullable=False)
+    countryiso3: Mapped[str] = mapped_column(ForeignKey(DBCountry.countryiso3))
+    admin1: Mapped[str] = mapped_column(nullable=True)
+    admin2: Mapped[str] = mapped_column(nullable=True)
+    latitude: Mapped[float] = mapped_column(nullable=True)
+    longitude: Mapped[float] = mapped_column(nullable=True)
 
     def __repr__(self):
         output = f"<Market(id={self.market_id}, name={self.market}, "

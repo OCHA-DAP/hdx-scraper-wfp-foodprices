@@ -11,6 +11,8 @@ import logging
 import re
 from os.path import join
 
+from sqlalchemy import delete, select
+
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
 from database.dbmarket import DBMarket
@@ -164,7 +166,7 @@ class WFPFood:
         return all_data
 
     def build_mappings(self):
-        self.session.query(DBCommodity).delete()
+        self.session.execute(delete(DBCommodity))
         categoryid_to_name = dict()
         for category in self.get_list("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]
@@ -463,12 +465,12 @@ class WFPFood:
             headers=list(qc_hxltags.keys()),
         )
         dataset_date = dataset.get_reference_period()
-        self.session.query(DBCountry).filter(
+        self.session.execute(delete(DBCountry).where(
             DBCountry.countryiso3 == countryiso3
-        ).delete()
-        self.session.query(DBMarket).filter(
+        ))
+        self.session.execute(delete(DBMarket).where(
             DBMarket.countryiso3 == countryiso3
-        ).delete()
+        ))
         dbcountry = DBCountry(
             countryiso3=countryiso3,
             start_date=dataset_date["startdate"],
@@ -495,7 +497,7 @@ class WFPFood:
         def dbtable_to_list(cls, fn, rsdata):
             nonlocal start_date, end_date
             rows = list()
-            for result in self.session.query(cls):
+            for result in self.session.scalars(select(cls)).all():
                 row = dict()
                 for column in result.__table__.columns.keys():
                     row[column] = getattr(result, column)

@@ -1,2 +1,2 @@
-hdx-python-database==1.1.7
-SQLAlchemy-Utc==0.14.0
+hdx-python-database==1.2.3
+retry2==0.9.5

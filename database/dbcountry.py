@@ -1,18 +1,18 @@
-from hdx.database import Base
-from sqlalchemy import Column, String
-from sqlalchemy.orm import declared_attr
-from sqlalchemy_utc import UtcDateTime
+from datetime import datetime
+
+from hdx.database import NoTZBase
+from sqlalchemy.orm import declared_attr, Mapped, mapped_column
 
 
-class DBCountry(Base):
-    @declared_attr
+class DBCountry(NoTZBase):
+    @declared_attr.directive
     def __tablename__(cls):
         return "dbcountries"
 
-    countryiso3 = Column(String, primary_key=True)
-    url = Column(String, nullable=False)
-    start_date = Column(UtcDateTime(), nullable=False)
-    end_date = Column(UtcDateTime(), nullable=False)
+    countryiso3: Mapped[str] = mapped_column(primary_key=True)
+    url: Mapped[str] = mapped_column(nullable=False)
+    start_date: Mapped[datetime] = mapped_column(nullable=False)
+    end_date: Mapped[datetime] = mapped_column(nullable=False)
 
     def __repr__(self):
         output = f"<Country(country={self.countryiso3}, url={self.url},\n"

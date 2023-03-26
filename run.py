@@ -8,11 +8,15 @@ import logging
 from os.path import expanduser, join
 
 from hdx.api.configuration import Configuration
+from hdx.data.hdxobject import HDXError
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
+from hdx.utilities.base_downloader import DownloadError
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
+from retry import retry
+
 from wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
@@ -50,7 +54,7 @@ def main(save, use_saved, **ignore):
                     downloader, folder, "saved_data", folder, save, use_saved
                 )
                 params = {
-                    "driver": "sqlite",
+                    "dialect": "sqlite",
                     "database": f"/{folder}/foodprices.sqlite",
                 }
                 with Database(**params) as session:
@@ -63,9 +67,9 @@ def main(save, use_saved, **ignore):
                         f"Number of country datasets to upload: {len(countries)}"
                     )
                     wfp.build_mappings()
-                    for info, country in progress_storing_folder(
-                        info, countries, "iso3"
-                    ):
+
+                    @retry((DownloadError, HDXError), tries=5, delay=3600)
+                    def process_country(country):
                         countryiso3 = country["iso3"]
                         (
                             dataset,
@@ -86,6 +90,11 @@ def main(save, use_saved, **ignore):
                             showcase.create_in_hdx()
                             showcase.add_dataset(dataset)
                         wfp.update_database()
+
+                    for info, country in progress_storing_folder(
+                        info, countries, "iso3"
+                    ):
+                        process_country(country)
                     dataset, showcase = wfp.generate_global_dataset_and_showcase()
                     snippet = "Countries, Commodities and Markets data"
                     snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "

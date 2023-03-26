@@ -77,7 +77,7 @@ class TestWFP:
                 except OSError:
                     pass
                 params = {
-                    "driver": "sqlite",
+                    "dialect": "sqlite",
                     "database": dbpath,
                 }
                 with Database(**params) as session:
