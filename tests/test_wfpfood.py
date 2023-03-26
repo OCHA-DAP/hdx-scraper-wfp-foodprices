@@ -10,6 +10,7 @@ from os.path import join
 import pytest
 from hdx.api.configuration import Configuration
 from hdx.api.locations import Locations
+from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
@@ -37,6 +38,20 @@ class TestWFP:
                 {"name": "world", "title": "World"},
             ]
         )
+        Vocabulary._approved_vocabulary = {
+            "tags": [
+                {"name": tag}
+                for tag in (
+                    "hxl",
+                    "economics",
+                    "food security",
+                    "indicators",
+                    "markets",
+                )
+            ],
+            "id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+            "name": "approved",
+        }
         return Configuration.read()
 
     @pytest.fixture(scope="class")
@@ -90,19 +105,23 @@ class TestWFP:
                         "subnational": "1",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -134,19 +153,23 @@ class TestWFP:
                         "image_url": "http://dataviz.vam.wfp.org/_images/home/3_economic.jpg",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -200,19 +223,23 @@ class TestWFP:
                         "subnational": "1",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -244,19 +271,23 @@ class TestWFP:
                         "url": "http://dataviz.vam.wfp.org/economic_explorer/prices?iso3=BLR",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -278,19 +309,23 @@ class TestWFP:
                         "subnational": "1",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -322,19 +357,23 @@ class TestWFP:
                         "url": "http://dataviz.vam.wfp.org/economic_explorer/prices?iso3=PSE",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -382,19 +421,23 @@ class TestWFP:
                         "subnational": "1",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],
@@ -409,19 +452,23 @@ class TestWFP:
                         "url": "http://dataviz.vam.wfp.org/economic_explorer/prices",
                         "tags": [
                             {
-                                "name": "commodities",
+                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
-                                "name": "prices",
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                             {
                                 "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "hxl",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
                         ],

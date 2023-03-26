@@ -228,7 +228,7 @@ class WFPFood:
                 logger.exception(f"{countryname} has a problem! {e}")
                 return None, None
         dataset.set_subnational(True)
-        tags = ["commodities", "prices", "markets", "hxl"]
+        tags = ("hxl", "economics", "food security", "indicators", "markets")
         dataset.add_tags(tags)
         showcase = Showcase(
             {
@@ -462,7 +462,7 @@ class WFPFood:
             resourcedata,
             headers=list(qc_hxltags.keys()),
         )
-        dataset_date = dataset.get_date_of_dataset()
+        dataset_date = dataset.get_reference_period()
         self.session.query(DBCountry).filter(
             DBCountry.countryiso3 == countryiso3
         ).delete()
@@ -533,5 +533,5 @@ class WFPFood:
             "format": "csv",
         }
         dbtable_to_list(DBMarket, filename, resourcedata)
-        dataset.set_date_of_dataset(start_date, end_date)
+        dataset.set_reference_period(start_date, end_date)
         return dataset, showcase
