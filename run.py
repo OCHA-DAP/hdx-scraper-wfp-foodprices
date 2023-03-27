@@ -16,7 +16,6 @@ from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
 from retry import retry
-
 from wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
@@ -68,7 +67,9 @@ def main(save, use_saved, **ignore):
                     )
                     wfp.build_mappings()
 
-                    @retry((DownloadError, HDXError), tries=5, delay=3600)
+                    @retry(
+                        (DownloadError, HDXError), tries=5, delay=3600, logger=logger
+                    )
                     def process_country(country):
                         countryiso3 = country["iso3"]
                         (
