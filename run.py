@@ -7,7 +7,6 @@ import argparse
 import logging
 from os.path import expanduser, join
 
-import loguru
 from hdx.api.configuration import Configuration
 from hdx.data.hdxobject import HDXError
 from hdx.database import Database
@@ -17,7 +16,7 @@ from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
 from tenacity import (
-    before_log,
+    after_log,
     retry,
     retry_if_exception_type,
     stop_after_attempt,
@@ -81,7 +80,7 @@ def main(save, use_saved, **ignore):
                         ),
                         stop=stop_after_attempt(5),
                         wait=wait_fixed(3600),
-                        before=before_log(loguru.logger, logging.INFO),
+                        after=after_log(logger, logging.INFO),
                     )
                     def process_country(country):
                         countryiso3 = country["iso3"]
