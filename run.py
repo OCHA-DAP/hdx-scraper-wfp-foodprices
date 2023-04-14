@@ -93,7 +93,7 @@ def main(save, use_saved, **ignore):
                         if dataset:
                             dataset.update_from_yaml()
                             dataset["notes"] = dataset["notes"] % (snippet, "")
-                            dataset.generate_resource_view(-1, indicators=qc_indicators)
+                            dataset.generate_quickcharts(-1, indicators=qc_indicators)
                             dataset.create_in_hdx(
                                 remove_additional_resources=True,
                                 hxl_update=False,
