@@ -1,14 +1,10 @@
 from datetime import datetime
 
 from hdx.database import NoTZBase
-from sqlalchemy.orm import declared_attr, Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column
 
 
 class DBCountry(NoTZBase):
-    @declared_attr.directive
-    def __tablename__(cls):
-        return "dbcountries"
-
     countryiso3: Mapped[str] = mapped_column(primary_key=True)
     url: Mapped[str] = mapped_column(nullable=False)
     start_date: Mapped[datetime] = mapped_column(nullable=False)

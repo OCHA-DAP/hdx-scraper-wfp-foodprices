@@ -3,10 +3,6 @@ from sqlalchemy.orm import declared_attr, Mapped, mapped_column
 
 
 class DBCommodity(NoTZBase):
-    @declared_attr.directive
-    def __tablename__(cls):
-        return "dbcommodities"
-
     commodity_id: Mapped[int] = mapped_column(primary_key=True)
     category: Mapped[str] = mapped_column(nullable=False)
     commodity: Mapped[str] = mapped_column(nullable=False)
