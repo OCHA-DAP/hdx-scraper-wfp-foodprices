@@ -1,2 +1,2 @@
-hdx-python-database==1.2.7
+hdx-python-database==1.2.9
 tenacity==8.2.3
