@@ -330,7 +330,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "FPMA, PCBS, Palestinian Central Bureau of Statistics via FAO: GIEWS, VAM",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-06-15T23:59:59]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2021-12-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -442,7 +442,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "WFP",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-06-15T23:59:59]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-05-15T23:59:59]",
                     }
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",

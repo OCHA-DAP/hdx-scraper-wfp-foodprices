@@ -285,6 +285,9 @@ class WFPFood:
         sources = dict()
         markets = dict()
         for price_data in prices_data:
+            priceflag = price_data["commodityPriceFlag"]
+            if priceflag not in ("actual", "aggregate"):
+                continue
             commodity_id = price_data["commodityID"]
             category = self.commodity_to_category[commodity_id]
             market_id = price_data["marketID"]
@@ -338,7 +341,6 @@ class WFPFood:
             date_str = date.date().isoformat()
             commodity = price_data["commodityName"]
             unit = price_data["commodityUnitName"]
-            priceflag = price_data["commodityPriceFlag"]
             pricetype = price_data["priceTypeName"]
             price = price_data["commodityPrice"]
             currency = price_data["currencyName"]
