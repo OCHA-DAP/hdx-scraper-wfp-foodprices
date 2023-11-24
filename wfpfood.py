@@ -221,7 +221,7 @@ class WFPFood:
         dataset.set_maintainer("f1921552-8c3e-47e9-9804-579b14a83ee3")
         dataset.set_organization("3ecac442-7fed-448d-8f78-b385ef6f84e7")
 
-        dataset.set_expected_update_frequency("As Needed")
+        dataset.set_expected_update_frequency("Every month")
         try:
             dataset.add_country_location(location)
         except HDXError:

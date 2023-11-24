@@ -100,7 +100,7 @@ class TestWFP:
                         "title": "Congo - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "-2",
+                        "data_update_frequency": "30",
                         "groups": [{"name": "cog"}],
                         "subnational": "1",
                         "tags": [
@@ -218,7 +218,7 @@ class TestWFP:
                         "title": "Belarus - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "-2",
+                        "data_update_frequency": "30",
                         "groups": [{"name": "blr"}],
                         "subnational": "1",
                         "tags": [
@@ -304,7 +304,7 @@ class TestWFP:
                         "title": "State of Palestine - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "-2",
+                        "data_update_frequency": "30",
                         "groups": [{"name": "pse"}],
                         "subnational": "1",
                         "tags": [
@@ -416,7 +416,7 @@ class TestWFP:
                         "title": "Global - Food Prices",
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
-                        "data_update_frequency": "-2",
+                        "data_update_frequency": "30",
                         "groups": [{"name": "world"}],
                         "subnational": "1",
                         "tags": [
