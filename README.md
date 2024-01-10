@@ -1,7 +1,9 @@
-### Collector for WFP Food Prices's Datasets
-[![Build Status](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/workflows/build/badge.svg)](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions?query=workflow%3Abuild) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdx-scraper-wfp-foodprices/badge.svg?branch=main&ts=1)](https://coveralls.io/github/OCHA-DAP/hdx-scraper-wfp-foodprices?branch=main)
+### Pipeline for WFP Food Prices's Datasets
+[![Run tests](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions/workflows/run-python-tests.yml/badge.svg)](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions/workflows/run-python-tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdx-scraper-wfp-foodprices/badge.svg?branch=main&ts=1)](https://coveralls.io/github/OCHA-DAP/hdx-scraper-wfp-foodprices?branch=main)
 
-This collector connects to the [WFP](http://dataviz.vam.wfp.org/) website via provided [API](https://api.wfp.org/)  and extracts food prices data country by country creating a dataset per country in HDX. It makes in the order of 2000 reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It saves 2 temporary files per country each less than 2Mb and these are what are uploaded to HDX. In addition a 100Mb file is generated and uploaded to HDX. These files are then deleted. It runs every month. 
+
+This pipeline connects to the [WFP](http://dataviz.vam.wfp.org/) website via provided [API](https://api.wfp.org/)  and extracts food prices data country by country creating a dataset per country in HDX. It makes in the order of 2000 reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It saves 2 temporary files per country each less than 2Mb and these are what are uploaded to HDX. In addition a 100Mb file is generated and uploaded to HDX. These files are then deleted. It runs every month. 
 
 ### Usage
 
