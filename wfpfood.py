@@ -467,7 +467,7 @@ class WFPFood:
             resourcedata,
             headers=list(qc_hxltags.keys()),
         )
-        dataset_date = dataset.get_reference_period()
+        dataset_date = dataset.get_time_period()
         self.session.execute(delete(DBCountry).where(
             DBCountry.countryiso3 == countryiso3
         ))
@@ -538,5 +538,5 @@ class WFPFood:
             "format": "csv",
         }
         dbtable_to_list(DBMarket, filename, resourcedata)
-        dataset.set_reference_period(start_date, end_date)
+        dataset.set_time_period(start_date, end_date)
         return dataset, showcase
