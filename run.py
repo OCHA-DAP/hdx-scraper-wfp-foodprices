@@ -8,20 +8,11 @@ import logging
 from os.path import expanduser, join
 
 from hdx.api.configuration import Configuration
-from hdx.data.hdxobject import HDXError
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
-from hdx.utilities.base_downloader import DownloadError
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
-from tenacity import (
-    after_log,
-    retry,
-    retry_if_exception_type,
-    stop_after_attempt,
-    wait_fixed,
-)
 from wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
@@ -73,15 +64,6 @@ def main(save, use_saved, **ignore):
                     )
                     wfp.build_mappings()
 
-                    @retry(
-                        retry=(
-                            retry_if_exception_type(DownloadError)
-                            | retry_if_exception_type(HDXError)
-                        ),
-                        stop=stop_after_attempt(5),
-                        wait=wait_fixed(3600),
-                        after=after_log(logger, logging.INFO),
-                    )
                     def process_country(country):
                         countryiso3 = country["iso3"]
                         (

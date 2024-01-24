@@ -12,6 +12,8 @@ import re
 from os.path import join
 
 from sqlalchemy import delete, select
+from tenacity import retry, stop_after_attempt, wait_fixed, after_log, \
+    retry_if_exception_type
 
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
@@ -110,6 +112,12 @@ class WFPFood:
             "Authorization": f"Bearer {access_token}",
         }
 
+    @retry(
+        retry=retry_if_exception_type(DownloadError),
+        stop=stop_after_attempt(5),
+        wait=wait_fixed(3600),
+        after=after_log(logger, logging.INFO),
+    )
     def retrieve(self, url, filename, log, parameters=None):
         try:
             results = self.retriever.download_json(
