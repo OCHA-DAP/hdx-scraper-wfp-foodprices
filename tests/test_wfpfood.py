@@ -149,8 +149,8 @@ class TestWFP:
                         "name": "wfp-food-prices-for-congo-showcase",
                         "title": "Congo - Food Prices showcase",
                         "notes": "Congo food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "url": "http://dataviz.vam.wfp.org/economic_explorer/prices?iso3=COG",
-                        "image_url": "http://dataviz.vam.wfp.org/_images/home/3_economic.jpg",
+                        "url": "https://dataviz.vam.wfp.org/economic/prices?iso3=COG",
+                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
                         "tags": [
                             {
                                 "name": "hxl",
@@ -267,8 +267,8 @@ class TestWFP:
                         "name": "wfp-food-prices-for-belarus-showcase",
                         "title": "Belarus - Food Prices showcase",
                         "notes": "Belarus food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "image_url": "http://dataviz.vam.wfp.org/_images/home/3_economic.jpg",
-                        "url": "http://dataviz.vam.wfp.org/economic_explorer/prices?iso3=BLR",
+                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                        "url": "https://dataviz.vam.wfp.org/economic/prices?iso3=BLR",
                         "tags": [
                             {
                                 "name": "hxl",
@@ -353,8 +353,8 @@ class TestWFP:
                         "name": "wfp-food-prices-for-state-of-palestine-showcase",
                         "title": "State of Palestine - Food Prices showcase",
                         "notes": "State of Palestine food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "image_url": "http://dataviz.vam.wfp.org/_images/home/3_economic.jpg",
-                        "url": "http://dataviz.vam.wfp.org/economic_explorer/prices?iso3=PSE",
+                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                        "url": "https://dataviz.vam.wfp.org/economic/prices?iso3=PSE",
                         "tags": [
                             {
                                 "name": "hxl",
@@ -448,8 +448,8 @@ class TestWFP:
                         "name": "global-wfp-food-prices-showcase",
                         "title": "Global - Food Prices showcase",
                         "notes": "Global food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "image_url": "http://dataviz.vam.wfp.org/_images/home/3_economic.jpg",
-                        "url": "http://dataviz.vam.wfp.org/economic_explorer/prices",
+                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                        "url": "https://dataviz.vam.wfp.org/economic/prices",
                         "tags": [
                             {
                                 "name": "hxl",

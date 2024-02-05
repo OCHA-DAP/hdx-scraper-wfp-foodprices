@@ -246,15 +246,15 @@ class WFPFood:
                 "name": f"{slugified_name}-showcase",
                 "title": f"{title} showcase",
                 "notes": f"{countryname} food prices data from World Food Programme displayed through VAM Economic Explorer",
-                "image_url": "http://dataviz.vam.wfp.org/_images/home/3_economic.jpg",
+                "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
             }
         )
         if countryiso3 == "global":
-            showcase["url"] = "http://dataviz.vam.wfp.org/economic_explorer/prices"
+            showcase["url"] = "https://dataviz.vam.wfp.org/economic/prices"
         else:
             showcase[
                 "url"
-            ] = f"http://dataviz.vam.wfp.org/economic_explorer/prices?iso3={countryiso3}"
+            ] = f"https://dataviz.vam.wfp.org/economic/prices?iso3={countryiso3}"
         showcase.add_tags(tags)
 
         return dataset, showcase
