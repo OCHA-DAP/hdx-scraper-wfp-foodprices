@@ -294,7 +294,7 @@ class WFPFood:
         markets = dict()
         for price_data in prices_data:
             priceflag = price_data["commodityPriceFlag"]
-            if priceflag not in ("actual", "aggregate"):
+            if not any(x in priceflag for x in ("actual", "aggregate")):
                 continue
             commodity_id = price_data["commodityID"]
             category = self.commodity_to_category[commodity_id]
