@@ -58,6 +58,7 @@ def main(save, use_saved, **ignore):
                     wfp = WFPFood(
                         configuration, folder, token_downloader, retriever, session
                     )
+                    wfp.read_region_mapping()
                     countries = wfp.get_countries()
                     logger.info(
                         f"Number of country datasets to upload: {len(countries)}"
@@ -82,8 +83,11 @@ def main(save, use_saved, **ignore):
                                 updated_by_script="HDX Scraper: WFP Food Prices",
                                 batch=batch,
                             )
-                            showcase.create_in_hdx()
-                            showcase.add_dataset(dataset)
+                            if showcase:
+                                showcase.create_in_hdx()
+                                showcase.add_dataset(dataset)
+                            else:
+                                logger.info(f"{country['name']} does not have a showcase!")
                         wfp.update_database()
 
                     for info, country in progress_storing_folder(

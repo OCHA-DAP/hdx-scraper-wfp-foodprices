@@ -2,3 +2,4 @@
 countries_url: "http://xxx/"
 base_url: "http://yyy/"
 currency_mappings: {}
+region_mapping_url: "http://zzz"

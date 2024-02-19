@@ -82,6 +82,8 @@ class TestWFP:
                 }
                 with Database(**params) as session:
                     wfp = WFPFood(configuration, tempdir, None, retriever, session)
+                    iso3_to_showcase_url = wfp.read_region_mapping()
+                    assert len(iso3_to_showcase_url) == 88
                     countries = wfp.get_countries()
                     assert len(countries) == 291
                     assert countries[100:102] == [
@@ -149,7 +151,7 @@ class TestWFP:
                         "name": "wfp-food-prices-for-congo-showcase",
                         "title": "Congo - Food Prices showcase",
                         "notes": "Congo food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "url": "https://dataviz.vam.wfp.org/economic/prices?iso3=COG",
+                        "url": "https://dataviz.vam.wfp.org/southern-africa/congo/overview",
                         "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
                         "tags": [
                             {
@@ -263,35 +265,7 @@ class TestWFP:
                             "url_type": "upload",
                         },
                     ]
-                    assert showcase == {
-                        "name": "wfp-food-prices-for-belarus-showcase",
-                        "title": "Belarus - Food Prices showcase",
-                        "notes": "Belarus food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
-                        "url": "https://dataviz.vam.wfp.org/economic/prices?iso3=BLR",
-                        "tags": [
-                            {
-                                "name": "hxl",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "economics",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "food security",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "indicators",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
-                                "name": "markets",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                        ],
-                    }
+                    assert showcase is None
                     assert qc_indicators == []
                     (
                         dataset,
@@ -354,7 +328,7 @@ class TestWFP:
                         "title": "State of Palestine - Food Prices showcase",
                         "notes": "State of Palestine food prices data from World Food Programme displayed through VAM Economic Explorer",
                         "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
-                        "url": "https://dataviz.vam.wfp.org/economic/prices?iso3=PSE",
+                        "url": "https://dataviz.vam.wfp.org/the-middle-east-and-northern-africa/palestine/overview",
                         "tags": [
                             {
                                 "name": "hxl",

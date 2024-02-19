@@ -4,3 +4,5 @@ token_url: "https://api.wfp.org/token"
 base_url: "https://api.wfp.org/vam-data-bridges/2.0.0/"
 currency_mappings:
   NIS: ILS
+# Google sheet: https://docs.google.com/spreadsheets/d/1nXveHlfr4i4Fagxg9EOEYMpcTgK9CtWgKzQYiftIS6I/edit#gid=0
+region_mapping_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRQUNinOiGZXU4w2M6Yd6Av0-Osead_c_prijShrcqGF0yYSoj9Nihxi2amIO-SAlE4XoQ9D3Bskq7I/pub?gid=0&single=true&output=csv"

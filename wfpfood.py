@@ -99,6 +99,17 @@ class WFPFood:
             fallback_current_to_static=False,
             fixed_now=fixed_now,
         )
+        self.iso3_to_showcase_url = {}
+
+    def read_region_mapping(self):
+        headers, rows = self.retriever.get_tabular_rows(self.configuration["region_mapping_url"], dict_form=True, filename="region_mapping.csv")
+        for row in rows:
+            countryiso3 = row["iso3"]
+            name= row["name"]
+            region = row["region"]
+            url = f"https://dataviz.vam.wfp.org/{region}/{name}/overview"
+            self.iso3_to_showcase_url[countryiso3] = url
+        return self.iso3_to_showcase_url
 
     def refresh_headers(self):
         self.token_downloader.download(
@@ -212,10 +223,12 @@ class WFPFood:
             location = "world"
             countryname = "Global"
             name = "Global WFP food prices"
+            url = "https://dataviz.vam.wfp.org/economic/prices"
         else:
             location = countryiso3
             countryname = Country.get_country_name_from_iso3(countryiso3)
             name = f"WFP food prices for {countryname}"
+            url = self.iso3_to_showcase_url.get(countryiso3)
         title = f"{countryname} - Food Prices"
         logger.info(f"Creating dataset: {title}")
         slugified_name = slugify(name).lower()
@@ -241,20 +254,17 @@ class WFPFood:
         dataset.set_subnational(True)
         tags = ("hxl", "economics", "food security", "indicators", "markets")
         dataset.add_tags(tags)
+        if not url:
+            return dataset, None
         showcase = Showcase(
             {
                 "name": f"{slugified_name}-showcase",
                 "title": f"{title} showcase",
                 "notes": f"{countryname} food prices data from World Food Programme displayed through VAM Economic Explorer",
                 "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                "url": url,
             }
         )
-        if countryiso3 == "global":
-            showcase["url"] = "https://dataviz.vam.wfp.org/economic/prices"
-        else:
-            showcase[
-                "url"
-            ] = f"https://dataviz.vam.wfp.org/economic/prices?iso3={countryiso3}"
         showcase.add_tags(tags)
 
         return dataset, showcase
