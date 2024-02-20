@@ -81,7 +81,7 @@ class WFPFood:
         self.retriever = retriever
         self.session = session
         self.headers = None
-        self.commodity_to_category = dict()
+        self.commodity_to_category = {}
         if retriever.save:
             fixed_now = now_utc()
             datestring = fixed_now.isoformat()
@@ -155,7 +155,7 @@ class WFPFood:
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
     def get_list(self, endpoint, countryiso3=None, startdate=None):
-        all_data = list()
+        all_data = []
         url = f'{self.configuration["base_url"]}{endpoint}'
         base_filename = url.split("/")[-2]
         if countryiso3 == "PSE":  # hack as PSE is treated by WFP as 2 areas
@@ -187,7 +187,7 @@ class WFPFood:
 
     def build_mappings(self):
         self.session.execute(delete(DBCommodity))
-        categoryid_to_name = dict()
+        categoryid_to_name = {}
         for category in self.get_list("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]
         for commodity in self.get_list("Commodities/List"):
@@ -277,8 +277,8 @@ class WFPFood:
         if not prices_data:
             logger.info(f"{countryiso3} has no prices data!")
             return None, None, None
-        market_to_adm = dict()
-        dbmarkets = list()
+        market_to_adm = {}
+        dbmarkets = []
         for market in self.get_list("Markets/List", countryiso3):
             market_id = market["marketId"]
             market_name = market["marketName"]
@@ -299,9 +299,9 @@ class WFPFood:
                 )
             )
         logger.info(f"{len(prices_data)} prices rows")
-        rows = dict()
-        sources = dict()
-        markets = dict()
+        rows = {}
+        sources = {}
+        markets = {}
         for price_data in prices_data:
             priceflag = price_data["commodityPriceFlag"]
             if not any(x in priceflag for x in ("actual", "aggregate")):
@@ -408,17 +408,17 @@ class WFPFood:
             logger.info(f"{countryiso3} has no prices!")
             return None, None, None
         logger.info(f"{len(rows)} unique prices rows of price type actual or aggregate")
-        number_market = list()
+        number_market = []
         for key, commodities in markets.items():
             number_market.append((len(commodities), key))
         number_market = sorted(number_market, reverse=True)
-        qc_indicators = list()
+        qc_indicators = []
         qc_rows = [qc_hxltags]
         chosen_commodities = set()
         # Go through markets starting with the one with most commodities
         for _, adm1adm2market in number_market:
             commodities = markets[adm1adm2market]
-            number_commodity = list()
+            number_commodity = []
             for commodityunitcurrency, details in commodities.items():
                 number_commodity.append((len(details), commodityunitcurrency))
             number_commodity = sorted(number_commodity, reverse=True)
@@ -517,9 +517,9 @@ class WFPFood:
 
         def dbtable_to_list(cls, fn, rsdata):
             nonlocal start_date, end_date
-            rows = list()
+            rows = []
             for result in self.session.scalars(select(cls)).all():
-                row = dict()
+                row = {}
                 for column in result.__table__.columns.keys():
                     row[column] = getattr(result, column)
                     if column == "start_date":
