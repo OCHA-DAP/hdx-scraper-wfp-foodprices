@@ -12,8 +12,13 @@ import re
 from os.path import join
 
 from sqlalchemy import delete, select
-from tenacity import retry, stop_after_attempt, wait_fixed, after_log, \
-    retry_if_exception_type
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_fixed,
+    after_log,
+    retry_if_exception_type,
+)
 
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
@@ -102,10 +107,14 @@ class WFPFood:
         self.iso3_to_showcase_url = {}
 
     def read_region_mapping(self):
-        headers, rows = self.retriever.get_tabular_rows(self.configuration["region_mapping_url"], dict_form=True, filename="region_mapping.csv")
+        headers, rows = self.retriever.get_tabular_rows(
+            self.configuration["region_mapping_url"],
+            dict_form=True,
+            filename="region_mapping.csv",
+        )
         for row in rows:
             countryiso3 = row["iso3"]
-            name= row["name"]
+            name = row["name"]
             region = row["region"]
             url = f"https://dataviz.vam.wfp.org/{region}/{name}/overview"
             self.iso3_to_showcase_url[countryiso3] = url
@@ -149,7 +158,12 @@ class WFPFood:
         json = self.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
-            if self.retriever.save and country["iso3"] not in ("BLR", "COG", "PSE", "SYR"):
+            if self.retriever.save and country["iso3"] not in (
+                "BLR",
+                "COG",
+                "PSE",
+                "SYR",
+            ):
                 continue
             countries.add((country["iso3"], country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
@@ -179,7 +193,7 @@ class WFPFood:
                 try:
                     json = self.retrieve(url, filename, log, parameters)
                 except FileNotFoundError:
-                    json = {"items": list()}
+                    json = {"items": []}
                 data = json["items"]
                 all_data.extend(data)
                 page = page + 1
@@ -399,9 +413,11 @@ class WFPFood:
                 }
             if adm1 and adm2 and category and usdprice:
                 adm1adm2market = adm1, adm2, market_name
-                commodities = markets.get(adm1adm2market, dict())
+                commodities = markets.get(adm1adm2market, {})
                 dict_of_lists_add(
-                    commodities, (commodity, unit, currency), (date_str, usdprice)
+                    commodities,
+                    (commodity, unit, pricetype, currency),
+                    (date_str, usdprice),
                 )
                 markets[adm1adm2market] = commodities
         if not rows:
@@ -419,21 +435,25 @@ class WFPFood:
         for _, adm1adm2market in number_market:
             commodities = markets[adm1adm2market]
             number_commodity = []
-            for commodityunitcurrency, details in commodities.items():
-                number_commodity.append((len(details), commodityunitcurrency))
+            for commodityunitpricetypecurrency, details in commodities.items():
+                number_commodity.append((len(details), commodityunitpricetypecurrency))
             number_commodity = sorted(number_commodity, reverse=True)
             index = 0
             # Pick commodity with most rows that has not already been used for another market
-            commodity, unit, currency = number_commodity[index][1]
+            commodity, unit, pricetype, currency = number_commodity[index][1]
             while commodity in chosen_commodities:
                 index += 1
                 if index == len(number_commodity):
-                    commodity, unit, currency = number_commodity[0][1]
+                    commodity, unit, pricetype, currency = number_commodity[0][1]
                     break
-                commodity, unit, currency = number_commodity[index][1]
+                commodity, unit, pricetype, currency = number_commodity[index][1]
             adm1, adm2, market_name = adm1adm2market
-            code = f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{currency}"
-            for date, usdprice in sorted(commodities[(commodity, unit, currency)]):
+            code = (
+                f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
+            )
+            for date, usdprice in sorted(
+                commodities[(commodity, unit, pricetype, currency)]
+            ):
                 qc_rows.append({"date": date, "code": code, "usdprice": usdprice})
             chosen_commodities.add(commodity)
             marketname = market_name
@@ -486,12 +506,12 @@ class WFPFood:
             headers=list(qc_hxltags.keys()),
         )
         dataset_date = dataset.get_time_period()
-        self.session.execute(delete(DBCountry).where(
-            DBCountry.countryiso3 == countryiso3
-        ))
-        self.session.execute(delete(DBMarket).where(
-            DBMarket.countryiso3 == countryiso3
-        ))
+        self.session.execute(
+            delete(DBCountry).where(DBCountry.countryiso3 == countryiso3)
+        )
+        self.session.execute(
+            delete(DBMarket).where(DBMarket.countryiso3 == countryiso3)
+        )
         dbcountry = DBCountry(
             countryiso3=countryiso3,
             start_date=dataset_date["startdate"],

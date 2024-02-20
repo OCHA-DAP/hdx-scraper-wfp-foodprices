@@ -179,7 +179,7 @@ class TestWFP:
                     }
                     assert qc_indicators == [
                         {
-                            "code": "Brazzaville-Brazzaville-Total-Beans (white)-KG-XAF",
+                            "code": "Brazzaville-Brazzaville-Total-Beans (white)-KG-Retail-XAF",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Beans (white) ($/KG) in Brazzaville/Total",
@@ -189,7 +189,7 @@ class TestWFP:
                         },
                         {
                             "code": "Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice "
-                            "(mixed, low quality)-KG-XAF",
+                            "(mixed, low quality)-KG-Retail-XAF",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Rice (mixed, low quality) ($/KG) in "
@@ -201,7 +201,7 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                         {
-                            "code": "Pool-Kinkala-Kinkala-Oil (vegetable)-L-XAF",
+                            "code": "Pool-Kinkala-Kinkala-Oil (vegetable)-L-Retail-XAF",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Oil (vegetable) ($/L) in Pool/Kinkala",
@@ -269,7 +269,7 @@ class TestWFP:
                     assert showcase is None
                     assert qc_indicators == [
                         {
-                            "code": "Minsk City-Minsk City-Minsk-Bread (high grade flour)-KG-BYR",
+                            "code": "Minsk City-Minsk City-Minsk-Bread (high grade flour)-KG-Retail-BYR",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Bread (high grade flour) ($/KG) in Minsk City/Minsk",
@@ -365,7 +365,7 @@ class TestWFP:
                     }
                     assert qc_indicators == [
                         {
-                            "code": "Gaza Strip-Gaza-Gaza-Oil (olive)-KG-ILS",
+                            "code": "Gaza Strip-Gaza-Gaza-Oil (olive)-KG-Retail-ILS",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Oil (olive) ($/KG) in Gaza Strip/Gaza",
@@ -374,7 +374,7 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                         {
-                            "code": "West Bank-Tulkarm-Tulkarem-Water (drinking)-Cubic meter-ILS",
+                            "code": "West Bank-Tulkarm-Tulkarem-Water (drinking)-Cubic meter-Retail-ILS",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Water (drinking) ($/Cubic meter) in West "
@@ -384,7 +384,7 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                         {
-                            "code": "West Bank-Ramallah and Albireh-Ramallah-Tea-KG-ILS",
+                            "code": "West Bank-Ramallah and Albireh-Ramallah-Tea-KG-Retail-ILS",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Tea ($/KG) in West Bank/Ramallah and "
@@ -488,7 +488,7 @@ class TestWFP:
                     }
                     assert qc_indicators == [
                         {
-                            "code": "Lattakia-Jablah-Jablah-Wheat flour-KG-SYP",
+                            "code": "Lattakia-Jablah-Jablah-Wheat flour-KG-Retail-SYP",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Wheat flour ($/KG) in Lattakia/Jablah",
@@ -497,7 +497,7 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                         {
-                            "code": "Tartous-Tartous-Tartous-Oil-L-SYP",
+                            "code": "Tartous-Tartous-Tartous-Oil-L-Retail-SYP",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Oil ($/L) in Tartous",
@@ -506,7 +506,7 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                         {
-                            "code": "Rural Damascus-Rural Damascus-Qudsiya-Beans (white)-KG-SYP",
+                            "code": "Rural Damascus-Rural Damascus-Qudsiya-Beans (white)-KG-Retail-SYP",
                             "code_col": "#meta+code",
                             "date_col": "#date",
                             "description": "Price of Beans (white) ($/KG) in Rural Damascus/Qudsiya",
