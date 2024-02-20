@@ -149,7 +149,7 @@ class WFPFood:
         json = self.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
-            if self.retriever.save and country["iso3"] not in ("BLR", "COG", "PSE"):
+            if self.retriever.save and country["iso3"] not in ("BLR", "COG", "PSE", "SYR"):
                 continue
             countries.add((country["iso3"], country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]

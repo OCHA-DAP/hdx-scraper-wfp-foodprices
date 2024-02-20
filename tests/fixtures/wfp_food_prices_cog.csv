@@ -5837,3 +5837,205 @@ date,admin1,admin2,market,latitude,longitude,category,commodity,unit,priceflag,p
 2022-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,603.0,1.0023
 2022-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1601.0,2.6611
 2022-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1693.0,2.814
+2022-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,381.0,0.5813
+2022-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,945.0,1.4417
+2022-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1339.0,2.0428
+2022-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1746.0,2.6638
+2022-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,232.0,0.354
+2022-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,680.0,1.0374
+2022-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,440.0,0.6713
+2022-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1766.0,2.6943
+2022-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1430.0,2.1817
+2022-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,416.0,0.6347
+2022-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,914.0,1.3944
+2022-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1459.0,2.2259
+2022-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1190.0,1.8155
+2022-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,387.0,0.5798
+2022-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,1236.0,1.8518
+2022-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1350.0,2.0226
+2022-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1902.0,2.8496
+2022-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,392.0,0.5873
+2022-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,683.0,1.0233
+2022-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,438.0,0.6562
+2022-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1754.0,2.6279
+2022-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1455.0,2.1799
+2022-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,394.0,0.5903
+2022-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,619.0,0.9274
+2022-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1526.0,2.2863
+2022-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,973.0,1.4578
+2022-11-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,400.0,0.6268
+2022-11-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,890.0,1.3946
+2022-11-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1353.0,2.1202
+2022-11-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1964.0,3.0776
+2022-11-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,480.0,0.7522
+2022-11-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,640.0,1.0029
+2022-11-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,438.0,0.6863
+2022-11-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1720.0,2.6953
+2022-11-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1427.0,2.2361
+2022-11-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,431.0,0.6754
+2022-11-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,533.0,0.8352
+2022-11-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1702.0,2.667
+2022-11-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1300.0,2.0371
+2022-12-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,466.0,0.7564
+2022-12-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,923.0,1.4981
+2022-12-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1400.0,2.2724
+2022-12-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1978.0,3.2105
+2022-12-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,502.0,0.8148
+2022-12-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,677.0,1.0988
+2022-12-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,442.0,0.7174
+2022-12-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1705.0,2.7674
+2022-12-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1388.0,2.2529
+2022-12-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,477.0,0.7742
+2022-12-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,562.0,0.9122
+2022-12-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1805.0,2.9297
+2022-12-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1412.0,2.2918
+2023-01-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,448.0,0.7339
+2023-01-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,860.0,1.4089
+2023-01-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,522.0,0.8552
+2023-01-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1500.0,2.4574
+2023-01-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,2012.0,3.2961
+2023-01-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,555.0,0.9092
+2023-01-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,692.0,1.1337
+2023-01-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,455.0,0.7454
+2023-01-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1734.0,2.8407
+2023-01-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1415.0,2.3181
+2023-01-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,474.0,0.7765
+2023-01-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,557.0,0.9125
+2023-01-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,734.0,1.2025
+2023-01-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1550.0,2.5393
+2023-01-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1378.0,2.2575
+2023-02-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,492.0,0.8069
+2023-02-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,703.0,1.1529
+2023-02-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,500.0,0.82
+2023-02-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1200.0,1.968
+2023-02-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1660.0,2.7224
+2023-02-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,571.0,0.9364
+2023-02-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,687.0,1.1267
+2023-02-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,471.0,0.7724
+2023-02-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1500.0,2.46
+2023-02-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1404.0,2.3026
+2023-02-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,500.0,0.82
+2023-02-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,530.0,0.8692
+2023-02-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,618.0,1.0135
+2023-02-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1300.0,2.132
+2023-02-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1362.0,2.2337
+2023-03-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,414.0,0.6769
+2023-03-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,538.0,0.8797
+2023-03-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,400.0,0.654
+2023-03-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,949.0,1.5517
+2023-03-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1952.0,3.1917
+2023-03-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,303.0,0.4954
+2023-03-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,521.0,0.8519
+2023-03-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,425.0,0.6949
+2023-03-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1550.0,2.5344
+2023-03-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1370.0,2.2401
+2023-03-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,537.0,0.8781
+2023-03-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,607.0,0.9925
+2023-03-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,888.0,1.452
+2023-03-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1435.0,2.3464
+2023-03-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1692.0,2.7666
+2023-04-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,407.0,0.678
+2023-04-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,596.0,0.9929
+2023-04-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,436.0,0.7263
+2023-04-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,853.0,1.421
+2023-04-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1909.0,3.1802
+2023-04-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,367.0,0.6114
+2023-04-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,546.0,0.9096
+2023-04-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,396.0,0.6597
+2023-04-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1350.0,2.249
+2023-04-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1403.0,2.3373
+2023-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,470.0,0.783
+2023-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,639.0,1.0645
+2023-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,851.0,1.4177
+2023-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1499.0,2.4972
+2023-04-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1613.0,2.6871
+2023-05-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,431.0,0.7188
+2023-05-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,622.0,1.0373
+2023-05-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,475.0,0.7922
+2023-05-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,950.0,1.5843
+2023-05-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1867.0,3.1136
+2023-05-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,432.0,0.7205
+2023-05-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,560.0,0.9339
+2023-05-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,427.0,0.7121
+2023-05-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1350.0,2.2514
+2023-05-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1412.0,2.3548
+2023-05-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,485.0,0.8088
+2023-05-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,620.0,1.034
+2023-05-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,793.0,1.3225
+2023-05-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1350.0,2.2514
+2023-05-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1607.0,2.68
+2023-06-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,631.0,1.0394
+2023-06-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,503.0,0.8286
+2023-06-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,451.0,0.7429
+2023-06-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,919.0,1.5138
+2023-06-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1801.0,2.9667
+2023-06-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,321.0,0.5288
+2023-06-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,554.0,0.9126
+2023-06-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,384.0,0.6325
+2023-06-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1000.0,1.6472
+2023-06-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,13031.0,21.4653
+2023-06-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,573.0,0.9439
+2023-06-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,601.0,0.99
+2023-06-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,834.0,1.3738
+2023-06-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,23542.0,38.7796
+2023-06-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1414.0,2.3292
+2023-07-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,466.0,0.7773
+2023-07-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,527.0,0.879
+2023-07-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,448.0,0.7473
+2023-07-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,843.0,1.4061
+2023-07-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1633.0,2.7239
+2023-07-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,379.0,0.6322
+2023-07-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,515.0,0.859
+2023-07-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,387.0,0.6455
+2023-07-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,950.0,1.5846
+2023-07-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1438.0,2.3986
+2023-07-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,719.0,1.1993
+2023-07-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,552.0,0.9207
+2023-07-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,931.0,1.5529
+2023-07-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,2234.0,3.7263
+2023-07-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1392.0,2.3219
+2023-08-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,398.0,0.6637
+2023-08-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,532.0,0.8872
+2023-08-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,457.0,0.7621
+2023-08-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,883.0,1.4725
+2023-08-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1950.0,3.2518
+2023-08-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,408.0,0.6804
+2023-08-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,571.0,0.9522
+2023-08-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,368.0,0.6137
+2023-08-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1100.0,1.8344
+2023-08-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1376.0,2.2946
+2023-08-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,492.0,0.8205
+2023-08-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,619.0,1.0322
+2023-08-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,870.0,1.4508
+2023-08-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,2521.0,4.204
+2023-08-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1320.0,2.2012
+2023-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,436.0,0.7136
+2023-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,587.0,0.9607
+2023-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,537.0,0.8789
+2023-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,909.0,1.4878
+2023-09-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1832.0,2.9984
+2023-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,343.0,0.5614
+2023-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,480.0,0.7856
+2023-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,423.0,0.6923
+2023-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1244.0,2.0361
+2023-09-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1389.0,2.2734
+2023-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,493.0,0.8069
+2023-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,575.0,0.9411
+2023-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,948.0,1.5516
+2023-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,2257.0,3.694
+2023-09-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1218.0,1.9935
+2023-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,416.0,0.6726
+2023-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,621.0,1.0041
+2023-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,miscellaneous food,Salt,KG,actual,Retail,XAF,502.0,0.8117
+2023-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,oil and fats,Oil (vegetable),L,actual,Retail,XAF,956.0,1.5457
+2023-10-15,Brazzaville,Brazzaville,Brazzaville,-4.258738,15.260514,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1733.0,2.8021
+2023-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,330.0,0.5336
+2023-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,467.0,0.7551
+2023-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,miscellaneous food,Salt,KG,actual,Retail,XAF,443.0,0.7163
+2023-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,oil and fats,Oil (vegetable),L,actual,Retail,XAF,1167.0,1.8869
+2023-10-15,Likouala,Betou,Betou Centre,3.057103,18.51775,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1427.0,2.3073
+2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,Cassava flour,KG,actual,Retail,XAF,292.0,0.4721
+2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,cereals and tubers,"Rice (mixed, low quality)",KG,actual,Retail,XAF,818.0,1.3226
+2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,miscellaneous food,Salt,KG,actual,Retail,XAF,697.0,1.127
+2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,oil and fats,Oil (vegetable),L,actual,Retail,XAF,2070.0,3.347
+2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,-4.794722080230713,11.846111297607422,pulses and nuts,Beans (white),KG,actual,Retail,XAF,1178.0,1.9047

@@ -35,6 +35,7 @@ class TestWFP:
                 {"name": "cog", "title": "Congo"},
                 {"name": "blr", "title": "Belarus"},
                 {"name": "pse", "title": "State of Palestine"},
+                {"name": "syr", "title": "Syrian Arab Republic"},
                 {"name": "world", "title": "World"},
             ]
         )
@@ -128,7 +129,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "CARITAS, GOV, Gvt, National Institute Of Statistics (INS), WFP",
-                        "dataset_date": "[2011-01-15T00:00:00 TO 2022-04-15T23:59:59]",
+                        "dataset_date": "[2011-01-15T00:00:00 TO 2023-10-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -266,7 +267,17 @@ class TestWFP:
                         },
                     ]
                     assert showcase is None
-                    assert qc_indicators == []
+                    assert qc_indicators == [
+                        {
+                            "code": "Minsk City-Minsk City-Minsk-Bread (high grade flour)-KG-BYR",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Bread (high grade flour) ($/KG) in Minsk City/Minsk",
+                            "title": "Price of Bread (high grade flour) in Minsk",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        }
+                    ]
                     (
                         dataset,
                         showcase,
@@ -304,7 +315,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "FPMA, PCBS, Palestinian Central Bureau of Statistics via FAO: GIEWS, VAM",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2021-12-15T23:59:59]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2024-01-15T23:59:59]",
                     }
                     resources = dataset.get_resources()
                     assert resources == [
@@ -383,6 +394,127 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                     ]
+                    (
+                        dataset,
+                        showcase,
+                        qc_indicators,
+                    ) = wfp.generate_dataset_and_showcase("SYR")
+                    logger.info("Generated SYR")
+                    assert dataset == {
+                        "data_update_frequency": "30",
+                        "dataset_date": "[2011-04-15T00:00:00 TO 2023-12-15T23:59:59]",
+                        "dataset_source": "Aleppo Sub Office, Amman Sub Office, Field Monitors, "
+                        "Gazientap Sub Office, Homs Sub Office, Key Informants, "
+                        "Primary Data WFP CO Food aid monitors, Qamishly Sub "
+                        "Office, Sub Offices, Sub Offices Field Monitors, Syria WFP "
+                        "office, TPM Field Monitors, Tartous Sub Offices, Third "
+                        "Party Monitors, Thrid Party Monitor (TPM), WFP, WFP Syria "
+                        "CO, WFPCO",
+                        "groups": [{"name": "syr"}],
+                        "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
+                        "name": "wfp-food-prices-for-syrian-arab-republic",
+                        "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
+                        "subnational": "1",
+                        "tags": [
+                            {
+                                "name": "hxl",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "markets",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                        ],
+                        "title": "Syrian Arab Republic - Food Prices",
+                    }
+                    resources = dataset.get_resources()
+                    assert resources == [
+                        {
+                            "description": "Food prices data with HXL tags",
+                            "format": "csv",
+                            "name": "Syrian Arab Republic - Food Prices",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Food prices QuickCharts data with HXL tags",
+                            "format": "csv",
+                            "name": "QuickCharts: Syrian Arab Republic - Food Prices",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                    ]
+                    assert showcase == {
+                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                        "name": "wfp-food-prices-for-syrian-arab-republic-showcase",
+                        "notes": "Syrian Arab Republic food prices data from World Food Programme "
+                        "displayed through VAM Economic Explorer",
+                        "tags": [
+                            {
+                                "name": "hxl",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "economics",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "food security",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "indicators",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                            {
+                                "name": "markets",
+                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                            },
+                        ],
+                        "title": "Syrian Arab Republic - Food Prices showcase",
+                        "url": "https://dataviz.vam.wfp.org/the-middle-east-and-northern-africa/syrian-arab-republic/overview",
+                    }
+                    assert qc_indicators == [
+                        {
+                            "code": "Lattakia-Jablah-Jablah-Wheat flour-KG-SYP",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Wheat flour ($/KG) in Lattakia/Jablah",
+                            "title": "Price of Wheat flour in Jablah",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        },
+                        {
+                            "code": "Tartous-Tartous-Tartous-Oil-L-SYP",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Oil ($/L) in Tartous",
+                            "title": "Price of Oil in Tartous",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        },
+                        {
+                            "code": "Rural Damascus-Rural Damascus-Qudsiya-Beans (white)-KG-SYP",
+                            "code_col": "#meta+code",
+                            "date_col": "#date",
+                            "description": "Price of Beans (white) ($/KG) in Rural Damascus/Qudsiya",
+                            "title": "Price of Beans (white) in Qudsiya",
+                            "unit": "US Dollars ($)",
+                            "value_col": "#value+usd",
+                        },
+                    ]
                     dataset, showcase = wfp.generate_global_dataset_and_showcase()
                     logger.info("Generated global")
                     assert dataset == {
@@ -416,7 +548,7 @@ class TestWFP:
                             },
                         ],
                         "dataset_source": "WFP",
-                        "dataset_date": "[2007-01-15T00:00:00 TO 2022-05-15T23:59:59]",
+                        "dataset_date": "[2007-01-15T00:00:00 TO 2024-01-15T23:59:59]",
                     }
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",
@@ -454,6 +586,8 @@ class TestWFP:
                         "wfp_food_prices_blr_qc",
                         "wfp_food_prices_pse",
                         "wfp_food_prices_pse_qc",
+                        "wfp_food_prices_syr",
+                        "wfp_food_prices_syr_qc",
                         "wfp_commodities_global",
                         "wfp_countries_global",
                         "wfp_markets_global",
