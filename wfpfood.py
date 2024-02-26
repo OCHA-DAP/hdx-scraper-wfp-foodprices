@@ -105,6 +105,7 @@ class WFPFood:
             fixed_now=fixed_now,
         )
         self.iso3_to_showcase_url = {}
+        self.iso3_to_source = {}
 
     def read_region_mapping(self):
         headers, rows = self.retriever.get_tabular_rows(
@@ -119,6 +120,18 @@ class WFPFood:
             url = f"https://dataviz.vam.wfp.org/{region}/{name}/overview"
             self.iso3_to_showcase_url[countryiso3] = url
         return self.iso3_to_showcase_url
+
+    def read_source_overrides(self):
+        headers, rows = self.retriever.get_tabular_rows(
+            self.configuration["source_overrides_url"],
+            dict_form=True,
+            filename="source_overrides.csv",
+        )
+        for row in rows:
+            countryiso3 = row["Iso3"]
+            source = row["Source override"]
+            self.iso3_to_source[countryiso3] = source
+        return self.iso3_to_source
 
     def refresh_headers(self):
         self.token_downloader.download(
@@ -474,7 +487,11 @@ class WFPFood:
             )
             if len(qc_indicators) == 3:
                 break
-        dataset["dataset_source"] = ", ".join(sorted(sources.values()))
+        source_override = self.iso3_to_source.get(countryiso3)
+        if source_override is None:
+            dataset["dataset_source"] = ", ".join(sorted(sources.values()))
+        else:
+            dataset["dataset_source"] = source_override
         filename = f"wfp_food_prices_{countryiso3.lower()}.csv"
         resourcedata = {
             "name": dataset["title"],

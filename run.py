@@ -59,6 +59,7 @@ def main(save, use_saved, **ignore):
                         configuration, folder, token_downloader, retriever, session
                     )
                     wfp.read_region_mapping()
+                    wfp.read_source_overrides()
                     countries = wfp.get_countries()
                     logger.info(
                         f"Number of country datasets to upload: {len(countries)}"

@@ -85,6 +85,8 @@ class TestWFP:
                     wfp = WFPFood(configuration, tempdir, None, retriever, session)
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
+                    source_overrides = wfp.read_source_overrides()
+                    assert len(source_overrides) == 24
                     countries = wfp.get_countries()
                     assert len(countries) == 291
                     assert countries[100:102] == [
@@ -403,13 +405,7 @@ class TestWFP:
                     assert dataset == {
                         "data_update_frequency": "30",
                         "dataset_date": "[2011-04-15T00:00:00 TO 2023-12-15T23:59:59]",
-                        "dataset_source": "Aleppo Sub Office, Amman Sub Office, Field Monitors, "
-                        "Gazientap Sub Office, Homs Sub Office, Key Informants, "
-                        "Primary Data WFP CO Food aid monitors, Qamishly Sub "
-                        "Office, Sub Offices, Sub Offices Field Monitors, Syria WFP "
-                        "office, TPM Field Monitors, Tartous Sub Offices, Third "
-                        "Party Monitors, Thrid Party Monitor (TPM), WFP, WFP Syria "
-                        "CO, WFPCO",
+                        "dataset_source": "TestSYRSource",
                         "groups": [{"name": "syr"}],
                         "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
                         "name": "wfp-food-prices-for-syrian-arab-republic",
