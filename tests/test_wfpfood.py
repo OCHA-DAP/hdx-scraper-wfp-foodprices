@@ -21,6 +21,19 @@ from wfpfood import WFPFood
 logger = logging.getLogger(__name__)
 
 
+class MockWFPExchangeRates:
+    def __init__(self, key, secret):
+        pass
+
+    @staticmethod
+    def get_currencies():
+        return []
+
+    @staticmethod
+    def get_historic_rates(currencies):
+        return {}
+
+
 class TestWFP:
     @pytest.fixture(scope="function")
     def configuration(self):
@@ -82,7 +95,7 @@ class TestWFP:
                     "database": dbpath,
                 }
                 with Database(**params) as session:
-                    wfp = WFPFood(configuration, tempdir, None, retriever, session)
+                    wfp = WFPFood(configuration, tempdir, None, retriever, session, wfpfxclass=MockWFPExchangeRates)
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
                     source_overrides = wfp.read_source_overrides()

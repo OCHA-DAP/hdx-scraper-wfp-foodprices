@@ -9,8 +9,10 @@ Creates datasets with flattened tables of WFP food prices.
 import difflib
 import logging
 import re
+from os import getenv, environ
 from os.path import join
 
+from hdx.location.wfp_exchangerates import WFPExchangeRates
 from sqlalchemy import delete, select
 from tenacity import (
     retry,
@@ -79,7 +81,15 @@ qc_hxltags = {"date": "#date", "code": "#meta+code", "usdprice": "#value+usd"}
 
 
 class WFPFood:
-    def __init__(self, configuration, folder, token_downloader, retriever, session):
+    def __init__(
+        self,
+        configuration,
+        folder,
+        token_downloader,
+        retriever,
+        session,
+        wfpfxclass=WFPExchangeRates,
+    ):
         self.configuration = configuration
         self.folder = folder
         self.token_downloader = token_downloader
@@ -98,11 +108,20 @@ class WFPFood:
             fixed_now = parse_date(datestring, include_microseconds=True)
         else:
             fixed_now = None
+        key = environ.get("WFP_KEY")
+        if key:
+            secret = environ.get("WFP_SECRET")
+            wfp_fx = wfpfxclass(key, secret)
+            currencies = wfp_fx.get_currencies()
+            all_historic_rates = wfp_fx.get_historic_rates(currencies)
+        else:
+            all_historic_rates = {}
         Currency.setup(
             retriever=retriever,
             fallback_historic_to_current=True,
             fallback_current_to_static=False,
             fixed_now=fixed_now,
+            historic_rates_cache=all_historic_rates,
         )
         self.iso3_to_showcase_url = {}
         self.iso3_to_source = {}
@@ -171,11 +190,17 @@ class WFPFood:
         json = self.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
-            if self.retriever.save and country["iso3"] not in (
-                "BLR",
-                "COG",
-                "PSE",
-                "SYR",
+            countryiso3 = country["iso3"]
+            if (
+                self.retriever.save
+                and countryiso3
+                not in (
+                    "BLR",
+                    "COG",
+                    "PSE",
+                    "SYR",
+                )
+                and countryiso3 not in getenv("WHERETOSTART")
             ):
                 continue
             countries.add((country["iso3"], country["adm0_name"]))
