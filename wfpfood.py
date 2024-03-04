@@ -12,7 +12,6 @@ import re
 from os import getenv, environ
 from os.path import join
 
-from hdx.location.wfp_exchangerates import WFPExchangeRates
 from sqlalchemy import delete, select
 from tenacity import (
     retry,
@@ -88,7 +87,7 @@ class WFPFood:
         token_downloader,
         retriever,
         session,
-        wfpfxclass=WFPExchangeRates,
+        wfpfxclass=None,
     ):
         self.configuration = configuration
         self.folder = folder
@@ -111,6 +110,9 @@ class WFPFood:
         key = environ.get("WFP_KEY")
         if key:
             secret = environ.get("WFP_SECRET")
+            if not wfpfxclass:
+                from hdx.location.wfp_exchangerates import WFPExchangeRates
+                wfpfxclass = WFPExchangeRates
             wfp_fx = wfpfxclass(key, secret)
             currencies = wfp_fx.get_currencies()
             all_historic_rates = wfp_fx.get_historic_rates(currencies)
