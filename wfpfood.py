@@ -193,18 +193,17 @@ class WFPFood:
         countries = set()
         for country in json["response"]:
             countryiso3 = country["iso3"]
-            if (
-                self.retriever.save
-                and countryiso3
-                not in (
+            if self.retriever.save:
+                if countryiso3 not in (
                     "BLR",
                     "COG",
                     "PSE",
                     "SYR",
-                )
-                and countryiso3 not in getenv("WHERETOSTART")
-            ):
-                continue
+                ):
+                    continue
+                wheretostart = getenv("WHERETOSTART")
+                if wheretostart and countryiso3 not in wheretostart:
+                    continue
             countries.add((country["iso3"], country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 

@@ -88,7 +88,9 @@ def main(save, use_saved, **ignore):
                                 showcase.create_in_hdx()
                                 showcase.add_dataset(dataset)
                             else:
-                                logger.info(f"{country['name']} does not have a showcase!")
+                                logger.info(
+                                    f"{country['name']} does not have a showcase!"
+                                )
                         wfp.update_database()
 
                     for info, country in progress_storing_folder(
