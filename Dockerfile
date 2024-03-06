@@ -6,6 +6,7 @@ COPY . .
 
 RUN apk add --no-cache --upgrade --virtual .build-deps \
     build-base \
+    git \
     python3-dev && \
     pip --no-cache-dir install -r docker-requirements.txt && \
     apk del .build-deps && \
