@@ -1,2 +1,3 @@
-hdx-python-database==1.2.9
+hdx-python-database==1.3.0
+data-bridges-client@git+https://github.com/WFP-VAM/DataBridgesAPI@dev
 tenacity==8.2.3
