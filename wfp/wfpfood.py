@@ -94,7 +94,6 @@ class WFPFood:
         self.access_token = access_token
         self.retriever = retriever
         self.session = session
-        self.bearer_token = None
         self.commodity_to_category = {}
         if retriever.save:
             fixed_now = now_utc()
@@ -167,7 +166,7 @@ class WFPFood:
                 url, filename, log, False, parameters=parameters
             )
         except DownloadError:
-            response = self.retriever.token_downloader.response
+            response = self.retriever.downloader.response
             if response and response.status_code not in (104, 401, 403):
                 raise
             self.access_token.refresh()
