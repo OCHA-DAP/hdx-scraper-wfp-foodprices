@@ -13,7 +13,9 @@ from hdx.facades.keyword_arguments import facade
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
-from wfpfood import WFPFood
+
+from wfp.access_token import AccessToken
+from wfp.wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +39,7 @@ def main(save, use_saved, **ignore):
 
     with Download(
         fail_on_missing_file=False,
-        extra_params_yaml=join(expanduser("~"), ".extraparams.yml"),
+        extra_params_yaml=join(expanduser("~"), ".extraparams.yaml"),
         extra_params_lookup=lookup,
     ) as token_downloader:
         with Download(
@@ -55,9 +57,13 @@ def main(save, use_saved, **ignore):
                 }
                 with Database(**params) as session:
                     configuration = Configuration.read()
-                    wfp = WFPFood(
-                        configuration, folder, token_downloader, retriever, session
+                    access_token = AccessToken(
+                        configuration, token_downloader, downloader
                     )
+                    wfp = WFPFood(
+                        configuration, folder, access_token, retriever, session
+                    )
+                    access_token.refresh()
                     wfp.read_region_mapping()
                     wfp.read_source_overrides()
                     countries = wfp.get_countries()
@@ -116,9 +122,9 @@ if __name__ == "__main__":
     args = parse_args()
     facade(
         main,
-        user_agent_config_yaml=join(expanduser("~"), ".useragents.yml"),
+        user_agent_config_yaml=join(expanduser("~"), ".useragents.yaml"),
         user_agent_lookup=lookup,
-        project_config_yaml=join("config", "project_configuration.yml"),
+        project_config_yaml=join("config", "project_configuration.yaml"),
         save=args.save,
         use_saved=args.use_saved,
     )

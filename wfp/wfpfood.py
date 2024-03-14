@@ -84,17 +84,17 @@ class WFPFood:
         self,
         configuration,
         folder,
-        token_downloader,
+        access_token,
         retriever,
         session,
         wfpfxclass=None,
     ):
         self.configuration = configuration
         self.folder = folder
-        self.token_downloader = token_downloader
+        self.access_token = access_token
         self.retriever = retriever
         self.session = session
-        self.headers = None
+        self.bearer_token = None
         self.commodity_to_category = {}
         if retriever.save:
             fixed_now = now_utc()
@@ -112,6 +112,7 @@ class WFPFood:
             secret = environ.get("WFP_SECRET")
             if not wfpfxclass:
                 from hdx.location.wfp_exchangerates import WFPExchangeRates
+
                 wfpfxclass = WFPExchangeRates
             wfp_fx = wfpfxclass(key, secret)
             currencies = wfp_fx.get_currencies()
@@ -154,18 +155,6 @@ class WFPFood:
             self.iso3_to_source[countryiso3] = source
         return self.iso3_to_source
 
-    def refresh_headers(self):
-        self.token_downloader.download(
-            self.configuration["token_url"],
-            post=True,
-            parameters={"grant_type": "client_credentials"},
-        )
-        access_token = self.token_downloader.get_json()["access_token"]
-        self.headers = {
-            "Accept": "application/json",
-            "Authorization": f"Bearer {access_token}",
-        }
-
     @retry(
         retry=retry_if_exception_type(DownloadError),
         stop=stop_after_attempt(5),
@@ -175,15 +164,15 @@ class WFPFood:
     def retrieve(self, url, filename, log, parameters=None):
         try:
             results = self.retriever.download_json(
-                url, filename, log, False, parameters=parameters, headers=self.headers
+                url, filename, log, False, parameters=parameters
             )
         except DownloadError:
-            response = self.retriever.downloader.response
+            response = self.retriever.token_downloader.response
             if response and response.status_code not in (104, 401, 403):
                 raise
-            self.refresh_headers()
+            self.access_token.refresh()
             results = self.retriever.download_json(
-                url, filename, log, False, parameters=parameters, headers=self.headers
+                url, filename, log, False, parameters=parameters
             )
         return results
 

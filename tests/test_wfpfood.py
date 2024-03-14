@@ -16,7 +16,7 @@ from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
-from wfpfood import WFPFood
+from wfp.wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
 
@@ -41,7 +41,7 @@ class TestWFP:
             hdx_read_only=True,
             hdx_site="prod",
             user_agent="test",
-            project_config_yaml=join("tests", "config", "project_configuration.yml"),
+            project_config_yaml=join("tests", "config", "project_configuration.yaml"),
         )
         Locations.set_validlocations(
             [
@@ -95,7 +95,14 @@ class TestWFP:
                     "database": dbpath,
                 }
                 with Database(**params) as session:
-                    wfp = WFPFood(configuration, tempdir, None, retriever, session, wfpfxclass=MockWFPExchangeRates)
+                    wfp = WFPFood(
+                        configuration,
+                        tempdir,
+                        None,
+                        retriever,
+                        session,
+                        wfpfxclass=MockWFPExchangeRates,
+                    )
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
                     source_overrides = wfp.read_source_overrides()

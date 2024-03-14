@@ -1,6 +1,6 @@
 # Collector specific configuration
 countries_url: "http://xxx/"
 base_url: "http://yyy/"
-currency_mappings: {}
+currency_mappings: { }
 region_mapping_url: "http://zzz"
 source_overrides_url: "http://sss"
