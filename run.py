@@ -99,7 +99,7 @@ def main(save, use_saved, **ignore):
                                 )
                         wfp.update_database()
 
-                    for info, country in progress_storing_folder(
+                    for _, country in progress_storing_folder(
                         info, countries, "iso3"
                     ):
                         process_country(country)
