@@ -1,3 +1,5 @@
+hdx-python-api==6.3.2
+hdx-python-database==1.3.3
 python-slugify==8.0.4
-hdx-python-api==6.2.4
--r docker-requirements.txt
+data-bridges-client@git+https://github.com/WFP-VAM/DataBridgesAPI@v2.0.0
+tenacity==9.0.0

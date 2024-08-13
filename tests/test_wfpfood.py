@@ -94,7 +94,8 @@ class TestWFP:
                     "dialect": "sqlite",
                     "database": dbpath,
                 }
-                with Database(**params) as session:
+                with Database(**params) as database:
+                    session = database.get_session()
                     wfp = WFPFood(
                         configuration,
                         tempdir,

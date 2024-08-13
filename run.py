@@ -55,11 +55,12 @@ def main(save, use_saved, **ignore):
                     "dialect": "sqlite",
                     "database": f"/{folder}/foodprices.sqlite",
                 }
-                with Database(**params) as session:
+                with Database(**params) as database:
                     configuration = Configuration.read()
                     access_token = AccessToken(
                         configuration, token_downloader, downloader
                     )
+                    session = database.get_session()
                     wfp = WFPFood(
                         configuration, folder, access_token, retriever, session
                     )
