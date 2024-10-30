@@ -10,11 +10,11 @@ from os.path import expanduser, join
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
+from hdx.location.wfp_api import WFPAPI
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import progress_storing_folder, wheretostart_tempdir_batch
 from hdx.utilities.retriever import Retrieve
 
-from wfp.access_token import AccessToken
 from wfp.wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
@@ -57,14 +57,12 @@ def main(save, use_saved, **ignore):
                 }
                 with Database(**params) as database:
                     configuration = Configuration.read()
-                    access_token = AccessToken(
-                        configuration, token_downloader, downloader
-                    )
+                    wfp_api = WFPAPI(token_downloader, retriever)
+                    wfp_api.update_retry_params(attempts=5, wait=3600)
                     session = database.get_session()
                     wfp = WFPFood(
-                        configuration, folder, access_token, retriever, session
+                        configuration, folder, wfp_api, retriever, session
                     )
-                    access_token.refresh()
                     wfp.read_region_mapping()
                     wfp.read_source_overrides()
                     countries = wfp.get_countries()

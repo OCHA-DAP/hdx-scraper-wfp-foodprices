@@ -12,6 +12,7 @@ from hdx.api.configuration import Configuration
 from hdx.api.locations import Locations
 from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
+from hdx.location.wfp_api import WFPAPI
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
@@ -19,19 +20,6 @@ from hdx.utilities.retriever import Retrieve
 from wfp.wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
-
-
-class MockWFPExchangeRates:
-    def __init__(self, key, secret):
-        pass
-
-    @staticmethod
-    def get_currencies():
-        return []
-
-    @staticmethod
-    def get_historic_rates(currencies):
-        return {}
 
 
 class TestWFP:
@@ -96,13 +84,13 @@ class TestWFP:
                 }
                 with Database(**params) as database:
                     session = database.get_session()
+                    wfp_api = WFPAPI(downloader, retriever)
                     wfp = WFPFood(
                         configuration,
                         tempdir,
-                        None,
+                        wfp_api,
                         retriever,
                         session,
-                        wfpfxclass=MockWFPExchangeRates,
                     )
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
