@@ -1,5 +1,5 @@
-hdx-python-api==6.3.2
-hdx-python-database==1.3.3
+hdx-python-api==6.3.4
+hdx-python-country==3.8.3
+hdx-python-database==1.3.4
 python-slugify==8.0.4
-data-bridges-client@git+https://github.com/WFP-VAM/DataBridgesAPI@v2.0.0
 tenacity==9.0.0

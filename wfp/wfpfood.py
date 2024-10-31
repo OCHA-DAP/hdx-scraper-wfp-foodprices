@@ -9,17 +9,11 @@ Creates datasets with flattened tables of WFP food prices.
 import difflib
 import logging
 import re
-from os import getenv, environ
+from os import getenv
 from os.path import join
 
+from hdx.location.wfp_exchangerates import WFPExchangeRates
 from sqlalchemy import delete, select
-from tenacity import (
-    retry,
-    stop_after_attempt,
-    wait_fixed,
-    after_log,
-    retry_if_exception_type,
-)
 
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
@@ -31,7 +25,6 @@ from hdx.location.country import Country
 from hdx.location.currency import Currency, CurrencyError
 from hdx.utilities.dateparse import default_date, default_enddate, now_utc, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
-from hdx.utilities.downloader import DownloadError
 from hdx.utilities.loader import load_text
 from hdx.utilities.saver import save_text
 from slugify import slugify
@@ -84,14 +77,13 @@ class WFPFood:
         self,
         configuration,
         folder,
-        access_token,
+        wfp_api,
         retriever,
         session,
-        wfpfxclass=None,
     ):
         self.configuration = configuration
         self.folder = folder
-        self.access_token = access_token
+        self.wfp_api = wfp_api
         self.retriever = retriever
         self.session = session
         self.commodity_to_category = {}
@@ -106,18 +98,9 @@ class WFPFood:
             fixed_now = parse_date(datestring, include_microseconds=True)
         else:
             fixed_now = None
-        key = environ.get("WFP_KEY")
-        if key:
-            secret = environ.get("WFP_SECRET")
-            if not wfpfxclass:
-                from hdx.location.wfp_exchangerates import WFPExchangeRates
-
-                wfpfxclass = WFPExchangeRates
-            wfp_fx = wfpfxclass(key, secret)
-            currencies = wfp_fx.get_currencies()
-            all_historic_rates = wfp_fx.get_historic_rates(currencies)
-        else:
-            all_historic_rates = {}
+        wfp_fx = WFPExchangeRates(wfp_api)
+        currencies = wfp_fx.get_currencies()
+        all_historic_rates = wfp_fx.get_historic_rates(currencies)
         Currency.setup(
             retriever=retriever,
             fallback_historic_to_current=True,
@@ -154,30 +137,9 @@ class WFPFood:
             self.iso3_to_source[countryiso3] = source
         return self.iso3_to_source
 
-    @retry(
-        retry=retry_if_exception_type(DownloadError),
-        stop=stop_after_attempt(5),
-        wait=wait_fixed(3600),
-        after=after_log(logger, logging.INFO),
-    )
-    def retrieve(self, url, filename, log, parameters=None):
-        try:
-            results = self.retriever.download_json(
-                url, filename, log, False, parameters=parameters
-            )
-        except DownloadError:
-            response = self.retriever.downloader.response
-            if response and response.status_code not in (104, 401, 403):
-                raise
-            self.access_token.refresh()
-            results = self.retriever.download_json(
-                url, filename, log, False, parameters=parameters
-            )
-        return results
-
     def get_countries(self):
         url = self.configuration["countries_url"]
-        json = self.retrieve(url, "countries.json", "countries")
+        json = self.wfp_api.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
             countryiso3 = country["iso3"]
@@ -195,43 +157,12 @@ class WFPFood:
             countries.add((country["iso3"], country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
-    def get_list(self, endpoint, countryiso3=None, startdate=None):
-        all_data = []
-        url = f'{self.configuration["base_url"]}{endpoint}'
-        base_filename = url.split("/")[-2]
-        if countryiso3 == "PSE":  # hack as PSE is treated by WFP as 2 areas
-            countryiso3s = ["PSW", "PSG"]
-        else:
-            countryiso3s = [countryiso3]
-        for countryiso3 in countryiso3s:
-            page = 1
-            data = None
-            while data is None or len(data) > 0:
-                parameters = {"page": page}
-                if countryiso3 is None:
-                    filename = f"{base_filename}_{page}.json"
-                    log = f"{base_filename} page {page}"
-                else:
-                    filename = f"{base_filename}_{countryiso3}_{page}.json"
-                    log = f"{base_filename} for {countryiso3} page {page}"
-                    parameters["CountryCode"] = countryiso3
-                if startdate:
-                    parameters["startDate"] = startdate
-                try:
-                    json = self.retrieve(url, filename, log, parameters)
-                except FileNotFoundError:
-                    json = {"items": []}
-                data = json["items"]
-                all_data.extend(data)
-                page = page + 1
-        return all_data
-
     def build_mappings(self):
         self.session.execute(delete(DBCommodity))
         categoryid_to_name = {}
-        for category in self.get_list("Commodities/Categories/List"):
+        for category in self.wfp_api.get_items("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]
-        for commodity in self.get_list("Commodities/List"):
+        for commodity in self.wfp_api.get_items("Commodities/List"):
             commodity_id = commodity["id"]
             commodity_name = commodity["name"]
             category = categoryid_to_name[commodity["categoryId"]]
@@ -314,13 +245,13 @@ class WFPFood:
         dataset, showcase = self.get_dataset_and_showcase(countryiso3)
         if not dataset:
             return None, None, None
-        prices_data = self.get_list("MarketPrices/PriceMonthly", countryiso3)
+        prices_data = self.wfp_api.get_items("MarketPrices/PriceMonthly", countryiso3)
         if not prices_data:
             logger.info(f"{countryiso3} has no prices data!")
             return None, None, None
         market_to_adm = {}
         dbmarkets = []
-        for market in self.get_list("Markets/List", countryiso3):
+        for market in self.wfp_api.get_items("Markets/List", countryiso3):
             market_id = market["marketId"]
             market_name = market["marketName"]
             admin1 = market["admin1Name"]
