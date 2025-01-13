@@ -338,7 +338,7 @@ class WFPFood:
             try:
                 usdprice = Currency.get_historic_value_in_usd(price, currency, date)
                 usdprice = round(usdprice, 4)
-            except CurrencyError:
+            except (CurrencyError, ZeroDivisionError):
                 usdprice = None
             price = round(price, 2)
             key = (
