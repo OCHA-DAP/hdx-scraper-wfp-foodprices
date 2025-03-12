@@ -1,5 +1,6 @@
+from sqlalchemy.orm import Mapped, mapped_column
+
 from hdx.database import NoTZBase
-from sqlalchemy.orm import declared_attr, Mapped, mapped_column
 
 
 class DBCommodity(NoTZBase):
@@ -8,6 +9,8 @@ class DBCommodity(NoTZBase):
     commodity: Mapped[str] = mapped_column(nullable=False)
 
     def __repr__(self):
-        output = f"<Commodity(id={self.commodity_id}, category={self.category}, "
+        output = (
+            f"<Commodity(id={self.commodity_id}, category={self.category}, "
+        )
         output += f"name={self.commodity})>"
         return output

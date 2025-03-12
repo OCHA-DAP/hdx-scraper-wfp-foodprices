@@ -3,21 +3,23 @@
 Unit tests for wfpfood scraper.
 
 """
+
 import logging
 from os import remove
 from os.path import join
 
 import pytest
+
 from hdx.api.configuration import Configuration
 from hdx.api.locations import Locations
 from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
 from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices.wfpfood import WFPFood
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
-from wfp.wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +31,9 @@ class TestWFP:
             hdx_read_only=True,
             hdx_site="prod",
             user_agent="test",
-            project_config_yaml=join("tests", "config", "project_configuration.yaml"),
+            project_config_yaml=join(
+                "tests", "config", "project_configuration.yaml"
+            ),
         )
         Locations.set_validlocations(
             [
@@ -66,12 +70,19 @@ class TestWFP:
 
     def test_run(self, configuration, fixtures_dir, input_dir):
         with temp_dir(
-            "TestWFPFoodPrices", delete_on_success=True, delete_on_failure=False
+            "TestWFPFoodPrices",
+            delete_on_success=True,
+            delete_on_failure=False,
         ) as tempdir:
             logger.info("Starting")
             with Download(user_agent="test") as downloader:
                 retriever = Retrieve(
-                    downloader, tempdir, input_dir, tempdir, save=False, use_saved=True
+                    downloader,
+                    tempdir,
+                    input_dir,
+                    tempdir,
+                    save=False,
+                    use_saved=True,
                 )
                 dbpath = f"/{tempdir}/foodprices.sqlite"
                 try:
@@ -520,7 +531,9 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                     ]
-                    dataset, showcase = wfp.generate_global_dataset_and_showcase()
+                    dataset, showcase = (
+                        wfp.generate_global_dataset_and_showcase()
+                    )
                     logger.info("Generated global")
                     assert dataset == {
                         "name": "global-wfp-food-prices",
@@ -600,5 +613,7 @@ class TestWFP:
                         csv_filename = f"{filename}.csv"
                         expected_file = join(fixtures_dir, csv_filename)
                         actual_file = join(tempdir, csv_filename)
-                        logger.info(f"Comparing {actual_file} with {expected_file}")
+                        logger.info(
+                            f"Comparing {actual_file} with {expected_file}"
+                        )
                         assert_files_same(expected_file, actual_file)

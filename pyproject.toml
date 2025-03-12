@@ -1,0 +1,104 @@
+#########################
+# Project Configuration #
+#########################
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hdx-scraper-wfp-foodprices"
+description = "WFP Food Prices Scraper"
+authors = [{ name = "Michael Rans", email = "rans@email.com" }]
+license = { text = "MIT" }
+keywords = ["HDX", "WFP Food Prices"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+]
+requires-python = ">=3.8"
+
+dependencies = [
+    "hdx-python-api>= 6.3.8",
+    "hdx-python-country>= 3.8.8",
+    "hdx-python-utilities>= 3.8.4",
+    "hdx-python-database>= 1.3.5",
+]
+dynamic = ["version"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-check", "pytest-cov"]
+dev = ["pre-commit"]
+
+[project.scripts]
+run = "hdx.scraper.wfp.foodprices.__main__:main"
+
+#########
+# Hatch #
+#########
+
+# Build
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hdx"]
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/hdx/scraper/wfp/foodprices/_version.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+# Versioning
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
+version_scheme = "python-simplified-semver"
+
+# Tests
+
+[tool.hatch.envs.hatch-test]
+features = ["test"]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12"]
+
+[tool.hatch.envs.hatch-test.scripts]
+run = """
+       pytest -c .config/pytest.ini --rootdir=. --junitxml=test-results.xml \
+       --cov --cov-config=.config/coveragerc --no-cov-on-fail \
+       --cov-report=lcov --cov-report=term-missing
+       """
+
+[tool.hatch.envs.hatch-static-analysis]
+dependencies = ["ruff==0.9.10"]
+
+[tool.hatch.envs.hatch-static-analysis.scripts]
+format-check = ["ruff format --config .config/ruff.toml --check --diff {args:.}",]
+format-fix = ["ruff format --config .config/ruff.toml {args:.}",]
+lint-check = ["ruff check --config .config/ruff.toml {args:.}",]
+lint-fix = ["ruff check --config .config/ruff.toml --fix {args:.}",]

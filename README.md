@@ -1,9 +1,10 @@
 ### Pipeline for WFP Food Prices's Datasets
-[![Run tests](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions/workflows/run-python-tests.yaml/badge.svg)](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions/workflows/run-python-tests.yaml)
+[![Build Status](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions/workflows/run-python-tests.yaml/badge.svg)](https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/actions/workflows/run-python-tests.yaml)
 [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdx-scraper-wfp-foodprices/badge.svg?branch=main&ts=1)](https://coveralls.io/github/OCHA-DAP/hdx-scraper-wfp-foodprices?branch=main)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 
-This pipeline connects to the [WFP](http://dataviz.vam.wfp.org/) website via provided [API](https://api.wfp.org/)  and extracts food prices data country by country creating a dataset per country in HDX. It makes in the order of 2000 reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It saves 2 temporary files per country each less than 2Mb and these are what are uploaded to HDX. In addition a 100Mb file is generated and uploaded to HDX. These files are then deleted. It runs every month. 
+This pipeline connects to the [WFP](http://dataviz.vam.wfp.org/) website via provided [API](https://api.wfp.org/)  and extracts food prices data country by country creating a dataset per country in HDX. It makes in the order of 2000 reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It saves 2 temporary files per country each less than 2Mb and these are what are uploaded to HDX. In addition a 100Mb file is generated and uploaded to HDX. These files are then deleted. It runs every month.
 
 ### Usage
 
@@ -14,9 +15,9 @@ For the script to run, you will need to have a file called .hdx_configuration.ya
     hdx_key: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
     hdx_read_only: false
     hdx_site: prod
-    
+
  You will also need to supply the universal .useragents.yaml file in your home directory as specified in the parameter *user_agent_config_yaml* passed to facade in run.py. The collector reads the key **hdx-scraper-wfp-foodprices** as specified in the parameter *user_agent_lookup*.
- 
+
  Alternatively, you can set up environment variables: USER_AGENT, HDX_KEY, HDX_SITE, TEMP_DIR, LOG_FILE_ONLY
 ### Usage
 python run.py

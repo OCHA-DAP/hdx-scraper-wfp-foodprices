@@ -6,28 +6,35 @@ WFP food prices:
 Creates datasets with flattened tables of WFP food prices.
 
 """
+
 import difflib
 import logging
 import re
 from os import getenv
 from os.path import join
 
-from hdx.location.wfp_exchangerates import WFPExchangeRates
+from slugify import slugify
 from sqlalchemy import delete, select
 
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
 from database.dbmarket import DBMarket
+
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from hdx.location.currency import Currency, CurrencyError
-from hdx.utilities.dateparse import default_date, default_enddate, now_utc, parse_date
+from hdx.location.wfp_exchangerates import WFPExchangeRates
+from hdx.utilities.dateparse import (
+    default_date,
+    default_enddate,
+    now_utc,
+    parse_date,
+)
 from hdx.utilities.dictandlist import dict_of_lists_add
 from hdx.utilities.loader import load_text
 from hdx.utilities.saver import save_text
-from slugify import slugify
 
 logger = logging.getLogger(__name__)
 
@@ -170,7 +177,9 @@ class WFPFood:
                 commodity["categoryId"]
             ]
             dbcommodity = DBCommodity(
-                commodity_id=commodity_id, category=category, commodity=commodity_name
+                commodity_id=commodity_id,
+                category=category,
+                commodity=commodity_name,
             )
             self.session.add(dbcommodity)
         self.session.commit()
@@ -245,7 +254,9 @@ class WFPFood:
         dataset, showcase = self.get_dataset_and_showcase(countryiso3)
         if not dataset:
             return None, None, None
-        prices_data = self.wfp_api.get_items("MarketPrices/PriceMonthly", countryiso3)
+        prices_data = self.wfp_api.get_items(
+            "MarketPrices/PriceMonthly", countryiso3
+        )
         if not prices_data:
             logger.info(f"{countryiso3} has no prices data!")
             return None, None, None
@@ -276,7 +287,9 @@ class WFPFood:
         markets = {}
         for price_data in prices_data:
             priceflag = price_data["commodityPriceFlag"]
-            if not all(x in ("actual", "aggregate") for x in priceflag.split(",")):
+            if not all(
+                x in ("actual", "aggregate") for x in priceflag.split(",")
+            ):
                 continue
             commodity_id = price_data["commodityID"]
             category = self.commodity_to_category[commodity_id]
@@ -334,9 +347,13 @@ class WFPFood:
             pricetype = price_data["priceTypeName"]
             price = price_data["commodityPrice"]
             currency = price_data["currencyName"]
-            currency = self.configuration["currency_mappings"].get(currency, currency)
+            currency = self.configuration["currency_mappings"].get(
+                currency, currency
+            )
             try:
-                usdprice = Currency.get_historic_value_in_usd(price, currency, date)
+                usdprice = Currency.get_historic_value_in_usd(
+                    price, currency, date
+                )
                 usdprice = round(usdprice, 4)
             except (CurrencyError, ZeroDivisionError):
                 usdprice = None
@@ -381,7 +398,9 @@ class WFPFood:
         if not rows:
             logger.info(f"{countryiso3} has no prices!")
             return None, None, None
-        logger.info(f"{len(rows)} unique prices rows of price type actual or aggregate")
+        logger.info(
+            f"{len(rows)} unique prices rows of price type actual or aggregate"
+        )
         number_market = []
         for key, commodities in markets.items():
             number_market.append((len(commodities), key))
@@ -394,7 +413,9 @@ class WFPFood:
             commodities = markets[adm1adm2market]
             number_commodity = []
             for commodityunitpricetypecurrency, details in commodities.items():
-                number_commodity.append((len(details), commodityunitpricetypecurrency))
+                number_commodity.append(
+                    (len(details), commodityunitpricetypecurrency)
+                )
             number_commodity = sorted(number_commodity, reverse=True)
             index = 0
             # Pick commodity with most rows that has not already been used for another market
@@ -402,17 +423,21 @@ class WFPFood:
             while commodity in chosen_commodities:
                 index += 1
                 if index == len(number_commodity):
-                    commodity, unit, pricetype, currency = number_commodity[0][1]
+                    commodity, unit, pricetype, currency = number_commodity[0][
+                        1
+                    ]
                     break
-                commodity, unit, pricetype, currency = number_commodity[index][1]
+                commodity, unit, pricetype, currency = number_commodity[index][
+                    1
+                ]
             adm1, adm2, market_name = adm1adm2market
-            code = (
-                f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
-            )
+            code = f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
             for date, usdprice in sorted(
                 commodities[(commodity, unit, pricetype, currency)]
             ):
-                qc_rows.append({"date": date, "code": code, "usdprice": usdprice})
+                qc_rows.append(
+                    {"date": date, "code": code, "usdprice": usdprice}
+                )
             chosen_commodities.add(commodity)
             marketname = market_name
             if adm2 != market_name:
@@ -444,7 +469,9 @@ class WFPFood:
             "format": "csv",
         }
         rows = [rows[key] for key in sorted(rows)]
-        country_hxltags = {header: hxltags[header] for header in country_headers}
+        country_hxltags = {
+            header: hxltags[header] for header in country_headers
+        }
         dataset.generate_resource_from_iterator(
             country_headers,
             rows,
@@ -456,7 +483,7 @@ class WFPFood:
         )
         filename = f"wfp_food_prices_{countryiso3.lower()}_qc.csv"
         resourcedata = {
-            "name": f'QuickCharts: {dataset["title"]}',
+            "name": f"QuickCharts: {dataset['title']}",
             "description": "Food prices QuickCharts data with HXL tags",
             "format": "csv",
         }
