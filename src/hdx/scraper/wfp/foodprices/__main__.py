@@ -11,7 +11,9 @@ from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.wfpfood import WFPFood
+from hdx.scraper.wfp.foodprices.currency_setup import setup_currency
+from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import (
     progress_storing_folder,
@@ -60,16 +62,27 @@ def main(
                     wfp_api = WFPAPI(token_downloader, retriever)
                     wfp_api.update_retry_params(attempts=5, wait=3600)
                     session = database.get_session()
-                    wfp = WFPFood(
-                        configuration, folder, wfp_api, retriever, session
+                    wfp = WFPMappings(
+                        configuration, wfp_api, retriever, session
                     )
-                    wfp.read_region_mapping()
-                    wfp.read_source_overrides()
+                    iso3_to_showcase_url = wfp.read_region_mapping()
+                    iso3_to_source = wfp.read_source_overrides()
                     countries = wfp.get_countries()
                     logger.info(
                         f"Number of country datasets to upload: {len(countries)}"
                     )
-                    wfp.build_mappings()
+                    commodity_to_category = (
+                        wfp.build_commodity_category_mapping()
+                    )
+                    setup_currency(retriever, wfp_api)
+                    dataset_generator = DatasetGenerator(
+                        configuration,
+                        folder,
+                        session,
+                        iso3_to_showcase_url,
+                        iso3_to_source,
+                        commodity_to_category,
+                    )
 
                     def process_country(country):
                         countryiso3 = country["iso3"]
@@ -77,7 +90,9 @@ def main(
                             dataset,
                             showcase,
                             qc_indicators,
-                        ) = wfp.generate_dataset_and_showcase(countryiso3)
+                        ) = dataset_generator.generate_dataset_and_showcase(
+                            countryiso3, wfp_api
+                        )
                         snippet = f"Food Prices data for {country['name']}"
                         if dataset:
                             dataset.update_from_yaml()
@@ -98,14 +113,14 @@ def main(
                                 logger.info(
                                     f"{country['name']} does not have a showcase!"
                                 )
-                        wfp.update_database()
+                        session.commit()
 
                     for _, country in progress_storing_folder(
                         info, countries, "iso3"
                     ):
                         process_country(country)
                     dataset, showcase = (
-                        wfp.generate_global_dataset_and_showcase()
+                        dataset_generator.generate_global_dataset_and_showcase()
                     )
                     snippet = "Countries, Commodities and Markets data"
                     snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "

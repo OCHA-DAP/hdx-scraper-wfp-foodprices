@@ -1,205 +1,48 @@
-#!/usr/bin/python
-"""
-WFP food prices:
-------------
-
-Creates datasets with flattened tables of WFP food prices.
-
-"""
-
-import difflib
 import logging
-import re
-from os import getenv
-from os.path import join
+from typing import Dict, List, Optional, Tuple
 
 from slugify import slugify
 from sqlalchemy import delete, select
+from sqlalchemy.orm import Session
 
 from database.dbcommodity import DBCommodity
 from database.dbcountry import DBCountry
 from database.dbmarket import DBMarket
 
+from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from hdx.location.currency import Currency, CurrencyError
-from hdx.location.wfp_exchangerates import WFPExchangeRates
-from hdx.utilities.dateparse import (
-    default_date,
-    default_enddate,
-    now_utc,
-    parse_date,
-)
+from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices.source_processing import process_source
+from hdx.utilities.dateparse import default_date, default_enddate, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
-from hdx.utilities.loader import load_text
-from hdx.utilities.saver import save_text
 
 logger = logging.getLogger(__name__)
 
-hxltags = {
-    "date": "#date",
-    "countryiso3": "#country+code",
-    "admin1": "#adm1+name",
-    "admin2": "#adm2+name",
-    "market_id": "#loc+market+code",
-    "market": "#loc+market+name",
-    "latitude": "#geo+lat",
-    "longitude": "#geo+lon",
-    "category": "#item+type",
-    "commodity_id": "#item+code",
-    "commodity": "#item+name",
-    "unit": "#item+unit",
-    "priceflag": "#item+price+flag",
-    "pricetype": "#item+price+type",
-    "currency": "#currency",
-    "price": "#value",
-    "usdprice": "#value+usd",
-    "url": "#country+url",
-    "start_date": "#date+start",
-    "end_date": "#date+end",
-}
-country_headers = [
-    "date",
-    "admin1",
-    "admin2",
-    "market",
-    "latitude",
-    "longitude",
-    "category",
-    "commodity",
-    "unit",
-    "priceflag",
-    "pricetype",
-    "currency",
-    "price",
-    "usdprice",
-]
-qc_hxltags = {"date": "#date", "code": "#meta+code", "usdprice": "#value+usd"}
 
-
-class WFPFood:
+class DatasetGenerator:
     def __init__(
         self,
-        configuration,
-        folder,
-        wfp_api,
-        retriever,
-        session,
+        configuration: Configuration,
+        folder: str,
+        session: Session,
+        iso3_to_showcase_url: Dict[str, str],
+        iso3_to_source: Dict[str, str],
+        commodity_to_category: Dict[str, str],
     ):
         self.configuration = configuration
         self.folder = folder
-        self.wfp_api = wfp_api
-        self.retriever = retriever
         self.session = session
-        self.commodity_to_category = {}
-        if retriever.save:
-            fixed_now = now_utc()
-            datestring = fixed_now.isoformat()
-            path = join(retriever.saved_dir, "now.txt")
-            save_text(datestring, path)
-        elif retriever.use_saved:
-            path = join(retriever.saved_dir, "now.txt")
-            datestring = load_text(path)
-            fixed_now = parse_date(datestring, include_microseconds=True)
-        else:
-            fixed_now = None
-        wfp_fx = WFPExchangeRates(wfp_api)
-        currencies = wfp_fx.get_currencies()
-        all_historic_rates = wfp_fx.get_historic_rates(currencies)
-        Currency.setup(
-            retriever=retriever,
-            fallback_historic_to_current=True,
-            fallback_current_to_static=False,
-            fixed_now=fixed_now,
-            historic_rates_cache=all_historic_rates,
-        )
-        self.iso3_to_showcase_url = {}
-        self.iso3_to_source = {}
+        self.iso3_to_showcase_url = iso3_to_showcase_url
+        self.iso3_to_source = iso3_to_source
+        self.commodity_to_category = commodity_to_category
 
-    def read_region_mapping(self):
-        headers, rows = self.retriever.get_tabular_rows(
-            self.configuration["region_mapping_url"],
-            dict_form=True,
-            filename="region_mapping.csv",
-        )
-        for row in rows:
-            countryiso3 = row["iso3"]
-            name = row["name"]
-            region = row["region"]
-            url = f"https://dataviz.vam.wfp.org/{region}/{name}/overview"
-            self.iso3_to_showcase_url[countryiso3] = url
-        return self.iso3_to_showcase_url
-
-    def read_source_overrides(self):
-        headers, rows = self.retriever.get_tabular_rows(
-            self.configuration["source_overrides_url"],
-            dict_form=True,
-            filename="source_overrides.csv",
-        )
-        for row in rows:
-            countryiso3 = row["Iso3"]
-            source = row["Source override"]
-            self.iso3_to_source[countryiso3] = source
-        return self.iso3_to_source
-
-    def get_countries(self):
-        url = self.configuration["countries_url"]
-        json = self.wfp_api.retrieve(url, "countries.json", "countries")
-        countries = set()
-        for country in json["response"]:
-            countryiso3 = country["iso3"]
-            if self.retriever.save:
-                if countryiso3 not in (
-                    "BLR",
-                    "COG",
-                    "PSE",
-                    "SYR",
-                ):
-                    continue
-                wheretostart = getenv("WHERETOSTART")
-                if wheretostart and countryiso3 not in wheretostart:
-                    continue
-            countries.add((country["iso3"], country["adm0_name"]))
-        return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
-
-    def build_mappings(self):
-        self.session.execute(delete(DBCommodity))
-        categoryid_to_name = {}
-        for category in self.wfp_api.get_items("Commodities/Categories/List"):
-            categoryid_to_name[category["id"]] = category["name"]
-        for commodity in self.wfp_api.get_items("Commodities/List"):
-            commodity_id = commodity["id"]
-            commodity_name = commodity["name"]
-            category = categoryid_to_name[commodity["categoryId"]]
-            self.commodity_to_category[commodity_id] = categoryid_to_name[
-                commodity["categoryId"]
-            ]
-            dbcommodity = DBCommodity(
-                commodity_id=commodity_id,
-                category=category,
-                commodity=commodity_name,
-            )
-            self.session.add(dbcommodity)
-        self.session.commit()
-
-    @staticmethod
-    def match_source(sources, source):
-        words = source.split(" ")
-        if len(words) < 2:
-            return False
-        found = False
-        for cursource in sources:
-            words = cursource.split(" ")
-            if len(words) < 2:
-                continue
-            seq = difflib.SequenceMatcher(None, source, cursource)
-            if seq.ratio() > 0.9:
-                found = True
-        return found
-
-    def get_dataset_and_showcase(self, countryiso3):
+    def get_dataset_and_showcase(
+        self, countryiso3: str
+    ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         if countryiso3 == "global":
             location = "world"
             countryname = "Global"
@@ -250,11 +93,15 @@ class WFPFood:
 
         return dataset, showcase
 
-    def generate_dataset_and_showcase(self, countryiso3):
+    def generate_dataset_and_showcase(
+        self,
+        countryiso3: str,
+        wfp_api: WFPAPI,
+    ) -> Tuple[Optional[Dataset], Optional[Showcase], Optional[List]]:
         dataset, showcase = self.get_dataset_and_showcase(countryiso3)
         if not dataset:
             return None, None, None
-        prices_data = self.wfp_api.get_items(
+        prices_data = wfp_api.get_items(
             "MarketPrices/PriceMonthly", countryiso3
         )
         if not prices_data:
@@ -262,7 +109,7 @@ class WFPFood:
             return None, None, None
         market_to_adm = {}
         dbmarkets = []
-        for market in self.wfp_api.get_items("Markets/List", countryiso3):
+        for market in wfp_api.get_items("Markets/List", countryiso3):
             market_id = market["marketId"]
             market_name = market["marketName"]
             admin1 = market["admin1Name"]
@@ -312,33 +159,7 @@ class WFPFood:
                         )
                     )
 
-            orig_source = (
-                price_data["commodityPriceSourceName"]
-                .replace("M/o", "Ministry of")
-                .replace("+", "/")
-            )
-            regex = r"Government.*,(Ministry.*)"
-            match = re.search(regex, orig_source)
-            if match:
-                split_sources = [match.group(1)]
-            else:
-                split_sources = (
-                    orig_source.replace(",", "/").replace(";", "/").split("/")
-                )
-            for source in split_sources:
-                source = source.strip()
-                if not source:
-                    continue
-                if source[-1] == ".":
-                    source = source[:-1]
-                source_lower = source.lower()
-                if "mvam" in source_lower and len(source_lower) <= 8:
-                    source = "WFP mVAM"
-                elif "?stica" in source:
-                    source = source.replace("?stica", "ística")
-                source_lower = source.lower()
-                if not self.match_source(sources.keys(), source_lower):
-                    sources[source_lower] = source
+            process_source(sources, price_data["commodityPriceSourceName"])
             date_str = price_data["commodityPriceDate"]
             date = parse_date(date_str)
             date_str = date.date().isoformat()
@@ -406,6 +227,7 @@ class WFPFood:
             number_market.append((len(commodities), key))
         number_market = sorted(number_market, reverse=True)
         qc_indicators = []
+        qc_hxltags = self.configuration["qc_hxltags"]
         qc_rows = [qc_hxltags]
         chosen_commodities = set()
         # Go through markets starting with the one with most commodities
@@ -469,10 +291,12 @@ class WFPFood:
             "format": "csv",
         }
         rows = [rows[key] for key in sorted(rows)]
+        hxltags = self.configuration["hxltags"]
+        country_headers = self.configuration["country_headers"]
         country_hxltags = {
             header: hxltags[header] for header in country_headers
         }
-        dataset.generate_resource_from_iterator(
+        dataset.generate_resource_from_iterable(
             country_headers,
             rows,
             country_hxltags,
@@ -514,13 +338,13 @@ class WFPFood:
 
         return dataset, showcase, qc_indicators
 
-    def update_database(self):
-        self.session.commit()
-
-    def generate_global_dataset_and_showcase(self):
+    def generate_global_dataset_and_showcase(
+        self,
+    ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         dataset, showcase = self.get_dataset_and_showcase("global")
         dataset["dataset_source"] = "WFP"
 
+        hxltags = self.configuration["hxltags"]
         start_date = default_enddate
         end_date = default_date
 
@@ -540,7 +364,7 @@ class WFPFood:
                 rows.append(row)
             hdrs = cls.__table__.columns.keys()
             htgs = {header: hxltags[header] for header in hdrs}
-            dataset.generate_resource_from_iterator(
+            dataset.generate_resource_from_iterable(
                 hdrs, rows, htgs, self.folder, fn, rsdata
             )
 

@@ -8,14 +8,11 @@ import logging
 from os import remove
 from os.path import join
 
-import pytest
-
-from hdx.api.configuration import Configuration
-from hdx.api.locations import Locations
-from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.wfpfood import WFPFood
+from hdx.scraper.wfp.foodprices.currency_setup import setup_currency
+from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
@@ -25,49 +22,6 @@ logger = logging.getLogger(__name__)
 
 
 class TestWFP:
-    @pytest.fixture(scope="function")
-    def configuration(self):
-        Configuration._create(
-            hdx_read_only=True,
-            hdx_site="prod",
-            user_agent="test",
-            project_config_yaml=join(
-                "tests", "config", "project_configuration.yaml"
-            ),
-        )
-        Locations.set_validlocations(
-            [
-                {"name": "cog", "title": "Congo"},
-                {"name": "blr", "title": "Belarus"},
-                {"name": "pse", "title": "State of Palestine"},
-                {"name": "syr", "title": "Syrian Arab Republic"},
-                {"name": "world", "title": "World"},
-            ]
-        )
-        Vocabulary._approved_vocabulary = {
-            "tags": [
-                {"name": tag}
-                for tag in (
-                    "hxl",
-                    "economics",
-                    "food security",
-                    "indicators",
-                    "markets",
-                )
-            ],
-            "id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            "name": "approved",
-        }
-        return Configuration.read()
-
-    @pytest.fixture(scope="class")
-    def fixtures_dir(self):
-        return join("tests", "fixtures")
-
-    @pytest.fixture(scope="class")
-    def input_dir(self, fixtures_dir):
-        return join(fixtures_dir, "input")
-
     def test_run(self, configuration, fixtures_dir, input_dir):
         with temp_dir(
             "TestWFPFoodPrices",
@@ -96,29 +50,39 @@ class TestWFP:
                 with Database(**params) as database:
                     session = database.get_session()
                     wfp_api = WFPAPI(downloader, retriever)
-                    wfp = WFPFood(
-                        configuration,
-                        tempdir,
-                        wfp_api,
-                        retriever,
-                        session,
+                    wfp = WFPMappings(
+                        configuration, wfp_api, retriever, session
                     )
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
-                    source_overrides = wfp.read_source_overrides()
-                    assert len(source_overrides) == 24
+                    iso3_to_source = wfp.read_source_overrides()
+                    assert len(iso3_to_source) == 24
                     countries = wfp.get_countries()
                     assert len(countries) == 291
                     assert countries[100:102] == [
                         {"iso3": "GTM", "name": "Guatemala"},
                         {"iso3": "GUF", "name": "French Guiana"},
                     ]
-                    wfp.build_mappings()
+                    commodity_to_category = (
+                        wfp.build_commodity_category_mapping()
+                    )
+                    assert len(commodity_to_category) == 1072
+                    setup_currency(retriever, wfp_api)
+                    dataset_generator = DatasetGenerator(
+                        configuration,
+                        tempdir,
+                        session,
+                        iso3_to_showcase_url,
+                        iso3_to_source,
+                        commodity_to_category,
+                    )
                     (
                         dataset,
                         showcase,
                         qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("COG")
+                    ) = dataset_generator.generate_dataset_and_showcase(
+                        "COG", wfp_api
+                    )
                     logger.info("Generated COG")
                     assert dataset == {
                         "name": "wfp-food-prices-for-congo",
@@ -236,7 +200,9 @@ class TestWFP:
                         dataset,
                         showcase,
                         qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("BLR")
+                    ) = dataset_generator.generate_dataset_and_showcase(
+                        "BLR", wfp_api
+                    )
                     logger.info("Generated BLR")
                     assert dataset == {
                         "name": "wfp-food-prices-for-belarus",
@@ -304,7 +270,9 @@ class TestWFP:
                         dataset,
                         showcase,
                         qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("PSE")
+                    ) = dataset_generator.generate_dataset_and_showcase(
+                        "PSE", wfp_api
+                    )
                     logger.info("Generated PSE")
                     assert dataset == {
                         "name": "wfp-food-prices-for-state-of-palestine",
@@ -420,7 +388,9 @@ class TestWFP:
                         dataset,
                         showcase,
                         qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("SYR")
+                    ) = dataset_generator.generate_dataset_and_showcase(
+                        "SYR", wfp_api
+                    )
                     logger.info("Generated SYR")
                     assert dataset == {
                         "data_update_frequency": "30",
@@ -532,7 +502,7 @@ class TestWFP:
                         },
                     ]
                     dataset, showcase = (
-                        wfp.generate_global_dataset_and_showcase()
+                        dataset_generator.generate_global_dataset_and_showcase()
                     )
                     logger.info("Generated global")
                     assert dataset == {
