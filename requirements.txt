@@ -2,7 +2,7 @@
 #    uv pip compile pyproject.toml --resolver=backtracking -o requirements.txt
 annotated-types==0.7.0
     # via pydantic
-attrs==25.2.0
+attrs==25.3.0
     # via
     #   frictionless
     #   jsonlines

@@ -1,9 +1,8 @@
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 
-from hdx.scraper.wfp.foodprices.database.dbcountry import DBCountry
-
 from hdx.database import NoTZBase
+from hdx.scraper.wfp.foodprices.database.dbcountry import DBCountry
 
 
 class DBMarket(NoTZBase):

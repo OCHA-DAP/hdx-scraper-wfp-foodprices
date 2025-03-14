@@ -78,12 +78,21 @@ def main(
                         wfp.build_commodity_category_mapping()
                     )
                     setup_currency(retriever, wfp_api)
-                    dataset_generator = DatasetGenerator(configuration, folder, iso3_to_showcase_url, iso3_to_source)
+                    dataset_generator = DatasetGenerator(
+                        configuration,
+                        folder,
+                        iso3_to_showcase_url,
+                        iso3_to_source,
+                    )
                     dbupdater = DBUpdater(configuration, session)
 
                     def process_country(country: Dict[str, str]) -> None:
                         countryiso3 = country["iso3"]
-                        dataset, showcase = dataset_generator.get_dataset_and_showcase(countryiso3)
+                        dataset, showcase = (
+                            dataset_generator.get_dataset_and_showcase(
+                                countryiso3
+                            )
+                        )
                         if not dataset:
                             return
                         wfp_food = WFPFood(
@@ -96,11 +105,17 @@ def main(
                         if not wfp_food.get_price_markets(wfp_api):
                             return
                         rows, markets, sources = wfp_food.generate_rows()
-                        dataset, qc_indicators = dataset_generator.complete_dataset(countryiso3, dataset, rows, markets, sources)
+                        dataset, qc_indicators = (
+                            dataset_generator.complete_dataset(
+                                countryiso3, dataset, rows, markets, sources
+                            )
+                        )
                         dbmarkets = wfp_food.get_dbmarkets()
                         time_period = dataset.get_time_period()
                         hdx_url = dataset.get_hdx_url()
-                        dbupdater.update_tables(countryiso3, dbmarkets, time_period, hdx_url)
+                        dbupdater.update_tables(
+                            countryiso3, dbmarkets, time_period, hdx_url
+                        )
 
                         snippet = f"Food Prices data for {country['name']}"
                         if dataset:
@@ -128,9 +143,13 @@ def main(
                         info, countries, "iso3"
                     ):
                         process_country(country)
-                    table_data, start_date, end_date = dbupdater.get_data_from_tables()
+                    table_data, start_date, end_date = (
+                        dbupdater.get_data_from_tables()
+                    )
                     dataset, showcase = (
-                        dataset_generator.generate_global_dataset_and_showcase(table_data, start_date, end_date)
+                        dataset_generator.generate_global_dataset_and_showcase(
+                            table_data, start_date, end_date
+                        )
                     )
                     snippet = "Countries, Commodities and Markets data"
                     snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "

@@ -71,12 +71,17 @@ class TestWFP:
                     assert len(commodity_to_category) == 1072
 
                     setup_currency(retriever, wfp_api)
-                    dataset_generator = DatasetGenerator(configuration, tempdir, iso3_to_showcase_url, iso3_to_source)
+                    dataset_generator = DatasetGenerator(
+                        configuration,
+                        tempdir,
+                        iso3_to_showcase_url,
+                        iso3_to_source,
+                    )
                     dbupdater = DBUpdater(configuration, session)
 
                     countryiso3 = "COG"
-                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
-                        countryiso3
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -87,8 +92,10 @@ class TestWFP:
                     )
                     wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = dataset_generator.complete_dataset(
-                        countryiso3, dataset, rows, markets, sources
+                    dataset, qc_indicators = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
                     )
                     dbmarkets = wfp_food.get_dbmarkets()
                     time_period = dataset.get_time_period()
@@ -211,8 +218,8 @@ class TestWFP:
                     ]
 
                     countryiso3 = "BLR"
-                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
-                        countryiso3
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -223,8 +230,10 @@ class TestWFP:
                     )
                     wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = dataset_generator.complete_dataset(
-                        countryiso3, dataset, rows, markets, sources
+                    dataset, qc_indicators = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
                     )
                     dbmarkets = wfp_food.get_dbmarkets()
                     time_period = dataset.get_time_period()
@@ -297,8 +306,8 @@ class TestWFP:
                     ]
 
                     countryiso3 = "PSE"
-                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
-                        countryiso3
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -309,8 +318,10 @@ class TestWFP:
                     )
                     wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = dataset_generator.complete_dataset(
-                        countryiso3, dataset, rows, markets, sources
+                    dataset, qc_indicators = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
                     )
                     dbmarkets = wfp_food.get_dbmarkets()
                     time_period = dataset.get_time_period()
@@ -431,8 +442,8 @@ class TestWFP:
                     ]
 
                     countryiso3 = "SYR"
-                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
-                        countryiso3
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -443,8 +454,10 @@ class TestWFP:
                     )
                     wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = dataset_generator.complete_dataset(
-                        countryiso3, dataset, rows, markets, sources
+                    dataset, qc_indicators = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
                     )
                     dbmarkets = wfp_food.get_dbmarkets()
                     time_period = dataset.get_time_period()
@@ -563,9 +576,13 @@ class TestWFP:
                         },
                     ]
 
-                    table_data, start_date, end_date = dbupdater.get_data_from_tables()
+                    table_data, start_date, end_date = (
+                        dbupdater.get_data_from_tables()
+                    )
                     dataset, showcase = (
-                        dataset_generator.generate_global_dataset_and_showcase(table_data, start_date, end_date)
+                        dataset_generator.generate_global_dataset_and_showcase(
+                            table_data, start_date, end_date
+                        )
                     )
                     logger.info("Generated global")
                     assert dataset == {

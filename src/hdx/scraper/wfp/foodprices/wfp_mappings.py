@@ -14,11 +14,10 @@ from typing import Dict, List
 from sqlalchemy import delete
 from sqlalchemy.orm import Session
 
+from .database.dbcommodity import DBCommodity
 from hdx.api.configuration import Configuration
 from hdx.location.wfp_api import WFPAPI
 from hdx.utilities.retriever import Retrieve
-
-from .database.dbcommodity import DBCommodity
 
 logger = logging.getLogger(__name__)
 

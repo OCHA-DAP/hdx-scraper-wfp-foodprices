@@ -1,12 +1,11 @@
 import logging
-from typing import Dict, Tuple, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from .database.dbmarket import DBMarket
-
+from .source_processing import process_source
 from hdx.api.configuration import Configuration
 from hdx.location.currency import Currency, CurrencyError
 from hdx.location.wfp_api import WFPAPI
-from .source_processing import process_source
 from hdx.utilities.dateparse import parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
 
@@ -32,7 +31,7 @@ class WFPFood:
         self._market_to_adm = {}
 
     def get_price_markets(self, wfp_api: WFPAPI) -> bool:
-        prices_data =  wfp_api.get_items(
+        prices_data = wfp_api.get_items(
             "MarketPrices/PriceMonthly", self._countryiso3
         )
         if not prices_data:
@@ -46,7 +45,12 @@ class WFPFood:
             admin2 = market["admin2Name"]
             latitude = market["marketLatitude"]
             longitude = market["marketLongitude"]
-            self._market_to_adm[market_id] = admin1, admin2, latitude, longitude
+            self._market_to_adm[market_id] = (
+                admin1,
+                admin2,
+                latitude,
+                longitude,
+            )
             self._dbmarkets.append(
                 DBMarket(
                     market_id=market_id,

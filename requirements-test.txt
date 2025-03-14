@@ -4,7 +4,7 @@ annotated-types==0.7.0
     # via
     #   -c requirements.txt
     #   pydantic
-attrs==25.2.0
+attrs==25.3.0
     # via
     #   -c requirements.txt
     #   frictionless

@@ -1,18 +1,26 @@
 import logging
 from datetime import datetime
-from typing import Tuple, Optional, Dict, List
+from typing import Dict, List, Optional, Tuple
+
+from slugify import slugify
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
-from slugify import slugify
 
 logger = logging.getLogger(__name__)
 
+
 class DatasetGenerator:
-    def __init__(self, configuration: Configuration, folder: str, iso3_to_showcase_url: Dict[str, str], iso3_to_source: Dict[str, str]):
+    def __init__(
+        self,
+        configuration: Configuration,
+        folder: str,
+        iso3_to_showcase_url: Dict[str, str],
+        iso3_to_source: Dict[str, str],
+    ):
         self._configuration = configuration
         self._folder = folder
         self._iso3_to_showcase_url = iso3_to_showcase_url
@@ -70,7 +78,14 @@ class DatasetGenerator:
         showcase.add_tags(tags)
         return dataset, showcase
 
-    def complete_dataset(self, countryiso3: str, dataset: Dataset, rows: Dict, markets: Dict, sources: Dict) -> Tuple[Dataset, List]:
+    def complete_dataset(
+        self,
+        countryiso3: str,
+        dataset: Dataset,
+        rows: Dict,
+        markets: Dict,
+        sources: Dict,
+    ) -> Tuple[Dataset, List]:
         number_market = []
         for key, commodities in markets.items():
             number_market.append((len(commodities), key))
@@ -104,7 +119,7 @@ class DatasetGenerator:
             adm1, adm2, market_name = adm1adm2market
             code = f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
             for date, usdprice in sorted(
-                    commodities[(commodity, unit, pricetype, currency)]
+                commodities[(commodity, unit, pricetype, currency)]
             ):
                 qc_rows.append(
                     {"date": date, "code": code, "usdprice": usdprice}
@@ -184,7 +199,12 @@ class DatasetGenerator:
         }
         info = table_data["DBCountry"]
         dataset.generate_resource_from_iterable(
-            info["headers"], info["rows"], info["hxltags"], self._folder, filename, resourcedata
+            info["headers"],
+            info["rows"],
+            info["hxltags"],
+            self._folder,
+            filename,
+            resourcedata,
         )
 
         filename = "wfp_commodities_global.csv"
@@ -195,7 +215,12 @@ class DatasetGenerator:
         }
         info = table_data["DBCommodity"]
         dataset.generate_resource_from_iterable(
-            info["headers"], info["rows"], info["hxltags"], self._folder, filename, resourcedata
+            info["headers"],
+            info["rows"],
+            info["hxltags"],
+            self._folder,
+            filename,
+            resourcedata,
         )
 
         filename = "wfp_markets_global.csv"
@@ -206,6 +231,11 @@ class DatasetGenerator:
         }
         info = table_data["DBMarket"]
         dataset.generate_resource_from_iterable(
-            info["headers"], info["rows"], info["hxltags"], self._folder, filename, resourcedata
+            info["headers"],
+            info["rows"],
+            info["hxltags"],
+            self._folder,
+            filename,
+            resourcedata,
         )
         return dataset, showcase
