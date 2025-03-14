@@ -14,11 +14,11 @@ from typing import Dict, List
 from sqlalchemy import delete
 from sqlalchemy.orm import Session
 
-from database.dbcommodity import DBCommodity
-
 from hdx.api.configuration import Configuration
 from hdx.location.wfp_api import WFPAPI
 from hdx.utilities.retriever import Retrieve
+
+from .database.dbcommodity import DBCommodity
 
 logger = logging.getLogger(__name__)
 
@@ -31,14 +31,14 @@ class WFPMappings:
         retriever: Retrieve,
         session: Session,
     ):
-        self.configuration = configuration
-        self.wfp_api = wfp_api
-        self.retriever = retriever
-        self.session = session
+        self._configuration = configuration
+        self._wfp_api = wfp_api
+        self._retriever = retriever
+        self._session = session
 
     def read_region_mapping(self) -> Dict[str, str]:
-        headers, rows = self.retriever.get_tabular_rows(
-            self.configuration["region_mapping_url"],
+        headers, rows = self._retriever.get_tabular_rows(
+            self._configuration["region_mapping_url"],
             dict_form=True,
             filename="region_mapping.csv",
         )
@@ -52,8 +52,8 @@ class WFPMappings:
         return iso3_to_showcase_url
 
     def read_source_overrides(self) -> Dict[str, str]:
-        headers, rows = self.retriever.get_tabular_rows(
-            self.configuration["source_overrides_url"],
+        headers, rows = self._retriever.get_tabular_rows(
+            self._configuration["source_overrides_url"],
             dict_form=True,
             filename="source_overrides.csv",
         )
@@ -65,12 +65,12 @@ class WFPMappings:
         return iso3_to_source
 
     def get_countries(self) -> List[Dict[str, str]]:
-        url = self.configuration["countries_url"]
-        json = self.wfp_api.retrieve(url, "countries.json", "countries")
+        url = self._configuration["countries_url"]
+        json = self._wfp_api.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
             countryiso3 = country["iso3"]
-            if self.retriever.save:
+            if self._retriever.save:
                 if countryiso3 not in (
                     "BLR",
                     "COG",
@@ -85,12 +85,12 @@ class WFPMappings:
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
     def build_commodity_category_mapping(self) -> Dict[str, str]:
-        self.session.execute(delete(DBCommodity))
+        self._session.execute(delete(DBCommodity))
         categoryid_to_name = {}
-        for category in self.wfp_api.get_items("Commodities/Categories/List"):
+        for category in self._wfp_api.get_items("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]
         commodity_to_category = {}
-        for commodity in self.wfp_api.get_items("Commodities/List"):
+        for commodity in self._wfp_api.get_items("Commodities/List"):
             commodity_id = commodity["id"]
             commodity_name = commodity["name"]
             category = categoryid_to_name[commodity["categoryId"]]
@@ -102,6 +102,6 @@ class WFPMappings:
                 category=category,
                 commodity=commodity_name,
             )
-            self.session.add(dbcommodity)
-        self.session.commit()
+            self._session.add(dbcommodity)
+        self._session.commit()
         return commodity_to_category

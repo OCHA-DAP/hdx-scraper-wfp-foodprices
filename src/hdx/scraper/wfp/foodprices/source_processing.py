@@ -1,11 +1,11 @@
 import re
 from difflib import SequenceMatcher
-from typing import Dict
+from typing import Dict, List
 
 from hdx.utilities.matching import multiple_replace
 
 
-def match_source(sources, source):
+def match_source(sources: List[str], source: str) -> bool:
     words = source.split(" ")
     if len(words) < 2:
         return False
