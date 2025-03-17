@@ -50,11 +50,8 @@ class TestWFP:
                     "database": dbpath,
                 }
                 with Database(**params) as database:
-                    session = database.get_session()
                     wfp_api = WFPAPI(downloader, retriever)
-                    wfp = WFPMappings(
-                        configuration, wfp_api, retriever, session
-                    )
+                    wfp = WFPMappings(configuration, wfp_api, retriever)
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
                     iso3_to_source = wfp.read_source_overrides()
@@ -65,7 +62,7 @@ class TestWFP:
                         {"iso3": "GTM", "name": "Guatemala"},
                         {"iso3": "GUF", "name": "French Guiana"},
                     ]
-                    commodity_to_category = (
+                    commodity_to_category, dbcommodities = (
                         wfp.build_commodity_category_mapping()
                     )
                     assert len(commodity_to_category) == 1072
@@ -77,7 +74,8 @@ class TestWFP:
                         iso3_to_showcase_url,
                         iso3_to_source,
                     )
-                    dbupdater = DBUpdater(configuration, session)
+                    dbupdater = DBUpdater(configuration, database)
+                    dbupdater.update_commodities(dbcommodities)
 
                     countryiso3 = "COG"
                     dataset, showcase = (

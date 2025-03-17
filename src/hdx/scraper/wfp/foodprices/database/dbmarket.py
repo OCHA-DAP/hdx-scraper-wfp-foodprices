@@ -1,11 +1,11 @@
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 
-from hdx.database import NoTZBase
+from hdx.database.no_timezone import Base
 from hdx.scraper.wfp.foodprices.database.dbcountry import DBCountry
 
 
-class DBMarket(NoTZBase):
+class DBMarket(Base):
     market_id: Mapped[int] = mapped_column(primary_key=True)
     market: Mapped[str] = mapped_column(nullable=False)
     countryiso3: Mapped[str] = mapped_column(ForeignKey(DBCountry.countryiso3))

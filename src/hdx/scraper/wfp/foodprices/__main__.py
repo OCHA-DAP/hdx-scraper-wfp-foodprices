@@ -64,17 +64,14 @@ def main(
                     configuration = Configuration.read()
                     wfp_api = WFPAPI(token_downloader, retriever)
                     wfp_api.update_retry_params(attempts=5, wait=3600)
-                    session = database.get_session()
-                    wfp = WFPMappings(
-                        configuration, wfp_api, retriever, session
-                    )
+                    wfp = WFPMappings(configuration, wfp_api, retriever)
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     iso3_to_source = wfp.read_source_overrides()
                     countries = wfp.get_countries()
                     logger.info(
                         f"Number of country datasets to upload: {len(countries)}"
                     )
-                    commodity_to_category = (
+                    commodity_to_category, dbcommodities = (
                         wfp.build_commodity_category_mapping()
                     )
                     setup_currency(retriever, wfp_api)
@@ -84,7 +81,8 @@ def main(
                         iso3_to_showcase_url,
                         iso3_to_source,
                     )
-                    dbupdater = DBUpdater(configuration, session)
+                    dbupdater = DBUpdater(configuration, database)
+                    dbupdater.update_commodities(dbcommodities)
 
                     def process_country(country: Dict[str, str]) -> None:
                         countryiso3 = country["iso3"]
@@ -137,7 +135,6 @@ def main(
                                 logger.info(
                                     f"{country['name']} does not have a showcase!"
                                 )
-                        session.commit()
 
                     for _, country in progress_storing_folder(
                         info, countries, "iso3"

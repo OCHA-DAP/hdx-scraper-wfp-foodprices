@@ -2,30 +2,37 @@ from datetime import datetime
 from typing import Dict, List, Tuple
 
 from sqlalchemy import delete, select
-from sqlalchemy.orm import Session
 
 from .database.dbcommodity import DBCommodity
 from .database.dbcountry import DBCountry
 from .database.dbmarket import DBMarket
 from hdx.api.configuration import Configuration
+from hdx.database import Database
 from hdx.utilities.dateparse import default_date, default_enddate
 
 
 class DBUpdater:
+    BATCH_SIZE = 1000
+
     tables = {
         "DBCountry": DBCountry,
         "DBCommodity": DBCommodity,
         "DBMarket": DBMarket,
     }
 
-    def __init__(self, configuration: Configuration, session: Session):
+    def __init__(self, configuration: Configuration, database: Database):
         self._hxltags = configuration["hxltags"]
-        self._session = session
+        self._database = database
+        self._session = database.get_session()
+
+    def update_commodities(self, dbcommodities: List[Dict]):
+        self._session.execute(delete(DBCommodity))
+        self._database.batch_populate(dbcommodities, DBCommodity)
 
     def update_tables(
         self,
         countryiso3: str,
-        dbmarkets: List[DBMarket],
+        dbmarkets: List[Dict],
         time_period: Dict,
         hdx_url: str,
     ) -> None:
@@ -42,9 +49,7 @@ class DBUpdater:
             url=hdx_url,
         )
         self._session.add(dbcountry)
-        for dbmarket in dbmarkets:
-            self._session.add(dbmarket)
-        self._session.commit()
+        self._database.batch_populate(dbmarkets, DBMarket)
 
     def get_data_from_tables(self) -> Tuple[Dict, datetime, datetime]:
         start_date = default_enddate
@@ -74,3 +79,25 @@ class DBUpdater:
                 header: self._hxltags[header] for header in headers
             }
         return table_data, start_date, end_date
+
+    # def get_prices_data(self) -> Dict:
+    #     start_date = default_enddate
+    #     end_date = default_date
+    #
+    #     results = {}
+    #     for result in self._session.scalars(select(dbtable)).all():
+    #         row = {}
+    #         for column in result.__table__.columns.keys():
+    #             row[column] = getattr(result, column)
+    #             if column == "start_date":
+    #                 if row[column] < start_date:
+    #                     start_date = row[column]
+    #             elif column == "end_date":
+    #                 if row[column] > end_date:
+    #                     end_date = row[column]
+    #         results["rows"].append(row)
+    #         headers = dbtable.__table__.columns.keys()
+    #         info["headers"] = headers
+    #         info["hxltags"] = {header: self._hxltags[header] for header in headers}
+    #     results["start_date"] = start_date
+    #     results["end_date"] = end_date

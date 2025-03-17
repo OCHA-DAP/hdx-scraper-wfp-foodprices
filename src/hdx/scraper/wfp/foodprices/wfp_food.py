@@ -1,7 +1,6 @@
 import logging
 from typing import Dict, List, Optional, Tuple
 
-from .database.dbmarket import DBMarket
 from .source_processing import process_source
 from hdx.api.configuration import Configuration
 from hdx.location.currency import Currency, CurrencyError
@@ -52,15 +51,15 @@ class WFPFood:
                 longitude,
             )
             self._dbmarkets.append(
-                DBMarket(
-                    market_id=market_id,
-                    market=market_name,
-                    countryiso3=self._countryiso3,
-                    admin1=admin1,
-                    admin2=admin2,
-                    latitude=latitude,
-                    longitude=longitude,
-                )
+                {
+                    "market_id": market_id,
+                    "market": market_name,
+                    "countryiso3": self._countryiso3,
+                    "admin1": admin1,
+                    "admin2": admin2,
+                    "latitude": latitude,
+                    "longitude": longitude,
+                }
             )
         logger.info(f"{len(prices_data)} prices rows")
         return True
@@ -91,7 +90,7 @@ class WFPFood:
                     adm1 = adm2 = lat = lon = ""
                     self._market_to_adm[market_id] = adm1, adm2, lat, lon
                     self._dbmarkets.append(
-                        DBMarket(
+                        dict(
                             market_id=market_id,
                             market=market_name,
                             countryiso3=self._countryiso3,
@@ -163,5 +162,5 @@ class WFPFood:
             logger.info(f"{self._countryiso3} has no prices!")
         return rows, markets, sources
 
-    def get_dbmarkets(self) -> List[DBMarket]:
+    def get_dbmarkets(self) -> List[Dict]:
         return self._dbmarkets

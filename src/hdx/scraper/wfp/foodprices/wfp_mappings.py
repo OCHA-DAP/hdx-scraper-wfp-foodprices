@@ -9,12 +9,8 @@ Creates datasets with flattened tables of WFP food prices.
 
 import logging
 from os import getenv
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
-from sqlalchemy import delete
-from sqlalchemy.orm import Session
-
-from .database.dbcommodity import DBCommodity
 from hdx.api.configuration import Configuration
 from hdx.location.wfp_api import WFPAPI
 from hdx.utilities.retriever import Retrieve
@@ -28,12 +24,10 @@ class WFPMappings:
         configuration: Configuration,
         wfp_api: WFPAPI,
         retriever: Retrieve,
-        session: Session,
     ):
         self._configuration = configuration
         self._wfp_api = wfp_api
         self._retriever = retriever
-        self._session = session
 
     def read_region_mapping(self) -> Dict[str, str]:
         headers, rows = self._retriever.get_tabular_rows(
@@ -83,12 +77,12 @@ class WFPMappings:
             countries.add((country["iso3"], country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
-    def build_commodity_category_mapping(self) -> Dict[str, str]:
-        self._session.execute(delete(DBCommodity))
+    def build_commodity_category_mapping(self) -> Tuple[Dict, List]:
         categoryid_to_name = {}
         for category in self._wfp_api.get_items("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]
         commodity_to_category = {}
+        dbcommodities = []
         for commodity in self._wfp_api.get_items("Commodities/List"):
             commodity_id = commodity["id"]
             commodity_name = commodity["name"]
@@ -96,11 +90,11 @@ class WFPMappings:
             commodity_to_category[commodity_id] = categoryid_to_name[
                 commodity["categoryId"]
             ]
-            dbcommodity = DBCommodity(
-                commodity_id=commodity_id,
-                category=category,
-                commodity=commodity_name,
+            dbcommodities.append(
+                {
+                    "commodity_id": commodity_id,
+                    "category": category,
+                    "commodity": commodity_name,
+                }
             )
-            self._session.add(dbcommodity)
-        self._session.commit()
-        return commodity_to_category
+        return commodity_to_category, dbcommodities

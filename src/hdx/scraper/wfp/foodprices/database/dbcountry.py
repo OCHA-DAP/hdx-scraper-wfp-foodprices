@@ -2,10 +2,10 @@ from datetime import datetime
 
 from sqlalchemy.orm import Mapped, mapped_column
 
-from hdx.database import NoTZBase
+from hdx.database.no_timezone import Base
 
 
-class DBCountry(NoTZBase):
+class DBCountry(Base):
     countryiso3: Mapped[str] = mapped_column(primary_key=True)
     url: Mapped[str] = mapped_column(nullable=False)
     start_date: Mapped[datetime] = mapped_column(nullable=False)
