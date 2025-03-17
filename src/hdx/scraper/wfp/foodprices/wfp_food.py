@@ -5,7 +5,7 @@ from .source_processing import process_source
 from hdx.api.configuration import Configuration
 from hdx.location.currency import Currency, CurrencyError
 from hdx.location.wfp_api import WFPAPI
-from hdx.utilities.dateparse import parse_date
+from hdx.utilities.dateparse import iso_string_from_datetime, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
 
 logger = logging.getLogger(__name__)
@@ -26,7 +26,6 @@ class WFPFood:
         self._source = source
         self._commodity_to_category = commodity_to_category
         self._prices_data = []
-        self._dbmarkets = []
         self._market_to_adm = {}
 
     def get_price_markets(self, wfp_api: WFPAPI) -> List[Dict]:
@@ -84,24 +83,12 @@ class WFPFood:
             if market_name == "National Average":
                 adm1 = adm2 = lat = lon = ""
             else:
-                result = self._market_to_adm.get(market_id)
-                if result:
-                    adm1, adm2, lat, lon = result
-                else:
-                    adm1 = adm2 = lat = lon = ""
-                    self._market_to_adm[market_id] = adm1, adm2, lat, lon
-                    self._dbmarkets.append(
-                        dict(
-                            market_id=market_id,
-                            market=market_name,
-                            countryiso3=self._countryiso3,
-                        )
-                    )
+                adm1, adm2, lat, lon = self._market_to_adm.get(market_id)
 
             process_source(sources, price_data["commodityPriceSourceName"])
             date_str = price_data["commodityPriceDate"]
             date = parse_date(date_str)
-            date_str = date.date().isoformat()
+            date_str = iso_string_from_datetime(date)
             commodity = price_data["commodityName"]
             unit = price_data["commodityUnitName"]
             pricetype = price_data["priceTypeName"]
@@ -130,22 +117,16 @@ class WFPFood:
                 pricetype,
             )
             if key not in rows:
-                rows[key] = {
-                    "date": date_str,
-                    "admin1": adm1,
-                    "admin2": adm2,
-                    "market": market_name,
-                    "latitude": lat,
-                    "longitude": lon,
-                    "category": category,
-                    "commodity": commodity,
-                    "unit": unit,
-                    "priceflag": priceflag,
-                    "pricetype": pricetype,
-                    "currency": currency,
-                    "price": price,
-                    "usdprice": usdprice,
-                }
+                rows[key] = (
+                    date_str,
+                    market_id,
+                    lat,
+                    lon,
+                    commodity_id,
+                    currency,
+                    price,
+                    usdprice,
+                )
             if adm1 and adm2 and category and usdprice:
                 adm1adm2market = adm1, adm2, market_name
                 commodities = markets.get(adm1adm2market, {})

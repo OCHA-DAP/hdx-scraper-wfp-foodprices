@@ -6,6 +6,7 @@ from sqlalchemy import delete, select
 from .database.dbcommodity import DBCommodity
 from .database.dbcountry import DBCountry
 from .database.dbmarket import DBMarket
+from .database.dbprice import DBPrice
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.utilities.dateparse import default_date, default_enddate
@@ -32,15 +33,13 @@ class DBUpdater:
     def update_tables(
         self,
         countryiso3: str,
-        dbmarkets: List[Dict],
         time_period: Dict,
         hdx_url: str,
+        dbmarkets: List,
+        dbprices: List,
     ) -> None:
         self._session.execute(
             delete(DBCountry).where(DBCountry.countryiso3 == countryiso3)
-        )
-        self._session.execute(
-            delete(DBMarket).where(DBMarket.countryiso3 == countryiso3)
         )
         dbcountry = DBCountry(
             countryiso3=countryiso3,
@@ -49,7 +48,16 @@ class DBUpdater:
             url=hdx_url,
         )
         self._session.add(dbcountry)
+
+        self._session.execute(
+            delete(DBMarket).where(DBMarket.countryiso3 == countryiso3)
+        )
         self._database.batch_populate(dbmarkets, DBMarket)
+
+        self._session.execute(
+            delete(DBPrice).where(DBPrice.countryiso3 == countryiso3)
+        )
+        self._database.batch_populate(dbprices, DBPrice)
 
     def get_data_from_tables(self) -> Tuple[Dict, datetime, datetime]:
         start_date = default_enddate

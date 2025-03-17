@@ -90,7 +90,7 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = (
+                    dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
@@ -99,7 +99,7 @@ class TestWFP:
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, dbmarkets, time_period, hdx_url
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
                     )
                     logger.info("Generated COG")
                     assert dataset == {
@@ -228,7 +228,7 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = (
+                    dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
@@ -237,7 +237,7 @@ class TestWFP:
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, dbmarkets, time_period, hdx_url
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
                     )
                     logger.info("Generated BLR")
                     assert dataset == {
@@ -316,7 +316,7 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = (
+                    dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
@@ -325,7 +325,7 @@ class TestWFP:
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, dbmarkets, time_period, hdx_url
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
                     )
                     logger.info("Generated PSE")
                     assert dataset == {
@@ -452,7 +452,7 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
-                    dataset, qc_indicators = (
+                    dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
@@ -461,7 +461,7 @@ class TestWFP:
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, dbmarkets, time_period, hdx_url
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
                     )
                     logger.info("Generated SYR")
                     assert dataset == {

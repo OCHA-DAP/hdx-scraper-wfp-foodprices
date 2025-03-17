@@ -104,7 +104,7 @@ def main(
                         if not dbmarkets:
                             return
                         rows, markets, sources = wfp_food.generate_rows()
-                        dataset, qc_indicators = (
+                        dataset, qc_indicators, dbprices = (
                             dataset_generator.complete_dataset(
                                 countryiso3, dataset, rows, markets, sources
                             )
@@ -112,7 +112,11 @@ def main(
                         time_period = dataset.get_time_period()
                         hdx_url = dataset.get_hdx_url()
                         dbupdater.update_tables(
-                            countryiso3, dbmarkets, time_period, hdx_url
+                            countryiso3,
+                            time_period,
+                            hdx_url,
+                            dbmarkets,
+                            dbprices,
                         )
 
                         snippet = f"Food Prices data for {country['name']}"

@@ -85,7 +85,7 @@ class DatasetGenerator:
         rows: Dict,
         markets: Dict,
         sources: Dict,
-    ) -> Tuple[Dataset, List]:
+    ) -> Tuple[Dataset, List, List]:
         number_market = []
         for key, commodities in markets.items():
             number_market.append((len(commodities), key))
@@ -154,15 +154,70 @@ class DatasetGenerator:
             "description": "Food prices data with HXL tags",
             "format": "csv",
         }
-        rows = [rows[key] for key in sorted(rows)]
         hxltags = self._configuration["hxltags"]
         country_headers = self._configuration["country_headers"]
         country_hxltags = {
             header: hxltags[header] for header in country_headers
         }
+        dbprices = []
+
+        def get_rows():
+            for key in sorted(rows):
+                (
+                    priceflag,
+                    date,
+                    adm1,
+                    adm2,
+                    market_name,
+                    category,
+                    commodity,
+                    unit,
+                    pricetype,
+                ) = key
+                (
+                    date_str,
+                    market_id,
+                    lat,
+                    lon,
+                    commodity_id,
+                    currency,
+                    price,
+                    usdprice,
+                ) = rows[key]
+                dbprices.append(
+                    {
+                        "countryiso3": countryiso3,
+                        "date": date,
+                        "market_id": market_id,
+                        "commodity_id": commodity_id,
+                        "unit": unit,
+                        "priceflag": priceflag,
+                        "pricetype": pricetype,
+                        "currency": currency,
+                        "price": price,
+                        "usdprice": usdprice,
+                    }
+                )
+                yield {
+                    "date": date_str,
+                    "admin1": adm1,
+                    "admin2": adm2,
+                    "market": market_name,
+                    "latitude": lat,
+                    "longitude": lon,
+                    "category": category,
+                    "commodity": commodity,
+                    "unit": unit,
+                    "priceflag": priceflag,
+                    "pricetype": pricetype,
+                    "currency": currency,
+                    "price": price,
+                    "usdprice": usdprice,
+                }
+
         dataset.generate_resource_from_iterable(
             country_headers,
-            rows,
+            get_rows(),
             country_hxltags,
             self._folder,
             filename,
@@ -182,7 +237,7 @@ class DatasetGenerator:
             resourcedata,
             headers=list(qc_hxltags.keys()),
         )
-        return dataset, qc_indicators
+        return dataset, qc_indicators, dbprices
 
     def generate_global_dataset_and_showcase(
         self, table_data: Dict, start_date: datetime, end_date: datetime
