@@ -29,13 +29,14 @@ class WFPFood:
         self._dbmarkets = []
         self._market_to_adm = {}
 
-    def get_price_markets(self, wfp_api: WFPAPI) -> bool:
+    def get_price_markets(self, wfp_api: WFPAPI) -> List[Dict]:
+        dbmarkets = []
         prices_data = wfp_api.get_items(
             "MarketPrices/PriceMonthly", self._countryiso3
         )
         if not prices_data:
             logger.info(f"{self._countryiso3} has no prices data!")
-            return False
+            return dbmarkets
         self._prices_data = prices_data
         for market in wfp_api.get_items("Markets/List", self._countryiso3):
             market_id = market["marketId"]
@@ -50,7 +51,7 @@ class WFPFood:
                 latitude,
                 longitude,
             )
-            self._dbmarkets.append(
+            dbmarkets.append(
                 {
                     "market_id": market_id,
                     "market": market_name,
@@ -62,7 +63,7 @@ class WFPFood:
                 }
             )
         logger.info(f"{len(prices_data)} prices rows")
-        return True
+        return dbmarkets
 
     def generate_rows(
         self,
@@ -161,6 +162,3 @@ class WFPFood:
         else:
             logger.info(f"{self._countryiso3} has no prices!")
         return rows, markets, sources
-
-    def get_dbmarkets(self) -> List[Dict]:
-        return self._dbmarkets

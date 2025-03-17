@@ -88,14 +88,14 @@ class TestWFP:
                         iso3_to_source.get(countryiso3),
                         commodity_to_category,
                     )
-                    wfp_food.get_price_markets(wfp_api)
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
                     dataset, qc_indicators = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
                     )
-                    dbmarkets = wfp_food.get_dbmarkets()
+
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
@@ -226,14 +226,14 @@ class TestWFP:
                         iso3_to_source.get(countryiso3),
                         commodity_to_category,
                     )
-                    wfp_food.get_price_markets(wfp_api)
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
                     dataset, qc_indicators = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
                     )
-                    dbmarkets = wfp_food.get_dbmarkets()
+
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
@@ -314,14 +314,14 @@ class TestWFP:
                         iso3_to_source.get(countryiso3),
                         commodity_to_category,
                     )
-                    wfp_food.get_price_markets(wfp_api)
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
                     dataset, qc_indicators = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
                     )
-                    dbmarkets = wfp_food.get_dbmarkets()
+
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
@@ -450,14 +450,14 @@ class TestWFP:
                         iso3_to_source.get(countryiso3),
                         commodity_to_category,
                     )
-                    wfp_food.get_price_markets(wfp_api)
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows()
                     dataset, qc_indicators = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
                         )
                     )
-                    dbmarkets = wfp_food.get_dbmarkets()
+
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
