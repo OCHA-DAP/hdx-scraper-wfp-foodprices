@@ -1,6 +1,6 @@
 countryiso3,url,start_date,end_date
 #country+code,#country+url,#date+start,#date+end
-COG,https://data.humdata.org/dataset/wfp-food-prices-for-congo,2011-01-15 00:00:00+00:00,2023-10-15 23:59:59+00:00
-BLR,https://data.humdata.org/dataset/wfp-food-prices-for-belarus,2009-01-15 00:00:00+00:00,2022-05-15 23:59:59+00:00
-PSE,https://data.humdata.org/dataset/wfp-food-prices-for-state-of-palestine,2007-01-15 00:00:00+00:00,2024-01-15 23:59:59+00:00
-SYR,https://data.humdata.org/dataset/wfp-food-prices-for-syrian-arab-republic,2011-04-15 00:00:00+00:00,2023-12-15 23:59:59+00:00
+COG,https://data.humdata.org/dataset/wfp-food-prices-for-congo,2011-01-15,2023-10-15
+BLR,https://data.humdata.org/dataset/wfp-food-prices-for-belarus,2009-01-15,2022-05-15
+PSE,https://data.humdata.org/dataset/wfp-food-prices-for-state-of-palestine,2007-01-15,2024-01-15
+SYR,https://data.humdata.org/dataset/wfp-food-prices-for-syrian-arab-republic,2011-04-15,2023-12-15

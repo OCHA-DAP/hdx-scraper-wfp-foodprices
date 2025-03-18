@@ -3,75 +3,42 @@
 Unit tests for wfpfood scraper.
 
 """
+
 import logging
 from os import remove
 from os.path import join
 
-import pytest
-from hdx.api.configuration import Configuration
-from hdx.api.locations import Locations
-from hdx.data.vocabulary import Vocabulary
 from hdx.database import Database
 from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
+from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
+from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
+from hdx.scraper.wfp.foodprices.wfp_food import WFPFood
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import temp_dir
 from hdx.utilities.retriever import Retrieve
-from wfp.wfpfood import WFPFood
 
 logger = logging.getLogger(__name__)
 
 
 class TestWFP:
-    @pytest.fixture(scope="function")
-    def configuration(self):
-        Configuration._create(
-            hdx_read_only=True,
-            hdx_site="prod",
-            user_agent="test",
-            project_config_yaml=join("tests", "config", "project_configuration.yaml"),
-        )
-        Locations.set_validlocations(
-            [
-                {"name": "cog", "title": "Congo"},
-                {"name": "blr", "title": "Belarus"},
-                {"name": "pse", "title": "State of Palestine"},
-                {"name": "syr", "title": "Syrian Arab Republic"},
-                {"name": "world", "title": "World"},
-            ]
-        )
-        Vocabulary._approved_vocabulary = {
-            "tags": [
-                {"name": tag}
-                for tag in (
-                    "hxl",
-                    "economics",
-                    "food security",
-                    "indicators",
-                    "markets",
-                )
-            ],
-            "id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-            "name": "approved",
-        }
-        return Configuration.read()
-
-    @pytest.fixture(scope="class")
-    def fixtures_dir(self):
-        return join("tests", "fixtures")
-
-    @pytest.fixture(scope="class")
-    def input_dir(self, fixtures_dir):
-        return join(fixtures_dir, "input")
-
     def test_run(self, configuration, fixtures_dir, input_dir):
         with temp_dir(
-            "TestWFPFoodPrices", delete_on_success=True, delete_on_failure=False
+            "TestWFPFoodPrices",
+            delete_on_success=True,
+            delete_on_failure=False,
         ) as tempdir:
             logger.info("Starting")
             with Download(user_agent="test") as downloader:
                 retriever = Retrieve(
-                    downloader, tempdir, input_dir, tempdir, save=False, use_saved=True
+                    downloader,
+                    tempdir,
+                    input_dir,
+                    tempdir,
+                    save=False,
+                    use_saved=True,
                 )
                 dbpath = f"/{tempdir}/foodprices.sqlite"
                 try:
@@ -83,31 +50,60 @@ class TestWFP:
                     "database": dbpath,
                 }
                 with Database(**params) as database:
-                    session = database.get_session()
+                    now = get_now(retriever)
                     wfp_api = WFPAPI(downloader, retriever)
-                    wfp = WFPFood(
-                        configuration,
-                        tempdir,
-                        wfp_api,
-                        retriever,
-                        session,
-                    )
+                    wfp = WFPMappings(configuration, wfp_api, retriever)
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     assert len(iso3_to_showcase_url) == 88
-                    source_overrides = wfp.read_source_overrides()
-                    assert len(source_overrides) == 24
+                    iso3_to_source = wfp.read_source_overrides()
+                    assert len(iso3_to_source) == 24
                     countries = wfp.get_countries()
                     assert len(countries) == 291
                     assert countries[100:102] == [
                         {"iso3": "GTM", "name": "Guatemala"},
                         {"iso3": "GUF", "name": "French Guiana"},
                     ]
-                    wfp.build_mappings()
-                    (
-                        dataset,
-                        showcase,
-                        qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("COG")
+                    commodity_to_category, dbcommodities = (
+                        wfp.build_commodity_category_mapping()
+                    )
+                    assert len(commodity_to_category) == 1072
+
+                    setup_currency(now, retriever, wfp_api)
+                    dataset_generator = DatasetGenerator(
+                        now,
+                        configuration,
+                        tempdir,
+                        iso3_to_showcase_url,
+                        iso3_to_source,
+                        5,
+                    )
+                    dbupdater = DBUpdater(configuration, database)
+                    dbupdater.update_commodities(dbcommodities)
+
+                    countryiso3 = "COG"
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    )
+                    wfp_food = WFPFood(
+                        countryiso3,
+                        configuration,
+                        iso3_to_showcase_url.get(countryiso3),
+                        iso3_to_source.get(countryiso3),
+                        commodity_to_category,
+                    )
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
+                    rows, markets, sources = wfp_food.generate_rows()
+                    dataset, qc_indicators, dbprices = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
+                    )
+
+                    time_period = dataset.get_time_period()
+                    hdx_url = dataset.get_hdx_url()
+                    dbupdater.update_tables(
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                    )
                     logger.info("Generated COG")
                     assert dataset == {
                         "name": "wfp-food-prices-for-congo",
@@ -221,11 +217,31 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                     ]
-                    (
-                        dataset,
-                        showcase,
-                        qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("BLR")
+
+                    countryiso3 = "BLR"
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    )
+                    wfp_food = WFPFood(
+                        countryiso3,
+                        configuration,
+                        iso3_to_showcase_url.get(countryiso3),
+                        iso3_to_source.get(countryiso3),
+                        commodity_to_category,
+                    )
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
+                    rows, markets, sources = wfp_food.generate_rows()
+                    dataset, qc_indicators, dbprices = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
+                    )
+
+                    time_period = dataset.get_time_period()
+                    hdx_url = dataset.get_hdx_url()
+                    dbupdater.update_tables(
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                    )
                     logger.info("Generated BLR")
                     assert dataset == {
                         "name": "wfp-food-prices-for-belarus",
@@ -280,20 +296,40 @@ class TestWFP:
                     assert showcase is None
                     assert qc_indicators == [
                         {
-                            "code": "Minsk City-Minsk City-Minsk-Bread (high grade flour)-KG-Retail-BYR",
+                            "code": "Minsk City-Minsk City-Minsk-Wheat flour-KG-Retail-BYR",
                             "code_col": "#meta+code",
                             "date_col": "#date",
-                            "description": "Price of Bread (high grade flour) ($/KG) in Minsk City/Minsk",
-                            "title": "Price of Bread (high grade flour) in Minsk",
+                            "description": "Price of Wheat flour ($/KG) in Minsk City/Minsk",
+                            "title": "Price of Wheat flour in Minsk",
                             "unit": "US Dollars ($)",
                             "value_col": "#value+usd",
                         }
                     ]
-                    (
-                        dataset,
-                        showcase,
-                        qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("PSE")
+
+                    countryiso3 = "PSE"
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    )
+                    wfp_food = WFPFood(
+                        countryiso3,
+                        configuration,
+                        iso3_to_showcase_url.get(countryiso3),
+                        iso3_to_source.get(countryiso3),
+                        commodity_to_category,
+                    )
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
+                    rows, markets, sources = wfp_food.generate_rows()
+                    dataset, qc_indicators, dbprices = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
+                    )
+
+                    time_period = dataset.get_time_period()
+                    hdx_url = dataset.get_hdx_url()
+                    dbupdater.update_tables(
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                    )
                     logger.info("Generated PSE")
                     assert dataset == {
                         "name": "wfp-food-prices-for-state-of-palestine",
@@ -405,11 +441,31 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                     ]
-                    (
-                        dataset,
-                        showcase,
-                        qc_indicators,
-                    ) = wfp.generate_dataset_and_showcase("SYR")
+
+                    countryiso3 = "SYR"
+                    dataset, showcase = (
+                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    )
+                    wfp_food = WFPFood(
+                        countryiso3,
+                        configuration,
+                        iso3_to_showcase_url.get(countryiso3),
+                        iso3_to_source.get(countryiso3),
+                        commodity_to_category,
+                    )
+                    dbmarkets = wfp_food.get_price_markets(wfp_api)
+                    rows, markets, sources = wfp_food.generate_rows()
+                    dataset, qc_indicators, dbprices = (
+                        dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
+                    )
+
+                    time_period = dataset.get_time_period()
+                    hdx_url = dataset.get_hdx_url()
+                    dbupdater.update_tables(
+                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                    )
                     logger.info("Generated SYR")
                     assert dataset == {
                         "data_update_frequency": "30",
@@ -520,7 +576,15 @@ class TestWFP:
                             "value_col": "#value+usd",
                         },
                     ]
-                    dataset, showcase = wfp.generate_global_dataset_and_showcase()
+
+                    table_data, start_date, end_date = (
+                        dbupdater.get_data_from_tables()
+                    )
+                    dataset, showcase = (
+                        dataset_generator.generate_global_dataset_and_showcase(
+                            table_data, start_date, end_date
+                        )
+                    )
                     logger.info("Generated global")
                     assert dataset == {
                         "name": "global-wfp-food-prices",
@@ -555,6 +619,37 @@ class TestWFP:
                         "dataset_source": "WFP",
                         "dataset_date": "[2007-01-15T00:00:00 TO 2024-01-15T23:59:59]",
                     }
+                    resources = dataset.get_resources()
+                    assert resources == [
+                        {
+                            "description": "Last 5 years of prices data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP food prices",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Countries data with HXL tags with links to country datasets containing all available historic data",
+                            "format": "csv",
+                            "name": "Global WFP countries",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Commodities data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP commodities",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Markets data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP markets",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                    ]
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",
                         "title": "Global - Food Prices showcase",
@@ -593,6 +688,7 @@ class TestWFP:
                         "wfp_food_prices_pse_qc",
                         "wfp_food_prices_syr",
                         "wfp_food_prices_syr_qc",
+                        "wfp_food_prices_global",
                         "wfp_commodities_global",
                         "wfp_countries_global",
                         "wfp_markets_global",
@@ -600,5 +696,7 @@ class TestWFP:
                         csv_filename = f"{filename}.csv"
                         expected_file = join(fixtures_dir, csv_filename)
                         actual_file = join(tempdir, csv_filename)
-                        logger.info(f"Comparing {actual_file} with {expected_file}")
+                        logger.info(
+                            f"Comparing {actual_file} with {expected_file}"
+                        )
                         assert_files_same(expected_file, actual_file)

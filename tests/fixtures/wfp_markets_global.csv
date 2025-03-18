@@ -1,181 +1,181 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
 #loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
-701,Moungali,COG,Brazzaville,Brazzaville,-4.259167,15.284722
-702,Ouenzé,COG,Brazzaville,Brazzaville,-4.2452176,15.2809247
-703,Mikalou,COG,Brazzaville,Brazzaville,-4.259167,15.284722
-704,Bakandi,COG,Likouala,Impfondo,1.638056,18.066667
-705,Monzombo,COG,Likouala,Betou,3.431111,18.596944
-706,Total,COG,Brazzaville,Brazzaville,-4.259167,15.284722
-707,Grand marché/Fond Ntié-Ntié/Nkouikou,COG,Point-Noire,Pointe-Noire,-4.794722080230713,11.846111297607422
-1112,Sheikh Sa'ad,SYR,Damascus,Damascus,33.5,36.29999923706055
+701,Moungali,COG,Brazzaville,Brazzaville,-4.26,15.28
+702,Ouenzé,COG,Brazzaville,Brazzaville,-4.25,15.28
+703,Mikalou,COG,Brazzaville,Brazzaville,-4.26,15.28
+704,Bakandi,COG,Likouala,Impfondo,1.64,18.07
+705,Monzombo,COG,Likouala,Betou,3.43,18.6
+706,Total,COG,Brazzaville,Brazzaville,-4.26,15.28
+707,Grand marché/Fond Ntié-Ntié/Nkouikou,COG,Point-Noire,Pointe-Noire,-4.79,11.85
+1112,Sheikh Sa'ad,SYR,Damascus,Damascus,33.5,36.3
 1113,Zablatani,SYR,Damascus,Damascus,33.5,36.3
-1114,Barzeh,SYR,Damascus,Damascus,33.566667,36.316667
-1115,Qudsiya,SYR,Rural Damascus,Rural Damascus,33.54999923706055,36.216670989990234
-1116,Hajar Aswad,SYR,Rural Damascus,Darayya,33.463539,36.304439
-1117,Duma,SYR,Rural Damascus,Duma,33.58332824707031,36.400001525878906
-1118,Dar'a,SYR,Dar'a,Dar'a,32.62168884277344,36.10865020751953
-1119,As-Sanamayn,SYR,Dar'a,As-Sanamayn,33.073509216308594,36.183040618896484
-1120,Harra,SYR,Dar'a,As-Sanamayn,33.05,36.0
-1121,Deir-ez-Zor,SYR,Deir-ez-Zor,Deir-ez-Zor,35.335670471191406,40.153831481933594
-1123,Bsaira,SYR,Deir-ez-Zor,Deir-ez-Zor,35.1555611,40.4258417
-1124,Al-Hasakeh,SYR,Al-Hasakeh,Al-Hasakeh,36.481689453125,40.75619125366211
-1125,Quamishli,SYR,Al-Hasakeh,Quamishli,37.05236053466797,41.241371154785156
-1126,Ras Al Ain,SYR,Al-Hasakeh,Ras Al Ain,36.84434127807617,40.069820404052734
-1127,Ar-Raqqa,SYR,Ar-Raqqa,Ar-Raqqa,35.95000076293945,39.01667022705078
-1128,Karama,SYR,Homs,Homs,34.717813,36.697671
-1129,Tell Abiad,SYR,Ar-Raqqa,Tell Abiad,36.6968994140625,38.956451416015625
-1130,Tartous,SYR,Tartous,Tartous,34.890017,35.889063
-1131,Banias,SYR,Tartous,Banyas,35.183333,35.95
-1132,Safita,SYR,Tartous,Safita,34.816667,36.116667
-1133,Lattakia,SYR,Lattakia,Lattakia,35.516667,35.783333
-1134,Jablah,SYR,Lattakia,Jablah,35.361358642578125,35.9263801574707
-1135,Hiffeh,SYR,Lattakia,Al-Haffa,35.5833333,36.0333333
-1136,Hama,SYR,Hama,Hama,35.133333,36.75
-1137,Masyaf,SYR,Hama,Masyaf,35.05915832519531,36.34209060668945
-1138,Muhradah,SYR,Hama,Muhradah,35.24776077270508,36.580928802490234
-1139,Homs,SYR,Homs,Homs,34.733333,36.716667
-1141,Qasir,SYR,Homs,Al-Qusayr,34.511781,36.57641
-1142,Aleppo,SYR,Aleppo,Jebel Saman,36.202778,37.158611
-1143,Menbij,SYR,Aleppo,Menbij,36.526668548583984,37.956390380859375
-1144,Al Bab,SYR,Aleppo,Al Bab,36.372501373291016,37.51778030395508
-1354,Jaramana,SYR,Rural Damascus,Rural Damascus,33.483333,36.35
-1545,Moghambo,SYR,Aleppo,Jebel Saman,36.2195222,37.1253
-1546,Al-Cha'ar,SYR,Aleppo,Jebel Saman,36.2069889,37.1814778
-1547,Idleb,SYR,Idleb,Idleb,35.93096160888672,36.633140563964844
-1548,Al Mayadin,SYR,Deir-ez-Zor,Al Mayadin,35.01667022705078,40.45000076293945
-1549,At-Tall,SYR,Rural Damascus,At Tall,33.59767150878906,36.30033874511719
-1550,Bennsh,SYR,Idleb,Idleb,35.958160400390625,36.71189880371094
-1551,Ekrema,SYR,Homs,Homs,34.705772,36.716534
-1553,Rural Safita,SYR,Tartous,Safita,34.87588119506836,36.257259368896484
-1554,Khan Arnaba,SYR,Quneitra,Quneitra,33.18424987792969,35.89064025878906
-1555,Mzeireb,SYR,Dar'a,Dar'a,32.70878982543945,36.02595138549805
-1556,Shahba,SYR,As-Sweida,Shahba,32.8523289999999,36.6407699999999
-1557,Rafid,SYR,Quneitra,Quneitra,32.95589065551758,35.90195083618164
-1558,Shrebishat,SYR,Damascus,Damascus,33.50694,36.29672
-1559,As-Sweida,SYR,As-Sweida,As-Sweida,32.70000076293945,36.56666946411133
+1114,Barzeh,SYR,Damascus,Damascus,33.57,36.32
+1115,Qudsiya,SYR,Rural Damascus,Rural Damascus,33.55,36.22
+1116,Hajar Aswad,SYR,Rural Damascus,Darayya,33.46,36.3
+1117,Duma,SYR,Rural Damascus,Duma,33.58,36.4
+1118,Dar'a,SYR,Dar'a,Dar'a,32.62,36.11
+1119,As-Sanamayn,SYR,Dar'a,As-Sanamayn,33.07,36.18
+1120,Harra,SYR,Dar'a,As-Sanamayn,33.05,36
+1121,Deir-ez-Zor,SYR,Deir-ez-Zor,Deir-ez-Zor,35.34,40.15
+1123,Bsaira,SYR,Deir-ez-Zor,Deir-ez-Zor,35.16,40.43
+1124,Al-Hasakeh,SYR,Al-Hasakeh,Al-Hasakeh,36.48,40.76
+1125,Quamishli,SYR,Al-Hasakeh,Quamishli,37.05,41.24
+1126,Ras Al Ain,SYR,Al-Hasakeh,Ras Al Ain,36.84,40.07
+1127,Ar-Raqqa,SYR,Ar-Raqqa,Ar-Raqqa,35.95,39.02
+1128,Karama,SYR,Homs,Homs,34.72,36.7
+1129,Tell Abiad,SYR,Ar-Raqqa,Tell Abiad,36.7,38.96
+1130,Tartous,SYR,Tartous,Tartous,34.89,35.89
+1131,Banias,SYR,Tartous,Banyas,35.18,35.95
+1132,Safita,SYR,Tartous,Safita,34.82,36.12
+1133,Lattakia,SYR,Lattakia,Lattakia,35.52,35.78
+1134,Jablah,SYR,Lattakia,Jablah,35.36,35.93
+1135,Hiffeh,SYR,Lattakia,Al-Haffa,35.58,36.03
+1136,Hama,SYR,Hama,Hama,35.13,36.75
+1137,Masyaf,SYR,Hama,Masyaf,35.06,36.34
+1138,Muhradah,SYR,Hama,Muhradah,35.25,36.58
+1139,Homs,SYR,Homs,Homs,34.73,36.72
+1141,Qasir,SYR,Homs,Al-Qusayr,34.51,36.58
+1142,Aleppo,SYR,Aleppo,Jebel Saman,36.2,37.16
+1143,Menbij,SYR,Aleppo,Menbij,36.53,37.96
+1144,Al Bab,SYR,Aleppo,Al Bab,36.37,37.52
+1354,Jaramana,SYR,Rural Damascus,Rural Damascus,33.48,36.35
+1545,Moghambo,SYR,Aleppo,Jebel Saman,36.22,37.13
+1546,Al-Cha'ar,SYR,Aleppo,Jebel Saman,36.21,37.18
+1547,Idleb,SYR,Idleb,Idleb,35.93,36.63
+1548,Al Mayadin,SYR,Deir-ez-Zor,Al Mayadin,35.02,40.45
+1549,At-Tall,SYR,Rural Damascus,At Tall,33.6,36.3
+1550,Bennsh,SYR,Idleb,Idleb,35.96,36.71
+1551,Ekrema,SYR,Homs,Homs,34.71,36.72
+1553,Rural Safita,SYR,Tartous,Safita,34.88,36.26
+1554,Khan Arnaba,SYR,Quneitra,Quneitra,33.18,35.89
+1555,Mzeireb,SYR,Dar'a,Dar'a,32.71,36.03
+1556,Shahba,SYR,As-Sweida,Shahba,32.85,36.64
+1557,Rafid,SYR,Quneitra,Quneitra,32.96,35.9
+1558,Shrebishat,SYR,Damascus,Damascus,33.51,36.3
+1559,As-Sweida,SYR,As-Sweida,As-Sweida,32.7,36.57
 1563,Damascus,SYR,Damascus,Damascus,33.5,36.3
-1820,Sibiti,COG,Lekoumou,Sibiti,-3.68465129999999,13.3500652
-1821,Nkayi,COG,Bouenza,Nkayi,-4.1828379,13.2865504
-1822,Owando,COG,Cuvette,Owando,-0.4829632,15.8936224
-1897,Qaryatein,SYR,Homs,Homs,34.230369567871094,37.23897933959961
-1924,Jandar,SYR,Homs,Homs,34.49211883544922,36.777950286865234
-1925,Nubul,SYR,Aleppo,A'zaz,36.36174011230469,37.00904083251953
-1926,A'zaz,SYR,Aleppo,A'zaz,36.585899353027344,37.045650482177734
-1927,Ar-Rastan,SYR,Homs,Ar-Rastan,34.916839599609375,36.73331832885742
-1928,Talbiseh,SYR,Homs,Ar-Rastan,34.84375,36.73012161254883
-1929,Inshaat,SYR,Homs,Homs,34.72422790527344,36.69846725463867
-1930,Al Waer,SYR,Homs,Homs,34.74205017089844,36.675960540771484
-1931,Hula,SYR,Homs,Homs,34.89685821533203,36.49570846557617
-1948,As-Salamiyeh,SYR,Hama,As-Salamiyeh,35.01789855957031,37.0711784362793
-1949,Afrin,SYR,Aleppo,Afrin,36.45270919799805,36.81686019897461
-1995,Tubas,PSE,West Bank,Tubas,32.32286834716797,35.37103271484375
-1996,Jenin,PSE,West Bank,Jenin,32.4646353,35.2938591
-1997,Tulkarem,PSE,West Bank,Tulkarm,32.31660079956055,35.038883209228516
-1998,Nablus,PSE,West Bank,Nablus,32.21552276611328,35.24537658691406
-1999,Qalqiliya,PSE,West Bank,Qalqilya,32.186561584472656,34.9755973815918
-2000,Salfit,PSE,West Bank,Salfit,32.08448028564453,35.17774963378906
-2001,Ramallah,PSE,West Bank,Ramallah and Albireh,31.90593719482422,35.192935943603516
-2002,Jericho,PSE,West Bank,Jericho,31.859323501586914,35.47391128540039
-2003,Jerusalem,PSE,West Bank,Jerusalem,31.78514289855957,35.2330322265625
-2004,Bethlehem,PSE,West Bank,Bethlehem,31.71175765991211,35.20243453979492
-2005,Hebron,PSE,West Bank,Hebron,31.523630142211914,35.09369659423828
-2006,Gaza North,PSE,Gaza Strip,North Gaza,31.53506088256836,34.48357391357422
-2007,Gaza,PSE,Gaza Strip,Gaza,31.50607681274414,34.462745666503906
-2008,Deir Al-Balah,PSE,Gaza Strip,Deir Al Balah,31.416982650756836,34.34881591796875
-2009,Khan Yunis,PSE,Gaza Strip,Kan Younis,31.34003448486328,34.30643081665039
-2010,Rafah,PSE,Gaza Strip,Rafah,31.27022933959961,34.256168365478516
-2095,Kinkala,COG,Pool,Kinkala,-4.361388683319092,14.764444351196289
-2237,Hrak,SYR,Dar'a,Izra',32.7518310546875,36.264404296875
-2238,Eastern Ghouta,SYR,Rural Damascus,Duma,33.57099151611328,36.407440185546875
-2242,Dar'a (XB),SYR,Dar'a,Dar'a,32.608951568603516,36.11513137817383
-2243,Jizeh,SYR,Dar'a,Dar'a,32.56856918334961,36.32245635986328
-2244,Al Fiq,SYR,Quneitra,Al Fiq,32.8761100769043,35.877079010009766
-2245,As-Sweida (XB),SYR,As-Sweida,As-Sweida,32.58395004272461,36.44029998779297
-2522,Al Malaab,SYR,Homs,Homs,34.7302903,36.7167968
-2523,Izr'a,SYR,Dar'a,Izra',32.8548876,36.2721783
-2524,Sayda,SYR,Quneitra,Al Fiq,32.8752123,35.8787037
+1820,Sibiti,COG,Lekoumou,Sibiti,-3.68,13.35
+1821,Nkayi,COG,Bouenza,Nkayi,-4.18,13.29
+1822,Owando,COG,Cuvette,Owando,-0.48,15.89
+1897,Qaryatein,SYR,Homs,Homs,34.23,37.24
+1924,Jandar,SYR,Homs,Homs,34.49,36.78
+1925,Nubul,SYR,Aleppo,A'zaz,36.36,37.01
+1926,A'zaz,SYR,Aleppo,A'zaz,36.59,37.05
+1927,Ar-Rastan,SYR,Homs,Ar-Rastan,34.92,36.73
+1928,Talbiseh,SYR,Homs,Ar-Rastan,34.84,36.73
+1929,Inshaat,SYR,Homs,Homs,34.72,36.7
+1930,Al Waer,SYR,Homs,Homs,34.74,36.68
+1931,Hula,SYR,Homs,Homs,34.9,36.5
+1948,As-Salamiyeh,SYR,Hama,As-Salamiyeh,35.02,37.07
+1949,Afrin,SYR,Aleppo,Afrin,36.45,36.82
+1995,Tubas,PSE,West Bank,Tubas,32.32,35.37
+1996,Jenin,PSE,West Bank,Jenin,32.46,35.29
+1997,Tulkarem,PSE,West Bank,Tulkarm,32.32,35.04
+1998,Nablus,PSE,West Bank,Nablus,32.22,35.25
+1999,Qalqiliya,PSE,West Bank,Qalqilya,32.19,34.98
+2000,Salfit,PSE,West Bank,Salfit,32.08,35.18
+2001,Ramallah,PSE,West Bank,Ramallah and Albireh,31.91,35.19
+2002,Jericho,PSE,West Bank,Jericho,31.86,35.47
+2003,Jerusalem,PSE,West Bank,Jerusalem,31.79,35.23
+2004,Bethlehem,PSE,West Bank,Bethlehem,31.71,35.2
+2005,Hebron,PSE,West Bank,Hebron,31.52,35.09
+2006,Gaza North,PSE,Gaza Strip,North Gaza,31.54,34.48
+2007,Gaza,PSE,Gaza Strip,Gaza,31.51,34.46
+2008,Deir Al-Balah,PSE,Gaza Strip,Deir Al Balah,31.42,34.35
+2009,Khan Yunis,PSE,Gaza Strip,Kan Younis,31.34,34.31
+2010,Rafah,PSE,Gaza Strip,Rafah,31.27,34.26
+2095,Kinkala,COG,Pool,Kinkala,-4.36,14.76
+2237,Hrak,SYR,Dar'a,Izra',32.75,36.26
+2238,Eastern Ghouta,SYR,Rural Damascus,Duma,33.57,36.41
+2242,Dar'a (XB),SYR,Dar'a,Dar'a,32.61,36.12
+2243,Jizeh,SYR,Dar'a,Dar'a,32.57,36.32
+2244,Al Fiq,SYR,Quneitra,Al Fiq,32.88,35.88
+2245,As-Sweida (XB),SYR,As-Sweida,As-Sweida,32.58,36.44
+2522,Al Malaab,SYR,Homs,Homs,34.73,36.72
+2523,Izr'a,SYR,Dar'a,Izra',32.85,36.27
+2524,Sayda,SYR,Quneitra,Al Fiq,32.88,35.88
 2618,Minsk,BLR,Minsk City,Minsk City,53.91,27.56
-2675,As-Safira,SYR,Aleppo,As-Safira,36.07915115356445,37.372840881347656
-2676,Atareb,SYR,Aleppo,Jebel Saman,36.139400482177734,36.82350158691406
-2677,Der Hafir,SYR,Aleppo,Al Bab,36.15638732910156,37.703697204589844
-2678,Al Tabqah,SYR,Ar-Raqqa,Ath-Thawrah,35.83702850341797,38.54302215576172
-2679,Al Balad,SYR,Dar'a,Dar'a,32.60501480102539,36.09636306762695
-2680,Al Midan,SYR,Damascus,Damascus,33.493309020996094,36.298118591308594
-2681,Kisweh,SYR,Rural Damascus,Rural Damascus,33.355899810791016,36.25006103515625
-2682,Al Makhrim,SYR,Homs,Al Makhrim,34.852237701416016,37.00490188598633
-2683,As-Suqaylabiyah,SYR,Hama,As-Suqaylabiyah,35.36290740966797,36.39654541015625
-2684,Ein Terma,SYR,Rural Damascus,Rural Damascus,33.510807037353516,36.344295501708984
-2685,Hawash,SYR,Homs,Tall Kalakh,34.75777816772461,36.320465087890625
-2686,Nawa,SYR,Dar'a,Izra',32.88545227050781,36.037723541259766
-2687,Saqba,SYR,Rural Damascus,Rural Damascus,33.51652145385742,36.37980270385742
-2689,Ein Issa,SYR,Ar-Raqqa,Tell Abiad,36.390018463134766,38.86035919189453
-2690,Al Kom,SYR,Quneitra,Quneitra,33.203853607177734,35.947391510009766
-2691,Al Hamdaneya,SYR,Aleppo,Jebel Saman,36.1715202331543,37.10682678222656
-2706,Harem,SYR,Idleb,Harim,36.213314056396484,36.51795959472656
-2784,Maskanah,SYR,Aleppo,Menbij,35.96780776977539,38.03180694580078
-2785,Bu Kamal,SYR,Deir-ez-Zor,Abu Kamal,34.46037292480469,40.90558624267578
-3738,Mossaka Centre,COG,Cuvette,Mossaka,-1.228812,16.79632
-3739,Loukolela Centre,COG,Cuvette,Loukolela,-1.039356,17.10848
-3740,Liranga Centre,COG,Likouala,Liranga,-0.6646576,17.61073
-3741,Impfondo Centre,COG,Likouala,Impfondo,1.613293,18.06229
-3742,Dongou Centre,COG,Likouala,Dongou,2.041945,18.05422
-3743,Betou Centre,COG,Likouala,Betou,3.057103,18.51775
-4158,Gamboma,COG,Plateaux,Gamboma,-1.874795,15.870313
-4159,Mindouli,COG,Pool,Mindouli,-4.273433,14.358015
-4612,Jisr al shughur,SYR,Idleb,Jisr-Ash-Shugur,35.81963,36.30557
-5079,Busra al Sham,SYR,Dar'a,Dar'a,32.516563,36.474507
-5251,Salkhad,SYR,As-Sweida,Salkhad,32.485371,36.71083
-5252,Qarraya,SYR,As-Sweida,Salkhad,32.543114,36.598052
-5253,Maadan,SYR,Ar-Raqqa,Ar-Raqqa,35.761,39.5918
-5254,Sabkha,SYR,Ar-Raqqa,Ar-Raqqa,35.814376,39.265501
-5255,Maabada,SYR,Al-Hasakeh,Al-Malikeyyeh,37.01744,41.956307
-5256,Tell Tamer,SYR,Al-Hasakeh,Al-Hasakeh,36.654035,40.371572
-5257,Sbeikhan,SYR,Deir-ez-Zor,Al Mayadin,34.855367,40.601223
-5258,Shmetiyeh,SYR,Deir-ez-Zor,Deir-ez-Zor,35.472536,39.938954
-5259,Tebni,SYR,Deir-ez-Zor,Deir-ez-Zor,35.605739,39.822792
-5278,Quriyeh,SYR,Deir-ez-Zor,Al Mayadin,34.96112,40.518978
-5641,Atmeh ,SYR,Idleb,Harim,36.31242675,36.68738362
-5642,Qah,SYR,Idleb,Harim,36.29553285,36.72643661
-5643,Alkarama,SYR,Idleb,Harim,36.294379,36.698641
-5644,Sarmada,SYR,Idleb,Harim,36.18675202,36.72589426
-5645,Dana,SYR,Idleb,Harim,36.21789296,36.77915056
-5646,Deir Hassan,SYR,Idleb,Harim,36.23415421,36.76253828
-5928,Senjar,SYR,Idleb,Al Ma'ra,35.58925,37.00382
-5929,Qurdaha,SYR,Lattakia,Al-Qardaha,35.455994,36.055383
-5930,Sweiseh,SYR,Quneitra,Quneitra,32.995599,35.930679
-5931,Jdaideh,SYR,Rural Damascus,Qatana,33.438187,36.163792
-5932,Sheikh Badr,SYR,Tartous,Sheikh Badr,34.990974,36.079144
-6701,Debsi Afnan,SYR,Ar-Raqqa,Ath-Thawrah,35.811648983280705,38.27025124856421
-6750,Ashara,SYR,Deir-ez-Zor,Al Mayadin,34.92078011,40.55894308
-6833,Hazano,SYR,Idleb,Idleb,36.09484245,36.71765699
-6834,Kelly,SYR,Idleb,Idleb,36.11075048,36.69740044
-6835,Batbu,SYR,Aleppo,Jebel Saman,36.1353235222222,36.7370888444444
-7775,Brazzaville,COG,Brazzaville,Brazzaville,-4.258738,15.260514
-8199,Bazagha,SYR,Aleppo,Al Bab,36.3830198,37.56126553
-8200,Qubasin,SYR,Aleppo,Al Bab,36.42218721,37.5580499
-8201,Aghtrin,SYR,Aleppo,A'zaz,36.51099166,37.33467722
-8202,Sejou,SYR,Aleppo,A'zaz,36.61995272,37.07538511
-8203,Suran,SYR,Aleppo,A'zaz,36.55707617,37.19385883
-8204,Jarablus,SYR,Aleppo,Jarablus,36.81727077,38.01111596
-8205,Abzimo,SYR,Aleppo,Jebel Saman,36.16739261,36.86550118
-8206,Darret Azza,SYR,Aleppo,Jebel Saman,36.28189201,36.85186247
-8207,Der Saman,SYR,Aleppo,Jebel Saman,36.32608881,36.8371903
-8208,Jeineh,SYR,Aleppo,Jebel Saman,36.11784929,36.80031141
-8209,Kafr Karmin,SYR,Aleppo,Jebel Saman,36.16257799,36.79398125
-8210,Armanaz,SYR,Idleb,Harim,36.08346292,36.50246121
-8211,Ma'arrat Tamasrin,SYR,Idleb,Idleb,36.01408442,36.67241182
-8215,Gaza Strip,PSE,Gaza Strip,Kan Younis,31.34611,34.32573
-8216,West Bank,PSE,West Bank,Ramallah and Albireh,31.97314398,35.32992
-8237,Salqin,SYR,Idleb,Harim,36.1412404,36.4520311
-8729,Mfouati,COG,Bouenza,Mfouati,-4.403611,13.813056
-8730,Mouyondzi,COG,Bouenza,Mouyondzi,-3.993611,13.920833
-8731,Madingou,COG,Bouenza,Madingou,-4.163889,13.551667
-8732,Loudima,COG,Bouenza,Loudima,-4.121389,13.051389
-8733,Ngabé,COG,Pool,Ngabe,-3.215,16.166667
-8735,Thanry,COG,Likouala,Dongou,2.636944,17.1825
-8736,Moualé,COG,Likouala,Enyelle,3.373056,17.180833
-8737,Enyellé,COG,Likouala,Enyelle,2.814167,18.016944
-8738,Dongou,COG,Likouala,Enyelle,2.685556,17.729167
-8739,Epena,COG,Likouala,Epena,1.353889,17.450833
-8742,Mokabi,COG,Likouala,Enyelle,3.417222,16.798889
-8743,Loudima Gare,COG,Bouenza,Loudima,-4.0605556,13.04638888888
+2675,As-Safira,SYR,Aleppo,As-Safira,36.08,37.37
+2676,Atareb,SYR,Aleppo,Jebel Saman,36.14,36.82
+2677,Der Hafir,SYR,Aleppo,Al Bab,36.16,37.7
+2678,Al Tabqah,SYR,Ar-Raqqa,Ath-Thawrah,35.84,38.54
+2679,Al Balad,SYR,Dar'a,Dar'a,32.61,36.1
+2680,Al Midan,SYR,Damascus,Damascus,33.49,36.3
+2681,Kisweh,SYR,Rural Damascus,Rural Damascus,33.36,36.25
+2682,Al Makhrim,SYR,Homs,Al Makhrim,34.85,37
+2683,As-Suqaylabiyah,SYR,Hama,As-Suqaylabiyah,35.36,36.4
+2684,Ein Terma,SYR,Rural Damascus,Rural Damascus,33.51,36.34
+2685,Hawash,SYR,Homs,Tall Kalakh,34.76,36.32
+2686,Nawa,SYR,Dar'a,Izra',32.89,36.04
+2687,Saqba,SYR,Rural Damascus,Rural Damascus,33.52,36.38
+2689,Ein Issa,SYR,Ar-Raqqa,Tell Abiad,36.39,38.86
+2690,Al Kom,SYR,Quneitra,Quneitra,33.2,35.95
+2691,Al Hamdaneya,SYR,Aleppo,Jebel Saman,36.17,37.11
+2706,Harem,SYR,Idleb,Harim,36.21,36.52
+2784,Maskanah,SYR,Aleppo,Menbij,35.97,38.03
+2785,Bu Kamal,SYR,Deir-ez-Zor,Abu Kamal,34.46,40.91
+3738,Mossaka Centre,COG,Cuvette,Mossaka,-1.23,16.8
+3739,Loukolela Centre,COG,Cuvette,Loukolela,-1.04,17.11
+3740,Liranga Centre,COG,Likouala,Liranga,-0.66,17.61
+3741,Impfondo Centre,COG,Likouala,Impfondo,1.61,18.06
+3742,Dongou Centre,COG,Likouala,Dongou,2.04,18.05
+3743,Betou Centre,COG,Likouala,Betou,3.06,18.52
+4158,Gamboma,COG,Plateaux,Gamboma,-1.87,15.87
+4159,Mindouli,COG,Pool,Mindouli,-4.27,14.36
+4612,Jisr al shughur,SYR,Idleb,Jisr-Ash-Shugur,35.82,36.31
+5079,Busra al Sham,SYR,Dar'a,Dar'a,32.52,36.47
+5251,Salkhad,SYR,As-Sweida,Salkhad,32.49,36.71
+5252,Qarraya,SYR,As-Sweida,Salkhad,32.54,36.6
+5253,Maadan,SYR,Ar-Raqqa,Ar-Raqqa,35.76,39.59
+5254,Sabkha,SYR,Ar-Raqqa,Ar-Raqqa,35.81,39.27
+5255,Maabada,SYR,Al-Hasakeh,Al-Malikeyyeh,37.02,41.96
+5256,Tell Tamer,SYR,Al-Hasakeh,Al-Hasakeh,36.65,40.37
+5257,Sbeikhan,SYR,Deir-ez-Zor,Al Mayadin,34.86,40.6
+5258,Shmetiyeh,SYR,Deir-ez-Zor,Deir-ez-Zor,35.47,39.94
+5259,Tebni,SYR,Deir-ez-Zor,Deir-ez-Zor,35.61,39.82
+5278,Quriyeh,SYR,Deir-ez-Zor,Al Mayadin,34.96,40.52
+5641,Atmeh ,SYR,Idleb,Harim,36.31,36.69
+5642,Qah,SYR,Idleb,Harim,36.3,36.73
+5643,Alkarama,SYR,Idleb,Harim,36.29,36.7
+5644,Sarmada,SYR,Idleb,Harim,36.19,36.73
+5645,Dana,SYR,Idleb,Harim,36.22,36.78
+5646,Deir Hassan,SYR,Idleb,Harim,36.23,36.76
+5928,Senjar,SYR,Idleb,Al Ma'ra,35.59,37
+5929,Qurdaha,SYR,Lattakia,Al-Qardaha,35.46,36.06
+5930,Sweiseh,SYR,Quneitra,Quneitra,33,35.93
+5931,Jdaideh,SYR,Rural Damascus,Qatana,33.44,36.16
+5932,Sheikh Badr,SYR,Tartous,Sheikh Badr,34.99,36.08
+6701,Debsi Afnan,SYR,Ar-Raqqa,Ath-Thawrah,35.81,38.27
+6750,Ashara,SYR,Deir-ez-Zor,Al Mayadin,34.92,40.56
+6833,Hazano,SYR,Idleb,Idleb,36.09,36.72
+6834,Kelly,SYR,Idleb,Idleb,36.11,36.7
+6835,Batbu,SYR,Aleppo,Jebel Saman,36.14,36.74
+7775,Brazzaville,COG,Brazzaville,Brazzaville,-4.26,15.26
+8199,Bazagha,SYR,Aleppo,Al Bab,36.38,37.56
+8200,Qubasin,SYR,Aleppo,Al Bab,36.42,37.56
+8201,Aghtrin,SYR,Aleppo,A'zaz,36.51,37.33
+8202,Sejou,SYR,Aleppo,A'zaz,36.62,37.08
+8203,Suran,SYR,Aleppo,A'zaz,36.56,37.19
+8204,Jarablus,SYR,Aleppo,Jarablus,36.82,38.01
+8205,Abzimo,SYR,Aleppo,Jebel Saman,36.17,36.87
+8206,Darret Azza,SYR,Aleppo,Jebel Saman,36.28,36.85
+8207,Der Saman,SYR,Aleppo,Jebel Saman,36.33,36.84
+8208,Jeineh,SYR,Aleppo,Jebel Saman,36.12,36.8
+8209,Kafr Karmin,SYR,Aleppo,Jebel Saman,36.16,36.79
+8210,Armanaz,SYR,Idleb,Harim,36.08,36.5
+8211,Ma'arrat Tamasrin,SYR,Idleb,Idleb,36.01,36.67
+8215,Gaza Strip,PSE,Gaza Strip,Kan Younis,31.35,34.33
+8216,West Bank,PSE,West Bank,Ramallah and Albireh,31.97,35.33
+8237,Salqin,SYR,Idleb,Harim,36.14,36.45
+8729,Mfouati,COG,Bouenza,Mfouati,-4.4,13.81
+8730,Mouyondzi,COG,Bouenza,Mouyondzi,-3.99,13.92
+8731,Madingou,COG,Bouenza,Madingou,-4.16,13.55
+8732,Loudima,COG,Bouenza,Loudima,-4.12,13.05
+8733,Ngabé,COG,Pool,Ngabe,-3.21,16.17
+8735,Thanry,COG,Likouala,Dongou,2.64,17.18
+8736,Moualé,COG,Likouala,Enyelle,3.37,17.18
+8737,Enyellé,COG,Likouala,Enyelle,2.81,18.02
+8738,Dongou,COG,Likouala,Enyelle,2.69,17.73
+8739,Epena,COG,Likouala,Epena,1.35,17.45
+8742,Mokabi,COG,Likouala,Enyelle,3.42,16.8
+8743,Loudima Gare,COG,Bouenza,Loudima,-4.06,13.05
