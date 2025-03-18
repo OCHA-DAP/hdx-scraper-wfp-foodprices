@@ -278,7 +278,7 @@ ruamel-yaml-clib==0.2.12
     # via
     #   -c requirements.txt
     #   ruamel-yaml
-setuptools==76.0.0
+setuptools==76.1.0
     # via
     #   -c requirements.txt
     #   ckanapi
@@ -286,6 +286,10 @@ shellingham==1.5.4
     # via
     #   -c requirements.txt
     #   typer
+sigfig==1.3.19
+    # via
+    #   -c requirements.txt
+    #   hdx-scraper-wfp-foodprices (pyproject.toml)
 simpleeval==1.0.3
     # via
     #   -c requirements.txt
@@ -301,6 +305,10 @@ six==1.17.0
     #   pockets
     #   python-dateutil
     #   sphinxcontrib-napoleon
+sortedcontainers==2.4.0
+    # via
+    #   -c requirements.txt
+    #   sigfig
 sphinxcontrib-napoleon==0.7
     # via
     #   -c requirements.txt

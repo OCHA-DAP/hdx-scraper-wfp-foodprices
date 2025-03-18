@@ -38,6 +38,7 @@ dependencies = [
     "hdx-python-country>= 3.8.8",
     "hdx-python-utilities>= 3.8.4",
     "hdx-python-database>= 1.3.6",
+    "sigfig",
 ]
 dynamic = ["version"]
 

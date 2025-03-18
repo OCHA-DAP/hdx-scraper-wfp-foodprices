@@ -12,9 +12,9 @@ from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.facades.keyword_arguments import facade
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.currency_setup import setup_currency
 from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
 from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
+from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
 from hdx.scraper.wfp.foodprices.wfp_food import WFPFood
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.downloader import Download
@@ -62,6 +62,7 @@ def main(
                 }
                 with Database(**params) as database:
                     configuration = Configuration.read()
+                    now = get_now(retriever)
                     wfp_api = WFPAPI(token_downloader, retriever)
                     wfp_api.update_retry_params(attempts=5, wait=3600)
                     wfp = WFPMappings(configuration, wfp_api, retriever)
@@ -74,14 +75,14 @@ def main(
                     commodity_to_category, dbcommodities = (
                         wfp.build_commodity_category_mapping()
                     )
-                    setup_currency(retriever, wfp_api)
+                    setup_currency(now, retriever, wfp_api)
                     dataset_generator = DatasetGenerator(
                         configuration,
                         folder,
                         iso3_to_showcase_url,
                         iso3_to_source,
                     )
-                    dbupdater = DBUpdater(configuration, database)
+                    dbupdater = DBUpdater(now, configuration, database)
                     dbupdater.update_commodities(dbcommodities)
 
                     def process_country(country: Dict[str, str]) -> None:

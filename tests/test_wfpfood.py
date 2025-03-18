@@ -10,9 +10,9 @@ from os.path import join
 
 from hdx.database import Database
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.currency_setup import setup_currency
 from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
 from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
+from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
 from hdx.scraper.wfp.foodprices.wfp_food import WFPFood
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.compare import assert_files_same
@@ -50,6 +50,7 @@ class TestWFP:
                     "database": dbpath,
                 }
                 with Database(**params) as database:
+                    now = get_now(retriever)
                     wfp_api = WFPAPI(downloader, retriever)
                     wfp = WFPMappings(configuration, wfp_api, retriever)
                     iso3_to_showcase_url = wfp.read_region_mapping()
@@ -67,14 +68,14 @@ class TestWFP:
                     )
                     assert len(commodity_to_category) == 1072
 
-                    setup_currency(retriever, wfp_api)
+                    setup_currency(now, retriever, wfp_api)
                     dataset_generator = DatasetGenerator(
                         configuration,
                         tempdir,
                         iso3_to_showcase_url,
                         iso3_to_source,
                     )
-                    dbupdater = DBUpdater(configuration, database)
+                    dbupdater = DBUpdater(now, configuration, database)
                     dbupdater.update_commodities(dbcommodities)
 
                     countryiso3 = "COG"
@@ -293,11 +294,11 @@ class TestWFP:
                     assert showcase is None
                     assert qc_indicators == [
                         {
-                            "code": "Minsk City-Minsk City-Minsk-Bread (high grade flour)-KG-Retail-BYR",
+                            "code": "Minsk City-Minsk City-Minsk-Wheat flour-KG-Retail-BYR",
                             "code_col": "#meta+code",
                             "date_col": "#date",
-                            "description": "Price of Bread (high grade flour) ($/KG) in Minsk City/Minsk",
-                            "title": "Price of Bread (high grade flour) in Minsk",
+                            "description": "Price of Wheat flour ($/KG) in Minsk City/Minsk",
+                            "title": "Price of Wheat flour in Minsk",
                             "unit": "US Dollars ($)",
                             "value_col": "#value+usd",
                         }
@@ -616,6 +617,37 @@ class TestWFP:
                         "dataset_source": "WFP",
                         "dataset_date": "[2007-01-15T00:00:00 TO 2024-01-15T23:59:59]",
                     }
+                    resources = dataset.get_resources()
+                    assert resources == [
+                        {
+                            "description": "Last 5 years of prices data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP food prices",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Countries data with HXL tags with links to country datasets containing all available historic data",
+                            "format": "csv",
+                            "name": "Global WFP countries",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Commodities data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP commodities",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                        {
+                            "description": "Markets data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP markets",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
+                    ]
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",
                         "title": "Global - Food Prices showcase",
@@ -654,6 +686,7 @@ class TestWFP:
                         "wfp_food_prices_pse_qc",
                         "wfp_food_prices_syr",
                         "wfp_food_prices_syr_qc",
+                        "wfp_food_prices_global",
                         "wfp_commodities_global",
                         "wfp_countries_global",
                         "wfp_markets_global",

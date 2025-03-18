@@ -9,6 +9,8 @@ from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
+from hdx.scraper.wfp.foodprices.utilities import round_min_digits
+from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
 
@@ -122,7 +124,11 @@ class DatasetGenerator:
                 commodities[(commodity, unit, pricetype, currency)]
             ):
                 qc_rows.append(
-                    {"date": date, "code": code, "usdprice": usdprice}
+                    {
+                        "date": date,
+                        "code": code,
+                        "usdprice": round_min_digits(usdprice),
+                    }
                 )
             chosen_commodities.add(commodity)
             marketname = market_name
@@ -203,16 +209,22 @@ class DatasetGenerator:
                     "admin1": adm1,
                     "admin2": adm2,
                     "market": market_name,
-                    "latitude": lat,
-                    "longitude": lon,
+                    "latitude": number_format(
+                        lat, format="%.2f", trailing_zeros=False
+                    ),
+                    "longitude": number_format(
+                        lon, format="%.2f", trailing_zeros=False
+                    ),
                     "category": category,
                     "commodity": commodity,
                     "unit": unit,
                     "priceflag": priceflag,
                     "pricetype": pricetype,
                     "currency": currency,
-                    "price": price,
-                    "usdprice": usdprice,
+                    "price": number_format(
+                        price, format="%.2f", trailing_zeros=False
+                    ),
+                    "usdprice": round_min_digits(usdprice),
                 }
 
         dataset.generate_resource_from_iterable(
@@ -246,10 +258,25 @@ class DatasetGenerator:
         dataset["dataset_source"] = "WFP"
         dataset.set_time_period(start_date, end_date)
 
+        filename = "wfp_food_prices_global.csv"
+        resourcedata = {
+            "name": "Global WFP food prices",
+            "description": "Last 5 years of prices data with HXL tags",
+            "format": "csv",
+        }
+        info = table_data["DBPrice"]
+        dataset.generate_resource_from_iterable(
+            info["headers"],
+            info["rows"],
+            info["hxltags"],
+            self._folder,
+            filename,
+            resourcedata,
+        )
         filename = "wfp_countries_global.csv"
         resourcedata = {
             "name": "Global WFP countries",
-            "description": "Countries data with HXL tags including links to country datasets",
+            "description": "Countries data with HXL tags with links to country datasets containing all available historic data",
             "format": "csv",
         }
         info = table_data["DBCountry"]

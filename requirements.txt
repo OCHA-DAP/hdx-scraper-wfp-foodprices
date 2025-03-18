@@ -155,10 +155,12 @@ ruamel-yaml==0.18.10
     # via hdx-python-utilities
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
-setuptools==76.0.0
+setuptools==76.1.0
     # via ckanapi
 shellingham==1.5.4
     # via typer
+sigfig==1.3.19
+    # via hdx-scraper-wfp-foodprices (pyproject.toml)
 simpleeval==1.0.3
     # via frictionless
 simplejson==3.20.1
@@ -169,6 +171,8 @@ six==1.17.0
     #   pockets
     #   python-dateutil
     #   sphinxcontrib-napoleon
+sortedcontainers==2.4.0
+    # via sigfig
 sphinxcontrib-napoleon==0.7
     # via defopt
 sqlalchemy==2.0.39

@@ -1,15 +1,22 @@
 from datetime import datetime
 from typing import Dict, List, Tuple
 
+from dateutil.relativedelta import relativedelta
 from sqlalchemy import delete, select
 
 from .database.dbcommodity import DBCommodity
 from .database.dbcountry import DBCountry
 from .database.dbmarket import DBMarket
 from .database.dbprice import DBPrice
+from .utilities import round_min_digits
 from hdx.api.configuration import Configuration
 from hdx.database import Database
-from hdx.utilities.dateparse import default_date, default_enddate
+from hdx.utilities.dateparse import (
+    default_date,
+    default_enddate,
+    iso_string_from_datetime,
+)
+from hdx.utilities.text import number_format
 
 
 class DBUpdater:
@@ -21,7 +28,10 @@ class DBUpdater:
         "DBMarket": DBMarket,
     }
 
-    def __init__(self, configuration: Configuration, database: Database):
+    def __init__(
+        self, now: datetime, configuration: Configuration, database: Database
+    ):
+        self._start_date = now - relativedelta(years=5)
         self._hxltags = configuration["hxltags"]
         self._database = database
         self._session = database.get_session()
@@ -73,39 +83,70 @@ class DBUpdater:
             for result in self._session.scalars(select(dbtable)).all():
                 row = {}
                 for column in result.__table__.columns.keys():
-                    row[column] = getattr(result, column)
+                    value = getattr(result, column)
                     if column == "start_date":
-                        if row[column] < start_date:
-                            start_date = row[column]
+                        if value < start_date:
+                            start_date = value
+                        value = iso_string_from_datetime(value)
                     elif column == "end_date":
-                        if row[column] > end_date:
-                            end_date = row[column]
+                        if value > end_date:
+                            end_date = value
+                        value = iso_string_from_datetime(value)
+                    elif isinstance(value, float):
+                        value = number_format(
+                            value, format="%.2f", trailing_zeros=False
+                        )
+                    row[column] = value
                 info["rows"].append(row)
             headers = dbtable.__table__.columns.keys()
             info["headers"] = headers
             info["hxltags"] = {
                 header: self._hxltags[header] for header in headers
             }
-        return table_data, start_date, end_date
 
-    # def get_prices_data(self) -> Dict:
-    #     start_date = default_enddate
-    #     end_date = default_date
-    #
-    #     results = {}
-    #     for result in self._session.scalars(select(dbtable)).all():
-    #         row = {}
-    #         for column in result.__table__.columns.keys():
-    #             row[column] = getattr(result, column)
-    #             if column == "start_date":
-    #                 if row[column] < start_date:
-    #                     start_date = row[column]
-    #             elif column == "end_date":
-    #                 if row[column] > end_date:
-    #                     end_date = row[column]
-    #         results["rows"].append(row)
-    #         headers = dbtable.__table__.columns.keys()
-    #         info["headers"] = headers
-    #         info["hxltags"] = {header: self._hxltags[header] for header in headers}
-    #     results["start_date"] = start_date
-    #     results["end_date"] = end_date
+        columns = [
+            DBPrice.countryiso3,
+            DBPrice.date,
+            DBMarket.admin1,
+            DBMarket.admin2,
+            DBMarket.market,
+            DBMarket.latitude,
+            DBMarket.longitude,
+            DBCommodity.category,
+            DBCommodity.commodity,
+            DBPrice.unit,
+            DBPrice.priceflag,
+            DBPrice.pricetype,
+            DBPrice.currency,
+            DBPrice.price,
+            DBPrice.usdprice,
+        ]
+        filters = [
+            DBPrice.market_id == DBMarket.market_id,
+            DBPrice.commodity_id == DBCommodity.commodity_id,
+            DBPrice.date > self._start_date,
+        ]
+        rows = []
+        headers = [col.key for col in columns]
+        hxltags = {header: self._hxltags[header] for header in headers}
+        table_data["DBPrice"] = {
+            "rows": rows,
+            "headers": headers,
+            "hxltags": hxltags,
+        }
+        for result in self._session.execute(select(*columns).where(*filters)):
+            row = {}
+            for i, column in enumerate(columns):
+                value = result[i]
+                if isinstance(value, float):
+                    if column.key == "usdprice":
+                        value = round_min_digits(value)
+                    else:
+                        value = number_format(
+                            value, format="%.2f", trailing_zeros=False
+                        )
+                elif isinstance(value, datetime):
+                    value = iso_string_from_datetime(value)
+                row[column.key] = value
+            rows.append(row)
+        return table_data, start_date, end_date
