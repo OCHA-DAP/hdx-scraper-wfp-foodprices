@@ -70,12 +70,14 @@ class TestWFP:
 
                     setup_currency(now, retriever, wfp_api)
                     dataset_generator = DatasetGenerator(
+                        now,
                         configuration,
                         tempdir,
                         iso3_to_showcase_url,
                         iso3_to_source,
+                        5,
                     )
-                    dbupdater = DBUpdater(now, configuration, database)
+                    dbupdater = DBUpdater(configuration, database)
                     dbupdater.update_commodities(dbcommodities)
 
                     countryiso3 = "COG"

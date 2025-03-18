@@ -1,7 +1,6 @@
 from datetime import datetime
 from typing import Dict, List, Tuple
 
-from dateutil.relativedelta import relativedelta
 from sqlalchemy import delete, select
 
 from .database.dbcommodity import DBCommodity
@@ -28,10 +27,7 @@ class DBUpdater:
         "DBMarket": DBMarket,
     }
 
-    def __init__(
-        self, now: datetime, configuration: Configuration, database: Database
-    ):
-        self._start_date = now - relativedelta(years=5)
+    def __init__(self, configuration: Configuration, database: Database):
         self._hxltags = configuration["hxltags"]
         self._database = database
         self._session = database.get_session()
@@ -67,7 +63,8 @@ class DBUpdater:
         self._session.execute(
             delete(DBPrice).where(DBPrice.countryiso3 == countryiso3)
         )
-        self._database.batch_populate(dbprices, DBPrice)
+        if dbprices:
+            self._database.batch_populate(dbprices, DBPrice)
 
     def get_data_from_tables(self) -> Tuple[Dict, datetime, datetime]:
         start_date = default_enddate
@@ -124,7 +121,18 @@ class DBUpdater:
         filters = [
             DBPrice.market_id == DBMarket.market_id,
             DBPrice.commodity_id == DBCommodity.commodity_id,
-            DBPrice.date > self._start_date,
+        ]
+        order = [
+            DBPrice.countryiso3,
+            DBPrice.priceflag,
+            DBPrice.date,
+            DBMarket.admin1,
+            DBMarket.admin2,
+            DBMarket.market,
+            DBCommodity.category,
+            DBCommodity.commodity,
+            DBPrice.unit,
+            DBPrice.pricetype,
         ]
         rows = []
         headers = [col.key for col in columns]
@@ -134,7 +142,9 @@ class DBUpdater:
             "headers": headers,
             "hxltags": hxltags,
         }
-        for result in self._session.execute(select(*columns).where(*filters)):
+        for result in self._session.execute(
+            select(*columns).where(*filters).order_by(*order)
+        ):
             row = {}
             for i, column in enumerate(columns):
                 value = result[i]

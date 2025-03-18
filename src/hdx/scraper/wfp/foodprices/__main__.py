@@ -10,7 +10,7 @@ from typing import Dict
 
 from hdx.api.configuration import Configuration
 from hdx.database import Database
-from hdx.facades.keyword_arguments import facade
+from hdx.facades.infer_arguments import facade
 from hdx.location.wfp_api import WFPAPI
 from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
 from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
@@ -32,12 +32,14 @@ lookup = "hdx-scraper-wfp-foodprices"
 
 def main(
     save: bool = False,
+    countryiso3s: str = "",
     use_saved: bool = False,
 ) -> None:
     """Generate datasets and create them in HDX
 
     Args:
         save (bool): Save downloaded data. Defaults to False.
+        countryiso3s (str): Whether to limit to specific countries. Defaults to not limiting ("").
         use_saved (bool): Use saved data. Defaults to False.
     Returns:
         None
@@ -68,7 +70,7 @@ def main(
                     wfp = WFPMappings(configuration, wfp_api, retriever)
                     iso3_to_showcase_url = wfp.read_region_mapping()
                     iso3_to_source = wfp.read_source_overrides()
-                    countries = wfp.get_countries()
+                    countries = wfp.get_countries(countryiso3s)
                     logger.info(
                         f"Number of country datasets to upload: {len(countries)}"
                     )
@@ -77,12 +79,13 @@ def main(
                     )
                     setup_currency(now, retriever, wfp_api)
                     dataset_generator = DatasetGenerator(
+                        now,
                         configuration,
                         folder,
                         iso3_to_showcase_url,
                         iso3_to_source,
                     )
-                    dbupdater = DBUpdater(now, configuration, database)
+                    dbupdater = DBUpdater(configuration, database)
                     dbupdater.update_commodities(dbcommodities)
 
                     def process_country(country: Dict[str, str]) -> None:
@@ -122,7 +125,12 @@ def main(
 
                         snippet = f"Food Prices data for {country['name']}"
                         if dataset:
-                            dataset.update_from_yaml()
+                            dataset.update_from_yaml(
+                                script_dir_plus_file(
+                                    join("config", "hdx_dataset_static.yaml"),
+                                    main,
+                                )
+                            )
                             dataset["notes"] = dataset["notes"] % (snippet, "")
                             dataset.generate_quickcharts(
                                 -1, indicators=qc_indicators
@@ -155,7 +163,11 @@ def main(
                     )
                     snippet = "Countries, Commodities and Markets data"
                     snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "
-                    dataset.update_from_yaml()
+                    dataset.update_from_yaml(
+                        script_dir_plus_file(
+                            join("config", "hdx_dataset_static.yaml"), main
+                        )
+                    )
                     dataset["notes"] = dataset["notes"] % (snippet, snippet2)
                     dataset.create_in_hdx(
                         remove_additional_resources=True,

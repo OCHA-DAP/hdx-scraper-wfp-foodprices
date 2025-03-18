@@ -57,24 +57,18 @@ class WFPMappings:
             iso3_to_source[countryiso3] = source
         return iso3_to_source
 
-    def get_countries(self) -> List[Dict[str, str]]:
+    def get_countries(self, countryiso3s: str = "") -> List[Dict[str, str]]:
         url = self._configuration["countries_url"]
         json = self._wfp_api.retrieve(url, "countries.json", "countries")
         countries = set()
         for country in json["response"]:
             countryiso3 = country["iso3"]
-            if self._retriever.save:
-                if countryiso3 not in (
-                    "BLR",
-                    "COG",
-                    "PSE",
-                    "SYR",
-                ):
-                    continue
-                wheretostart = getenv("WHERETOSTART")
-                if wheretostart and countryiso3 not in wheretostart:
-                    continue
-            countries.add((country["iso3"], country["adm0_name"]))
+            if countryiso3s and countryiso3 not in countryiso3s:
+                continue
+            wheretostart = getenv("WHERETOSTART")
+            if wheretostart and countryiso3 not in wheretostart:
+                continue
+            countries.add((countryiso3, country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
     def build_commodity_category_mapping(self) -> Tuple[Dict, List]:

@@ -2,6 +2,7 @@ import logging
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 
+from dateutil.relativedelta import relativedelta
 from slugify import slugify
 
 from hdx.api.configuration import Configuration
@@ -18,11 +19,14 @@ logger = logging.getLogger(__name__)
 class DatasetGenerator:
     def __init__(
         self,
+        now: datetime,
         configuration: Configuration,
         folder: str,
         iso3_to_showcase_url: Dict[str, str],
         iso3_to_source: Dict[str, str],
+        years: int = 5,
     ):
+        self._start_date = now - relativedelta(years=years)
         self._configuration = configuration
         self._folder = folder
         self._iso3_to_showcase_url = iso3_to_showcase_url
@@ -190,20 +194,22 @@ class DatasetGenerator:
                     price,
                     usdprice,
                 ) = rows[key]
-                dbprices.append(
-                    {
-                        "countryiso3": countryiso3,
-                        "date": date,
-                        "market_id": market_id,
-                        "commodity_id": commodity_id,
-                        "unit": unit,
-                        "priceflag": priceflag,
-                        "pricetype": pricetype,
-                        "currency": currency,
-                        "price": price,
-                        "usdprice": usdprice,
-                    }
-                )
+                # Only add rows in last N years
+                if date > self._start_date:
+                    dbprices.append(
+                        {
+                            "countryiso3": countryiso3,
+                            "date": date,
+                            "market_id": market_id,
+                            "commodity_id": commodity_id,
+                            "unit": unit,
+                            "priceflag": priceflag,
+                            "pricetype": pricetype,
+                            "currency": currency,
+                            "price": price,
+                            "usdprice": usdprice,
+                        }
+                    )
                 yield {
                     "date": date_str,
                     "admin1": adm1,
