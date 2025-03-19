@@ -107,7 +107,9 @@ def main(
                         dbmarkets = wfp_food.get_price_markets(wfp_api)
                         if not dbmarkets:
                             return
-                        rows, markets, sources = wfp_food.generate_rows()
+                        rows, markets, sources = wfp_food.generate_rows(
+                            dbmarkets
+                        )
                         dataset, qc_indicators, dbprices = (
                             dataset_generator.complete_dataset(
                                 countryiso3, dataset, rows, markets, sources

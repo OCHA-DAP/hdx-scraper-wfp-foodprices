@@ -92,7 +92,7 @@ class TestWFP:
                         commodity_to_category,
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
-                    rows, markets, sources = wfp_food.generate_rows()
+                    rows, markets, sources = wfp_food.generate_rows(dbmarkets)
                     dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
@@ -230,7 +230,7 @@ class TestWFP:
                         commodity_to_category,
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
-                    rows, markets, sources = wfp_food.generate_rows()
+                    rows, markets, sources = wfp_food.generate_rows(dbmarkets)
                     dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
@@ -318,7 +318,7 @@ class TestWFP:
                         commodity_to_category,
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
-                    rows, markets, sources = wfp_food.generate_rows()
+                    rows, markets, sources = wfp_food.generate_rows(dbmarkets)
                     dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources
@@ -454,7 +454,7 @@ class TestWFP:
                         commodity_to_category,
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
-                    rows, markets, sources = wfp_food.generate_rows()
+                    rows, markets, sources = wfp_food.generate_rows(dbmarkets)
                     dataset, qc_indicators, dbprices = (
                         dataset_generator.complete_dataset(
                             countryiso3, dataset, rows, markets, sources

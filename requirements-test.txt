@@ -79,7 +79,7 @@ hdx-python-database==1.3.6
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
-hdx-python-utilities==3.8.4
+hdx-python-utilities==3.8.5
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
