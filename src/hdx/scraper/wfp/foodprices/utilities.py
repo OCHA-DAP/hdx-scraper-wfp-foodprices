@@ -1,5 +1,6 @@
 from datetime import datetime
 from os.path import join
+from typing import Any
 
 from sigfig import round
 
@@ -42,12 +43,14 @@ def setup_currency(
     )
 
 
-def round_min_digits(num: float) -> str:
-    num_str = "%.2f" % num
+def round_min_digits(val: Any) -> str:
+    if val == "" or val is None:
+        return ""
+    num_str = "%.2f" % val
     count = 0
     for digit in num_str:
         if digit in "123456789":
             count += 1
     if count < 2:
-        num_str = round(num, sigfigs=2, type=str, warn=False)
+        num_str = round(val, sigfigs=2, type=str, warn=False)
     return num_str.rstrip("0").rstrip(".")
