@@ -47,3 +47,7 @@ qc_hxltags:
   date: "#date"
   code: "#meta+code"
   usdprice: "#value+usd"
+
+currency_hxltags:
+  code: "#currency+code"
+  name: "#currency+name"

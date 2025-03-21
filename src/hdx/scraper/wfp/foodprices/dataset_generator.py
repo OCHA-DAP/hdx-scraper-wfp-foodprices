@@ -24,6 +24,7 @@ class DatasetGenerator:
         folder: str,
         iso3_to_showcase_url: Dict[str, str],
         iso3_to_source: Dict[str, str],
+        currencies: List[Dict],
         years: int = 5,
     ):
         self._start_date = now - relativedelta(years=years)
@@ -31,6 +32,7 @@ class DatasetGenerator:
         self._folder = folder
         self._iso3_to_showcase_url = iso3_to_showcase_url
         self._iso3_to_source = iso3_to_source
+        self._currencies = currencies
 
     def get_dataset_and_showcase(
         self, countryiso3: str
@@ -322,6 +324,22 @@ class DatasetGenerator:
             info["headers"],
             info["rows"],
             info["hxltags"],
+            self._folder,
+            filename,
+            resourcedata,
+        )
+
+        filename = "wfp_currencies_global.csv"
+        resourcedata = {
+            "name": "Global WFP currencies",
+            "description": "Currencies data with HXL tags",
+            "format": "csv",
+        }
+        currency_hxltags = self._configuration["currency_hxltags"]
+        dataset.generate_resource_from_iterable(
+            list(currency_hxltags.keys()),
+            self._currencies,
+            currency_hxltags,
             self._folder,
             filename,
             resourcedata,
