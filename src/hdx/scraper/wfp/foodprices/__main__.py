@@ -34,13 +34,15 @@ def main(
     save: bool = False,
     countryiso3s: str = "",
     use_saved: bool = False,
+    save_wfp_rates: bool = True,
 ) -> None:
     """Generate datasets and create them in HDX
 
     Args:
-        save (bool): Save downloaded data. Defaults to False.
+        save (bool): Save all downloaded data. Defaults to False.
         countryiso3s (str): Whether to limit to specific countries. Defaults to not limiting ("").
         use_saved (bool): Use saved data. Defaults to False.
+        save_wfp_rates (bool): Save WFP FX rates data. Defaults to True.
     Returns:
         None
     """
@@ -77,13 +79,20 @@ def main(
                     commodity_to_category, dbcommodities = (
                         wfp.build_commodity_category_mapping()
                     )
-                    setup_currency(now, retriever, wfp_api)
+                    if save_wfp_rates:
+                        wfp_rates_folder = folder
+                    else:
+                        wfp_rates_folder = None
+                    currencies = setup_currency(
+                        now, retriever, wfp_api, wfp_rates_folder
+                    )
                     dataset_generator = DatasetGenerator(
                         now,
                         configuration,
                         folder,
                         iso3_to_showcase_url,
                         iso3_to_source,
+                        currencies,
                     )
                     dbupdater = DBUpdater(configuration, database)
                     dbupdater.update_commodities(dbcommodities)

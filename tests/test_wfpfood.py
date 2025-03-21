@@ -68,13 +68,17 @@ class TestWFP:
                     )
                     assert len(commodity_to_category) == 1072
 
-                    setup_currency(now, retriever, wfp_api)
+                    currencies = setup_currency(
+                        now, retriever, wfp_api, input_dir
+                    )
+                    assert len(currencies) == 127
                     dataset_generator = DatasetGenerator(
                         now,
                         configuration,
                         tempdir,
                         iso3_to_showcase_url,
                         iso3_to_source,
+                        currencies,
                         5,
                     )
                     dbupdater = DBUpdater(configuration, database)
@@ -649,6 +653,13 @@ class TestWFP:
                             "resource_type": "file.upload",
                             "url_type": "upload",
                         },
+                        {
+                            "description": "Currencies data with HXL tags",
+                            "format": "csv",
+                            "name": "Global WFP currencies",
+                            "resource_type": "file.upload",
+                            "url_type": "upload",
+                        },
                     ]
                     assert showcase == {
                         "name": "global-wfp-food-prices-showcase",
@@ -692,6 +703,7 @@ class TestWFP:
                         "wfp_commodities_global",
                         "wfp_countries_global",
                         "wfp_markets_global",
+                        "wfp_currencies_global",
                     ):
                         csv_filename = f"{filename}.csv"
                         expected_file = join(fixtures_dir, csv_filename)

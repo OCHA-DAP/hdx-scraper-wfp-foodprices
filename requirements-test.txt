@@ -70,7 +70,7 @@ hdx-python-api==6.3.8
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
-hdx-python-country==3.8.8
+hdx-python-country==3.9.0
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
@@ -278,7 +278,7 @@ ruamel-yaml-clib==0.2.12
     # via
     #   -c requirements.txt
     #   ruamel-yaml
-setuptools==77.0.1
+setuptools==77.0.3
     # via
     #   -c requirements.txt
     #   ckanapi

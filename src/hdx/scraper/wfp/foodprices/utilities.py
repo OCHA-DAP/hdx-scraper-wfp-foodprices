@@ -1,6 +1,7 @@
+import logging
 from datetime import datetime
-from os.path import join
-from typing import Any
+from os.path import exists, join
+from typing import Any, Dict, List, Optional
 
 from sigfig import round
 
@@ -8,9 +9,11 @@ from hdx.location.currency import Currency
 from hdx.location.wfp_api import WFPAPI
 from hdx.location.wfp_exchangerates import WFPExchangeRates
 from hdx.utilities.dateparse import now_utc, parse_date
-from hdx.utilities.loader import load_text
+from hdx.utilities.loader import load_json, load_text
 from hdx.utilities.retriever import Retrieve
-from hdx.utilities.saver import save_text
+from hdx.utilities.saver import save_json, save_text
+
+logger = logging.getLogger(__name__)
 
 
 def get_now(retriever: Retrieve):
@@ -29,11 +32,25 @@ def get_now(retriever: Retrieve):
 
 
 def setup_currency(
-    now: datetime, retriever: Retrieve, wfp_api: WFPAPI
-) -> None:
+    now: datetime,
+    retriever: Retrieve,
+    wfp_api: WFPAPI,
+    wfp_rates_folder: Optional[str] = None,
+) -> List[Dict]:
     wfp_fx = WFPExchangeRates(wfp_api)
-    currencies = wfp_fx.get_currencies()
-    all_historic_rates = wfp_fx.get_historic_rates(currencies)
+    currencies = wfp_fx.get_currencies_info()
+    currency_codes = [x["code"] for x in currencies]
+    if wfp_rates_folder:
+        filepath = join(wfp_rates_folder, "wfp_rates.csv")
+        if exists(filepath):
+            logger.info(f"Loading WFP FX rates from {filepath}")
+            all_historic_rates = load_json(filepath)
+        else:
+            all_historic_rates = wfp_fx.get_historic_rates(currency_codes)
+            logger.info(f"Saving WFP FX rates to {filepath}")
+            save_json(all_historic_rates, filepath)
+    else:
+        all_historic_rates = wfp_fx.get_historic_rates(currency_codes)
     Currency.setup(
         retriever=retriever,
         fallback_historic_to_current=True,
@@ -41,11 +58,12 @@ def setup_currency(
         fixed_now=now,
         historic_rates_cache=all_historic_rates,
     )
+    return currencies
 
 
-def round_min_digits(val: Any) -> str:
+def round_min_digits(val: Any, nonevalue: Optional[str] = "") -> Optional[str]:
     if val == "" or val is None:
-        return ""
+        return nonevalue
     num_str = "%.2f" % val
     count = 0
     for digit in num_str:

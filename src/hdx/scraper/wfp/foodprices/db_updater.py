@@ -148,13 +148,12 @@ class DBUpdater:
             row = {}
             for i, column in enumerate(columns):
                 value = result[i]
-                if isinstance(value, float):
-                    if column.key == "usdprice":
-                        value = round_min_digits(value)
-                    else:
-                        value = number_format(
-                            value, format="%.2f", trailing_zeros=False
-                        )
+                if column.key == "usdprice":
+                    value = round_min_digits(value, None)
+                elif isinstance(value, float):
+                    value = number_format(
+                        value, format="%.2f", trailing_zeros=False
+                    )
                 elif isinstance(value, datetime):
                     value = iso_string_from_datetime(value)
                 row[column.key] = value

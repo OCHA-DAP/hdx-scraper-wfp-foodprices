@@ -23,7 +23,7 @@ class DBPrice(Base):
     pricetype: Mapped[str] = mapped_column(primary_key=True)
     currency: Mapped[str] = mapped_column(nullable=False)
     price: Mapped[float] = mapped_column(nullable=False)
-    usdprice: Mapped[float] = mapped_column(nullable=False)
+    usdprice: Mapped[float] = mapped_column(nullable=True)
 
     def __repr__(self):
         output = f"<Price(iso3={self.countryiso3}, date={str(self.date)}, market_id={self.market_id}, commodity_id={self.commodity_id},\n"
