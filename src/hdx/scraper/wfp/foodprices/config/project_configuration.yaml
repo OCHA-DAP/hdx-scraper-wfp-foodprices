@@ -10,8 +10,8 @@ region_mapping_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRQUNinOiGZ
 source_overrides_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIS7lB8DW70xF_PNoAsJZRLICs25abANZ2gvIX6ukwOhMz5kq3K1MutlL074HM3BfSsBptIwc4J4Cz/pub?gid=926600343&single=true&output=csv"
 
 hxltags:
-  date: "#date"
   countryiso3: "#country+code"
+  date: "#date"
   admin1: "#adm1+name"
   admin2: "#adm2+name"
   market_id: "#loc+market+code"
@@ -32,6 +32,23 @@ hxltags:
   end_date: "#date+end"
 
 country_headers:
+  - date
+  - admin1
+  - admin2
+  - market
+  - latitude
+  - longitude
+  - category
+  - commodity
+  - unit
+  - priceflag
+  - pricetype
+  - currency
+  - price
+  - usdprice
+
+global_headers:
+  - countryiso3
   - date
   - admin1
   - admin2

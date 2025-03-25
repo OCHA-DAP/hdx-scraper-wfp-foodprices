@@ -1,16 +1,15 @@
 import logging
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Iterable, List, Optional, Tuple
 
-from dateutil.relativedelta import relativedelta
 from slugify import slugify
 
+from .utilities import round_min_digits
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
-from hdx.scraper.wfp.foodprices.utilities import round_min_digits
 from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
@@ -19,15 +18,12 @@ logger = logging.getLogger(__name__)
 class DatasetGenerator:
     def __init__(
         self,
-        now: datetime,
         configuration: Configuration,
         folder: str,
         iso3_to_showcase_url: Dict[str, str],
         iso3_to_source: Dict[str, str],
         currencies: List[Dict],
-        years: int = 5,
     ):
-        self._start_date = now - relativedelta(years=years)
         self._configuration = configuration
         self._folder = folder
         self._iso3_to_showcase_url = iso3_to_showcase_url
@@ -93,7 +89,7 @@ class DatasetGenerator:
         rows: Dict,
         markets: Dict,
         sources: Dict,
-    ) -> Tuple[Dataset, List, List]:
+    ) -> Tuple[Dataset, List]:
         number_market = []
         for key, commodities in markets.items():
             number_market.append((len(commodities), key))
@@ -107,9 +103,7 @@ class DatasetGenerator:
             commodities = markets[adm1adm2market]
             number_commodity = []
             for commodityunitpricetypecurrency, details in commodities.items():
-                number_commodity.append(
-                    (len(details), commodityunitpricetypecurrency)
-                )
+                number_commodity.append((len(details), commodityunitpricetypecurrency))
             number_commodity = sorted(number_commodity, reverse=True)
             index = 0
             # Pick commodity with most rows that has not already been used for another market
@@ -117,15 +111,13 @@ class DatasetGenerator:
             while commodity in chosen_commodities:
                 index += 1
                 if index == len(number_commodity):
-                    commodity, unit, pricetype, currency = number_commodity[0][
-                        1
-                    ]
+                    commodity, unit, pricetype, currency = number_commodity[0][1]
                     break
-                commodity, unit, pricetype, currency = number_commodity[index][
-                    1
-                ]
+                commodity, unit, pricetype, currency = number_commodity[index][1]
             adm1, adm2, market_name = adm1adm2market
-            code = f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
+            code = (
+                f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
+            )
             for date, usdprice in sorted(
                 commodities[(commodity, unit, pricetype, currency)]
             ):
@@ -168,10 +160,7 @@ class DatasetGenerator:
         }
         hxltags = self._configuration["hxltags"]
         country_headers = self._configuration["country_headers"]
-        country_hxltags = {
-            header: hxltags[header] for header in country_headers
-        }
-        dbprices = []
+        country_hxltags = {header: hxltags[header] for header in country_headers}
 
         def get_rows():
             for key in sorted(rows):
@@ -196,30 +185,12 @@ class DatasetGenerator:
                     price,
                     usdprice,
                 ) = rows[key]
-                # Only add rows in last N years
-                if date > self._start_date:
-                    dbprices.append(
-                        {
-                            "countryiso3": countryiso3,
-                            "date": date,
-                            "market_id": market_id,
-                            "commodity_id": commodity_id,
-                            "unit": unit,
-                            "priceflag": priceflag,
-                            "pricetype": pricetype,
-                            "currency": currency,
-                            "price": price,
-                            "usdprice": usdprice,
-                        }
-                    )
                 yield {
                     "date": date_str,
                     "admin1": adm1,
                     "admin2": adm2,
                     "market": market_name,
-                    "latitude": number_format(
-                        lat, format="%.2f", trailing_zeros=False
-                    ),
+                    "latitude": number_format(lat, format="%.2f", trailing_zeros=False),
                     "longitude": number_format(
                         lon, format="%.2f", trailing_zeros=False
                     ),
@@ -229,9 +200,7 @@ class DatasetGenerator:
                     "priceflag": priceflag,
                     "pricetype": pricetype,
                     "currency": currency,
-                    "price": number_format(
-                        price, format="%.2f", trailing_zeros=False
-                    ),
+                    "price": number_format(price, format="%.2f", trailing_zeros=False),
                     "usdprice": round_min_digits(usdprice),
                 }
 
@@ -257,10 +226,14 @@ class DatasetGenerator:
             resourcedata,
             headers=list(qc_hxltags.keys()),
         )
-        return dataset, qc_indicators, dbprices
+        return dataset, qc_indicators
 
     def generate_global_dataset_and_showcase(
-        self, table_data: Dict, start_date: datetime, end_date: datetime
+        self,
+        prices_rows: Iterable,
+        table_data: Dict,
+        start_date: datetime,
+        end_date: datetime,
     ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         dataset, showcase = self.get_dataset_and_showcase("global")
         dataset["dataset_source"] = "WFP"
@@ -272,11 +245,13 @@ class DatasetGenerator:
             "description": "Last 5 years of prices data with HXL tags",
             "format": "csv",
         }
-        info = table_data["DBPrice"]
+        global_headers = self._configuration["global_headers"]
+        hxltags = self._configuration["hxltags"]
+        global_hxltags = {header: hxltags[header] for header in global_headers}
         dataset.generate_resource_from_iterable(
-            info["headers"],
-            info["rows"],
-            info["hxltags"],
+            global_headers,
+            prices_rows,
+            global_hxltags,
             self._folder,
             filename,
             resourcedata,

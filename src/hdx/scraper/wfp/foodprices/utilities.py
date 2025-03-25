@@ -9,9 +9,9 @@ from hdx.location.currency import Currency
 from hdx.location.wfp_api import WFPAPI
 from hdx.location.wfp_exchangerates import WFPExchangeRates
 from hdx.utilities.dateparse import now_utc, parse_date
-from hdx.utilities.loader import load_json, load_text
+from hdx.utilities.loader import load_text, load_yaml
 from hdx.utilities.retriever import Retrieve
-from hdx.utilities.saver import save_json, save_text
+from hdx.utilities.saver import save_text, save_yaml
 
 logger = logging.getLogger(__name__)
 
@@ -41,22 +41,24 @@ def setup_currency(
     currencies = wfp_fx.get_currencies_info()
     currency_codes = [x["code"] for x in currencies]
     if wfp_rates_folder:
-        filepath = join(wfp_rates_folder, "wfp_rates.csv")
+        filepath = join(wfp_rates_folder, "wfp_rates.yaml")
         if exists(filepath):
             logger.info(f"Loading WFP FX rates from {filepath}")
-            all_historic_rates = load_json(filepath)
+            wfp_historic_rates = load_yaml(filepath)
         else:
-            all_historic_rates = wfp_fx.get_historic_rates(currency_codes)
+            wfp_historic_rates = wfp_fx.get_historic_rates(currency_codes)
             logger.info(f"Saving WFP FX rates to {filepath}")
-            save_json(all_historic_rates, filepath)
+            save_yaml(wfp_historic_rates, filepath)
     else:
-        all_historic_rates = wfp_fx.get_historic_rates(currency_codes)
+        wfp_historic_rates = wfp_fx.get_historic_rates(currency_codes)
     Currency.setup(
         retriever=retriever,
         fallback_historic_to_current=True,
         fallback_current_to_static=False,
         fixed_now=now,
-        historic_rates_cache=all_historic_rates,
+        historic_rates_cache=wfp_historic_rates,
+        secondary_historic_rates=wfp_historic_rates,
+        use_secondary_historic=True,
     )
     return currencies
 

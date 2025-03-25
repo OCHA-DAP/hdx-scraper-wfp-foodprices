@@ -12,6 +12,7 @@ from hdx.database import Database
 from hdx.location.wfp_api import WFPAPI
 from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
 from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
+from hdx.scraper.wfp.foodprices.global_prices import get_global_prices_rows
 from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
 from hdx.scraper.wfp.foodprices.wfp_food import WFPFood
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
@@ -68,25 +69,21 @@ class TestWFP:
                     )
                     assert len(commodity_to_category) == 1072
 
-                    currencies = setup_currency(
-                        now, retriever, wfp_api, input_dir
-                    )
+                    currencies = setup_currency(now, retriever, wfp_api, input_dir)
                     assert len(currencies) == 127
                     dataset_generator = DatasetGenerator(
-                        now,
                         configuration,
                         tempdir,
                         iso3_to_showcase_url,
                         iso3_to_source,
                         currencies,
-                        5,
                     )
                     dbupdater = DBUpdater(configuration, database)
                     dbupdater.update_commodities(dbcommodities)
 
                     countryiso3 = "COG"
-                    dataset, showcase = (
-                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
+                        countryiso3
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -97,16 +94,14 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows(dbmarkets)
-                    dataset, qc_indicators, dbprices = (
-                        dataset_generator.complete_dataset(
-                            countryiso3, dataset, rows, markets, sources
-                        )
+                    dataset, qc_indicators = dataset_generator.complete_dataset(
+                        countryiso3, dataset, rows, markets, sources
                     )
 
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                        countryiso3, time_period, hdx_url, dbmarkets
                     )
                     logger.info("Generated COG")
                     assert dataset == {
@@ -223,8 +218,8 @@ class TestWFP:
                     ]
 
                     countryiso3 = "BLR"
-                    dataset, showcase = (
-                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
+                        countryiso3
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -235,16 +230,14 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows(dbmarkets)
-                    dataset, qc_indicators, dbprices = (
-                        dataset_generator.complete_dataset(
-                            countryiso3, dataset, rows, markets, sources
-                        )
+                    dataset, qc_indicators = dataset_generator.complete_dataset(
+                        countryiso3, dataset, rows, markets, sources
                     )
 
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                        countryiso3, time_period, hdx_url, dbmarkets
                     )
                     logger.info("Generated BLR")
                     assert dataset == {
@@ -311,8 +304,8 @@ class TestWFP:
                     ]
 
                     countryiso3 = "PSE"
-                    dataset, showcase = (
-                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
+                        countryiso3
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -323,16 +316,14 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows(dbmarkets)
-                    dataset, qc_indicators, dbprices = (
-                        dataset_generator.complete_dataset(
-                            countryiso3, dataset, rows, markets, sources
-                        )
+                    dataset, qc_indicators = dataset_generator.complete_dataset(
+                        countryiso3, dataset, rows, markets, sources
                     )
 
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                        countryiso3, time_period, hdx_url, dbmarkets
                     )
                     logger.info("Generated PSE")
                     assert dataset == {
@@ -447,8 +438,8 @@ class TestWFP:
                     ]
 
                     countryiso3 = "SYR"
-                    dataset, showcase = (
-                        dataset_generator.get_dataset_and_showcase(countryiso3)
+                    dataset, showcase = dataset_generator.get_dataset_and_showcase(
+                        countryiso3
                     )
                     wfp_food = WFPFood(
                         countryiso3,
@@ -459,16 +450,14 @@ class TestWFP:
                     )
                     dbmarkets = wfp_food.get_price_markets(wfp_api)
                     rows, markets, sources = wfp_food.generate_rows(dbmarkets)
-                    dataset, qc_indicators, dbprices = (
-                        dataset_generator.complete_dataset(
-                            countryiso3, dataset, rows, markets, sources
-                        )
+                    dataset, qc_indicators = dataset_generator.complete_dataset(
+                        countryiso3, dataset, rows, markets, sources
                     )
 
                     time_period = dataset.get_time_period()
                     hdx_url = dataset.get_hdx_url()
                     dbupdater.update_tables(
-                        countryiso3, time_period, hdx_url, dbmarkets, dbprices
+                        countryiso3, time_period, hdx_url, dbmarkets
                     )
                     logger.info("Generated SYR")
                     assert dataset == {
@@ -581,12 +570,11 @@ class TestWFP:
                         },
                     ]
 
-                    table_data, start_date, end_date = (
-                        dbupdater.get_data_from_tables()
-                    )
+                    table_data, start_date, end_date = dbupdater.get_data_from_tables()
+                    prices_rows = get_global_prices_rows(now, retriever, tempdir)
                     dataset, showcase = (
                         dataset_generator.generate_global_dataset_and_showcase(
-                            table_data, start_date, end_date
+                            prices_rows, table_data, start_date, end_date
                         )
                     )
                     logger.info("Generated global")
@@ -708,7 +696,5 @@ class TestWFP:
                         csv_filename = f"{filename}.csv"
                         expected_file = join(fixtures_dir, csv_filename)
                         actual_file = join(tempdir, csv_filename)
-                        logger.info(
-                            f"Comparing {actual_file} with {expected_file}"
-                        )
+                        logger.info(f"Comparing {actual_file} with {expected_file}")
                         assert_files_same(expected_file, actual_file)

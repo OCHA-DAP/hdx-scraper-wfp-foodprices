@@ -17,7 +17,5 @@ class DBMarket(Base):
     def __repr__(self):
         output = f"<Market(id={self.market_id}, name={self.market}, "
         output += f"admin1={self.admin1}, admin2={self.admin2},\n"
-        output += (
-            f"latitude={str(self.latitude)}, longitude={str(self.longitude)})>"
-        )
+        output += f"latitude={str(self.latitude)}, longitude={str(self.longitude)})>"
         return output

@@ -43,6 +43,23 @@ country_headers:
   - price
   - usdprice
 
+global_headers:
+  - countryiso3
+  - date
+  - admin1
+  - admin2
+  - market
+  - latitude
+  - longitude
+  - category
+  - commodity
+  - unit
+  - priceflag
+  - pricetype
+  - currency
+  - price
+  - usdprice
+
 qc_hxltags:
   date: "#date"
   code: "#meta+code"

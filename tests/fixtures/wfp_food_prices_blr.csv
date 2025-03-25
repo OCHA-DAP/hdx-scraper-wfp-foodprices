@@ -1,485 +1,485 @@
 date,admin1,admin2,market,latitude,longitude,category,commodity,unit,priceflag,pricetype,currency,price,usdprice
 #date,#adm1+name,#adm2+name,#loc+market+name,#geo+lat,#geo+lon,#item+type,#item+name,#item+unit,#item+price+flag,#item+price+type,#currency,#value,#value+usd
-2009-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.0000034
-2009-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.0000034
-2009-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.0000034
-2009-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.0000034
-2009-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.1,0.0000031
-2009-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.13,0.000004
-2009-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.24,0.0000073
-2009-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2009-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.0000076
-2009-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.13,0.000004
-2009-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.24,0.0000073
-2009-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.12,0.0000037
-2009-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.000008
-2009-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.12,0.0000037
-2009-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.000008
-2009-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.12,0.0000037
-2009-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2009-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.000008
-2009-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.14,0.0000043
-2009-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.000008
-2010-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.14,0.0000043
-2010-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.000008
-2010-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.0000046
-2010-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.19,0.0000058
-2010-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.000008
-2010-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.0000046
-2010-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.27,0.0000083
-2010-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.0000046
-2010-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.28,0.0000086
-2010-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.0000046
-2010-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.28,0.0000086
-2010-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.17,0.0000052
-2010-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.38,0.000012
-2010-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2010-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.38,0.000012
-2010-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.0000046
-2010-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,0.000012
-2010-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.17,0.0000052
-2010-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,0.000012
-2010-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.18,0.0000055
-2010-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,0.000012
-2010-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.19,0.0000058
-2010-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2010-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,0.000012
-2010-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2010-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2011-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,0.000012
-2011-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.26,0.000008
-2011-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2011-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.37,0.000011
-2011-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.26,0.000008
-2011-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2011-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.41,0.000013
-2011-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.27,0.0000083
-2011-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.0000061
-2011-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.48,0.000015
-2011-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.3,0.0000092
-2011-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.21,0.0000064
-2011-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.51,0.000016
-2011-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.29,0.0000089
-2011-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.21,0.0000064
-2011-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.52,0.000016
-2011-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.44,0.000013
-2011-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.22,0.0000067
-2011-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.6,0.000018
-2011-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.37,0.000011
-2011-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.22,0.0000067
-2011-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.68,0.000021
-2011-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2011-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.26,0.000008
-2011-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.73,0.000022
-2011-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.2,0.0000061
-2011-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.29,0.0000089
-2011-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.76,0.000023
-2011-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.19,0.0000058
-2011-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.32,0.0000098
-2011-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.76,0.000023
-2011-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.2,0.0000061
-2011-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.38,0.000012
-2011-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.000023
-2011-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.2,0.0000061
-2011-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.39,0.000012
-2012-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.000023
-2012-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.22,0.0000067
-2012-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.4,0.000012
-2012-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.000023
-2012-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.24,0.0000073
-2012-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.4,0.000012
-2012-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.000023
-2012-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.22,0.0000067
-2012-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.4,0.000012
-2012-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.000023
-2012-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2012-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.000013
-2012-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.81,0.000025
-2012-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.22,0.0000067
-2012-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.000013
-2012-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.85,0.000026
-2012-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.24,0.0000073
-2012-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.000013
-2012-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.94,0.000029
-2012-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.36,0.000011
-2012-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.000013
-2012-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.04,0.000032
-2012-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.3,0.0000092
-2012-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.45,0.000014
-2012-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.06,0.000032
-2012-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.26,0.000008
-2012-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.47,0.000014
-2012-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.1,0.000034
-2012-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2012-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.5,0.000015
-2012-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.12,0.000034
-2012-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.0000064
-2012-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.54,0.000017
-2012-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.1,0.000034
-2012-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.33,0.00001
-2012-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.57,0.000017
-2013-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.21,0.000037
-2013-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.34,0.00001
-2013-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.58,0.000018
-2013-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.21,0.000037
-2013-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.33,0.00001
-2013-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.000018
-2013-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.22,0.000037
-2013-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.33,0.00001
-2013-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.000018
-2013-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.22,0.000037
-2013-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.38,0.000012
-2013-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.000018
-2013-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.31,0.00004
-2013-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.38,0.000012
-2013-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.000018
-2013-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.26,0.000039
-2013-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.21,0.000037
-2013-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.000018
-2013-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.24,0.000038
-2013-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.7,0.000021
-2013-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.61,0.000019
-2013-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.16,0.000035
-2013-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.54,0.000017
-2013-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.64,0.00002
-2013-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.67,0.000051
-2013-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.46,0.000014
-2013-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.71,0.000022
-2013-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2013-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.000015
-2013-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.78,0.000024
-2013-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2013-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.49,0.000015
-2013-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.79,0.000024
-2013-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,0.000054
-2013-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.6,0.000018
-2013-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.89,0.000027
-2014-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.77,0.000054
-2014-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.71,0.000022
-2014-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.86,0.000026
-2014-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.83,0.000056
-2014-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.72,0.000022
-2014-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2014-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,0.000054
-2014-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.65,0.00002
-2014-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2014-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,0.000054
-2014-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.69,0.000021
-2014-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.000028
-2014-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2014-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.000023
-2014-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2014-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2014-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.98,0.00003
-2014-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2014-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2014-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.74,0.000023
-2014-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2014-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2014-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.55,0.000017
-2014-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2014-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,0.000054
-2014-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.57,0.000017
-2014-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.000028
-2014-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,0.000054
-2014-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.55,0.000017
-2014-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2014-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,0.000054
-2014-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.57,0.000017
-2014-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2014-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,0.000054
-2014-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.59,0.000018
-2014-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,0.000054
-2015-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.6,0.000018
-2015-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2015-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.62,0.000019
-2015-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,0.000053
-2015-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.63,0.000019
-2015-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.72,0.000053
-2015-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.63,0.000019
-2015-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.77,0.000054
-2015-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.61,0.000019
-2015-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.83,0.000056
-2015-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.79,0.000024
-2015-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.95,0.000029
-2015-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.8,0.000055
-2015-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.000023
-2015-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2015-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.8,0.000055
-2015-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.66,0.00002
-2015-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.95,0.000029
-2015-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.81,0.000055
-2015-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.56,0.000017
-2015-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2015-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.05,0.000063
-2015-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.56,0.000017
-2015-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2015-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.09,0.000064
-2015-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.51,0.000016
-2015-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.9,0.000028
-2015-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.21,0.000068
-2015-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.56,0.000017
-2015-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.000028
-2016-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.3,0.00007
-2016-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.6,0.000018
-2016-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2016-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.23,0.000068
-2016-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.61,0.000019
-2016-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.000028
-2016-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.24,0.000069
-2016-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.57,0.000017
-2016-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.000028
-2016-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.3,0.00007
-2016-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.5,0.000015
-2016-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.000028
-2016-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.27,0.000069
-2016-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.000015
-2016-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.9,0.000028
-2016-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.11,0.000065
-2016-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.64,0.00002
-2016-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.94,0.000029
-2016-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.3,0.00007
-2016-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.72,0.000022
-2016-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.96,0.000029
-2016-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.41,0.000074
-2016-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.53,0.000016
-2016-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.99,0.00003
-2016-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.41,0.000074
-2016-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.41,0.000013
-2016-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.97,0.00003
-2016-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.37,0.000072
-2016-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.41,0.000013
-2016-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.99,0.00003
-2016-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.37,0.000072
-2016-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.42,0.000013
-2016-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.01,0.000031
-2016-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.35,0.000072
-2016-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.000015
-2016-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.99,0.00003
-2017-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.42,0.000074
-2017-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.000015
-2017-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.01,0.000031
-2017-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.48,0.000076
-2017-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.51,0.000016
-2017-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.01,0.000031
-2017-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.44,0.000075
-2017-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.54,0.000017
-2017-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.03,0.000031
-2017-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.5,0.000076
-2017-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.000023
-2017-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1,0.000031
-2017-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.54,0.000078
-2017-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.96,0.000029
-2017-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.08,0.000033
-2017-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.53,0.000077
-2017-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.24,0.000038
-2017-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.08,0.000033
-2017-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.44,0.000075
-2017-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.11,0.000034
-2017-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.09,0.000033
-2017-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.39,0.000073
-2017-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.7,0.000021
-2017-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.09,0.000033
-2017-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.35,0.000072
-2017-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.62,0.000019
-2017-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.06,0.000032
-2017-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.46,0.000075
-2017-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.59,0.000018
-2017-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.07,0.000033
-2017-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.48,0.000076
-2017-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.55,0.000017
-2017-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.000035
-2017-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.5,0.000076
-2017-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.61,0.000019
-2017-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.05,0.000032
-2018-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.54,0.000078
-2018-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.75,0.000023
-2018-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.05,0.000032
-2018-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.37,0.000072
-2018-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.000023
-2018-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.05,0.000032
-2018-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.44,0.000075
-2018-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.91,0.000028
-2018-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.000035
-2018-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.48,0.000076
-2018-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.99,0.00003
-2018-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.000035
-2018-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.49,0.000076
-2018-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.000025
-2018-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.000035
-2018-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.58,0.000079
-2018-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.17,0.000036
-2018-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.06,0.000032
-2018-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.5,0.000076
-2018-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.05,0.000032
-2018-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.08,0.000033
-2018-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.58,0.000079
-2018-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.81,0.000025
-2018-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.1,0.000034
-2018-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.67,0.000082
-2018-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.67,0.00002
-2018-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.000035
-2018-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.72,0.000083
-2018-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.7,0.000021
-2018-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.11,0.000034
-2018-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.74,0.000084
-2018-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.67,0.00002
-2018-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.1,0.000034
-2018-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.72,0.000083
-2018-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.73,0.000022
-2018-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.15,0.000035
-2019-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.76,0.000084
-2019-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.73,0.000022
-2019-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.12,0.000034
-2019-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.75,0.000084
-2019-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.77,0.000024
-2019-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.14,0.000035
-2019-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.77,0.000085
-2019-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.8,0.000024
-2019-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.24,0.000038
-2019-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.82,0.000086
-2019-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.000025
-2019-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2019-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,0.000087
-2019-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.91,0.000028
-2019-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2019-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,0.000087
-2019-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.31,0.00004
-2019-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2019-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.86,0.000087
-2019-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.24,0.000038
-2019-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2019-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.88,0.000088
-2019-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1,0.000031
-2019-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2019-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.88,0.000088
-2019-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.69,0.000021
-2019-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2019-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,0.000087
-2019-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.79,0.000024
-2019-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.000039
-2019-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.86,0.000087
-2019-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.79,0.000024
-2019-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.000039
-2019-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.87,0.000088
-2019-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.000025
-2019-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2020-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.89,0.000088
-2020-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.84,0.000026
-2020-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.000039
-2020-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.88,0.000088
-2020-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.83,0.000025
-2020-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.000039
-2020-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.15,0.000096
-2020-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.86,0.000026
-2020-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2020-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.15,0.000096
-2020-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.99,0.00003
-2020-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2020-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.09,0.000094
-2020-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.08,0.000033
-2020-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.21,0.000037
-2020-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.04,0.000093
-2020-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.85,0.000057
-2020-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2020-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.95,0.00009
-2020-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.38,0.000042
-2020-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2020-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.02,0.000092
-2020-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.88,0.000027
-2020-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.000039
-2020-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.98,0.000091
-2020-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.78,0.000024
-2020-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2020-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.72,0.000083
-2020-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.000025
-2020-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.23,0.000038
-2020-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.8,0.000086
-2020-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.85,0.000026
-2020-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.000039
-2020-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.82,0.000086
-2020-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1,0.000031
-2020-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2021-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,0.000087
-2021-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.04,0.000032
-2021-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.32,0.00004
-2021-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.87,0.000088
-2021-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.17,0.000036
-2021-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.33,0.000041
-2021-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.86,0.000087
-2021-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.25,0.000038
-2021-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.3,0.00004
-2021-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.84,0.000087
-2021-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.33,0.000041
-2021-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2021-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3,0.000092
-2021-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1,0.000031
-2021-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1,0.000031
-2021-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3,0.000092
-2021-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,2,0.000061
-2021-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1,0.000031
-2021-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.03,0.000093
-2021-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.51,0.000046
-2021-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.000039
-2021-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.07,0.000094
-2021-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.3,0.00004
-2021-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.000039
-2021-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.98,0.000091
-2021-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.27,0.000039
-2021-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2021-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.98,0.000091
-2021-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.34,0.000041
-2021-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.000039
-2021-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.03,0.000093
-2021-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.32,0.00004
-2021-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.24,0.000038
-2021-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3,0.000092
-2021-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.49,0.000046
-2021-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.000039
-2022-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.04,0.000093
-2022-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.68,0.000051
-2022-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.24,0.000038
-2022-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.18,0.000097
-2022-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.49,0.000046
-2022-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.000038
-2022-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.39,0.0001
-2022-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.45,0.000044
-2022-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.07,0.000033
-2022-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.21,0.000098
-2022-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.49,0.000046
-2022-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.4,0.000043
-2022-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.42,0.0001
-2022-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.74,0.000053
-2022-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.43,0.000044
+2009-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.93
+2009-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.41
+2009-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.74
+2009-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.89
+2009-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.39
+2009-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2009-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.86
+2009-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.38
+2009-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.69
+2009-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.89
+2009-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.11,0.39
+2009-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2009-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.89
+2009-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.1,0.36
+2009-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2009-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.89
+2009-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.13,0.46
+2009-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2009-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.24,0.83
+2009-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.72
+2009-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.69
+2009-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.25,0.88
+2009-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.13,0.46
+2009-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2009-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.24,0.86
+2009-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.12,0.43
+2009-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2009-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.96
+2009-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.12,0.44
+2009-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.74
+2009-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.96
+2009-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.12,0.44
+2009-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.74
+2009-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.93
+2009-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.14,0.5
+2009-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2010-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.93
+2010-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.14,0.5
+2010-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.71
+2010-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.9
+2010-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.52
+2010-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.19,0.66
+2010-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.26,0.87
+2010-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.5
+2010-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.27,0.9
+2010-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.5
+2010-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.28,0.93
+2010-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.5
+2010-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.28,0.93
+2010-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.17,0.57
+2010-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.38,1.27
+2010-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.7
+2010-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.38,1.27
+2010-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.15,0.5
+2010-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,1.3
+2010-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.17,0.57
+2010-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,1.3
+2010-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.18,0.6
+2010-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,1.3
+2010-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.19,0.63
+2010-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2010-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,1.3
+2010-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.7
+2010-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2011-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.39,1.3
+2011-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.26,0.87
+2011-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2011-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.37,1.23
+2011-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.26,0.87
+2011-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2011-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.41,1.37
+2011-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.27,0.9
+2011-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.2,0.67
+2011-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.48,1.55
+2011-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.3,0.97
+2011-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.21,0.68
+2011-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.51,1.65
+2011-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.29,0.94
+2011-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.21,0.68
+2011-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.52,1.04
+2011-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.44,0.88
+2011-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.22,0.44
+2011-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.6,1.2
+2011-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.37,0.74
+2011-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.22,0.44
+2011-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.68,1.36
+2011-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.42
+2011-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.26,0.52
+2011-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.73,1.35
+2011-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.2,0.37
+2011-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.29,0.54
+2011-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.76,0.84
+2011-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.19,0.21
+2011-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.32,0.36
+2011-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.76,0.86
+2011-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.2,0.23
+2011-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.38,0.43
+2011-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.89
+2011-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.2,0.24
+2011-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.39,0.46
+2012-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.89
+2012-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.22,0.26
+2012-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.4,0.48
+2012-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.89
+2012-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.24,0.29
+2012-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.4,0.48
+2012-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.93
+2012-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.22,0.27
+2012-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.4,0.49
+2012-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.75,0.94
+2012-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.26
+2012-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.51
+2012-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.81,1
+2012-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.22,0.27
+2012-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.51
+2012-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.85,1.02
+2012-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.24,0.29
+2012-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.49
+2012-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,0.94,1.13
+2012-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.36,0.43
+2012-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.41,0.49
+2012-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.04,1.24
+2012-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.3,0.36
+2012-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.45,0.54
+2012-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.06,1.26
+2012-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.26,0.31
+2012-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.47,0.56
+2012-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.1,1.29
+2012-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.25
+2012-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.5,0.59
+2012-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.12,1.32
+2012-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.21,0.25
+2012-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.54,0.64
+2012-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.1,1.28
+2012-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.33,0.39
+2012-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.57,0.67
+2013-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.21,1.41
+2013-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.34,0.4
+2013-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.58,0.67
+2013-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.21,1.41
+2013-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.33,0.38
+2013-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.69
+2013-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.22,1.44
+2013-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.33,0.39
+2013-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.69
+2013-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.22,1.42
+2013-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.38,0.44
+2013-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.69
+2013-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.31,1.52
+2013-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.38,0.44
+2013-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.69
+2013-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.26,1.45
+2013-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.21,1.39
+2013-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.59,0.68
+2013-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.24,1.41
+2013-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.7,0.8
+2013-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.61,0.69
+2013-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.16,1.3
+2013-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.54,0.61
+2013-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.64,0.72
+2013-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.67,1.86
+2013-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.46,0.51
+2013-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.71,0.79
+2013-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.88
+2013-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.52
+2013-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.78,0.85
+2013-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.86
+2013-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.49,0.53
+2013-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.79,0.85
+2013-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,1.87
+2013-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.6,0.64
+2013-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.89,0.95
+2014-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.77,1.84
+2014-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.71,0.74
+2014-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.86,0.9
+2014-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.83,1.89
+2014-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.72,0.74
+2014-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.95
+2014-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,1.8
+2014-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.65,0.66
+2014-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.94
+2014-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,1.78
+2014-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.69,0.7
+2014-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.92
+2014-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.73
+2014-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.76
+2014-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.92
+2014-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.7
+2014-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.98,0.96
+2014-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.9
+2014-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.7
+2014-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.74,0.73
+2014-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.91
+2014-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.66
+2014-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.55,0.53
+2014-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.89
+2014-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.76,1.68
+2014-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.57,0.54
+2014-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.87
+2014-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,1.64
+2014-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.55,0.51
+2014-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.87
+2014-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,1.62
+2014-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.57,0.53
+2014-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.86
+2014-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,1.61
+2014-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.59,0.54
+2014-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.85
+2015-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.75,1.17
+2015-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.6,0.4
+2015-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.62
+2015-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.16
+2015-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.62,0.41
+2015-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.62
+2015-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.73,1.15
+2015-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.63,0.42
+2015-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.62
+2015-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.72,1.2
+2015-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.63,0.44
+2015-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.65
+2015-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.77,1.26
+2015-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.61,0.43
+2015-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.66
+2015-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.83,1.19
+2015-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.79,0.51
+2015-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.95,0.62
+2015-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.8,1.18
+2015-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.5
+2015-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.61
+2015-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.8,1.12
+2015-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.66,0.41
+2015-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.95,0.59
+2015-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,1.81,1.02
+2015-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.56,0.32
+2015-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.52
+2015-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.05,1.19
+2015-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.56,0.33
+2015-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.53
+2015-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.09,1.17
+2015-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.51,0.29
+2015-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.9,0.5
+2015-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.21,1.21
+2015-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.56,0.31
+2015-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.5
+2016-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.3,1.16
+2016-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.6,0.3
+2016-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.47
+2016-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.23,1.03
+2016-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.61,0.28
+2016-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.93,0.43
+2016-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.24,1.09
+2016-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.57,0.28
+2016-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.92,0.45
+2016-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.3,1.16
+2016-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.5,0.25
+2016-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.91,0.46
+2016-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.27,1.18
+2016-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.25
+2016-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.9,0.47
+2016-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.11,1.05
+2016-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.64,0.32
+2016-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.94,0.47
+2016-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.3,1.16
+2016-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.72,0.36
+2016-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.96,0.48
+2016-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.41,1.24
+2016-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.53,0.27
+2016-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.99,0.51
+2016-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.41,1.24
+2016-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.41,0.21
+2016-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.97,0.5
+2016-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.37,1.23
+2016-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.41,0.21
+2016-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.99,0.52
+2016-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.37,1.22
+2016-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.42,0.22
+2016-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.01,0.52
+2016-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.35,1.19
+2016-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.24
+2016-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,0.99,0.5
+2017-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.42,1.24
+2017-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.48,0.25
+2017-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.01,0.52
+2017-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.48,1.33
+2017-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.51,0.27
+2017-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.01,0.54
+2017-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.44,1.28
+2017-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.54,0.28
+2017-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.03,0.54
+2017-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.5,1.33
+2017-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.4
+2017-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1,0.53
+2017-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.54,1.37
+2017-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.96,0.52
+2017-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.08,0.58
+2017-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.53,1.35
+2017-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.24,0.66
+2017-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.08,0.57
+2017-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.44,1.25
+2017-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.11,0.57
+2017-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.09,0.56
+2017-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.39,1.23
+2017-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.7,0.36
+2017-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.09,0.56
+2017-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.35,1.21
+2017-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.62,0.32
+2017-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.06,0.55
+2017-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.46,1.26
+2017-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.59,0.3
+2017-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.07,0.55
+2017-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.48,1.23
+2017-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.55,0.27
+2017-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.56
+2017-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.5,1.24
+2017-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.61,0.3
+2017-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.05,0.52
+2018-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.54,1.28
+2018-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.75,0.38
+2018-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.05,0.53
+2018-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.37,1.21
+2018-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.76,0.39
+2018-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.05,0.54
+2018-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.44,1.24
+2018-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.91,0.46
+2018-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.57
+2018-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.48,1.22
+2018-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.99,0.49
+2018-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.56
+2018-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.49,1.24
+2018-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.41
+2018-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.56
+2018-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.58,1.29
+2018-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.17,0.58
+2018-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.06,0.53
+2018-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.5,1.27
+2018-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.05,0.53
+2018-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.08,0.55
+2018-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.58,1.26
+2018-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.81,0.4
+2018-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.1,0.54
+2018-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.67,1.25
+2018-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.67,0.31
+2018-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.13,0.53
+2018-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.72,1.29
+2018-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.7,0.33
+2018-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.11,0.53
+2018-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.74,1.29
+2018-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.67,0.32
+2018-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.1,0.52
+2018-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.72,1.28
+2018-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.73,0.34
+2018-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.15,0.54
+2019-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.76,1.28
+2019-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.73,0.34
+2019-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.12,0.52
+2019-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.75,1.27
+2019-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.77,0.36
+2019-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.14,0.53
+2019-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.77,1.3
+2019-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.8,0.38
+2019-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.24,0.58
+2019-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.82,1.34
+2019-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.39
+2019-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.6
+2019-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,1.36
+2019-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.91,0.44
+2019-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.61
+2019-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,1.38
+2019-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.31,0.64
+2019-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.62
+2019-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.86,1.42
+2019-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.24,0.61
+2019-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.62
+2019-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.88,1.41
+2019-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1,0.49
+2019-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.62
+2019-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.88,1.41
+2019-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.69,0.34
+2019-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.62
+2019-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,1.39
+2019-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.79,0.39
+2019-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.61
+2019-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.86,1.4
+2019-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.79,0.39
+2019-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.63
+2019-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.87,1.37
+2019-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.39
+2019-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.6
+2020-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.89,1.36
+2020-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.84,0.4
+2020-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.6
+2020-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.88,1.31
+2020-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.83,0.38
+2020-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.58
+2020-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.15,1.34
+2020-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.86,0.37
+2020-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.53
+2020-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.15,1.29
+2020-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.99,0.4
+2020-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.51
+2020-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.09,1.26
+2020-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.08,0.44
+2020-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.21,0.49
+2020-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.04,1.28
+2020-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.85,0.78
+2020-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.53
+2020-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.95,1.23
+2020-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.38,0.57
+2020-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.52
+2020-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.02,1.23
+2020-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.88,0.36
+2020-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.51
+2020-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.98,1.16
+2020-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.78,0.3
+2020-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.49
+2020-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.72,1.06
+2020-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.82,0.32
+2020-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.23,0.48
+2020-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.8,1.1
+2020-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,0.85,0.33
+2020-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.28,0.5
+2020-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.82,1.12
+2020-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1,0.4
+2020-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.5
+2021-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.85,1.12
+2021-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.04,0.41
+2021-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.32,0.52
+2021-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.87,1.11
+2021-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.17,0.45
+2021-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.33,0.52
+2021-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.86,1.1
+2021-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.25,0.48
+2021-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.3,0.5
+2021-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.84,1.09
+2021-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.33,0.51
+2021-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.48
+2021-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3,1.19
+2021-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1,0.4
+2021-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1,0.4
+2021-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3,1.2
+2021-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,2,0.8
+2021-06-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1,0.4
+2021-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.03,1.19
+2021-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.51,0.59
+2021-07-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.5
+2021-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.07,1.23
+2021-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.3,0.52
+2021-08-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.51
+2021-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.98,1.2
+2021-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.27,0.51
+2021-09-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.5
+2021-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,2.98,1.22
+2021-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.34,0.55
+2021-10-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.27,0.52
+2021-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.03,1.23
+2021-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.32,0.54
+2021-11-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.24,0.5
+2021-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3,1.19
+2021-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.49,0.59
+2021-12-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.26,0.5
+2022-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.04,1.18
+2022-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.68,0.65
+2022-01-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.24,0.48
+2022-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.18,1.24
+2022-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.49,0.58
+2022-02-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.25,0.49
+2022-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.39,1.03
+2022-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.45,0.44
+2022-03-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.07,0.32
+2022-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.21,0.99
+2022-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.49,0.46
+2022-04-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.4,0.43
+2022-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Bread (high grade flour),KG,actual,Retail,BYR,3.42,1.03
+2022-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Potatoes,KG,actual,Retail,BYR,1.74,0.53
+2022-05-15,Minsk City,Minsk City,Minsk,53.91,27.56,cereals and tubers,Wheat flour,KG,actual,Retail,BYR,1.43,0.43

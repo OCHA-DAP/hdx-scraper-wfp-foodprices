@@ -38,7 +38,7 @@ greenlet==3.1.1
     # via sqlalchemy
 hdx-python-api==6.3.8
     # via hdx-scraper-wfp-foodprices (pyproject.toml)
-hdx-python-country==3.9.0
+hdx-python-country==3.9.2
     # via
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
@@ -49,7 +49,7 @@ hdx-python-utilities==3.8.5
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
     #   hdx-python-country
-humanize==4.12.1
+humanize==4.12.2
     # via frictionless
 idna==3.10
     # via
@@ -155,7 +155,7 @@ ruamel-yaml==0.18.10
     # via hdx-python-utilities
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
-setuptools==77.0.3
+setuptools==78.0.2
     # via ckanapi
 shellingham==1.5.4
     # via typer

@@ -6,8 +6,6 @@ from sqlalchemy import delete, select
 from .database.dbcommodity import DBCommodity
 from .database.dbcountry import DBCountry
 from .database.dbmarket import DBMarket
-from .database.dbprice import DBPrice
-from .utilities import round_min_digits
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.utilities.dateparse import (
@@ -42,7 +40,6 @@ class DBUpdater:
         time_period: Dict,
         hdx_url: str,
         dbmarkets: List,
-        dbprices: List,
     ) -> None:
         self._session.execute(
             delete(DBCountry).where(DBCountry.countryiso3 == countryiso3)
@@ -59,12 +56,6 @@ class DBUpdater:
             delete(DBMarket).where(DBMarket.countryiso3 == countryiso3)
         )
         self._database.batch_populate(dbmarkets, DBMarket)
-
-        self._session.execute(
-            delete(DBPrice).where(DBPrice.countryiso3 == countryiso3)
-        )
-        if dbprices:
-            self._database.batch_populate(dbprices, DBPrice)
 
     def get_data_from_tables(self) -> Tuple[Dict, datetime, datetime]:
         start_date = default_enddate
@@ -97,65 +88,6 @@ class DBUpdater:
                 info["rows"].append(row)
             headers = dbtable.__table__.columns.keys()
             info["headers"] = headers
-            info["hxltags"] = {
-                header: self._hxltags[header] for header in headers
-            }
+            info["hxltags"] = {header: self._hxltags[header] for header in headers}
 
-        columns = [
-            DBPrice.countryiso3,
-            DBPrice.date,
-            DBMarket.admin1,
-            DBMarket.admin2,
-            DBMarket.market,
-            DBMarket.latitude,
-            DBMarket.longitude,
-            DBCommodity.category,
-            DBCommodity.commodity,
-            DBPrice.unit,
-            DBPrice.priceflag,
-            DBPrice.pricetype,
-            DBPrice.currency,
-            DBPrice.price,
-            DBPrice.usdprice,
-        ]
-        filters = [
-            DBPrice.market_id == DBMarket.market_id,
-            DBPrice.commodity_id == DBCommodity.commodity_id,
-        ]
-        order = [
-            DBPrice.countryiso3,
-            DBPrice.priceflag,
-            DBPrice.date,
-            DBMarket.admin1,
-            DBMarket.admin2,
-            DBMarket.market,
-            DBCommodity.category,
-            DBCommodity.commodity,
-            DBPrice.unit,
-            DBPrice.pricetype,
-        ]
-        rows = []
-        headers = [col.key for col in columns]
-        hxltags = {header: self._hxltags[header] for header in headers}
-        table_data["DBPrice"] = {
-            "rows": rows,
-            "headers": headers,
-            "hxltags": hxltags,
-        }
-        for result in self._session.execute(
-            select(*columns).where(*filters).order_by(*order)
-        ):
-            row = {}
-            for i, column in enumerate(columns):
-                value = result[i]
-                if column.key == "usdprice":
-                    value = round_min_digits(value, None)
-                elif isinstance(value, float):
-                    value = number_format(
-                        value, format="%.2f", trailing_zeros=False
-                    )
-                elif isinstance(value, datetime):
-                    value = iso_string_from_datetime(value)
-                row[column.key] = value
-            rows.append(row)
         return table_data, start_date, end_date

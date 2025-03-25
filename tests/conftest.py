@@ -24,9 +24,7 @@ def configuration():
     Configuration._create(
         hdx_read_only=True,
         hdx_site="prod",
-        project_config_yaml=join(
-            "tests", "config", "project_configuration.yaml"
-        ),
+        project_config_yaml=join("tests", "config", "project_configuration.yaml"),
     )
     Locations.set_validlocations(
         [

@@ -13,7 +13,5 @@ class DBCountry(Base):
 
     def __repr__(self):
         output = f"<Country(country={self.countryiso3}, url={self.url},\n"
-        output += (
-            f"startdate={str(self.start_date)}, enddate={str(self.end_date)})>"
-        )
+        output += f"startdate={str(self.start_date)}, enddate={str(self.end_date)})>"
         return output

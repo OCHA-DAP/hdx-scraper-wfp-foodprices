@@ -30,9 +30,7 @@ class WFPFood:
 
     def get_price_markets(self, wfp_api: WFPAPI) -> List[Dict]:
         dbmarkets = []
-        prices_data = wfp_api.get_items(
-            "MarketPrices/PriceMonthly", self._countryiso3
-        )
+        prices_data = wfp_api.get_items("MarketPrices/PriceMonthly", self._countryiso3)
         if not prices_data:
             logger.info(f"{self._countryiso3} has no prices data!")
             return dbmarkets
@@ -70,9 +68,7 @@ class WFPFood:
         sources = {}
         for price_data in self._prices_data:
             priceflag = price_data["commodityPriceFlag"]
-            if not all(
-                x in ("actual", "aggregate") for x in priceflag.split(",")
-            ):
+            if not all(x in ("actual", "aggregate") for x in priceflag.split(",")):
                 continue
             commodity_id = price_data["commodityID"]
             category = self._commodity_to_category[commodity_id]
@@ -104,13 +100,9 @@ class WFPFood:
             pricetype = price_data["priceTypeName"]
             price = price_data["commodityPrice"]
             currency = price_data["currencyName"]
-            currency = self._configuration["currency_mappings"].get(
-                currency, currency
-            )
+            currency = self._configuration["currency_mappings"].get(currency, currency)
             try:
-                usdprice = Currency.get_historic_value_in_usd(
-                    price, currency, date
-                )
+                usdprice = Currency.get_historic_value_in_usd(price, currency, date)
             except (CurrencyError, ZeroDivisionError):
                 usdprice = None
             key = (

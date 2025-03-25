@@ -8,15 +8,16 @@ import logging
 from os.path import expanduser, join
 from typing import Dict
 
+from .dataset_generator import DatasetGenerator
+from .db_updater import DBUpdater
+from .global_prices import get_global_prices_rows
+from .utilities import get_now, setup_currency
+from .wfp_food import WFPFood
+from .wfp_mappings import WFPMappings
 from hdx.api.configuration import Configuration
 from hdx.database import Database
 from hdx.facades.infer_arguments import facade
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
-from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
-from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
-from hdx.scraper.wfp.foodprices.wfp_food import WFPFood
-from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import (
     progress_storing_folder,
@@ -87,7 +88,6 @@ def main(
                         now, retriever, wfp_api, wfp_rates_folder
                     )
                     dataset_generator = DatasetGenerator(
-                        now,
                         configuration,
                         folder,
                         iso3_to_showcase_url,
@@ -99,10 +99,8 @@ def main(
 
                     def process_country(country: Dict[str, str]) -> None:
                         countryiso3 = country["iso3"]
-                        dataset, showcase = (
-                            dataset_generator.get_dataset_and_showcase(
-                                countryiso3
-                            )
+                        dataset, showcase = dataset_generator.get_dataset_and_showcase(
+                            countryiso3
                         )
                         if not dataset:
                             return
@@ -116,13 +114,9 @@ def main(
                         dbmarkets = wfp_food.get_price_markets(wfp_api)
                         if not dbmarkets:
                             return
-                        rows, markets, sources = wfp_food.generate_rows(
-                            dbmarkets
-                        )
-                        dataset, qc_indicators, dbprices = (
-                            dataset_generator.complete_dataset(
-                                countryiso3, dataset, rows, markets, sources
-                            )
+                        rows, markets, sources = wfp_food.generate_rows(dbmarkets)
+                        dataset, qc_indicators = dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
                         )
                         time_period = dataset.get_time_period()
                         hdx_url = dataset.get_hdx_url()
@@ -131,7 +125,6 @@ def main(
                             time_period,
                             hdx_url,
                             dbmarkets,
-                            dbprices,
                         )
 
                         snippet = f"Food Prices data for {country['name']}"
@@ -143,9 +136,7 @@ def main(
                                 )
                             )
                             dataset["notes"] = dataset["notes"] % (snippet, "")
-                            dataset.generate_quickcharts(
-                                -1, indicators=qc_indicators
-                            )
+                            dataset.generate_quickcharts(-1, indicators=qc_indicators)
                             dataset.create_in_hdx(
                                 remove_additional_resources=True,
                                 hxl_update=False,
@@ -160,16 +151,13 @@ def main(
                                     f"{country['name']} does not have a showcase!"
                                 )
 
-                    for _, country in progress_storing_folder(
-                        info, countries, "iso3"
-                    ):
+                    for _, country in progress_storing_folder(info, countries, "iso3"):
                         process_country(country)
-                    table_data, start_date, end_date = (
-                        dbupdater.get_data_from_tables()
-                    )
+                    table_data, start_date, end_date = dbupdater.get_data_from_tables()
+                    prices_rows = get_global_prices_rows(now, retriever, folder)
                     dataset, showcase = (
                         dataset_generator.generate_global_dataset_and_showcase(
-                            table_data, start_date, end_date
+                            prices_rows, table_data, start_date, end_date
                         )
                     )
                     snippet = "Countries, Commodities and Markets data"

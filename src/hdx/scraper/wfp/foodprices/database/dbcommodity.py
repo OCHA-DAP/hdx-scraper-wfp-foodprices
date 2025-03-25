@@ -9,8 +9,6 @@ class DBCommodity(Base):
     commodity: Mapped[str] = mapped_column(nullable=False)
 
     def __repr__(self):
-        output = (
-            f"<Commodity(id={self.commodity_id}, category={self.category}, "
-        )
+        output = f"<Commodity(id={self.commodity_id}, category={self.category}, "
         output += f"name={self.commodity})>"
         return output
