@@ -24,6 +24,7 @@ from hdx.location.wfp_api import WFPAPI
 from hdx.scraper.wfp.foodprices.hapi_dataset_generator import HAPIDatasetGenerator
 from hdx.scraper.wfp.foodprices.hapi_output import HAPIOutput
 from hdx.utilities.downloader import Download
+from hdx.utilities.easy_logging import setup_logging
 from hdx.utilities.path import (
     progress_storing_folder,
     script_dir_plus_file,
@@ -31,6 +32,7 @@ from hdx.utilities.path import (
 )
 from hdx.utilities.retriever import Retrieve
 
+setup_logging()
 logger = logging.getLogger(__name__)
 
 lookup = "hdx-scraper-wfp-foodprices"
