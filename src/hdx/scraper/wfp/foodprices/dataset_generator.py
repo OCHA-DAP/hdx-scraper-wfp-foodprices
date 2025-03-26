@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from slugify import slugify
 
@@ -10,12 +10,17 @@ from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
+from hdx.utilities.dateparse import iso_string_from_datetime
 from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
 
 
 class DatasetGenerator:
+    global_name = "Global WFP food prices"
+    slugified_global_name = slugify(global_name).lower()
+    global_markets_name = "Global WFP markets"
+
     def __init__(
         self,
         configuration: Configuration,
@@ -36,16 +41,16 @@ class DatasetGenerator:
         if countryiso3 == "global":
             location = "world"
             countryname = "Global"
-            name = "Global WFP food prices"
+            slugified_name = self.slugified_global_name
             url = "https://dataviz.vam.wfp.org/economic/prices"
         else:
             location = countryiso3
             countryname = Country.get_country_name_from_iso3(countryiso3)
             name = f"WFP food prices for {countryname}"
+            slugified_name = slugify(name).lower()
             url = self._iso3_to_showcase_url.get(countryiso3)
         title = f"{countryname} - Food Prices"
         logger.info(f"Creating dataset: {title}")
-        slugified_name = slugify(name).lower()
 
         dataset = Dataset(
             {
@@ -230,19 +235,19 @@ class DatasetGenerator:
 
     def generate_global_dataset_and_showcase(
         self,
-        prices_rows: Iterable,
+        global_info: Dict,
         table_data: Dict,
         start_date: datetime,
         end_date: datetime,
     ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         dataset, showcase = self.get_dataset_and_showcase("global")
+        dataset.set_time_period(global_info["start_date"], global_info["end_date"])
         dataset["dataset_source"] = "WFP"
-        dataset.set_time_period(start_date, end_date)
 
         filename = "wfp_food_prices_global.csv"
         resourcedata = {
-            "name": "Global WFP food prices",
-            "description": "Last 5 years of prices data with HXL tags",
+            "name": self.global_name,
+            "description": "Last 2 years (per country) of prices data with HXL tags",
             "format": "csv",
         }
         global_headers = self._configuration["global_headers"]
@@ -250,16 +255,18 @@ class DatasetGenerator:
         global_hxltags = {header: hxltags[header] for header in global_headers}
         dataset.generate_resource_from_iterable(
             global_headers,
-            prices_rows,
+            global_info["rows"],
             global_hxltags,
             self._folder,
             filename,
             resourcedata,
         )
         filename = "wfp_countries_global.csv"
+        start_date_str = iso_string_from_datetime(start_date)
+        end_date_str = iso_string_from_datetime(end_date)
         resourcedata = {
             "name": "Global WFP countries",
-            "description": "Countries data with HXL tags with links to country datasets containing all available historic data",
+            "description": f"Countries data with HXL tags with links to country datasets containing all available historic data ({start_date_str} to {end_date_str})",
             "format": "csv",
         }
         info = table_data["DBCountry"]
@@ -290,7 +297,7 @@ class DatasetGenerator:
 
         filename = "wfp_markets_global.csv"
         resourcedata = {
-            "name": "Global WFP markets",
+            "name": self.global_markets_name,
             "description": "Markets data with HXL tags",
             "format": "csv",
         }

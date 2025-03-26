@@ -8,6 +8,7 @@ import logging
 from os.path import expanduser, join
 from typing import Dict
 
+from ._version import __version__
 from .dataset_generator import DatasetGenerator
 from .db_updater import DBUpdater
 from .global_prices import get_global_prices_rows
@@ -15,9 +16,13 @@ from .utilities import get_now, setup_currency
 from .wfp_food import WFPFood
 from .wfp_mappings import WFPMappings
 from hdx.api.configuration import Configuration
+from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
+from hdx.data.user import User
 from hdx.database import Database
 from hdx.facades.infer_arguments import facade
 from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices.hapi_dataset_generator import HAPIDatasetGenerator
+from hdx.scraper.wfp.foodprices.hapi_output import HAPIOutput
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import (
     progress_storing_folder,
@@ -29,6 +34,7 @@ from hdx.utilities.retriever import Retrieve
 logger = logging.getLogger(__name__)
 
 lookup = "hdx-scraper-wfp-foodprices"
+updated_by_script = "HDX Scraper: WFP Food Prices"
 
 
 def main(
@@ -36,6 +42,7 @@ def main(
     countryiso3s: str = "",
     use_saved: bool = False,
     save_wfp_rates: bool = True,
+    err_to_hdx: bool = False,
 ) -> None:
     """Generate datasets and create them in HDX
 
@@ -44,138 +51,203 @@ def main(
         countryiso3s (str): Whether to limit to specific countries. Defaults to not limiting ("").
         use_saved (bool): Use saved data. Defaults to False.
         save_wfp_rates (bool): Save WFP FX rates data. Defaults to True.
+        err_to_hdx (bool): Whether to write any errors to HDX metadata. Defaults to False.
+
     Returns:
         None
     """
-    with Download(
-        fail_on_missing_file=False,
-        extra_params_yaml=join(expanduser("~"), ".extraparams.yaml"),
-        extra_params_lookup=lookup,
-    ) as token_downloader:
+    logger.info(f"##### {lookup} version {__version__} ####")
+    if not User.check_current_user_organization_access(
+        "3ecac442-7fed-448d-8f78-b385ef6f84e7", "create_dataset"
+    ):
+        raise PermissionError("API Token does not give access to WFP organisation!")
+    with HDXErrorHandler(write_to_hdx=err_to_hdx) as error_handler:
         with Download(
-            use_env=False, rate_limit={"calls": 1, "period": 0.1}
-        ) as downloader:
-            with wheretostart_tempdir_batch(lookup) as info:
-                folder = info["folder"]
-                batch = info["batch"]
-                retriever = Retrieve(
-                    downloader, folder, "saved_data", folder, save, use_saved
-                )
-                params = {
-                    "dialect": "sqlite",
-                    "database": f"/{folder}/foodprices.sqlite",
-                }
-                with Database(**params) as database:
-                    configuration = Configuration.read()
-                    now = get_now(retriever)
-                    wfp_api = WFPAPI(token_downloader, retriever)
-                    wfp_api.update_retry_params(attempts=5, wait=3600)
-                    wfp = WFPMappings(configuration, wfp_api, retriever)
-                    iso3_to_showcase_url = wfp.read_region_mapping()
-                    iso3_to_source = wfp.read_source_overrides()
-                    countries = wfp.get_countries(countryiso3s)
-                    logger.info(
-                        f"Number of country datasets to upload: {len(countries)}"
-                    )
-                    commodity_to_category, dbcommodities = (
-                        wfp.build_commodity_category_mapping()
-                    )
-                    if save_wfp_rates:
-                        wfp_rates_folder = folder
+            fail_on_missing_file=False,
+            extra_params_yaml=join(expanduser("~"), ".extraparams.yaml"),
+            extra_params_lookup=lookup,
+        ) as token_downloader:
+            with Download(
+                use_env=False, rate_limit={"calls": 1, "period": 0.1}
+            ) as downloader:
+                with wheretostart_tempdir_batch(lookup) as info:
+                    if countryiso3s:
+                        countryiso3s = countryiso3s.split(",")
                     else:
-                        wfp_rates_folder = None
-                    currencies = setup_currency(
-                        now, retriever, wfp_api, wfp_rates_folder
+                        countryiso3s = None
+                    folder = info["folder"]
+                    batch = info["batch"]
+                    retriever = Retrieve(
+                        downloader, folder, "saved_data", folder, save, use_saved
                     )
-                    dataset_generator = DatasetGenerator(
-                        configuration,
-                        folder,
-                        iso3_to_showcase_url,
-                        iso3_to_source,
-                        currencies,
-                    )
-                    dbupdater = DBUpdater(configuration, database)
-                    dbupdater.update_commodities(dbcommodities)
-
-                    def process_country(country: Dict[str, str]) -> None:
-                        countryiso3 = country["iso3"]
-                        dataset, showcase = dataset_generator.get_dataset_and_showcase(
-                            countryiso3
+                    params = {
+                        "dialect": "sqlite",
+                        "database": f"/{folder}/foodprices.sqlite",
+                    }
+                    with Database(**params) as database:
+                        configuration = Configuration.read()
+                        now = get_now(retriever)
+                        wfp_api = WFPAPI(token_downloader, retriever)
+                        wfp_api.update_retry_params(attempts=5, wait=3600)
+                        wfp = WFPMappings(configuration, wfp_api, retriever)
+                        iso3_to_showcase_url = wfp.read_region_mapping()
+                        iso3_to_source = wfp.read_source_overrides()
+                        countries = wfp.get_countries(countryiso3s)
+                        logger.info(
+                            f"Number of country datasets to upload: {len(countries)}"
                         )
-                        if not dataset:
-                            return
-                        wfp_food = WFPFood(
-                            countryiso3,
+                        commodity_to_category, dbcommodities = (
+                            wfp.build_commodity_category_mapping()
+                        )
+                        if save_wfp_rates:
+                            wfp_rates_folder = folder
+                        else:
+                            wfp_rates_folder = None
+                        currencies = setup_currency(
+                            now, retriever, wfp_api, wfp_rates_folder
+                        )
+                        dataset_generator = DatasetGenerator(
                             configuration,
-                            iso3_to_showcase_url.get(countryiso3),
-                            iso3_to_source.get(countryiso3),
-                            commodity_to_category,
+                            folder,
+                            iso3_to_showcase_url,
+                            iso3_to_source,
+                            currencies,
                         )
-                        dbmarkets = wfp_food.get_price_markets(wfp_api)
-                        if not dbmarkets:
-                            return
-                        rows, markets, sources = wfp_food.generate_rows(dbmarkets)
-                        dataset, qc_indicators = dataset_generator.complete_dataset(
-                            countryiso3, dataset, rows, markets, sources
-                        )
-                        time_period = dataset.get_time_period()
-                        hdx_url = dataset.get_hdx_url()
-                        dbupdater.update_tables(
-                            countryiso3,
-                            time_period,
-                            hdx_url,
-                            dbmarkets,
-                        )
+                        dbupdater = DBUpdater(configuration, database)
+                        dbupdater.update_commodities(dbcommodities)
 
-                        snippet = f"Food Prices data for {country['name']}"
-                        if dataset:
-                            dataset.update_from_yaml(
-                                script_dir_plus_file(
-                                    join("config", "hdx_dataset_static.yaml"),
-                                    main,
-                                )
+                        def process_country(country: Dict[str, str]) -> None:
+                            countryiso3 = country["iso3"]
+                            dataset, showcase = (
+                                dataset_generator.get_dataset_and_showcase(countryiso3)
                             )
-                            dataset["notes"] = dataset["notes"] % (snippet, "")
-                            dataset.generate_quickcharts(-1, indicators=qc_indicators)
-                            dataset.create_in_hdx(
-                                remove_additional_resources=True,
-                                hxl_update=False,
-                                updated_by_script="HDX Scraper: WFP Food Prices",
-                                batch=batch,
+                            if not dataset:
+                                return
+                            wfp_food = WFPFood(
+                                countryiso3,
+                                configuration,
+                                iso3_to_showcase_url.get(countryiso3),
+                                iso3_to_source.get(countryiso3),
+                                commodity_to_category,
                             )
-                            if showcase:
-                                showcase.create_in_hdx()
-                                showcase.add_dataset(dataset)
-                            else:
-                                logger.info(
-                                    f"{country['name']} does not have a showcase!"
-                                )
+                            dbmarkets = wfp_food.get_price_markets(wfp_api)
+                            if not dbmarkets:
+                                return
+                            rows, markets, sources = wfp_food.generate_rows(dbmarkets)
+                            dataset, qc_indicators = dataset_generator.complete_dataset(
+                                countryiso3, dataset, rows, markets, sources
+                            )
+                            time_period = dataset.get_time_period()
+                            hdx_url = dataset.get_hdx_url()
+                            dbupdater.update_tables(
+                                countryiso3,
+                                time_period,
+                                hdx_url,
+                                dbmarkets,
+                            )
 
-                    for _, country in progress_storing_folder(info, countries, "iso3"):
-                        process_country(country)
-                    table_data, start_date, end_date = dbupdater.get_data_from_tables()
-                    prices_rows = get_global_prices_rows(now, retriever, folder)
-                    dataset, showcase = (
-                        dataset_generator.generate_global_dataset_and_showcase(
-                            prices_rows, table_data, start_date, end_date
+                            snippet = f"Food Prices data for {country['name']}"
+                            if dataset:
+                                dataset.update_from_yaml(
+                                    script_dir_plus_file(
+                                        join("config", "hdx_dataset_static.yaml"),
+                                        main,
+                                    )
+                                )
+                                dataset["notes"] = dataset["notes"] % (snippet, "")
+                                dataset.generate_quickcharts(
+                                    -1, indicators=qc_indicators
+                                )
+                                dataset.create_in_hdx(
+                                    remove_additional_resources=True,
+                                    hxl_update=False,
+                                    updated_by_script=updated_by_script,
+                                    batch=batch,
+                                )
+                                if showcase:
+                                    showcase.create_in_hdx()
+                                    showcase.add_dataset(dataset)
+                                else:
+                                    logger.info(
+                                        f"{country['name']} does not have a showcase!"
+                                    )
+
+                        for _, country in progress_storing_folder(
+                            info, countries, "iso3"
+                        ):
+                            process_country(country)
+                        table_data, start_date, end_date = (
+                            dbupdater.get_data_from_tables()
                         )
-                    )
-                    snippet = "Countries, Commodities and Markets data"
-                    snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "
-                    dataset.update_from_yaml(
-                        script_dir_plus_file(
-                            join("config", "hdx_dataset_static.yaml"), main
+                        global_prices_info = get_global_prices_rows(downloader, folder)
+                        dataset, showcase = (
+                            dataset_generator.generate_global_dataset_and_showcase(
+                                global_prices_info, table_data, start_date, end_date
+                            )
                         )
-                    )
-                    dataset["notes"] = dataset["notes"] % (snippet, snippet2)
-                    dataset.create_in_hdx(
-                        remove_additional_resources=True,
-                        hxl_update=False,
-                        updated_by_script="HDX Scraper: WFP Food Prices",
-                        batch=batch,
-                    )
-                    showcase.create_in_hdx()
-                    showcase.add_dataset(dataset)
+                        snippet = "Countries, Commodities and Markets data"
+                        snippet2 = "The volume of data means that the actual Food Prices data is in country level datasets. "
+                        dataset.update_from_yaml(
+                            script_dir_plus_file(
+                                join("config", "hdx_dataset_static.yaml"), main
+                            )
+                        )
+                        dataset["notes"] = dataset["notes"] % (snippet, snippet2)
+                        dataset.create_in_hdx(
+                            remove_additional_resources=True,
+                            hxl_update=False,
+                            updated_by_script=updated_by_script,
+                            batch=batch,
+                        )
+                        showcase.create_in_hdx()
+                        showcase.add_dataset(dataset)
+
+                        prices_resource_id = None
+                        markets_resource_id = None
+                        for resource in dataset.get_resources():
+                            resource_name = resource["name"]
+                            if resource_name == dataset_generator.global_name:
+                                prices_resource_id = resource["id"]
+                            elif resource_name == dataset_generator.global_markets_name:
+                                markets_resource_id = resource["id"]
+                        if prices_resource_id and markets_resource_id:
+                            dataset_id = dataset["id"]
+                            hapi_output = HAPIOutput(
+                                configuration,
+                                error_handler,
+                            )
+                            hapi_output.setup_admins(retriever, countryiso3s)
+                            global_markets_info = table_data["DBMarket"]
+                            hapi_output.process_markets(
+                                global_markets_info, dataset_id, markets_resource_id
+                            )
+                            hapi_output.process_prices(
+                                global_prices_info, dataset_id, prices_resource_id
+                            )
+                            hapi_dataset_generator = HAPIDatasetGenerator(
+                                configuration,
+                                global_markets_info,
+                                global_prices_info,
+                            )
+                            dataset = hapi_dataset_generator.generate_prices_dataset(
+                                folder,
+                            )
+                            if dataset:
+                                dataset.update_from_yaml(
+                                    script_dir_plus_file(
+                                        join(
+                                            "config",
+                                            "hdx_hapi_dataset_static.yaml",
+                                        ),
+                                        main,
+                                    )
+                                )
+                                dataset.create_in_hdx(
+                                    remove_additional_resources=False,
+                                    hxl_update=False,
+                                    updated_by_script=updated_by_script,
+                                    batch=batch,
+                                )
 
 
 if __name__ == "__main__":

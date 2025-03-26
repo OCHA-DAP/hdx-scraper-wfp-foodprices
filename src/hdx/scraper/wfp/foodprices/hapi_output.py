@@ -1,0 +1,235 @@
+import logging
+from copy import deepcopy
+from typing import Dict, List, Optional
+
+from dateutil.relativedelta import relativedelta
+
+from hdx.api.configuration import Configuration
+from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
+from hdx.location.adminlevel import AdminLevel
+from hdx.location.country import Country
+from hdx.utilities.dateparse import parse_date
+from hdx.utilities.retriever import Retrieve
+
+logger = logging.getLogger(__name__)
+
+
+class HAPIOutput:
+    def __init__(
+        self,
+        configuration: Configuration,
+        error_handler: HDXErrorHandler,
+    ) -> None:
+        self._configuration = configuration
+        self._error_handler = error_handler
+        self._admins = []
+        self._base_rows = {}
+
+    def setup_admins(
+        self,
+        retriever: Retrieve,
+        countryiso3s: Optional[List[str]] = None,
+    ):
+        libhxl_dataset = AdminLevel.get_libhxl_dataset(retriever=retriever).cache()
+        libhxl_format_dataset = AdminLevel.get_libhxl_dataset(
+            url=AdminLevel.formats_url, retriever=retriever
+        ).cache()
+        self._admins = []
+        for i in range(2):
+            admin = AdminLevel(admin_level=i + 1, retriever=retriever)
+            admin.setup_from_libhxl_dataset(
+                libhxl_dataset=libhxl_dataset,
+                countryiso3s=countryiso3s,
+            )
+            admin.load_pcode_formats_from_libhxl_dataset(libhxl_format_dataset)
+            self._admins.append(admin)
+
+    def complete_admin(self, row: Dict, base_row: Dict):
+        market_name = row["market"]
+        base_row["market_name"] = market_name
+        countryiso3 = row["countryiso3"]
+        base_row["location_code"] = countryiso3
+        base_row["has_hrp"] = (
+            "Y" if Country.get_hrp_status_from_iso3(countryiso3) else "N"
+        )
+        base_row["in_gho"] = (
+            "Y" if Country.get_gho_status_from_iso3(countryiso3) else "N"
+        )
+        base_row["lat"] = row["latitude"]
+        base_row["lon"] = row["longitude"]
+        provider_admin1_name = row["admin1"]
+        provider_admin2_name = row["admin2"]
+        base_row["provider_admin1_name"] = provider_admin1_name
+        base_row["provider_admin2_name"] = provider_admin2_name
+        if countryiso3 in self._configuration["unused_adm1"]:
+            if provider_admin2_name:
+                base_row["admin_level"] = 1
+                adm1_code, _ = self._admins[0].get_pcode(
+                    countryiso3, provider_admin2_name
+                )
+                if adm1_code:
+                    base_row["admin1_code"] = adm1_code
+                    base_row["admin1_name"] = self._admins[0].pcode_to_name[adm1_code]
+            else:
+                base_row["admin_level"] = 0
+                self._error_handler.add_missing_value_message(
+                    "WFPFoodPrice",
+                    countryiso3,
+                    "admin 1 name for market",
+                    market_name,
+                    message_type="warning",
+                )
+                base_row["warnings"].add("no adm1 name in prov2 name")
+            return
+
+        if countryiso3 in self._configuration["unused_adm2"]:
+            if provider_admin1_name:
+                base_row["admin_level"] = 2
+                adm2_code, _ = self._admins[1].get_pcode(
+                    countryiso3, provider_admin1_name
+                )
+                if adm2_code:
+                    base_row["admin2_code"] = adm2_code
+                    base_row["admin2_name"] = self._admins[1].pcode_to_name[adm2_code]
+                    adm1_code = self._admins[1].pcode_to_parent.get(adm2_code)
+                    if adm1_code:
+                        base_row["admin1_code"] = adm1_code
+                        base_row["admin2_name"] = self._admins[0].pcode_to_name[
+                            adm1_code
+                        ]
+            else:
+                base_row["admin_level"] = 0
+                self._error_handler.add_missing_value_message(
+                    "WFPFoodPrice",
+                    countryiso3,
+                    "admin 2 name for market",
+                    market_name,
+                    message_type="warning",
+                )
+                base_row["warnings"].add("no adm2 name in prov1 name")
+            return
+
+        if provider_admin1_name:
+            base_row["admin_level"] = 1
+            adm1_code, _ = self._admins[0].get_pcode(countryiso3, provider_admin1_name)
+            if adm1_code:
+                base_row["admin1_code"] = adm1_code
+                base_row["admin1_name"] = self._admins[0].pcode_to_name[adm1_code]
+        else:
+            adm1_code = ""
+            base_row["admin_level"] = 0
+            self._error_handler.add_missing_value_message(
+                "WFPFoodPrice",
+                countryiso3,
+                "admin 1 name for market",
+                market_name,
+                message_type="warning",
+            )
+            base_row["warnings"].add("no adm1 name")
+
+        if countryiso3 in self._configuration["adm1_only"]:
+            return
+
+        if provider_admin2_name:
+            base_row["admin_level"] = 2
+            adm2_code, _ = self._admins[1].get_pcode(
+                countryiso3, provider_admin2_name, parent=adm1_code
+            )
+            if adm2_code:
+                base_row["admin2_code"] = adm2_code
+                base_row["admin2_name"] = self._admins[1].pcode_to_name[adm2_code]
+                parent_code = self._admins[1].pcode_to_parent.get(adm2_code)
+                if adm1_code and adm1_code != parent_code:
+                    message = f"PCode mismatch {adm1_code}->{parent_code} (parent)"
+                    self._error_handler.add_message(
+                        "WFPFoodPrice",
+                        f"{countryiso3}-{adm2_code}",
+                        message,
+                        market_name,
+                        message_type="warning",
+                    )
+                    base_row["admin1_code"] = parent_code
+                    base_row["admin1_name"] = self._admins[0].pcode_to_name[parent_code]
+            return
+
+        if adm1_code:
+            identifier = f"{countryiso3}-{adm1_code}"
+        elif provider_admin1_name:
+            identifier = f"{countryiso3}-{provider_admin1_name}"
+        else:
+            identifier = countryiso3
+        self._error_handler.add_missing_value_message(
+            "WFPFoodPrice",
+            identifier,
+            "admin 2 name for market",
+            market_name,
+            message_type="warning",
+        )
+        base_row["warnings"].add("no adm2 name")
+
+    def process_markets(
+        self, markets_info: Dict, dataset_id: str, resource_id: str
+    ) -> None:
+        logger.info("Processing HAPI markets output")
+        hapi_rows = []
+        for row in markets_info["rows"]:
+            hapi_base_row = {
+                "admin1_code": "",
+                "admin1_name": "",
+                "admin2_code": "",
+                "admin2_name": "",
+                "warning": set(),
+                "error": set(),
+            }
+            self.complete_admin(row, hapi_base_row)
+            key = (
+                hapi_base_row["location_code"],
+                hapi_base_row["provider_admin1_name"],
+                hapi_base_row["provider_admin2_name"],
+                hapi_base_row["market_name"],
+            )
+            self._base_rows[key] = hapi_base_row
+            hapi_row = deepcopy(hapi_base_row)
+            hapi_row["dataset_hdx_id"] = dataset_id
+            hapi_row["resource_hdx_id"] = resource_id
+            hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
+            hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
+            hapi_rows.append(hapi_row)
+        markets_info["rows"] = hapi_rows
+
+    def process_prices(
+        self,
+        prices_info: Dict,
+        dataset_id: str,
+        resource_id: str,
+    ) -> None:
+        logger.info("Processing HAPI prices output")
+        hapi_rows = []
+        for row in prices_info["rows"]:
+            key = (row["countryiso3"], row["admin1"], row["admin2"], row["market"])
+            hapi_row = deepcopy(self._base_rows[key])
+            hapi_row["dataset_hdx_id"] = dataset_id
+            hapi_row["resource_hdx_id"] = resource_id
+            hapi_row["commodity_category"] = row["category"]
+            hapi_row["commodity_name"] = row["commodity"]
+            hapi_row["unit"] = row["unit"]
+            hapi_row["price_flag"] = row["priceflag"]
+            hapi_row["price_type"] = row["pricetype"]
+            hapi_row["currency_code"] = row["currency"]
+            hapi_row["price"] = row["price"]
+            hapi_row["usd_price"] = row["usdprice"]
+            reference_period_start = parse_date(row["date"], date_format="%Y-%m-%d")
+            hapi_row["reference_period_start"] = reference_period_start
+            reference_period_end = reference_period_start + relativedelta(
+                months=1,
+                days=-1,
+                hours=23,
+                minutes=59,
+                seconds=59,
+                microseconds=999999,
+            )  # food price reference period is one month
+            hapi_row["reference_period_end"] = reference_period_end
+            hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
+            hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
+            hapi_rows.append(hapi_row)
+        prices_info["rows"] = hapi_rows
