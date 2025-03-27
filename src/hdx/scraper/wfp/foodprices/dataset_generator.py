@@ -195,12 +195,14 @@ class DatasetGenerator:
                     "admin1": adm1,
                     "admin2": adm2,
                     "market": market_name,
+                    "market_id": market_id,
                     "latitude": number_format(lat, format="%.2f", trailing_zeros=False),
                     "longitude": number_format(
                         lon, format="%.2f", trailing_zeros=False
                     ),
                     "category": category,
                     "commodity": commodity,
+                    "commodity_id": commodity_id,
                     "unit": unit,
                     "priceflag": priceflag,
                     "pricetype": pricetype,

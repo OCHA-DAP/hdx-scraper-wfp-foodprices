@@ -36,10 +36,12 @@ country_headers:
   - admin1
   - admin2
   - market
+  - market_id
   - latitude
   - longitude
   - category
   - commodity
+  - commodity_id
   - unit
   - priceflag
   - pricetype
@@ -53,10 +55,12 @@ global_headers:
   - admin1
   - admin2
   - market
+  - market_id
   - latitude
   - longitude
   - category
   - commodity
+  - commodity_id
   - unit
   - priceflag
   - pricetype
@@ -115,10 +119,12 @@ hapi_dataset:
         admin2_name: "#adm2+name"
         admin_level: "#adm+level"
         market_name: "#loc+market+name"
+        market_code: "#loc+market+code"
         lat: "#geo+lat"
         lon: "#geo+lon"
         commodity_category: "#item+type"
         commodity_name: "#item+name"
+        commodity_code: "#item+code"
         unit: "#item+unit"
         price_flag: "#item+price+flag"
         price_type: "#item+price+type"
@@ -146,6 +152,7 @@ hapi_dataset:
         admin2_name: "#adm2+name"
         admin_level: "#adm+level"
         market_name: "#loc+market+name"
+        market_code: "#loc+market+code"
         lat: "#geo+lat"
         lon: "#geo+lon"
         dataset_hdx_id: "#meta+dataset_id"
