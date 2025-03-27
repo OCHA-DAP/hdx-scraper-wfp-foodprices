@@ -57,7 +57,7 @@ class WFPMappings:
             iso3_to_source[countryiso3] = source
         return iso3_to_source
 
-    def get_countries(self, countryiso3s: str = "") -> List[Dict[str, str]]:
+    def get_countries(self, countryiso3s: List[str] = []) -> List[Dict[str, str]]:
         url = self._configuration["countries_url"]
         json = self._wfp_api.retrieve(url, "countries.json", "countries")
         countries = set()

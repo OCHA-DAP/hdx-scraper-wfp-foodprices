@@ -1,10 +1,10 @@
 import logging
 from typing import Dict, List, Optional, Tuple
 
-from .source_processing import process_source
 from hdx.api.configuration import Configuration
 from hdx.location.currency import Currency, CurrencyError
 from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices.source_processing import process_source
 from hdx.utilities.dateparse import iso_string_from_datetime, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
 

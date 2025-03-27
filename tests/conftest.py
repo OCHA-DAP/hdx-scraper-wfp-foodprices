@@ -5,7 +5,12 @@ import pytest
 from hdx.api.configuration import Configuration
 from hdx.api.locations import Locations
 from hdx.data.vocabulary import Vocabulary
+from hdx.scraper.wfp.foodprices.__main__ import main
+from hdx.utilities.easy_logging import setup_logging
+from hdx.utilities.path import script_dir_plus_file
 from hdx.utilities.useragent import UserAgent
+
+setup_logging()
 
 
 @pytest.fixture(scope="session")
@@ -24,7 +29,9 @@ def configuration():
     Configuration._create(
         hdx_read_only=True,
         hdx_site="prod",
-        project_config_yaml=join("tests", "config", "project_configuration.yaml"),
+        project_config_yaml=script_dir_plus_file(
+            join("config", "project_configuration.yaml"), main
+        ),
     )
     Locations.set_validlocations(
         [

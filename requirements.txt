@@ -32,7 +32,7 @@ email-validator==2.2.0
     # via hdx-python-api
 et-xmlfile==2.0.0
     # via openpyxl
-frictionless==5.18.0
+frictionless==5.18.1
     # via hdx-python-utilities
 greenlet==3.1.1
     # via sqlalchemy
@@ -147,7 +147,7 @@ rfc3986==2.0.0
     # via frictionless
 rich==13.9.4
     # via typer
-rpds-py==0.23.1
+rpds-py==0.24.0
     # via
     #   jsonschema
     #   referencing
@@ -155,7 +155,7 @@ ruamel-yaml==0.18.10
     # via hdx-python-utilities
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
-setuptools==78.0.2
+setuptools==78.1.0
     # via ckanapi
 shellingham==1.5.4
     # via typer
@@ -177,8 +177,6 @@ sphinxcontrib-napoleon==0.7
     # via defopt
 sqlalchemy==2.0.39
     # via hdx-python-database
-stringcase==1.2.0
-    # via frictionless
 structlog==25.2.0
     # via libhxl
 tableschema-to-template==0.0.13
@@ -193,7 +191,7 @@ typeguard==4.4.2
     # via inflect
 typer==0.15.2
     # via frictionless
-typing-extensions==4.12.2
+typing-extensions==4.13.0
     # via
     #   frictionless
     #   pydantic
