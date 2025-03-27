@@ -148,6 +148,7 @@ class HAPIOutput:
                         market_name,
                         message_type="warning",
                     )
+                    base_row["warning"].add(message)
                     base_row["admin1_code"] = parent_code
                     base_row["admin1_name"] = self._admins[0].pcode_to_name[parent_code]
             return
