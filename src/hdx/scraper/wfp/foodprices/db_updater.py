@@ -20,9 +20,9 @@ class DBUpdater:
     BATCH_SIZE = 1000
 
     tables = {
-        "DBCountry": DBCountry,
-        "DBCommodity": DBCommodity,
-        "DBMarket": DBMarket,
+        "DBCountry": (DBCountry, DBCountry.countryiso3),
+        "DBCommodity": (DBCommodity, DBCommodity.commodity_id),
+        "DBMarket": (DBMarket, DBMarket.market_id),
     }
 
     def __init__(self, configuration: Configuration, database: Database):
@@ -67,8 +67,8 @@ class DBUpdater:
             "DBMarket": {"rows": []},
         }
         for tablename, info in table_data.items():
-            dbtable = self.tables[tablename]
-            for result in self._session.scalars(select(dbtable)).all():
+            dbtable, primary_key = self.tables[tablename]
+            for result in self._session.scalars(select(dbtable).order_by(primary_key)).all():
                 row = {}
                 for column in result.__table__.columns.keys():
                     value = getattr(result, column)
