@@ -68,7 +68,9 @@ class DBUpdater:
         }
         for tablename, info in table_data.items():
             dbtable, primary_key = self.tables[tablename]
-            for result in self._session.scalars(select(dbtable).order_by(primary_key)).all():
+            for result in self._session.scalars(
+                select(dbtable).order_by(primary_key)
+            ).all():
                 row = {}
                 for column in result.__table__.columns.keys():
                     value = getattr(result, column)
