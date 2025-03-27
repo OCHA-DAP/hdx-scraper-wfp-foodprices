@@ -711,7 +711,7 @@ class TestWFP:
                             "groups": [{"name": "world"}],
                             "license_id": "cc-by-igo",
                             "maintainer": "196196be-6037-4488-8b71-d786adf4c081",
-                            "name": "hdx-hapi-humanitarian-needs",
+                            "name": "hdx-hapi-food-price",
                             "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
                             "subnational": "1",
                             "tags": [
