@@ -615,12 +615,12 @@ class TestWFP:
                                 },
                             ],
                             "dataset_source": "WFP",
-                            "dataset_date": "[2020-05-15T00:00:00 TO 2024-01-15T23:59:59]",
+                            "dataset_date": "[2021-05-15T00:00:00 TO 2024-01-15T23:59:59]",
                         }
                         resources = dataset.get_resources()
                         assert resources == [
                             {
-                                "description": "Last 2 years (per country) of prices data with HXL tags",
+                                "description": "Last year (per country) of prices data with HXL tags",
                                 "format": "csv",
                                 "name": "Global WFP food prices",
                                 "resource_type": "file.upload",
@@ -705,7 +705,7 @@ class TestWFP:
                         )
                         assert dataset == {
                             "data_update_frequency": "7",
-                            "dataset_date": "[2020-05-15T00:00:00 TO 2024-01-15T23:59:59]",
+                            "dataset_date": "[2021-05-15T00:00:00 TO 2024-01-15T23:59:59]",
                             "dataset_preview": "no_preview",
                             "dataset_source": "WFP - World Food Programme",
                             "groups": [{"name": "world"}],
