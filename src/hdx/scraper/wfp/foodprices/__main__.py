@@ -8,21 +8,21 @@ import logging
 from os.path import expanduser, join
 from typing import Dict
 
-from ._version import __version__
-from .dataset_generator import DatasetGenerator
-from .db_updater import DBUpdater
-from .global_prices import get_global_prices_rows
-from .utilities import get_now, setup_currency
-from .wfp_food import WFPFood
-from .wfp_mappings import WFPMappings
 from hdx.api.configuration import Configuration
 from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.data.user import User
 from hdx.database import Database
 from hdx.facades.infer_arguments import facade
 from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices._version import __version__
+from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
+from hdx.scraper.wfp.foodprices.db_updater import DBUpdater
+from hdx.scraper.wfp.foodprices.global_prices import get_global_prices_rows
 from hdx.scraper.wfp.foodprices.hapi_dataset_generator import HAPIDatasetGenerator
 from hdx.scraper.wfp.foodprices.hapi_output import HAPIOutput
+from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
+from hdx.scraper.wfp.foodprices.wfp_food import WFPFood
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.downloader import Download
 from hdx.utilities.easy_logging import setup_logging
 from hdx.utilities.path import (

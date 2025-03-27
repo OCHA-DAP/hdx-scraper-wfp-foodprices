@@ -3,11 +3,11 @@ from typing import Dict, List, Tuple
 
 from sqlalchemy import delete, select
 
-from .database.dbcommodity import DBCommodity
-from .database.dbcountry import DBCountry
-from .database.dbmarket import DBMarket
 from hdx.api.configuration import Configuration
 from hdx.database import Database
+from hdx.scraper.wfp.foodprices.database.dbcommodity import DBCommodity
+from hdx.scraper.wfp.foodprices.database.dbcountry import DBCountry
+from hdx.scraper.wfp.foodprices.database.dbmarket import DBMarket
 from hdx.utilities.dateparse import (
     default_date,
     default_enddate,

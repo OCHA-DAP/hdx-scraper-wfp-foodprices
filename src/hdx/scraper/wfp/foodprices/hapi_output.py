@@ -79,7 +79,7 @@ class HAPIOutput:
                     market_name,
                     message_type="warning",
                 )
-                base_row["warnings"].add("no adm1 name in prov2 name")
+                base_row["warning"].add("no adm1 name in prov2 name")
             return
 
         if countryiso3 in self._configuration["unused_adm2"]:
@@ -106,7 +106,7 @@ class HAPIOutput:
                     market_name,
                     message_type="warning",
                 )
-                base_row["warnings"].add("no adm2 name in prov1 name")
+                base_row["warning"].add("no adm2 name in prov1 name")
             return
 
         if provider_admin1_name:
@@ -125,7 +125,7 @@ class HAPIOutput:
                 market_name,
                 message_type="warning",
             )
-            base_row["warnings"].add("no adm1 name")
+            base_row["warning"].add("no adm1 name")
 
         if countryiso3 in self._configuration["adm1_only"]:
             return
@@ -165,7 +165,7 @@ class HAPIOutput:
             market_name,
             message_type="warning",
         )
-        base_row["warnings"].add("no adm2 name")
+        base_row["warning"].add("no adm2 name")
 
     def process_markets(
         self, markets_info: Dict, dataset_id: str, resource_id: str
@@ -206,8 +206,32 @@ class HAPIOutput:
         logger.info("Processing HAPI prices output")
         hapi_rows = []
         for row in prices_info["rows"]:
-            key = (row["countryiso3"], row["admin1"], row["admin2"], row["market"])
-            hapi_row = deepcopy(self._base_rows[key])
+            market_name = row["market"]
+            if market_name == "National Average":
+                countryiso3 = row["countryiso3"]
+                hapi_row = {
+                    "location_code": countryiso3,
+                    "has_hrp": (
+                        "Y" if Country.get_hrp_status_from_iso3(countryiso3) else "N"
+                    ),
+                    "in_gho": (
+                        "Y" if Country.get_gho_status_from_iso3(countryiso3) else "N"
+                    ),
+                    "lat": "",
+                    "lon": "",
+                    "provider_admin1_name": "",
+                    "admin1_code": "",
+                    "admin1_name": "",
+                    "provider_admin2_name": "",
+                    "admin2_code": "",
+                    "admin2_name": "",
+                    "market_name": row["market"],
+                    "warning": set(),
+                    "error": set(),
+                }
+            else:
+                key = (row["countryiso3"], row["admin1"], row["admin2"], row["market"])
+                hapi_row = deepcopy(self._base_rows[key])
             hapi_row["dataset_hdx_id"] = dataset_id
             hapi_row["resource_hdx_id"] = resource_id
             hapi_row["commodity_category"] = row["category"]

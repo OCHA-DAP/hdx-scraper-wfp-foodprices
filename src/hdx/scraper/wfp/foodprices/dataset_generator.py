@@ -4,12 +4,12 @@ from typing import Dict, List, Optional, Tuple
 
 from slugify import slugify
 
-from .utilities import round_min_digits
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
+from hdx.scraper.wfp.foodprices.utilities import round_min_digits
 from hdx.utilities.dateparse import iso_string_from_datetime
 from hdx.utilities.text import number_format
 

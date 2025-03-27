@@ -27,7 +27,7 @@ def get_global_prices_rows(
     for filepath in sorted(filepaths):
         countryiso3 = filepath[-7:-4].upper()
         headers, iterator = downloader.get_tabular_rows(
-            filepath, has_hxl=True, dict_form=True
+            filepath, has_hxl=True, dict_form=True, encoding="utf-8"
         )
         logger.info(f"Reading from {countryiso3}: {filepath}")
         end_date = default_date

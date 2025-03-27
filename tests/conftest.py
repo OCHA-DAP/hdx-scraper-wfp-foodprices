@@ -12,6 +12,7 @@ from hdx.utilities.useragent import UserAgent
 
 setup_logging()
 
+
 @pytest.fixture(scope="session")
 def fixtures_dir():
     return join("tests", "fixtures")

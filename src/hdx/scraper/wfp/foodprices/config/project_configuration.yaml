@@ -90,7 +90,7 @@ adm1_only:
   - "SLV"
 
 hapi_dataset:
-  name: "hdx-hapi-humanitarian-needs"
+  name: "hdx-hapi-food-price"
   title: "HDX HAPI - Food Security, Nutrition & Poverty: Food Prices"
   tags:
     - "hxl"
