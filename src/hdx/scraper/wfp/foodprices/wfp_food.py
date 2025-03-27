@@ -74,22 +74,19 @@ class WFPFood:
             category = self._commodity_to_category[commodity_id]
             market_id = price_data["marketID"]
             market_name = price_data["marketName"]
-            if market_name == "National Average":
-                adm1 = adm2 = lat = lon = ""
+            result = self._market_to_adm.get(market_id)
+            if result:
+                adm1, adm2, lat, lon = result
             else:
-                result = self._market_to_adm.get(market_id)
-                if result:
-                    adm1, adm2, lat, lon = result
-                else:
-                    adm1 = adm2 = lat = lon = ""
-                    self._market_to_adm[market_id] = adm1, adm2, lat, lon
-                    dbmarkets.append(
-                        {
-                            "market_id": market_id,
-                            "market": market_name,
-                            "countryiso3": self._countryiso3,
-                        }
-                    )
+                adm1 = adm2 = lat = lon = ""
+                self._market_to_adm[market_id] = adm1, adm2, lat, lon
+                dbmarkets.append(
+                    {
+                        "market_id": market_id,
+                        "market": market_name,
+                        "countryiso3": self._countryiso3,
+                    }
+                )
 
             process_source(sources, price_data["commodityPriceSourceName"])
             date_str = price_data["commodityPriceDate"]
