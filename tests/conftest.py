@@ -37,6 +37,7 @@ def configuration():
         [
             {"name": "cog", "title": "Congo"},
             {"name": "blr", "title": "Belarus"},
+            {"name": "nic", "title": "Nicaragua"},
             {"name": "pse", "title": "State of Palestine"},
             {"name": "syr", "title": "Syrian Arab Republic"},
             {"name": "world", "title": "World"},

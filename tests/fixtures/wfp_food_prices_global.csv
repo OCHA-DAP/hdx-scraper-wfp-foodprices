@@ -228,6 +228,266 @@ COG,2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,
 COG,2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,707,-4.79,11.85,miscellaneous food,Salt,185,KG,actual,Retail,XAF,697,1.12
 COG,2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,707,-4.79,11.85,oil and fats,Oil (vegetable),96,L,actual,Retail,XAF,2070,3.33
 COG,2023-10-15,Point-Noire,Pointe-Noire,Grand marché/Fond Ntié-Ntié/Nkouikou,707,-4.79,11.85,pulses and nuts,Beans (white),66,KG,actual,Retail,XAF,1178,1.89
+NIC,2023-11-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.85,0.85
+NIC,2023-11-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,0.95,0.95
+NIC,2023-11-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.51,0.51
+NIC,2023-11-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.7,0.7
+NIC,2023-11-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,1.98,1.98
+NIC,2023-11-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.66,2.66
+NIC,2023-11-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.11,4.11
+NIC,2023-11-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.46,1.46
+NIC,2023-11-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.45,2.45
+NIC,2023-11-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.58,3.58
+NIC,2023-11-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.41,0.41
+NIC,2023-11-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.47,1.47
+NIC,2023-11-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.98,0.98
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.33,0.33
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.34,1.34
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.25,0.25
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.24,1.24
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.51,0.51
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.23,0.23
+NIC,2023-11-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.64,0.64
+NIC,2023-12-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.89,0.89
+NIC,2023-12-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.06,1.06
+NIC,2023-12-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.51,0.51
+NIC,2023-12-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.68,0.68
+NIC,2023-12-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,1.99,1.99
+NIC,2023-12-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.67,2.67
+NIC,2023-12-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.16,4.16
+NIC,2023-12-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.56,1.56
+NIC,2023-12-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.45,2.45
+NIC,2023-12-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.56,3.56
+NIC,2023-12-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.42,0.42
+NIC,2023-12-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.46,1.46
+NIC,2023-12-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.97,0.97
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.49,0.49
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.23,1.23
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.27,0.27
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.7,1.7
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.47,0.47
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.23,0.23
+NIC,2023-12-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.88,0.88
+NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.88,0.88
+NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.12,1.12
+NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.51,0.51
+NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.66,0.66
+NIC,2024-01-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,1.99,1.99
+NIC,2024-01-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.66,2.66
+NIC,2024-01-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.12,4.12
+NIC,2024-01-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.65,1.65
+NIC,2024-01-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.47,2.47
+NIC,2024-01-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.63,3.63
+NIC,2024-01-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-01-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.58,1.58
+NIC,2024-01-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.95,0.95
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.2,1.2
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.29,0.29
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.32,1.32
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.48,0.48
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.27,0.27
+NIC,2024-01-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.83,0.83
+NIC,2024-02-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.87,0.87
+NIC,2024-02-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.11,1.11
+NIC,2024-02-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.52,0.52
+NIC,2024-02-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.63,0.63
+NIC,2024-02-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.03,2.03
+NIC,2024-02-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.71,2.71
+NIC,2024-02-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,3.89,3.89
+NIC,2024-02-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.64,1.64
+NIC,2024-02-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.46,2.46
+NIC,2024-02-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.69,3.69
+NIC,2024-02-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-02-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.67,1.67
+NIC,2024-02-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.93,0.93
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.34,0.34
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.06,1.06
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.4,0.4
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.28,1.28
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.45,0.45
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.28,0.28
+NIC,2024-02-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.59,0.59
+NIC,2024-03-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.89,0.89
+NIC,2024-03-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.1,1.1
+NIC,2024-03-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.52,0.52
+NIC,2024-03-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.63,0.63
+NIC,2024-03-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.05,2.05
+NIC,2024-03-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.73,2.73
+NIC,2024-03-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.18,4.18
+NIC,2024-03-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.63,1.63
+NIC,2024-03-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.45,2.45
+NIC,2024-03-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.73,3.73
+NIC,2024-03-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-03-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,2.15,2.15
+NIC,2024-03-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.95,0.95
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.32,0.32
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.11,1.11
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.5,0.5
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.14,1.14
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.45,0.45
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.28,0.28
+NIC,2024-03-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.52,0.52
+NIC,2024-04-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.83,0.83
+NIC,2024-04-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.04,1.04
+NIC,2024-04-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.53,0.53
+NIC,2024-04-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.64,0.64
+NIC,2024-04-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.05,2.05
+NIC,2024-04-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.75,2.75
+NIC,2024-04-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.19,4.19
+NIC,2024-04-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.65,1.65
+NIC,2024-04-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.45,2.45
+NIC,2024-04-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,4.18,4.18
+NIC,2024-04-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-04-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,2.15,2.15
+NIC,2024-04-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.96,0.96
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.34,0.34
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.15,1.15
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.53,0.53
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.23,1.23
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.44,0.44
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.28,0.28
+NIC,2024-04-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.47,0.47
+NIC,2024-05-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.85,0.85
+NIC,2024-05-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,0.99,0.99
+NIC,2024-05-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.55,0.55
+NIC,2024-05-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.65,0.65
+NIC,2024-05-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.04,2.04
+NIC,2024-05-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.79,2.79
+NIC,2024-05-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.03,4.03
+NIC,2024-05-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.67,1.67
+NIC,2024-05-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.46,2.46
+NIC,2024-05-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,4.16,4.16
+NIC,2024-05-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-05-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,2.2,2.2
+NIC,2024-05-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.95,0.95
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.38,0.38
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.23,1.23
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.58,0.58
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.37,1.37
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.39,0.39
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.28,0.28
+NIC,2024-05-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.69,0.69
+NIC,2024-06-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.85,0.85
+NIC,2024-06-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.24,1.24
+NIC,2024-06-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.58,0.58
+NIC,2024-06-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.65,0.65
+NIC,2024-06-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.04,2.04
+NIC,2024-06-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.91,2.91
+NIC,2024-06-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.29,4.29
+NIC,2024-06-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.68,1.68
+NIC,2024-06-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.44,2.44
+NIC,2024-06-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.93,3.93
+NIC,2024-06-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.43,0.43
+NIC,2024-06-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,2.07,2.07
+NIC,2024-06-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.96,0.96
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.54,1.54
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.5,0.5
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.47,1.47
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.41,0.41
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.32,0.32
+NIC,2024-06-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.88,0.88
+NIC,2024-07-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.9,0.9
+NIC,2024-07-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.57,1.57
+NIC,2024-07-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.58,0.58
+NIC,2024-07-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.64,0.64
+NIC,2024-07-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.04,2.04
+NIC,2024-07-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.92,2.92
+NIC,2024-07-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.03,4.03
+NIC,2024-07-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.7,1.7
+NIC,2024-07-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.44,2.44
+NIC,2024-07-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.66,3.66
+NIC,2024-07-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.43,0.43
+NIC,2024-07-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.84,1.84
+NIC,2024-07-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.96,0.96
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.38,0.38
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.64,1.64
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.46,0.46
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.51,1.51
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.4,0.4
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.33,0.33
+NIC,2024-07-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.89,0.89
+NIC,2024-08-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.87,0.87
+NIC,2024-08-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.29,1.29
+NIC,2024-08-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.59,0.59
+NIC,2024-08-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.65,0.65
+NIC,2024-08-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.04,2.04
+NIC,2024-08-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.92,2.92
+NIC,2024-08-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.21,4.21
+NIC,2024-08-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.71,1.71
+NIC,2024-08-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.44,2.44
+NIC,2024-08-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.42,3.42
+NIC,2024-08-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.43,0.43
+NIC,2024-08-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.77,1.77
+NIC,2024-08-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.92,0.92
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.37,0.37
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.58,1.58
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.4,0.4
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.51,1.51
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.4,0.4
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.28,0.28
+NIC,2024-08-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.76,0.76
+NIC,2024-09-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.85,0.85
+NIC,2024-09-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.01,1.01
+NIC,2024-09-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.59,0.59
+NIC,2024-09-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.64,0.64
+NIC,2024-09-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.03,2.03
+NIC,2024-09-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.92,2.92
+NIC,2024-09-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.04,4.04
+NIC,2024-09-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.71,1.71
+NIC,2024-09-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.42,2.42
+NIC,2024-09-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.17,3.17
+NIC,2024-09-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.43,0.43
+NIC,2024-09-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.65,1.65
+NIC,2024-09-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.88,0.88
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.33,0.33
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.31,1.31
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.39,0.39
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.4,1.4
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.4,0.4
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.27,0.27
+NIC,2024-09-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.64,0.64
+NIC,2024-10-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.89,0.89
+NIC,2024-10-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,0.82,0.82
+NIC,2024-10-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.6,0.6
+NIC,2024-10-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.64,0.64
+NIC,2024-10-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.02,2.02
+NIC,2024-10-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.94,2.94
+NIC,2024-10-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,4.27,4.27
+NIC,2024-10-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.72,1.72
+NIC,2024-10-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.48,2.48
+NIC,2024-10-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,3.09,3.09
+NIC,2024-10-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.43,0.43
+NIC,2024-10-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.64,1.64
+NIC,2024-10-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.83,0.83
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.29,0.29
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.34,1.34
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.38,0.38
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.4,1.4
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.38,0.38
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.3,0.3
+NIC,2024-10-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.6,0.6
+NIC,2024-11-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.87,0.87
+NIC,2024-11-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,0.93,0.93
+NIC,2024-11-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.6,0.6
+NIC,2024-11-15,,,National Average,298,,,cereals and tubers,Tortilla (maize),269,Pound,actual,Retail,USD,0.65,0.65
+NIC,2024-11-15,,,National Average,298,,,"meat, fish and eggs",Eggs,92,Dozen,actual,Retail,USD,2.01,2.01
+NIC,2024-11-15,,,National Average,298,,,"meat, fish and eggs",Fish (fresh),401,Pound,actual,Retail,USD,2.94,2.94
+NIC,2024-11-15,,,National Average,298,,,"meat, fish and eggs",Meat (beef),141,Pound,actual,Retail,USD,3.93,3.93
+NIC,2024-11-15,,,National Average,298,,,"meat, fish and eggs",Meat (chicken),94,Pound,actual,Retail,USD,1.71,1.71
+NIC,2024-11-15,,,National Average,298,,,"meat, fish and eggs",Meat (pork),140,Pound,actual,Retail,USD,2.44,2.44
+NIC,2024-11-15,,,National Average,298,,,milk and dairy,Cheese (dry),142,Pound,actual,Retail,USD,2.98,2.98
+NIC,2024-11-15,,,National Average,298,,,miscellaneous food,Sugar,97,Pound,actual,Retail,USD,0.43,0.43
+NIC,2024-11-15,,,National Average,298,,,oil and fats,Oil (vegetable),96,L,actual,Retail,USD,1.68,1.68
+NIC,2024-11-15,,,National Average,298,,,pulses and nuts,Beans (red),78,Pound,actual,Retail,USD,0.81,0.81
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Cabbage,181,Pound,actual,Retail,USD,0.31,0.31
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Onions (white),111,Pound,actual,Retail,USD,1.49,1.49
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Oranges,360,Pound,actual,Retail,USD,0.35,0.35
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Peppers (sweet),449,Pound,actual,Retail,USD,1.73,1.73
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Plantains,147,Pound,actual,Retail,USD,0.42,0.42
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Squashes,340,Pound,actual,Retail,USD,0.3,0.3
+NIC,2024-11-15,,,National Average,298,,,vegetables and fruits,Tomatoes,114,Pound,actual,Retail,USD,0.75,0.75
 PSE,2023-01-15,Gaza Strip,Kan Younis,Gaza Strip,8215,31.35,34.33,cereals and tubers,Bread,55,KG,actual,Retail,ILS,2.89,0.85
 PSE,2023-01-15,Gaza Strip,Kan Younis,Gaza Strip,8215,31.35,34.33,cereals and tubers,Potatoes (medium size),242,KG,actual,Retail,ILS,1.95,0.57
 PSE,2023-01-15,Gaza Strip,Kan Younis,Gaza Strip,8215,31.35,34.33,cereals and tubers,"Rice (small grain, imported)",227,25 KG,actual,Retail,ILS,154.5,45.31

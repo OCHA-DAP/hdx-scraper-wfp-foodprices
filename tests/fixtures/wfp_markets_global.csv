@@ -1,5 +1,6 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
 #loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
+298,National Average,NIC,,,,
 701,Moungali,COG,Brazzaville,Brazzaville,-4.26,15.28
 702,Ouenzé,COG,Brazzaville,Brazzaville,-4.25,15.28
 703,Mikalou,COG,Brazzaville,Brazzaville,-4.26,15.28
@@ -57,6 +58,8 @@ market_id,market,countryiso3,admin1,admin2,latitude,longitude
 1820,Sibiti,COG,Lekoumou,Sibiti,-3.68,13.35
 1821,Nkayi,COG,Bouenza,Nkayi,-4.18,13.29
 1822,Owando,COG,Cuvette,Owando,-0.48,15.89
+1895,Managua,NIC,Managua,Managua,12.11,-86.24
+1896,National Average (excl. capital),NIC,,,,
 1897,Qaryatein,SYR,Homs,Homs,34.23,37.24
 1924,Jandar,SYR,Homs,Homs,34.49,36.78
 1925,Nubul,SYR,Aleppo,A'zaz,36.36,37.01
@@ -95,6 +98,9 @@ market_id,market,countryiso3,admin1,admin2,latitude,longitude
 2523,Izr'a,SYR,Dar'a,Izra',32.85,36.27
 2524,Sayda,SYR,Quneitra,Al Fiq,32.88,35.88
 2618,Minsk,BLR,Minsk City,Minsk City,53.91,27.56
+2641,Managua (oriental),NIC,Administrative unit not available,Administrative unit not available,12.19,-86.29
+2642,Leon,NIC,León,León,12.44,-86.88
+2643,Granada,NIC,Granada,Granada,11.93,-85.95
 2675,As-Safira,SYR,Aleppo,As-Safira,36.08,37.37
 2676,Atareb,SYR,Aleppo,Jebel Saman,36.14,36.82
 2677,Der Hafir,SYR,Aleppo,Al Bab,36.16,37.7
@@ -120,6 +126,22 @@ market_id,market,countryiso3,admin1,admin2,latitude,longitude
 3741,Impfondo Centre,COG,Likouala,Impfondo,1.61,18.06
 3742,Dongou Centre,COG,Likouala,Dongou,2.04,18.05
 3743,Betou Centre,COG,Likouala,Betou,3.06,18.52
+4086,Jalapa,NIC,Nueva Segovia,Jalapa,13.92,-86.12
+4087,El Jícaro,NIC,Nueva Segovia,El Jícaro,13.72,-86.13
+4088,Quilalí,NIC,Nueva Segovia,Quilalí,13.57,-86.03
+4089,Wiwilí (Nueva Segovia),NIC,Nueva Segovia,Wiwilí de Nueva Segovia,13.62,-85.83
+4090,El Cuá,NIC,Jinotega,El Cuá,13.37,-85.67
+4091,Santa María de Pantasma,NIC,Jinotega,Jinotega,13.2,-85.83
+4092,San Rafael del Norte,NIC,Jinotega,San Rafael del Norte,13.22,-86.12
+4093,San Sebastián de Yalí,NIC,Jinotega,San Sebastian de Yalí,13.3,-86.18
+4094,La Concordia,NIC,Jinotega,La Concordia,13.2,-86.17
+4095,Telpaneca,NIC,Madriz,Telpaneca,13.53,-86.29
+4096,San Juan del Río Coco,NIC,Madriz,San Juan del Río Coco,13.55,-86.16
+4097,Palacagüina,NIC,Madriz,Palacagüina,13.45,-86.4
+4098,Condega,NIC,Estelí,Condega,13.36,-86.4
+4099,Matagalpa,NIC,Matagalpa,Matagalpa,12.92,-85.92
+4100,San Ramón,NIC,Matagalpa,San Ramón,12.92,-85.84
+4101,San Dionisio,NIC,Matagalpa,San Dionisio,12.76,-85.85
 4158,Gamboma,COG,Plateaux,Gamboma,-1.87,15.87
 4159,Mindouli,COG,Pool,Mindouli,-4.27,14.36
 4612,Jisr al shughur,SYR,Idleb,Jisr-Ash-Shugur,35.82,36.31
@@ -164,6 +186,8 @@ market_id,market,countryiso3,admin1,admin2,latitude,longitude
 8209,Kafr Karmin,SYR,Aleppo,Jebel Saman,36.16,36.79
 8210,Armanaz,SYR,Idleb,Harim,36.08,36.5
 8211,Ma'arrat Tamasrin,SYR,Idleb,Idleb,36.01,36.67
+8213,El Rama,NIC,Atlántico Sur,El Rama,12.16,-84.22
+8214,Bluefields,NIC,Atlántico Sur,Bluefields,12.02,-83.77
 8215,Gaza Strip,PSE,Gaza Strip,Kan Younis,31.35,34.33
 8216,West Bank,PSE,West Bank,Ramallah and Albireh,31.97,35.33
 8237,Salqin,SYR,Idleb,Harim,36.14,36.45
@@ -179,3 +203,5 @@ market_id,market,countryiso3,admin1,admin2,latitude,longitude
 8739,Epena,COG,Likouala,Epena,1.35,17.45
 8742,Mokabi,COG,Likouala,Enyelle,3.42,16.8
 8743,Loudima Gare,COG,Bouenza,Loudima,-4.06,13.05
+9124,Kukra - Hill,NIC,Atlántico Sur,Kukrahill,12.24,-83.75
+9125,Laguna de Perla,NIC,Atlántico Sur,Laguna de Perlas,12.34,-83.67
