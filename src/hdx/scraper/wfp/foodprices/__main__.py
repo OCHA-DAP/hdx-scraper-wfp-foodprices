@@ -4,15 +4,18 @@ Top level script. Calls other functions that generate datasets that this script 
 
 """
 
+import gc
 import logging
 from os.path import expanduser, join
 from typing import Dict
 
+import hdx.location.int_timestamp
 from hdx.api.configuration import Configuration
 from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.data.user import User
 from hdx.database import Database
 from hdx.facades.infer_arguments import facade
+from hdx.location.currency import Currency
 from hdx.location.wfp_api import WFPAPI
 from hdx.scraper.wfp.foodprices._version import __version__
 from hdx.scraper.wfp.foodprices.dataset_generator import DatasetGenerator
@@ -178,6 +181,14 @@ def main(
                             info, countries, "iso3"
                         ):
                             process_country(country)
+
+                        del hdx.location.int_timestamp._cache_timestamp_lookup
+                        del Currency._cached_current_rates
+                        del Currency._cached_historic_rates
+                        del Currency._secondary_rates
+                        del Currency._secondary_historic_rates
+                        gc.collect()
+
                         table_data, start_date, end_date = (
                             dbupdater.get_data_from_tables()
                         )
@@ -250,6 +261,7 @@ def main(
                                     updated_by_script=updated_by_script,
                                     batch=batch,
                                 )
+                                logger.info("WFP global HAPI dataset created")
 
 
 if __name__ == "__main__":

@@ -221,6 +221,146 @@ class TestWFP:
                             },
                         ]
 
+                        countryiso3 = "NIC"
+                        dataset, showcase = dataset_generator.get_dataset_and_showcase(
+                            countryiso3
+                        )
+                        wfp_food = WFPFood(
+                            countryiso3,
+                            configuration,
+                            iso3_to_showcase_url.get(countryiso3),
+                            iso3_to_source.get(countryiso3),
+                            commodity_to_category,
+                        )
+                        dbmarkets = wfp_food.get_price_markets(wfp_api)
+                        rows, markets, sources = wfp_food.generate_rows(dbmarkets)
+                        dataset, qc_indicators = dataset_generator.complete_dataset(
+                            countryiso3, dataset, rows, markets, sources
+                        )
+
+                        time_period = dataset.get_time_period()
+                        hdx_url = dataset.get_hdx_url()
+                        dbupdater.update_tables(
+                            countryiso3, time_period, hdx_url, dbmarkets
+                        )
+                        logger.info("Generated NIC")
+                        assert dataset == {
+                            "data_update_frequency": "30",
+                            "dataset_date": "[2000-01-15T00:00:00 TO 2024-11-15T23:59:59]",
+                            "dataset_source": "Banco Central de Nicaragua, CAC, FPMA, Government of "
+                            "Nicaragua, INE (Instituto Nicaragüense de Energía), INIDE, "
+                            "Insitituto Nacional de Información de Desarrollo, "
+                            "Instituto Nicaraguense de Energia, Ministerio Agropecuario "
+                            "y Forestal via FAO: GIEWS, SIMPAH via FAO: GIEWS",
+                            "groups": [{"name": "nic"}],
+                            "maintainer": "f1921552-8c3e-47e9-9804-579b14a83ee3",
+                            "name": "wfp-food-prices-for-nicaragua",
+                            "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
+                            "subnational": "1",
+                            "tags": [
+                                {
+                                    "name": "hxl",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "economics",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "food security",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "indicators",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "markets",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                            ],
+                            "title": "Nicaragua - Food Prices",
+                        }
+                        resources = dataset.get_resources()
+                        assert resources == [
+                            {
+                                "name": "Nicaragua - Food Prices",
+                                "description": "Food prices data with HXL tags",
+                                "format": "csv",
+                                "resource_type": "file.upload",
+                                "url_type": "upload",
+                            },
+                            {
+                                "name": "QuickCharts: Nicaragua - Food Prices",
+                                "description": "Food prices QuickCharts data with HXL tags",
+                                "format": "csv",
+                                "resource_type": "file.upload",
+                                "url_type": "upload",
+                            },
+                        ]
+                        assert showcase == {
+                            "name": "wfp-food-prices-for-nicaragua-showcase",
+                            "title": "Nicaragua - Food Prices showcase",
+                            "notes": "Nicaragua food prices data from World Food Programme displayed through VAM Economic Explorer",
+                            "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                            "url": "https://dataviz.vam.wfp.org/latin-america-and-the-caribbean/nicaragua/overview",
+                            "tags": [
+                                {
+                                    "name": "hxl",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "economics",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "food security",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "indicators",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                                {
+                                    "name": "markets",
+                                    "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
+                                },
+                            ],
+                        }
+                        assert qc_indicators == [
+                            {
+                                "code": "Managua-Managua-Managua-Rice (ordinary, second quality)-46 "
+                                "KG-Wholesale-NIO",
+                                "code_col": "#meta+code",
+                                "date_col": "#date",
+                                "description": "Price of Rice (ordinary, second quality) ($/46 KG) in "
+                                "Managua",
+                                "title": "Price of Rice (ordinary, second quality) in Managua",
+                                "unit": "US Dollars ($)",
+                                "value_col": "#value+usd",
+                            },
+                            {
+                                "code": "Administrative unit not available-Administrative unit not "
+                                "available-Managua (oriental)-Sorghum (white)-46 KG-Wholesale-NIO",
+                                "code_col": "#meta+code",
+                                "date_col": "#date",
+                                "description": "Price of Sorghum (white) ($/46 KG) in Administrative unit "
+                                "not available/Managua (oriental)",
+                                "title": "Price of Sorghum (white) in Managua (oriental)",
+                                "unit": "US Dollars ($)",
+                                "value_col": "#value+usd",
+                            },
+                            {
+                                "code": "León-León-Leon-Maize (white)-46 KG-Wholesale-NIO",
+                                "code_col": "#meta+code",
+                                "date_col": "#date",
+                                "description": "Price of Maize (white) ($/46 KG) in León/Leon",
+                                "title": "Price of Maize (white) in Leon",
+                                "unit": "US Dollars ($)",
+                                "value_col": "#value+usd",
+                            },
+                        ]
+
                         countryiso3 = "BLR"
                         dataset, showcase = dataset_generator.get_dataset_and_showcase(
                             countryiso3
@@ -615,19 +755,19 @@ class TestWFP:
                                 },
                             ],
                             "dataset_source": "WFP",
-                            "dataset_date": "[2020-05-15T00:00:00 TO 2024-01-15T23:59:59]",
+                            "dataset_date": "[2021-05-15T00:00:00 TO 2024-11-15T23:59:59]",
                         }
                         resources = dataset.get_resources()
                         assert resources == [
                             {
-                                "description": "Last 2 years (per country) of prices data with HXL tags",
+                                "description": "Last year (per country) of prices data with HXL tags",
                                 "format": "csv",
                                 "name": "Global WFP food prices",
                                 "resource_type": "file.upload",
                                 "url_type": "upload",
                             },
                             {
-                                "description": "Countries data with HXL tags with links to country datasets containing all available historic data (2007-01-15 to 2024-01-15)",
+                                "description": "Countries data with HXL tags with links to country datasets containing all available historic data (2000-01-15 to 2024-11-15)",
                                 "format": "csv",
                                 "name": "Global WFP countries",
                                 "resource_type": "file.upload",
@@ -705,7 +845,7 @@ class TestWFP:
                         )
                         assert dataset == {
                             "data_update_frequency": "7",
-                            "dataset_date": "[2020-05-15T00:00:00 TO 2024-01-15T23:59:59]",
+                            "dataset_date": "[2021-05-15T00:00:00 TO 2024-11-15T23:59:59]",
                             "dataset_preview": "no_preview",
                             "dataset_source": "WFP - World Food Programme",
                             "groups": [{"name": "world"}],
