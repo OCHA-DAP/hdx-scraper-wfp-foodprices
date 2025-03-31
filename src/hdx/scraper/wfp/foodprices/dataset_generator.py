@@ -249,7 +249,7 @@ class DatasetGenerator:
         filename = "wfp_food_prices_global.csv"
         resourcedata = {
             "name": self.global_name,
-            "description": "Last year (per country) of prices data with HXL tags",
+            "description": "Last 2 years (per country) of prices data with HXL tags",
             "format": "csv",
         }
         global_headers = self._configuration["global_headers"]
