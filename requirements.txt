@@ -103,7 +103,7 @@ ply==3.11
     #   libhxl
 pockets==0.9.1
     # via sphinxcontrib-napoleon
-pydantic==2.11.0
+pydantic==2.11.1
     # via frictionless
 pydantic-core==2.33.0
     # via pydantic
@@ -145,7 +145,7 @@ requests-file==2.1.0
     # via hdx-python-utilities
 rfc3986==2.0.0
     # via frictionless
-rich==13.9.4
+rich==14.0.0
     # via typer
 rpds-py==0.24.0
     # via

@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 def get_global_prices_rows(
     downloader: Download,
     folder: str,
-    years: int = 1,
+    years: int = 2,
 ) -> Dict:
     filepaths = []
     for filepath in iglob(f"{folder}/wfp_food_prices*.csv", recursive=False):
