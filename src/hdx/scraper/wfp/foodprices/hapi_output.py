@@ -8,7 +8,7 @@ from hdx.api.configuration import Configuration
 from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.location.adminlevel import AdminLevel
 from hdx.location.country import Country
-from hdx.utilities.dateparse import parse_date, iso_string_from_datetime
+from hdx.utilities.dateparse import iso_string_from_datetime, parse_date
 from hdx.utilities.retriever import Retrieve
 
 logger = logging.getLogger(__name__)
@@ -216,7 +216,9 @@ class HAPIOutput:
             hapi_row["price"] = row["price"]
             hapi_row["usd_price"] = row["usdprice"]
             reference_period_start = parse_date(row["date"], date_format="%Y-%m-%d")
-            hapi_row["reference_period_start"] = iso_string_from_datetime(reference_period_start)
+            hapi_row["reference_period_start"] = iso_string_from_datetime(
+                reference_period_start
+            )
             reference_period_end = reference_period_start + relativedelta(
                 months=1,
                 days=-1,
@@ -225,7 +227,9 @@ class HAPIOutput:
                 seconds=59,
                 microseconds=999999,
             )  # food price reference period is one month
-            hapi_row["reference_period_end"] = iso_string_from_datetime(reference_period_end)
+            hapi_row["reference_period_end"] = iso_string_from_datetime(
+                reference_period_end
+            )
             hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
             hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
             hapi_rows.append(hapi_row)
