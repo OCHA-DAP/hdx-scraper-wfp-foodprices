@@ -56,12 +56,12 @@ class HAPIOutput:
         base_row["in_gho"] = (
             "Y" if Country.get_gho_status_from_iso3(countryiso3) else "N"
         )
-        base_row["lat"] = row["latitude"]
-        base_row["lon"] = row["longitude"]
+        base_row["lat"] = row["latitude"] or ""
+        base_row["lon"] = row["longitude"] or ""
         provider_admin1_name = row["admin1"]
         provider_admin2_name = row["admin2"]
-        base_row["provider_admin1_name"] = provider_admin1_name
-        base_row["provider_admin2_name"] = provider_admin2_name
+        base_row["provider_admin1_name"] = provider_admin1_name or ""
+        base_row["provider_admin2_name"] = provider_admin2_name or ""
         if countryiso3 in self._configuration["unused_adm1"]:
             if provider_admin2_name:
                 base_row["admin_level"] = 1
@@ -169,9 +169,38 @@ class HAPIOutput:
         )
         base_row["warning"].add("no adm2 name")
 
+    def process_currencies(
+        self, currencies: List[Dict], dataset_id: str, resource_id: str
+    ) -> List[Dict]:
+        logger.info("Processing HAPI currencies output")
+        for row in currencies:
+            row["dataset_hdx_id"] = dataset_id
+            row["resource_hdx_id"] = resource_id
+        return currencies
+
+    def process_commodities(
+        self, commodities_info: Dict, dataset_id: str, resource_id: str
+    ) -> List[Dict]:
+        logger.info("Processing HAPI commodities output")
+        hapi_rows = []
+        for row in commodities_info["rows"]:
+            hapi_row = {
+                "code": row["commodity_id"],
+                "category": row["category"],
+                "name": row["commodity"],
+                "dataset_hdx_id": dataset_id,
+                "resource_hdx_id": resource_id,
+            }
+            hapi_rows.append(hapi_row)
+        del commodities_info["rows"]
+        hapi_rows = sorted(
+            hapi_rows, key=lambda row: (row["category"], row["name"], row["code"])
+        )
+        return hapi_rows
+
     def process_markets(
         self, markets_info: Dict, dataset_id: str, resource_id: str
-    ) -> None:
+    ) -> List[Dict]:
         logger.info("Processing HAPI markets output")
         hapi_rows = []
         for row in markets_info["rows"]:
@@ -191,14 +220,27 @@ class HAPIOutput:
             hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
             hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
             hapi_rows.append(hapi_row)
-        markets_info["rows"] = hapi_rows
+        del markets_info["rows"]
+        hapi_rows = sorted(
+            hapi_rows,
+            key=lambda row: (
+                row["location_code"],
+                row["admin1_code"],
+                row["admin2_code"],
+                row["provider_admin1_name"],
+                row["provider_admin2_name"],
+                row["market_name"],
+                row["market_code"],
+            ),
+        )
+        return hapi_rows
 
     def process_prices(
         self,
         prices_info: Dict,
         dataset_id: str,
         resource_id: str,
-    ) -> None:
+    ) -> List[Dict]:
         logger.info("Processing HAPI prices output")
         hapi_rows = []
         for row in prices_info["rows"]:
@@ -233,4 +275,5 @@ class HAPIOutput:
             hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
             hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
             hapi_rows.append(hapi_row)
-        prices_info["rows"] = hapi_rows
+        del prices_info["rows"]
+        return hapi_rows

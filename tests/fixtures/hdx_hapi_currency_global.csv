@@ -1,0 +1,129 @@
+code,name
+#currency+code,#currency+name
+AED,United Arab Emirates Dirham
+AFN,Afghan Afghani
+ALL,Albanian Lek
+AMD,Armenian Dram
+AOA,Angolan Kwanza
+ARS,Argentine Peso
+AUD,Australian Dollar
+AZN,Azerbaijani Manat
+BDT,Bangladeshi Taka
+BGN,Bulgarian Lev
+BHD,Bahraini Dinar
+BIF,Burundian Franc
+BOB,Boliviano
+BRL,Brazilian Real
+BSD,Bahamian Dollar
+BTN,Bhutanese Ngultrum
+BWP,Botswana Pula
+BYR,Belarusian Ruble
+CDF,Congolese Franc
+CLP,Chilean Peso
+CNY,Renminbi
+COP,Colombian Peso
+CRC,Costa Rican Colon
+CUC,Cuban Convertible Pesos
+CUP,Cuban Peso
+CVE,Cape Verdean Escudo
+DJF,Djiboutian Franc
+DOP,Dominican Peso
+DZD,Algerian Dinar
+EGP,Egyptian Pound
+ERN,Eritrean Nakfa
+ETB,Ethiopian Birr
+EUR,Euro
+FJD,Fijian dollar
+GEL,Georgian Lari
+GHS,Ghanaian Cedi
+GMD,Gambian Dalasi
+GNF,Guinean Franc
+GTQ,Guatemalan Quetzal
+HNL,Honduran Lempira
+HTG,Haitian Gourde
+IDR,Indonesian Rupiah
+ILS,New Israeli Shekel
+INR,Indian Rupee
+IQD,Iraqi Dinar
+IRR,Iranian Rial
+JMD,Jamaican Dollar
+JOD,Jordanian Dinar
+JPY,Japanese Yen
+KES,Kenyan Shilling
+KGS,Kyrgyzstani Som
+KHR,Cambodian Riel
+KMF,Comorian Franc
+KPW,North Korean Won
+KYD,Cayman Islands Dollar
+KZT,Kazakhstani Tenge
+LAK,Lao Kip
+LBP,Lebanese Pound
+LKR,Sri Lankan Rupee
+LRD,Liberian Dollar
+LSL,Lesotho Loti
+LYD,Libyan Dinar
+MAD,Moroccan Dirham
+MDL,Moldovan Leu
+MGA,Malagasy Ariary
+MMK,Myanmar Kyat
+MNT,Mongolian Tögrög
+MRO,Mauritanian Ouguiya
+MRU,Ouguiya
+MWK,Malawian Kwacha
+MXN,Mexican Peso
+MZN,Mozambican Metical
+NAD,Namibian Dollar
+NGN,Nigerian Naira
+NIO,Nicaraguan Córdoba
+NOK,Norwegian krone
+NPR,Nepalese Rupee
+NZD,New Zealand Dollar
+OMR,Omani Rial
+PAB,Panamanian Balboa
+PEN,Peruvian Sol
+PGK,Papua New Guinean Kina
+PHP,Philippine Peso
+PKR,Pakistani Rupee
+PLN,Polish złoty
+PYG,Paraguayan Guaraní
+RON,Romanian Leu
+RUB,Russian Ruble
+RWF,Rwandan Franc
+SAR,Saudi Riyal
+SBD,Solomon Islands Dollar
+SCR,Seychelles Rupee
+SDG,Sudanese Pound
+SEK,Swedish Krona
+SLL,Sierra Leonean Leone
+SLS,Somaliland Shilling
+SOS,Somali Shilling
+SRD,Surinamese dollar
+SSP,South Sudanese Pound
+STN,São Tomé and Príncipe Dobra
+SYP,Syrian Pound
+SZL,Swazi Lilangeni
+THB,Thai Baht
+TJS,Tajikistani Somoni
+TMT,Turkmenistan Manat
+TND,Tunisian Dinar
+TRY,Turkish Lira
+TTD,Trinidad and Tobago dollar
+TZS,Tanzanian Shilling
+UAH,Ukrainian Hryvnia
+UGX,Ugandan Shilling
+USD,United States Dollar
+UYU,Uruguayan Peso
+UZS,Uzbekistan Sum
+VEF,
+VES,Venezuelan Bolivar
+VND,Vietnamese Dong
+VUV,Vanuatu Vatu
+WST,Samoan Tala
+XAF,CFA franc BEAC
+XCD,East Caribbean dollar
+XOF,CFA franc BCEAO
+YER,Yemeni Rial
+ZAR,South African Rand
+ZMW,Zambian Kwacha
+ZWL,Zimbabwean Dollar
+ZiG,Zimbabwe Gold

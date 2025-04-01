@@ -1,5 +1,5 @@
 date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency,#value,#value+usd
+#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
 2011-01-15,Brazzaville,Brazzaville,Mikalou,703,-4.26,15.28,cereals and tubers,"Rice (mixed, low quality)",165,KG,actual,Retail,XAF,635,1.29
 2011-01-15,Brazzaville,Brazzaville,Mikalou,703,-4.26,15.28,pulses and nuts,Beans (white),66,KG,actual,Retail,XAF,2091,4.25
 2011-01-15,Brazzaville,Brazzaville,Moungali,701,-4.26,15.28,cereals and tubers,"Rice (mixed, low quality)",165,KG,actual,Retail,XAF,575,1.17
