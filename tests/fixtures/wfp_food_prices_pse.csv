@@ -1,5 +1,5 @@
 date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency,#value,#value+usd
+#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
 2007-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,2,0.47
 2007-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13,3.08
 2007-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,4,0.95

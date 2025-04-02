@@ -210,7 +210,7 @@ pytest==8.3.5
     #   pytest-cov
 pytest-check==2.5.2
     # via hdx-scraper-wfp-foodprices (pyproject.toml)
-pytest-cov==6.0.0
+pytest-cov==6.1.0
     # via hdx-scraper-wfp-foodprices (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via

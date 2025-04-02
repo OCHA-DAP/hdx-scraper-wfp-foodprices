@@ -1,0 +1,1074 @@
+category,name,code
+#item+type,#item+name,#item+code
+cereals and tubers,Amaranthus,720
+cereals and tubers,Amaranthus (red),1050
+cereals and tubers,Amaranthus (stem),1051
+cereals and tubers,Arum root,1055
+cereals and tubers,Barley,307
+cereals and tubers,Barley (imported),562
+cereals and tubers,Barley (local),563
+cereals and tubers,Barley (mixed),772
+cereals and tubers,Barley (white),768
+cereals and tubers,Bread,55
+cereals and tubers,Bread (bakery),278
+cereals and tubers,"Bread (bakery, parallel market)",893
+cereals and tubers,Bread (brotchen),569
+cereals and tubers,Bread (brown),159
+cereals and tubers,Bread (common),124
+cereals and tubers,Bread (first grade flour),460
+cereals and tubers,Bread (high grade flour),459
+cereals and tubers,Bread (khoboz),259
+cereals and tubers,Bread (pita),384
+cereals and tubers,Bread (rye),374
+cereals and tubers,Bread (shop),280
+cereals and tubers,Bread (traditional),570
+cereals and tubers,Bread (vetkoek),571
+cereals and tubers,Bread (wheat),375
+cereals and tubers,Buckwheat,669
+cereals and tubers,Buckwheat grits,373
+cereals and tubers,Bulgur,258
+cereals and tubers,Bulgur (brown),547
+cereals and tubers,Cassava,68
+cereals and tubers,Cassava (chikwangue),303
+cereals and tubers,Cassava (cossette),302
+cereals and tubers,Cassava (dry),290
+cereals and tubers,Cassava (fresh),291
+cereals and tubers,Cassava chips (dried),704
+cereals and tubers,Cassava flour,74
+cereals and tubers,Cassava meal,217
+cereals and tubers,Cassava meal (attieke),503
+cereals and tubers,Cassava meal (foufou),260
+cereals and tubers,Cassava meal (gari),403
+cereals and tubers,"Cassava meal (gari, fine)",761
+cereals and tubers,"Cassava meal (gari, yellow)",482
+cereals and tubers,Cassava meal (tapioca),558
+cereals and tubers,Cassava tubers,831
+cereals and tubers,Cocoyam (macabo),866
+cereals and tubers,"Corn Soy Blend (CSB++, food aid)",382
+cereals and tubers,Cornstarch,169
+cereals and tubers,Couscous,542
+cereals and tubers,Fonio,100
+cereals and tubers,Gari,63
+cereals and tubers,Gari (white),483
+cereals and tubers,Kocho,782
+cereals and tubers,Maize,51
+cereals and tubers,"Maize (bid, EXW, processing)",572
+cereals and tubers,Maize (crushed),871
+cereals and tubers,Maize (food aid),514
+cereals and tubers,Maize (imported),158
+cereals and tubers,Maize (local),56
+cereals and tubers,Maize (new harvest),1229
+cereals and tubers,Maize (white),67
+cereals and tubers,"Maize (white, East)",1018
+cereals and tubers,"Maize (white, North)",1017
+cereals and tubers,"Maize (white, biofortified)",1019
+cereals and tubers,"Maize (white, dry)",440
+cereals and tubers,Maize (yellow),136
+cereals and tubers,"Maize (yellow, biofortified)",498
+cereals and tubers,Maize flour,76
+cereals and tubers,Maize flour (imported),77
+cereals and tubers,Maize flour (white),134
+cereals and tubers,Maize flour (yellow),573
+cereals and tubers,Maize meal,54
+cereals and tubers,Maize meal (imported),574
+cereals and tubers,Maize meal (local),471
+cereals and tubers,"Maize meal (white, breakfast)",265
+cereals and tubers,"Maize meal (white, first grade)",221
+cereals and tubers,"Maize meal (white, fortified)",495
+cereals and tubers,"Maize meal (white, roller)",264
+cereals and tubers,"Maize meal (white, with bran)",286
+cereals and tubers,"Maize meal (white, without bran)",431
+cereals and tubers,Maize meal (yellow),517
+cereals and tubers,Millet,73
+cereals and tubers,Millet (biofortified),499
+cereals and tubers,Millet (bulrush),352
+cereals and tubers,Millet (finger),353
+cereals and tubers,Millet (white),146
+cereals and tubers,Millet flour,900
+cereals and tubers,"Noodles (instant, indomie)",838
+cereals and tubers,Noodles (short),126
+cereals and tubers,Oat flakes,723
+cereals and tubers,Pasta,112
+cereals and tubers,Pasta (macaroni),673
+cereals and tubers,Pasta (spaghetti),551
+cereals and tubers,Potatoes,83
+cereals and tubers,Potatoes (Dutch),127
+cereals and tubers,Potatoes (Irish),148
+cereals and tubers,"Potatoes (Irish, imilla)",128
+cereals and tubers,"Potatoes (Irish, imported)",296
+cereals and tubers,"Potatoes (Irish, local)",297
+cereals and tubers,"Potatoes (Irish, red)",890
+cereals and tubers,"Potatoes (Irish, white)",891
+cereals and tubers,Potatoes (black),144
+cereals and tubers,Potatoes (desirée),1038
+cereals and tubers,Potatoes (hybrid),1115
+cereals and tubers,Potatoes (imported),688
+cereals and tubers,Potatoes (local),687
+cereals and tubers,Potatoes (medium size),242
+cereals and tubers,Potatoes (red),336
+cereals and tubers,Potatoes (super chola),726
+cereals and tubers,Potatoes (unica),213
+cereals and tubers,Quinoa,578
+cereals and tubers,Rice,52
+cereals and tubers,Rice (BRRI-14),1117
+cereals and tubers,Rice (BRRI-28),1118
+cereals and tubers,Rice (BRRI-29),1119
+cereals and tubers,Rice (BRRI-49),1120
+cereals and tubers,Rice (Belem),580
+cereals and tubers,"Rice (Broken, local)",1203
+cereals and tubers,Rice (Emata),581
+cereals and tubers,Rice (Grano de Oro),582
+cereals and tubers,Rice (Indica),583
+cereals and tubers,Rice (Japonica),584
+cereals and tubers,Rice (Maza),585
+cereals and tubers,Rice (Swarna),1121
+cereals and tubers,Rice (Vietnamese),1122
+cereals and tubers,Rice (aromatic),894
+cereals and tubers,Rice (basmati),1172
+cereals and tubers,"Rice (basmati, broken)",122
+cereals and tubers,"Rice (basmati, white indian)",586
+cereals and tubers,"Rice (broken, imported)",438
+cereals and tubers,Rice (carolina 2da),129
+cereals and tubers,"Rice (carolina, 1st)",587
+cereals and tubers,Rice (coarse),60
+cereals and tubers,"Rice (coarse, BR-8/ 11/, Guti Sharna)",588
+cereals and tubers,"Rice (coarse, Guti Sharna)",589
+cereals and tubers,"Rice (denikassia, imported)",70
+cereals and tubers,Rice (estaquilla),130
+cereals and tubers,"Rice (glutinous, first quality)",194
+cereals and tubers,"Rice (glutinous, second quality)",195
+cereals and tubers,"Rice (glutinous, unmilled)",196
+cereals and tubers,Rice (good quality),436
+cereals and tubers,Rice (high quality),247
+cereals and tubers,"Rice (high quality, local)",425
+cereals and tubers,Rice (imported),64
+cereals and tubers,"Rice (imported, Egyptian)",316
+cereals and tubers,"Rice (imported, Indian)",251
+cereals and tubers,"Rice (imported, Pakistan)",888
+cereals and tubers,"Rice (imported, Tanzanian)",381
+cereals and tubers,"Rice (imported, Thailand)",1182
+cereals and tubers,Rice (irri),590
+cereals and tubers,Rice (jasmine),1183
+cereals and tubers,Rice (local),71
+cereals and tubers,Rice (long grain),162
+cereals and tubers,"Rice (long grain, Sinaloa)",591
+cereals and tubers,"Rice (long grain, high quality, local)",379
+cereals and tubers,"Rice (long grain, imported)",225
+cereals and tubers,Rice (low quality),145
+cereals and tubers,"Rice (low quality, local)",426
+cereals and tubers,"Rice (low quality, mixed)",423
+cereals and tubers,Rice (medium grain),131
+cereals and tubers,"Rice (medium grain, imported)",226
+cereals and tubers,Rice (medium quality),753
+cereals and tubers,Rice (milled 80-20),86
+cereals and tubers,Rice (milled 90-10),255
+cereals and tubers,"Rice (milled, local)",592
+cereals and tubers,"Rice (milled, superior)",593
+cereals and tubers,"Rice (mixed, low quality)",165
+cereals and tubers,"Rice (ordinary, first quality)",197
+cereals and tubers,"Rice (ordinary, second quality)",198
+cereals and tubers,"Rice (ordinary, unmilled)",199
+cereals and tubers,Rice (paddy),203
+cereals and tubers,"Rice (paddy, Arborio Volano)",594
+cereals and tubers,"Rice (paddy, long grain, local)",117
+cereals and tubers,Rice (premium),873
+cereals and tubers,Rice (red nadu),157
+cereals and tubers,Rice (red),595
+cereals and tubers,"Rice (regular, milled)",80
+cereals and tubers,"Rice (short grain, low quality, local)",380
+cereals and tubers,"Rice (small grain, Morelos)",596
+cereals and tubers,"Rice (small grain, imported)",227
+cereals and tubers,Rice (special),874
+cereals and tubers,Rice (tchako),57
+cereals and tubers,Rice (well milled),872
+cereals and tubers,Rice (white),133
+cereals and tubers,"Rice (white, imported)",400
+cereals and tubers,"Rice (white, imported, 551)",1198
+cereals and tubers,"Rice (white, imported, JPC SK Gold)",1199
+cereals and tubers,"Rice (white, local)",818
+cereals and tubers,"Rice (white, local, Mbeya)",1204
+cereals and tubers,"Rice (white, medium)",132
+cereals and tubers,Semolina,597
+cereals and tubers,Semolina (Semovita),1042
+cereals and tubers,Semolina (white),850
+cereals and tubers,Semolina (yellow),849
+cereals and tubers,Sorghum,65
+cereals and tubers,Sorghum (berbere),478
+cereals and tubers,Sorghum (biofortified),500
+cereals and tubers,Sorghum (brown),481
+cereals and tubers,Sorghum (food aid),249
+cereals and tubers,Sorghum (imported),201
+cereals and tubers,Sorghum (local),511
+cereals and tubers,Sorghum (mixed),773
+cereals and tubers,Sorghum (r'haya),694
+cereals and tubers,Sorghum (red),282
+cereals and tubers,"Sorghum (red, local)",516
+cereals and tubers,Sorghum (taghalit),200
+cereals and tubers,Sorghum (white),135
+cereals and tubers,"Sorghum (white, imported)",510
+cereals and tubers,"Sorghum (white, local)",509
+cereals and tubers,Sorghum flour,253
+cereals and tubers,Sorghum meal,670
+cereals and tubers,Sweet potatoes,87
+cereals and tubers,Sweet potatoes (orange),1227
+cereals and tubers,Taro,598
+cereals and tubers,Taro (dalo ni tana),963
+cereals and tubers,Taro (small),1145
+cereals and tubers,Teff,308
+cereals and tubers,Teff (Sergegna),779
+cereals and tubers,Teff (mixed),778
+cereals and tubers,Teff (red),769
+cereals and tubers,Teff (white),767
+cereals and tubers,Tortilla,143
+cereals and tubers,Tortilla (maize),269
+cereals and tubers,Vermicelli (Bashundara),1154
+cereals and tubers,Vermicelli (Bonoful),1155
+cereals and tubers,Vermicelli (Kolson),1156
+cereals and tubers,Vermicelli (Pran),1157
+cereals and tubers,Vermicelli (Radhuni),1158
+cereals and tubers,Wheat,84
+cereals and tubers,Wheat (food aid),781
+cereals and tubers,Wheat (imported),599
+cereals and tubers,Wheat (mixed),770
+cereals and tubers,Wheat (white),766
+cereals and tubers,Wheat flour,58
+cereals and tubers,Wheat flour (ACI),1159
+cereals and tubers,Wheat flour (Bashundhara),1160
+cereals and tubers,Wheat flour (Fresh),1161
+cereals and tubers,Wheat flour (IFAD),1162
+cereals and tubers,Wheat flour (Teer),1163
+cereals and tubers,Wheat flour (Turkey),1197
+cereals and tubers,"Wheat flour (brown, local)",819
+cereals and tubers,Wheat flour (first grade),177
+cereals and tubers,"Wheat flour (first grade, imported)",903
+cereals and tubers,Wheat flour (fortified),496
+cereals and tubers,Wheat flour (high grade),600
+cereals and tubers,Wheat flour (high quality),178
+cereals and tubers,"Wheat flour (high quality, imported)",902
+cereals and tubers,Wheat flour (imported),339
+cereals and tubers,Wheat flour (local),179
+cereals and tubers,"Wheat flour (local, brown)",601
+cereals and tubers,"Wheat flour (local, white)",602
+cereals and tubers,Wheat flour (locally processed),366
+cereals and tubers,Wheat flour (low quality),800
+cereals and tubers,Wheat meal,603
+cereals and tubers,Yam,99
+cereals and tubers,Yam (Abuja),484
+cereals and tubers,Yam (dry),762
+cereals and tubers,Yam (florido),72
+cereals and tubers,Yam (flour),764
+cereals and tubers,Yam (puna),737
+cereals and tubers,Yam (white),560
+cereals and tubers,Yam (yellow),763
+"meat, fish and eggs",Anchovies,711
+"meat, fish and eggs",Chicken,182
+"meat, fish and eggs",Crab,860
+"meat, fish and eggs",Eggs,92
+"meat, fish and eggs",Eggs (broiler),750
+"meat, fish and eggs",Eggs (brown),1073
+"meat, fish and eggs",Eggs (duck),786
+"meat, fish and eggs","Eggs (duck, fermented)",789
+"meat, fish and eggs",Eggs (imported),298
+"meat, fish and eggs",Eggs (local),430
+"meat, fish and eggs",Eggs (white),1074
+"meat, fish and eggs","Eggs (white, AA)",210
+"meat, fish and eggs",Fish,139
+"meat, fish and eggs","Fish (Ndagala, dry)",835
+"meat, fish and eggs","Fish (Ndagala, fresh)",836
+"meat, fish and eggs",Fish (appolo),170
+"meat, fish and eggs","Fish (barbel, sole)",801
+"meat, fish and eggs",Fish (bonga),152
+"meat, fish and eggs",Fish (bonya),1231
+"meat, fish and eggs",Fish (canned),343
+"meat, fish and eggs","Fish (carapau, frozen, 18cm, imported)",437
+"meat, fish and eggs",Fish (catfish),310
+"meat, fish and eggs",Fish (dry),171
+"meat, fish and eggs","Fish (dry, anchovy)",1075
+"meat, fish and eggs","Fish (dry, belt 10-12"")",1076
+"meat, fish and eggs","Fish (dry, katta)",682
+"meat, fish and eggs","Fish (dry, sprats)",683
+"meat, fish and eggs","Fish (emperors, fresh)",1188
+"meat, fish and eggs",Fish (fresh and chilled),611
+"meat, fish and eggs",Fish (fresh),401
+"meat, fish and eggs","Fish (fresh, silvi)",561
+"meat, fish and eggs",Fish (frigate tuna),865
+"meat, fish and eggs",Fish (frozen),486
+"meat, fish and eggs",Fish (goldstripe sardinella),680
+"meat, fish and eggs",Fish (herring),474
+"meat, fish and eggs",Fish (jack),679
+"meat, fish and eggs",Fish (kapenta),887
+"meat, fish and eggs","Fish (kingfish, fresh)",1186
+"meat, fish and eggs","Fish (kpanla, fresh)",745
+"meat, fish and eggs","Fish (lates,dry,imported)",556
+"meat, fish and eggs","Fish (lates,dry,local)",555
+"meat, fish and eggs","Fish (live, carp)",1079
+"meat, fish and eggs","Fish (live, pangasius)",1080
+"meat, fish and eggs","Fish (live, tilapia)",1081
+"meat, fish and eggs","Fish (mackerel, dry)",518
+"meat, fish and eggs","Fish (mackerel, fresh)",744
+"meat, fish and eggs",Fish (matemba),1232
+"meat, fish and eggs",Fish (milkfish),840
+"meat, fish and eggs","Fish (mukeke, dry, local) ",834
+"meat, fish and eggs","Fish (mukeke, fresh, local) ",832
+"meat, fish and eggs","Fish (mullet, catfish)",802
+"meat, fish and eggs","Fish (omena, dry)",895
+"meat, fish and eggs","Fish (parrot, fresh)",1193
+"meat, fish and eggs",Fish (red snapper),234
+"meat, fish and eggs",Fish (redbelly yellowtail fusilier),861
+"meat, fish and eggs",Fish (roundscad),841
+"meat, fish and eggs",Fish (sail fish),677
+"meat, fish and eggs",Fish (salted),301
+"meat, fish and eggs","Fish (sardine, canned)",321
+"meat, fish and eggs","Fish (sardine, fresh)",1185
+"meat, fish and eggs","Fish (shark, fresh)",1191
+"meat, fish and eggs",Fish (skipjack tuna),678
+"meat, fish and eggs",Fish (slipmouth),862
+"meat, fish and eggs",Fish (smoked),300
+"meat, fish and eggs",Fish (snake head),309
+"meat, fish and eggs","Fish (snake head, dry)",785
+"meat, fish and eggs","Fish (spine foot, fresh)",1192
+"meat, fish and eggs",Fish (striped catfish),790
+"meat, fish and eggs","Fish (sword, fresh)",1189
+"meat, fish and eggs",Fish (threadfin bream),859
+"meat, fish and eggs",Fish (tilapia),405
+"meat, fish and eggs","Fish (tilapia, farmed)",311
+"meat, fish and eggs","Fish (tilapia, fresh)",1077
+"meat, fish and eggs","Fish (tilapia, frozen)",1078
+"meat, fish and eggs","Fish (tilapia, salted, dried)",719
+"meat, fish and eggs","Fish (travelly, fresh)",1190
+"meat, fish and eggs",Fish (trenched sardinella),681
+"meat, fish and eggs","Fish (tuna, canned)",322
+"meat, fish and eggs","Fish (tuna, fresh)",1187
+"meat, fish and eggs",Fish (usipa),1233
+"meat, fish and eggs",Fish (utaka),1234
+"meat, fish and eggs",Fish (yellowfin tuna),676
+"meat, fish and eggs",Livestock (Goat),383
+"meat, fish and eggs",Livestock (Sheep),390
+"meat, fish and eggs",Livestock (bull),813
+"meat, fish and eggs",Livestock (camel),671
+"meat, fish and eggs",Livestock (cattle),287
+"meat, fish and eggs",Livestock (donkey),814
+"meat, fish and eggs","Livestock (goat, medium-sized castrated male)",477
+"meat, fish and eggs","Livestock (goat, medium-sized male)",508
+"meat, fish and eggs",Livestock (hen),453
+"meat, fish and eggs",Livestock (horse),815
+"meat, fish and eggs",Livestock (ox),816
+"meat, fish and eggs",Livestock (pig),422
+"meat, fish and eggs","Livestock (sheep, medium-sized castrated male)",476
+"meat, fish and eggs","Livestock (sheep, medium-sized male)",507
+"meat, fish and eggs","Livestock (sheep, one-year-old alive female)",275
+"meat, fish and eggs","Livestock (sheep, two-year-old male)",361
+"meat, fish and eggs",Meat,109
+"meat, fish and eggs","Meat (antelope, smoked)",575
+"meat, fish and eggs",Meat (beef),141
+"meat, fish and eggs","Meat (beef, bushmeat)",377
+"meat, fish and eggs","Meat (beef, canned)",320
+"meat, fish and eggs","Meat (beef, chops with bones)",123
+"meat, fish and eggs","Meat (beef, fat, without bones)",1213
+"meat, fish and eggs","Meat (beef, first quality)",187
+"meat, fish and eggs","Meat (beef, minced)",211
+"meat, fish and eggs","Meat (beef, second quality)",188
+"meat, fish and eggs","Meat (beef, with bones)",857
+"meat, fish and eggs","Meat (beef, without bones)",468
+"meat, fish and eggs",Meat (buffalo),875
+"meat, fish and eggs","Meat (buffalo, first quality)",189
+"meat, fish and eggs","Meat (buffalo, second quality)",190
+"meat, fish and eggs",Meat (camel),344
+"meat, fish and eggs",Meat (chicken),94
+"meat, fish and eggs","Meat (chicken, broiler)",89
+"meat, fish and eggs","Meat (chicken, fillet)",906
+"meat, fish and eggs","Meat (chicken, fresh)",982
+"meat, fish and eggs","Meat (chicken, frozen)",207
+"meat, fish and eggs","Meat (chicken, frozen, imported)",429
+"meat, fish and eggs","Meat (chicken, frozen, local)",428
+"meat, fish and eggs","Meat (chicken, imported)",299
+"meat, fish and eggs","Meat (chicken, legs)",837
+"meat, fish and eggs","Meat (chicken, local)",792
+"meat, fish and eggs","Meat (chicken, plucked)",237
+"meat, fish and eggs","Meat (chicken, sonali)",1059
+"meat, fish and eggs","Meat (chicken, whole)",125
+"meat, fish and eggs","Meat (chicken, whole, frozen)",548
+"meat, fish and eggs","Meat (gazelle, smoked)",576
+"meat, fish and eggs",Meat (goat),451
+"meat, fish and eggs","Meat (goat, with bones)",236
+"meat, fish and eggs",Meat (lamb),386
+"meat, fish and eggs","Meat (mixed, sausage)",369
+"meat, fish and eggs",Meat (mutton),183
+"meat, fish and eggs",Meat (offal),1184
+"meat, fish and eggs",Meat (pork),140
+"meat, fish and eggs","Meat (pork, first quality)",192
+"meat, fish and eggs","Meat (pork, hock)",858
+"meat, fish and eggs","Meat (pork, second quality)",193
+"meat, fish and eggs","Meat (pork, with bones)",856
+"meat, fish and eggs","Meat (pork, with fat)",329
+"meat, fish and eggs",Meat (sheep),464
+"meat, fish and eggs","Meat (sheep, second quality)",876
+"meat, fish and eggs",Meat (veal),433
+"meat, fish and eggs",Poultry,138
+"meat, fish and eggs",Prawn,577
+"meat, fish and eggs",Shrimp (endeavor),863
+"meat, fish and eggs",Shrimp (tiger),864
+"meat, fish and eggs",Shrimps,760
+milk and dairy,Cheese,414
+milk and dairy,Cheese (dry),142
+milk and dairy,Cheese (fat),606
+milk and dairy,Cheese (goat),365
+milk and dairy,Cheese (local),314
+milk and dairy,Cheese (low-fat),607
+milk and dairy,Cheese (picon),319
+milk and dairy,"Cheese (white, boiled)",387
+milk and dairy,Curd,367
+milk and dairy,Kefir,605
+milk and dairy,Labaneh,363
+milk and dairy,Lben,1206
+milk and dairy,Milk,81
+milk and dairy,Milk (UHT),794
+milk and dairy,Milk (camel),342
+milk and dairy,"Milk (camel, fresh)",817
+milk and dairy,Milk (condensed),95
+milk and dairy,"Milk (cow, fresh)",439
+milk and dairy,"Milk (cow, pasteurized)",472
+milk and dairy,Milk (fresh),758
+milk and dairy,Milk (non-pasteurized),102
+milk and dairy,Milk (pasteurized),463
+milk and dairy,Milk (powder),238
+milk and dairy,"Milk (powder, infant formula)",442
+milk and dairy,Sour cream,368
+milk and dairy,Yogurt,364
+miscellaneous food,Bananas (beer),827
+miscellaneous food,Baobab Leave Powder,1047
+miscellaneous food,Beer (sorghum),828
+miscellaneous food,Cane juice,1174
+miscellaneous food,Cane juice (light),702
+miscellaneous food,Cane juice (strong),701
+miscellaneous food,Chili (powdered),1166
+miscellaneous food,"Chili (powdered, Bashundhara)",1060
+miscellaneous food,"Chili (powdered, Pran)",1062
+miscellaneous food,"Chili (powdered, Radhuni)",1063
+miscellaneous food,"Chili (powdered, fresh)",1061
+miscellaneous food,"Chili (red, dry raw)",466
+miscellaneous food,"Chili (whole, dry)",1167
+miscellaneous food,"Chili (whole, dry, Bangladeshi Bindu)",1064
+miscellaneous food,"Chili (whole, dry, Indian LC)",1065
+miscellaneous food,"Chili (whole, dry, Indian Teja)",1066
+miscellaneous food,"Chili (whole, dry, Panchagarh)",1067
+miscellaneous food,"Chili (whole, dry, Panchoghor)",1068
+miscellaneous food,"Chili (whole, fresh)",1069
+miscellaneous food,Cocoa,150
+miscellaneous food,Cocoa (powder),502
+miscellaneous food,"Cocoa (powder, not sweetened)",461
+miscellaneous food,Coffee,151
+miscellaneous food,Coffee (instant),209
+miscellaneous food,Coriander,965
+miscellaneous food,Coriander (wild),919
+miscellaneous food,Coriander leaves,1070
+miscellaneous food,Curry powder,1046
+miscellaneous food,"Fish paste (red, fermented)",1217
+miscellaneous food,Fish sauce (lobster),1218
+miscellaneous food,"Ginger (wild, local)",951
+miscellaneous food,Ginger powder,1048
+miscellaneous food,Honey,812
+miscellaneous food,Hyacinth (sim),1088
+miscellaneous food,Jalapeño pepper (big size),1021
+miscellaneous food,Jalapeño pepper (medium size),1022
+miscellaneous food,Kava,985
+miscellaneous food,Kava (kasa loa),967
+miscellaneous food,"Kava (lower stems, pounded)",917
+miscellaneous food,"Kava (roots, pounded)",915
+miscellaneous food,"Kava (roots, raw)",918
+miscellaneous food,"Kava (roots, unpounded)",916
+miscellaneous food,"Lemons (Criollo, medium size)",1028
+miscellaneous food,Lin seed,771
+miscellaneous food,Mangoes (pickle),946
+miscellaneous food,Mangoes (powder),945
+miscellaneous food,Melon seeds,717
+miscellaneous food,Melon seeds powder,718
+miscellaneous food,Mint,944
+miscellaneous food,Niger seed,774
+miscellaneous food,Pickle,740
+miscellaneous food,Rape seed,775
+miscellaneous food,Saccharum edule (dule),960
+miscellaneous food,Salt,185
+miscellaneous food,Salt (food aid),521
+miscellaneous food,Salt (fortified),1169
+miscellaneous food,"Salt (fortified, ACI)",1123
+miscellaneous food,"Salt (fortified, Confidence)",1124
+miscellaneous food,"Salt (fortified, Fresh)",1125
+miscellaneous food,"Salt (fortified, IFAD)",1126
+miscellaneous food,"Salt (fortified, Molla)",1127
+miscellaneous food,Salt (imported),823
+miscellaneous food,Salt (iodised),334
+miscellaneous food,"Salt (iodized, ACI)",1128
+miscellaneous food,"Salt (iodized, Confidence)",1129
+miscellaneous food,"Salt (iodized, Fresh)",1130
+miscellaneous food,"Salt (iodized, IFAD)",1131
+miscellaneous food,"Salt (iodized, Molla)",1132
+miscellaneous food,Salt (local),822
+miscellaneous food,Seasoning (ajino moto),1044
+miscellaneous food,Seasoning (maggi cube),1043
+miscellaneous food,Seasoning (onga),1045
+miscellaneous food,Shemai,1170
+miscellaneous food,Shemai (Banoful),1133
+miscellaneous food,Shemai (Bashundhara),1134
+miscellaneous food,Shemai (Kolson),1135
+miscellaneous food,Shemai (Pran),1136
+miscellaneous food,Shemai (Radhuni),1137
+miscellaneous food,Snail,721
+miscellaneous food,Soft drink (malta guinness),1049
+miscellaneous food,Sugar,97
+miscellaneous food,Sugar (brown),214
+miscellaneous food,"Sugar (brown, imported)",223
+miscellaneous food,"Sugar (brown, loaf)",215
+miscellaneous food,"Sugar (brown, local)",224
+miscellaneous food,Sugar (food aid),520
+miscellaneous food,Sugar (jaggery/gur),331
+miscellaneous food,Sugar (local),754
+miscellaneous food,Sugar (premium),755
+miscellaneous food,Sugar (white),349
+miscellaneous food,"Sugar (white, Abdul Monem ltd (Igloo))",1139
+miscellaneous food,"Sugar (white, Fresh)",1140
+miscellaneous food,"Sugar (white, S.Alam)",1141
+miscellaneous food,"Sugar (white, TK Group)",1142
+miscellaneous food,"Sugar (white, fortified)",497
+miscellaneous food,Tea,281
+miscellaneous food,Tea (black),175
+miscellaneous food,Tea (green),176
+miscellaneous food,Tea (herbal),492
+miscellaneous food,Tea (sahm),357
+miscellaneous food,Tea leaves,1205
+miscellaneous food,Tomatoes (paste),317
+miscellaneous food,Turmeric,925
+miscellaneous food,Turmeric (powder),924
+miscellaneous food,"Turmeric (powder, Bashundhara)",1148
+miscellaneous food,"Turmeric (powder, Fresh)",1149
+miscellaneous food,"Turmeric (powder, Pran)",1150
+miscellaneous food,"Turmeric (powder, Radhuni)",1151
+miscellaneous food,"Turmeric (whole, dry, imported, India)",1152
+miscellaneous food,"Turmeric (whole, dry, local)",1153
+miscellaneous food,Vermicelli,1171
+miscellaneous food,Yeast,470
+non-food,Alcohol,1032
+non-food,Alcohol (spray),878
+non-food,Antibacterial wipes,1164
+non-food,Antibiotics,1033
+non-food,Antibiotics (imported),909
+non-food,Antibiotics (local),908
+non-food,Antipyretic,1034
+non-food,Antipyretic (imported),913
+non-food,Antipyretic (local),912
+non-food,Arabic gum,527
+non-food,Basin,987
+non-food,Bathing soap,1247
+non-food,Batteries,990
+non-food,Batteries (big),808
+non-food,Batteries (small),807
+non-food,Battery lamp,1238
+non-food,Betel nut,977
+non-food,Bleach (chlorine),879
+non-food,Broom,1035
+non-food,Broom (local),969
+non-food,Candles,1173
+non-food,Candles (big) ,806
+non-food,Candles (small) ,805
+non-food,Charcoal,446
+non-food,Cotton,488
+non-food,Diapers,535
+non-food,Dishwashing liquid,536
+non-food,Disinfecting solution,722
+non-food,Electricity,491
+non-food,Exchange rate,305
+non-food,Exchange rate (interbank),485
+non-food,Exchange rate (unofficial),473
+non-food,Exercise Book (48 pages),991
+non-food,Feed,1175
+non-food,Feed (flour),695
+non-food,Feed (rakhel),697
+non-food,Feed (wheat bran),696
+non-food,Fertilizer,1176
+non-food,Fertilizer (CAN),1249
+non-food,Fertilizer (D compound),1241
+non-food,Fertilizer (DAP),797
+non-food,Fertilizer (NPK),530
+non-food,Fertilizer (urea),526
+non-food,Firewood,804
+non-food,Fuel (LPG),907
+non-food,Fuel (Super Petrol),328
+non-food,Fuel (diesel),284
+non-food,"Fuel (diesel, heating, parallel market)",884
+non-food,"Fuel (diesel, parallel market)",505
+non-food,"Fuel (diesel, transport, parallel market)",885
+non-food,Fuel (gas),341
+non-food,"Fuel (gas, parallel market)",668
+non-food,Fuel (kerosene),283
+non-food,"Fuel (kerosene, paraffin)",350
+non-food,Fuel (petrol),1041
+non-food,Fuel (petrol-gasoline),285
+non-food,"Fuel (petrol-gasoline, 92 octane)",914
+non-food,"Fuel (petrol-gasoline, 95 octane)",554
+non-food,"Fuel (petrol-gasoline, parallel market)",506
+non-food,Hand sanitizer (gel),881
+non-food,Handwash soap,541
+non-food,Hoe,992
+non-food,Improved seed,798
+non-food,Internet bundle,883
+non-food,Jerrycan,1039
+non-food,Jerrycan (20 L),988
+non-food,Jerrycan (5 L),989
+non-food,Kava bowl,968
+non-food,Laundry detergent,543
+non-food,Laundry soap,540
+non-food,Laundry soap (paste),1246
+non-food,Maize (seed),1244
+non-food,Match box,1237
+non-food,Milling cost (maize),513
+non-food,Milling cost (sorghum),512
+non-food,Milling cost (wheat),553
+non-food,Mobile credit (100 MWK),1245
+non-food,Mug (plastic),996
+non-food,Multipurpose soap,795
+non-food,Nails,999
+non-food,Panga,993
+non-food,Paracetamol,1240
+non-food,Pen,994
+non-food,Pencil,995
+non-food,Plastic gloves,882
+non-food,Plate (plastic),997
+non-food,Pole,998
+non-food,Rope,1003
+non-food,Rubber,700
+non-food,Sanitary pads,538
+non-food,Saucepan,1001
+non-food,Serving spoon,1004
+non-food,Shampoo,545
+non-food,Straw,699
+non-food,Straw (rice),698
+non-food,Straw (wheat),799
+non-food,Surgical mask,880
+non-food,Tobacco,980
+non-food,Toilet paper,1243
+non-food,Toothbrush,537
+non-food,Toothpaste,539
+non-food,Torch,1005
+non-food,Transport (public),304
+non-food,"Transport (public, bus)",693
+non-food,"Transport (public, moto)",692
+non-food,Underwear,1002
+non-food,Vasodilating agents,1040
+non-food,Vasodilating agents (imported),910
+non-food,Vasodilating agents (local),911
+non-food,Wage (casual labour),276
+non-food,Wage (non-qualified labour),277
+non-food,"Wage (non-qualified labour, agricultural)",467
+non-food,"Wage (non-qualified labour, livestock)",672
+non-food,"Wage (non-qualified labour, non-agricultural)",465
+non-food,Wage (qualified labour),274
+non-food,Water,493
+non-food,Water (drinking),489
+non-food,Wooden mingle,1006
+oil and fats,Butter,372
+oil and fats,Butter (cow milk),810
+oil and fats,Butter (goat milk),811
+oil and fats,Cooking fat,793
+oil and fats,Fat (salo),376
+oil and fats,Ghee (artificial),106
+oil and fats,Ghee (natural),107
+oil and fats,Ghee (vanaspati),333
+oil and fats,Groundnuts (paste),351
+oil and fats,Jaggery (gur),441
+oil and fats,Oil,137
+oil and fats,Oil (coconut),689
+oil and fats,"Oil (coconut, virgin)",966
+oil and fats,Oil (cooking),82
+oil and fats,"Oil (cooking, imported)",821
+oil and fats,Oil (corn),487
+oil and fats,Oil (cotton),172
+oil and fats,Oil (groundnut),245
+oil and fats,Oil (maize),362
+oil and fats,Oil (mixed),395
+oil and fats,"Oil (mixed, imported)",396
+oil and fats,Oil (mustard),228
+oil and fats,Oil (olive),239
+oil and fats,Oil (palm nut),759
+oil and fats,Oil (palm),62
+oil and fats,"Oil (palm, refined)",1196
+oil and fats,Oil (soybean),306
+oil and fats,"Oil (soybean, fortified, Bashundhara)",1101
+oil and fats,"Oil (soybean, fortified, Fresh)",1102
+oil and fats,"Oil (soybean, fortified, Pusti)",1105
+oil and fats,"Oil (soybean, fortified, Rupchanda)",1103
+oil and fats,"Oil (soybean, fortified, Teer)",1104
+oil and fats,Oil (sunflower),184
+oil and fats,Oil (vegetable),96
+oil and fats,"Oil (vegetable, Himani Best Choice)",1200
+oil and fats,"Oil (vegetable, Mahakosh)",1201
+oil and fats,"Oil (vegetable, bulk)",756
+oil and fats,"Oil (vegetable, fortified)",494
+oil and fats,"Oil (vegetable, fortified, food aid)",515
+oil and fats,"Oil (vegetable, imported)",101
+oil and fats,"Oil (vegetable, imported, Oki)",1194
+oil and fats,"Oil (vegetable, imported, Viking)",1195
+oil and fats,"Oil (vegetable, local)",222
+oil and fats,"Oil (vegetable, packaged)",757
+pulses and nuts,"Bean (mung, dry)",1211
+pulses and nuts,Beans,50
+pulses and nuts,Beans (black gram),923
+pulses and nuts,Beans (black),85
+pulses and nuts,"Beans (black, East)",1014
+pulses and nuts,"Beans (black, Nayarit)",564
+pulses and nuts,"Beans (black, North)",1013
+pulses and nuts,"Beans (black, Veracruz)",565
+pulses and nuts,"Beans (black, Zacatecas)",566
+pulses and nuts,"Beans (black, imported)",567
+pulses and nuts,Beans (butter),418
+pulses and nuts,Beans (catarino),427
+pulses and nuts,Beans (cranberry),568
+pulses and nuts,Beans (dolichos),896
+pulses and nuts,Beans (dry),262
+pulses and nuts,Beans (fava),104
+pulses and nuts,"Beans (fava, dry)",385
+pulses and nuts,"Beans (fava, egyptian)",1178
+pulses and nuts,"Beans (fava, small, tinned)",1180
+pulses and nuts,Beans (green),868
+pulses and nuts,Beans (guart),958
+pulses and nuts,Beans (haricot),392
+pulses and nuts,Beans (kidney red),206
+pulses and nuts,Beans (kidney white),389
+pulses and nuts,Beans (kidney),180
+pulses and nuts,"Beans (kidney, dry)",1056
+pulses and nuts,"Beans (kidney, pinto)",519
+pulses and nuts,"Beans (kidney, raw)",1057
+pulses and nuts,Beans (long),949
+pulses and nuts,Beans (magnum),419
+pulses and nuts,Beans (mung),393
+pulses and nuts,"Beans (mung, large grain)",1058
+pulses and nuts,Beans (nhemba),899
+pulses and nuts,Beans (niebe),120
+pulses and nuts,"Beans (niebe, white)",490
+pulses and nuts,Beans (red),78
+pulses and nuts,"Beans (red, East)",1016
+pulses and nuts,"Beans (red, North)",1015
+pulses and nuts,Beans (rosecoco),897
+pulses and nuts,Beans (silk red),79
+pulses and nuts,Beans (spotted),870
+pulses and nuts,Beans (sugar),432
+pulses and nuts,"Beans (sugar, biofortified)",501
+pulses and nuts,"Beans (sugar, dry)",160
+pulses and nuts,Beans (sugar-red),354
+pulses and nuts,Beans (white),66
+pulses and nuts,"Beans (white, East)",1012
+pulses and nuts,"Beans (white, North)",1011
+pulses and nuts,"Beans (white, dry)",443
+pulses and nuts,"Beans (white, long)",948
+pulses and nuts,Beans (yellow),889
+pulses and nuts,Beans(mash),326
+pulses and nuts,Cashew nut,167
+pulses and nuts,Chestnut,1036
+pulses and nuts,"Chestnut (tahitian, ivi)",972
+pulses and nuts,Chickpeas,244
+pulses and nuts,Chickpeas (imported),208
+pulses and nuts,Chickpeas (local),394
+pulses and nuts,Cowpeas,218
+pulses and nuts,Cowpeas (Red),886
+pulses and nuts,Cowpeas (brown),480
+pulses and nuts,Cowpeas (dry),901
+pulses and nuts,Cowpeas (white),479
+pulses and nuts,"Cowpeas (whole, average)",1037
+pulses and nuts,Groundnuts,153
+pulses and nuts,Groundnuts (Bambara),532
+pulses and nuts,Groundnuts (Mix),355
+pulses and nuts,"Groundnuts (large, shelled)",420
+pulses and nuts,Groundnuts (red),741
+pulses and nuts,Groundnuts (shelled),119
+pulses and nuts,"Groundnuts (small, shelled)",421
+pulses and nuts,"Groundnuts (small, unshelled)",557
+pulses and nuts,Groundnuts (unshelled),118
+pulses and nuts,Lentils,108
+pulses and nuts,Lentils (black),1207
+pulses and nuts,Lentils (broken),335
+pulses and nuts,Lentils (brown),552
+pulses and nuts,Lentils (green),549
+pulses and nuts,Lentils (imported),415
+pulses and nuts,Lentils (masur),61
+pulses and nuts,Lentils (moong),325
+pulses and nuts,Lentils (red),550
+pulses and nuts,Lentils (urad),332
+pulses and nuts,"Lentils (whole, red, medium)",1091
+pulses and nuts,Peanut,174
+pulses and nuts,Peanuts (roasted),933
+pulses and nuts,Peas,610
+pulses and nuts,Peas (dry),457
+pulses and nuts,"Peas (green, dry)",212
+pulses and nuts,Peas (mixed),780
+pulses and nuts,"Peas (split, dry)",161
+pulses and nuts,Peas (yellow),186
+pulses and nuts,"Peas (yellow, dry)",462
+pulses and nuts,"Peas (yellow, split)",424
+pulses and nuts,"Peas (yellow, split, food aid)",691
+pulses and nuts,Pigeon peas,155
+pulses and nuts,Pigeon peas (dry),937
+pulses and nuts,Pulses,163
+pulses and nuts,Pulses (Diamond Masoor Dal),1202
+pulses and nuts,Sesame,156
+pulses and nuts,Soybeans,248
+pulses and nuts,Soybeans (dry),1226
+pulses and nuts,Soybeans (imported),266
+pulses and nuts,Soybeans (local),267
+pulses and nuts,Tigernuts (large roots),528
+pulses and nuts,Tigernuts (small roots),531
+pulses and nuts,Walnuts,609
+vegetables and fruits,"Amaranth (spineless, fresh)",1208
+vegetables and fruits,Apples,345
+vegetables and fruits,Apples (Fuji),1052
+vegetables and fruits,Apples (Queen),1053
+vegetables and fruits,Apples (dried),608
+vegetables and fruits,Apples (malay),953
+vegetables and fruits,Apples (red),229
+vegetables and fruits,Apples (royal gala),1054
+vegetables and fruits,Apples (tahitian),920
+vegetables and fruits,Apricots,444
+vegetables and fruits,Avocados,454
+vegetables and fruits,"Avocados (Criollo, big size)",1029
+vegetables and fruits,"Avocados (Hass, medium size)",1020
+vegetables and fruits,Bananas,254
+vegetables and fruits,Bananas (exotic),706
+vegetables and fruits,Bananas (fruit),826
+vegetables and fruits,Bananas (green),979
+vegetables and fruits,Bananas (imported),803
+vegetables and fruits,Bananas (lakatan),845
+vegetables and fruits,Bananas (latundan),846
+vegetables and fruits,Bananas (local),707
+vegetables and fruits,Bananas (medium size),230
+vegetables and fruits,Bananas (ripe),1210
+vegetables and fruits,Bananas (saba),854
+vegetables and fruits,Bananas flower,1209
+vegetables and fruits,Beans (fresh),263
+vegetables and fruits,"Beans (green, fresh)",458
+vegetables and fruits,"Beans (haricot, green)",981
+vegetables and fruits,"Beans (haricot, red)",777
+vegetables and fruits,"Beans (haricot, white)",776
+vegetables and fruits,"Beans (haricot, yellow)",829
+vegetables and fruits,Beans (pod),724
+vegetables and fruits,"Beans (red, fresh)",268
+vegetables and fruits,Beans (string),406
+vegetables and fruits,"Beans (yardlong, green)",787
+vegetables and fruits,Beans leaves,1235
+vegetables and fruits,Beetroots,370
+vegetables and fruits,Bitter melon,842
+vegetables and fruits,Bitterball,703
+vegetables and fruits,Blackberry,409
+vegetables and fruits,Blackjack leaves,1236
+vegetables and fruits,Bottle gourd,852
+vegetables and fruits,Breadfruit,975
+vegetables and fruits,Breadfruit (cooked),984
+vegetables and fruits,Broccoli,410
+vegetables and fruits,Cabbage,181
+vegetables and fruits,Cabbage (bok choy),976
+vegetables and fruits,Cabbage (chinese),843
+vegetables and fruits,"Cabbage (chinese, flowering)",784
+vegetables and fruits,"Cabbage (chinese, raw)",1214
+vegetables and fruits,Cabbage (english),959
+vegetables and fruits,Cabbage (joy sum),954
+vegetables and fruits,"Cabbage (mustard, mosita)",943
+vegetables and fruits,Cabbage (purple),936
+vegetables and fruits,Cabbage (slippery),978
+vegetables and fruits,Calamansi,847
+vegetables and fruits,Carrots,166
+vegetables and fruits,Cashew fruit,877
+vegetables and fruits,Cassava leaves,455
+vegetables and fruits,Cauliflower,231
+vegetables and fruits,Cauliflower (medium size),1030
+vegetables and fruits,Chili,820
+vegetables and fruits,Chili (Jungli),971
+vegetables and fruits,Chili (big size),1009
+vegetables and fruits,Chili (bird's eye),604
+vegetables and fruits,"Chili (bird's eye, green)",746
+vegetables and fruits,"Chili (bird's eye, red)",747
+vegetables and fruits,Chili (bongo),905
+vegetables and fruits,Chili (cherry),973
+vegetables and fruits,Chili (green),90
+vegetables and fruits,Chili (medium size),1010
+vegetables and fruits,Chili (red fire),935
+vegetables and fruits,Chili (red),91
+vegetables and fruits,"Chili (red, curly)",748
+vegetables and fruits,"Chili (red, large)",749
+vegetables and fruits,Choko,851
+vegetables and fruits,Citrus (late valencia),970
+vegetables and fruits,Coconut,684
+vegetables and fruits,Coconut (dried),559
+vegetables and fruits,Coconut (green),974
+vegetables and fruits,Cowpea leaves,898
+vegetables and fruits,Cucumber (pickle),938
+vegetables and fruits,Cucumber (short),1072
+vegetables and fruits,"Cucumber (short, khira)",1071
+vegetables and fruits,Cucumbers,388
+vegetables and fruits,Cucumbers (greenhouse),233
+vegetables and fruits,Cucumbers (long),947
+vegetables and fruits,Curry leaves,964
+vegetables and fruits,Dates,313
+vegetables and fruits,Dragon fruit,983
+vegetables and fruits,Drumstick,961
+vegetables and fruits,Duku,739
+vegetables and fruits,Eggplants,434
+vegetables and fruits,Eggplants (exotic),824
+vegetables and fruits,Eggplants (large),1179
+vegetables and fruits,Eggplants (local),825
+vegetables and fruits,Eggplants (long),1216
+vegetables and fruits,"Eggplants (white, round)",1215
+vegetables and fruits,Garlic,105
+vegetables and fruits,Garlic (imported),867
+vegetables and fruits,"Garlic (imported, China)",1082
+vegetables and fruits,Garlic (large),288
+vegetables and fruits,Garlic (local),844
+vegetables and fruits,Garlic (medium),751
+vegetables and fruits,Garlic (small),289
+vegetables and fruits,Ginger,712
+vegetables and fruits,Gourd,1168
+vegetables and fruits,Gourd (ash),1083
+vegetables and fruits,Gourd (bitter),1084
+vegetables and fruits,Gourd (pointed),1085
+vegetables and fruits,Gourd (ridge),1086
+vegetables and fruits,Gourd (teasel),1087
+vegetables and fruits,Grapes,1177
+vegetables and fruits,Grapes (black),735
+vegetables and fruits,Grapes (pink),736
+vegetables and fruits,Guava,407
+vegetables and fruits,Ivygourd leaves,1219
+vegetables and fruits,Jackfruit,956
+vegetables and fruits,Jackfruit (pieces),955
+vegetables and fruits,Jute mallow,743
+vegetables and fruits,Kale,796
+vegetables and fruits,Kale (chinese),1220
+vegetables and fruits,Kumquat,952
+vegetables and fruits,Leafy vegetables,765
+vegetables and fruits,Lemon (medium size),1090
+vegetables and fruits,Lemons,315
+vegetables and fruits,"Lemons (Persa, medium size)",1027
+vegetables and fruits,Lemons (large),1089
+vegetables and fruits,Lettuce,318
+vegetables and fruits,Limes,950
+vegetables and fruits,Limes (sour),931
+vegetables and fruits,Mandarins,830
+vegetables and fruits,Mango (ripe),1224
+vegetables and fruits,Mangoes,411
+vegetables and fruits,Mangoes (Amra Pali),1092
+vegetables and fruits,Mangoes (BARI-4),1093
+vegetables and fruits,Mangoes (Burmese),1094
+vegetables and fruits,Mangoes (Fazli),1095
+vegetables and fruits,Mangoes (Gopal Vog),1096
+vegetables and fruits,Mangoes (Green),1097
+vegetables and fruits,Mangoes (Haem Sagor),1098
+vegetables and fruits,Mangoes (Harivanga),1099
+vegetables and fruits,Mangoes (Mallika),1100
+vegetables and fruits,Mangoes (carabao),848
+vegetables and fruits,Mangoes (dried),962
+vegetables and fruits,Mangoes (exotic),708
+vegetables and fruits,Mangoes (grafted),525
+vegetables and fruits,Mangoes (hybrid),957
+vegetables and fruits,Mangoes (local),709
+vegetables and fruits,Mangoes (piko),855
+vegetables and fruits,Melons (cantaloupe),728
+vegetables and fruits,Moringa leaves,1221
+vegetables and fruits,Mustard leaves,1222
+vegetables and fruits,Nance,738
+vegetables and fruits,Naranjilla (hybrid),729
+vegetables and fruits,Noni,942
+vegetables and fruits,Okra,941
+vegetables and fruits,Okra (dry),690
+vegetables and fruits,Okra (fresh),523
+vegetables and fruits,Olives,1106
+vegetables and fruits,Onions,173
+vegetables and fruits,Onions (dry),892
+vegetables and fruits,"Onions (dry, local)",240
+vegetables and fruits,Onions (imported),323
+vegetables and fruits,"Onions (imported, China)",1108
+vegetables and fruits,"Onions (imported, Egypt)",1109
+vegetables and fruits,"Onions (imported, India)",1110
+vegetables and fruits,"Onions (imported, Myanmar)",1111
+vegetables and fruits,"Onions (imported, Turkey)",1112
+vegetables and fruits,Onions (local),324
+vegetables and fruits,Onions (red),110
+vegetables and fruits,"Onions (red, dry)",725
+vegetables and fruits,"Onions (red, imported)",686
+vegetables and fruits,"Onions (red, local)",685
+vegetables and fruits,"Onions (red, medium)",752
+vegetables and fruits,Onions (shallot),674
+vegetables and fruits,"Onions (shallot, medium)",783
+vegetables and fruits,Onions (spring),928
+vegetables and fruits,Onions (white),111
+vegetables and fruits,"Onions (white, dry)",504
+vegetables and fruits,Onions leaves,1107
+vegetables and fruits,Oranges,360
+vegetables and fruits,Oranges (Piña),1023
+vegetables and fruits,"Oranges (Valencia, medium size)",1024
+vegetables and fruits,Oranges (big size),241
+vegetables and fruits,Oranges (malta),1113
+vegetables and fruits,Palm fruit,715
+vegetables and fruits,Papaya,408
+vegetables and fruits,Papaya (green),1114
+vegetables and fruits,Papaya (pieces),939
+vegetables and fruits,Parsley,469
+vegetables and fruits,Passion fruit,447
+vegetables and fruits,Peach (medium size),1026
+vegetables and fruits,Peaches,986
+vegetables and fruits,Peas (fresh),456
+vegetables and fruits,Peppers (dried),714
+vegetables and fruits,Peppers (fresh),713
+vegetables and fruits,Peppers (green),292
+vegetables and fruits,Peppers (red),533
+vegetables and fruits,"Peppers (red, dry)",534
+vegetables and fruits,Peppers (sweet),449
+vegetables and fruits,Pineapples,524
+vegetables and fruits,Plantains,147
+vegetables and fruits,Plantains (apem),705
+vegetables and fruits,Plantains (apentu),98
+vegetables and fruits,"Plantains (barraganete, green)",731
+vegetables and fruits,"Plantains (barraganete, mature)",730
+vegetables and fruits,Plantains (big size),1025
+vegetables and fruits,"Plantains (dominico, green)",733
+vegetables and fruits,"Plantains (dominico, mature)",732
+vegetables and fruits,Plantains (medium size),1031
+vegetables and fruits,Potato Leaves,809
+vegetables and fruits,Pumpkin,412
+vegetables and fruits,Pumpkin leaves,1223
+vegetables and fruits,Radish,579
+vegetables and fruits,Radish (leaves),1116
+vegetables and fruits,Rape leaves,1230
+vegetables and fruits,Ridge gourd (Tori/Turai),934
+vegetables and fruits,Rocca,1181
+vegetables and fruits,Rosella leaves,932
+vegetables and fruits,Sauropus sp. leaves,1225
+vegetables and fruits,Snake gourd,675
+vegetables and fruits,Soursop,930
+vegetables and fruits,Spinach,404
+vegetables and fruits,Spinach (indian),1138
+vegetables and fruits,Sponge gourd,929
+vegetables and fruits,Squashes,340
+vegetables and fruits,Squashes (butternut),529
+vegetables and fruits,Starfruit,927
+vegetables and fruits,Strawberries,727
+vegetables and fruits,Sweet Potato leaves,853
+vegetables and fruits,Swiss chard,839
+vegetables and fruits,Tamarind,926
+vegetables and fruits,Tamarind (green),1143
+vegetables and fruits,Tamarind (ripe),1144
+vegetables and fruits,Taro leaves,742
+vegetables and fruits,Tomatoes,114
+vegetables and fruits,Tomatoes (big size),1007
+vegetables and fruits,Tomatoes (bitter),869
+vegetables and fruits,Tomatoes (dried),413
+vegetables and fruits,Tomatoes (green),1146
+vegetables and fruits,Tomatoes (greenhouse),243
+vegetables and fruits,Tomatoes (imported),347
+vegetables and fruits,Tomatoes (local),346
+vegetables and fruits,Tomatoes (medium size),1008
+vegetables and fruits,Tomatoes (navrongo),710
+vegetables and fruits,Tomatoes (red),1147
+vegetables and fruits,"Tomatoes (red, ripe)",1228
+vegetables and fruits,Tree tomatoes,734
+vegetables and fruits,Water spinach,788
+vegetables and fruits,Watercress,922
+vegetables and fruits,Watermelons,716
+vegetables and fruits,Watermelons (chinese gragon),921
+vegetables and fruits,Wax gourd,791
+vegetables and fruits,Young fern,940
+vegetables and fruits,Zucchini,450

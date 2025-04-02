@@ -223,6 +223,16 @@ def main(
                                 prices_resource_id = resource["id"]
                             elif resource_name == dataset_generator.global_markets_name:
                                 markets_resource_id = resource["id"]
+                            elif (
+                                resource_name
+                                == dataset_generator.global_commodities_name
+                            ):
+                                commodities_resource_id = resource["id"]
+                            elif (
+                                resource_name
+                                == dataset_generator.global_currencies_name
+                            ):
+                                currencies_resource_id = resource["id"]
                         if prices_resource_id and markets_resource_id:
                             dataset_id = dataset["id"]
                             hapi_output = HAPIOutput(
@@ -230,20 +240,32 @@ def main(
                                 error_handler,
                             )
                             hapi_output.setup_admins(retriever, countryiso3s)
-                            global_markets_info = table_data["DBMarket"]
-                            hapi_output.process_markets(
-                                global_markets_info, dataset_id, markets_resource_id
+                            hapi_currencies = hapi_output.process_currencies(
+                                currencies, dataset_id, currencies_resource_id
                             )
-                            hapi_output.process_prices(
+                            hapi_commodities = hapi_output.process_commodities(
+                                table_data["DBCommodity"],
+                                dataset_id,
+                                commodities_resource_id,
+                            )
+                            hapi_markets = hapi_output.process_markets(
+                                table_data["DBMarket"], dataset_id, markets_resource_id
+                            )
+                            hapi_prices = hapi_output.process_prices(
                                 global_prices_info, dataset_id, prices_resource_id
                             )
+                            gc.collect()
                             hapi_dataset_generator = HAPIDatasetGenerator(
                                 configuration,
-                                global_markets_info,
-                                global_prices_info,
+                                folder,
+                                global_prices_info["start_date"],
+                                global_prices_info["end_date"],
                             )
                             dataset = hapi_dataset_generator.generate_prices_dataset(
-                                folder,
+                                hapi_currencies,
+                                hapi_commodities,
+                                hapi_markets,
+                                hapi_prices,
                             )
                             if dataset:
                                 dataset.update_from_yaml(

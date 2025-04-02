@@ -1,5 +1,5 @@
 date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency,#value,#value+usd
+#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
 2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,122.64,5.02
 2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,225.14,9.21
 2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.94,12.8

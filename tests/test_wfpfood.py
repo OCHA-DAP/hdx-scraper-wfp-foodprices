@@ -830,21 +830,32 @@ class TestWFP:
                             error_handler,
                         )
                         hapi_output.setup_admins(retriever)
-                        global_markets_info = table_data["DBMarket"]
-                        hapi_output.process_markets(global_markets_info, "1234", "5678")
-                        hapi_output.process_prices(
+                        hapi_currencies = hapi_output.process_currencies(
+                            currencies, "1234", "abcd"
+                        )
+                        hapi_commodities = hapi_output.process_commodities(
+                            table_data["DBCommodity"],
+                            "1234",
+                            "efgh",
+                        )
+                        hapi_markets = hapi_output.process_markets(
+                            table_data["DBMarket"], "1234", "5678"
+                        )
+                        hapi_prices = hapi_output.process_prices(
                             global_prices_info, "1234", "9101112"
                         )
                         hapi_dataset_generator = HAPIDatasetGenerator(
                             configuration,
-                            global_markets_info,
-                            global_prices_info,
+                            tempdir,
+                            global_prices_info["start_date"],
+                            global_prices_info["end_date"],
                         )
                         dataset = hapi_dataset_generator.generate_prices_dataset(
-                            tempdir,
+                            hapi_currencies, hapi_commodities, hapi_markets, hapi_prices
                         )
+
                         assert dataset == {
-                            "data_update_frequency": "7",
+                            "data_update_frequency": "30",
                             "dataset_date": "[2020-05-15T00:00:00 TO 2024-11-15T23:59:59]",
                             "dataset_preview": "no_preview",
                             "dataset_source": "WFP - World Food Programme",
@@ -889,9 +900,25 @@ class TestWFP:
                             },
                             {
                                 "dataset_preview_enabled": "False",
-                                "description": "Food Markets data",
+                                "description": "Markets data",
                                 "format": "csv",
-                                "name": "Global Food Security, Nutrition & Poverty: Food Markets",
+                                "name": "Global Food Security, Nutrition & Poverty: Markets",
+                                "resource_type": "file.upload",
+                                "url_type": "upload",
+                            },
+                            {
+                                "dataset_preview_enabled": "False",
+                                "description": "Commodities data",
+                                "format": "csv",
+                                "name": "Global Food Security, Nutrition & Poverty: Commodities",
+                                "resource_type": "file.upload",
+                                "url_type": "upload",
+                            },
+                            {
+                                "dataset_preview_enabled": "False",
+                                "description": "Currencies data",
+                                "format": "csv",
+                                "name": "Global Food Security, Nutrition & Poverty: Currencies",
                                 "resource_type": "file.upload",
                                 "url_type": "upload",
                             },
@@ -912,7 +939,9 @@ class TestWFP:
                             "wfp_markets_global",
                             "wfp_currencies_global",
                             "hdx_hapi_food_price_global",
-                            "hdx_hapi_food_market_global",
+                            "hdx_hapi_market_global",
+                            "hdx_hapi_commodity_global",
+                            "hdx_hapi_currency_global",
                         ):
                             csv_filename = f"{filename}.csv"
                             expected_file = join(fixtures_dir, csv_filename)
