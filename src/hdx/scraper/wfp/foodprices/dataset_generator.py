@@ -17,9 +17,11 @@ logger = logging.getLogger(__name__)
 
 
 class DatasetGenerator:
-    global_name = "Global WFP food prices"
-    slugified_global_name = slugify(global_name).lower()
+    global_prices_name = "Global WFP food prices"
+    slugified_global_name = slugify(global_prices_name).lower()
     global_markets_name = "Global WFP markets"
+    global_commodities_name = "Global WFP commodities"
+    global_currencies_name = "Global WFP currencies"
 
     def __init__(
         self,
@@ -248,7 +250,7 @@ class DatasetGenerator:
 
         filename = "wfp_food_prices_global.csv"
         resourcedata = {
-            "name": self.global_name,
+            "name": self.global_prices_name,
             "description": "Last 2 years (per country) of prices data with HXL tags",
             "format": "csv",
         }
@@ -283,7 +285,7 @@ class DatasetGenerator:
 
         filename = "wfp_commodities_global.csv"
         resourcedata = {
-            "name": "Global WFP commodities",
+            "name": self.global_commodities_name,
             "description": "Commodities data with HXL tags",
             "format": "csv",
         }
@@ -315,7 +317,7 @@ class DatasetGenerator:
 
         filename = "wfp_currencies_global.csv"
         resourcedata = {
-            "name": "Global WFP currencies",
+            "name": self.global_currencies_name,
             "description": "Currencies data with HXL tags",
             "format": "csv",
         }
