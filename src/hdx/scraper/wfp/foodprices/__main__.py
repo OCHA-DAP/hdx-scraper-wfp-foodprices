@@ -219,7 +219,7 @@ def main(
                         markets_resource_id = None
                         for resource in dataset.get_resources():
                             resource_name = resource["name"]
-                            if resource_name == dataset_generator.global_name:
+                            if resource_name == dataset_generator.global_prices_name:
                                 prices_resource_id = resource["id"]
                             elif resource_name == dataset_generator.global_markets_name:
                                 markets_resource_id = resource["id"]
