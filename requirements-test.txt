@@ -329,7 +329,7 @@ tabulate==0.9.0
     # via
     #   -c requirements.txt
     #   frictionless
-tenacity==9.0.0
+tenacity==9.1.2
     # via
     #   -c requirements.txt
     #   hdx-python-country
