@@ -1,7 +1,0 @@
-countryiso3,url,start_date,end_date
-#country+code,#country+url,#date+start,#date+end
-BLR,https://data.humdata.org/dataset/wfp-food-prices-for-belarus,2009-01-15,2022-05-15
-COG,https://data.humdata.org/dataset/wfp-food-prices-for-congo,2011-01-15,2023-10-15
-NIC,https://data.humdata.org/dataset/wfp-food-prices-for-nicaragua,2000-01-15,2024-11-15
-PSE,https://data.humdata.org/dataset/wfp-food-prices-for-state-of-palestine,2007-01-15,2024-01-15
-SYR,https://data.humdata.org/dataset/wfp-food-prices-for-syrian-arab-republic,2011-04-15,2023-12-15

@@ -8,7 +8,7 @@ attrs==25.3.0
     #   jsonlines
     #   jsonschema
     #   referencing
-certifi==2025.1.31
+certifi==2025.4.26
     # via requests
 chardet==5.2.0
     # via frictionless
@@ -34,7 +34,7 @@ et-xmlfile==2.0.0
     # via openpyxl
 frictionless==5.18.1
     # via hdx-python-utilities
-greenlet==3.1.1
+greenlet==3.2.1
     # via sqlalchemy
 hdx-python-api==6.3.8
     # via hdx-scraper-wfp-foodprices (pyproject.toml)
@@ -71,7 +71,7 @@ jsonschema==4.23.0
     # via
     #   frictionless
     #   tableschema-to-template
-jsonschema-specifications==2024.10.1
+jsonschema-specifications==2025.4.1
     # via jsonschema
 libhxl==5.2.2
     # via
@@ -83,19 +83,19 @@ makefun==1.15.6
     # via hdx-python-api
 markdown-it-py==3.0.0
     # via rich
-marko==2.1.2
+marko==2.1.3
     # via frictionless
 markupsafe==3.0.2
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.6.0
+more-itertools==10.7.0
     # via inflect
 num2words==0.5.14
     # via quantulum3
 openpyxl==3.1.5
     # via hdx-python-utilities
-petl==1.7.15
+petl==1.7.16
     # via frictionless
 ply==3.11
     # via
@@ -103,9 +103,9 @@ ply==3.11
     #   libhxl
 pockets==0.9.1
     # via sphinxcontrib-napoleon
-pydantic==2.11.1
+pydantic==2.11.3
     # via frictionless
-pydantic-core==2.33.0
+pydantic-core==2.33.1
     # via pydantic
 pygments==2.19.1
     # via rich
@@ -155,7 +155,7 @@ ruamel-yaml==0.18.10
     # via hdx-python-utilities
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
-setuptools==78.1.0
+setuptools==80.0.0
     # via ckanapi
 shellingham==1.5.4
     # via typer
@@ -177,7 +177,7 @@ sphinxcontrib-napoleon==0.7
     # via defopt
 sqlalchemy==2.0.40
     # via hdx-python-database
-structlog==25.2.0
+structlog==25.3.0
     # via libhxl
 tableschema-to-template==0.0.13
     # via hdx-python-utilities
@@ -189,9 +189,9 @@ text-unidecode==1.3
     # via python-slugify
 typeguard==4.4.2
     # via inflect
-typer==0.15.2
+typer==0.15.3
     # via frictionless
-typing-extensions==4.13.0
+typing-extensions==4.13.2
     # via
     #   frictionless
     #   pydantic
@@ -203,11 +203,11 @@ typing-extensions==4.13.0
     #   typing-inspection
 typing-inspection==0.4.0
     # via pydantic
-unidecode==1.3.8
+unidecode==1.4.0
     # via
     #   libhxl
     #   pyphonetics
-urllib3==2.3.0
+urllib3==2.4.0
     # via
     #   libhxl
     #   requests
@@ -221,7 +221,7 @@ xlrd3==1.1.0
     # via libhxl
 xlsx2csv==0.8.4
     # via hdx-python-utilities
-xlsxwriter==3.2.2
+xlsxwriter==3.2.3
     # via tableschema-to-template
 xlwt==1.3.0
     # via hdx-python-utilities

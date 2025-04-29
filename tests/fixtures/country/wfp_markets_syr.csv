@@ -1,0 +1,130 @@
+market_id,market,countryiso3,admin1,admin2,latitude,longitude
+#loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
+1112,Sheikh Sa'ad,,Damascus,Damascus,33.5,36.3
+1113,Zablatani,,Damascus,Damascus,33.5,36.3
+1114,Barzeh,,Damascus,Damascus,33.57,36.32
+1115,Qudsiya,,Rural Damascus,Rural Damascus,33.55,36.22
+1116,Hajar Aswad,,Rural Damascus,Darayya,33.46,36.3
+1117,Duma,,Rural Damascus,Duma,33.58,36.4
+1118,Dar'a,,Dar'a,Dar'a,32.62,36.11
+1119,As-Sanamayn,,Dar'a,As-Sanamayn,33.07,36.18
+1120,Harra,,Dar'a,As-Sanamayn,33.05,36
+1121,Deir-ez-Zor,,Deir-ez-Zor,Deir-ez-Zor,35.34,40.15
+1123,Bsaira,,Deir-ez-Zor,Deir-ez-Zor,35.16,40.43
+1124,Al-Hasakeh,,Al-Hasakeh,Al-Hasakeh,36.48,40.76
+1125,Quamishli,,Al-Hasakeh,Quamishli,37.05,41.24
+1126,Ras Al Ain,,Al-Hasakeh,Ras Al Ain,36.84,40.07
+1127,Ar-Raqqa,,Ar-Raqqa,Ar-Raqqa,35.95,39.02
+1128,Karama,,Homs,Homs,34.72,36.7
+1129,Tell Abiad,,Ar-Raqqa,Tell Abiad,36.7,38.96
+1130,Tartous,,Tartous,Tartous,34.89,35.89
+1131,Banias,,Tartous,Banyas,35.18,35.95
+1132,Safita,,Tartous,Safita,34.82,36.12
+1133,Lattakia,,Lattakia,Lattakia,35.52,35.78
+1134,Jablah,,Lattakia,Jablah,35.36,35.93
+1135,Hiffeh,,Lattakia,Al-Haffa,35.58,36.03
+1136,Hama,,Hama,Hama,35.13,36.75
+1137,Masyaf,,Hama,Masyaf,35.06,36.34
+1138,Muhradah,,Hama,Muhradah,35.25,36.58
+1139,Homs,,Homs,Homs,34.73,36.72
+1141,Qasir,,Homs,Al-Qusayr,34.51,36.58
+1142,Aleppo,,Aleppo,Jebel Saman,36.2,37.16
+1143,Menbij,,Aleppo,Menbij,36.53,37.96
+1144,Al Bab,,Aleppo,Al Bab,36.37,37.52
+1354,Jaramana,,Rural Damascus,Rural Damascus,33.48,36.35
+1545,Moghambo,,Aleppo,Jebel Saman,36.22,37.13
+1546,Al-Cha'ar,,Aleppo,Jebel Saman,36.21,37.18
+1547,Idleb,,Idleb,Idleb,35.93,36.63
+1548,Al Mayadin,,Deir-ez-Zor,Al Mayadin,35.02,40.45
+1549,At-Tall,,Rural Damascus,At Tall,33.6,36.3
+1550,Bennsh,,Idleb,Idleb,35.96,36.71
+1551,Ekrema,,Homs,Homs,34.71,36.72
+1553,Rural Safita,,Tartous,Safita,34.88,36.26
+1554,Khan Arnaba,,Quneitra,Quneitra,33.18,35.89
+1555,Mzeireb,,Dar'a,Dar'a,32.71,36.03
+1556,Shahba,,As-Sweida,Shahba,32.85,36.64
+1557,Rafid,,Quneitra,Quneitra,32.96,35.9
+1558,Shrebishat,,Damascus,Damascus,33.51,36.3
+1559,As-Sweida,,As-Sweida,As-Sweida,32.7,36.57
+1563,Damascus,,Damascus,Damascus,33.5,36.3
+1897,Qaryatein,,Homs,Homs,34.23,37.24
+1924,Jandar,,Homs,Homs,34.49,36.78
+1925,Nubul,,Aleppo,A'zaz,36.36,37.01
+1926,A'zaz,,Aleppo,A'zaz,36.59,37.05
+1927,Ar-Rastan,,Homs,Ar-Rastan,34.92,36.73
+1928,Talbiseh,,Homs,Ar-Rastan,34.84,36.73
+1929,Inshaat,,Homs,Homs,34.72,36.7
+1930,Al Waer,,Homs,Homs,34.74,36.68
+1931,Hula,,Homs,Homs,34.9,36.5
+1948,As-Salamiyeh,,Hama,As-Salamiyeh,35.02,37.07
+1949,Afrin,,Aleppo,Afrin,36.45,36.82
+2237,Hrak,,Dar'a,Izra',32.75,36.26
+2238,Eastern Ghouta,,Rural Damascus,Duma,33.57,36.41
+2242,Dar'a (XB),,Dar'a,Dar'a,32.61,36.12
+2243,Jizeh,,Dar'a,Dar'a,32.57,36.32
+2244,Al Fiq,,Quneitra,Al Fiq,32.88,35.88
+2245,As-Sweida (XB),,As-Sweida,As-Sweida,32.58,36.44
+2522,Al Malaab,,Homs,Homs,34.73,36.72
+2523,Izr'a,,Dar'a,Izra',32.85,36.27
+2524,Sayda,,Quneitra,Al Fiq,32.88,35.88
+2675,As-Safira,,Aleppo,As-Safira,36.08,37.37
+2676,Atareb,,Aleppo,Jebel Saman,36.14,36.82
+2677,Der Hafir,,Aleppo,Al Bab,36.16,37.7
+2678,Al Tabqah,,Ar-Raqqa,Ath-Thawrah,35.84,38.54
+2679,Al Balad,,Dar'a,Dar'a,32.61,36.1
+2680,Al Midan,,Damascus,Damascus,33.49,36.3
+2681,Kisweh,,Rural Damascus,Rural Damascus,33.36,36.25
+2682,Al Makhrim,,Homs,Al Makhrim,34.85,37
+2683,As-Suqaylabiyah,,Hama,As-Suqaylabiyah,35.36,36.4
+2684,Ein Terma,,Rural Damascus,Rural Damascus,33.51,36.34
+2685,Hawash,,Homs,Tall Kalakh,34.76,36.32
+2686,Nawa,,Dar'a,Izra',32.89,36.04
+2687,Saqba,,Rural Damascus,Rural Damascus,33.52,36.38
+2689,Ein Issa,,Ar-Raqqa,Tell Abiad,36.39,38.86
+2690,Al Kom,,Quneitra,Quneitra,33.2,35.95
+2691,Al Hamdaneya,,Aleppo,Jebel Saman,36.17,37.11
+2706,Harem,,Idleb,Harim,36.21,36.52
+2784,Maskanah,,Aleppo,Menbij,35.97,38.03
+2785,Bu Kamal,,Deir-ez-Zor,Abu Kamal,34.46,40.91
+4612,Jisr al shughur,,Idleb,Jisr-Ash-Shugur,35.82,36.31
+5079,Busra al Sham,,Dar'a,Dar'a,32.52,36.47
+5251,Salkhad,,As-Sweida,Salkhad,32.49,36.71
+5252,Qarraya,,As-Sweida,Salkhad,32.54,36.6
+5253,Maadan,,Ar-Raqqa,Ar-Raqqa,35.76,39.59
+5254,Sabkha,,Ar-Raqqa,Ar-Raqqa,35.81,39.27
+5255,Maabada,,Al-Hasakeh,Al-Malikeyyeh,37.02,41.96
+5256,Tell Tamer,,Al-Hasakeh,Al-Hasakeh,36.65,40.37
+5257,Sbeikhan,,Deir-ez-Zor,Al Mayadin,34.86,40.6
+5258,Shmetiyeh,,Deir-ez-Zor,Deir-ez-Zor,35.47,39.94
+5259,Tebni,,Deir-ez-Zor,Deir-ez-Zor,35.61,39.82
+5278,Quriyeh,,Deir-ez-Zor,Al Mayadin,34.96,40.52
+5641,Atmeh ,,Idleb,Harim,36.31,36.69
+5642,Qah,,Idleb,Harim,36.3,36.73
+5643,Alkarama,,Idleb,Harim,36.29,36.7
+5644,Sarmada,,Idleb,Harim,36.19,36.73
+5645,Dana,,Idleb,Harim,36.22,36.78
+5646,Deir Hassan,,Idleb,Harim,36.23,36.76
+5928,Senjar,,Idleb,Al Ma'ra,35.59,37
+5929,Qurdaha,,Lattakia,Al-Qardaha,35.46,36.06
+5930,Sweiseh,,Quneitra,Quneitra,33,35.93
+5931,Jdaideh,,Rural Damascus,Qatana,33.44,36.16
+5932,Sheikh Badr,,Tartous,Sheikh Badr,34.99,36.08
+6701,Debsi Afnan,,Ar-Raqqa,Ath-Thawrah,35.81,38.27
+6750,Ashara,,Deir-ez-Zor,Al Mayadin,34.92,40.56
+6833,Hazano,,Idleb,Idleb,36.09,36.72
+6834,Kelly,,Idleb,Idleb,36.11,36.7
+6835,Batbu,,Aleppo,Jebel Saman,36.14,36.74
+8199,Bazagha,,Aleppo,Al Bab,36.38,37.56
+8200,Qubasin,,Aleppo,Al Bab,36.42,37.56
+8201,Aghtrin,,Aleppo,A'zaz,36.51,37.33
+8202,Sejou,,Aleppo,A'zaz,36.62,37.08
+8203,Suran,,Aleppo,A'zaz,36.56,37.19
+8204,Jarablus,,Aleppo,Jarablus,36.82,38.01
+8205,Abzimo,,Aleppo,Jebel Saman,36.17,36.87
+8206,Darret Azza,,Aleppo,Jebel Saman,36.28,36.85
+8207,Der Saman,,Aleppo,Jebel Saman,36.33,36.84
+8208,Jeineh,,Aleppo,Jebel Saman,36.12,36.8
+8209,Kafr Karmin,,Aleppo,Jebel Saman,36.16,36.79
+8210,Armanaz,,Idleb,Harim,36.08,36.5
+8211,Ma'arrat Tamasrin,,Idleb,Idleb,36.01,36.67
+8237,Salqin,,Idleb,Harim,36.14,36.45

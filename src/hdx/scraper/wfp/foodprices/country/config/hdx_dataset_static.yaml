@@ -1,0 +1,5 @@
+license_id: "cc-by-igo"
+notes: "This dataset contains %s, sourced from the World Food Programme Price Database. %sThe World Food Programme Price Database covers foods such as maize, rice, beans, fish, and sugar for 98 countries and some 3000 markets. It is updated weekly but contains to a large extent monthly data. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter."
+caveats: "Although the frequency of updates is set to every month, updates may occur more or less frequently"
+methodology: "Registry"
+private: False  # has to be True or False

@@ -37,7 +37,6 @@ dependencies = [
     "hdx-python-api>= 6.3.8",
     "hdx-python-country>= 3.9.2",
     "hdx-python-utilities>= 3.8.5",
-    "hdx-python-database>= 1.3.6",
     "sigfig",
 ]
 dynamic = ["version"]
@@ -54,4 +53,5 @@ test = ["pytest", "pytest-check", "pytest-cov"]
 dev = ["pre-commit"]
 
 [project.scripts]
-run = "hdx.scraper.wfp.foodprices.__main__:main"
+run_country = "hdx.scraper.wfp.foodprices.country.__main__:main"
+run_global = "hdx.scraper.wfp.foodprices.global.__main__:main"
