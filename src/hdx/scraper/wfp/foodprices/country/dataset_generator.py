@@ -224,6 +224,7 @@ class DatasetGenerator:
                 yield {
                     "market_id": market_id,
                     "market": market_name,
+                    "countryiso3": countryiso3,
                     "admin1": adm1,
                     "admin2": adm2,
                     "latitude": number_format(lat, format="%.2f", trailing_zeros=False),

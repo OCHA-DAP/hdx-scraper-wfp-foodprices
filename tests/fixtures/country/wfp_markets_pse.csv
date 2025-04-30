@@ -1,20 +1,20 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
 #loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
-1995,Tubas,,West Bank,Tubas,32.32,35.37
-1996,Jenin,,West Bank,Jenin,32.46,35.29
-1997,Tulkarem,,West Bank,Tulkarm,32.32,35.04
-1998,Nablus,,West Bank,Nablus,32.22,35.25
-1999,Qalqiliya,,West Bank,Qalqilya,32.19,34.98
-2000,Salfit,,West Bank,Salfit,32.08,35.18
-2001,Ramallah,,West Bank,Ramallah and Albireh,31.91,35.19
-2002,Jericho,,West Bank,Jericho,31.86,35.47
-2003,Jerusalem,,West Bank,Jerusalem,31.79,35.23
-2004,Bethlehem,,West Bank,Bethlehem,31.71,35.2
-2005,Hebron,,West Bank,Hebron,31.52,35.09
-2006,Gaza North,,Gaza Strip,North Gaza,31.54,34.48
-2007,Gaza,,Gaza Strip,Gaza,31.51,34.46
-2008,Deir Al-Balah,,Gaza Strip,Deir Al Balah,31.42,34.35
-2009,Khan Yunis,,Gaza Strip,Kan Younis,31.34,34.31
-2010,Rafah,,Gaza Strip,Rafah,31.27,34.26
-8215,Gaza Strip,,Gaza Strip,Kan Younis,31.35,34.33
-8216,West Bank,,West Bank,Ramallah and Albireh,31.97,35.33
+1995,Tubas,PSE,West Bank,Tubas,32.32,35.37
+1996,Jenin,PSE,West Bank,Jenin,32.46,35.29
+1997,Tulkarem,PSE,West Bank,Tulkarm,32.32,35.04
+1998,Nablus,PSE,West Bank,Nablus,32.22,35.25
+1999,Qalqiliya,PSE,West Bank,Qalqilya,32.19,34.98
+2000,Salfit,PSE,West Bank,Salfit,32.08,35.18
+2001,Ramallah,PSE,West Bank,Ramallah and Albireh,31.91,35.19
+2002,Jericho,PSE,West Bank,Jericho,31.86,35.47
+2003,Jerusalem,PSE,West Bank,Jerusalem,31.79,35.23
+2004,Bethlehem,PSE,West Bank,Bethlehem,31.71,35.2
+2005,Hebron,PSE,West Bank,Hebron,31.52,35.09
+2006,Gaza North,PSE,Gaza Strip,North Gaza,31.54,34.48
+2007,Gaza,PSE,Gaza Strip,Gaza,31.51,34.46
+2008,Deir Al-Balah,PSE,Gaza Strip,Deir Al Balah,31.42,34.35
+2009,Khan Yunis,PSE,Gaza Strip,Kan Younis,31.34,34.31
+2010,Rafah,PSE,Gaza Strip,Rafah,31.27,34.26
+8215,Gaza Strip,PSE,Gaza Strip,Kan Younis,31.35,34.33
+8216,West Bank,PSE,West Bank,Ramallah and Albireh,31.97,35.33

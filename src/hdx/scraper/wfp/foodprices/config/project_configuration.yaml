@@ -1,0 +1,50 @@
+# Collector specific configuration
+
+hxltags:
+  countryiso3: "#country+code"
+  date: "#date"
+  admin1: "#adm1+name"
+  admin2: "#adm2+name"
+  market_id: "#loc+market+code"
+  market: "#loc+market+name"
+  latitude: "#geo+lat"
+  longitude: "#geo+lon"
+  category: "#item+type"
+  commodity_id: "#item+code"
+  commodity: "#item+name"
+  unit: "#item+unit"
+  priceflag: "#item+price+flag"
+  pricetype: "#item+price+type"
+  currency: "#currency+code"
+  price: "#value"
+  usdprice: "#value+usd"
+  url: "#country+url"
+  start_date: "#date+start"
+  end_date: "#date+end"
+
+prices_headers:
+  - date
+  - admin1
+  - admin2
+  - market
+  - market_id
+  - latitude
+  - longitude
+  - category
+  - commodity
+  - commodity_id
+  - unit
+  - priceflag
+  - pricetype
+  - currency
+  - price
+  - usdprice
+
+markets_headers:
+  - market_id
+  - market
+  - countryiso3
+  - admin1
+  - admin2
+  - latitude
+  - longitude

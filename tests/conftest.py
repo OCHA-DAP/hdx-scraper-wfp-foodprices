@@ -5,7 +5,7 @@ import pytest
 from hdx.api.configuration import Configuration
 from hdx.api.locations import Locations
 from hdx.data.vocabulary import Vocabulary
-from hdx.scraper.wfp.foodprices.country.__main__ import main
+from hdx.scraper.wfp.foodprices.utilities import get_now
 from hdx.utilities.easy_logging import setup_logging
 from hdx.utilities.path import script_dir_plus_file
 from hdx.utilities.useragent import UserAgent
@@ -17,6 +17,14 @@ setup_logging()
 def fixtures_dir():
     return join("tests", "fixtures")
 
+@pytest.fixture(scope="session")
+def input_dir(fixtures_dir):
+    return join(fixtures_dir, "input")
+
+@pytest.fixture(scope="session")
+def country_dir(fixtures_dir):
+    return join(fixtures_dir, "country")
+
 
 @pytest.fixture(scope="session")
 def configuration():
@@ -25,7 +33,7 @@ def configuration():
         hdx_read_only=True,
         hdx_site="prod",
         project_config_yaml=script_dir_plus_file(
-            join("config", "project_configuration.yaml"), main
+            join("config", "project_configuration.yaml"), get_now
         ),
     )
     Locations.set_validlocations(

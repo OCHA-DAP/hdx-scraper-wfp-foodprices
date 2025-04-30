@@ -7,33 +7,29 @@ Unit tests for wfpfood scraper.
 import logging
 from os.path import join
 
-import pytest
-
 from hdx.location.wfp_api import WFPAPI
+from hdx.scraper.wfp.foodprices.country.__main__ import main
 from hdx.scraper.wfp.foodprices.country.dataset_generator import DatasetGenerator
 from hdx.scraper.wfp.foodprices.country.wfp_food import WFPFood
-from hdx.scraper.wfp.foodprices.country.wfp_mappings import WFPMappings
 from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
-from hdx.utilities.path import temp_dir
+from hdx.utilities.loader import load_yaml
+from hdx.utilities.path import script_dir_plus_file, temp_dir
 from hdx.utilities.retriever import Retrieve
 
 logger = logging.getLogger(__name__)
 
 
 class TestWFP:
-    @pytest.fixture(scope="class")
-    def country_dir(self, fixtures_dir):
-        return join(fixtures_dir, "country")
-
-    @pytest.fixture(scope="class")
-    def input_dir(self, country_dir):
-        return join(country_dir, "input")
-
     def test_run(self, configuration, country_dir, input_dir):
+        country_configuration = script_dir_plus_file(
+            join("config", "project_configuration.yaml"), main
+        )
+        configuration.update(load_yaml(country_configuration))
         with temp_dir(
-            "TestWFPFoodPrices",
+            "TestWFPFoodPricesCountry",
             delete_on_success=True,
             delete_on_failure=False,
         ) as tempdir:
@@ -49,18 +45,18 @@ class TestWFP:
                 )
                 now = get_now(retriever)
                 wfp_api = WFPAPI(downloader, retriever)
-                wfp = WFPMappings(configuration, wfp_api, retriever)
-                iso3_to_showcase_url = wfp.read_region_mapping()
+                wfp_mapping = WFPMappings(configuration, wfp_api, retriever)
+                iso3_to_showcase_url = wfp_mapping.read_region_mapping()
                 assert len(iso3_to_showcase_url) == 88
-                iso3_to_source = wfp.read_source_overrides()
+                iso3_to_source = wfp_mapping.read_source_overrides()
                 assert len(iso3_to_source) == 24
-                countries = wfp.get_countries()
+                countries = wfp_mapping.get_countries()
                 assert len(countries) == 291
                 assert countries[100:102] == [
                     {"iso3": "GTM", "name": "Guatemala"},
                     {"iso3": "GUF", "name": "French Guiana"},
                 ]
-                commodity_to_category = wfp.build_commodity_category_mapping()
+                commodity_to_category, _ = wfp_mapping.build_commodity_category_mapping()
                 assert len(commodity_to_category) == 1072
 
                 currencies = setup_currency(now, retriever, wfp_api, input_dir)

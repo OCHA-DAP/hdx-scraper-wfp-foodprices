@@ -1,28 +1,28 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
 #loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
-298,National Average,,,,,
-1895,Managua,,Managua,Managua,12.11,-86.24
-1896,National Average (excl. capital),,,,,
-2641,Managua (oriental),,Administrative unit not available,Administrative unit not available,12.19,-86.29
-2642,Leon,,León,León,12.44,-86.88
-2643,Granada,,Granada,Granada,11.93,-85.95
-4086,Jalapa,,Nueva Segovia,Jalapa,13.92,-86.12
-4087,El Jícaro,,Nueva Segovia,El Jícaro,13.72,-86.13
-4088,Quilalí,,Nueva Segovia,Quilalí,13.57,-86.03
-4089,Wiwilí (Nueva Segovia),,Nueva Segovia,Wiwilí de Nueva Segovia,13.62,-85.83
-4090,El Cuá,,Jinotega,El Cuá,13.37,-85.67
-4091,Santa María de Pantasma,,Jinotega,Jinotega,13.2,-85.83
-4092,San Rafael del Norte,,Jinotega,San Rafael del Norte,13.22,-86.12
-4093,San Sebastián de Yalí,,Jinotega,San Sebastian de Yalí,13.3,-86.18
-4094,La Concordia,,Jinotega,La Concordia,13.2,-86.17
-4095,Telpaneca,,Madriz,Telpaneca,13.53,-86.29
-4096,San Juan del Río Coco,,Madriz,San Juan del Río Coco,13.55,-86.16
-4097,Palacagüina,,Madriz,Palacagüina,13.45,-86.4
-4098,Condega,,Estelí,Condega,13.36,-86.4
-4099,Matagalpa,,Matagalpa,Matagalpa,12.92,-85.92
-4100,San Ramón,,Matagalpa,San Ramón,12.92,-85.84
-4101,San Dionisio,,Matagalpa,San Dionisio,12.76,-85.85
-8213,El Rama,,Atlántico Sur,El Rama,12.16,-84.22
-8214,Bluefields,,Atlántico Sur,Bluefields,12.02,-83.77
-9124,Kukra - Hill,,Atlántico Sur,Kukrahill,12.24,-83.75
-9125,Laguna de Perla,,Atlántico Sur,Laguna de Perlas,12.34,-83.67
+298,National Average,NIC,,,,
+1895,Managua,NIC,Managua,Managua,12.11,-86.24
+1896,National Average (excl. capital),NIC,,,,
+2641,Managua (oriental),NIC,Administrative unit not available,Administrative unit not available,12.19,-86.29
+2642,Leon,NIC,León,León,12.44,-86.88
+2643,Granada,NIC,Granada,Granada,11.93,-85.95
+4086,Jalapa,NIC,Nueva Segovia,Jalapa,13.92,-86.12
+4087,El Jícaro,NIC,Nueva Segovia,El Jícaro,13.72,-86.13
+4088,Quilalí,NIC,Nueva Segovia,Quilalí,13.57,-86.03
+4089,Wiwilí (Nueva Segovia),NIC,Nueva Segovia,Wiwilí de Nueva Segovia,13.62,-85.83
+4090,El Cuá,NIC,Jinotega,El Cuá,13.37,-85.67
+4091,Santa María de Pantasma,NIC,Jinotega,Jinotega,13.2,-85.83
+4092,San Rafael del Norte,NIC,Jinotega,San Rafael del Norte,13.22,-86.12
+4093,San Sebastián de Yalí,NIC,Jinotega,San Sebastian de Yalí,13.3,-86.18
+4094,La Concordia,NIC,Jinotega,La Concordia,13.2,-86.17
+4095,Telpaneca,NIC,Madriz,Telpaneca,13.53,-86.29
+4096,San Juan del Río Coco,NIC,Madriz,San Juan del Río Coco,13.55,-86.16
+4097,Palacagüina,NIC,Madriz,Palacagüina,13.45,-86.4
+4098,Condega,NIC,Estelí,Condega,13.36,-86.4
+4099,Matagalpa,NIC,Matagalpa,Matagalpa,12.92,-85.92
+4100,San Ramón,NIC,Matagalpa,San Ramón,12.92,-85.84
+4101,San Dionisio,NIC,Matagalpa,San Dionisio,12.76,-85.85
+8213,El Rama,NIC,Atlántico Sur,El Rama,12.16,-84.22
+8214,Bluefields,NIC,Atlántico Sur,Bluefields,12.02,-83.77
+9124,Kukra - Hill,NIC,Atlántico Sur,Kukrahill,12.24,-83.75
+9125,Laguna de Perla,NIC,Atlántico Sur,Laguna de Perlas,12.34,-83.67

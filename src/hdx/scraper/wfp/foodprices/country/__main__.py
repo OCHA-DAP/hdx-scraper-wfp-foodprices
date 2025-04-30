@@ -5,6 +5,7 @@ Top level script. Calls other functions that generate datasets that this script 
 """
 
 import logging
+from os import getenv
 from os.path import expanduser, join
 
 from hdx.api.configuration import Configuration
@@ -14,14 +15,15 @@ from hdx.location.wfp_api import WFPAPI
 from hdx.scraper.wfp.foodprices._version import __version__
 from hdx.scraper.wfp.foodprices.country.dataset_generator import DatasetGenerator
 from hdx.scraper.wfp.foodprices.country.wfp_food import WFPFood
-from hdx.scraper.wfp.foodprices.country.wfp_mappings import WFPMappings
 from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.downloader import Download
 from hdx.utilities.easy_logging import setup_logging
+from hdx.utilities.loader import load_and_merge_yaml
 from hdx.utilities.path import (
     progress_storing_folder,
     script_dir_plus_file,
-    wheretostart_tempdir_batch,
+    temp_dir_batch,
 )
 from hdx.utilities.retriever import Retrieve
 
@@ -34,18 +36,17 @@ updated_by_script = "HDX Scraper: WFP Food Prices"
 
 def main(
     save: bool = False,
-    countryiso3s: str = "",
     use_saved: bool = False,
+    countryiso3s: str = "",
     save_wfp_rates: bool = True,
 ) -> None:
     """Generate datasets and create them in HDX
 
     Args:
         save (bool): Save all downloaded data. Defaults to False.
-        countryiso3s (str): Whether to limit to specific countries. Defaults to not limiting ("").
         use_saved (bool): Use saved data. Defaults to False.
+        countryiso3s (str): Whether to limit to specific countries. Defaults to not limiting ("").
         save_wfp_rates (bool): Save WFP FX rates data. Defaults to True.
-        err_to_hdx (bool): Whether to write any errors to HDX metadata. Defaults to False.
 
     Returns:
         None
@@ -63,7 +64,18 @@ def main(
         with Download(
             use_env=False, rate_limit={"calls": 1, "period": 0.1}
         ) as downloader:
-            with wheretostart_tempdir_batch(lookup) as info:
+            delete_if_exists = False
+            wheretostart = getenv("WHERETOSTART")
+            if wheretostart:
+                if wheretostart.upper() == "RESET":
+                    delete_if_exists = True
+                    logger.info("Removing progress file and will start from beginning!")
+            with temp_dir_batch(
+                lookup,
+                delete_if_exists,
+                delete_on_success=False,
+                delete_on_failure=False,
+            ) as info:
                 if countryiso3s:
                     countryiso3s = countryiso3s.split(",")
                 else:
@@ -77,12 +89,12 @@ def main(
                 now = get_now(retriever)
                 wfp_api = WFPAPI(token_downloader, retriever)
                 wfp_api.update_retry_params(attempts=5, wait=3600)
-                wfp = WFPMappings(configuration, wfp_api, retriever)
-                iso3_to_showcase_url = wfp.read_region_mapping()
-                iso3_to_source = wfp.read_source_overrides()
-                countries = wfp.get_countries(countryiso3s)
+                wfp_mapping = WFPMappings(configuration, wfp_api, retriever)
+                iso3_to_showcase_url = wfp_mapping.read_region_mapping()
+                iso3_to_source = wfp_mapping.read_source_overrides()
+                countries = wfp_mapping.get_countries(countryiso3s)
                 logger.info(f"Number of country datasets to upload: {len(countries)}")
-                commodity_to_category = wfp.build_commodity_category_mapping()
+                commodity_to_category, _ = wfp_mapping.build_commodity_category_mapping()
                 if save_wfp_rates:
                     wfp_rates_folder = folder
                 else:
@@ -133,7 +145,7 @@ def main(
                                 main,
                             )
                         )
-                        dataset["notes"] = dataset["notes"] % (snippet, "")
+                        dataset["notes"] = dataset["notes"] % snippet
                         dataset.generate_quickcharts(-1, indicators=qc_indicators)
                         dataset.create_in_hdx(
                             remove_additional_resources=True,
@@ -150,11 +162,16 @@ def main(
 
 
 if __name__ == "__main__":
+    base_configuration = script_dir_plus_file(
+            join("config", "project_configuration.yaml"), get_now
+        )
+    country_configuration = script_dir_plus_file(
+            join("config", "project_configuration.yaml"), main
+        )
+    project_configuration = load_and_merge_yaml((base_configuration, country_configuration))
     facade(
         main,
         user_agent_config_yaml=join(expanduser("~"), ".useragents.yaml"),
         user_agent_lookup=lookup,
-        project_config_yaml=script_dir_plus_file(
-            join("config", "project_configuration.yaml"), main
-        ),
+        project_config_dict=project_configuration,
     )

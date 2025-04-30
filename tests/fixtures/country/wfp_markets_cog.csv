@@ -1,34 +1,34 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
 #loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
-701,Moungali,,Brazzaville,Brazzaville,-4.26,15.28
-702,Ouenzé,,Brazzaville,Brazzaville,-4.25,15.28
-703,Mikalou,,Brazzaville,Brazzaville,-4.26,15.28
-704,Bakandi,,Likouala,Impfondo,1.64,18.07
-705,Monzombo,,Likouala,Betou,3.43,18.6
-706,Total,,Brazzaville,Brazzaville,-4.26,15.28
-707,Grand marché/Fond Ntié-Ntié/Nkouikou,,Point-Noire,Pointe-Noire,-4.79,11.85
-1820,Sibiti,,Lekoumou,Sibiti,-3.68,13.35
-1821,Nkayi,,Bouenza,Nkayi,-4.18,13.29
-1822,Owando,,Cuvette,Owando,-0.48,15.89
-2095,Kinkala,,Pool,Kinkala,-4.36,14.76
-3738,Mossaka Centre,,Cuvette,Mossaka,-1.23,16.8
-3739,Loukolela Centre,,Cuvette,Loukolela,-1.04,17.11
-3740,Liranga Centre,,Likouala,Liranga,-0.66,17.61
-3741,Impfondo Centre,,Likouala,Impfondo,1.61,18.06
-3742,Dongou Centre,,Likouala,Dongou,2.04,18.05
-3743,Betou Centre,,Likouala,Betou,3.06,18.52
-4158,Gamboma,,Plateaux,Gamboma,-1.87,15.87
-4159,Mindouli,,Pool,Mindouli,-4.27,14.36
-7775,Brazzaville,,Brazzaville,Brazzaville,-4.26,15.26
-8729,Mfouati,,Bouenza,Mfouati,-4.4,13.81
-8730,Mouyondzi,,Bouenza,Mouyondzi,-3.99,13.92
-8731,Madingou,,Bouenza,Madingou,-4.16,13.55
-8732,Loudima,,Bouenza,Loudima,-4.12,13.05
-8733,Ngabé,,Pool,Ngabe,-3.21,16.17
-8735,Thanry,,Likouala,Dongou,2.64,17.18
-8736,Moualé,,Likouala,Enyelle,3.37,17.18
-8737,Enyellé,,Likouala,Enyelle,2.81,18.02
-8738,Dongou,,Likouala,Enyelle,2.69,17.73
-8739,Epena,,Likouala,Epena,1.35,17.45
-8742,Mokabi,,Likouala,Enyelle,3.42,16.8
-8743,Loudima Gare,,Bouenza,Loudima,-4.06,13.05
+701,Moungali,COG,Brazzaville,Brazzaville,-4.26,15.28
+702,Ouenzé,COG,Brazzaville,Brazzaville,-4.25,15.28
+703,Mikalou,COG,Brazzaville,Brazzaville,-4.26,15.28
+704,Bakandi,COG,Likouala,Impfondo,1.64,18.07
+705,Monzombo,COG,Likouala,Betou,3.43,18.6
+706,Total,COG,Brazzaville,Brazzaville,-4.26,15.28
+707,Grand marché/Fond Ntié-Ntié/Nkouikou,COG,Point-Noire,Pointe-Noire,-4.79,11.85
+1820,Sibiti,COG,Lekoumou,Sibiti,-3.68,13.35
+1821,Nkayi,COG,Bouenza,Nkayi,-4.18,13.29
+1822,Owando,COG,Cuvette,Owando,-0.48,15.89
+2095,Kinkala,COG,Pool,Kinkala,-4.36,14.76
+3738,Mossaka Centre,COG,Cuvette,Mossaka,-1.23,16.8
+3739,Loukolela Centre,COG,Cuvette,Loukolela,-1.04,17.11
+3740,Liranga Centre,COG,Likouala,Liranga,-0.66,17.61
+3741,Impfondo Centre,COG,Likouala,Impfondo,1.61,18.06
+3742,Dongou Centre,COG,Likouala,Dongou,2.04,18.05
+3743,Betou Centre,COG,Likouala,Betou,3.06,18.52
+4158,Gamboma,COG,Plateaux,Gamboma,-1.87,15.87
+4159,Mindouli,COG,Pool,Mindouli,-4.27,14.36
+7775,Brazzaville,COG,Brazzaville,Brazzaville,-4.26,15.26
+8729,Mfouati,COG,Bouenza,Mfouati,-4.4,13.81
+8730,Mouyondzi,COG,Bouenza,Mouyondzi,-3.99,13.92
+8731,Madingou,COG,Bouenza,Madingou,-4.16,13.55
+8732,Loudima,COG,Bouenza,Loudima,-4.12,13.05
+8733,Ngabé,COG,Pool,Ngabe,-3.21,16.17
+8735,Thanry,COG,Likouala,Dongou,2.64,17.18
+8736,Moualé,COG,Likouala,Enyelle,3.37,17.18
+8737,Enyellé,COG,Likouala,Enyelle,2.81,18.02
+8738,Dongou,COG,Likouala,Enyelle,2.69,17.73
+8739,Epena,COG,Likouala,Epena,1.35,17.45
+8742,Mokabi,COG,Likouala,Enyelle,3.42,16.8
+8743,Loudima Gare,COG,Bouenza,Loudima,-4.06,13.05
