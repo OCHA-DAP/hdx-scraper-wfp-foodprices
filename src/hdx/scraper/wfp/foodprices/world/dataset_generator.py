@@ -28,9 +28,7 @@ class DatasetGenerator:
         self._folder = folder
         self._currencies = currencies
 
-    def get_dataset_and_showcase(
-        self
-    ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
+    def get_dataset_and_showcase(self) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         location = "world"
         location_name = "Global"
         slugified_name = self.slugified_global_name
@@ -108,7 +106,9 @@ class DatasetGenerator:
             "format": "csv",
         }
         commodities_headers = self._configuration["commodities_headers"]
-        commodities_hxltags = {header: hxltags[header] for header in commodities_headers}
+        commodities_hxltags = {
+            header: hxltags[header] for header in commodities_headers
+        }
         dataset.generate_resource_from_iterable(
             commodities_headers,
             sorted(commodities, key=lambda x: x["commodity_id"]),

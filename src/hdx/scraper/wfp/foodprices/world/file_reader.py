@@ -1,6 +1,6 @@
 import logging
 from glob import iglob
-from typing import Dict, Optional, List
+from typing import Dict, List, Optional
 
 from hdx.utilities.dateparse import default_date, default_enddate, parse_date
 from hdx.utilities.dictandlist import dict_of_lists_add
@@ -10,8 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 class FileReader:
-    def __init__(self,
-downloader: Download, folder: str):
+    def __init__(self, downloader: Download, folder: str):
         self._downloader = downloader
         self._folder = folder
 

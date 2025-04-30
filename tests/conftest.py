@@ -17,9 +17,11 @@ setup_logging()
 def fixtures_dir():
     return join("tests", "fixtures")
 
+
 @pytest.fixture(scope="session")
 def input_dir(fixtures_dir):
     return join(fixtures_dir, "input")
+
 
 @pytest.fixture(scope="session")
 def country_dir(fixtures_dir):

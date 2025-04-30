@@ -56,7 +56,9 @@ class TestWFP:
                     {"iso3": "GTM", "name": "Guatemala"},
                     {"iso3": "GUF", "name": "French Guiana"},
                 ]
-                commodity_to_category, _ = wfp_mapping.build_commodity_category_mapping()
+                commodity_to_category, _ = (
+                    wfp_mapping.build_commodity_category_mapping()
+                )
                 assert len(commodity_to_category) == 1072
 
                 currencies = setup_currency(now, retriever, wfp_api, input_dir)

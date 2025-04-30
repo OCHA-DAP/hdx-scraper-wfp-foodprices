@@ -62,10 +62,6 @@ frictionless==5.18.1
     # via
     #   -c requirements.txt
     #   hdx-python-utilities
-greenlet==3.2.1
-    # via
-    #   -c requirements.txt
-    #   sqlalchemy
 hdx-python-api==6.3.8
     # via
     #   -c requirements.txt
@@ -75,17 +71,13 @@ hdx-python-country==3.9.2
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
-hdx-python-database==1.3.6
-    # via
-    #   -c requirements.txt
-    #   hdx-scraper-wfp-foodprices (pyproject.toml)
 hdx-python-utilities==3.8.5
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
     #   hdx-python-country
-humanize==4.12.2
+humanize==4.12.3
     # via
     #   -c requirements.txt
     #   frictionless
@@ -187,11 +179,11 @@ pockets==0.9.1
     # via
     #   -c requirements.txt
     #   sphinxcontrib-napoleon
-pydantic==2.11.3
+pydantic==2.11.4
     # via
     #   -c requirements.txt
     #   frictionless
-pydantic-core==2.33.1
+pydantic-core==2.33.2
     # via
     #   -c requirements.txt
     #   pydantic
@@ -278,7 +270,7 @@ ruamel-yaml-clib==0.2.12
     # via
     #   -c requirements.txt
     #   ruamel-yaml
-setuptools==80.0.0
+setuptools==80.1.0
     # via
     #   -c requirements.txt
     #   ckanapi
@@ -313,10 +305,6 @@ sphinxcontrib-napoleon==0.7
     # via
     #   -c requirements.txt
     #   defopt
-sqlalchemy==2.0.40
-    # via
-    #   -c requirements.txt
-    #   hdx-python-database
 structlog==25.3.0
     # via
     #   -c requirements.txt
@@ -352,7 +340,6 @@ typing-extensions==4.13.2
     #   pydantic
     #   pydantic-core
     #   referencing
-    #   sqlalchemy
     #   typeguard
     #   typer
     #   typing-inspection

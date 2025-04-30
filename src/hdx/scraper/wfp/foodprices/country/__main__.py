@@ -19,7 +19,7 @@ from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.downloader import Download
 from hdx.utilities.easy_logging import setup_logging
-from hdx.utilities.loader import load_and_merge_yaml
+from hdx.utilities.loader import load_yaml
 from hdx.utilities.path import (
     progress_storing_folder,
     script_dir_plus_file,
@@ -86,6 +86,10 @@ def main(
                     downloader, folder, "saved_data", folder, save, use_saved
                 )
                 configuration = Configuration.read()
+                base_configuration = script_dir_plus_file(
+                    join("config", "project_configuration.yaml"), get_now
+                )
+                configuration.update(load_yaml(base_configuration))
                 now = get_now(retriever)
                 wfp_api = WFPAPI(token_downloader, retriever)
                 wfp_api.update_retry_params(attempts=5, wait=3600)
@@ -94,7 +98,9 @@ def main(
                 iso3_to_source = wfp_mapping.read_source_overrides()
                 countries = wfp_mapping.get_countries(countryiso3s)
                 logger.info(f"Number of country datasets to upload: {len(countries)}")
-                commodity_to_category, _ = wfp_mapping.build_commodity_category_mapping()
+                commodity_to_category, _ = (
+                    wfp_mapping.build_commodity_category_mapping()
+                )
                 if save_wfp_rates:
                     wfp_rates_folder = folder
                 else:
@@ -142,7 +148,7 @@ def main(
                         dataset.update_from_yaml(
                             script_dir_plus_file(
                                 join("config", "hdx_dataset_static.yaml"),
-                                main,
+                                get_now,
                             )
                         )
                         dataset["notes"] = dataset["notes"] % snippet
@@ -162,16 +168,11 @@ def main(
 
 
 if __name__ == "__main__":
-    base_configuration = script_dir_plus_file(
-            join("config", "project_configuration.yaml"), get_now
-        )
-    country_configuration = script_dir_plus_file(
-            join("config", "project_configuration.yaml"), main
-        )
-    project_configuration = load_and_merge_yaml((base_configuration, country_configuration))
     facade(
         main,
         user_agent_config_yaml=join(expanduser("~"), ".useragents.yaml"),
         user_agent_lookup=lookup,
-        project_config_dict=project_configuration,
+        project_config_yaml=script_dir_plus_file(
+            join("config", "project_configuration.yaml"), main
+        ),
     )

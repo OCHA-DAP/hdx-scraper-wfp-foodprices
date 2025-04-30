@@ -179,11 +179,11 @@ class HAPIOutput:
         return currencies
 
     def process_commodities(
-        self, commodities_info: Dict, dataset_id: str, resource_id: str
+        self, commodities: List[Dict], dataset_id: str, resource_id: str
     ) -> List[Dict]:
         logger.info("Processing HAPI commodities output")
         hapi_rows = []
-        for row in commodities_info["rows"]:
+        for row in commodities:
             hapi_row = {
                 "code": row["commodity_id"],
                 "category": row["category"],
@@ -192,18 +192,17 @@ class HAPIOutput:
                 "resource_hdx_id": resource_id,
             }
             hapi_rows.append(hapi_row)
-        del commodities_info["rows"]
         hapi_rows = sorted(
             hapi_rows, key=lambda row: (row["category"], row["name"], row["code"])
         )
         return hapi_rows
 
     def process_markets(
-        self, markets_info: Dict, dataset_id: str, resource_id: str
+        self, markets: List[Dict], dataset_id: str, resource_id: str
     ) -> List[Dict]:
         logger.info("Processing HAPI markets output")
         hapi_rows = []
-        for row in markets_info["rows"]:
+        for row in markets:
             hapi_base_row = {
                 "admin1_code": "",
                 "admin1_name": "",
@@ -220,7 +219,6 @@ class HAPIOutput:
             hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
             hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
             hapi_rows.append(hapi_row)
-        del markets_info["rows"]
         hapi_rows = sorted(
             hapi_rows,
             key=lambda row: (
@@ -240,40 +238,42 @@ class HAPIOutput:
         prices_info: Dict,
         dataset_id: str,
         resource_id: str,
-    ) -> List[Dict]:
+    ) -> Dict:
         logger.info("Processing HAPI prices output")
-        hapi_rows = []
-        for row in prices_info["rows"]:
-            market_id = row["market_id"]
-            hapi_row = deepcopy(self._base_rows[int(market_id)])
-            hapi_row["dataset_hdx_id"] = dataset_id
-            hapi_row["resource_hdx_id"] = resource_id
-            hapi_row["commodity_category"] = row["category"]
-            hapi_row["commodity_name"] = row["commodity"]
-            hapi_row["commodity_code"] = row["commodity_id"]
-            hapi_row["unit"] = row["unit"]
-            hapi_row["price_flag"] = row["priceflag"]
-            hapi_row["price_type"] = row["pricetype"]
-            hapi_row["currency_code"] = row["currency"]
-            hapi_row["price"] = row["price"]
-            hapi_row["usd_price"] = row["usdprice"]
-            reference_period_start = parse_date(row["date"], date_format="%Y-%m-%d")
-            hapi_row["reference_period_start"] = iso_string_from_datetime(
-                reference_period_start
-            )
-            reference_period_end = reference_period_start + relativedelta(
-                months=1,
-                days=-1,
-                hours=23,
-                minutes=59,
-                seconds=59,
-                microseconds=999999,
-            )  # food price reference period is one month
-            hapi_row["reference_period_end"] = iso_string_from_datetime(
-                reference_period_end
-            )
-            hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
-            hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
-            hapi_rows.append(hapi_row)
-        del prices_info["rows"]
-        return hapi_rows
+        hapi_rows_by_year = {}
+        rows_by_year = prices_info["rows_by_year"]
+        for year in sorted(rows_by_year, reverse=True):
+            hapi_rows = []
+            hapi_rows_by_year[year] = hapi_rows
+            for row in rows_by_year[year]:
+                hapi_row = deepcopy(self._base_rows[row["market_id"]])
+                hapi_row["dataset_hdx_id"] = dataset_id
+                hapi_row["resource_hdx_id"] = resource_id
+                hapi_row["commodity_category"] = row["category"]
+                hapi_row["commodity_name"] = row["commodity"]
+                hapi_row["commodity_code"] = row["commodity_id"]
+                hapi_row["unit"] = row["unit"]
+                hapi_row["price_flag"] = row["priceflag"]
+                hapi_row["price_type"] = row["pricetype"]
+                hapi_row["currency_code"] = row["currency"]
+                hapi_row["price"] = row["price"]
+                hapi_row["usd_price"] = row["usdprice"]
+                reference_period_start = parse_date(row["date"], date_format="%Y-%m-%d")
+                hapi_row["reference_period_start"] = iso_string_from_datetime(
+                    reference_period_start
+                )
+                reference_period_end = reference_period_start + relativedelta(
+                    months=1,
+                    days=-1,
+                    hours=23,
+                    minutes=59,
+                    seconds=59,
+                    microseconds=999999,
+                )  # food price reference period is one month
+                hapi_row["reference_period_end"] = iso_string_from_datetime(
+                    reference_period_end
+                )
+                hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
+                hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
+                hapi_rows.append(hapi_row)
+        return hapi_rows_by_year

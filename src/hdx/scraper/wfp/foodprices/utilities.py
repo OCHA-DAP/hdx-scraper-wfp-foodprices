@@ -31,11 +31,13 @@ def get_now(retriever: Retrieve):
     return fixed_now
 
 
-def get_currencies(wfp_api: WFPAPI,
+def get_currencies(
+    wfp_api: WFPAPI,
 ) -> List[Dict]:
     wfp_fx = WFPExchangeRates(wfp_api)
     currencies = wfp_fx.get_currencies_info()
     return sorted(currencies, key=lambda c: c["code"])
+
 
 def setup_currency(
     now: datetime,

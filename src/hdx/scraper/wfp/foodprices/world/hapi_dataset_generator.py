@@ -44,12 +44,12 @@ class HAPIDatasetGenerator:
 
     def generate_prices_dataset(
         self,
-        hapi_currencies: List[Dict],
-        hapi_commodities: List[Dict],
+        hapi_prices_by_year: Dict,
         hapi_markets: List[Dict],
-        hapi_prices: List[Dict],
+        hapi_commodities: List[Dict],
+        hapi_currencies: List[Dict],
     ) -> Optional[Dataset]:
-        if len(hapi_prices) == 0:
+        if not hapi_prices_by_year:
             logger.warning("Food prices has no data!")
             return None
 
@@ -57,10 +57,34 @@ class HAPIDatasetGenerator:
         dataset.add_other_location("World")
         dataset.set_time_period(self._start_date, self._end_date)
 
-        for i, rows in enumerate(
-            (hapi_prices, hapi_markets, hapi_commodities, hapi_currencies)
-        ):
-            resource_config = resources_config[i]
+        resource_config = resources_config[0]
+        for year in sorted(hapi_prices_by_year, reverse=True):
+            rows = hapi_prices_by_year[year]
+            if len(rows) == 0:
+                continue
+            resource_name = resource_config["name"]
+            description = resource_config["description"]
+            resourcedata = {
+                "name": f"{resource_name} {year}",
+                "description": f"{year} {description}",
+            }
+            hxltags = resource_config["hxltags"]
+            filename = resource_config["filename"]
+
+            success, _ = dataset.generate_resource_from_iterable(
+                list(hxltags.keys()),
+                rows,
+                hxltags,
+                self._folder,
+                f"{filename}_{year}.csv",
+                resourcedata,
+            )
+            if success is False:
+                logger.warning(f"{resource_name} has no data!")
+                return None
+
+        for i, rows in enumerate((hapi_markets, hapi_commodities, hapi_currencies)):
+            resource_config = resources_config[i + 1]
             resource_name = resource_config["name"]
             resourcedata = {
                 "name": resource_name,
