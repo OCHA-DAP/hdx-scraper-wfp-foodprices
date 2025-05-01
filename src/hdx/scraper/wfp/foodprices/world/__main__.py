@@ -5,6 +5,7 @@ Top level script. Calls other functions that generate datasets that this script 
 """
 
 import logging
+import sys
 from os.path import expanduser, join
 
 from hdx.api.configuration import Configuration
@@ -101,11 +102,11 @@ def main(
                     global_prices_info = file_reader.get_global_prices()
                     if not global_prices_info:
                         logger.error("No prices data found!")
-                        return
+                        sys.exit(1)
                     markets = file_reader.get_global_markets()
                     if not markets:
                         logger.error("No markets data found!")
-                        return
+                        sys.exit(1)
                     dataset, showcase = (
                         dataset_generator.generate_global_dataset_and_showcase(
                             global_prices_info, markets, commodities
