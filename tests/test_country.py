@@ -4,6 +4,7 @@ Unit tests for wfpfood scraper.
 
 """
 
+import gc
 import logging
 from os.path import join
 
@@ -764,3 +765,4 @@ class TestWFP:
                     actual_file = join(tempdir, csv_filename)
                     logger.info(f"Comparing {actual_file} with {expected_file}")
                     assert_files_same(expected_file, actual_file)
+                    gc.collect()

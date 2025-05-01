@@ -28,9 +28,10 @@ def country_dir(fixtures_dir):
     return join(fixtures_dir, "country")
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="class")
 def configuration():
     UserAgent.set_global("test")
+    Configuration.delete()
     Configuration._create(
         hdx_read_only=True,
         hdx_site="prod",
