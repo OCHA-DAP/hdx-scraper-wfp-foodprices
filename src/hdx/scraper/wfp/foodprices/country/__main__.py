@@ -120,7 +120,7 @@ def main(
                         countryiso3
                     )
                     if not dataset:
-                        return
+                        continue
                     wfp_food = WFPFood(
                         countryiso3,
                         configuration,
@@ -130,7 +130,7 @@ def main(
                     )
                     success = wfp_food.get_price_markets(wfp_api)
                     if not success:
-                        return
+                        continue
                     prices_info, markets, market_to_commodities, sources = (
                         wfp_food.generate_rows()
                     )
@@ -144,27 +144,29 @@ def main(
                     )
 
                     snippet = f"Food Prices data for {country['name']}"
-                    if dataset:
-                        dataset.update_from_yaml(
-                            script_dir_plus_file(
-                                join("config", "hdx_dataset_static.yaml"),
-                                get_now,
-                            )
+                    if not dataset:
+                        continue
+
+                    dataset.update_from_yaml(
+                        script_dir_plus_file(
+                            join("config", "hdx_dataset_static.yaml"),
+                            get_now,
                         )
-                        dataset["notes"] = dataset["notes"] % snippet
-                        dataset.generate_quickcharts(-1, indicators=qc_indicators)
-                        dataset.create_in_hdx(
-                            remove_additional_resources=True,
-                            match_resource_order=True,
-                            hxl_update=False,
-                            updated_by_script=updated_by_script,
-                            batch=batch,
-                        )
-                        if showcase:
-                            showcase.create_in_hdx()
-                            showcase.add_dataset(dataset)
-                        else:
-                            logger.info(f"{country['name']} does not have a showcase!")
+                    )
+                    dataset["notes"] = dataset["notes"] % snippet
+                    dataset.generate_quickcharts(-1, indicators=qc_indicators)
+                    dataset.create_in_hdx(
+                        remove_additional_resources=True,
+                        match_resource_order=True,
+                        hxl_update=False,
+                        updated_by_script=updated_by_script,
+                        batch=batch,
+                    )
+                    if showcase:
+                        showcase.create_in_hdx()
+                        showcase.add_dataset(dataset)
+                    else:
+                        logger.info(f"{country['name']} does not have a showcase!")
 
 
 if __name__ == "__main__":
