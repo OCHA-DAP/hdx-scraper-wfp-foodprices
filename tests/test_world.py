@@ -351,8 +351,11 @@ class TestWFP:
                         "efgh",
                     )
                     hapi_markets = hapi_output.process_markets(markets, "1234", "5678")
+                    year_to_prices_resource_id = {
+                        year: "9101112" for year in range(2000, 2025)
+                    }
                     hapi_prices_by_year = hapi_output.process_prices(
-                        global_prices_info, "1234", "9101112"
+                        global_prices_info, "1234", year_to_prices_resource_id
                     )
                     hapi_dataset_generator = HAPIDatasetGenerator(
                         configuration,
@@ -715,7 +718,7 @@ class TestWFP:
                         logger.info(f"Comparing {actual_file} with {expected_file}")
                         assert_files_same(expected_file, actual_file)
 
-                    for year in range(2000, 2021):
+                    for year in range(2000, 2025):
                         for filename in (
                             f"wfp_food_prices_global_{year}",
                             f"hdx_hapi_food_price_global_{year}",
