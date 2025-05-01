@@ -1,0 +1,130 @@
+market_id,market,countryiso3,admin1,admin2,latitude,longitude
+#loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
+1112,Sheikh Sa'ad,SYR,Damascus,Damascus,33.5,36.3
+1113,Zablatani,SYR,Damascus,Damascus,33.5,36.3
+1114,Barzeh,SYR,Damascus,Damascus,33.57,36.32
+1115,Qudsiya,SYR,Rural Damascus,Rural Damascus,33.55,36.22
+1116,Hajar Aswad,SYR,Rural Damascus,Darayya,33.46,36.3
+1117,Duma,SYR,Rural Damascus,Duma,33.58,36.4
+1118,Dar'a,SYR,Dar'a,Dar'a,32.62,36.11
+1119,As-Sanamayn,SYR,Dar'a,As-Sanamayn,33.07,36.18
+1120,Harra,SYR,Dar'a,As-Sanamayn,33.05,36
+1121,Deir-ez-Zor,SYR,Deir-ez-Zor,Deir-ez-Zor,35.34,40.15
+1123,Bsaira,SYR,Deir-ez-Zor,Deir-ez-Zor,35.16,40.43
+1124,Al-Hasakeh,SYR,Al-Hasakeh,Al-Hasakeh,36.48,40.76
+1125,Quamishli,SYR,Al-Hasakeh,Quamishli,37.05,41.24
+1126,Ras Al Ain,SYR,Al-Hasakeh,Ras Al Ain,36.84,40.07
+1127,Ar-Raqqa,SYR,Ar-Raqqa,Ar-Raqqa,35.95,39.02
+1128,Karama,SYR,Homs,Homs,34.72,36.7
+1129,Tell Abiad,SYR,Ar-Raqqa,Tell Abiad,36.7,38.96
+1130,Tartous,SYR,Tartous,Tartous,34.89,35.89
+1131,Banias,SYR,Tartous,Banyas,35.18,35.95
+1132,Safita,SYR,Tartous,Safita,34.82,36.12
+1133,Lattakia,SYR,Lattakia,Lattakia,35.52,35.78
+1134,Jablah,SYR,Lattakia,Jablah,35.36,35.93
+1135,Hiffeh,SYR,Lattakia,Al-Haffa,35.58,36.03
+1136,Hama,SYR,Hama,Hama,35.13,36.75
+1137,Masyaf,SYR,Hama,Masyaf,35.06,36.34
+1138,Muhradah,SYR,Hama,Muhradah,35.25,36.58
+1139,Homs,SYR,Homs,Homs,34.73,36.72
+1141,Qasir,SYR,Homs,Al-Qusayr,34.51,36.58
+1142,Aleppo,SYR,Aleppo,Jebel Saman,36.2,37.16
+1143,Menbij,SYR,Aleppo,Menbij,36.53,37.96
+1144,Al Bab,SYR,Aleppo,Al Bab,36.37,37.52
+1354,Jaramana,SYR,Rural Damascus,Rural Damascus,33.48,36.35
+1545,Moghambo,SYR,Aleppo,Jebel Saman,36.22,37.13
+1546,Al-Cha'ar,SYR,Aleppo,Jebel Saman,36.21,37.18
+1547,Idleb,SYR,Idleb,Idleb,35.93,36.63
+1548,Al Mayadin,SYR,Deir-ez-Zor,Al Mayadin,35.02,40.45
+1549,At-Tall,SYR,Rural Damascus,At Tall,33.6,36.3
+1550,Bennsh,SYR,Idleb,Idleb,35.96,36.71
+1551,Ekrema,SYR,Homs,Homs,34.71,36.72
+1553,Rural Safita,SYR,Tartous,Safita,34.88,36.26
+1554,Khan Arnaba,SYR,Quneitra,Quneitra,33.18,35.89
+1555,Mzeireb,SYR,Dar'a,Dar'a,32.71,36.03
+1556,Shahba,SYR,As-Sweida,Shahba,32.85,36.64
+1557,Rafid,SYR,Quneitra,Quneitra,32.96,35.9
+1558,Shrebishat,SYR,Damascus,Damascus,33.51,36.3
+1559,As-Sweida,SYR,As-Sweida,As-Sweida,32.7,36.57
+1563,Damascus,SYR,Damascus,Damascus,33.5,36.3
+1897,Qaryatein,SYR,Homs,Homs,34.23,37.24
+1924,Jandar,SYR,Homs,Homs,34.49,36.78
+1925,Nubul,SYR,Aleppo,A'zaz,36.36,37.01
+1926,A'zaz,SYR,Aleppo,A'zaz,36.59,37.05
+1927,Ar-Rastan,SYR,Homs,Ar-Rastan,34.92,36.73
+1928,Talbiseh,SYR,Homs,Ar-Rastan,34.84,36.73
+1929,Inshaat,SYR,Homs,Homs,34.72,36.7
+1930,Al Waer,SYR,Homs,Homs,34.74,36.68
+1931,Hula,SYR,Homs,Homs,34.9,36.5
+1948,As-Salamiyeh,SYR,Hama,As-Salamiyeh,35.02,37.07
+1949,Afrin,SYR,Aleppo,Afrin,36.45,36.82
+2237,Hrak,SYR,Dar'a,Izra',32.75,36.26
+2238,Eastern Ghouta,SYR,Rural Damascus,Duma,33.57,36.41
+2242,Dar'a (XB),SYR,Dar'a,Dar'a,32.61,36.12
+2243,Jizeh,SYR,Dar'a,Dar'a,32.57,36.32
+2244,Al Fiq,SYR,Quneitra,Al Fiq,32.88,35.88
+2245,As-Sweida (XB),SYR,As-Sweida,As-Sweida,32.58,36.44
+2522,Al Malaab,SYR,Homs,Homs,34.73,36.72
+2523,Izr'a,SYR,Dar'a,Izra',32.85,36.27
+2524,Sayda,SYR,Quneitra,Al Fiq,32.88,35.88
+2675,As-Safira,SYR,Aleppo,As-Safira,36.08,37.37
+2676,Atareb,SYR,Aleppo,Jebel Saman,36.14,36.82
+2677,Der Hafir,SYR,Aleppo,Al Bab,36.16,37.7
+2678,Al Tabqah,SYR,Ar-Raqqa,Ath-Thawrah,35.84,38.54
+2679,Al Balad,SYR,Dar'a,Dar'a,32.61,36.1
+2680,Al Midan,SYR,Damascus,Damascus,33.49,36.3
+2681,Kisweh,SYR,Rural Damascus,Rural Damascus,33.36,36.25
+2682,Al Makhrim,SYR,Homs,Al Makhrim,34.85,37
+2683,As-Suqaylabiyah,SYR,Hama,As-Suqaylabiyah,35.36,36.4
+2684,Ein Terma,SYR,Rural Damascus,Rural Damascus,33.51,36.34
+2685,Hawash,SYR,Homs,Tall Kalakh,34.76,36.32
+2686,Nawa,SYR,Dar'a,Izra',32.89,36.04
+2687,Saqba,SYR,Rural Damascus,Rural Damascus,33.52,36.38
+2689,Ein Issa,SYR,Ar-Raqqa,Tell Abiad,36.39,38.86
+2690,Al Kom,SYR,Quneitra,Quneitra,33.2,35.95
+2691,Al Hamdaneya,SYR,Aleppo,Jebel Saman,36.17,37.11
+2706,Harem,SYR,Idleb,Harim,36.21,36.52
+2784,Maskanah,SYR,Aleppo,Menbij,35.97,38.03
+2785,Bu Kamal,SYR,Deir-ez-Zor,Abu Kamal,34.46,40.91
+4612,Jisr al shughur,SYR,Idleb,Jisr-Ash-Shugur,35.82,36.31
+5079,Busra al Sham,SYR,Dar'a,Dar'a,32.52,36.47
+5251,Salkhad,SYR,As-Sweida,Salkhad,32.49,36.71
+5252,Qarraya,SYR,As-Sweida,Salkhad,32.54,36.6
+5253,Maadan,SYR,Ar-Raqqa,Ar-Raqqa,35.76,39.59
+5254,Sabkha,SYR,Ar-Raqqa,Ar-Raqqa,35.81,39.27
+5255,Maabada,SYR,Al-Hasakeh,Al-Malikeyyeh,37.02,41.96
+5256,Tell Tamer,SYR,Al-Hasakeh,Al-Hasakeh,36.65,40.37
+5257,Sbeikhan,SYR,Deir-ez-Zor,Al Mayadin,34.86,40.6
+5258,Shmetiyeh,SYR,Deir-ez-Zor,Deir-ez-Zor,35.47,39.94
+5259,Tebni,SYR,Deir-ez-Zor,Deir-ez-Zor,35.61,39.82
+5278,Quriyeh,SYR,Deir-ez-Zor,Al Mayadin,34.96,40.52
+5641,Atmeh ,SYR,Idleb,Harim,36.31,36.69
+5642,Qah,SYR,Idleb,Harim,36.3,36.73
+5643,Alkarama,SYR,Idleb,Harim,36.29,36.7
+5644,Sarmada,SYR,Idleb,Harim,36.19,36.73
+5645,Dana,SYR,Idleb,Harim,36.22,36.78
+5646,Deir Hassan,SYR,Idleb,Harim,36.23,36.76
+5928,Senjar,SYR,Idleb,Al Ma'ra,35.59,37
+5929,Qurdaha,SYR,Lattakia,Al-Qardaha,35.46,36.06
+5930,Sweiseh,SYR,Quneitra,Quneitra,33,35.93
+5931,Jdaideh,SYR,Rural Damascus,Qatana,33.44,36.16
+5932,Sheikh Badr,SYR,Tartous,Sheikh Badr,34.99,36.08
+6701,Debsi Afnan,SYR,Ar-Raqqa,Ath-Thawrah,35.81,38.27
+6750,Ashara,SYR,Deir-ez-Zor,Al Mayadin,34.92,40.56
+6833,Hazano,SYR,Idleb,Idleb,36.09,36.72
+6834,Kelly,SYR,Idleb,Idleb,36.11,36.7
+6835,Batbu,SYR,Aleppo,Jebel Saman,36.14,36.74
+8199,Bazagha,SYR,Aleppo,Al Bab,36.38,37.56
+8200,Qubasin,SYR,Aleppo,Al Bab,36.42,37.56
+8201,Aghtrin,SYR,Aleppo,A'zaz,36.51,37.33
+8202,Sejou,SYR,Aleppo,A'zaz,36.62,37.08
+8203,Suran,SYR,Aleppo,A'zaz,36.56,37.19
+8204,Jarablus,SYR,Aleppo,Jarablus,36.82,38.01
+8205,Abzimo,SYR,Aleppo,Jebel Saman,36.17,36.87
+8206,Darret Azza,SYR,Aleppo,Jebel Saman,36.28,36.85
+8207,Der Saman,SYR,Aleppo,Jebel Saman,36.33,36.84
+8208,Jeineh,SYR,Aleppo,Jebel Saman,36.12,36.8
+8209,Kafr Karmin,SYR,Aleppo,Jebel Saman,36.16,36.79
+8210,Armanaz,SYR,Idleb,Harim,36.08,36.5
+8211,Ma'arrat Tamasrin,SYR,Idleb,Idleb,36.01,36.67
+8237,Salqin,SYR,Idleb,Harim,36.14,36.45

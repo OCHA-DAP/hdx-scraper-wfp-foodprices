@@ -1,0 +1,13 @@
+# Collector specific configuration
+countries_url: "https://api.wfp.org/gefs/1.1.0/geoless/collections/geographicalnames/items/countries?limit=1000"
+currency_mappings:
+  NIS: ILS
+# Google sheet: https://docs.google.com/spreadsheets/d/1nXveHlfr4i4Fagxg9EOEYMpcTgK9CtWgKzQYiftIS6I/edit#gid=0
+region_mapping_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRQUNinOiGZXU4w2M6Yd6Av0-Osead_c_prijShrcqGF0yYSoj9Nihxi2amIO-SAlE4XoQ9D3Bskq7I/pub?gid=0&single=true&output=csv"
+# Google sheet: https://docs.google.com/spreadsheets/d/1YBT-ExQ3699ItBZCAj6nPFMPt5kh_8r-4xaXsm8azVU/edit#gid=926600343
+source_overrides_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIS7lB8DW70xF_PNoAsJZRLICs25abANZ2gvIX6ukwOhMz5kq3K1MutlL074HM3BfSsBptIwc4J4Cz/pub?gid=926600343&single=true&output=csv"
+
+qc_hxltags:
+  date: "#date"
+  code: "#meta+code"
+  usdprice: "#value+usd"

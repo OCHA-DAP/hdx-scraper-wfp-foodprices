@@ -1,4 +1,14 @@
-import runpy
+import subprocess
+from os import environ, getcwd
+from os.path import join
 
-# Execute a module by its full module name
-runpy.run_module("hdx.scraper.wfp.foodprices", run_name="__main__")
+pythonpath = environ.get("PYTHONPATH")
+newpath = join(getcwd(), "src")
+environ["PYTHONPATH"] = f"{pythonpath}:{newpath}"
+
+subprocess.run(
+    "python3 -m hdx.scraper.wfp.foodprices.country", shell=True, check=True, env=environ
+)
+subprocess.run(
+    "python3 -m hdx.scraper.wfp.foodprices.world", shell=True, check=True, env=environ
+)

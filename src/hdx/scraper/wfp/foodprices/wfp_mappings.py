@@ -61,13 +61,15 @@ class WFPMappings:
         url = self._configuration["countries_url"]
         json = self._wfp_api.retrieve(url, "countries.json", "countries")
         countries = set()
+        wheretostart = getenv("WHERETOSTART")
         for country in json["response"]:
             countryiso3 = country["iso3"]
             if countryiso3s and countryiso3 not in countryiso3s:
                 continue
-            wheretostart = getenv("WHERETOSTART")
-            if wheretostart and countryiso3 not in wheretostart:
-                continue
+            if wheretostart:
+                if countryiso3 not in wheretostart:
+                    continue
+                wheretostart = None
             countries.add((countryiso3, country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
@@ -76,19 +78,17 @@ class WFPMappings:
         for category in self._wfp_api.get_items("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]
         commodity_to_category = {}
-        dbcommodities = []
+        commodities = []
         for commodity in self._wfp_api.get_items("Commodities/List"):
             commodity_id = commodity["id"]
             commodity_name = commodity["name"]
             category = categoryid_to_name[commodity["categoryId"]]
-            commodity_to_category[commodity_id] = categoryid_to_name[
-                commodity["categoryId"]
-            ]
-            dbcommodities.append(
+            commodity_to_category[commodity_id] = category
+            commodities.append(
                 {
                     "commodity_id": commodity_id,
                     "category": category,
                     "commodity": commodity_name,
                 }
             )
-        return commodity_to_category, dbcommodities
+        return commodity_to_category, commodities

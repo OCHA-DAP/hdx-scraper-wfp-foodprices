@@ -31,16 +31,23 @@ def get_now(retriever: Retrieve):
     return fixed_now
 
 
+def get_currencies(
+    wfp_api: WFPAPI,
+) -> List[Dict]:
+    wfp_fx = WFPExchangeRates(wfp_api)
+    currencies = wfp_fx.get_currencies_info()
+    return sorted(currencies, key=lambda c: c["code"])
+
+
 def setup_currency(
     now: datetime,
     retriever: Retrieve,
     wfp_api: WFPAPI,
     wfp_rates_folder: Optional[str] = None,
 ) -> List[Dict]:
-    wfp_fx = WFPExchangeRates(wfp_api)
-    currencies = wfp_fx.get_currencies_info()
-    currencies = sorted(currencies, key=lambda c: c["code"])
+    currencies = get_currencies(wfp_api)
     currency_codes = [x["code"] for x in currencies]
+    wfp_fx = WFPExchangeRates(wfp_api)
     if wfp_rates_folder:
         filepath = join(wfp_rates_folder, "wfp_rates.yaml")
         if exists(filepath):
