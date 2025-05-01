@@ -118,6 +118,7 @@ def main(
                         )
                     )
                     dataset["notes"] = dataset["notes"] % snippet
+                    dataset.preview_off()
                     dataset.create_in_hdx(
                         remove_additional_resources=True,
                         match_resource_order=True,
@@ -128,19 +129,20 @@ def main(
                     showcase.create_in_hdx()
                     showcase.add_dataset(dataset)
 
-                    prices_resource_id = None
+                    year_to_prices_resource_id = {}
                     markets_resource_id = None
                     for resource in dataset.get_resources():
                         resource_name = resource["name"]
-                        if resource_name == dataset_generator.global_prices_name:
-                            prices_resource_id = resource["id"]
+                        if dataset_generator.global_prices_name in resource_name:
+                            year = int(resource_name[-4:])
+                            year_to_prices_resource_id[year] = resource["id"]
                         elif resource_name == dataset_generator.global_markets_name:
                             markets_resource_id = resource["id"]
                         elif resource_name == dataset_generator.global_commodities_name:
                             commodities_resource_id = resource["id"]
                         elif resource_name == dataset_generator.global_currencies_name:
                             currencies_resource_id = resource["id"]
-                    if prices_resource_id and markets_resource_id:
+                    if year_to_prices_resource_id and markets_resource_id:
                         dataset_id = dataset["id"]
                         hapi_output = HAPIOutput(
                             configuration,
@@ -159,7 +161,7 @@ def main(
                             markets, dataset_id, markets_resource_id
                         )
                         hapi_prices_by_year = hapi_output.process_prices(
-                            global_prices_info, dataset_id, prices_resource_id
+                            global_prices_info, dataset_id, year_to_prices_resource_id
                         )
                         hapi_dataset_generator = HAPIDatasetGenerator(
                             configuration,
@@ -183,8 +185,10 @@ def main(
                                     main,
                                 )
                             )
+                            dataset.preview_off()
                             dataset.create_in_hdx(
-                                remove_additional_resources=False,
+                                remove_additional_resources=True,
+                                match_resource_order=True,
                                 hxl_update=False,
                                 updated_by_script=updated_by_script,
                                 batch=batch,

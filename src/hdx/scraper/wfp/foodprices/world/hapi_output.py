@@ -237,7 +237,7 @@ class HAPIOutput:
         self,
         prices_info: Dict,
         dataset_id: str,
-        resource_id: str,
+        year_to_prices_resource_id: Dict,
     ) -> Dict:
         logger.info("Processing HAPI prices output")
         hapi_rows_by_year = {}
@@ -248,7 +248,7 @@ class HAPIOutput:
             for row in rows_by_year[year]:
                 hapi_row = deepcopy(self._base_rows[row["market_id"]])
                 hapi_row["dataset_hdx_id"] = dataset_id
-                hapi_row["resource_hdx_id"] = resource_id
+                hapi_row["resource_hdx_id"] = year_to_prices_resource_id[year]
                 hapi_row["commodity_category"] = row["category"]
                 hapi_row["commodity_name"] = row["commodity"]
                 hapi_row["commodity_code"] = row["commodity_id"]
