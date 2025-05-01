@@ -18,6 +18,8 @@ ckanapi==4.8
     # via hdx-python-api
 click==8.1.8
     # via typer
+cydifflib==1.2.0
+    # via hdx-python-utilities
 defopt==6.4.0
     # via hdx-python-api
 dnspython==2.7.0
@@ -40,7 +42,7 @@ hdx-python-country==3.9.2
     # via
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
-hdx-python-utilities==3.8.5
+hdx-python-utilities==3.8.6
     # via
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
@@ -204,7 +206,7 @@ urllib3==2.4.0
     # via
     #   libhxl
     #   requests
-validators==0.34.0
+validators==0.35.0
     # via frictionless
 wheel==0.45.1
     # via libhxl

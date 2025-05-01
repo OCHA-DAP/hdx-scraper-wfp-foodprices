@@ -33,6 +33,10 @@ click==8.1.8
     #   typer
 coverage==7.8.0
     # via pytest-cov
+cydifflib==1.2.0
+    # via
+    #   -c requirements.txt
+    #   hdx-python-utilities
 defopt==6.4.0
     # via
     #   -c requirements.txt
@@ -71,7 +75,7 @@ hdx-python-country==3.9.2
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
-hdx-python-utilities==3.8.5
+hdx-python-utilities==3.8.6
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
@@ -357,7 +361,7 @@ urllib3==2.4.0
     #   -c requirements.txt
     #   libhxl
     #   requests
-validators==0.34.0
+validators==0.35.0
     # via
     #   -c requirements.txt
     #   frictionless

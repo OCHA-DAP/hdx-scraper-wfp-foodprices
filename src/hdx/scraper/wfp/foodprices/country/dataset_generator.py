@@ -9,6 +9,7 @@ from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from hdx.scraper.wfp.foodprices.utilities import round_min_digits
+from hdx.utilities.downloader import Download
 from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
@@ -75,7 +76,7 @@ class DatasetGenerator:
         self,
         countryiso3: str,
         dataset: Dataset,
-        prices: Dict,
+        prices_info: Dict,
         markets: Dict,
         market_to_commodities: Dict,
         sources: Dict,
@@ -137,6 +138,8 @@ class DatasetGenerator:
             )
             if len(qc_indicators) == 3:
                 break
+
+        dataset.set_time_period(prices_info["start_date"], prices_info["end_date"])
         source_override = self._iso3_to_source.get(countryiso3)
         if source_override is None:
             dataset["dataset_source"] = ", ".join(sorted(sources.values()))
@@ -154,40 +157,38 @@ class DatasetGenerator:
         }
         prices_headers = self._configuration["prices_headers"]
         prices_hxltags = {header: hxltags[header] for header in prices_headers}
-
-        def get_prices():
-            for key in sorted(prices):
-                (
-                    priceflag,
-                    date,
-                    adm1,
-                    adm2,
-                    market_name,
-                    category,
-                    commodity,
-                    unit,
-                    pricetype,
-                ) = key
-                (
-                    date_str,
-                    market_id,
-                    lat,
-                    lon,
-                    commodity_id,
-                    currency,
-                    price,
-                    usdprice,
-                ) = prices[key]
-                yield {
+        rows = [Download.hxl_row(prices_headers, prices_hxltags, dict_form=True)]
+        prices = prices_info["prices"]
+        for key in sorted(prices):
+            (
+                priceflag,
+                date_str,
+                adm1,
+                adm2,
+                market_name,
+                category,
+                commodity,
+                unit,
+                pricetype,
+            ) = key
+            (
+                market_id,
+                lat,
+                lon,
+                commodity_id,
+                currency,
+                price,
+                usdprice,
+            ) = prices[key]
+            rows.append(
+                {
                     "date": date_str,
                     "admin1": adm1,
                     "admin2": adm2,
                     "market": market_name,
                     "market_id": market_id,
-                    "latitude": number_format(lat, format="%.2f", trailing_zeros=False),
-                    "longitude": number_format(
-                        lon, format="%.2f", trailing_zeros=False
-                    ),
+                    "latitude": lat,
+                    "longitude": lon,
                     "category": category,
                     "commodity": commodity,
                     "commodity_id": commodity_id,
@@ -198,15 +199,13 @@ class DatasetGenerator:
                     "price": number_format(price, format="%.2f", trailing_zeros=False),
                     "usdprice": round_min_digits(usdprice),
                 }
-
-        dataset.generate_resource_from_iterable(
-            prices_headers,
-            get_prices(),
-            prices_hxltags,
+            )
+        dataset.generate_resource_from_rows(
             self._folder,
             filename,
+            rows,
             resourcedata,
-            datecol="date",
+            headers=prices_headers,
         )
 
         filename = f"wfp_markets_{countryiso3_lower}.csv"
@@ -217,29 +216,26 @@ class DatasetGenerator:
         }
         markets_headers = self._configuration["markets_headers"]
         markets_hxltags = {header: hxltags[header] for header in markets_headers}
-
-        def get_markets():
-            for market_id in sorted(markets):
-                market_name, adm1, adm2, lat, lon = markets[market_id]
-                yield {
+        rows = [Download.hxl_row(markets_headers, markets_hxltags, dict_form=True)]
+        for market_id in sorted(markets):
+            market_name, adm1, adm2, lat, lon = markets[market_id]
+            rows.append(
+                {
                     "market_id": market_id,
                     "market": market_name,
                     "countryiso3": countryiso3,
                     "admin1": adm1,
                     "admin2": adm2,
-                    "latitude": number_format(lat, format="%.2f", trailing_zeros=False),
-                    "longitude": number_format(
-                        lon, format="%.2f", trailing_zeros=False
-                    ),
+                    "latitude": lat,
+                    "longitude": lon,
                 }
-
-        dataset.generate_resource_from_iterable(
-            markets_headers,
-            get_markets(),
-            markets_hxltags,
+            )
+        dataset.generate_resource_from_rows(
             self._folder,
             filename,
+            rows,
             resourcedata,
+            headers=markets_headers,
         )
 
         filename = f"wfp_food_prices_{countryiso3.lower()}_qc.csv"

@@ -5,8 +5,14 @@ from hdx.api.configuration import Configuration
 from hdx.location.currency import Currency, CurrencyError
 from hdx.location.wfp_api import WFPAPI
 from hdx.scraper.wfp.foodprices.country.source_processing import process_source
-from hdx.utilities.dateparse import iso_string_from_datetime, parse_date
+from hdx.utilities.dateparse import (
+    default_date,
+    default_enddate,
+    iso_string_from_datetime,
+    parse_date,
+)
 from hdx.utilities.dictandlist import dict_of_lists_add
+from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
 
@@ -45,16 +51,20 @@ class WFPFood:
                 market_name,
                 admin1,
                 admin2,
-                latitude,
-                longitude,
+                number_format(latitude, format="%.2f", trailing_zeros=False),
+                number_format(longitude, format="%.2f", trailing_zeros=False),
             )
         logger.info(f"{len(prices_data)} prices rows")
         return True
 
     def generate_rows(self) -> Tuple[Dict, Dict, Dict, Dict]:
+        prices_info = {}
         prices = {}
+        prices_info["prices"] = prices
         market_to_commodities = {}
         sources = {}
+        start_date = default_enddate
+        end_date = default_date
         for price_data in self._prices_data:
             priceflag = price_data["commodityPriceFlag"]
             if not all(x in ("actual", "aggregate") for x in priceflag.split(",")):
@@ -73,6 +83,10 @@ class WFPFood:
             process_source(sources, price_data["commodityPriceSourceName"])
             date_str = price_data["commodityPriceDate"]
             date = parse_date(date_str)
+            if date < start_date:
+                start_date = date
+            if date > end_date:
+                end_date = date
             date_str = iso_string_from_datetime(date)
             commodity = price_data["commodityName"]
             unit = price_data["commodityUnitName"]
@@ -86,7 +100,7 @@ class WFPFood:
                 usdprice = None
             key = (
                 priceflag,
-                date,
+                date_str,
                 adm1,
                 adm2,
                 market_name,
@@ -97,7 +111,6 @@ class WFPFood:
             )
             if key not in prices:
                 prices[key] = (
-                    date_str,
                     market_id,
                     lat,
                     lon,
@@ -121,4 +134,6 @@ class WFPFood:
             )
         else:
             logger.info(f"{self._countryiso3} has no prices!")
-        return prices, self._markets, market_to_commodities, sources
+        prices_info["start_date"] = start_date
+        prices_info["end_date"] = end_date
+        return prices_info, self._markets, market_to_commodities, sources

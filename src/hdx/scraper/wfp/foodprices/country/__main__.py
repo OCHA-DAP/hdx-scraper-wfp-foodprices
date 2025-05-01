@@ -131,13 +131,13 @@ def main(
                     success = wfp_food.get_price_markets(wfp_api)
                     if not success:
                         return
-                    prices, markets, market_to_commodities, sources = (
+                    prices_info, markets, market_to_commodities, sources = (
                         wfp_food.generate_rows()
                     )
                     dataset, qc_indicators = dataset_generator.complete_dataset(
                         countryiso3,
                         dataset,
-                        prices,
+                        prices_info,
                         markets,
                         market_to_commodities,
                         sources,
