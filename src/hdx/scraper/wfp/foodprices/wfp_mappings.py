@@ -66,7 +66,7 @@ class WFPMappings:
             countryiso3 = country["iso3"]
             if countryiso3s and countryiso3 not in countryiso3s:
                 continue
-            if wheretostart:
+            if wheretostart and wheretostart != "RESET":
                 if countryiso3 not in wheretostart:
                     continue
                 wheretostart = None
