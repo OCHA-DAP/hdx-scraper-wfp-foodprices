@@ -1,386 +1,386 @@
-countryiso3,countryiso32,countryiso33,countryiso34,countryiso35,countryiso36,countryiso37,countryiso38,countryiso39,countryiso310,countryiso311,countryiso312,countryiso313,countryiso314,countryiso315,countryiso316,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd,,,,,,,,,,,,,,,
-BLR,2009-01-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.93,,,,,,,,,,,,,,,
-BLR,2009-01-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.41,,,,,,,,,,,,,,,
-BLR,2009-01-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.74,,,,,,,,,,,,,,,
-BLR,2009-02-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89,,,,,,,,,,,,,,,
-BLR,2009-02-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.39,,,,,,,,,,,,,,,
-BLR,2009-02-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-BLR,2009-03-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.86,,,,,,,,,,,,,,,
-BLR,2009-03-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.38,,,,,,,,,,,,,,,
-BLR,2009-03-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.69,,,,,,,,,,,,,,,
-BLR,2009-04-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89,,,,,,,,,,,,,,,
-BLR,2009-04-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.39,,,,,,,,,,,,,,,
-BLR,2009-04-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-BLR,2009-05-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89,,,,,,,,,,,,,,,
-BLR,2009-05-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.1,0.36,,,,,,,,,,,,,,,
-BLR,2009-05-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-BLR,2009-06-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89,,,,,,,,,,,,,,,
-BLR,2009-06-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.13,0.46,,,,,,,,,,,,,,,
-BLR,2009-06-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-BLR,2009-07-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.24,0.83,,,,,,,,,,,,,,,
-BLR,2009-07-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.21,0.72,,,,,,,,,,,,,,,
-BLR,2009-07-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.69,,,,,,,,,,,,,,,
-BLR,2009-08-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.88,,,,,,,,,,,,,,,
-BLR,2009-08-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.13,0.46,,,,,,,,,,,,,,,
-BLR,2009-08-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-BLR,2009-09-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.24,0.86,,,,,,,,,,,,,,,
-BLR,2009-09-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.12,0.43,,,,,,,,,,,,,,,
-BLR,2009-09-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-BLR,2009-10-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.26,0.96,,,,,,,,,,,,,,,
-BLR,2009-10-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.12,0.44,,,,,,,,,,,,,,,
-BLR,2009-10-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.74,,,,,,,,,,,,,,,
-BLR,2009-11-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.26,0.96,,,,,,,,,,,,,,,
-BLR,2009-11-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.12,0.44,,,,,,,,,,,,,,,
-BLR,2009-11-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.74,,,,,,,,,,,,,,,
-BLR,2009-12-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.26,0.93,,,,,,,,,,,,,,,
-BLR,2009-12-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.14,0.5,,,,,,,,,,,,,,,
-BLR,2009-12-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,291,11.91,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,850,34.78,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,970,39.69,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,880,36.01,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,324.74,13.29,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,903.68,36.98,,,,,,,,,,,,,,,
-NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,991.84,40.58,,,,,,,,,,,,,,,
-NIC,2009-01-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,350,14.32,,,,,,,,,,,,,,,
-NIC,2009-01-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,900,36.82,,,,,,,,,,,,,,,
-NIC,2009-01-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,320,13.09,,,,,,,,,,,,,,,
-NIC,2009-01-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,900,36.82,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,339.17,13.88,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,827.81,33.87,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,986.41,40.36,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,875.83,35.84,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,287.92,11.78,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,480,19.64,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,928.96,38.01,,,,,,,,,,,,,,,
-NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,873.96,35.76,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,319,13.05,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,839.5,34.35,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,1026.75,42.01,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,890.5,36.44,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,277.75,11.36,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,951.13,38.92,,,,,,,,,,,,,,,
-NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,1015.75,41.56,,,,,,,,,,,,,,,
-NIC,2009-02-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,365,14.93,,,,,,,,,,,,,,,
-NIC,2009-02-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,887.5,36.31,,,,,,,,,,,,,,,
-NIC,2009-02-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,336.67,13.78,,,,,,,,,,,,,,,
-NIC,2009-02-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,883.33,36.14,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,335.13,13.71,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,828.44,33.9,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,959.63,39.26,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,868.71,35.54,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,270.42,11.06,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,480,19.64,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,881.94,36.09,,,,,,,,,,,,,,,
-NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,831.38,34.02,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,345,14.12,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,835,34.17,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,1039.09,42.52,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,896.82,36.69,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,268.18,10.97,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,946.14,38.71,,,,,,,,,,,,,,,
-NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,989.09,40.47,,,,,,,,,,,,,,,
-NIC,2009-03-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,417.5,17.08,,,,,,,,,,,,,,,
-NIC,2009-03-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,900,36.82,,,,,,,,,,,,,,,
-NIC,2009-03-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,397.5,16.26,,,,,,,,,,,,,,,
-NIC,2009-03-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,837.5,34.27,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,412.19,16.87,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,823.13,33.68,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,955.31,39.09,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,855.63,35.01,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,240.63,9.85,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,475,19.44,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,815.63,33.37,,,,,,,,,,,,,,,
-NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,783.13,32.04,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,359.5,14.71,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,822.5,33.65,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,1011.5,41.39,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,888.16,36.34,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,309.25,12.65,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,896,36.66,,,,,,,,,,,,,,,
-NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,982.75,40.21,,,,,,,,,,,,,,,
-NIC,2009-04-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,430,17.59,,,,,,,,,,,,,,,
-NIC,2009-04-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,825,33.76,,,,,,,,,,,,,,,
-NIC,2009-04-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,442.5,18.11,,,,,,,,,,,,,,,
-NIC,2009-04-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,420.63,17.21,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,822.4,33.65,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,957.81,39.19,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,855.94,35.02,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,295,12.07,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,475,19.44,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,754.38,30.87,,,,,,,,,,,,,,,
-NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,715.94,29.29,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,395.79,16.19,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,811.05,33.19,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,936.32,38.31,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,862.11,35.27,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,358.95,14.69,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,803.95,32.89,,,,,,,,,,,,,,,
-NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,895.79,36.65,,,,,,,,,,,,,,,
-NIC,2009-05-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,435,17.8,,,,,,,,,,,,,,,
-NIC,2009-05-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,770,31.51,,,,,,,,,,,,,,,
-NIC,2009-05-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,412.5,16.88,,,,,,,,,,,,,,,
-NIC,2009-05-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,835,34.17,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,418.75,17.13,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,810.42,33.16,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,959.38,39.25,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,849.69,34.77,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,295,12.07,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,474,19.39,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,835.94,34.2,,,,,,,,,,,,,,,
-NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,786.25,32.17,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,420.34,17.2,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,773.18,31.64,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,849.32,34.75,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,344.09,14.08,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,706.82,28.92,,,,,,,,,,,,,,,
-NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,806.59,33,,,,,,,,,,,,,,,
-NIC,2009-06-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,425,17.39,,,,,,,,,,,,,,,
-NIC,2009-06-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,717.5,29.36,,,,,,,,,,,,,,,
-NIC,2009-06-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,415,16.98,,,,,,,,,,,,,,,
-NIC,2009-06-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,762.5,31.2,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,415.5,17,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,755.92,30.93,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,853.75,34.93,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,802,32.82,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,344.17,14.08,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,472.5,19.33,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,743.75,30.43,,,,,,,,,,,,,,,
-NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,685.5,28.05,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,436.96,17.88,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,781.74,31.99,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,848.7,34.73,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,342.17,14,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,650.43,26.61,,,,,,,,,,,,,,,
-NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,728.48,29.81,,,,,,,,,,,,,,,
-NIC,2009-07-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,502,20.54,,,,,,,,,,,,,,,
-NIC,2009-07-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,760,31.1,,,,,,,,,,,,,,,
-NIC,2009-07-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,496,20.29,,,,,,,,,,,,,,,
-NIC,2009-07-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,670,27.41,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,451,18.45,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,751.67,30.76,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,851.5,34.84,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800.75,32.76,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,406.33,16.63,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,476.5,19.5,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,712,29.13,,,,,,,,,,,,,,,
-NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,636,26.02,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,521,21.32,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,787.75,32.23,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,866.75,35.46,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,810.25,33.15,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,364.75,14.92,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,603,24.67,,,,,,,,,,,,,,,
-NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,649.25,26.57,,,,,,,,,,,,,,,
-NIC,2009-08-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,550,22.5,,,,,,,,,,,,,,,
-NIC,2009-08-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,700,28.64,,,,,,,,,,,,,,,
-NIC,2009-08-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,480,19.64,,,,,,,,,,,,,,,
-NIC,2009-08-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,650,26.6,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,490.94,20.09,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,755.83,30.93,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,859.38,35.16,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,802.81,32.85,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,428.75,17.54,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,477.5,19.54,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,608.75,24.91,,,,,,,,,,,,,,,
-NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,567.19,23.21,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,468,19.15,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,885.5,36.23,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,824.38,33.73,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,366,14.98,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,572.5,23.42,,,,,,,,,,,,,,,
-NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,608.13,24.88,,,,,,,,,,,,,,,
-NIC,2009-09-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,470,19.23,,,,,,,,,,,,,,,
-NIC,2009-09-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,550,22.5,,,,,,,,,,,,,,,
-NIC,2009-09-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,450,18.41,,,,,,,,,,,,,,,
-NIC,2009-09-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,537.5,21.99,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,370,15.14,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,748.5,30.63,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,865,35.39,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,811.25,33.19,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,443,18.13,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,477.5,19.54,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,633.25,25.91,,,,,,,,,,,,,,,
-NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,565.75,23.15,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,310.29,12.7,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,799.68,32.72,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,872.63,35.7,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,822.11,33.64,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,417.37,17.08,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,743.16,30.41,,,,,,,,,,,,,,,
-NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,818.03,33.47,,,,,,,,,,,,,,,
-NIC,2009-10-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,470,19.23,,,,,,,,,,,,,,,
-NIC,2009-10-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,600,24.55,,,,,,,,,,,,,,,
-NIC,2009-10-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,350,14.32,,,,,,,,,,,,,,,
-NIC,2009-10-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,750,30.69,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,314.69,12.88,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,754.9,30.89,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,850.94,34.82,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,413.75,16.93,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,501.5,20.52,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,780.31,31.93,,,,,,,,,,,,,,,
-NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,714.69,29.24,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,297,12.15,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,793.95,32.49,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,860,35.19,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,805.5,32.96,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,385.75,15.78,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,768,31.42,,,,,,,,,,,,,,,
-NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,827.25,33.85,,,,,,,,,,,,,,,
-NIC,2009-11-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,250,10.23,,,,,,,,,,,,,,,
-NIC,2009-11-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-11-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,280,11.46,,,,,,,,,,,,,,,
-NIC,2009-11-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,650,26.6,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,306.88,12.56,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,754.48,30.87,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,852.19,34.87,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,423.57,17.33,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,761.25,31.15,,,,,,,,,,,,,,,
-NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,691.88,28.31,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,268.42,10.98,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,780,31.91,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,863.68,35.34,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,306.32,12.53,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,677.11,27.7,,,,,,,,,,,,,,,
-NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,735.26,30.08,,,,,,,,,,,,,,,
-NIC,2009-12-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,283.34,11.59,,,,,,,,,,,,,,,
-NIC,2009-12-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,800,32.73,,,,,,,,,,,,,,,
-NIC,2009-12-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,296.67,12.14,,,,,,,,,,,,,,,
-NIC,2009-12-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,658.34,26.94,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,320,13.09,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,755.56,30.91,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,853.75,34.93,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,803.33,32.87,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,410,16.78,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,507.09,20.75,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,749.17,30.65,,,,,,,,,,,,,,,
-NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,698.33,28.57,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.78,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.45,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,7.05,1.82,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,5.19,1.34,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.78,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4.5,1.16,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,15.23,3.94,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.94,2.05,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,1.03,,,,,,,,,,,,,,,
-PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.67,7.41,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.73,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.26,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.67,1.63,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,5,1.22,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3.25,0.79,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,0.98,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,15.4,3.76,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.83,1.91,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,0.98,,,,,,,,,,,,,,,
-PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.17,6.88,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,2.83,0.68,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.21,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,7,1.69,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,5.08,1.22,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3.5,0.84,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,0.96,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.6,4,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.83,1.89,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,0.96,,,,,,,,,,,,,,,
-PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.67,6.91,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.72,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.21,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.75,1.62,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.83,1.16,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.72,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.75,0.9,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,17.37,4.18,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.67,1.84,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,0.96,,,,,,,,,,,,,,,
-PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28,6.73,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,2.83,0.68,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.22,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.57,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.83,1.17,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.72,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.83,0.93,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.5,3.99,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,1.81,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.5,0.85,,,,,,,,,,,,,,,
-PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.17,6.56,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.76,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.38,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.65,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.83,1.22,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.76,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.83,0.97,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.05,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.42,1.88,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.8,,,,,,,,,,,,,,,
-PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.17,6.88,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.77,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.43,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.67,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.16,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.77,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.03,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.5,4.24,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.42,1.91,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.81,,,,,,,,,,,,,,,
-PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.83,7.15,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.79,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.52,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.33,1.67,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.19,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.79,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.06,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.17,4.27,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,1.98,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.84,,,,,,,,,,,,,,,
-PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.33,7.21,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.8,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.56,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.33,1.69,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.2,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.8,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.07,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.27,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,2,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.33,0.89,,,,,,,,,,,,,,,
-PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.33,7.29,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.81,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,11.23,3.04,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.33,1.71,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.22,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.81,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.08,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.32,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,2.03,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.86,,,,,,,,,,,,,,,
-PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.75,7.77,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.8,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,11.23,2.99,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.73,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.2,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.8,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.06,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.26,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.42,1.98,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.33,0.89,,,,,,,,,,,,,,,
-PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.17,7.5,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.79,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,11.23,2.97,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,7,1.85,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.19,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.79,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.83,1.01,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,15,3.97,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,1.98,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.33,0.88,,,,,,,,,,,,,,,
-PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,29.33,7.76,,,,,,,,,,,,,,,
+countryiso3,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
+#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
+BLR,2009-01-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.93
+BLR,2009-01-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.41
+BLR,2009-01-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.74
+BLR,2009-02-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89
+BLR,2009-02-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.39
+BLR,2009-02-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+BLR,2009-03-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.86
+BLR,2009-03-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.38
+BLR,2009-03-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.69
+BLR,2009-04-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89
+BLR,2009-04-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.11,0.39
+BLR,2009-04-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+BLR,2009-05-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89
+BLR,2009-05-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.1,0.36
+BLR,2009-05-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+BLR,2009-06-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.89
+BLR,2009-06-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.13,0.46
+BLR,2009-06-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+BLR,2009-07-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.24,0.83
+BLR,2009-07-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.21,0.72
+BLR,2009-07-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.69
+BLR,2009-08-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.25,0.88
+BLR,2009-08-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.13,0.46
+BLR,2009-08-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+BLR,2009-09-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.24,0.86
+BLR,2009-09-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.12,0.43
+BLR,2009-09-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+BLR,2009-10-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.26,0.96
+BLR,2009-10-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.12,0.44
+BLR,2009-10-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.74
+BLR,2009-11-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.26,0.96
+BLR,2009-11-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.12,0.44
+BLR,2009-11-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.74
+BLR,2009-12-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Bread (high grade flour),459,KG,actual,Retail,BYR,0.26,0.93
+BLR,2009-12-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Potatoes,83,KG,actual,Retail,BYR,0.14,0.5
+BLR,2009-12-15,Minsk City,Minsk City,Minsk,2618,53.91,27.56,cereals and tubers,Wheat flour,58,KG,actual,Retail,BYR,0.2,0.71
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,291,11.91
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,850,34.78
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,970,39.69
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,880,36.01
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,324.74,13.29
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,903.68,36.98
+NIC,2009-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,991.84,40.58
+NIC,2009-01-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,350,14.32
+NIC,2009-01-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,900,36.82
+NIC,2009-01-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,320,13.09
+NIC,2009-01-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,900,36.82
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,339.17,13.88
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,827.81,33.87
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,986.41,40.36
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,875.83,35.84
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,287.92,11.78
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,480,19.64
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,928.96,38.01
+NIC,2009-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,873.96,35.76
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,319,13.05
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,839.5,34.35
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,1026.75,42.01
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,890.5,36.44
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,277.75,11.36
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,951.13,38.92
+NIC,2009-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,1015.75,41.56
+NIC,2009-02-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,365,14.93
+NIC,2009-02-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,887.5,36.31
+NIC,2009-02-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,336.67,13.78
+NIC,2009-02-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,883.33,36.14
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,335.13,13.71
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,828.44,33.9
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,959.63,39.26
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,868.71,35.54
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,270.42,11.06
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,480,19.64
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,881.94,36.09
+NIC,2009-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,831.38,34.02
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,345,14.12
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,835,34.17
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,1039.09,42.52
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,896.82,36.69
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,268.18,10.97
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,946.14,38.71
+NIC,2009-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,989.09,40.47
+NIC,2009-03-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,417.5,17.08
+NIC,2009-03-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,900,36.82
+NIC,2009-03-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,397.5,16.26
+NIC,2009-03-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,837.5,34.27
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,412.19,16.87
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,823.13,33.68
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,955.31,39.09
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,855.63,35.01
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,240.63,9.85
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,475,19.44
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,815.63,33.37
+NIC,2009-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,783.13,32.04
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,359.5,14.71
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,822.5,33.65
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,1011.5,41.39
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,888.16,36.34
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,309.25,12.65
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,896,36.66
+NIC,2009-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,982.75,40.21
+NIC,2009-04-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,430,17.59
+NIC,2009-04-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,825,33.76
+NIC,2009-04-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,442.5,18.11
+NIC,2009-04-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,420.63,17.21
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,822.4,33.65
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,957.81,39.19
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,855.94,35.02
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,295,12.07
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,475,19.44
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,754.38,30.87
+NIC,2009-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,715.94,29.29
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,395.79,16.19
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,811.05,33.19
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,936.32,38.31
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,862.11,35.27
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,358.95,14.69
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,803.95,32.89
+NIC,2009-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,895.79,36.65
+NIC,2009-05-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,435,17.8
+NIC,2009-05-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,770,31.51
+NIC,2009-05-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,412.5,16.88
+NIC,2009-05-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,835,34.17
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,418.75,17.13
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,810.42,33.16
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,959.38,39.25
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,849.69,34.77
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,295,12.07
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,474,19.39
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,835.94,34.2
+NIC,2009-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,786.25,32.17
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,420.34,17.2
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,773.18,31.64
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,849.32,34.75
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,344.09,14.08
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,706.82,28.92
+NIC,2009-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,806.59,33
+NIC,2009-06-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,425,17.39
+NIC,2009-06-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,717.5,29.36
+NIC,2009-06-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,415,16.98
+NIC,2009-06-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,762.5,31.2
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,415.5,17
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,755.92,30.93
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,853.75,34.93
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,802,32.82
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,344.17,14.08
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,472.5,19.33
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,743.75,30.43
+NIC,2009-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,685.5,28.05
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,436.96,17.88
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,781.74,31.99
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,848.7,34.73
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,342.17,14
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,650.43,26.61
+NIC,2009-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,728.48,29.81
+NIC,2009-07-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,502,20.54
+NIC,2009-07-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,760,31.1
+NIC,2009-07-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,496,20.29
+NIC,2009-07-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,670,27.41
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,451,18.45
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,751.67,30.76
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,851.5,34.84
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800.75,32.76
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,406.33,16.63
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,476.5,19.5
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,712,29.13
+NIC,2009-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,636,26.02
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,521,21.32
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,787.75,32.23
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,866.75,35.46
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,810.25,33.15
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,364.75,14.92
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,603,24.67
+NIC,2009-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,649.25,26.57
+NIC,2009-08-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,550,22.5
+NIC,2009-08-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,700,28.64
+NIC,2009-08-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,480,19.64
+NIC,2009-08-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,650,26.6
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,490.94,20.09
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,755.83,30.93
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,859.38,35.16
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,802.81,32.85
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,428.75,17.54
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,477.5,19.54
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,608.75,24.91
+NIC,2009-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,567.19,23.21
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,468,19.15
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,885.5,36.23
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,824.38,33.73
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,366,14.98
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,572.5,23.42
+NIC,2009-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,608.13,24.88
+NIC,2009-09-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,470,19.23
+NIC,2009-09-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,550,22.5
+NIC,2009-09-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,450,18.41
+NIC,2009-09-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,537.5,21.99
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,370,15.14
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,748.5,30.63
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,865,35.39
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,811.25,33.19
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,443,18.13
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,477.5,19.54
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,633.25,25.91
+NIC,2009-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,565.75,23.15
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,310.29,12.7
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,799.68,32.72
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,872.63,35.7
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,822.11,33.64
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,417.37,17.08
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,743.16,30.41
+NIC,2009-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,818.03,33.47
+NIC,2009-10-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,470,19.23
+NIC,2009-10-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,600,24.55
+NIC,2009-10-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,350,14.32
+NIC,2009-10-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,750,30.69
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,314.69,12.88
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,754.9,30.89
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,850.94,34.82
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,413.75,16.93
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,501.5,20.52
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,780.31,31.93
+NIC,2009-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,714.69,29.24
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,297,12.15
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,793.95,32.49
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,860,35.19
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,805.5,32.96
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,385.75,15.78
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,768,31.42
+NIC,2009-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,827.25,33.85
+NIC,2009-11-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,250,10.23
+NIC,2009-11-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-11-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,280,11.46
+NIC,2009-11-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,650,26.6
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,306.88,12.56
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,754.48,30.87
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,852.19,34.87
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,423.57,17.33
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,500,20.46
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,761.25,31.15
+NIC,2009-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,691.88,28.31
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,268.42,10.98
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,780,31.91
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,863.68,35.34
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,306.32,12.53
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,677.11,27.7
+NIC,2009-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,735.26,30.08
+NIC,2009-12-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,283.34,11.59
+NIC,2009-12-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,800,32.73
+NIC,2009-12-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,296.67,12.14
+NIC,2009-12-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,658.34,26.94
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,320,13.09
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,755.56,30.91
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,853.75,34.93
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,803.33,32.87
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,410,16.78
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,507.09,20.75
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,749.17,30.65
+NIC,2009-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,698.33,28.57
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.78
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.45
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,7.05,1.82
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,5.19,1.34
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.78
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4.5,1.16
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,15.23,3.94
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.94,2.05
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,1.03
+PSE,2009-01-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.67,7.41
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.73
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.26
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.67,1.63
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,5,1.22
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3.25,0.79
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,0.98
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,15.4,3.76
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.83,1.91
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,0.98
+PSE,2009-02-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.17,6.88
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,2.83,0.68
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.21
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,7,1.69
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,5.08,1.22
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3.5,0.84
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,0.96
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.6,4
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.83,1.89
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,0.96
+PSE,2009-03-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.67,6.91
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.72
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.21
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.75,1.62
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.83,1.16
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.72
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.75,0.9
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,17.37,4.18
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.67,1.84
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,4,0.96
+PSE,2009-04-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28,6.73
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,2.83,0.68
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.22
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.57
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.83,1.17
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.72
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.83,0.93
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.5,3.99
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,1.81
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.5,0.85
+PSE,2009-05-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.17,6.56
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.76
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.38
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.65
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.83,1.22
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.76
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.83,0.97
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.05
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.42,1.88
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.8
+PSE,2009-06-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.17,6.88
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.77
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.43
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.67
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.16
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.77
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.03
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.5,4.24
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.42,1.91
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.81
+PSE,2009-07-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.83,7.15
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.79
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.52
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.33,1.67
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.19
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.79
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.06
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16.17,4.27
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,1.98
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.84
+PSE,2009-08-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.33,7.21
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.8
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,13.34,3.56
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.33,1.69
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.2
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.8
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.07
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.27
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,2
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.33,0.89
+PSE,2009-09-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,27.33,7.29
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.81
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,11.23,3.04
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.33,1.71
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.22
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.81
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.08
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.32
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,2.03
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.17,0.86
+PSE,2009-10-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.75,7.77
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.8
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,11.23,2.99
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,6.5,1.73
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.2
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.8
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,4,1.06
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,16,4.26
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.42,1.98
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.33,0.89
+PSE,2009-11-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,28.17,7.5
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Bread,55,KG,actual,Retail,ILS,3,0.79
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Rice (long grain),162,KG,actual,Retail,ILS,11.23,2.97
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,"Rice (short grain, low quality, local)",380,KG,actual,Retail,ILS,7,1.85
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Semolina,597,KG,actual,Retail,ILS,4.5,1.19
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat,84,KG,actual,Retail,ILS,3,0.79
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,cereals and tubers,Wheat flour,58,KG,actual,Retail,ILS,3.83,1.01
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,"meat, fish and eggs",Meat (chicken),94,KG,actual,Retail,ILS,15,3.97
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,milk and dairy,Milk (pasteurized),463,L,actual,Retail,ILS,7.5,1.98
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,miscellaneous food,Sugar (white),349,KG,actual,Retail,ILS,3.33,0.88
+PSE,2009-12-15,Gaza Strip,Gaza,Gaza,2007,31.51,34.46,oil and fats,Oil (olive),239,KG,actual,Retail,ILS,29.33,7.76

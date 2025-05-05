@@ -1,5 +1,6 @@
 import logging
 from copy import deepcopy
+from os.path import join
 from typing import Dict, List, Optional
 
 from dateutil.relativedelta import relativedelta
@@ -9,6 +10,8 @@ from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.location.adminlevel import AdminLevel
 from hdx.location.country import Country
 from hdx.utilities.dateparse import iso_string_from_datetime, parse_date
+from hdx.utilities.dictandlist import write_list_to_csv
+from hdx.utilities.downloader import Download
 from hdx.utilities.retriever import Retrieve
 
 logger = logging.getLogger(__name__)
@@ -18,9 +21,13 @@ class HAPIOutput:
     def __init__(
         self,
         configuration: Configuration,
+        downloader: Download,
+        folder: str,
         error_handler: HDXErrorHandler,
     ) -> None:
         self._configuration = configuration
+        self._downloader = downloader
+        self._folder = folder
         self._error_handler = error_handler
         self._admins = []
         self._base_rows = {}
@@ -233,20 +240,31 @@ class HAPIOutput:
         )
         return hapi_rows
 
-    def process_prices(
+    def create_prices_files(
         self,
-        prices_info: Dict,
+        year_to_path: Dict,
         dataset_id: str,
         year_to_prices_resource_id: Dict,
+        output_dir: str = "",
     ) -> Dict:
         logger.info("Processing HAPI prices output")
-        hapi_rows_by_year = {}
-        rows_by_year = prices_info["rows_by_year"]
-        for year in sorted(rows_by_year, reverse=True):
-            hapi_rows = []
-            hapi_rows_by_year[year] = hapi_rows
-            for row in rows_by_year[year]:
-                hapi_row = deepcopy(self._base_rows[row["market_id"]])
+        configuration = self._configuration["hapi_dataset"]["resources"][0]
+        hxltags = configuration["hxltags"]
+        headers = list(hxltags.keys())
+
+        hapi_year_to_path = {}
+        for year in sorted(year_to_path, reverse=True):
+            rows = [hxltags]
+            filepath = year_to_path[year]
+            _, iterator = self._downloader.get_tabular_rows(
+                filepath, has_hxl=True, dict_form=True, encoding="utf-8"
+            )
+            logger.info(f"Reading global prices from {filepath}")
+            for row in iterator:
+                market_id = row["market_id"]
+                if market_id[0] == "#":
+                    continue
+                hapi_row = deepcopy(self._base_rows[market_id])
                 hapi_row["dataset_hdx_id"] = dataset_id
                 hapi_row["resource_hdx_id"] = year_to_prices_resource_id[year]
                 hapi_row["commodity_category"] = row["category"]
@@ -275,5 +293,12 @@ class HAPIOutput:
                 )
                 hapi_row["warning"] = "|".join(sorted(hapi_row["warning"]))
                 hapi_row["error"] = "|".join(sorted(hapi_row["error"]))
-                hapi_rows.append(hapi_row)
-        return hapi_rows_by_year
+                rows.append(hapi_row)
+            if not output_dir:
+                output_dir = self._folder
+            filename = configuration["filename"].format(year)
+            filepath = join(output_dir, filename)
+            write_list_to_csv(filepath, rows, columns=headers)
+            hapi_year_to_path[year] = filepath
+
+        return hapi_year_to_path

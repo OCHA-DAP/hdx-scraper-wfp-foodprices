@@ -17,7 +17,10 @@ from hdx.scraper.wfp.foodprices._version import __version__
 from hdx.scraper.wfp.foodprices.utilities import get_currencies, get_now
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.scraper.wfp.foodprices.world.dataset_generator import DatasetGenerator
-from hdx.scraper.wfp.foodprices.world.file_reader import FileReader
+from hdx.scraper.wfp.foodprices.world.global_markets import get_markets
+from hdx.scraper.wfp.foodprices.world.global_prices_generator import (
+    GlobalPricesGenerator,
+)
 from hdx.scraper.wfp.foodprices.world.hapi_dataset_generator import HAPIDatasetGenerator
 from hdx.scraper.wfp.foodprices.world.hapi_output import HAPIOutput
 from hdx.utilities.downloader import Download
@@ -92,24 +95,24 @@ def main(
                     wfp_mapping = WFPMappings(configuration, wfp_api, retriever)
                     _, commodities = wfp_mapping.build_commodity_category_mapping()
                     currencies = get_currencies(wfp_api)
-                    dataset_generator = DatasetGenerator(
-                        configuration,
-                        folder,
-                        currencies,
-                    )
-
-                    file_reader = FileReader(downloader, folder)
-                    global_prices_info = file_reader.get_global_prices()
-                    if not global_prices_info:
-                        logger.error("No prices data found!")
-                        sys.exit(1)
-                    markets = file_reader.get_global_markets()
+                    markets = get_markets(downloader, folder)
                     if not markets:
                         logger.error("No markets data found!")
                         sys.exit(1)
+                    prices_generator = GlobalPricesGenerator(
+                        configuration, downloader, folder
+                    )
+                    start_date, end_date = prices_generator.get_years_per_country()
+                    year_to_pricespath = prices_generator.create_prices_files()
+                    if not year_to_pricespath:
+                        logger.error("No prices data found!")
+                        sys.exit(1)
+                    dataset_generator = DatasetGenerator(
+                        configuration, folder, start_date, end_date
+                    )
                     dataset, showcase = (
                         dataset_generator.generate_global_dataset_and_showcase(
-                            global_prices_info, markets, commodities
+                            year_to_pricespath, markets, commodities, currencies
                         )
                     )
                     snippet = "Countries, Commodities and Markets data"
@@ -147,6 +150,8 @@ def main(
                         dataset_id = dataset["id"]
                         hapi_output = HAPIOutput(
                             configuration,
+                            downloader,
+                            folder,
                             error_handler,
                         )
                         hapi_output.setup_admins(retriever, countryiso3s)
@@ -161,17 +166,17 @@ def main(
                         hapi_markets = hapi_output.process_markets(
                             markets, dataset_id, markets_resource_id
                         )
-                        hapi_prices_by_year = hapi_output.process_prices(
-                            global_prices_info, dataset_id, year_to_prices_resource_id
+                        hapi_year_to_pricespath = hapi_output.create_prices_files(
+                            year_to_pricespath, dataset_id, year_to_prices_resource_id
                         )
                         hapi_dataset_generator = HAPIDatasetGenerator(
                             configuration,
                             folder,
-                            global_prices_info["start_date"],
-                            global_prices_info["end_date"],
+                            start_date,
+                            end_date,
                         )
                         dataset = hapi_dataset_generator.generate_prices_dataset(
-                            hapi_prices_by_year,
+                            hapi_year_to_pricespath,
                             hapi_markets,
                             hapi_commodities,
                             hapi_currencies,

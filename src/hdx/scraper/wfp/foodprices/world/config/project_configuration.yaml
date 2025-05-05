@@ -36,9 +36,9 @@ hapi_dataset:
   dataset_source: "WFP - World Food Programme"
   license_id: "cc-by-igo"
   resources:
-    - name: "Global Food Security, Nutrition & Poverty: Food Prices"
+    - name: "Global Food Security, Nutrition & Poverty: Food Prices {}"
       description: "Food Prices & Market Monitor data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) for more information"
-      filename: "hdx_hapi_food_price_global"
+      filename: "hdx_hapi_food_price_global_{}.csv"
       hxltags:
         location_code: "#country+code"
         has_hrp: "#meta+has_hrp"

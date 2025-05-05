@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 
 from slugify import slugify
@@ -6,6 +7,7 @@ from slugify import slugify
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
+from hdx.data.resource import Resource
 from hdx.data.showcase import Showcase
 
 logger = logging.getLogger(__name__)
@@ -22,11 +24,13 @@ class DatasetGenerator:
         self,
         configuration: Configuration,
         folder: str,
-        currencies: List[Dict],
+        start_date: datetime,
+        end_date: datetime,
     ):
         self._configuration = configuration
         self._folder = folder
-        self._currencies = currencies
+        self._start_date = start_date
+        self._end_date = end_date
 
     def get_dataset_and_showcase(self) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         location = "world"
@@ -68,36 +72,27 @@ class DatasetGenerator:
 
     def generate_global_dataset_and_showcase(
         self,
-        global_prices_info: Dict,
+        year_to_pricespath: Dict,
         markets: List[Dict],
         commodities: List[Dict],
+        currencies: List[Dict],
     ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         dataset, showcase = self.get_dataset_and_showcase()
         hxltags = self._configuration["hxltags"]
-        start_date = global_prices_info["start_date"]
-        end_date = global_prices_info["end_date"]
-        dataset.set_time_period(start_date, end_date)
+        dataset.set_time_period(self._start_date, self._end_date)
         dataset["dataset_source"] = "WFP"
 
-        rows_by_year = global_prices_info["rows_by_year"]
-        for year in sorted(rows_by_year, reverse=True):
-            filename = f"wfp_food_prices_global_{year}.csv"
+        for year in sorted(year_to_pricespath, reverse=True):
+            filepath = year_to_pricespath[year]
             resourcedata = {
                 "name": f"{self.global_prices_name} {year}",
                 "description": f"Prices data for {year} with HXL tags",
                 "format": "csv",
             }
-            prices_headers = self._configuration["prices_headers"]
-            prices_headers.insert(0, "countryiso3")
-            prices_hxltags = {header: hxltags[header] for header in prices_headers}
-            dataset.generate_resource_from_iterable(
-                prices_headers,
-                rows_by_year[year],
-                prices_hxltags,
-                self._folder,
-                filename,
-                resourcedata,
-            )
+            resource = Resource(resourcedata)
+            resource.set_format("csv")
+            resource.set_file_to_upload(filepath)
+            dataset.add_update_resource(resource)
 
         filename = "wfp_commodities_global.csv"
         resourcedata = {
@@ -144,7 +139,7 @@ class DatasetGenerator:
         currency_hxltags = self._configuration["currency_hxltags"]
         dataset.generate_resource_from_iterable(
             list(currency_hxltags.keys()),
-            self._currencies,
+            currencies,
             currency_hxltags,
             self._folder,
             filename,

@@ -6,6 +6,7 @@ Unit tests for wfpfood scraper.
 
 import gc
 import logging
+from datetime import datetime, timezone
 from os.path import join
 
 import pytest
@@ -16,7 +17,10 @@ from hdx.scraper.wfp.foodprices.utilities import get_currencies
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.scraper.wfp.foodprices.world.__main__ import main
 from hdx.scraper.wfp.foodprices.world.dataset_generator import DatasetGenerator
-from hdx.scraper.wfp.foodprices.world.file_reader import FileReader
+from hdx.scraper.wfp.foodprices.world.global_markets import get_markets
+from hdx.scraper.wfp.foodprices.world.global_prices_generator import (
+    GlobalPricesGenerator,
+)
 from hdx.scraper.wfp.foodprices.world.hapi_dataset_generator import HAPIDatasetGenerator
 from hdx.scraper.wfp.foodprices.world.hapi_output import HAPIOutput
 from hdx.utilities.compare import assert_files_same
@@ -58,21 +62,55 @@ class TestWFP:
                     wfp = WFPMappings(configuration, wfp_api, retriever)
                     _, commodities = wfp.build_commodity_category_mapping()
                     assert len(commodities) == 1072
-
                     currencies = get_currencies(wfp_api)
                     assert len(currencies) == 127
+                    markets = get_markets(downloader, country_dir)
+                    assert len(markets) == 205
+
+                    prices_generator = GlobalPricesGenerator(
+                        configuration, downloader, country_dir
+                    )
+                    start_date, end_date = prices_generator.get_years_per_country()
+                    assert start_date == datetime(
+                        2000, 1, 15, 0, 0, tzinfo=timezone.utc
+                    )
+                    assert end_date == datetime(2024, 11, 15, 0, 0, tzinfo=timezone.utc)
+                    year_to_pricespath = prices_generator.create_prices_files(tempdir)
+                    assert year_to_pricespath == {
+                        2000: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2000.csv",
+                        2001: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2001.csv",
+                        2002: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2002.csv",
+                        2003: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2003.csv",
+                        2004: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2004.csv",
+                        2005: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2005.csv",
+                        2006: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2006.csv",
+                        2007: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2007.csv",
+                        2008: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2008.csv",
+                        2009: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2009.csv",
+                        2010: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2010.csv",
+                        2011: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2011.csv",
+                        2012: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2012.csv",
+                        2013: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2013.csv",
+                        2014: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2014.csv",
+                        2015: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2015.csv",
+                        2016: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2016.csv",
+                        2017: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2017.csv",
+                        2018: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2018.csv",
+                        2019: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2019.csv",
+                        2020: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2020.csv",
+                        2021: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2021.csv",
+                        2022: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2022.csv",
+                        2023: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2023.csv",
+                        2024: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2024.csv",
+                    }
+
                     dataset_generator = DatasetGenerator(
-                        configuration,
-                        tempdir,
-                        currencies,
+                        configuration, tempdir, start_date, end_date
                     )
 
-                    file_reader = FileReader(downloader, country_dir)
-                    global_prices_info = file_reader.get_global_prices()
-                    markets = file_reader.get_global_markets()
                     dataset, showcase = (
                         dataset_generator.generate_global_dataset_and_showcase(
-                            global_prices_info, markets, commodities
+                            year_to_pricespath, markets, commodities, currencies
                         )
                     )
                     logger.info("Generated global")
@@ -340,6 +378,8 @@ class TestWFP:
 
                     hapi_output = HAPIOutput(
                         configuration,
+                        downloader,
+                        tempdir,
                         error_handler,
                     )
                     hapi_output.setup_admins(retriever)
@@ -355,17 +395,45 @@ class TestWFP:
                     year_to_prices_resource_id = {
                         year: "9101112" for year in range(2000, 2025)
                     }
-                    hapi_prices_by_year = hapi_output.process_prices(
-                        global_prices_info, "1234", year_to_prices_resource_id
+                    hapi_year_to_pricespath = hapi_output.create_prices_files(
+                        year_to_pricespath, "1234", year_to_prices_resource_id, tempdir
                     )
+                    assert hapi_year_to_pricespath == {
+                        2000: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2000.csv",
+                        2001: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2001.csv",
+                        2002: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2002.csv",
+                        2003: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2003.csv",
+                        2004: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2004.csv",
+                        2005: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2005.csv",
+                        2006: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2006.csv",
+                        2007: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2007.csv",
+                        2008: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2008.csv",
+                        2009: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2009.csv",
+                        2010: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2010.csv",
+                        2011: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2011.csv",
+                        2012: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2012.csv",
+                        2013: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2013.csv",
+                        2014: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2014.csv",
+                        2015: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2015.csv",
+                        2016: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2016.csv",
+                        2017: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2017.csv",
+                        2018: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2018.csv",
+                        2019: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2019.csv",
+                        2020: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2020.csv",
+                        2021: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2021.csv",
+                        2022: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2022.csv",
+                        2023: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2023.csv",
+                        2024: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2024.csv",
+                    }
+
                     hapi_dataset_generator = HAPIDatasetGenerator(
                         configuration,
                         tempdir,
-                        global_prices_info["start_date"],
-                        global_prices_info["end_date"],
+                        start_date,
+                        end_date,
                     )
                     dataset = hapi_dataset_generator.generate_prices_dataset(
-                        hapi_prices_by_year,
+                        hapi_year_to_pricespath,
                         hapi_markets,
                         hapi_commodities,
                         hapi_currencies,

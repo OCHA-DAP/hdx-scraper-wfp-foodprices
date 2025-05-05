@@ -4,6 +4,7 @@ from typing import Dict, List, Optional, Tuple
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
+from hdx.data.resource import Resource
 
 logger = getLogger(__name__)
 
@@ -44,12 +45,12 @@ class HAPIDatasetGenerator:
 
     def generate_prices_dataset(
         self,
-        hapi_prices_by_year: Dict,
+        hapi_year_to_pricespath: Dict,
         hapi_markets: List[Dict],
         hapi_commodities: List[Dict],
         hapi_currencies: List[Dict],
     ) -> Optional[Dataset]:
-        if not hapi_prices_by_year:
+        if not hapi_year_to_pricespath:
             logger.warning("Food prices has no data!")
             return None
 
@@ -58,30 +59,18 @@ class HAPIDatasetGenerator:
         dataset.set_time_period(self._start_date, self._end_date)
 
         resource_config = resources_config[0]
-        for year in sorted(hapi_prices_by_year, reverse=True):
-            rows = hapi_prices_by_year[year]
-            if len(rows) == 0:
-                continue
+        for year in sorted(hapi_year_to_pricespath, reverse=True):
+            filepath = hapi_year_to_pricespath[year]
             resource_name = resource_config["name"]
             description = resource_config["description"]
             resourcedata = {
-                "name": f"{resource_name} {year}",
+                "name": resource_name.format(year),
                 "description": f"{year} {description}",
             }
-            hxltags = resource_config["hxltags"]
-            filename = resource_config["filename"]
-
-            success, _ = dataset.generate_resource_from_iterable(
-                list(hxltags.keys()),
-                rows,
-                hxltags,
-                self._folder,
-                f"{filename}_{year}.csv",
-                resourcedata,
-            )
-            if success is False:
-                logger.warning(f"{resource_name} has no data!")
-                return None
+            resource = Resource(resourcedata)
+            resource.set_format("csv")
+            resource.set_file_to_upload(filepath)
+            dataset.add_update_resource(resource)
 
         for i, rows in enumerate((hapi_markets, hapi_commodities, hapi_currencies)):
             resource_config = resources_config[i + 1]

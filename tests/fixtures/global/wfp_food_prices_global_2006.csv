@@ -1,222 +1,222 @@
-countryiso3,countryiso32,countryiso33,countryiso34,countryiso35,countryiso36,countryiso37,countryiso38,countryiso39,countryiso310,countryiso311,countryiso312,countryiso313,countryiso314,countryiso315,countryiso316,countryiso317,countryiso318,countryiso319,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130.97,5.36,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,411.25,16.83,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,463.75,18.98,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,428.82,17.55,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,144.44,5.91,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,531.39,21.74,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,570.56,23.35,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,137.5,5.63,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,570,23.32,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,129.67,5.31,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,399.83,16.36,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,462.83,18.94,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,415.33,16.99,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,146.59,6,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,300,12.27,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,482.33,19.74,,,,,,,,,,,,,,,,,,
-NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,538.33,22.03,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,126.58,5.18,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,416.47,17.04,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,481.05,19.68,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,436.05,17.84,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,146.84,6.01,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,488.68,2,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,511.58,20.93,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130,5.32,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,138.75,5.68,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,403.97,16.53,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,479.22,19.61,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,426.56,17.45,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,158.25,6.48,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,400.22,16.38,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,439.06,17.96,,,,,,,,,,,,,,,,,,
-NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,476.25,19.49,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,141.32,5.78,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,400,16.37,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,485.24,19.85,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,430,17.59,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,143.93,5.89,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,466.67,19.09,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,503.81,20.61,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130,5.32,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130,5.32,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,142.11,5.81,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,405.4,16.59,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,482.13,19.73,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,429.25,17.56,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,154.5,6.32,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,405.85,16.61,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,454,18.58,,,,,,,,,,,,,,,,,,
-NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,484.25,19.81,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,165.83,6.79,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,400,16.37,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,490.42,20.07,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,431.25,17.65,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,147.08,6.02,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,492.08,20.13,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,518.75,21.23,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,140,5.73,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,600,24.55,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,165,6.75,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,403.04,16.49,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,478.93,19.6,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,429.64,17.58,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,135.68,5.55,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,414.61,16.96,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,471.43,19.29,,,,,,,,,,,,,,,,,,
-NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,525.71,21.51,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,161.81,6.62,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,411.28,16.83,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,493.06,20.17,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,435.56,17.82,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,149.17,6.1,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,503.33,20.59,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,534.44,21.87,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,147.5,6.04,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,525,21.48,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,156.47,6.4,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,407.09,16.66,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,489.71,20.04,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,431.18,17.64,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,151.46,6.2,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,406.91,16.65,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,452.65,18.52,,,,,,,,,,,,,,,,,,
-NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,493.13,20.18,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,155.26,6.35,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,424.47,17.37,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,505.53,20.68,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,434.61,17.78,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,157.89,6.46,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,487.89,19.96,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,523.95,21.44,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,156.67,6.41,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,163,6.67,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,426.17,17.44,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,509.67,20.85,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,451.5,18.47,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,155,6.34,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,426.17,17.44,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,447.67,18.32,,,,,,,,,,,,,,,,,,
-NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,490.33,20.06,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,188.25,7.7,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,427.75,17.5,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,520,21.28,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,448,18.33,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,170.25,6.97,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,472.5,19.33,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,502.5,20.56,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,170,6.96,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,575,23.53,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,181.62,7.43,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,426.11,17.43,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,508.33,20.8,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,457.36,18.71,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,161.07,6.59,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.61,17.54,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,641.25,26.24,,,,,,,,,,,,,,,,,,
-NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,470.28,19.24,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,198.42,8.12,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,434.25,17.77,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,520,21.28,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,458.5,18.76,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,180,7.36,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,480,19.64,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,501.25,20.51,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,193.33,7.91,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,191.11,7.82,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,428.61,17.54,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,511.39,20.92,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,462.08,18.91,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,159.62,6.53,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.47,17.53,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,458.89,18.78,,,,,,,,,,,,,,,,,,
-NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,488.89,2,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,212.19,8.68,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,424.06,17.35,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,523.13,21.4,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,461.88,18.9,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,186.88,7.65,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,480,19.64,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,503.13,20.59,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,170,6.96,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,480,19.64,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,195,7.98,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,210.31,8.61,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,427.66,17.5,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,512.17,20.96,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,459.69,18.81,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,164.17,6.72,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,425.47,17.41,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,416.25,17.03,,,,,,,,,,,,,,,,,,
-NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,469.69,19.22,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,228.95,9.37,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,436.67,17.87,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,530,21.69,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,465,19.03,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,211.71,8.66,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,490.92,20.09,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,525.26,21.49,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,185,7.57,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,512.5,20.97,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,196.67,8.05,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,445,18.21,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,218.67,8.95,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,429.38,17.57,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,510.63,20.89,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,460,18.82,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,182.5,7.47,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,430,17.59,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,467.5,19.13,,,,,,,,,,,,,,,,,,
-NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,541,22.14,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,222.26,9.09,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,437,17.88,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,543.57,22.24,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,460,18.82,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,271.43,11.11,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,529.52,21.67,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,583.57,23.88,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,215,8.8,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,567.5,23.22,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,190,7.77,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,546.67,22.37,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,202.34,8.28,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,433.44,17.73,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,545.31,22.31,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,481.41,19.7,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,163.5,6.69,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.91,17.55,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,500.63,20.48,,,,,,,,,,,,,,,,,,
-NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,560,22.91,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,220.96,9.04,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,449.23,18.38,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,570,23.32,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,474.23,19.4,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,347.69,14.23,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,488.46,19.99,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,524.62,21.47,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,213.33,8.73,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,596.67,24.41,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,210.94,8.63,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,451.25,18.46,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,579.38,23.71,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,502.19,20.55,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,178.08,7.29,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.91,17.55,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,496.88,20.33,,,,,,,,,,,,,,,,,,
-NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,568.13,23.25,,,,,,,,,,,,,,,,,,
+countryiso3,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
+#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130.97,5.36
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,411.25,16.83
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,463.75,18.98
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,428.82,17.55
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,144.44,5.91
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,531.39,21.74
+NIC,2006-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,570.56,23.35
+NIC,2006-01-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,137.5,5.63
+NIC,2006-01-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,570,23.32
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,129.67,5.31
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,399.83,16.36
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,462.83,18.94
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,415.33,16.99
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,146.59,6
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,300,12.27
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,482.33,19.74
+NIC,2006-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,538.33,22.03
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,126.58,5.18
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,416.47,17.04
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,481.05,19.68
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,436.05,17.84
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,146.84,6.01
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,488.68,2
+NIC,2006-02-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,511.58,20.93
+NIC,2006-02-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130,5.32
+NIC,2006-02-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,138.75,5.68
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,403.97,16.53
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,479.22,19.61
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,426.56,17.45
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,158.25,6.48
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,400.22,16.38
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,439.06,17.96
+NIC,2006-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,476.25,19.49
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,141.32,5.78
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,400,16.37
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,485.24,19.85
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,430,17.59
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,143.93,5.89
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,466.67,19.09
+NIC,2006-03-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,503.81,20.61
+NIC,2006-03-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130,5.32
+NIC,2006-03-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-03-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,130,5.32
+NIC,2006-03-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,142.11,5.81
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,405.4,16.59
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,482.13,19.73
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,429.25,17.56
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,154.5,6.32
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,405.85,16.61
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,454,18.58
+NIC,2006-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,484.25,19.81
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,165.83,6.79
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,400,16.37
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,490.42,20.07
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,431.25,17.65
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,147.08,6.02
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,492.08,20.13
+NIC,2006-04-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,518.75,21.23
+NIC,2006-04-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,140,5.73
+NIC,2006-04-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,600,24.55
+NIC,2006-04-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14
+NIC,2006-04-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,165,6.75
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,403.04,16.49
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,478.93,19.6
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,429.64,17.58
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,135.68,5.55
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,414.61,16.96
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,471.43,19.29
+NIC,2006-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,525.71,21.51
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,161.81,6.62
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,411.28,16.83
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,493.06,20.17
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,435.56,17.82
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,149.17,6.1
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,503.33,20.59
+NIC,2006-05-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,534.44,21.87
+NIC,2006-05-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,147.5,6.04
+NIC,2006-05-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,525,21.48
+NIC,2006-05-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14
+NIC,2006-05-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,156.47,6.4
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,407.09,16.66
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,489.71,20.04
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,431.18,17.64
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,151.46,6.2
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,406.91,16.65
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,452.65,18.52
+NIC,2006-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,493.13,20.18
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,155.26,6.35
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,424.47,17.37
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,505.53,20.68
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,434.61,17.78
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,157.89,6.46
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,487.89,19.96
+NIC,2006-06-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,523.95,21.44
+NIC,2006-06-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14
+NIC,2006-06-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-06-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,156.67,6.41
+NIC,2006-06-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,163,6.67
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,426.17,17.44
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,509.67,20.85
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,451.5,18.47
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,155,6.34
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,426.17,17.44
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,447.67,18.32
+NIC,2006-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,490.33,20.06
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,188.25,7.7
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,427.75,17.5
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,520,21.28
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,448,18.33
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,170.25,6.97
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,472.5,19.33
+NIC,2006-07-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,502.5,20.56
+NIC,2006-07-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14
+NIC,2006-07-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-07-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,170,6.96
+NIC,2006-07-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,575,23.53
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,181.62,7.43
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,426.11,17.43
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,508.33,20.8
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,457.36,18.71
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,161.07,6.59
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.61,17.54
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,641.25,26.24
+NIC,2006-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,470.28,19.24
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,198.42,8.12
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,434.25,17.77
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,520,21.28
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,458.5,18.76
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,180,7.36
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,480,19.64
+NIC,2006-08-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,500,20.46
+NIC,2006-08-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,150,6.14
+NIC,2006-08-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,501.25,20.51
+NIC,2006-08-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,193.33,7.91
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,191.11,7.82
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,428.61,17.54
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,511.39,20.92
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,462.08,18.91
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,159.62,6.53
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.47,17.53
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,458.89,18.78
+NIC,2006-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,488.89,2
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,212.19,8.68
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,424.06,17.35
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,523.13,21.4
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,461.88,18.9
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,186.88,7.65
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,480,19.64
+NIC,2006-09-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,503.13,20.59
+NIC,2006-09-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,170,6.96
+NIC,2006-09-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,480,19.64
+NIC,2006-09-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,195,7.98
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,210.31,8.61
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,427.66,17.5
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,512.17,20.96
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,459.69,18.81
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,164.17,6.72
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,425.47,17.41
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,416.25,17.03
+NIC,2006-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,469.69,19.22
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,228.95,9.37
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,436.67,17.87
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,530,21.69
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,465,19.03
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,211.71,8.66
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,490.92,20.09
+NIC,2006-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,525.26,21.49
+NIC,2006-10-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,185,7.57
+NIC,2006-10-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,512.5,20.97
+NIC,2006-10-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,196.67,8.05
+NIC,2006-10-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,445,18.21
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,218.67,8.95
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,429.38,17.57
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,510.63,20.89
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,460,18.82
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,182.5,7.47
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,430,17.59
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,467.5,19.13
+NIC,2006-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,541,22.14
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,222.26,9.09
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,437,17.88
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,543.57,22.24
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,460,18.82
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,271.43,11.11
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,529.52,21.67
+NIC,2006-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,583.57,23.88
+NIC,2006-11-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,215,8.8
+NIC,2006-11-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,567.5,23.22
+NIC,2006-11-15,León,León,Leon,2642,12.44,-86.88,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,190,7.77
+NIC,2006-11-15,León,León,Leon,2642,12.44,-86.88,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,546.67,22.37
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,202.34,8.28
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,433.44,17.73
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,545.31,22.31
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,481.41,19.7
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,163.5,6.69
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.91,17.55
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,500.63,20.48
+NIC,2006-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,560,22.91
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,220.96,9.04
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,449.23,18.38
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,570,23.32
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,474.23,19.4
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,347.69,14.23
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,488.46,19.99
+NIC,2006-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,524.62,21.47
+NIC,2006-12-15,Granada,Granada,Granada,2643,11.93,-85.95,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,213.33,8.73
+NIC,2006-12-15,Granada,Granada,Granada,2643,11.93,-85.95,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,596.67,24.41
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,210.94,8.63
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,451.25,18.46
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,579.38,23.71
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,502.19,20.55
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,178.08,7.29
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,miscellaneous food,Sugar (white),349,50 KG,actual,Wholesale,NIO,428.91,17.55
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,496.88,20.33
+NIC,2006-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,568.13,23.25

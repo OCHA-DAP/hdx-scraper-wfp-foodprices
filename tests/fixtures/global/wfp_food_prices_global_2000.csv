@@ -1,83 +1,83 @@
-countryiso3,countryiso32,countryiso33,countryiso34,countryiso35,countryiso36,countryiso37,countryiso38,countryiso39,countryiso310,countryiso311,countryiso312,countryiso313,countryiso314,countryiso315,countryiso316,countryiso317,countryiso318,countryiso319,countryiso320,countryiso321,countryiso322,countryiso323,countryiso324,countryiso325,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,122.64,5.02,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,225.14,9.21,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.94,12.8,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.53,10.17,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,447.94,18.33,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,124.83,5.11,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,227,9.29,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,313.67,12.83,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,249.33,10.2,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,441,18.04,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,159.85,6.54,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.68,9.36,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,314.41,12.86,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,252.65,10.34,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,432.94,17.71,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,166.67,6.82,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.96,9.37,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,314.17,12.85,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,252.08,10.31,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,427.92,17.51,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,182.92,7.48,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.47,9.35,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,313.61,12.83,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,252.5,10.33,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,435.28,17.81,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,186,7.61,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,227.5,9.31,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.67,12.79,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,251.67,10.3,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,430,17.59,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,212.97,8.71,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,225.47,9.23,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,311.56,12.75,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.91,10.18,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,426.56,17.45,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,227.5,9.31,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,226.76,9.28,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.5,12.79,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,250.29,10.24,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,430.88,17.63,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,149.5,6.12,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,227.17,9.3,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.33,12.78,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.67,10.17,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,428.33,17.53,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,90.42,3.7,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,236.11,9.66,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,315,12.89,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,257.5,10.54,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,204.4,8.36,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,383.25,15.68,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,464.5,19.01,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,102.19,4.18,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,226.56,9.27,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.34,12.78,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.75,10.18,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,459.38,18.8,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,87.5,3.58,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,229.43,9.39,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,315.91,12.93,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,251.36,10.28,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,220,9,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,348.58,14.26,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,460.91,18.86,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,92.19,3.77,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,226.88,9.28,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.97,12.81,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,247.81,10.14,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,457.81,18.73,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,98.88,4.05,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,221.38,9.06,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,317.88,13.01,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,242.75,9.93,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,148.13,6.06,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,342.13,14,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,403.75,16.52,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,94.38,3.86,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.75,9.36,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,324.56,13.28,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,250,10.23,,,,,,,,,,,,,,,,,,,,,,,,
-NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,412.5,16.88,,,,,,,,,,,,,,,,,,,,,,,,
+countryiso3,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
+#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
+NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,122.64,5.02
+NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,225.14,9.21
+NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.94,12.8
+NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.53,10.17
+NIC,2000-01-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,447.94,18.33
+NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,124.83,5.11
+NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,227,9.29
+NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,313.67,12.83
+NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,249.33,10.2
+NIC,2000-02-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,441,18.04
+NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,159.85,6.54
+NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.68,9.36
+NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,314.41,12.86
+NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,252.65,10.34
+NIC,2000-03-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,432.94,17.71
+NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,166.67,6.82
+NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.96,9.37
+NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,314.17,12.85
+NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,252.08,10.31
+NIC,2000-04-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,427.92,17.51
+NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,182.92,7.48
+NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.47,9.35
+NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,313.61,12.83
+NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,252.5,10.33
+NIC,2000-05-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,435.28,17.81
+NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,186,7.61
+NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,227.5,9.31
+NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.67,12.79
+NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,251.67,10.3
+NIC,2000-06-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,430,17.59
+NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,212.97,8.71
+NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,225.47,9.23
+NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,311.56,12.75
+NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.91,10.18
+NIC,2000-07-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,426.56,17.45
+NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,227.5,9.31
+NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,226.76,9.28
+NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.5,12.79
+NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,250.29,10.24
+NIC,2000-08-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,430.88,17.63
+NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,149.5,6.12
+NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,227.17,9.3
+NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.33,12.78
+NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.67,10.17
+NIC,2000-09-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,428.33,17.53
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,90.42,3.7
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,236.11,9.66
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,315,12.89
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,257.5,10.54
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,204.4,8.36
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,383.25,15.68
+NIC,2000-10-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,464.5,19.01
+NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,102.19,4.18
+NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,226.56,9.27
+NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.34,12.78
+NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,248.75,10.18
+NIC,2000-10-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,459.38,18.8
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,87.5,3.58
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,229.43,9.39
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,315.91,12.93
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,251.36,10.28
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,220,9
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,348.58,14.26
+NIC,2000-11-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,460.91,18.86
+NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,92.19,3.77
+NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,226.88,9.28
+NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,312.97,12.81
+NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,247.81,10.14
+NIC,2000-11-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,457.81,18.73
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,98.88,4.05
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,221.38,9.06
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,317.88,13.01
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,242.75,9.93
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Sorghum (white),135,46 KG,actual,Wholesale,NIO,148.13,6.06
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,"Beans (kidney, pinto)",519,46 KG,actual,Wholesale,NIO,342.13,14
+NIC,2000-12-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,403.75,16.52
+NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,94.38,3.86
+NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,228.75,9.36
+NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,324.56,13.28
+NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,cereals and tubers,"Rice (ordinary, second quality)",198,46 KG,actual,Wholesale,NIO,250,10.23
+NIC,2000-12-15,Managua,Managua,Managua,1895,12.11,-86.24,pulses and nuts,Beans (red),78,46 KG,actual,Wholesale,NIO,412.5,16.88
