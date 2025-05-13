@@ -66,6 +66,7 @@ class HAPIDatasetGenerator:
             resourcedata = {
                 "name": resource_name.format(year),
                 "description": f"{year} {description}",
+                "p_coded": True,
             }
             resource = Resource(resourcedata)
             resource.set_format("csv")
@@ -79,6 +80,8 @@ class HAPIDatasetGenerator:
                 "name": resource_name,
                 "description": resource_config["description"],
             }
+            if resource_name.endswith("Markets"):
+                resourcedata["p_coded"] = True
             hxltags = resource_config["hxltags"]
             filename = resource_config["filename"]
 
