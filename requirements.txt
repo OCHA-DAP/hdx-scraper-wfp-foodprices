@@ -16,10 +16,8 @@ charset-normalizer==3.4.2
     # via requests
 ckanapi==4.8
     # via hdx-python-api
-click==8.1.8
+click==8.2.0
     # via typer
-cydifflib==1.2.0
-    # via hdx-python-utilities
 defopt==6.4.0
     # via hdx-python-api
 dnspython==2.7.0
@@ -36,13 +34,13 @@ et-xmlfile==2.0.0
     # via openpyxl
 frictionless==5.18.1
     # via hdx-python-utilities
-hdx-python-api==6.3.8
+hdx-python-api==6.3.9
     # via hdx-scraper-wfp-foodprices (pyproject.toml)
-hdx-python-country==3.9.2
+hdx-python-country==3.9.3
     # via
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
-hdx-python-utilities==3.8.6
+hdx-python-utilities==3.8.7
     # via
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
     #   hdx-python-api
@@ -53,7 +51,7 @@ idna==3.10
     # via
     #   email-validator
     #   requests
-ijson==3.3.0
+ijson==3.4.0
     # via hdx-python-utilities
 inflect==7.5.0
     # via quantulum3
@@ -77,7 +75,7 @@ libhxl==5.2.2
     #   hdx-python-country
 loguru==0.7.3
     # via hdx-python-utilities
-makefun==1.15.6
+makefun==1.16.0
     # via hdx-python-api
 markdown-it-py==3.0.0
     # via rich
@@ -153,7 +151,7 @@ ruamel-yaml==0.18.10
     # via hdx-python-utilities
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
-setuptools==80.3.1
+setuptools==80.4.0
     # via ckanapi
 shellingham==1.5.4
     # via typer
