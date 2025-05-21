@@ -1,5 +1,8 @@
 FROM public.ecr.aws/unocha/python:3.12-stable
 
+LABEL org.label-schema.hdx.scraper.step.1=true \
+      org.label-schema.hdx.scraper.step.2=true
+
 WORKDIR /srv
 
 COPY . .
