@@ -27,11 +27,11 @@ ckanapi==4.8
     # via
     #   -c requirements.txt
     #   hdx-python-api
-click==8.2.0
+click==8.2.1
     # via
     #   -c requirements.txt
     #   typer
-coverage==7.8.0
+coverage==7.8.2
     # via pytest-cov
 cydifflib==1.2.0
     # via hdx-scraper-wfp-foodprices (pyproject.toml)
@@ -64,11 +64,11 @@ frictionless==5.18.1
     # via
     #   -c requirements.txt
     #   hdx-python-utilities
-hdx-python-api==6.3.9
+hdx-python-api==6.4.3
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
-hdx-python-country==3.9.3
+hdx-python-country==3.9.4
     # via
     #   -c requirements.txt
     #   hdx-scraper-wfp-foodprices (pyproject.toml)
@@ -114,7 +114,7 @@ jsonpath-ng==1.7.0
     # via
     #   -c requirements.txt
     #   libhxl
-jsonschema==4.23.0
+jsonschema==4.24.0
     # via
     #   -c requirements.txt
     #   frictionless
@@ -170,7 +170,7 @@ petl==1.7.16
     # via
     #   -c requirements.txt
     #   frictionless
-pluggy==1.5.0
+pluggy==1.6.0
     # via pytest
 ply==3.11
     # via
@@ -181,7 +181,7 @@ pockets==0.9.1
     # via
     #   -c requirements.txt
     #   sphinxcontrib-napoleon
-pydantic==2.11.4
+pydantic==2.11.5
     # via
     #   -c requirements.txt
     #   frictionless
@@ -259,12 +259,12 @@ rich==14.0.0
     # via
     #   -c requirements.txt
     #   typer
-rpds-py==0.24.0
+rpds-py==0.25.1
     # via
     #   -c requirements.txt
     #   jsonschema
     #   referencing
-ruamel-yaml==0.18.10
+ruamel-yaml==0.18.11
     # via
     #   -c requirements.txt
     #   hdx-python-utilities
@@ -272,7 +272,7 @@ ruamel-yaml-clib==0.2.12
     # via
     #   -c requirements.txt
     #   ruamel-yaml
-setuptools==80.4.0
+setuptools==80.9.0
     # via
     #   -c requirements.txt
     #   ckanapi
@@ -331,7 +331,7 @@ typeguard==4.4.2
     # via
     #   -c requirements.txt
     #   inflect
-typer==0.15.3
+typer==0.16.0
     # via
     #   -c requirements.txt
     #   frictionless
@@ -341,11 +341,10 @@ typing-extensions==4.13.2
     #   frictionless
     #   pydantic
     #   pydantic-core
-    #   referencing
     #   typeguard
     #   typer
     #   typing-inspection
-typing-inspection==0.4.0
+typing-inspection==0.4.1
     # via
     #   -c requirements.txt
     #   pydantic
