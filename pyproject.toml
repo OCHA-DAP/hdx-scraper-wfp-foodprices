@@ -8,32 +8,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hdx-scraper-wfp-foodprices"
-description = "WFP Food Prices Scraper"
-authors = [{ name = "Michael Rans", email = "rans@email.com" }]
-license = { text = "MIT" }
-keywords = ["HDX", "WFP Food Prices"]
-classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Natural Language :: English",
-    "Operating System :: POSIX :: Linux",
-    "Operating System :: Unix",
-    "Operating System :: MacOS",
-    "Operating System :: Microsoft :: Windows",
-]
-requires-python = ">=3.8"
-
+requires-python = ">=3.13"
 dependencies = [
     "hdx-python-api>= 6.4.3",
     "hdx-python-country>= 3.9.4",
