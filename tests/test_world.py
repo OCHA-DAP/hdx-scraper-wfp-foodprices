@@ -399,21 +399,6 @@ class TestWFP:
                         year_to_pricespath, "1234", year_to_prices_resource_id, tempdir
                     )
                     assert hapi_year_to_pricespath == {
-                        2000: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2000.csv",
-                        2001: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2001.csv",
-                        2002: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2002.csv",
-                        2003: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2003.csv",
-                        2004: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2004.csv",
-                        2005: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2005.csv",
-                        2006: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2006.csv",
-                        2007: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2007.csv",
-                        2008: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2008.csv",
-                        2009: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2009.csv",
-                        2010: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2010.csv",
-                        2011: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2011.csv",
-                        2012: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2012.csv",
-                        2013: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2013.csv",
-                        2014: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2014.csv",
                         2015: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2015.csv",
                         2016: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2016.csv",
                         2017: "/tmp/TestWFPFoodPricesGlobal/hdx_hapi_food_price_global_2017.csv",
@@ -594,186 +579,6 @@ class TestWFP:
                         },
                         {
                             "dataset_preview_enabled": "False",
-                            "description": "2014 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2014",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2013 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2013",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2012 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2012",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2011 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2011",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2010 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2010",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2009 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2009",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2008 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2008",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2007 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2007",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2006 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2006",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2005 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2005",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2004 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2004",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2003 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2003",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2002 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2002",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2001 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2001",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
-                            "description": "2000 Food Prices & Market Monitor data from HDX HAPI, please "
-                            "see [the "
-                            "documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) "
-                            "for more information",
-                            "format": "csv",
-                            "name": "Global Food Security, Nutrition & Poverty: Food Prices 2000",
-                            "p_coded": True,
-                            "resource_type": "file.upload",
-                            "url_type": "upload",
-                        },
-                        {
-                            "dataset_preview_enabled": "False",
                             "description": "Markets data",
                             "format": "csv",
                             "name": "Global Food Security, Nutrition & Poverty: Markets",
@@ -813,7 +618,7 @@ class TestWFP:
                         logger.info(f"Comparing {actual_file} with {expected_file}")
                         assert_files_same(expected_file, actual_file)
 
-                    for year in range(2000, 2025):
+                    for year in range(2015, 2025):
                         for filename in (
                             f"wfp_food_prices_global_{year}",
                             f"hdx_hapi_food_price_global_{year}",

@@ -4,6 +4,7 @@ Top level script. Calls other functions that generate datasets that this script 
 
 """
 
+import gc
 import logging
 import sys
 from os.path import expanduser, join
@@ -192,6 +193,7 @@ def main(
                                 )
                             )
                             dataset.preview_off()
+                            gc.collect()
                             dataset.create_in_hdx(
                                 remove_additional_resources=True,
                                 match_resource_order=True,
