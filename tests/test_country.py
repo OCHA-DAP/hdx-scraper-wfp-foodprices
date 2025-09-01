@@ -136,22 +136,16 @@ class TestWFP:
                         "description": "Food prices data with HXL tags",
                         "format": "csv",
                         "name": "Congo - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Markets data with HXL tags",
                         "format": "csv",
                         "name": "Congo - Markets",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Food prices QuickCharts data with HXL tags",
                         "format": "csv",
                         "name": "QuickCharts: Congo - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                 ]
                 assert showcase == {
@@ -285,22 +279,16 @@ class TestWFP:
                         "description": "Food prices data with HXL tags",
                         "format": "csv",
                         "name": "Nicaragua - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Markets data with HXL tags",
                         "format": "csv",
                         "name": "Nicaragua - Markets",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Food prices QuickCharts data with HXL tags",
                         "format": "csv",
                         "name": "QuickCharts: Nicaragua - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                 ]
                 assert showcase == {
@@ -430,22 +418,16 @@ class TestWFP:
                         "description": "Food prices data with HXL tags",
                         "format": "csv",
                         "name": "Belarus - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Markets data with HXL tags",
                         "format": "csv",
                         "name": "Belarus - Markets",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Food prices QuickCharts data with HXL tags",
                         "format": "csv",
                         "name": "QuickCharts: Belarus - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                 ]
                 assert showcase is None
@@ -525,22 +507,16 @@ class TestWFP:
                         "description": "Food prices data with HXL tags",
                         "format": "csv",
                         "name": "State of Palestine - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Markets data with HXL tags",
                         "format": "csv",
                         "name": "State of Palestine - Markets",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Food prices QuickCharts data with HXL tags",
                         "format": "csv",
                         "name": "QuickCharts: State of Palestine - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                 ]
                 assert showcase == {
@@ -668,22 +644,16 @@ class TestWFP:
                         "description": "Food prices data with HXL tags",
                         "format": "csv",
                         "name": "Syrian Arab Republic - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Markets data with HXL tags",
                         "format": "csv",
                         "name": "Syrian Arab Republic - Markets",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                     {
                         "description": "Food prices QuickCharts data with HXL tags",
                         "format": "csv",
                         "name": "QuickCharts: Syrian Arab Republic - Food Prices",
-                        "resource_type": "file.upload",
-                        "url_type": "upload",
                     },
                 ]
                 assert showcase == {
