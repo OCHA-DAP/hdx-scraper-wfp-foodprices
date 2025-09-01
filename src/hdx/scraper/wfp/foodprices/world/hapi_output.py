@@ -253,7 +253,8 @@ class HAPIOutput:
         headers = list(hxltags.keys())
 
         hapi_year_to_path = {}
-        for year in sorted(year_to_path, reverse=True):
+        years = sorted(year_to_path.keys(), reverse=True)
+        for year in years[:10]:
             rows = [hxltags]
             filepath = year_to_path[year]
             _, iterator = self._downloader.get_tabular_rows(
