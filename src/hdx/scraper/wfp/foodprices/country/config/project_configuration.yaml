@@ -1,5 +1,5 @@
 # Collector specific configuration
-countries_url: "https://api.wfp.org/gefs/1.1.0/geoless/collections/geographicalnames/items/countries?limit=1000"
+countries_url: "https://api.wfp.org/gefs/2.2.2/geoless/collections/geographicalnames/items/countries?limit=1000"
 currency_mappings:
   NIS: ILS
 # Google sheet: https://docs.google.com/spreadsheets/d/1nXveHlfr4i4Fagxg9EOEYMpcTgK9CtWgKzQYiftIS6I/edit#gid=0
