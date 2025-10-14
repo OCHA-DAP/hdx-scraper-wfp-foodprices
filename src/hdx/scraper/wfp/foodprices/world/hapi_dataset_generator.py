@@ -86,7 +86,7 @@ class HAPIDatasetGenerator:
             filename = resource_config["filename"]
 
             success, _ = dataset.generate_resource(
-                self._folder, f"{filename}.csv", rows, resourcedata, headers
+                self._folder, f"{filename}.csv", rows, resourcedata, headers=headers
             )
 
             if success is False:
