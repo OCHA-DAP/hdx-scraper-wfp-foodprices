@@ -39,68 +39,68 @@ hapi_dataset:
     - name: "Global Food Security, Nutrition & Poverty: Food Prices {}"
       description: "Food Prices & Market Monitor data from HDX HAPI, please see [the documentation](https://hdx-hapi.readthedocs.io/en/latest/data_usage_guides/food_security_nutrition_and_poverty/#food-prices-market-monitor) for more information"
       filename: "hdx_hapi_food_price_global_{}.csv"
-      hxltags:
-        location_code: "#country+code"
-        has_hrp: "#meta+has_hrp"
-        in_gho: "#meta+in_gho"
-        provider_admin1_name: "#adm1+name+provider"
-        provider_admin2_name: "#adm2+name+provider"
-        admin1_code: "#adm1+code"
-        admin1_name: "#adm1+name"
-        admin2_code: "#adm2+code"
-        admin2_name: "#adm2+name"
-        admin_level: "#adm+level"
-        market_name: "#loc+market+name"
-        market_code: "#loc+market+code"
-        lat: "#geo+lat"
-        lon: "#geo+lon"
-        commodity_category: "#item+type"
-        commodity_name: "#item+name"
-        commodity_code: "#item+code"
-        unit: "#item+unit"
-        price_flag: "#item+price+flag"
-        price_type: "#item+price+type"
-        currency_code: "#currency+code"
-        price: "#value"
-        usd_price: "#value+usd"
-        reference_period_start: "#date+start"
-        reference_period_end: "#date+end"
-        dataset_hdx_id: "#meta+dataset_id"
-        resource_hdx_id: "#meta+resource_id"
-        warning: "#meta+warning"
-        error: "#meta+error"
+      headers:
+        - location_code
+        - has_hrp
+        - in_gho
+        - provider_admin1_name
+        - provider_admin2_name
+        - admin1_code
+        - admin1_name
+        - admin2_code
+        - admin2_name
+        - admin_level
+        - market_name
+        - market_code
+        - lat
+        - lon
+        - commodity_category
+        - commodity_name
+        - commodity_code
+        - unit
+        - price_flag
+        - price_type
+        - currency_code
+        - price
+        - usd_price
+        - reference_period_start
+        - reference_period_end
+        - dataset_hdx_id
+        - resource_hdx_id
+        - warning
+        - error
     - name: "Global Food Security, Nutrition & Poverty: Markets"
       description: "Markets data"
       filename: "hdx_hapi_market_global"
-      hxltags:
-        location_code: "#country+code"
-        has_hrp: "#meta+has_hrp"
-        in_gho: "#meta+in_gho"
-        provider_admin1_name: "#adm1+name+provider"
-        provider_admin2_name: "#adm2+name+provider"
-        admin1_code: "#adm1+code"
-        admin1_name: "#adm1+name"
-        admin2_code: "#adm2+code"
-        admin2_name: "#adm2+name"
-        admin_level: "#adm+level"
-        market_name: "#loc+market+name"
-        market_code: "#loc+market+code"
-        lat: "#geo+lat"
-        lon: "#geo+lon"
-        dataset_hdx_id: "#meta+dataset_id"
-        resource_hdx_id: "#meta+resource_id"
-        warning: "#meta+warning"
-        error: "#meta+error"
+      headers:
+        - location_code
+        - has_hrp
+        - in_gho
+        - provider_admin1_name
+        - provider_admin2_name
+        - admin1_code
+        - admin1_name
+        - admin2_code
+        - admin2_name
+        - admin_level
+        - market_name
+        - market_code
+        - lat
+        - lon
+        - dataset_hdx_id
+        - resource_hdx_id
+        - warning
+        - error
     - name: "Global Food Security, Nutrition & Poverty: Commodities"
       description: "Commodities data"
       filename: "hdx_hapi_commodity_global"
-      hxltags:
-        category: "#item+type"
-        name: "#item+name"
-        code: "#item+code"
+      headers:
+        - category
+        - name
+        - code
     - name: "Global Food Security, Nutrition & Poverty: Currencies"
       description: "Currencies data"
       filename: "hdx_hapi_currency_global"
-      hxltags:
-        code: "#currency+code"
-        name: "#currency+name"
+      headers:
+        - code
+        - name

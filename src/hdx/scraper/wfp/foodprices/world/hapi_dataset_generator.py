@@ -82,17 +82,13 @@ class HAPIDatasetGenerator:
             }
             if resource_name.endswith("Markets"):
                 resourcedata["p_coded"] = True
-            hxltags = resource_config["hxltags"]
+            headers = resource_config["headers"]
             filename = resource_config["filename"]
 
-            success, _ = dataset.generate_resource_from_iterable(
-                list(hxltags.keys()),
-                rows,
-                hxltags,
-                self._folder,
-                f"{filename}.csv",
-                resourcedata,
+            success, _ = dataset.generate_resource(
+                self._folder, f"{filename}.csv", rows, resourcedata, headers
             )
+
             if success is False:
                 logger.warning(f"{resource_name} has no data!")
                 return None
