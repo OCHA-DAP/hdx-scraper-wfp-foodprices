@@ -143,10 +143,6 @@ def main(
                             year_to_prices_resource_id[year] = resource["id"]
                         elif resource_name == dataset_generator.global_markets_name:
                             markets_resource_id = resource["id"]
-                        elif resource_name == dataset_generator.global_commodities_name:
-                            commodities_resource_id = resource["id"]
-                        elif resource_name == dataset_generator.global_currencies_name:
-                            currencies_resource_id = resource["id"]
                     if year_to_prices_resource_id and markets_resource_id:
                         dataset_id = dataset["id"]
                         hapi_output = HAPIOutput(
@@ -156,13 +152,8 @@ def main(
                             error_handler,
                         )
                         hapi_output.setup_admins(retriever, countryiso3s)
-                        hapi_currencies = hapi_output.process_currencies(
-                            currencies, dataset_id, currencies_resource_id
-                        )
                         hapi_commodities = hapi_output.process_commodities(
                             commodities,
-                            dataset_id,
-                            commodities_resource_id,
                         )
                         hapi_markets = hapi_output.process_markets(
                             markets, dataset_id, markets_resource_id
@@ -180,7 +171,7 @@ def main(
                             hapi_year_to_pricespath,
                             hapi_markets,
                             hapi_commodities,
-                            hapi_currencies,
+                            currencies,
                         )
                         if dataset:
                             dataset.update_from_yaml(

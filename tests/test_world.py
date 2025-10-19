@@ -327,13 +327,8 @@ class TestWFP:
                         error_handler,
                     )
                     hapi_output.setup_admins(retriever)
-                    hapi_currencies = hapi_output.process_currencies(
-                        currencies, "1234", "abcd"
-                    )
                     hapi_commodities = hapi_output.process_commodities(
                         commodities,
-                        "1234",
-                        "efgh",
                     )
                     hapi_markets = hapi_output.process_markets(markets, "1234", "5678")
                     year_to_prices_resource_id = {
@@ -365,7 +360,7 @@ class TestWFP:
                         hapi_year_to_pricespath,
                         hapi_markets,
                         hapi_commodities,
-                        hapi_currencies,
+                        currencies,
                     )
 
                     assert dataset == {
@@ -523,12 +518,12 @@ class TestWFP:
                     ]
 
                     for filename in (
+                        "wfp_currencies_global",
                         "wfp_commodities_global",
                         "wfp_markets_global",
-                        "wfp_currencies_global",
-                        "hdx_hapi_market_global",
-                        "hdx_hapi_commodity_global",
                         "hdx_hapi_currency_global",
+                        "hdx_hapi_commodity_global",
+                        "hdx_hapi_market_global",
                     ):
                         csv_filename = f"{filename}.csv"
                         expected_file = join(global_dir, csv_filename)
