@@ -9,7 +9,6 @@ from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
 from hdx.scraper.wfp.foodprices.utilities import round_min_digits
-from hdx.utilities.downloader import Download
 from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
@@ -56,7 +55,7 @@ class DatasetGenerator:
             logger.exception(f"{countryname} has a problem! {e}")
             return None, None
         dataset.set_subnational(True)
-        tags = ("hxl", "economics", "food security", "indicators", "markets")
+        tags = ("economics", "food security", "indicators", "markets")
         dataset.add_tags(tags)
         if not url:
             return dataset, None
@@ -78,86 +77,25 @@ class DatasetGenerator:
         dataset: Dataset,
         prices_info: Dict,
         markets: Dict,
-        market_to_commodities: Dict,
         sources: Dict,
-    ) -> Tuple[Dataset, List]:
-        number_market = []
-        for key, commodities in market_to_commodities.items():
-            number_market.append((len(commodities), key))
-        number_market = sorted(number_market, reverse=True)
-        qc_indicators = []
-        qc_hxltags = self._configuration["qc_hxltags"]
-        qc_rows = [qc_hxltags]
-        chosen_commodities = set()
-        # Go through markets starting with the one with most commodities
-        for _, adm1adm2market in number_market:
-            commodities = market_to_commodities[adm1adm2market]
-            number_commodity = []
-            for commodityunitpricetypecurrency, details in commodities.items():
-                number_commodity.append((len(details), commodityunitpricetypecurrency))
-            number_commodity = sorted(number_commodity, reverse=True)
-            index = 0
-            # Pick commodity with most rows that has not already been used for another market
-            commodity, unit, pricetype, currency = number_commodity[index][1]
-            while commodity in chosen_commodities:
-                index += 1
-                if index == len(number_commodity):
-                    commodity, unit, pricetype, currency = number_commodity[0][1]
-                    break
-                commodity, unit, pricetype, currency = number_commodity[index][1]
-            adm1, adm2, market_name = adm1adm2market
-            code = (
-                f"{adm1}-{adm2}-{market_name}-{commodity}-{unit}-{pricetype}-{currency}"
-            )
-            for date, usdprice in sorted(
-                commodities[(commodity, unit, pricetype, currency)]
-            ):
-                qc_rows.append(
-                    {
-                        "date": date,
-                        "code": code,
-                        "usdprice": round_min_digits(usdprice),
-                    }
-                )
-            chosen_commodities.add(commodity)
-            marketname = market_name
-            if adm2 != market_name:
-                marketname = f"{adm2}/{marketname}"
-            if adm1 != adm2:
-                marketname = f"{adm1}/{marketname}"
-            qc_indicators.append(
-                {
-                    "code": code,
-                    "title": f"Price of {commodity} in {market_name}",
-                    "unit": "US Dollars ($)",
-                    "description": f"Price of {commodity} ($/{unit}) in {marketname}",
-                    "code_col": "#meta+code",
-                    "value_col": "#value+usd",
-                    "date_col": "#date",
-                }
-            )
-            if len(qc_indicators) == 3:
-                break
-
+    ) -> Dataset:
         dataset.set_time_period(prices_info["start_date"], prices_info["end_date"])
         source_override = self._iso3_to_source.get(countryiso3)
         if source_override is None:
             dataset["dataset_source"] = ", ".join(sorted(sources.values()))
         else:
             dataset["dataset_source"] = source_override
-        hxltags = self._configuration["hxltags"]
 
         countryiso3_lower = countryiso3.lower()
         filename = f"wfp_food_prices_{countryiso3_lower}.csv"
         dataset_title = dataset["title"]
         resourcedata = {
             "name": dataset_title,
-            "description": "Food prices data with HXL tags",
+            "description": "Food prices data",
             "format": "csv",
         }
         prices_headers = self._configuration["prices_headers"]
-        prices_hxltags = {header: hxltags[header] for header in prices_headers}
-        rows = [Download.hxl_row(prices_headers, prices_hxltags, dict_form=True)]
+        rows = []
         prices = prices_info["prices"]
         for key in sorted(prices):
             (
@@ -200,7 +138,7 @@ class DatasetGenerator:
                     "usdprice": round_min_digits(usdprice),
                 }
             )
-        dataset.generate_resource_from_rows(
+        dataset.generate_resource(
             self._folder,
             filename,
             rows,
@@ -211,12 +149,11 @@ class DatasetGenerator:
         filename = f"wfp_markets_{countryiso3_lower}.csv"
         resourcedata = {
             "name": dataset_title.replace("Food Prices", "Markets"),
-            "description": "Markets data with HXL tags",
+            "description": "Markets data",
             "format": "csv",
         }
         markets_headers = self._configuration["markets_headers"]
-        markets_hxltags = {header: hxltags[header] for header in markets_headers}
-        rows = [Download.hxl_row(markets_headers, markets_hxltags, dict_form=True)]
+        rows = []
         for market_id in sorted(markets):
             market_name, adm1, adm2, lat, lon = markets[market_id]
             rows.append(
@@ -230,25 +167,11 @@ class DatasetGenerator:
                     "longitude": lon,
                 }
             )
-        dataset.generate_resource_from_rows(
+        dataset.generate_resource(
             self._folder,
             filename,
             rows,
             resourcedata,
             headers=markets_headers,
         )
-
-        filename = f"wfp_food_prices_{countryiso3.lower()}_qc.csv"
-        resourcedata = {
-            "name": f"QuickCharts: {dataset['title']}",
-            "description": "Food prices QuickCharts data with HXL tags",
-            "format": "csv",
-        }
-        dataset.generate_resource_from_rows(
-            self._folder,
-            filename,
-            qc_rows,
-            resourcedata,
-            headers=list(qc_hxltags.keys()),
-        )
-        return dataset, qc_indicators
+        return dataset

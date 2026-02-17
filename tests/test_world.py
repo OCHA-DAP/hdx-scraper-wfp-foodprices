@@ -124,10 +124,6 @@ class TestWFP:
                         "subnational": "1",
                         "tags": [
                             {
-                                "name": "hxl",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
-                            {
                                 "name": "economics",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
                             },
@@ -150,142 +146,142 @@ class TestWFP:
                     resources = dataset.get_resources()
                     assert resources == [
                         {
-                            "description": "Prices data for 2024 with HXL tags",
+                            "description": "Prices data for 2024",
                             "format": "csv",
                             "name": "Global WFP food prices 2024",
                         },
                         {
-                            "description": "Prices data for 2023 with HXL tags",
+                            "description": "Prices data for 2023",
                             "format": "csv",
                             "name": "Global WFP food prices 2023",
                         },
                         {
-                            "description": "Prices data for 2022 with HXL tags",
+                            "description": "Prices data for 2022",
                             "format": "csv",
                             "name": "Global WFP food prices 2022",
                         },
                         {
-                            "description": "Prices data for 2021 with HXL tags",
+                            "description": "Prices data for 2021",
                             "format": "csv",
                             "name": "Global WFP food prices 2021",
                         },
                         {
-                            "description": "Prices data for 2020 with HXL tags",
+                            "description": "Prices data for 2020",
                             "format": "csv",
                             "name": "Global WFP food prices 2020",
                         },
                         {
-                            "description": "Prices data for 2019 with HXL tags",
+                            "description": "Prices data for 2019",
                             "format": "csv",
                             "name": "Global WFP food prices 2019",
                         },
                         {
-                            "description": "Prices data for 2018 with HXL tags",
+                            "description": "Prices data for 2018",
                             "format": "csv",
                             "name": "Global WFP food prices 2018",
                         },
                         {
-                            "description": "Prices data for 2017 with HXL tags",
+                            "description": "Prices data for 2017",
                             "format": "csv",
                             "name": "Global WFP food prices 2017",
                         },
                         {
-                            "description": "Prices data for 2016 with HXL tags",
+                            "description": "Prices data for 2016",
                             "format": "csv",
                             "name": "Global WFP food prices 2016",
                         },
                         {
-                            "description": "Prices data for 2015 with HXL tags",
+                            "description": "Prices data for 2015",
                             "format": "csv",
                             "name": "Global WFP food prices 2015",
                         },
                         {
-                            "description": "Prices data for 2014 with HXL tags",
+                            "description": "Prices data for 2014",
                             "format": "csv",
                             "name": "Global WFP food prices 2014",
                         },
                         {
-                            "description": "Prices data for 2013 with HXL tags",
+                            "description": "Prices data for 2013",
                             "format": "csv",
                             "name": "Global WFP food prices 2013",
                         },
                         {
-                            "description": "Prices data for 2012 with HXL tags",
+                            "description": "Prices data for 2012",
                             "format": "csv",
                             "name": "Global WFP food prices 2012",
                         },
                         {
-                            "description": "Prices data for 2011 with HXL tags",
+                            "description": "Prices data for 2011",
                             "format": "csv",
                             "name": "Global WFP food prices 2011",
                         },
                         {
-                            "description": "Prices data for 2010 with HXL tags",
+                            "description": "Prices data for 2010",
                             "format": "csv",
                             "name": "Global WFP food prices 2010",
                         },
                         {
-                            "description": "Prices data for 2009 with HXL tags",
+                            "description": "Prices data for 2009",
                             "format": "csv",
                             "name": "Global WFP food prices 2009",
                         },
                         {
-                            "description": "Prices data for 2008 with HXL tags",
+                            "description": "Prices data for 2008",
                             "format": "csv",
                             "name": "Global WFP food prices 2008",
                         },
                         {
-                            "description": "Prices data for 2007 with HXL tags",
+                            "description": "Prices data for 2007",
                             "format": "csv",
                             "name": "Global WFP food prices 2007",
                         },
                         {
-                            "description": "Prices data for 2006 with HXL tags",
+                            "description": "Prices data for 2006",
                             "format": "csv",
                             "name": "Global WFP food prices 2006",
                         },
                         {
-                            "description": "Prices data for 2005 with HXL tags",
+                            "description": "Prices data for 2005",
                             "format": "csv",
                             "name": "Global WFP food prices 2005",
                         },
                         {
-                            "description": "Prices data for 2004 with HXL tags",
+                            "description": "Prices data for 2004",
                             "format": "csv",
                             "name": "Global WFP food prices 2004",
                         },
                         {
-                            "description": "Prices data for 2003 with HXL tags",
+                            "description": "Prices data for 2003",
                             "format": "csv",
                             "name": "Global WFP food prices 2003",
                         },
                         {
-                            "description": "Prices data for 2002 with HXL tags",
+                            "description": "Prices data for 2002",
                             "format": "csv",
                             "name": "Global WFP food prices 2002",
                         },
                         {
-                            "description": "Prices data for 2001 with HXL tags",
+                            "description": "Prices data for 2001",
                             "format": "csv",
                             "name": "Global WFP food prices 2001",
                         },
                         {
-                            "description": "Prices data for 2000 with HXL tags",
+                            "description": "Prices data for 2000",
                             "format": "csv",
                             "name": "Global WFP food prices 2000",
                         },
                         {
-                            "description": "Commodities data with HXL tags",
+                            "description": "Commodities data",
                             "format": "csv",
                             "name": "Global WFP commodities",
                         },
                         {
-                            "description": "Markets data with HXL tags",
+                            "description": "Markets data",
                             "format": "csv",
                             "name": "Global WFP markets",
                         },
                         {
-                            "description": "Currencies data with HXL tags",
+                            "description": "Currencies data",
                             "format": "csv",
                             "name": "Global WFP currencies",
                         },
@@ -297,10 +293,6 @@ class TestWFP:
                         "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
                         "url": "https://dataviz.vam.wfp.org/economic/prices",
                         "tags": [
-                            {
-                                "name": "hxl",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
                             {
                                 "name": "economics",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -375,10 +367,6 @@ class TestWFP:
                         "owner_org": "40d10ece-49de-4791-9aed-e164f1d16dd1",
                         "subnational": "1",
                         "tags": [
-                            {
-                                "name": "hxl",
-                                "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                            },
                             {
                                 "name": "economics",
                                 "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",

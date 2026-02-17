@@ -56,7 +56,7 @@ class DatasetGenerator:
             logger.exception(f"{location_name} has a problem! {e}")
             return None, None
         dataset.set_subnational(True)
-        tags = ("hxl", "economics", "food security", "indicators", "markets")
+        tags = ("economics", "food security", "indicators", "markets")
         dataset.add_tags(tags)
         showcase = Showcase(
             {
@@ -78,7 +78,6 @@ class DatasetGenerator:
         currencies: List[Dict],
     ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
         dataset, showcase = self.get_dataset_and_showcase()
-        hxltags = self._configuration["hxltags"]
         dataset.set_time_period(self._start_date, self._end_date)
         dataset["dataset_source"] = "WFP"
 
@@ -86,7 +85,7 @@ class DatasetGenerator:
             filepath = year_to_pricespath[year]
             resourcedata = {
                 "name": f"{self.global_prices_name} {year}",
-                "description": f"Prices data for {year} with HXL tags",
+                "description": f"Prices data for {year}",
                 "format": "csv",
             }
             resource = Resource(resourcedata)
@@ -97,52 +96,45 @@ class DatasetGenerator:
         filename = "wfp_commodities_global.csv"
         resourcedata = {
             "name": self.global_commodities_name,
-            "description": "Commodities data with HXL tags",
+            "description": "Commodities data",
             "format": "csv",
         }
         commodities_headers = self._configuration["commodities_headers"]
-        commodities_hxltags = {
-            header: hxltags[header] for header in commodities_headers
-        }
-        dataset.generate_resource_from_iterable(
-            commodities_headers,
-            sorted(commodities, key=lambda x: x["commodity_id"]),
-            commodities_hxltags,
+        dataset.generate_resource(
             self._folder,
             filename,
+            sorted(commodities, key=lambda x: x["commodity_id"]),
             resourcedata,
+            commodities_headers,
         )
 
         filename = "wfp_markets_global.csv"
         resourcedata = {
             "name": self.global_markets_name,
-            "description": "Markets data with HXL tags",
+            "description": "Markets data",
             "format": "csv",
         }
         markets_headers = self._configuration["markets_headers"]
-        markets_hxltags = {header: hxltags[header] for header in markets_headers}
-        dataset.generate_resource_from_iterable(
-            markets_headers,
-            sorted(markets, key=lambda x: int(x["market_id"])),
-            markets_hxltags,
+        dataset.generate_resource(
             self._folder,
             filename,
+            sorted(markets, key=lambda x: int(x["market_id"])),
             resourcedata,
+            markets_headers,
         )
 
         filename = "wfp_currencies_global.csv"
         resourcedata = {
             "name": self.global_currencies_name,
-            "description": "Currencies data with HXL tags",
+            "description": "Currencies data",
             "format": "csv",
         }
-        currency_hxltags = self._configuration["currency_hxltags"]
-        dataset.generate_resource_from_iterable(
-            list(currency_hxltags.keys()),
-            currencies,
-            currency_hxltags,
+        currency_headers = self._configuration["currency_headers"]
+        dataset.generate_resource(
             self._folder,
             filename,
+            currencies,
             resourcedata,
+            currency_headers,
         )
         return dataset, showcase

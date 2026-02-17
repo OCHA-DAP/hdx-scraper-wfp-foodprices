@@ -5,9 +5,9 @@ commodities_headers:
   - category
   - commodity
 
-currency_hxltags:
-  code: "#currency+code"
-  name: "#currency+name"
+currency_headers:
+  - code
+  - name
 
 # This is where our definitions of admin levels differ so there is only admin 1
 # data available in admin 2
@@ -29,7 +29,6 @@ hapi_dataset:
   name: "hdx-hapi-food-price"
   title: "HDX HAPI - Food Security, Nutrition & Poverty: Food Prices"
   tags:
-    - "hxl"
     - "economics"
     - "markets"
     - "food security"

@@ -1,5 +1,4 @@
 countryiso3,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
 COG,2023-01-15,Brazzaville,Brazzaville,Brazzaville,7775,-4.26,15.26,cereals and tubers,Cassava flour,74,KG,actual,Retail,XAF,448,0.74
 COG,2023-01-15,Brazzaville,Brazzaville,Brazzaville,7775,-4.26,15.26,cereals and tubers,"Rice (mixed, low quality)",165,KG,actual,Retail,XAF,860,1.42
 COG,2023-01-15,Brazzaville,Brazzaville,Brazzaville,7775,-4.26,15.26,miscellaneous food,Salt,185,KG,actual,Retail,XAF,522,0.86

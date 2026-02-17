@@ -123,11 +123,9 @@ def main(
                         )
                     )
                     dataset["notes"] = dataset["notes"] % snippet
-                    dataset.preview_off()
                     dataset.create_in_hdx(
                         remove_additional_resources=True,
                         match_resource_order=True,
-                        hxl_update=False,
                         updated_by_script=updated_by_script,
                         batch=batch,
                     )
@@ -183,12 +181,10 @@ def main(
                                     main,
                                 )
                             )
-                            dataset.preview_off()
                             gc.collect()
                             dataset.create_in_hdx(
                                 remove_additional_resources=True,
                                 match_resource_order=True,
-                                hxl_update=False,
                                 updated_by_script=updated_by_script,
                                 batch=batch,
                             )
