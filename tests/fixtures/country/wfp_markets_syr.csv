@@ -1,5 +1,4 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
-#loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
 1112,Sheikh Sa'ad,SYR,Damascus,Damascus,33.5,36.3
 1113,Zablatani,SYR,Damascus,Damascus,33.5,36.3
 1114,Barzeh,SYR,Damascus,Damascus,33.57,36.32

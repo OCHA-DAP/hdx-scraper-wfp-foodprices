@@ -53,7 +53,6 @@ def configuration():
         "tags": [
             {"name": tag}
             for tag in (
-                "hxl",
                 "economics",
                 "food security",
                 "indicators",

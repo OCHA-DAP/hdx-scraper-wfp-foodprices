@@ -1,5 +1,4 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
-#loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
 1995,Tubas,PSE,West Bank,Tubas,32.32,35.37
 1996,Jenin,PSE,West Bank,Jenin,32.46,35.29
 1997,Tulkarem,PSE,West Bank,Tulkarm,32.32,35.04

@@ -11,7 +11,6 @@ from hdx.utilities.dateparse import (
     iso_string_from_datetime,
     parse_date,
 )
-from hdx.utilities.dictandlist import dict_of_lists_add
 from hdx.utilities.text import number_format
 
 logger = logging.getLogger(__name__)
@@ -57,11 +56,10 @@ class WFPFood:
         logger.info(f"{len(prices_data)} prices rows")
         return True
 
-    def generate_rows(self) -> Tuple[Dict, Dict, Dict, Dict]:
+    def generate_rows(self) -> Tuple[Dict, Dict, Dict]:
         prices_info = {}
         prices = {}
         prices_info["prices"] = prices
-        market_to_commodities = {}
         sources = {}
         start_date = default_enddate
         end_date = default_date
@@ -119,15 +117,6 @@ class WFPFood:
                     price,
                     usdprice,
                 )
-            if adm1 and adm2 and category and usdprice:
-                adm1adm2market = adm1, adm2, market_name
-                commodities = market_to_commodities.get(adm1adm2market, {})
-                dict_of_lists_add(
-                    commodities,
-                    (commodity, unit, pricetype, currency),
-                    (date_str, usdprice),
-                )
-                market_to_commodities[adm1adm2market] = commodities
         if prices:
             logger.info(
                 f"{len(prices)} unique prices rows of price type actual or aggregate"
@@ -136,4 +125,4 @@ class WFPFood:
             logger.info(f"{self._countryiso3} has no prices!")
         prices_info["start_date"] = start_date
         prices_info["end_date"] = end_date
-        return prices_info, self._markets, market_to_commodities, sources
+        return prices_info, self._markets, sources

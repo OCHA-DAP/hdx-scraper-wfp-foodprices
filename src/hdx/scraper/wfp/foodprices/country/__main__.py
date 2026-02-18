@@ -131,15 +131,12 @@ def main(
                     success = wfp_food.get_price_markets(wfp_api)
                     if not success:
                         continue
-                    prices_info, markets, market_to_commodities, sources = (
-                        wfp_food.generate_rows()
-                    )
-                    dataset, qc_indicators = dataset_generator.complete_dataset(
+                    prices_info, markets, sources = wfp_food.generate_rows()
+                    dataset = dataset_generator.complete_dataset(
                         countryiso3,
                         dataset,
                         prices_info,
                         markets,
-                        market_to_commodities,
                         sources,
                     )
 
@@ -154,11 +151,9 @@ def main(
                         )
                     )
                     dataset["notes"] = dataset["notes"] % snippet
-                    dataset.generate_quickcharts(-1, indicators=qc_indicators)
                     dataset.create_in_hdx(
                         remove_additional_resources=True,
                         match_resource_order=True,
-                        hxl_update=False,
                         updated_by_script=updated_by_script,
                         batch=batch,
                     )

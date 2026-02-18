@@ -37,19 +37,25 @@ class HAPIOutput:
         retriever: Retrieve,
         countryiso3s: Optional[List[str]] = None,
     ):
-        libhxl_dataset = AdminLevel.get_libhxl_dataset(retriever=retriever).cache()
-        libhxl_format_dataset = AdminLevel.get_libhxl_dataset(
-            url=AdminLevel.formats_url, retriever=retriever
-        ).cache()
+        _, iterator = retriever.get_tabular_rows(AdminLevel.admin_url, dict_form=True)
+        pcode_rows = []
+        for row in iterator:
+            if countryiso3s and row["Location"] not in countryiso3s:
+                continue
+            pcode_rows.append(row)
+        _, iterator = retriever.get_tabular_rows(AdminLevel.formats_url, dict_form=True)
+        pcode_formats_rows = []
+        for row in iterator:
+            if countryiso3s and row["Location"] not in countryiso3s:
+                continue
+            pcode_formats_rows.append(row)
         self._admins = []
         for i in range(2):
             admin = AdminLevel(admin_level=i + 1, retriever=retriever)
-            admin.setup_from_libhxl_dataset(
-                libhxl_dataset=libhxl_dataset,
-                countryiso3s=countryiso3s,
-            )
-            admin.load_pcode_formats_from_libhxl_dataset(libhxl_format_dataset)
+            admin.setup_from_iterable(pcode_rows)
+            admin.load_pcode_formats_from_iterable(pcode_formats_rows)
             self._admins.append(admin)
+        self._admins[1].set_parent_admins_from_adminlevels([self._admins[0]])
 
     def complete_admin(self, row: Dict, base_row: Dict):
         market_name = row["market"]
@@ -255,15 +261,13 @@ class HAPIOutput:
         for year in years[:10]:
             filepath = year_to_path[year]
             _, iterator = self._downloader.get_tabular_rows(
-                filepath, has_hxl=True, dict_form=True, encoding="utf-8"
+                filepath, dict_form=True, encoding="utf-8"
             )
             logger.info(f"Reading global prices from {filepath}")
 
             def get_rows():
                 for row in iterator:
                     market_id = row["market_id"]
-                    if market_id[0] == "#":
-                        continue
                     hapi_row = deepcopy(self._base_rows[market_id])
                     hapi_row["commodity_category"] = row["category"]
                     hapi_row["commodity_name"] = row["commodity"]

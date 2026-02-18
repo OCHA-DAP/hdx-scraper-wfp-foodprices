@@ -1,5 +1,4 @@
 market_id,market,countryiso3,admin1,admin2,latitude,longitude
-#loc+market+code,#loc+market+name,#country+code,#adm1+name,#adm2+name,#geo+lat,#geo+lon
 298,National Average,NIC,,,,
 701,Moungali,COG,Brazzaville,Brazzaville,-4.26,15.28
 702,Ouenzé,COG,Brazzaville,Brazzaville,-4.25,15.28

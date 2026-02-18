@@ -1,5 +1,4 @@
 countryiso3,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
 NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Bread,55,Pound,actual,Retail,USD,0.88,0.88
 NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Potatoes,83,Pound,actual,Retail,USD,1.12,1.12
 NIC,2024-01-15,,,National Average,298,,,cereals and tubers,Rice (milled 80-20),86,Pound,actual,Retail,USD,0.51,0.51

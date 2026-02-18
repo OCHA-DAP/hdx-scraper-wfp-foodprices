@@ -1,5 +1,4 @@
 countryiso3,date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice
-#country+code,#date,#adm1+name,#adm2+name,#loc+market+name,#loc+market+code,#geo+lat,#geo+lon,#item+type,#item+name,#item+code,#item+unit,#item+price+flag,#item+price+type,#currency+code,#value,#value+usd
 NIC,2007-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Maize (white),67,46 KG,actual,Wholesale,NIO,209.89,8.59
 NIC,2007-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,Rice (low quality),145,46 KG,actual,Wholesale,NIO,457.14,18.7
 NIC,2007-01-15,Administrative unit not available,Administrative unit not available,Managua (oriental),2641,12.19,-86.29,cereals and tubers,"Rice (ordinary, first quality)",197,46 KG,actual,Wholesale,NIO,576.36,23.58

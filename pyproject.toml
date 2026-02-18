@@ -10,9 +10,9 @@ build-backend = "hatchling.build"
 name = "hdx-scraper-wfp-foodprices"
 requires-python = ">=3.13"
 dependencies = [
-  "hdx-python-api>= 6.5.2",
-  "hdx-python-country>= 3.9.8",
-  "hdx-python-utilities>= 3.9.5",
+  "hdx-python-api>= 6.6.5",
+  "hdx-python-country>= 4.1.1",
+  "hdx-python-utilities>= 4.0.6",
   "sigfig",
 ]
 dynamic = ["version"]

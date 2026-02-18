@@ -84,15 +84,12 @@ class TestWFP:
                     commodity_to_category,
                 )
                 _ = wfp_food.get_price_markets(wfp_api)
-                prices, markets, market_to_commodities, sources = (
-                    wfp_food.generate_rows()
-                )
-                dataset, qc_indicators = dataset_generator.complete_dataset(
+                prices, markets, sources = wfp_food.generate_rows()
+                dataset = dataset_generator.complete_dataset(
                     countryiso3,
                     dataset,
                     prices,
                     markets,
-                    market_to_commodities,
                     sources,
                 )
 
@@ -106,10 +103,6 @@ class TestWFP:
                     "groups": [{"name": "cog"}],
                     "subnational": "1",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -133,19 +126,14 @@ class TestWFP:
                 resources = dataset.get_resources()
                 assert resources == [
                     {
-                        "description": "Food prices data with HXL tags",
+                        "description": "Food prices data",
                         "format": "csv",
                         "name": "Congo - Food Prices",
                     },
                     {
-                        "description": "Markets data with HXL tags",
+                        "description": "Markets data",
                         "format": "csv",
                         "name": "Congo - Markets",
-                    },
-                    {
-                        "description": "Food prices QuickCharts data with HXL tags",
-                        "format": "csv",
-                        "name": "QuickCharts: Congo - Food Prices",
                     },
                 ]
                 assert showcase == {
@@ -155,10 +143,6 @@ class TestWFP:
                     "url": "https://dataviz.vam.wfp.org/southern-africa/congo/overview",
                     "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -177,40 +161,6 @@ class TestWFP:
                         },
                     ],
                 }
-                assert qc_indicators == [
-                    {
-                        "code": "Brazzaville-Brazzaville-Total-Beans (white)-KG-Retail-XAF",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Beans (white) ($/KG) in Brazzaville/Total",
-                        "title": "Price of Beans (white) in Total",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "Point-Noire-Pointe-Noire-Grand marché/Fond Ntié-Ntié/Nkouikou-Rice "
-                        "(mixed, low quality)-KG-Retail-XAF",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Rice (mixed, low quality) ($/KG) in "
-                        "Point-Noire/Pointe-Noire/Grand marché/Fond "
-                        "Ntié-Ntié/Nkouikou",
-                        "title": "Price of Rice (mixed, low quality) in Grand marché/Fond "
-                        "Ntié-Ntié/Nkouikou",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "Pool-Kinkala-Kinkala-Oil (vegetable)-L-Retail-XAF",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Oil (vegetable) ($/L) in Pool/Kinkala",
-                        "title": "Price of Oil (vegetable) in Kinkala",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                ]
-
                 countryiso3 = "NIC"
                 dataset, showcase = dataset_generator.get_dataset_and_showcase(
                     countryiso3
@@ -223,15 +173,12 @@ class TestWFP:
                     commodity_to_category,
                 )
                 _ = wfp_food.get_price_markets(wfp_api)
-                prices, markets, market_to_commodities, sources = (
-                    wfp_food.generate_rows()
-                )
-                dataset, qc_indicators = dataset_generator.complete_dataset(
+                prices, markets, sources = wfp_food.generate_rows()
+                dataset = dataset_generator.complete_dataset(
                     countryiso3,
                     dataset,
                     prices,
                     markets,
-                    market_to_commodities,
                     sources,
                 )
 
@@ -250,10 +197,6 @@ class TestWFP:
                     "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
                     "subnational": "1",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -276,19 +219,14 @@ class TestWFP:
                 resources = dataset.get_resources()
                 assert resources == [
                     {
-                        "description": "Food prices data with HXL tags",
+                        "description": "Food prices data",
                         "format": "csv",
                         "name": "Nicaragua - Food Prices",
                     },
                     {
-                        "description": "Markets data with HXL tags",
+                        "description": "Markets data",
                         "format": "csv",
                         "name": "Nicaragua - Markets",
-                    },
-                    {
-                        "description": "Food prices QuickCharts data with HXL tags",
-                        "format": "csv",
-                        "name": "QuickCharts: Nicaragua - Food Prices",
                     },
                 ]
                 assert showcase == {
@@ -298,10 +236,6 @@ class TestWFP:
                     "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
                     "url": "https://dataviz.vam.wfp.org/latin-america-and-the-caribbean/nicaragua/overview",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -320,39 +254,6 @@ class TestWFP:
                         },
                     ],
                 }
-                assert qc_indicators == [
-                    {
-                        "code": "Managua-Managua-Managua-Rice (ordinary, second quality)-46 "
-                        "KG-Wholesale-NIO",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Rice (ordinary, second quality) ($/46 KG) in "
-                        "Managua",
-                        "title": "Price of Rice (ordinary, second quality) in Managua",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "Administrative unit not available-Administrative unit not "
-                        "available-Managua (oriental)-Sorghum (white)-46 KG-Wholesale-NIO",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Sorghum (white) ($/46 KG) in Administrative unit "
-                        "not available/Managua (oriental)",
-                        "title": "Price of Sorghum (white) in Managua (oriental)",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "León-León-Leon-Maize (white)-46 KG-Wholesale-NIO",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Maize (white) ($/46 KG) in León/Leon",
-                        "title": "Price of Maize (white) in Leon",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                ]
 
                 countryiso3 = "BLR"
                 dataset, showcase = dataset_generator.get_dataset_and_showcase(
@@ -366,15 +267,12 @@ class TestWFP:
                     commodity_to_category,
                 )
                 _ = wfp_food.get_price_markets(wfp_api)
-                prices, markets, market_to_commodities, sources = (
-                    wfp_food.generate_rows()
-                )
-                dataset, qc_indicators = dataset_generator.complete_dataset(
+                prices, markets, sources = wfp_food.generate_rows()
+                dataset = dataset_generator.complete_dataset(
                     countryiso3,
                     dataset,
                     prices,
                     markets,
-                    market_to_commodities,
                     sources,
                 )
 
@@ -388,10 +286,6 @@ class TestWFP:
                     "groups": [{"name": "blr"}],
                     "subnational": "1",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -415,33 +309,17 @@ class TestWFP:
                 resources = dataset.get_resources()
                 assert resources == [
                     {
-                        "description": "Food prices data with HXL tags",
+                        "description": "Food prices data",
                         "format": "csv",
                         "name": "Belarus - Food Prices",
                     },
                     {
-                        "description": "Markets data with HXL tags",
+                        "description": "Markets data",
                         "format": "csv",
                         "name": "Belarus - Markets",
                     },
-                    {
-                        "description": "Food prices QuickCharts data with HXL tags",
-                        "format": "csv",
-                        "name": "QuickCharts: Belarus - Food Prices",
-                    },
                 ]
                 assert showcase is None
-                assert qc_indicators == [
-                    {
-                        "code": "Minsk City-Minsk City-Minsk-Wheat flour-KG-Retail-BYR",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Wheat flour ($/KG) in Minsk City/Minsk",
-                        "title": "Price of Wheat flour in Minsk",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    }
-                ]
 
                 countryiso3 = "PSE"
                 dataset, showcase = dataset_generator.get_dataset_and_showcase(
@@ -455,15 +333,12 @@ class TestWFP:
                     commodity_to_category,
                 )
                 _ = wfp_food.get_price_markets(wfp_api)
-                prices, markets, market_to_commodities, sources = (
-                    wfp_food.generate_rows()
-                )
-                dataset, qc_indicators = dataset_generator.complete_dataset(
+                prices, markets, sources = wfp_food.generate_rows()
+                dataset = dataset_generator.complete_dataset(
                     countryiso3,
                     dataset,
                     prices,
                     markets,
-                    market_to_commodities,
                     sources,
                 )
 
@@ -477,10 +352,6 @@ class TestWFP:
                     "groups": [{"name": "pse"}],
                     "subnational": "1",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -504,19 +375,14 @@ class TestWFP:
                 resources = dataset.get_resources()
                 assert resources == [
                     {
-                        "description": "Food prices data with HXL tags",
+                        "description": "Food prices data",
                         "format": "csv",
                         "name": "State of Palestine - Food Prices",
                     },
                     {
-                        "description": "Markets data with HXL tags",
+                        "description": "Markets data",
                         "format": "csv",
                         "name": "State of Palestine - Markets",
-                    },
-                    {
-                        "description": "Food prices QuickCharts data with HXL tags",
-                        "format": "csv",
-                        "name": "QuickCharts: State of Palestine - Food Prices",
                     },
                 ]
                 assert showcase == {
@@ -526,10 +392,6 @@ class TestWFP:
                     "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
                     "url": "https://dataviz.vam.wfp.org/the-middle-east-and-northern-africa/palestine/overview",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -548,37 +410,6 @@ class TestWFP:
                         },
                     ],
                 }
-                assert qc_indicators == [
-                    {
-                        "code": "Gaza Strip-Gaza-Gaza-Oil (olive)-KG-Retail-ILS",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Oil (olive) ($/KG) in Gaza Strip/Gaza",
-                        "title": "Price of Oil (olive) in Gaza",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "West Bank-Tulkarm-Tulkarem-Water (drinking)-Cubic meter-Retail-ILS",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Water (drinking) ($/Cubic meter) in West "
-                        "Bank/Tulkarm/Tulkarem",
-                        "title": "Price of Water (drinking) in Tulkarem",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "West Bank-Ramallah and Albireh-Ramallah-Tea-KG-Retail-ILS",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Tea ($/KG) in West Bank/Ramallah and "
-                        "Albireh/Ramallah",
-                        "title": "Price of Tea in Ramallah",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                ]
 
                 countryiso3 = "SYR"
                 dataset, showcase = dataset_generator.get_dataset_and_showcase(
@@ -592,15 +423,12 @@ class TestWFP:
                     commodity_to_category,
                 )
                 _ = wfp_food.get_price_markets(wfp_api)
-                prices, markets, market_to_commodities, sources = (
-                    wfp_food.generate_rows()
-                )
-                dataset, qc_indicators = dataset_generator.complete_dataset(
+                prices, markets, sources = wfp_food.generate_rows()
+                dataset = dataset_generator.complete_dataset(
                     countryiso3,
                     dataset,
                     prices,
                     markets,
-                    market_to_commodities,
                     sources,
                 )
 
@@ -615,10 +443,6 @@ class TestWFP:
                     "owner_org": "3ecac442-7fed-448d-8f78-b385ef6f84e7",
                     "subnational": "1",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -641,19 +465,14 @@ class TestWFP:
                 resources = dataset.get_resources()
                 assert resources == [
                     {
-                        "description": "Food prices data with HXL tags",
+                        "description": "Food prices data",
                         "format": "csv",
                         "name": "Syrian Arab Republic - Food Prices",
                     },
                     {
-                        "description": "Markets data with HXL tags",
+                        "description": "Markets data",
                         "format": "csv",
                         "name": "Syrian Arab Republic - Markets",
-                    },
-                    {
-                        "description": "Food prices QuickCharts data with HXL tags",
-                        "format": "csv",
-                        "name": "QuickCharts: Syrian Arab Republic - Food Prices",
                     },
                 ]
                 assert showcase == {
@@ -662,10 +481,6 @@ class TestWFP:
                     "notes": "Syrian Arab Republic food prices data from World Food Programme "
                     "displayed through VAM Economic Explorer",
                     "tags": [
-                        {
-                            "name": "hxl",
-                            "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
-                        },
                         {
                             "name": "economics",
                             "vocabulary_id": "b891512e-9516-4bf5-962a-7a289772a2a1",
@@ -686,49 +501,16 @@ class TestWFP:
                     "title": "Syrian Arab Republic - Food Prices showcase",
                     "url": "https://dataviz.vam.wfp.org/the-middle-east-and-northern-africa/syrian-arab-republic/overview",
                 }
-                assert qc_indicators == [
-                    {
-                        "code": "Lattakia-Jablah-Jablah-Wheat flour-KG-Retail-SYP",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Wheat flour ($/KG) in Lattakia/Jablah",
-                        "title": "Price of Wheat flour in Jablah",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "Tartous-Tartous-Tartous-Oil-L-Retail-SYP",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Oil ($/L) in Tartous",
-                        "title": "Price of Oil in Tartous",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                    {
-                        "code": "Rural Damascus-Rural Damascus-Qudsiya-Beans (white)-KG-Retail-SYP",
-                        "code_col": "#meta+code",
-                        "date_col": "#date",
-                        "description": "Price of Beans (white) ($/KG) in Rural Damascus/Qudsiya",
-                        "title": "Price of Beans (white) in Qudsiya",
-                        "unit": "US Dollars ($)",
-                        "value_col": "#value+usd",
-                    },
-                ]
 
                 for filename in (
                     "wfp_food_prices_cog",
                     "wfp_markets_cog",
-                    "wfp_food_prices_cog_qc",
                     "wfp_food_prices_blr",
                     "wfp_markets_blr",
-                    "wfp_food_prices_blr_qc",
                     "wfp_food_prices_pse",
                     "wfp_markets_pse",
-                    "wfp_food_prices_pse_qc",
                     "wfp_food_prices_syr",
                     "wfp_markets_syr",
-                    "wfp_food_prices_syr_qc",
                 ):
                     csv_filename = f"{filename}.csv"
                     expected_file = join(country_dir, csv_filename)
