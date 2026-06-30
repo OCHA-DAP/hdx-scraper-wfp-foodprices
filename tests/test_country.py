@@ -9,16 +9,17 @@ import logging
 from os.path import join
 
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.country.__main__ import main
-from hdx.scraper.wfp.foodprices.country.dataset_generator import DatasetGenerator
-from hdx.scraper.wfp.foodprices.country.wfp_food import WFPFood
-from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
-from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.utilities.compare import assert_files_same
 from hdx.utilities.downloader import Download
 from hdx.utilities.loader import load_yaml
 from hdx.utilities.path import script_dir_plus_file, temp_dir
 from hdx.utilities.retriever import Retrieve
+
+from hdx.scraper.wfp.foodprices.country.__main__ import main
+from hdx.scraper.wfp.foodprices.country.dataset_generator import DatasetGenerator
+from hdx.scraper.wfp.foodprices.country.wfp_food import WFPFood
+from hdx.scraper.wfp.foodprices.utilities import get_now, setup_currency
+from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 
 logger = logging.getLogger(__name__)
 

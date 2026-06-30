@@ -1,13 +1,12 @@
 import logging
 from glob import iglob
-from typing import List, Optional
 
 from hdx.utilities.downloader import Download
 
 logger = logging.getLogger(__name__)
 
 
-def get_markets(downloader: Download, folder: str) -> Optional[List]:
+def get_markets(downloader: Download, folder: str) -> list | None:
     filepaths = []
     for filepath in iglob(f"{folder}/wfp_markets*.csv", recursive=False):
         if any(x in filepath for x in ("_global",)):

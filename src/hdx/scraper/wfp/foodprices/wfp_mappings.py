@@ -9,7 +9,6 @@ Creates datasets with flattened tables of WFP food prices.
 
 import logging
 from os import getenv
-from typing import Dict, List, Tuple
 
 from hdx.api.configuration import Configuration
 from hdx.location.wfp_api import WFPAPI
@@ -29,7 +28,7 @@ class WFPMappings:
         self._wfp_api = wfp_api
         self._retriever = retriever
 
-    def read_region_mapping(self) -> Dict[str, str]:
+    def read_region_mapping(self) -> dict[str, str]:
         headers, rows = self._retriever.get_tabular_rows(
             self._configuration["region_mapping_url"],
             dict_form=True,
@@ -44,7 +43,7 @@ class WFPMappings:
             iso3_to_showcase_url[countryiso3] = url
         return iso3_to_showcase_url
 
-    def read_source_overrides(self) -> Dict[str, str]:
+    def read_source_overrides(self) -> dict[str, str]:
         headers, rows = self._retriever.get_tabular_rows(
             self._configuration["source_overrides_url"],
             dict_form=True,
@@ -57,7 +56,7 @@ class WFPMappings:
             iso3_to_source[countryiso3] = source
         return iso3_to_source
 
-    def get_countries(self, countryiso3s: List[str] = []) -> List[Dict[str, str]]:
+    def get_countries(self, countryiso3s: list[str] = []) -> list[dict[str, str]]:
         url = self._configuration["countries_url"]
         json = self._wfp_api.retrieve(url, "countries.json", "countries")
         countries = set()
@@ -73,7 +72,7 @@ class WFPMappings:
             countries.add((countryiso3, country["adm0_name"]))
         return [{"iso3": x[0], "name": x[1]} for x in sorted(countries)]
 
-    def build_commodity_category_mapping(self) -> Tuple[Dict, List]:
+    def build_commodity_category_mapping(self) -> tuple[dict, list]:
         categoryid_to_name = {}
         for category in self._wfp_api.get_items("Commodities/Categories/List"):
             categoryid_to_name[category["id"]] = category["name"]

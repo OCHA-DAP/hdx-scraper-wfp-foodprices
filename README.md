@@ -18,9 +18,19 @@ markets files); a 100 MB global standard food prices dataset is then generated
 and uploaded; and finally a HAPI food prices dataset is produced from the global
 data. It runs every month.
 
+### Installation
+
+    uv sync
+
 ### Usage
 
-    python run.py
+Country run (per-country datasets):
+
+    uv run python run.py
+
+World/global run (global and HAPI datasets):
+
+    uv run python run2.py
 
 For the script to run, you will need to have a file called .hdx_configuration.yaml in your home directory containing your HDX key eg.
 

@@ -1,14 +1,12 @@
 import logging
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
-
-from slugify import slugify
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.resource import Resource
 from hdx.data.showcase import Showcase
+from slugify import slugify
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +30,7 @@ class DatasetGenerator:
         self._start_date = start_date
         self._end_date = end_date
 
-    def get_dataset_and_showcase(self) -> Tuple[Optional[Dataset], Optional[Showcase]]:
+    def get_dataset_and_showcase(self) -> tuple[Dataset | None, Showcase | None]:
         location = "world"
         location_name = "Global"
         slugified_name = self.slugified_global_name
@@ -72,11 +70,11 @@ class DatasetGenerator:
 
     def generate_global_dataset_and_showcase(
         self,
-        year_to_pricespath: Dict,
-        markets: List[Dict],
-        commodities: List[Dict],
-        currencies: List[Dict],
-    ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
+        year_to_pricespath: dict,
+        markets: list[dict],
+        commodities: list[dict],
+        currencies: list[dict],
+    ) -> tuple[Dataset | None, Showcase | None]:
         dataset, showcase = self.get_dataset_and_showcase()
         dataset.set_time_period(self._start_date, self._end_date)
         dataset["dataset_source"] = "WFP"

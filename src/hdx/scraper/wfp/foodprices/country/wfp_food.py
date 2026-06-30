@@ -1,10 +1,8 @@
 import logging
-from typing import Dict, Optional, Tuple
 
 from hdx.api.configuration import Configuration
 from hdx.location.currency import Currency, CurrencyError
 from hdx.location.wfp_api import WFPAPI
-from hdx.scraper.wfp.foodprices.country.source_processing import process_source
 from hdx.utilities.dateparse import (
     default_date,
     default_enddate,
@@ -12,6 +10,8 @@ from hdx.utilities.dateparse import (
     parse_date,
 )
 from hdx.utilities.text import number_format
+
+from hdx.scraper.wfp.foodprices.country.source_processing import process_source
 
 logger = logging.getLogger(__name__)
 
@@ -21,9 +21,9 @@ class WFPFood:
         self,
         countryiso3: str,
         configuration: Configuration,
-        showcase_url: Optional[str],
-        source: Optional[str],
-        commodity_to_category: Dict[str, str],
+        showcase_url: str | None,
+        source: str | None,
+        commodity_to_category: dict[str, str],
     ):
         self._countryiso3 = countryiso3
         self._configuration = configuration
@@ -56,7 +56,7 @@ class WFPFood:
         logger.info(f"{len(prices_data)} prices rows")
         return True
 
-    def generate_rows(self) -> Tuple[Dict, Dict, Dict]:
+    def generate_rows(self) -> tuple[dict, dict, dict]:
         prices_info = {}
         prices = {}
         prices_info["prices"] = prices

@@ -1,9 +1,7 @@
 import logging
 from datetime import datetime
 from os.path import exists, join
-from typing import Any, Dict, List, Optional
-
-from sigfig import round
+from typing import Any
 
 from hdx.location.currency import Currency
 from hdx.location.wfp_api import WFPAPI
@@ -12,6 +10,7 @@ from hdx.utilities.dateparse import now_utc, parse_date
 from hdx.utilities.loader import load_text, load_yaml
 from hdx.utilities.retriever import Retrieve
 from hdx.utilities.saver import save_text, save_yaml
+from sigfig import round
 
 logger = logging.getLogger(__name__)
 
@@ -33,7 +32,7 @@ def get_now(retriever: Retrieve):
 
 def get_currencies(
     wfp_api: WFPAPI,
-) -> List[Dict]:
+) -> list[dict]:
     wfp_fx = WFPExchangeRates(wfp_api)
     currencies = wfp_fx.get_currencies_info()
     return sorted(currencies, key=lambda c: c["code"])
@@ -43,8 +42,8 @@ def setup_currency(
     now: datetime,
     retriever: Retrieve,
     wfp_api: WFPAPI,
-    wfp_rates_folder: Optional[str] = None,
-) -> List[Dict]:
+    wfp_rates_folder: str | None = None,
+) -> list[dict]:
     currencies = get_currencies(wfp_api)
     currency_codes = [x["code"] for x in currencies]
     wfp_fx = WFPExchangeRates(wfp_api)
@@ -71,10 +70,10 @@ def setup_currency(
     return currencies
 
 
-def round_min_digits(val: Any, nonevalue: Optional[str] = "") -> Optional[str]:
+def round_min_digits(val: Any, nonevalue: str | None = "") -> str | None:
     if val == "" or val is None:
         return nonevalue
-    num_str = "%.2f" % val
+    num_str = f"{val:.2f}"
     count = 0
     for digit in num_str:
         if digit in "123456789":

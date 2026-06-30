@@ -1,6 +1,5 @@
 from datetime import datetime
 from logging import getLogger
-from typing import Dict, List, Optional, Tuple
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
@@ -23,7 +22,7 @@ class HAPIDatasetGenerator:
         self._start_date = start_date
         self._end_date = end_date
 
-    def generate_dataset(self) -> Tuple[Dataset, Dict]:
+    def generate_dataset(self) -> tuple[Dataset, dict]:
         title = self._configuration["title"]
         logger.info(f"Creating dataset: {title}")
         dataset = Dataset(
@@ -45,11 +44,11 @@ class HAPIDatasetGenerator:
 
     def generate_prices_dataset(
         self,
-        hapi_year_to_pricespath: Dict,
-        hapi_markets: List[Dict],
-        hapi_commodities: List[Dict],
-        hapi_currencies: List[Dict],
-    ) -> Optional[Dataset]:
+        hapi_year_to_pricespath: dict,
+        hapi_markets: list[dict],
+        hapi_commodities: list[dict],
+        hapi_currencies: list[dict],
+    ) -> Dataset | None:
         if not hapi_year_to_pricespath:
             logger.warning("Food prices has no data!")
             return None

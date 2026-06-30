@@ -1,11 +1,10 @@
 import re
 from difflib import SequenceMatcher
-from typing import Dict, List
 
 from hdx.utilities.matching import multiple_replace
 
 
-def match_source(sources: List[str], source: str) -> bool:
+def match_source(sources: list[str], source: str) -> bool:
     words = source.split(" ")
     if len(words) < 2:
         return False
@@ -20,7 +19,7 @@ def match_source(sources: List[str], source: str) -> bool:
     return found
 
 
-def process_source(sources: Dict, orig_source: str):
+def process_source(sources: dict, orig_source: str):
     replacements = {"M/o": "Ministry of", "+": "/"}
     orig_source = multiple_replace(orig_source, replacements)
     regex = r"Government.*,(Ministry.*)"

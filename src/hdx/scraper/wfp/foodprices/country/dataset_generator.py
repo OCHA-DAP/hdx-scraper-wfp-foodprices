@@ -1,15 +1,14 @@
 import logging
-from typing import Dict, List, Optional, Tuple
-
-from slugify import slugify
 
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
 from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
 from hdx.location.country import Country
-from hdx.scraper.wfp.foodprices.utilities import round_min_digits
 from hdx.utilities.text import number_format
+from slugify import slugify
+
+from hdx.scraper.wfp.foodprices.utilities import round_min_digits
 
 logger = logging.getLogger(__name__)
 
@@ -19,9 +18,9 @@ class DatasetGenerator:
         self,
         configuration: Configuration,
         folder: str,
-        iso3_to_showcase_url: Dict[str, str],
-        iso3_to_source: Dict[str, str],
-        currencies: List[Dict],
+        iso3_to_showcase_url: dict[str, str],
+        iso3_to_source: dict[str, str],
+        currencies: list[dict],
     ):
         self._configuration = configuration
         self._folder = folder
@@ -31,7 +30,7 @@ class DatasetGenerator:
 
     def get_dataset_and_showcase(
         self, countryiso3: str
-    ) -> Tuple[Optional[Dataset], Optional[Showcase]]:
+    ) -> tuple[Dataset | None, Showcase | None]:
         countryname = Country.get_country_name_from_iso3(countryiso3)
         name = f"WFP food prices for {countryname}"
         slugified_name = slugify(name).lower()
@@ -75,9 +74,9 @@ class DatasetGenerator:
         self,
         countryiso3: str,
         dataset: Dataset,
-        prices_info: Dict,
-        markets: Dict,
-        sources: Dict,
+        prices_info: dict,
+        markets: dict,
+        sources: dict,
     ) -> Dataset:
         dataset.set_time_period(prices_info["start_date"], prices_info["end_date"])
         source_override = self._iso3_to_source.get(countryiso3)

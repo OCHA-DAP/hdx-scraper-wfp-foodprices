@@ -6,13 +6,18 @@ Unit tests for wfpfood scraper.
 
 import gc
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from os.path import join
 
 import pytest
-
 from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.location.wfp_api import WFPAPI
+from hdx.utilities.compare import assert_files_same
+from hdx.utilities.downloader import Download
+from hdx.utilities.loader import load_yaml
+from hdx.utilities.path import script_dir_plus_file, temp_dir
+from hdx.utilities.retriever import Retrieve
+
 from hdx.scraper.wfp.foodprices.utilities import get_currencies
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
 from hdx.scraper.wfp.foodprices.world.__main__ import main
@@ -23,11 +28,6 @@ from hdx.scraper.wfp.foodprices.world.global_prices_generator import (
 )
 from hdx.scraper.wfp.foodprices.world.hapi_dataset_generator import HAPIDatasetGenerator
 from hdx.scraper.wfp.foodprices.world.hapi_output import HAPIOutput
-from hdx.utilities.compare import assert_files_same
-from hdx.utilities.downloader import Download
-from hdx.utilities.loader import load_yaml
-from hdx.utilities.path import script_dir_plus_file, temp_dir
-from hdx.utilities.retriever import Retrieve
 
 logger = logging.getLogger(__name__)
 
@@ -71,10 +71,8 @@ class TestWFP:
                         configuration, downloader, country_dir
                     )
                     start_date, end_date = prices_generator.get_years_per_country()
-                    assert start_date == datetime(
-                        2000, 1, 15, 0, 0, tzinfo=timezone.utc
-                    )
-                    assert end_date == datetime(2024, 11, 15, 0, 0, tzinfo=timezone.utc)
+                    assert start_date == datetime(2000, 1, 15, 0, 0, tzinfo=UTC)
+                    assert end_date == datetime(2024, 11, 15, 0, 0, tzinfo=UTC)
                     year_to_pricespath = prices_generator.create_prices_files(tempdir)
                     assert year_to_pricespath == {
                         2000: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2000.csv",

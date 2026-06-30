@@ -1,10 +1,8 @@
 import logging
 from copy import deepcopy
 from os.path import join
-from typing import Dict, List, Optional
 
 from dateutil.relativedelta import relativedelta
-
 from hdx.api.configuration import Configuration
 from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.location.adminlevel import AdminLevel
@@ -35,7 +33,7 @@ class HAPIOutput:
     def setup_admins(
         self,
         retriever: Retrieve,
-        countryiso3s: Optional[List[str]] = None,
+        countryiso3s: list[str] | None = None,
     ):
         _, iterator = retriever.get_tabular_rows(AdminLevel.admin_url, dict_form=True)
         pcode_rows = []
@@ -57,7 +55,7 @@ class HAPIOutput:
             self._admins.append(admin)
         self._admins[1].set_parent_admins_from_adminlevels([self._admins[0]])
 
-    def complete_admin(self, row: Dict, base_row: Dict):
+    def complete_admin(self, row: dict, base_row: dict):
         market_name = row["market"]
         countryiso3 = row["countryiso3"]
         provider_admin1_name = row["admin1"]
@@ -175,7 +173,7 @@ class HAPIOutput:
         )
         base_row["warning"].add("no adm2 name")
 
-    def complete_base_row(self, row: Dict, base_row: Dict):
+    def complete_base_row(self, row: dict, base_row: dict):
         countryiso3 = row["countryiso3"]
         base_row["location_code"] = countryiso3
         base_row["has_hrp"] = (
@@ -190,7 +188,7 @@ class HAPIOutput:
         base_row["lat"] = row["latitude"] or ""
         base_row["lon"] = row["longitude"] or ""
 
-    def process_commodities(self, commodities: List[Dict]) -> List[Dict]:
+    def process_commodities(self, commodities: list[dict]) -> list[dict]:
         logger.info("Processing HAPI commodities output")
         hapi_rows = []
         for row in commodities:
@@ -206,7 +204,7 @@ class HAPIOutput:
         return hapi_rows
 
     @classmethod
-    def add_warnings_errors(cls, hapi_row: Dict):
+    def add_warnings_errors(cls, hapi_row: dict):
         warnings = "|".join(sorted(hapi_row["warning"]))
         del hapi_row["warning"]
         hapi_row["warning"] = warnings
@@ -215,8 +213,8 @@ class HAPIOutput:
         hapi_row["error"] = errors
 
     def process_markets(
-        self, markets: List[Dict], dataset_id: str, resource_id: str
-    ) -> List[Dict]:
+        self, markets: list[dict], dataset_id: str, resource_id: str
+    ) -> list[dict]:
         logger.info("Processing HAPI markets output")
         hapi_rows = []
         for row in markets:
@@ -247,11 +245,11 @@ class HAPIOutput:
 
     def create_prices_files(
         self,
-        year_to_path: Dict,
+        year_to_path: dict,
         dataset_id: str,
-        year_to_prices_resource_id: Dict,
+        year_to_prices_resource_id: dict,
         output_dir: str = "",
-    ) -> Dict:
+    ) -> dict:
         logger.info("Processing HAPI prices output")
         configuration = self._configuration["hapi_dataset"]["resources"][0]
         headers = configuration["headers"]

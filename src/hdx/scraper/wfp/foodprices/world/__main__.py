@@ -14,6 +14,15 @@ from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.data.user import User
 from hdx.facades.infer_arguments import facade
 from hdx.location.wfp_api import WFPAPI
+from hdx.utilities.downloader import Download
+from hdx.utilities.easy_logging import setup_logging
+from hdx.utilities.loader import load_yaml
+from hdx.utilities.path import (
+    script_dir_plus_file,
+    temp_dir_batch,
+)
+from hdx.utilities.retriever import Retrieve
+
 from hdx.scraper.wfp.foodprices._version import __version__
 from hdx.scraper.wfp.foodprices.utilities import get_currencies, get_now
 from hdx.scraper.wfp.foodprices.wfp_mappings import WFPMappings
@@ -24,14 +33,6 @@ from hdx.scraper.wfp.foodprices.world.global_prices_generator import (
 )
 from hdx.scraper.wfp.foodprices.world.hapi_dataset_generator import HAPIDatasetGenerator
 from hdx.scraper.wfp.foodprices.world.hapi_output import HAPIOutput
-from hdx.utilities.downloader import Download
-from hdx.utilities.easy_logging import setup_logging
-from hdx.utilities.loader import load_yaml
-from hdx.utilities.path import (
-    script_dir_plus_file,
-    temp_dir_batch,
-)
-from hdx.utilities.retriever import Retrieve
 
 setup_logging()
 logger = logging.getLogger(__name__)

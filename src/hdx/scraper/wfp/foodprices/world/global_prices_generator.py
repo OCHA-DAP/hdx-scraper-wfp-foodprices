@@ -1,8 +1,7 @@
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from glob import iglob
 from os.path import join
-from typing import Dict, Tuple
 
 from hdx.api.configuration import Configuration
 from hdx.utilities.dateparse import default_date, default_enddate, parse_date
@@ -24,7 +23,7 @@ class GlobalPricesGenerator:
         self._years = None
         self._year_to_countries = {}
 
-    def get_years_per_country(self) -> Tuple[datetime, datetime]:
+    def get_years_per_country(self) -> tuple[datetime, datetime]:
         for filepath in sorted(
             iglob(f"{self._folder}/wfp_food_prices*.csv", recursive=False)
         ):
@@ -51,7 +50,7 @@ class GlobalPricesGenerator:
         self._years = sorted(years, reverse=True)
         return earliest_date, latest_date
 
-    def create_prices_files(self, output_dir: str = "") -> Dict:
+    def create_prices_files(self, output_dir: str = "") -> dict:
         year_to_path = {}
 
         prices_headers = self._configuration["prices_headers"]
@@ -59,8 +58,8 @@ class GlobalPricesGenerator:
 
         for year in self._years:
             logger.info(f"Processing {year} prices")
-            startdate = datetime(year, 1, 1, tzinfo=timezone.utc)
-            enddate = datetime(year, 12, 31, 23, 59, 59, tzinfo=timezone.utc)
+            startdate = datetime(year, 1, 1, tzinfo=UTC)
+            enddate = datetime(year, 12, 31, 23, 59, 59, tzinfo=UTC)
             rows = []
             for countryiso3 in sorted(self._year_to_countries[year]):
                 filepath = self._prices_paths[countryiso3]
