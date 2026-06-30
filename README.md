@@ -4,7 +4,19 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 
-This pipeline connects to the [WFP](http://dataviz.vam.wfp.org/) website via provided [API](https://api.wfp.org/)  and extracts food prices data country by country creating a dataset per country in HDX. It makes in the order of 2000 reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It saves 2 temporary files per country each less than 2Mb and these are what are uploaded to HDX. In addition a 100Mb file is generated and uploaded to HDX. These files are then deleted. It runs every month.
+This pipeline connects to the [WFP](http://dataviz.vam.wfp.org/) website via
+provided [API](https://api.wfp.org/) and extracts food prices data country by
+country creating a dataset per country in HDX. It makes in the order of 2000
+reads from WFP and 400 read/writes (API calls) to HDX in a one hour period. It
+saves 2 temporary files per country each less than 2 MB and these are what are
+uploaded to HDX. In addition a 100 MB file is generated and uploaded to HDX.
+These files are then deleted. Market and price data are fetched from the WFP API;
+each price record is normalised to USD using historical currency exchange rates;
+duplicate entries (same flag/date/admin/market/commodity/unit/price type) are
+consolidated; and the results are first written to per-country standard datasets (prices and
+markets files); a 100 MB global standard food prices dataset is then generated
+and uploaded; and finally a HAPI food prices dataset is produced from the global
+data. It runs every month.
 
 ### Usage
 
@@ -19,7 +31,3 @@ For the script to run, you will need to have a file called .hdx_configuration.ya
  You will also need to supply the universal .useragents.yaml file in your home directory as specified in the parameter *user_agent_config_yaml* passed to facade in run.py. The collector reads the key **hdx-scraper-wfp-foodprices** as specified in the parameter *user_agent_lookup*.
 
  Alternatively, you can set up environment variables: USER_AGENT, HDX_KEY, HDX_SITE, TEMP_DIR, LOG_FILE_ONLY
-### Usage
-python run.py
-
-You will need to have a file called .hdxkey in your home directory containing only your HDX key for the script to run. The script was created to automatically register datasets on the [Humanitarian Data Exchange](http://data.humdata.org/) project.
