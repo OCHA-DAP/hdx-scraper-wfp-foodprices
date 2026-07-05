@@ -5,46 +5,45 @@
 
 This pipeline connects to the [WFP](http://dataviz.vam.wfp.org/) website via
 provided [API](https://api.wfp.org/) and extracts food prices data country by
-country creating a dataset per country in HDX. It makes in the order of 2000
-reads from WFP and 400 read/writes (API calls) to HDX. It saves 2 temporary
+country creating a dataset per country in HDX. It reads
+from the WFP API and makes read/write API calls to HDX. It saves 2 temporary
 files per country each less than 2 MB and these are what are uploaded to HDX. In
-addition a 100 MB file is generated and uploaded to HDX. These files are then
+addition a large global file is generated and uploaded to HDX. These files are then
 deleted. Market and price data are fetched from the WFP API; each price record
 is normalised to USD using historical currency exchange rates; duplicate entries
 (same flag/date/admin/market/commodity/unit/price type) are consolidated; and
 the results are first written to per-country standard datasets (prices and
-markets files); a 100 MB global standard food prices dataset is then generated
+markets files); a global standard food prices dataset is then generated
 and uploaded; and finally a HAPI food prices dataset is produced from the global
-data. It runs every Sunday at around 8 AM UTC and takes approximately 12 hours
-to complete.
+data.
 
 ## Data Pipeline
 
-### API reads (~2000 calls per run)
+### API reads
 
-- **WFP API reads** (~2000 reads): market and price data fetched per country from
+- **WFP API reads**: market and price data fetched per country from
   the WFP API.
-- **HDX reads** (~400 reads): metadata reads for existing per-country datasets
+- **HDX reads**: metadata reads for existing per-country datasets
   before updating.
 
-### API writes (~400 calls per run)
+### API writes
 
 - **Per-country datasets** (~one write per country): each country dataset contains
   2 files — a prices CSV and a markets CSV, each less than 2 MB.
-- **Global food prices dataset** (1 write): a single ~100 MB CSV aggregating all
+- **Global food prices dataset** (1 write): a single large CSV aggregating all
   country data.
 - **HAPI food prices dataset** (1 write): derived from the global data.
 
 ### Temporary files
 
 - 2 files per country (prices and markets), each less than 2 MB.
-- 1 global ~100 MB file, generated and uploaded then deleted.
+- 1 large global file, generated and uploaded then deleted.
 
 ### Uploaded files
 
 - Per-country datasets: prices CSV and markets CSV per country, each less than
   2 MB.
-- Global food prices CSV (~100 MB).
+- Global food prices CSV (large, aggregating all country data).
 - HAPI food prices dataset.
 
 ### Transformations

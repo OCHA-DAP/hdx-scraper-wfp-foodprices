@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**hdx-scraper-wfp-foodprices** connects to the [WFP](http://dataviz.vam.wfp.org/) website via its [API](https://api.wfp.org/) and extracts food prices data. It creates a dataset per country in HDX (country run), and also produces a global food prices dataset and a HAPI food prices dataset (world run). It runs monthly.
+**hdx-scraper-wfp-foodprices** connects to the [WFP](http://dataviz.vam.wfp.org/) website via its [API](https://api.wfp.org/) and extracts food prices data. It creates a dataset per country in HDX (country run), and also produces a global food prices dataset and a HAPI food prices dataset (world run). It runs weekly, every Sunday.
 
 ## Commands
 
@@ -43,7 +43,7 @@ pre-commit run --all-files
 Two separate entry points:
 
 - **`run.py`** — invokes `hdx.scraper.wfp.foodprices.country` — fetches food prices per country from the WFP API, normalises prices to USD using historical exchange rates, deduplicates records, and uploads per-country datasets to HDX.
-- **`run2.py`** — invokes `hdx.scraper.wfp.foodprices.world` — generates and uploads the 100 MB global standard food prices dataset and the HAPI food prices dataset.
+- **`run2.py`** — invokes `hdx.scraper.wfp.foodprices.world` — generates and uploads the global standard food prices dataset (a large CSV aggregating all country data) and the HAPI food prices dataset.
 
 ### Key design points
 
