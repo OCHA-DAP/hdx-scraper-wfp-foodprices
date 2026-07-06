@@ -16,13 +16,12 @@ dependencies = [
   "hdx-python-utilities>=4.0.6",
   "sigfig",
 ]
-
-[project.readme]
-file = "README.md"
-content-type = "text/markdown"
+readme = "README.md"
 
 [project.urls]
 Homepage = "https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices"
+Repository = "https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices"
+Issues = "https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices/issues"
 
 [project.scripts]
 run_country = "hdx.scraper.wfp.foodprices.country.__main__:main"
