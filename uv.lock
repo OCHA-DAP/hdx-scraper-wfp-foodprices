@@ -359,15 +359,11 @@ wheels = [
 
 [[package]]
 name = "hdx-python-country"
-version = "4.1.1"
-source = { registry = "https://pypi.org/simple" }
+version = "4.1.2.dev4"
+source = { git = "https://github.com/OCHA-DAP/hdx-python-country.git?rev=databridges_9#de53dd9b2d4d532a1b6d5d18b1e15af52a70c3cb" }
 dependencies = [
     { name = "hdx-python-utilities" },
     { name = "tenacity" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/93/7e/758b107aabb62c578c9306865eebf8e451cb663b3b598a3fdaae858ba76b/hdx_python_country-4.1.1.tar.gz", hash = "sha256:210fd077a2761dcbd28561a209d401c81f2314e4279939fd1c5ff75cae12eea0", size = 619107, upload-time = "2026-02-11T04:06:52.311Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/28/e0/baa284cd1d9f41945333554276c5e54ea14857a4619a7d521e932630be01/hdx_python_country-4.1.1-py3-none-any.whl", hash = "sha256:e22408664e25401a399fc2ac24cdae93b9ec9317b2238d70f09760ec5a41423a", size = 55317, upload-time = "2026-02-11T04:06:51.334Z" },
 ]
 
 [[package]]
@@ -419,7 +415,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "hdx-python-api", specifier = ">=6.6.5" },
-    { name = "hdx-python-country", specifier = ">=4.1.1" },
+    { name = "hdx-python-country", git = "https://github.com/OCHA-DAP/hdx-python-country.git?rev=databridges_9" },
     { name = "hdx-python-utilities", specifier = ">=4.0.6" },
     { name = "sigfig" },
 ]
