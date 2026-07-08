@@ -11,9 +11,9 @@ name = "hdx-scraper-wfp-foodprices"
 dynamic = ["version"]
 requires-python = ">=3.13"
 dependencies = [
-  "hdx-python-api>=6.6.5",
-  "hdx-python-country>=4.1.1",
-  "hdx-python-utilities>=4.0.6",
+  "hdx-python-api>=6.6.8",
+  "hdx-python-country>=4.1.2",
+  "hdx-python-utilities>=4.1.2",
   "sigfig",
 ]
 readme = "README.md"

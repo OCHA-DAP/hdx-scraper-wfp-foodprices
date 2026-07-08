@@ -57,11 +57,7 @@ def main(
         "3ecac442-7fed-448d-8f78-b385ef6f84e7", "create_dataset"
     ):
         raise PermissionError("API Token does not give access to WFP organisation!")
-    with Download(
-        fail_on_missing_file=False,
-        extra_params_yaml=join(expanduser("~"), ".extraparams.yaml"),
-        extra_params_lookup=lookup,
-    ) as token_downloader:
+    with Download() as token_downloader:
         with Download(
             use_env=False, rate_limit={"calls": 1, "period": 0.1}
         ) as downloader:

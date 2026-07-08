@@ -67,9 +67,9 @@ class WFPFood:
             priceflag = price_data["commodityPriceFlag"]
             if not all(x in ("actual", "aggregate") for x in priceflag.split(",")):
                 continue
-            commodity_id = price_data["commodityID"]
+            commodity_id = price_data["commodityId"]
             category = self._commodity_to_category[commodity_id]
-            market_id = price_data["marketID"]
+            market_id = price_data["marketId"]
             result = self._markets.get(market_id)
             if result:
                 market_name, adm1, adm2, lat, lon = result
