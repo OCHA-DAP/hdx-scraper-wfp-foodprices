@@ -53,10 +53,14 @@ class TestWFP:
                 iso3_to_source = wfp_mapping.read_source_overrides()
                 assert len(iso3_to_source) == 24
                 countries = wfp_mapping.get_countries()
-                assert len(countries) == 291
-                assert countries[100:102] == [
-                    {"iso3": "GTM", "name": "Guatemala"},
-                    {"iso3": "GUF", "name": "French Guiana"},
+                assert len(countries) == 195
+                assert countries[98:104] == [
+                    {"iso3": "KOR", "name": "Republic of Korea"},
+                    {"iso3": "KWT", "name": "Kuwait"},
+                    {"iso3": "LAO", "name": "Lao People's Democratic Republic"},
+                    {"iso3": "LBN", "name": "Lebanon"},
+                    {"iso3": "LBR", "name": "Liberia"},
+                    {"iso3": "LBY", "name": "Libya"},
                 ]
                 commodity_to_category, _ = (
                     wfp_mapping.build_commodity_category_mapping()
