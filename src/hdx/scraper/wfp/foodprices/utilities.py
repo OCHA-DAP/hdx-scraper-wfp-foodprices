@@ -46,7 +46,6 @@ def setup_currency(
 ) -> list[dict]:
     currencies = get_currencies(wfp_api)
     currency_codes = [x["code"] for x in currencies]
-    currency_codes = ["AFN"]
     wfp_fx = WFPExchangeRates(wfp_api)
     if wfp_rates_folder:
         filepath = join(wfp_rates_folder, "wfp_rates.yaml")
