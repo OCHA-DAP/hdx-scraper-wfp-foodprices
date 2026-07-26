@@ -46,7 +46,7 @@ class TestWFP:
                     use_saved=True,
                 )
                 now = get_now(retriever)
-                wfp_api = WFPAPI(downloader, retriever)
+                wfp_api = WFPAPI(retriever)
                 wfp_mapping = WFPMappings(configuration, wfp_api, retriever)
                 iso3_to_showcase_url = wfp_mapping.read_region_mapping()
                 assert len(iso3_to_showcase_url) == 88

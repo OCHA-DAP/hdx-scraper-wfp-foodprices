@@ -65,131 +65,126 @@ def main(
         raise PermissionError("API Token does not give access to WFP organisation!")
     with HDXErrorHandler(write_to_hdx=err_to_hdx) as error_handler:
         with Download(
-            fail_on_missing_file=False,
-            extra_params_yaml=join(expanduser("~"), ".extraparams.yaml"),
-            extra_params_lookup=lookup,
-        ) as token_downloader:
-            with Download(
-                use_env=False, rate_limit={"calls": 1, "period": 0.1}
-            ) as downloader:
-                with temp_dir_batch(
-                    lookup,
-                    delete_if_exists=False,
-                    delete_on_success=True,
-                    delete_on_failure=False,
-                ) as info:
-                    if countryiso3s:
-                        countryiso3s = countryiso3s.split(",")
-                    else:
-                        countryiso3s = None
-                    folder = info["folder"]
-                    batch = info["batch"]
-                    retriever = Retrieve(
-                        downloader, folder, "saved_data", folder, save, use_saved
+            use_env=False, rate_limit={"calls": 1, "period": 0.1}
+        ) as downloader:
+            with temp_dir_batch(
+                lookup,
+                delete_if_exists=False,
+                delete_on_success=True,
+                delete_on_failure=False,
+            ) as info:
+                if countryiso3s:
+                    countryiso3s = countryiso3s.split(",")
+                else:
+                    countryiso3s = None
+                folder = info["folder"]
+                batch = info["batch"]
+                retriever = Retrieve(
+                    downloader, folder, "saved_data", folder, save, use_saved
+                )
+                configuration = Configuration.read()
+                base_configuration = script_dir_plus_file(
+                    join("config", "project_configuration.yaml"), get_now
+                )
+                configuration.update(load_yaml(base_configuration))
+                wfp_api = WFPAPI(retriever)
+                wfp_api.update_retry_params(attempts=5, wait=3600)
+                wfp_mapping = WFPMappings(configuration, wfp_api, retriever)
+                _, commodities = wfp_mapping.build_commodity_category_mapping()
+                currencies = get_currencies(wfp_api)
+                markets = get_markets(downloader, folder)
+                if not markets:
+                    logger.error("No markets data found!")
+                    sys.exit(1)
+                prices_generator = GlobalPricesGenerator(
+                    configuration, downloader, folder
+                )
+                start_date, end_date = prices_generator.get_years_per_country()
+                year_to_pricespath = prices_generator.create_prices_files()
+                if not year_to_pricespath:
+                    logger.error("No prices data found!")
+                    sys.exit(1)
+                dataset_generator = DatasetGenerator(
+                    configuration, folder, start_date, end_date
+                )
+                dataset, showcase = (
+                    dataset_generator.generate_global_dataset_and_showcase(
+                        year_to_pricespath, markets, commodities, currencies
                     )
-                    configuration = Configuration.read()
-                    base_configuration = script_dir_plus_file(
-                        join("config", "project_configuration.yaml"), get_now
+                )
+                snippet = "Countries, Commodities and Markets data"
+                dataset.update_from_yaml(
+                    script_dir_plus_file(
+                        join("config", "hdx_dataset_static.yaml"), get_now
                     )
-                    configuration.update(load_yaml(base_configuration))
-                    wfp_api = WFPAPI(token_downloader, retriever)
-                    wfp_api.update_retry_params(attempts=5, wait=3600)
-                    wfp_mapping = WFPMappings(configuration, wfp_api, retriever)
-                    _, commodities = wfp_mapping.build_commodity_category_mapping()
-                    currencies = get_currencies(wfp_api)
-                    markets = get_markets(downloader, folder)
-                    if not markets:
-                        logger.error("No markets data found!")
-                        sys.exit(1)
-                    prices_generator = GlobalPricesGenerator(
-                        configuration, downloader, folder
-                    )
-                    start_date, end_date = prices_generator.get_years_per_country()
-                    year_to_pricespath = prices_generator.create_prices_files()
-                    if not year_to_pricespath:
-                        logger.error("No prices data found!")
-                        sys.exit(1)
-                    dataset_generator = DatasetGenerator(
-                        configuration, folder, start_date, end_date
-                    )
-                    dataset, showcase = (
-                        dataset_generator.generate_global_dataset_and_showcase(
-                            year_to_pricespath, markets, commodities, currencies
-                        )
-                    )
-                    snippet = "Countries, Commodities and Markets data"
-                    dataset.update_from_yaml(
-                        script_dir_plus_file(
-                            join("config", "hdx_dataset_static.yaml"), get_now
-                        )
-                    )
-                    dataset["notes"] = dataset["notes"] % snippet
-                    dataset.create_in_hdx(
-                        remove_additional_resources=True,
-                        match_resource_order=True,
-                        updated_by_script=updated_by_script,
-                        batch=batch,
-                    )
-                    showcase.create_in_hdx()
-                    showcase.add_dataset(dataset)
+                )
+                dataset["notes"] = dataset["notes"] % snippet
+                dataset.create_in_hdx(
+                    remove_additional_resources=True,
+                    match_resource_order=True,
+                    updated_by_script=updated_by_script,
+                    batch=batch,
+                )
+                showcase.create_in_hdx()
+                showcase.add_dataset(dataset)
 
-                    year_to_prices_resource_id = {}
-                    markets_resource_id = None
-                    for resource in dataset.get_resources():
-                        resource_name = resource["name"]
-                        if dataset_generator.global_prices_name in resource_name:
-                            year = int(resource_name[-4:])
-                            year_to_prices_resource_id[year] = resource["id"]
-                        elif resource_name == dataset_generator.global_markets_name:
-                            markets_resource_id = resource["id"]
-                    if year_to_prices_resource_id and markets_resource_id:
-                        dataset_id = dataset["id"]
-                        hapi_output = HAPIOutput(
-                            configuration,
-                            downloader,
-                            folder,
-                            error_handler,
-                        )
-                        hapi_output.setup_admins(retriever, countryiso3s)
-                        hapi_commodities = hapi_output.process_commodities(
-                            commodities,
-                        )
-                        hapi_markets = hapi_output.process_markets(
-                            markets, dataset_id, markets_resource_id
-                        )
-                        hapi_year_to_pricespath = hapi_output.create_prices_files(
-                            year_to_pricespath, dataset_id, year_to_prices_resource_id
-                        )
-                        hapi_dataset_generator = HAPIDatasetGenerator(
-                            configuration,
-                            folder,
-                            start_date,
-                            end_date,
-                        )
-                        dataset = hapi_dataset_generator.generate_prices_dataset(
-                            hapi_year_to_pricespath,
-                            hapi_markets,
-                            hapi_commodities,
-                            currencies,
-                        )
-                        if dataset:
-                            dataset.update_from_yaml(
-                                script_dir_plus_file(
-                                    join(
-                                        "config",
-                                        "hdx_hapi_dataset_static.yaml",
-                                    ),
-                                    main,
-                                )
+                year_to_prices_resource_id = {}
+                markets_resource_id = None
+                for resource in dataset.get_resources():
+                    resource_name = resource["name"]
+                    if dataset_generator.global_prices_name in resource_name:
+                        year = int(resource_name[-4:])
+                        year_to_prices_resource_id[year] = resource["id"]
+                    elif resource_name == dataset_generator.global_markets_name:
+                        markets_resource_id = resource["id"]
+                if year_to_prices_resource_id and markets_resource_id:
+                    dataset_id = dataset["id"]
+                    hapi_output = HAPIOutput(
+                        configuration,
+                        downloader,
+                        folder,
+                        error_handler,
+                    )
+                    hapi_output.setup_admins(retriever, countryiso3s)
+                    hapi_commodities = hapi_output.process_commodities(
+                        commodities,
+                    )
+                    hapi_markets = hapi_output.process_markets(
+                        markets, dataset_id, markets_resource_id
+                    )
+                    hapi_year_to_pricespath = hapi_output.create_prices_files(
+                        year_to_pricespath, dataset_id, year_to_prices_resource_id
+                    )
+                    hapi_dataset_generator = HAPIDatasetGenerator(
+                        configuration,
+                        folder,
+                        start_date,
+                        end_date,
+                    )
+                    dataset = hapi_dataset_generator.generate_prices_dataset(
+                        hapi_year_to_pricespath,
+                        hapi_markets,
+                        hapi_commodities,
+                        currencies,
+                    )
+                    if dataset:
+                        dataset.update_from_yaml(
+                            script_dir_plus_file(
+                                join(
+                                    "config",
+                                    "hdx_hapi_dataset_static.yaml",
+                                ),
+                                main,
                             )
-                            gc.collect()
-                            dataset.create_in_hdx(
-                                remove_additional_resources=True,
-                                match_resource_order=True,
-                                updated_by_script=updated_by_script,
-                                batch=batch,
-                            )
-                            logger.info("WFP global HAPI dataset created")
+                        )
+                        gc.collect()
+                        dataset.create_in_hdx(
+                            remove_additional_resources=True,
+                            match_resource_order=True,
+                            updated_by_script=updated_by_script,
+                            batch=batch,
+                        )
+                        logger.info("WFP global HAPI dataset created")
 
 
 if __name__ == "__main__":
