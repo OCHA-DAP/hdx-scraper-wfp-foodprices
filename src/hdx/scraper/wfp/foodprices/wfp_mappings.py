@@ -75,14 +75,14 @@ class WFPMappings:
 
     def build_commodity_category_mapping(self) -> tuple[dict, list]:
         categoryid_to_name = {}
-        for category in self._wfp_api.get_items("Commodities/Categories/List"):
-            categoryid_to_name[category["id"]] = category["name"]
+        for category in self._wfp_api.get_commodity_categories():
+            categoryid_to_name[category.id] = category.name
         commodity_to_category = {}
         commodities = []
-        for commodity in self._wfp_api.get_items("Commodities/List"):
-            commodity_id = commodity["id"]
-            commodity_name = commodity["name"]
-            category = categoryid_to_name[commodity["categoryId"]]
+        for commodity in self._wfp_api.get_commodities():
+            commodity_id = commodity.id
+            commodity_name = commodity.name
+            category = categoryid_to_name[commodity.category_id]
             commodity_to_category[commodity_id] = category
             commodities.append(
                 {

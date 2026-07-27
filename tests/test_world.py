@@ -58,7 +58,7 @@ class TestWFP:
                         save=False,
                         use_saved=True,
                     )
-                    wfp_api = WFPAPI(downloader, retriever)
+                    wfp_api = WFPAPI(retriever)
                     wfp = WFPMappings(configuration, wfp_api, retriever)
                     _, commodities = wfp.build_commodity_category_mapping()
                     assert len(commodities) == 1072
