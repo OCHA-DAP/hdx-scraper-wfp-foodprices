@@ -1,0 +1,394 @@
+countryiso3,market_code,provider_admin1_name,provider_admin2_name,expected_admin1_code,expected_admin2_code,prod_admin1_code,prod_admin2_code,stage_admin1_code,stage_admin2_code,note
+AFG,266,Badakhshan,Faiz Abad,AF17,AF1701,AF17,AF1701,AF17,,prod correct
+AFG,3237,Parwan,Syah Gerd,AF03,AF0303,AF03,AF0303,AF03,,prod correct
+BDI,2424,Bubanza,Bubanza,|BI2,BI201,BI1,BI102,,BI201,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,1827,Bubanza,Mpanda,|BI2,BI205,BI1,BI106,,BI205,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2443,Bubanza,Musigati,|BI2,,BI1,,,BI304,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2453,Bubanza,Rugazi,|BI2,,BI1,BI107,,BI107,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2437,Bujumbura Mairie,Muha,BI2,,,BI406,BI2,BI208,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5890,Bujumbura Mairie,Mukaza,BI2,BI209,,BI209,BI2,BI209,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,201,Bujumbura Mairie,Ntahangwa,BI2,BI210,,BI210,BI2,BI210,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5015,Bujumbura Rural,Bugarama,BI2,,,BI501,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4978,Bujumbura Rural,Isale,BI2,BI204,,BI204,BI2,BI204,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4979,Bujumbura Rural,Kabezi,BI2,,,BI402,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5077,Bujumbura Rural,Kanyosha1,BI2,,,BI504,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2442,Bujumbura Rural,Mubimbi,BI2,,,BI302,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2463,Bujumbura Rural,Mugongomanga,BI2,,,,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2469,Bujumbura Rural,Muhuta,BI2,BI208,,BI208,BI2,BI208,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4980,Bujumbura Rural,Mukike,BI2,,,BI209,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,6119,Bujumbura Rural,Mutambu,BI2,,,BI302,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,3048,Bujumbura Rural,Mutimbuzi,BI2,,,,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4981,Bujumbura Rural,Nyabiraba,BI2,,,,BI2,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2427,Bururi,Bururi,|BI3,BI301,BI1,,,BI301,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2475,Bururi,Matana,|BI3,BI303,BI1,,,BI303,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2459,Bururi,Mugamba,|BI3,,BI1,,,BI302,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11036,Bururi,Rutovu,|BI3,,BI1,,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4983,Bururi,Songa,|BI3,,BI1,BI106,,BI304,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11037,Bururi,Vyanda,|BI3,,BI1,,,BI205,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2441,Cankuzo,Kigamba,|BI1,,,BI403,,BI302,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2448,Cankuzo,Mishiha,|BI1,,,BI208,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2430,Cibitoke,Buganda,|BI2,,,BI102,,BI501,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2445,Cibitoke,Mabayi,|BI2,,,BI208,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4987,Cibitoke,Murwi,|BI2,,,BI507,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,3049,Cibitoke,Rugombo,|BI2,,,BI306,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2452,Gitega,Mutaho,BI5,,BI5,BI507,BI5,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,4995,Karuzi,Bugenyuzi,|BI5,,,BI201,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2465,Karuzi,Buhiga,|BI5,,,BI107,,BI102,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2433,Karuzi,Gihogazi,|BI5,,,BI105,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11017,Karuzi,Mutumba,|BI5,,,BI302,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5000,Kayanza,Gahombo,|BI4,,,BI502,,BI509,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11019,Kayanza,Gatara,|BI4,,,BI105,,BI104,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11020,Kayanza,Muruta,|BI4,,,BI206,,BI208,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5003,Kayanza,Rango,|BI4,,,BI107,,BI405,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2434,Kirundo,Gitobe,|BI4,,,BI502,,BI503,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,6121,Kirundo,Ntega,|BI4,,,BI210,,BI503,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5078,Kirundo,Vumbi,|BI4,,,BI509,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2439,Makamba,Kayogoro,|BI3,,,BI206,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,6125,Makamba,Kibago,|BI3,,,BI211,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2478,Makamba,Nyanza-Lac,|BI3,BI305,,,,BI305,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2425,Muramvya,Bukeye,|BI5,,,BI401,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5006,Muramvya,Mbuye,|BI5,,,BI208,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,3055,Muyinga,Buhinyuza,|BI1,,,BI201,,BI102,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5008,Muyinga,Gashoho,|BI1,,,BI105,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11024,Muyinga,Gasorwe,|BI1,,,BI105,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2470,Muyinga,Giteranyi,|BI1,,,,,BI503,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2454,Muyinga,Mwakiro,|BI1,,,BI206,,BI507,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2482,Mwaro,Bisoro,|BI5,,,BI301,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5009,Mwaro,Gisozi,|BI5,,,BI105,,BI407,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2455,Mwaro,Kayokwe,|BI5,,,BI402,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5010,Mwaro,Ndava,|BI5,,,BI210,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2462,Mwaro,Rusaka,|BI5,,,BI211,,BI307,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5011,Ngozi,Gashikanwa,|BI4,,,BI104,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2446,Ngozi,Marangara,|BI4,,,BI304,,BI408,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5012,Ngozi,Mwumba,|BI4,,,BI106,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11027,Ngozi,Nyamurenza,|BI4,,,,,BI305,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5014,Ngozi,Ruhororo,|BI4,,,BI211,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,3047,Rumonge,Burambi,|BI3,,,BI102,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2429,Rumonge,Buyengero,|BI3,,,BI301,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,11029,Rutana,Bukemba,|BI3,,,BI401,,BI403,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,3046,Rutana,Giharo,|BI3,,,BI105,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5020,Ruyigi,Butezi,|BI1,,,BI102,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2440,Ruyigi,Bweru,|BI1,,,BI301,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,2472,Ruyigi,Kinyinya,|BI1,,,BI402,,,2025 provinces/communes; old commune without same-name successor -> no match
+BDI,5021,Ruyigi,Nyabitsinda,|BI1,,,,,BI508,2025 provinces/communes; old commune without same-name successor -> no match
+BEN,2769,Couffo,Dogbo-tota,BJ06,BJ0603,BJ06,,BJ06,BJ0603,
+BFA,1803,CENTRE-NORD,SANMATENGA,|BF49,|BF4903,,BF4803,,BF5403,2025 regions; renamed Sandbondtenga
+BFA,3367,EST,TAPOA,|BF60,?,,BF5303,,,2025 regions; Tapoa province is now a region
+BFA,3397,NORD,LOROUM,|BF54,BF5401,BF50,,,BF5401,2025 regions
+BFA,3399,NORD,PASSORÉ,|BF54,BF5402,BF50,,,BF5402,2025 regions
+BFA,1893,NORD,YATENGA,|BF54,BF5403,BF50,,,BF5403,2025 regions
+BFA,136,NORD,ZONDOMA,|BF54,BF5404,BF50,,,BF5404,2025 regions
+BFA,3402,PLATEAU-CENTRAL,OUBRITENGA,|BF55,|BF5503,,,,BF4803,2025 regions; renamed Bassitenga
+BFA,135,SAHEL,OUDALAN,|BF64,BF6401,BF59,,,BF6401,2025 regions
+BFA,3361,SAHEL,SOUM,|BF59,?,BF59,,,,2025 regions; Soum province is now a region
+BFA,133,SAHEL,SÉNO,|BF64,BF6402,BF59,,,BF6402,2025 regions
+BFA,3393,SAHEL,YAGHA,|BF64,BF6403,BF59,,,BF6403,2025 regions
+BGD,4049,Chittagong,Bandarban,BD20,BD2003,BD20,BD2003,,BD2003,Chittagong = Chattogram
+BGD,11784,Chittagong,Brahamanbaria,BD20,BD2012,BD20,BD2012,,BD2012,Chittagong = Chattogram
+BGD,4051,Chittagong,Chandpur,BD20,BD2013,BD20,BD2013,,BD2013,Chittagong = Chattogram
+BGD,6424,Chittagong,Chittagong,BD20,BD2015,BD20,BD2015,,,Chittagong = Chattogram
+BGD,12295,Chittagong,Comilla,BD20,BD2019,BD20,BD2019,,BD2019,Chittagong = Chattogram
+BGD,7933,Chittagong,Cox'S Bazar,BD20,BD2022,BD20,BD2022,,BD2022,Chittagong = Chattogram
+BGD,11786,Chittagong,Feni,BD20,BD2030,BD20,BD2030,,BD2030,Chittagong = Chattogram
+BGD,4056,Chittagong,Khagrachhari,BD20,BD2046,BD20,BD2046,,BD2046,Chittagong = Chattogram
+BGD,4057,Chittagong,Lakshmipur,BD20,BD2051,BD20,BD2051,,BD2051,Chittagong = Chattogram
+BGD,11785,Chittagong,Noakhali,BD20,BD2075,BD20,BD2075,,BD2075,Chittagong = Chattogram
+BGD,11789,Chittagong,Rangamati,BD20,BD2084,BD20,BD2084,,BD2084,Chittagong = Chattogram
+BGD,4072,Rajshahi,Nawabganj,BD50,BD5070,BD50,BD5064,BD50,BD5070,Nawabganj = Chapainawabganj
+CAF,2058,Ombella M'Poko,Bimbo,CF11,,CF11,CF114,CF11,,Bimbo not in COD under CF11; Paoua now in Lim-Pende
+CAF,12192,Ouham Pendé,Paoua,CF31,,CF31,CF313,CF31,,Bimbo not in COD under CF11; Paoua now in Lim-Pende
+CMR,4251,Sud-Ouest,Fako,CM010,CM010001,CM010,CM010001,,CM010001,Sud-Ouest = South-West
+CMR,9536,Sud-Ouest,Kupe-Manenguba,CM010,CM010002,CM010,CM010002,,CM010002,Sud-Ouest = South-West
+CMR,9537,Sud-Ouest,Manyu,CM010,CM010004,CM010,CM010004,,CM010004,Sud-Ouest = South-West
+CMR,6705,Sud-Ouest,Meme,CM010,CM010005,CM010,CM010005,,CM010005,Sud-Ouest = South-West
+CMR,9539,Sud-Ouest,Ndian,CM010,CM010006,CM010,CM010006,,CM010006,Sud-Ouest = South-West
+COD,9036,Bas-Uele,Buta city,CD52,CD5202,CD52,,CD52,CD5202,'X city' is in territory X
+COD,1604,Haut-Lomami,Kamina city,CD73,CD7302,CD73,,CD73,CD7302,'X city' is in territory X
+COD,2274,Ituri,Aru city,CD54,CD5409,CD54,,CD54,CD5409,'X city' is in territory X
+COD,9887,Ituri,Mahagi city,CD54,CD5407,CD54,,CD54,CD5407,'X city' is in territory X
+COD,3216,Kasai,Luebo city,CD92,CD9204,CD92,,CD92,CD9204,'X city' is in territory X
+COD,4147,Kasai-Oriental,Tshilenge city,CD82,CD8202,CD82,,CD82,CD8202,'X city' is in territory X
+COD,4122,Kongo-Central,Mbanza-Ngungu city,CD20,CD2013,CD20,,CD20,CD2013,'X city' is in territory X
+COD,10784,Kwango,Kasongo-Lunda city,CD31,CD3106,CD31,,CD31,CD3106,'X city' is in territory X
+COD,9723,Kwango,Kenge city,CD31,CD3102,CD31,,CD31,CD3102,'X city' is in territory X
+COD,4126,Kwilu,Masi-Manimba city,CD32,CD3212,CD32,,CD32,CD3212,'X city' is in territory X
+COD,4145,Lomami,Kabinda city,CD81,CD8102,CD81,,CD81,CD8102,'X city' is in territory X
+COD,4138,Maniema,Kasongo city,CD63,CD6311,CD63,,CD63,CD6311,'X city' is in territory X
+COD,8926,Nord-Kivu,Oicha city,CD61,CD6107,CD61,,CD61,CD6107,'X city' is in territory X
+COD,9063,Nord-Kivu,Rutshuru city,CD61,CD6111,CD61,,CD61,CD6111,'X city' is in territory X
+COD,11476,Nord-Ubangi,Mobayi-Mbongo city,CD43,CD4302,CD43,,CD43,CD4302,'X city' is in territory X
+COD,11429,Sud-Kivu,Shabunda city,CD62,CD6203,CD62,,CD62,CD6203,'X city' is in territory X
+COD,11399,Sud-Kivu,Uvira city,CD62,CD6208,CD62,,CD62,CD6208,'X city' is in territory X
+COD,10238,Sud-Ubangi,Gemena city,CD42,CD4202,CD42,,CD42,CD4202,'X city' is in territory X
+COD,10783,Tanganyika,Kongolo city,CD74,CD7409,CD74,,CD74,CD7409,'X city' is in territory X
+COD,1600,Tshopo,Basoko city,CD51,CD5109,CD51,,CD51,CD5109,'X city' is in territory X
+COL,845,Atlántico,"Distrito Especial, Industrial Y Portuario De Barranquilla",CO08,CO08001,CO08,,CO08,CO08001,
+EGY,6070,Minya,Kesm Al minya,EG24,EG2401,EG24,EG2401,,EG2401,Minya = Menia
+EGY,6072,Minya,Kesm Mallawi,EG24,EG2411,EG24,EG2411,,EG2411,Minya = Menia
+EGY,6071,Minya,Markz Bani Mazar,EG24,EG2406,EG24,EG2406,,EG2406,Minya = Menia
+EGY,6048,Minya,Markz Matay,EG24,EG2409,EG24,EG2409,,EG2409,Minya = Menia
+ETH,9868,Amhara,N. GONDER,ET03,ET0301,ET03,,ET03,ET0301,
+ETH,467,Amhara,N. SHEWA (R3),ET03,ET0305,ET03,,ET03,ET0305,
+ETH,7814,Amhara,N. WELLO,ET03,ET0303,ET03,,ET03,ET0303,
+ETH,492,Amhara,S. GONDER,ET03,ET0302,ET03,ET0302,ET03,ET0312,
+ETH,503,Amhara,W. GOJAM,ET03,ET0307,ET03,,ET03,ET0307,
+ETH,1832,B. Gumuz,ASOSA,ET06,ET0603,,ET0603,ET06,ET0603,B. Gumuz = Benishangul-Gumuz
+ETH,5064,B. Gumuz,KAMASHI,ET06,ET0604,,ET0604,ET06,ET0604,B. Gumuz = Benishangul-Gumuz
+ETH,3670,B. Gumuz,METEKEL,ET06,ET0602,,ET0602,ET06,ET0602,B. Gumuz = Benishangul-Gumuz
+ETH,6520,Oromia,E. HARERGE,ET04,ET0410,ET04,,ET04,ET0410,
+ETH,512,Oromia,E. SHEWA,ET04,ET0407,ET04,ET0407,ET04,ET0405,
+ETH,11354,Oromia,E. WELLEGA,ET04,ET0402,ET04,,ET04,ET0401,
+ETH,11366,Oromia,ILLUBABOR,ET04,ET0403,ET04,ET0403,ET04,,
+ETH,3652,Oromia,N. SHEWA (R4),ET04,ET0406,ET04,,ET04,ET0406,
+ETH,500,Oromia,S.W. SHEWA,ET04,ET0413,ET04,,ET04,ET0405,
+ETH,10264,Oromia,W. HARERGE,ET04,ET0409,ET04,,ET04,ET0409,
+ETH,11360,Oromia,W. WELLEGA,ET04,ET0401,ET04,,ET04,ET0401,
+ETH,3657,SNNPR,GAMO GOFA,|ET08,?,,,,ET0802,SNNPR dissolved; Gamo Gofa split into Gamo/Gofa
+ETH,3650,SNNPR,SIDAMA,,,,ET0812,,,Sidama is now a region
+ETH,6501,Somali,GODE,ET05,|ET0506,ET05,ET0501,ET05,,Gode is in Shabelle zone
+ETH,9866,Somali,SHINILE,ET05,|ET0501,ET05,ET0506,ET05,,Shinile zone renamed Siti
+ETH,7782,Somali,WARDER,ET05,|ET0507,ET05,ET0504,ET05,ET0508,Warder is in Doolo zone
+GHA,10948,BRONG AHAFO,ASUNAFO NORTH,|GH01,GH0101,,GH0101,GH01,GH0101,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,10335,BRONG AHAFO,BANDA,|GH03,GH0301,,GH0301,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,10326,BRONG AHAFO,JAMAN NORTH,|GH03,GH0307,,GH0307,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,10320,BRONG AHAFO,JAMAN SOUTH,|GH03,GH0308,,GH0308,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,1726,BRONG AHAFO,KINTAMPO NORTH,|GH04,GH0402,,GH0402,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,10322,BRONG AHAFO,KINTAMPO SOUTH,|GH04,GH0403,,GH0403,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,10317,BRONG AHAFO,NKORANZA NORTH,|GH04,GH0404,,GH0404,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,10325,BRONG AHAFO,PRU,|GH04,?,,,GH01,,Pru split into Pru East/West
+GHA,1724,BRONG AHAFO,SENE EAST,|GH04,GH0408,,GH0408,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,217,BRONG AHAFO,SUNYANI MUNICIPAL,|GH03,GH0309,,GH0309,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,1711,BRONG AHAFO,TAIN,|GH03,GH0311,,GH0311,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,218,BRONG AHAFO,TECHIMAN MUNICIPAL,|GH04,GH0410,,GH0410,GH01,,Brong Ahafo split into Ahafo/Bono/Bono East
+GHA,212,EASTERN,NEW JUABEN MUNICIPAL,GH06,?,GH06,,GH06,GH0625,split into North/South
+GHA,210,GREATER ACCRA,TEMA METROPOLIS,GH07,GH0727,GH07,,GH07,GH0727,
+GHA,10580,NORTHERN,SAVELUGU NANTON,GH08,GH0811,GH08,,GH08,GH0811,
+GHA,1720,UPPER EAST,GARU TEMPANE,GH12,?,GH12,,GH12,GH1215,split into Garu/Tempane
+GHA,1725,VOLTA,KRACHI WEST,GH14,,GH14,,GH14,GH1409,Krachi West is now in Oti
+GMB,916,Central River,Fulladu West,GM04,?,GM04,,GM04,GM0401,Fulladu West split into Upper/Lower
+GNB,4599,Sector Autonomo De Bissau,Sector Autonomo De Bissau,GW08,GW0800,,GW0800,GW08,GW0800,
+GTM,9181,Huehuetenango,San Idelfonso Ixtahuacán,GT13,GT1309,GT13,,GT13,GT1309,
+IRQ,3957,Anbar,Ra'ua,IQG01,,IQG01,,IQG01,IQG01Q04,Rawa not in COD
+IRQ,3956,Dahuk,Amedi,IQG09,IQG09Q01,IQG09,IQG09Q01,,IQG01Q03,Dahuk = Duhok
+IRQ,1492,Dahuk,Dahuk,IQG09,IQG09Q02,IQG09,IQG09Q02,,IQG16Q01,Dahuk = Duhok
+IRQ,8358,Dahuk,Sumel,IQG09,IQG09Q03,IQG09,IQG09Q03,,IQG09Q03,Dahuk = Duhok
+IRQ,8354,Dahuk,Zakho,IQG09,IQG09Q04,IQG09,IQG09Q04,,IQG09Q04,Dahuk = Duhok
+IRQ,3970,Kirkuk,Dabes,IQG13,IQG13Q03,IQG13,IQG13Q03,IQG13,,transliterations
+IRQ,3922,Ninewa,Akre,IQG15,IQG15Q01,IQG15,IQG15Q01,IQG15,,transliterations
+IRQ,3954,Salah al-Din,Al-Thethar,IQG16,?,IQG16,IQG16Q01,IQG16,,Tharthar district unclear
+IRQ,3961,Salah al-Din,Baiji,IQG16,IQG16Q03,IQG16,IQG16Q03,IQG16,,transliterations
+KEN,10372,Eastern,Meru North,KE012,,,,KE012,,KEN uses admin2 name as admin1
+KEN,5668,Eastern,Meru South,|KE013,,KE010,,KE012,,Meru South is in Tharaka-Nithi
+KEN,10407,Eastern,Moyale,|KE010,,KE012,,,,Moyale is in Marsabit
+KEN,10363,North Eastern,Ijara,|KE007,,KE008,,,,Ijara is in Garissa
+MDG,11099,Vatovavy Fitovinany,Ifanadiana,|MG26,MG26206,,MG26206,MG27,,Vatovavy Fitovinany split into Vatovavy/Fitovinany
+MDG,11090,Vatovavy Fitovinany,Ikongo,|MG27,MG27211,,MG27211,MG27,MG27211,Vatovavy Fitovinany split into Vatovavy/Fitovinany
+MDG,11098,Vatovavy Fitovinany,Manakara Atsimo,|MG27,MG27210,,MG27210,MG27,MG27210,Vatovavy Fitovinany split into Vatovavy/Fitovinany
+MDG,10225,Vatovavy Fitovinany,Mananjary,|MG26,MG26209,,MG26209,MG27,,Vatovavy Fitovinany split into Vatovavy/Fitovinany
+MDG,9122,Vatovavy Fitovinany,Nosy-Varika,|MG26,MG26207,,MG26207,MG27,,Vatovavy Fitovinany split into Vatovavy/Fitovinany
+MDG,10228,Vatovavy Fitovinany,Vohipeno,|MG27,MG27212,,MG27212,MG27,MG27212,Vatovavy Fitovinany split into Vatovavy/Fitovinany
+MLI,867,Kayes,Diema,ML01,,ML01,ML0107,ML01,,cercle is now an admin1 (2023 regions)
+MLI,859,Kayes,Kita,ML01,,ML01,ML0101,ML01,,cercle is now an admin1 (2023 regions)
+MLI,6910,Kayes,Nioro,ML01,,ML01,ML0106,ML01,,cercle is now an admin1 (2023 regions)
+MLI,11232,Mopti,Koro,ML05,,ML05,ML0505,ML05,,cercle is now an admin1 (2023 regions)
+MLI,863,Sikasso,Bougouni,ML03,,ML03,,ML03,ML0307,cercle is now an admin1 (2023 regions)
+MLI,6919,Sikasso,Koutiala,ML03,,ML03,ML0302,ML03,,cercle is now an admin1 (2023 regions)
+MLI,11222,Tombouctou,Gourma-Rharous,ML06,ML0605,ML06,,ML06,ML0605,
+MMR,985,Shan (North),Laukkaing,MMR015,|MMR015S002,MMR015,MMR015001,MMR015,,Laukkaing is in Kokang SAZ
+MOZ,340,Gaza,Cidade_De_Xai-Xai,MZ09,MZ0901,MZ09,,MZ09,MZ0901,
+MOZ,6668,Maputo City,Cidade_De_Maputo,MZ11,,,MZ0301,MZ10,MZ1001,Maputo City = Cidade de Maputo; no single district
+MOZ,337,Zambezia,Cidade_De_Quelimane,MZ04,MZ0401,MZ04,,MZ04,MZ0401,
+MWI,765,Central Region,Dedza,MW2,MW208,,MW208,MW2,MW208,X Region = X
+MWI,766,Central Region,Dowa,MW2,MW204,,MW204,MW2,MW204,X Region = X
+MWI,1710,Central Region,Kasungu,MW2,MW201,,MW201,MW2,MW201,X Region = X
+MWI,2111,Central Region,Lilongwe,MW2,MW206,,MW206,MW2,MW206,X Region = X
+MWI,827,Central Region,Lilongwe City,MW2,MW210,,MW210,MW2,MW210,X Region = X
+MWI,789,Central Region,Mchinji,MW2,MW207,,MW207,MW2,MW207,X Region = X
+MWI,775,Central Region,Nkhotakota,MW2,MW202,,MW202,MW2,MW202,X Region = X
+MWI,771,Central Region,Ntcheu,MW2,MW209,,MW209,MW2,MW209,X Region = X
+MWI,2125,Central Region,Ntchisi,MW2,MW203,,MW203,MW2,MW203,X Region = X
+MWI,2225,Central Region,Salima,MW2,MW205,,MW205,MW2,MW205,X Region = X
+MWI,774,Northern Region,Chitipa,MW1,MW101,,MW101,MW1,MW101,X Region = X
+MWI,779,Northern Region,Karonga,MW1,MW102,,MW102,MW1,MW102,X Region = X
+MWI,770,Northern Region,Mzimba,MW1,MW105,,MW105,MW1,MW105,X Region = X
+MWI,3735,Northern Region,Mzuzu City,MW1,MW107,,MW107,MW1,MW107,X Region = X
+MWI,772,Northern Region,Nkhata Bay,MW1,MW103,,MW103,MW1,MW103,X Region = X
+MWI,2229,Northern Region,Rumphi,MW1,MW104,,MW104,MW1,MW104,X Region = X
+MWI,763,Southern Region,Balaka,MW3,MW312,,MW312,MW3,MW312,X Region = X
+MWI,8487,Southern Region,Blantyre,MW3,MW305,,MW305,MW3,MW305,X Region = X
+MWI,767,Southern Region,Blantyre City,MW3,MW315,,MW315,MW3,MW315,X Region = X
+MWI,8516,Southern Region,Chikwawa,MW3,MW310,,MW310,MW3,MW310,X Region = X
+MWI,773,Southern Region,Chiradzulu,MW3,MW304,,MW304,MW3,MW304,X Region = X
+MWI,2119,Southern Region,Machinga,MW3,MW302,,MW302,MW3,MW302,X Region = X
+MWI,8497,Southern Region,Mangochi,MW3,MW301,,MW301,MW3,MW301,X Region = X
+MWI,8530,Southern Region,Mulanje,MW3,MW308,,MW308,MW3,MW308,X Region = X
+MWI,8502,Southern Region,Mwanza,MW3,MW306,,MW306,MW3,MW306,X Region = X
+MWI,805,Southern Region,Neno,MW3,MW313,,MW313,MW3,MW313,X Region = X
+MWI,764,Southern Region,Nsanje,MW3,MW311,,MW311,MW3,MW311,X Region = X
+MWI,2120,Southern Region,Phalombe,MW3,MW309,,MW309,MW3,MW309,X Region = X
+MWI,783,Southern Region,Thyolo,MW3,MW307,,MW307,MW3,MW307,X Region = X
+MWI,2122,Southern Region,Zomba,MW3,MW303,,MW303,MW3,MW303,X Region = X
+MWI,8529,Southern Region,Zomba City,MW3,MW314,,MW314,MW3,MW314,X Region = X
+NER,10342,Zinder,Tarka,NE007,?,NE007,NE007010,NE007,NE007008,Tarka valley department unclear
+NGA,1967,Abia,Oboma Ngwa,NG001,NG001009,NG001,NG001009,NG001,NG001011,Oboma Ngwa = Obingwa
+NIC,4087,Nueva Segovia,El Jícaro,NI05,NI0515,NI05,,NI05,NI0515,
+PAK,9384,BALOCHISTAN,Mekran,PK2,,PK2,PK220,PK2,PK212,"Makran is a division, not a district"
+PAK,9471,FATA,FATA,,,,PK226,,,FATA merged into KP
+PHL,4282,Region IV-B,Marinduque,|PH17,PH17040,,PH17040,PH04,,Region IV-B = Mimaropa
+PHL,4283,Region IV-B,Occidental Mindoro,|PH17,PH17051,,PH17051,PH04,,Region IV-B = Mimaropa
+PHL,5224,Region IV-B,Oriental Mindoro,|PH17,PH17052,,PH17052,PH04,,Region IV-B = Mimaropa
+PHL,4358,Region IV-B,Palawan,|PH17,PH17053,,PH17053,PH04,,Region IV-B = Mimaropa
+PHL,4285,Region IV-B,Romblon,|PH17,PH17059,,PH17059,PH04,,Region IV-B = Mimaropa
+PSE,2001,West Bank,Ramallah and Albireh,PS01,PS0130,PS01,,PS01,PS0130,
+SDN,11856,Al Gezira,El Hasaheesa,SD15,SD15034,SD15,SD15034,,SD15034,Al Gezira = Aj Jazirah
+SDN,11855,Al Gezira,El Manageel,SD15,SD15036,SD15,SD15036,,SD15036,Al Gezira = Aj Jazirah
+SDN,5640,Al Gezira,Wad Madani El Kobra,SD15,SD15030,SD15,,,SD15030,
+SDN,6929,Blue Nile,El Roseires,SD08,SD08107,SD08,SD08107,SD08,,transliterations
+SDN,11887,Eastern Darfur,Ed Daein,SD05,SD05142,,SD05142,SD05,,Eastern Darfur = East Darfur
+SDN,11888,Eastern Darfur,El Ferdous,SD05,SD05152,,SD05152,SD05,SD05152,
+SDN,11850,Kassala,Halfa El Gedid,SD11,SD11052,SD11,SD11052,SD11,,transliterations
+SDN,11851,Kassala,Khashm Ghirba,SD11,SD11060,SD11,,SD11,SD11060,
+SDN,11837,Northern,Marawai,SD17,SD17020,SD17,SD17020,SD17,,transliterations
+SDN,11874,South Kordofan,Abu Jibaih,SD07,SD07088,SD07,SD07088,SD07,,transliterations
+SDN,11872,South Kordofan,El Abassiya,SD07,SD07090,SD07,,SD07,SD07090,
+SDN,11870,West Kordofan,Abyei - Muglad,SD18,?,SD18,,SD18,SD18087,Abyei-Muglad locality vs Abyei unclear
+SDN,11868,West Kordofan,El Nehoud,SD18,SD18022,SD18,SD18022,SD18,,transliterations
+SDN,1823,West Kordofan,El Salam,SD18,SD18086,SD18,,SD18,SD18086,
+SDN,11869,West Kordofan,Qebaesh,SD18,SD18021,SD18,SD18021,SD18,,transliterations
+SDN,11861,White Nile,El Dwaeem,SD09,SD09044,SD09,SD09044,SD09,,transliterations
+SDN,11862,White Nile,El Jabaleen,SD09,SD09051,SD09,SD09051,SD09,,transliterations
+SDN,11863,White Nile,El Salam,SD09,SD09049,SD09,,SD09,SD09049,
+SLE,12272,Western Area,Western Rural,SL04,SL0401,,,SL04,SL0401,
+SLE,6542,Western Area,Western Urban,SL04,SL0402,,SL0402,SL04,SL0402,
+SOM,6634,Banadir,Banadir,SO22,,SO22,SO2201,SO22,,"Banadir is the region, not a district"
+TCD,8404,Logone Oriental,La Nya Pendm,TCD09,TCD0905,TCD09,TCD0905,TCD09,TCD0904,mangled names
+TCD,4495,Mayo Kebbi Est,Kabia,TCD11,TCD1102,TCD11,,TCD11,TCD1102,Kabia = La Kabbia
+TCD,12220,Mayo Kebbi Ouest,Lac-LBrn,TCD12,TCD1202,TCD12,TCD1202,TCD12,,mangled names
+TCD,9802,Moyen Chari,Barh-K h,TCD13,TCD1301,TCD13,TCD1301,TCD13,,mangled names
+TCD,4493,Tibesti,Tibest-Ouest,TCD22,TCD2202,TCD22,TCD2201,TCD22,TCD2202,
+TLS,4634,Viqueque,Watulari,TL13,TL1303,TL13,TL1303,TL13,,Watulari = Uato-Lari
+UKR,10130,Dnipropetrovska,Mezhivskyi,UA12,|UA1214,UA12,,UA12,UA1210,pre-2020 raion merged into new raion
+UKR,8332,Dnipropetrovska,Pokrovskyi,UA12,|UA1214,UA12,,UA12,UA1202,pre-2020 raion merged into new raion
+UKR,9681,Dnipropetrovska,Sofiivskyi,UA12,|UA1206,UA12,,UA12,UA1210,pre-2020 raion merged into new raion
+UKR,9732,Dnipropetrovska,Tomakivskyi,UA12,|UA1208,UA12,,UA12,UA1210,pre-2020 raion merged into new raion
+UKR,8436,Donetska,Kirovska,UA14,|UA1406,UA14,,UA14,UA1416,pre-2020 raion merged into new raion
+UKR,8424,Donetska,Marinskyi,UA14,|UA1416,UA14,,UA14,UA1414,pre-2020 raion merged into new raion
+UKR,8430,Donetska,Novoazovskyi,UA14,|UA1410,UA14,,UA14,UA1404,pre-2020 raion merged into new raion
+UKR,8439,Donetska,Shakhtarskyi,UA14,|UA1406,UA14,,UA14,UA1402,pre-2020 raion merged into new raion
+UKR,8342,Donetska,Toretska,UA14,|UA1402,UA14,UA1408,UA14,,pre-2020 raion merged into new raion
+UKR,7963,Kharkivska,Blyzniukivskyi,UA63,|UA6310,UA63,,UA63,UA6310,pre-2020 raion merged into new raion
+UKR,8195,Kharkivska,Borivskyi,UA63,|UA6304,UA63,,UA63,UA6310,pre-2020 raion merged into new raion
+UKR,7967,Kharkivska,Derhachivskyi,UA63,|UA6312,UA63,,UA63,UA6312,pre-2020 raion merged into new raion
+UKR,8325,Kharkivska,Zolochivskyi,UA63,|UA6302,UA63,,UA63,UA6310,pre-2020 raion merged into new raion
+UKR,8665,Khersonska,Novokakhovska,UA65,|UA6506,UA65,,UA65,UA6506,pre-2020 raion merged into new raion
+UKR,8446,Kirovohradska,Malovyskivskyi,UA35,|UA3506,UA35,,UA35,UA3502,pre-2020 raion merged into new raion
+UKR,8006,Luhanska,Troitskyi,UA44,|UA4410,UA44,,UA44,UA4414,pre-2020 raion merged into new raion
+UKR,8456,Mykolaivska,Kazankivskyi,UA48,|UA4802,UA48,,UA48,UA4806,pre-2020 raion merged into new raion
+UKR,8460,Mykolaivska,Veselynivskyi,UA48,|UA4804,UA48,,UA48,UA4804,pre-2020 raion merged into new raion
+UKR,8616,Sumska,Burynskyi,UA59,|UA5902,UA59,,UA59,UA5906,pre-2020 raion merged into new raion
+UKR,8638,Sumska,Krasnopilskyi,UA59,|UA5908,UA59,,UA59,UA5902,pre-2020 raion merged into new raion
+UKR,8620,Sumska,Krolevetskyi,UA59,|UA5902,UA59,,UA59,UA5906,pre-2020 raion merged into new raion
+UKR,8689,Zaporizka,Bilmatskyi,UA23,|UA2310,UA23,,UA23,UA2302,pre-2020 raion merged into new raion
+UKR,8322,Zaporizka,Novomykolaivskyi,UA23,|UA2306,UA23,,UA23,UA2304,pre-2020 raion merged into new raion
+UKR,8329,Zaporizka,Orikhivskyi,UA23,|UA2310,UA23,,UA23,UA2310,pre-2020 raion merged into new raion
+UKR,8694,Zaporizka,Pryazovskyi,UA23,|UA2308,UA23,UA2310,UA23,,pre-2020 raion merged into new raion
+UKR,8696,Zaporizka,Rozivskyi,UA23,|UA2310,UA23,,UA23,UA2310,pre-2020 raion merged into new raion
+UKR,8691,Zaporizka,Yakymivskyi,UA23,|UA2308,UA23,,UA23,UA2304,pre-2020 raion merged into new raion
+VEN,12035,Vargas,Vargas,|VE24,VE2401,,VE2401,VE05,,Vargas state renamed La Guaira
+VNM,5941,Bac Lieu,Dong Hai,|VN96,,VN24,,,,Bac Lieu merged into Ca Mau 2025
+YEM,5163,Al Bayda,Radman Al Awad,YE14,YE1412,YE14,,YE14,YE1412,
+YEM,4217,Al Dhale'e,Al Hussein,YE30,YE3005,YE30,YE3005,YE30,,
+YEM,2485,Al Hudaydah,Ad Dahi,YE18,YE1809,YE18,YE1809,YE14,YE1405,Al Hudaydah = Al Hodeidah
+YEM,2704,Al Hudaydah,Ad Durayhimi,YE18,YE1814,YE18,YE1814,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2490,Al Hudaydah,Al Garrahi,YE18,YE1825,YE18,YE1825,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2508,Al Hudaydah,Al Hajjaylah,YE18,YE1811,YE18,YE1811,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2506,Al Hudaydah,Al Hali,YE18,YE1823,YE18,YE1823,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2483,Al Hudaydah,Al Hawak,YE18,YE1821,YE18,YE1821,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2486,Al Hudaydah,Al Khawkhah,YE18,YE1820,YE18,YE1820,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2484,Al Hudaydah,Al Mansuriyah,YE18,YE1816,YE18,YE1816,YE14,YE1414,Al Hudaydah = Al Hodeidah
+YEM,2496,Al Hudaydah,Al Marawi'ah,YE18,YE1813,YE18,YE1813,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2491,Al Hudaydah,Al Mighlaf,YE18,YE1808,YE18,YE1808,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2492,Al Hudaydah,Al Mina,YE18,YE1822,YE18,YE1822,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2494,Al Hudaydah,Al Munirah,YE18,YE1805,YE18,YE1805,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2495,Al Hudaydah,Al Qanawis,YE18,YE1806,YE18,YE1806,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2497,Al Hudaydah,Alluheyah,YE18,YE1802,YE18,YE1802,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2498,Al Hudaydah,As Salif,YE18,YE1804,YE18,YE1804,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2504,Al Hudaydah,As Sukhnah,YE18,YE1815,YE18,YE1815,YE14,YE1419,Al Hudaydah = Al Hodeidah
+YEM,6391,Al Hudaydah,At Tuhayat,YE18,YE1826,YE18,YE1809,YE14,,At Tuhayat = At Tuhayta
+YEM,2503,Al Hudaydah,Az Zaydiyah,YE18,YE1807,YE18,YE1807,YE14,YE1411,Al Hudaydah = Al Hodeidah
+YEM,2493,Al Hudaydah,Az Zuhrah,YE18,YE1801,YE18,YE1801,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2500,Al Hudaydah,Bajil,YE18,YE1810,YE18,YE1810,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2488,Al Hudaydah,Bayt Al Faqiah,YE18,YE1817,YE18,YE1817,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2487,Al Hudaydah,Bura,YE18,YE1812,YE18,YE1812,YE14,,Al Hudaydah = Al Hodeidah
+YEM,10739,Al Hudaydah,Hays,YE18,YE1819,YE18,YE1819,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2489,Al Hudaydah,Jabal Ra's,YE18,YE1818,YE18,YE1818,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2507,Al Hudaydah,Kamaran,YE18,YE1803,YE18,YE1803,YE14,,Al Hudaydah = Al Hodeidah
+YEM,2499,Al Hudaydah,Zabid,YE18,YE1824,YE18,YE1824,YE14,,Al Hudaydah = Al Hodeidah
+YEM,196,Sa'ada,Sa'adah,YE22,YE2215,YE22,YE2206,YE22,YE2215,Sa'adah = Sa'dah
+YEM,4453,Socotra,Hidaybu,YE32,YE3201,YE32,YE3201,YE32,,Hidaybu = Hadibu
+ZAF,2653,Gauteng,West Rand District Municipality,ZA7,ZA748,ZA7,,ZA7,ZA748,
+ZMB,10066,Lusaka,Shibuyunji,ZM105,,ZM105,ZM105001,ZM105,,"Shibuyunji is ZM101012 under Central, not Lusaka"
+AFG,7657,Paktika,Bermel,AF12,AF1214,AF12,AF1214,AF12,AF1214,control: control
+AFG,5796,Nuristan,Poruns,AF16,AF1601,AF16,AF1601,AF16,AF1601,control: control
+BDI,2444,Makamba,Mabanda,|BI3,,,BI205,,BI205,control: old commune; Mpanda is in Bujumbura
+BDI,5007,Muramvya,Rutegama,|BI5,,,BI307,,BI307,control: old commune; Rutana is in Burunga
+BDI,2476,Ngozi,Busiga,|BI4,?,,BI401,,BI401,control: old commune
+BDI,11030,Rutana,Gitanga,|BI3,,,BI503,,BI503,control: old commune; Gitega is in Gitega
+BDI,4990,Gitega,Giheta,BI5,?,BI5,BI503,BI5,BI503,control: old commune; Giheta is in Gitega
+BEN,2774,Atakora,Pehonko,BJ02,BJ0207,BJ02,BJ0207,BJ02,BJ0207,control: control
+BGD,4022,Khulna,Jessore,BD40,BD4041,BD40,BD4041,BD40,BD4041,control: control
+CMR,7642,Ouest,Bamboutos,CM008,CM008001,CM003,,CM003,,control: Ouest = West; prod and stage both give East
+CMR,7643,Ouest,Menoua,CM008,CM008005,CM003,,CM003,,control: Ouest = West; prod and stage both give East
+CMR,2566,Ouest,Mifi,CM008,CM008006,CM003,,CM003,,control: Ouest = West; prod and stage both give East
+CMR,7644,Ouest,Ndé,CM008,CM008007,CM003,,CM003,,control: Ouest = West; prod and stage both give East
+CMR,7645,Ouest,Noun,CM008,CM008008,CM003,,CM003,,control: Ouest = West; prod and stage both give East
+CMR,1580,Nord,Bénoué,CM006,CM006001,CM006,CM006001,CM006,CM006001,control: Nord = North
+CMR,1582,Nord,Faro,CM006,CM006002,CM006,CM006002,CM006,CM006002,control: Nord = North
+CMR,1585,Nord,Mayo-Louti,CM006,CM006003,CM006,CM006003,CM006,CM006003,control: Nord = North
+CMR,1589,Nord,Mayo-Rey,CM006,CM006004,CM006,CM006004,CM006,CM006004,control: Nord = North
+CMR,5263,Nord-Ouest,Boyo,CM007,CM007001,CM007,CM007001,CM007,CM007001,control: Nord-Ouest = North-West
+CMR,9531,Nord-Ouest,Bui,CM007,CM007002,CM007,CM007002,CM007,CM007002,control: Nord-Ouest = North-West
+CMR,9530,Nord-Ouest,Donga-Mantung,CM007,CM007003,CM007,CM007003,CM007,CM007003,control: Nord-Ouest = North-West
+CMR,9671,Nord-Ouest,Menchum,CM007,CM007004,CM007,CM007004,CM007,CM007004,control: Nord-Ouest = North-West
+CMR,9683,Nord-Ouest,Mezam,CM007,CM007005,CM007,CM007005,CM007,CM007005,control: Nord-Ouest = North-West
+CMR,6549,Nord-Ouest,Momo,CM007,CM007006,CM007,CM007006,CM007,CM007006,control: Nord-Ouest = North-West
+CMR,9526,Nord-Ouest,Ngo-Ketunjia,CM007,CM007007,CM007,CM007007,CM007,CM007007,control: Nord-Ouest = North-West
+ETH,3079,SNNPR,ALABA SW,|ET07,ET0714,,ET0714,,ET0714,control: SNNPR dissolved
+ETH,3664,SNNPR,SELTI,|ET07,ET0720,,ET0720,,ET0720,control: SNNPR dissolved
+IRQ,8351,Sulaymaniyah,Darbandihkan,IQG06,IQG06Q03,IQG06,IQG06Q03,IQG06,IQG06Q03,control: control
+IRQ,4014,Baghdad,Tarmia,IQG08,?,IQG08,IQG08Q07,IQG08,IQG08Q07,control: Tarmia not in COD; Al-Thawra unclear
+IRQ,1468,Missan,Amara,IQG14,IQG14Q01,IQG14,IQG14Q01,IQG14,IQG14Q01,control: Missan = Maysan
+IRQ,3932,Missan,Ali Al-Gharbi,IQG14,IQG14Q02,IQG14,IQG14Q02,IQG14,IQG14Q02,control: Missan = Maysan
+IRQ,3933,Missan,Al-Kahla,IQG14,IQG14Q03,IQG14,IQG14Q03,IQG14,IQG14Q03,control: Missan = Maysan
+IRQ,3940,Missan,Al-Mejar Al-Kabi,IQG14,IQG14Q05,IQG14,IQG14Q05,IQG14,IQG14Q05,control: Missan = Maysan
+IRQ,4004,Missan,Qal'at Saleh,IQG14,IQG14Q06,IQG14,IQG14Q06,IQG14,IQG14Q06,control: Missan = Maysan
+LBN,1698,Mount Lebanon,Kasrouane,LB3,LB35,LB3,LB35,LB3,LB35,control: control
+LBN,1690,El Nabatieh,Bint Jubail,LB4,LB41,LB4,LB41,LB4,LB41,control: control
+MLI,2519,Tombouctou,Niafunke,ML06,,ML06,,ML06,,control: Tombouctou = Timbuktu
+MLI,3638,Tombouctou,Tombouctou,ML06,ML0601,ML06,ML0601,ML06,ML0601,control: Tombouctou = Timbuktu
+MLI,3639,Tombouctou,Goundam,ML06,ML0602,ML06,ML0602,ML06,ML0602,control: Tombouctou = Timbuktu
+MLI,11220,Tombouctou,Dire,ML06,ML0603,ML06,ML0603,ML06,ML0603,control: Tombouctou = Timbuktu
+NGA,8019,Abuja,Abuja Municipal,NG015,NG015002,NG001,,NG001,,control: prod and stage both give Abia
+SDN,11843,Khartoum,Jebal Aulya,SD01,SD01001,SD01,SD01001,SD01,SD01001,control: control
+SDN,11877,North Darfur,Ailliet,SD02,SD02169,SD02,SD02169,SD02,SD02169,control: control
+SDN,11873,South Kordofan,Talodi,SD07,SD07089,SD07,SD07089,SD07,SD07089,control: control
+SDN,11847,Red Sea,Tokar,SD10,SD10065,SD10,SD10065,SD10,SD10065,control: control
+SDN,11859,Sennar,El Dindir,SD14,SD14040,SD14,SD14040,SD14,SD14040,control: control
+SLE,6512,Northern,Falaba,SL02,SL0206,SL02,SL0206,SL02,SL0206,control: control
+UKR,1879,Volynska,Lutska,UA07,UA0708,UA07,UA0708,UA07,UA0708,control: control
+UKR,8452,Zaporizka,Mykhailivskyi,UA23,UA2304,UA23,UA2304,UA23,UA2304,control: control
+UKR,1873,Odeska,Odeska,UA51,UA5110,UA51,UA5110,UA51,UA5110,control: control
+UKR,1876,Sumska,Sumska,UA59,UA5908,UA59,UA5908,UA59,UA5908,control: control
+UKR,1884,Kyiv,Kyivska,UA80,UA8000,UA80,UA8000,UA80,UA8000,control: control
+YEM,4392,Hadramaut,Adh Dhlia'ah,YE19,YE1922,YE19,YE1922,YE19,YE1922,control: control
+YEM,5121,Hadramaut,Huraidhah,YE19,YE1928,YE19,YE1928,YE19,YE1928,control: control
+YEM,4443,Shabwah,Dhar,YE21,YE2101,YE21,YE2101,YE21,YE2101,control: control
+YEM,4196,Lahj,Yafa'a,YE25,YE2502,YE25,YE2502,YE25,YE2502,control: control
+YEM,6315,Lahj,Halimayn,YE25,YE2506,YE25,YE2506,YE25,YE2506,control: control
+YEM,6183,Al Maharah,Huswain,YE28,YE2809,YE28,YE2809,YE28,YE2809,control: control
+YEM,4212,Al Dhale'e,Qa'atabah,YE30,YE3003,YE30,YE3003,YE30,YE3003,control: Al Dhale'e = Ad Dali'
+YEM,4216,Al Dhale'e,Ash Shu'ayb,YE30,YE3004,YE30,YE3004,YE30,YE3004,control: Al Dhale'e = Ad Dali'
+YEM,1941,Al Dhale'e,Ad Dhale'e,YE30,YE3006,YE30,YE3006,YE30,YE3006,control: Al Dhale'e = Ad Dali'
+YEM,4222,Al Dhale'e,Jahaf,YE30,YE3007,YE30,YE3007,YE30,YE3007,control: Al Dhale'e = Ad Dali'
+YEM,4374,Al Dhale'e,Al Azariq,YE30,YE3008,YE30,YE3008,YE30,YE3008,control: Al Dhale'e = Ad Dali'
+YEM,4223,Al Dhale'e,Al Husha,YE30,YE3009,YE30,YE3009,YE30,YE3009,control: Al Dhale'e = Ad Dali'

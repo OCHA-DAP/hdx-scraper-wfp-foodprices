@@ -13,7 +13,7 @@ requires-python = ">=3.13"
 dependencies = [
   "hdx-python-api>=6.6.8",
   "hdx-python-country[wfp]>=4.2.2",
-  "hdx-python-utilities>=4.2.0",
+  "hdx-python-utilities>=4.2.1",
   "sigfig",
 ]
 readme = "README.md"
