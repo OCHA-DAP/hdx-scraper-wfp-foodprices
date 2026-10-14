@@ -49,7 +49,12 @@ class HAPIOutput:
             pcode_formats_rows.append(row)
         self._admins = []
         for i in range(2):
-            admin = AdminLevel(admin_level=i + 1, retriever=retriever)
+            admin_level = i + 1
+            admin = AdminLevel(
+                admin_config=self._configuration.get(f"admin{admin_level}_config"),
+                admin_level=admin_level,
+                retriever=retriever,
+            )
             admin.setup_from_iterable(pcode_rows)
             admin.load_pcode_formats_from_iterable(pcode_formats_rows)
             self._admins.append(admin)
@@ -153,6 +158,9 @@ class HAPIOutput:
                         message_type="warning",
                     )
                     base_row["warning"].add(message)
+                    base_row["admin1_code"] = parent_code
+                    base_row["admin1_name"] = self._admins[0].pcode_to_name[parent_code]
+                elif not adm1_code and parent_code:
                     base_row["admin1_code"] = parent_code
                     base_row["admin1_name"] = self._admins[0].pcode_to_name[parent_code]
             base_row["admin_level"] = 2

@@ -25,6 +25,111 @@ unused_adm2:
 adm1_only:
   - "SLV"
 
+# WFP admin names that AdminLevel matches wrongly or not at all. Admin 1 names
+# for countries in unused_adm1 are WFP's admin 2 names.
+admin1_config:
+  admin_name_mappings:
+    "BGD|Chittagong": "BD20"  # Chattogram
+    "CMR|Ouest": "CM008"  # West, not East (CM003)
+    "CMR|Sud-Ouest": "CM010"  # South-West
+    "EGY|Minya": "EG24"  # Menia
+    "IRQ|Dahuk": "IQG09"  # Duhok
+    "KEN|Meru South": "KE013"  # Tharaka-Nithi
+    "MOZ|Maputo City": "MZ11"  # Cidade de Maputo, not Maputo (MZ10)
+    "NGA|Abuja": "NG015"  # Federal Capital Territory, not Abia (NG001)
+    "SDN|Al Gezira": "SD15"  # Aj Jazirah
+    "VEN|Distrito Federal": "VE01"  # Distrito Capital
+    "VEN|Vargas": "VE24"  # Renamed La Guaira
+    "YEM|Al Hudaydah": "YE18"  # Al Hodeidah, not Al Bayda (YE14)
+  # Regions split, so the district decides the region: Brong Ahafo into Ahafo,
+  # Bono and Bono East, Vatovavy Fitovinany into Vatovavy and Fitovinany
+  admin_fuzzy_dont:
+    - "GHA|brong ahafo"
+    - "MDG|vatovavy fitovinany"
+
+admin2_config:
+  admin_name_mappings:
+    "AFG|Faiz Abad": "AF1701"  # Fayzabad
+    "AFG|Syah Gerd": "AF0303"  # Shinwari
+    "BFA|OUBRITENGA": "BF5503"  # Renamed Bassitenga in 2025
+    "BFA|SANMATENGA": "BF4903"  # Renamed Sandbondtenga in 2025
+    "BGD|Chittagong": "BD2015"  # Chattogram
+    "ETH|ILLUBABOR": "ET0403"  # Ilu Aba Bora
+    "ETH|WARDER": "ET0507"  # Doolo, not Korahe (ET0508)
+    "IRQ|Akre": "IQG15Q01"  # Aqra
+    "IRQ|Baiji": "IQG16Q03"  # Beygee
+    "IRQ|Dabes": "IQG13Q03"  # Dibis
+    "IRQ|Dahuk": "IQG09Q02"  # Duhok
+    "NGA|Oboma Ngwa": "NG001009"  # Obi Ngwa, not Ohafia (NG001011)
+    "SDN|Abu Jibaih": "SD07088"  # Abu Jubayhah
+    "SDN|Ed Daein": "SD05142"  # Ad Du'ayn
+    "SDN|El Dwaeem": "SD09044"  # Ad Diwaim
+    "SDN|El Jabaleen": "SD09051"  # Aj Jabalain
+    "SDN|El Nehoud": "SD18022"  # An Nuhud
+    "SDN|El Roseires": "SD08107"  # Ar Rusayris
+    "SDN|Halfa El Gedid": "SD11052"  # Halfa Aj Jadeedah
+    "SDN|Marawai": "SD17020"  # Merwoe
+    "SDN|Qebaesh": "SD18021"  # Ghubaish
+    "TCD|Barh-K h": "TCD1301"  # Bahr Koh
+    "TCD|La Nya Pendm": "TCD0905"  # La Nya Pendé, not La Nya (TCD0904)
+    "TCD|Lac-LBrn": "TCD1202"  # Lac Léré
+    "TLS|Watulari": "TL1303"  # Uato-Lari
+    "YEM|Al Hussein": "YE3005"  # Al Hasayn
+    "YEM|Hidaybu": "YE3201"  # Hadibu
+    # Pre-2020 raions merged into these raions
+    "UA12|Mezhivskyi": "UA1214"  # Synelnykivskyi
+    "UA12|Pokrovskyi": "UA1214"  # Synelnykivskyi
+    "UA12|Sofiivskyi": "UA1206"  # Kryvorizkyi
+    "UA12|Tomakivskyi": "UA1208"  # Nikopolskyi
+    "UA14|Kirovska": "UA1406"  # Horlivskyi
+    "UA14|Marinskyi": "UA1416"  # Pokrovskyi
+    "UA14|Novoazovskyi": "UA1410"  # Kalmiuskyi
+    "UA14|Shakhtarskyi": "UA1406"  # Horlivskyi
+    "UA23|Bilmatskyi": "UA2310"  # Polohivskyi
+    "UA23|Novomykolaivskyi": "UA2306"  # Zaporizkyi
+    "UA23|Yakymivskyi": "UA2308"  # Melitopolskyi
+    "UA35|Malovyskivskyi": "UA3506"  # Novoukrainskyi
+    "UA44|Troitskyi": "UA4410"  # Svativskyi
+    "UA48|Kazankivskyi": "UA4802"  # Bashtanskyi
+    "UA59|Burynskyi": "UA5902"  # Konotopskyi
+    "UA59|Krasnopilskyi": "UA5908"  # Sumskyi
+    "UA59|Krolevetskyi": "UA5902"  # Konotopskyi
+    "UA63|Borivskyi": "UA6304"  # Iziumskyi
+    "UA63|Zolochivskyi": "UA6302"  # Bohodukhivskyi
+  admin_fuzzy_dont:
+    # Pre-2025 communes without a same-name successor
+    - "BDI|buganda"  # Not Bugendana
+    - "BDI|buhiga"  # Not Butihinda
+    - "BDI|buhinyuza"  # Not Butihinda
+    - "BDI|bukemba"  # Not Kiremba
+    - "BDI|gahombo"  # Not Shombo
+    - "BDI|gatara"  # Not Gisagara
+    - "BDI|gisozi"  # Not Ngozi
+    - "BDI|gitanga"  # Not Gitega
+    - "BDI|giteranyi"  # Not Gitega
+    - "BDI|gitobe"  # Not Gitega
+    - "BDI|kigamba"  # Not Makamba
+    - "BDI|mabanda"  # Not Mpanda
+    - "BDI|marangara"  # Not Tangara
+    - "BDI|mugamba"  # Not Makamba
+    - "BDI|muruta"  # Not Muhuta
+    - "BDI|musigati"  # Not Musongati
+    - "BDI|mwakiro"  # Not Mwaro
+    - "BDI|ntega"  # Not Gitega
+    - "BDI|nyabitsinda"  # Not Nyabihanga
+    - "BDI|nyamurenza"  # Not Nyanza
+    - "BDI|rango"  # Not Matongo
+    - "BDI|rugazi"  # Not Ruyigi
+    - "BDI|rusaka"  # Not Rutana
+    - "BDI|rutegama"  # Not Rutana
+    - "BDI|songa"  # Not Musongati
+    - "BDI|vyanda"  # Not Mpanda
+    - "BI2|muha"  # Not Muhuta
+    - "GH14|krachi west"  # Now in Oti, not Ho West
+    - "IQG01|ra'ua"  # Rawa is not in the COD, not Al-Rutba
+    - "ML03|bougouni"  # Now an admin1 (2023 regions), not Loulouni
+    - "PK2|mekran"  # Makran is a division, not Kharan
+
 hapi_dataset:
   name: "hdx-hapi-food-price"
   title: "HDX HAPI - Food Security, Nutrition & Poverty: Food Prices"
