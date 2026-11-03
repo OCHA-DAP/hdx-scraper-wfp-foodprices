@@ -68,6 +68,9 @@ index-strategy = "unsafe-best-match"
 name = "wfp"
 url = "https://d2i4vvypvg40rv.cloudfront.net/pypi/"
 
+[tool.uv.sources]
+hdx-python-country = { git = "https://github.com/OCHA-DAP/hdx-python-country", branch = "wfp-prices-csv" }
+
 # ----------------------------------------------------------------------------
 # Ruff (Linting & Formatting)
 # ----------------------------------------------------------------------------
