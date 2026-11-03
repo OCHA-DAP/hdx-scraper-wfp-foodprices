@@ -288,7 +288,7 @@ class TestWFP:
                         "name": "global-wfp-food-prices-showcase",
                         "title": "Global - Food Prices showcase",
                         "notes": "Global food prices data from World Food Programme displayed through VAM Economic Explorer",
-                        "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                        "image_url": "https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-wfp-foodprices/main/images/overview-image.jpg",
                         "url": "https://dataviz.vam.wfp.org/economic/prices",
                         "tags": [
                             {

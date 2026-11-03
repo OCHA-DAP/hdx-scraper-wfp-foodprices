@@ -146,7 +146,7 @@ class TestWFP:
                     "title": "Congo - Food Prices showcase",
                     "notes": "Congo food prices data from World Food Programme displayed through VAM Economic Explorer",
                     "url": "https://dataviz.vam.wfp.org/southern-africa/congo/overview",
-                    "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                    "image_url": "https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-wfp-foodprices/main/images/overview-image.jpg",
                     "tags": [
                         {
                             "name": "economics",
@@ -238,7 +238,7 @@ class TestWFP:
                     "name": "wfp-food-prices-for-nicaragua-showcase",
                     "title": "Nicaragua - Food Prices showcase",
                     "notes": "Nicaragua food prices data from World Food Programme displayed through VAM Economic Explorer",
-                    "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                    "image_url": "https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-wfp-foodprices/main/images/overview-image.jpg",
                     "url": "https://dataviz.vam.wfp.org/latin-america-and-the-caribbean/nicaragua/overview",
                     "tags": [
                         {
@@ -394,7 +394,7 @@ class TestWFP:
                     "name": "wfp-food-prices-for-state-of-palestine-showcase",
                     "title": "State of Palestine - Food Prices showcase",
                     "notes": "State of Palestine food prices data from World Food Programme displayed through VAM Economic Explorer",
-                    "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                    "image_url": "https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-wfp-foodprices/main/images/overview-image.jpg",
                     "url": "https://dataviz.vam.wfp.org/the-middle-east-and-northern-africa/palestine/overview",
                     "tags": [
                         {
@@ -481,7 +481,7 @@ class TestWFP:
                     },
                 ]
                 assert showcase == {
-                    "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                    "image_url": "https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-wfp-foodprices/main/images/overview-image.jpg",
                     "name": "wfp-food-prices-for-syrian-arab-republic-showcase",
                     "notes": "Syrian Arab Republic food prices data from World Food Programme "
                     "displayed through VAM Economic Explorer",
