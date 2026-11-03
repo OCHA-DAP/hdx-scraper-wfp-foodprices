@@ -11,9 +11,9 @@ name = "hdx-scraper-wfp-foodprices"
 dynamic = ["version"]
 requires-python = ">=3.13"
 dependencies = [
-  "hdx-python-api>=6.7.1",
-  "hdx-python-country[wfp]>=4.2.3",
-  "hdx-python-utilities>=4.2.1",
+  "hdx-python-api>=6.7.8",
+  "hdx-python-country[wfp]>=4.2.9",
+  "hdx-python-utilities>=4.2.7",
   "sigfig",
 ]
 readme = "README.md"
@@ -67,9 +67,6 @@ index-strategy = "unsafe-best-match"
 [[tool.uv.index]]
 name = "wfp"
 url = "https://d2i4vvypvg40rv.cloudfront.net/pypi/"
-
-[tool.uv.sources]
-hdx-python-country = { git = "https://github.com/OCHA-DAP/hdx-python-country", branch = "wfp-prices-csv" }
 
 # ----------------------------------------------------------------------------
 # Ruff (Linting & Formatting)

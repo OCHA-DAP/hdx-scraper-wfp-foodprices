@@ -508,11 +508,15 @@ wheels = [
 
 [[package]]
 name = "hdx-python-country"
-version = "4.2.9.dev2"
-source = { git = "https://github.com/OCHA-DAP/hdx-python-country?branch=wfp-prices-csv#ffe035b98f9032f54fc7779be3dc91775a3093e7" }
+version = "4.2.9"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "hdx-python-utilities" },
     { name = "tenacity" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e2/11/b6709503136db32259e7cad93da2006205a5057bd3a04111fd3a15ff3a8a/hdx_python_country-4.2.9.tar.gz", hash = "sha256:19d7a964327992bbbf6592c32f8bd516ce690e1e6cc5a302061bbd07c41bc3f9", size = 563757, upload-time = "2026-11-03T22:32:42.46Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e5/86/99249844bbb1052156bd6f24e1df60eaed4da14cabb629fa62e50df92547/hdx_python_country-4.2.9-py3-none-any.whl", hash = "sha256:5b389555ecbf4bd7f4dd621b7b7490142d6dd56698f92d33beabdb38249257e3", size = 58934, upload-time = "2026-11-03T22:32:41.113Z" },
 ]
 
 [package.optional-dependencies]
@@ -567,9 +571,9 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "hdx-python-api", specifier = ">=6.7.1" },
-    { name = "hdx-python-country", extras = ["wfp"], git = "https://github.com/OCHA-DAP/hdx-python-country?branch=wfp-prices-csv" },
-    { name = "hdx-python-utilities", specifier = ">=4.2.1" },
+    { name = "hdx-python-api", specifier = ">=6.7.8" },
+    { name = "hdx-python-country", extras = ["wfp"], specifier = ">=4.2.9" },
+    { name = "hdx-python-utilities", specifier = ">=4.2.7" },
     { name = "sigfig" },
 ]
 
