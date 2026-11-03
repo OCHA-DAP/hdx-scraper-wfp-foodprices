@@ -61,7 +61,7 @@ class DatasetGenerator:
                 "name": f"{slugified_name}-showcase",
                 "title": f"{title} showcase",
                 "notes": f"{location_name} food prices data from World Food Programme displayed through VAM Economic Explorer",
-                "image_url": "https://dataviz.vam.wfp.org/images/overview-image.jpg",
+                "image_url": "https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-wfp-foodprices/main/images/overview-image.jpg",
                 "url": url,
             }
         )
