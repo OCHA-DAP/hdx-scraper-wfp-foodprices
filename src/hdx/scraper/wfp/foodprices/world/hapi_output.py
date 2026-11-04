@@ -103,7 +103,7 @@ class HAPIOutput:
                     adm1_code = self._admins[1].pcode_to_parent.get(adm2_code)
                     if adm1_code:
                         base_row["admin1_code"] = adm1_code
-                        base_row["admin2_name"] = self._admins[0].pcode_to_name[
+                        base_row["admin1_name"] = self._admins[0].pcode_to_name[
                             adm1_code
                         ]
                 base_row["admin_level"] = 2

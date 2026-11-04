@@ -90,3 +90,44 @@ class TestAdminMatching:
             if r[f"admin{level}_score"] == "wrong"
         ]
         assert wrong == []
+
+    def test_unused_adm2(self, configuration, input_dir):
+        configuration.update(
+            load_yaml(
+                script_dir_plus_file(join("config", "project_configuration.yaml"), main)
+            )
+        )
+        # UGA is in unused_adm2, so WFP's admin 1 field holds the admin 2 name
+        with HDXErrorHandler(write_to_hdx=False) as error_handler:
+            with temp_dir("TestWFPUnusedAdm2") as tempdir:
+                with Download(user_agent="test") as downloader:
+                    retriever = Retrieve(
+                        downloader,
+                        tempdir,
+                        input_dir,
+                        tempdir,
+                        save=False,
+                        use_saved=True,
+                    )
+                    hapi_output = HAPIOutput(
+                        configuration, downloader, tempdir, error_handler
+                    )
+                    hapi_output.setup_admins(retriever)
+                    row = {
+                        "market": "Buikwe",
+                        "countryiso3": "UGA",
+                        "admin1": "Buikwe",
+                        "admin2": "",
+                    }
+                    base_row = {"warning": set()}
+                    hapi_output.complete_admin(row, base_row)
+        assert base_row == {
+            "warning": set(),
+            "provider_admin1_name": "Buikwe",
+            "provider_admin2_name": "",
+            "admin1_code": "UG1",
+            "admin1_name": "Central",
+            "admin2_code": "UG1001",
+            "admin2_name": "Buikwe",
+            "admin_level": 2,
+        }
