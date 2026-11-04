@@ -48,7 +48,6 @@ def setup_currency(
     currency_codes = [x["code"] for x in currencies]
     wfp_fx = WFPExchangeRates(wfp_api)
     if wfp_rates_folder:
-        # JSON not YAML: load_yaml of 707,927 rates holds 1.46 GB, json 115 MB
         filepath = join(wfp_rates_folder, "wfp_rates.json")
         if exists(filepath):
             logger.info(f"Loading WFP FX rates from {filepath}")
