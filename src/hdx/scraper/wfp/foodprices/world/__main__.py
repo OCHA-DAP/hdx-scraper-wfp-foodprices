@@ -96,11 +96,10 @@ def main(
                 if not markets:
                     logger.error("No markets data found!")
                     sys.exit(1)
-                prices_generator = GlobalPricesGenerator(
-                    configuration, downloader, folder
+                prices_generator = GlobalPricesGenerator(configuration, folder)
+                start_date, end_date, year_to_pricespath = (
+                    prices_generator.create_prices_files()
                 )
-                start_date, end_date = prices_generator.get_years_per_country()
-                year_to_pricespath = prices_generator.create_prices_files()
                 if not year_to_pricespath:
                     logger.error("No prices data found!")
                     sys.exit(1)
@@ -141,7 +140,6 @@ def main(
                     dataset_id = dataset["id"]
                     hapi_output = HAPIOutput(
                         configuration,
-                        downloader,
                         folder,
                         error_handler,
                     )

@@ -1,13 +1,12 @@
+import csv
 import logging
-from datetime import UTC, datetime
+from contextlib import ExitStack
+from datetime import datetime
 from glob import iglob
 from os.path import join
 
 from hdx.api.configuration import Configuration
 from hdx.utilities.dateparse import default_date, default_enddate, parse_date
-from hdx.utilities.dictandlist import dict_of_sets_add
-from hdx.utilities.downloader import Download
-from hdx.utilities.saver import save_iterable
 
 logger = logging.getLogger(__name__)
 
@@ -15,69 +14,53 @@ logger = logging.getLogger(__name__)
 class GlobalPricesGenerator:
     filename = "wfp_food_prices_global_{}.csv"
 
-    def __init__(self, configuration: Configuration, downloader: Download, folder: str):
+    def __init__(self, configuration: Configuration, folder: str):
         self._configuration = configuration
-        self._downloader = downloader
         self._folder = folder
-        self._prices_paths = {}
-        self._years = None
-        self._year_to_countries = {}
 
-    def get_years_per_country(self) -> tuple[datetime, datetime]:
-        for filepath in sorted(
-            iglob(f"{self._folder}/wfp_food_prices*.csv", recursive=False)
-        ):
-            if "_global" in filepath:
-                continue
-            countryiso3 = filepath[-7:-4].upper()
-            self._prices_paths[countryiso3] = filepath
-        earliest_date = default_enddate
-        latest_date = default_date
-        years = set()
-        for countryiso3, filepath in self._prices_paths.items():
-            _, iterator = self._downloader.get_tabular_rows(
-                filepath, dict_form=True, encoding="utf-8"
-            )
-            logger.info(f"Reading year info from {countryiso3}: {filepath}")
-            for row in iterator:
-                date = parse_date(row["date"])
-                if date < earliest_date:
-                    earliest_date = date
-                if date > latest_date:
-                    latest_date = date
-                years.add(date.year)
-                dict_of_sets_add(self._year_to_countries, date.year, countryiso3)
-        self._years = sorted(years, reverse=True)
-        return earliest_date, latest_date
-
-    def create_prices_files(self, output_dir: str = "") -> dict:
+    def create_prices_files(
+        self, output_dir: str = ""
+    ) -> tuple[datetime, datetime, dict]:
+        # Dates are YYYY-MM-DD so the year is the first 4 characters and dates
+        # compare as strings
+        if not output_dir:
+            output_dir = self._folder
+        prices_headers = ["countryiso3", *self._configuration["prices_headers"]]
+        prices_paths = sorted(
+            filepath
+            for filepath in iglob(f"{self._folder}/wfp_food_prices*.csv")
+            if "_global" not in filepath
+        )
+        earliest_date = None
+        latest_date = None
         year_to_path = {}
-
-        prices_headers = self._configuration["prices_headers"]
-        prices_headers.insert(0, "countryiso3")
-
-        for year in self._years:
-            logger.info(f"Processing {year} prices")
-            startdate = datetime(year, 1, 1, tzinfo=UTC)
-            enddate = datetime(year, 12, 31, 23, 59, 59, tzinfo=UTC)
-            rows = []
-            for countryiso3 in sorted(self._year_to_countries[year]):
-                filepath = self._prices_paths[countryiso3]
-                _, iterator = self._downloader.get_tabular_rows(
-                    filepath, dict_form=True, encoding="utf-8"
-                )
-                for row in iterator:
-                    date = parse_date(row["date"])
-                    if date < startdate or date > enddate:
-                        continue
-                    row["countryiso3"] = countryiso3
-                    rows.append(row)
-            if len(rows) == 0:
-                continue
-            if not output_dir:
-                output_dir = self._folder
-            filename = self.filename.format(year)
-            filepath = join(output_dir, filename)
-            save_iterable(filepath, rows, headers=prices_headers)
-            year_to_path[year] = filepath
-        return year_to_path
+        year_to_writer = {}
+        with ExitStack() as stack:
+            for filepath in prices_paths:
+                countryiso3 = filepath[-7:-4].upper()
+                logger.info(f"Reading prices from {countryiso3}: {filepath}")
+                with open(filepath, encoding="utf-8", newline="") as f:
+                    for row in csv.DictReader(f):
+                        date = row["date"]
+                        if earliest_date is None or date < earliest_date:
+                            earliest_date = date
+                        if latest_date is None or date > latest_date:
+                            latest_date = date
+                        year = int(date[:4])
+                        writer = year_to_writer.get(year)
+                        if writer is None:
+                            path = join(output_dir, self.filename.format(year))
+                            output = stack.enter_context(
+                                open(path, "w", encoding="utf-8", newline="")
+                            )
+                            writer = csv.DictWriter(
+                                output, prices_headers, extrasaction="ignore"
+                            )
+                            writer.writeheader()
+                            year_to_writer[year] = writer
+                            year_to_path[year] = path
+                        row["countryiso3"] = countryiso3
+                        writer.writerow(row)
+        if earliest_date is None:
+            return default_enddate, default_date, year_to_path
+        return parse_date(earliest_date), parse_date(latest_date), year_to_path

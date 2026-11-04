@@ -1,5 +1,7 @@
+import csv
 import logging
 from copy import deepcopy
+from functools import cache
 from os.path import join
 
 from dateutil.relativedelta import relativedelta
@@ -8,23 +10,35 @@ from hdx.api.utilities.hdx_error_handler import HDXErrorHandler
 from hdx.location.adminlevel import AdminLevel
 from hdx.location.country import Country
 from hdx.utilities.dateparse import iso_string_from_datetime, parse_date
-from hdx.utilities.downloader import Download
 from hdx.utilities.retriever import Retrieve
-from hdx.utilities.saver import save_iterable
 
 logger = logging.getLogger(__name__)
+
+
+@cache
+def get_reference_period(date: str) -> tuple[str, str]:
+    reference_period_start = parse_date(date, date_format="%Y-%m-%d")
+    reference_period_end = reference_period_start + relativedelta(
+        months=1,
+        days=-1,
+        hours=23,
+        minutes=59,
+        seconds=59,
+        microseconds=999999,
+    )  # food price reference period is one month
+    return iso_string_from_datetime(reference_period_start), iso_string_from_datetime(
+        reference_period_end
+    )
 
 
 class HAPIOutput:
     def __init__(
         self,
         configuration: Configuration,
-        downloader: Download,
         folder: str,
         error_handler: HDXErrorHandler,
     ) -> None:
         self._configuration = configuration
-        self._downloader = downloader
         self._folder = folder
         self._error_handler = error_handler
         self._admins = []
@@ -262,19 +276,29 @@ class HAPIOutput:
         configuration = self._configuration["hapi_dataset"]["resources"][0]
         headers = configuration["headers"]
 
+        market_id_to_row = {}
+        for market_id, base_row in self._base_rows.items():
+            market_row = deepcopy(base_row)
+            self.add_warnings_errors(market_row)
+            market_id_to_row[market_id] = market_row
+
+        if not output_dir:
+            output_dir = self._folder
         hapi_year_to_path = {}
         years = sorted(year_to_path.keys(), reverse=True)
         for year in years[:10]:
             filepath = year_to_path[year]
-            _, iterator = self._downloader.get_tabular_rows(
-                filepath, dict_form=True, encoding="utf-8"
-            )
             logger.info(f"Reading global prices from {filepath}")
-
-            def get_rows():
-                for row in iterator:
-                    market_id = row["market_id"]
-                    hapi_row = deepcopy(self._base_rows[market_id])
+            resource_id = year_to_prices_resource_id[year]
+            hapi_filepath = join(output_dir, configuration["filename"].format(year))
+            with (
+                open(filepath, encoding="utf-8", newline="") as input_file,
+                open(hapi_filepath, "w", encoding="utf-8", newline="") as output_file,
+            ):
+                writer = csv.DictWriter(output_file, headers, extrasaction="ignore")
+                writer.writeheader()
+                for row in csv.DictReader(input_file):
+                    hapi_row = market_id_to_row[row["market_id"]].copy()
                     hapi_row["commodity_category"] = row["category"]
                     hapi_row["commodity_name"] = row["commodity"]
                     hapi_row["commodity_code"] = row["commodity_id"]
@@ -284,33 +308,13 @@ class HAPIOutput:
                     hapi_row["currency_code"] = row["currency"]
                     hapi_row["price"] = row["price"]
                     hapi_row["usd_price"] = row["usdprice"]
-                    reference_period_start = parse_date(
-                        row["date"], date_format="%Y-%m-%d"
-                    )
-                    hapi_row["reference_period_start"] = iso_string_from_datetime(
-                        reference_period_start
-                    )
-                    reference_period_end = reference_period_start + relativedelta(
-                        months=1,
-                        days=-1,
-                        hours=23,
-                        minutes=59,
-                        seconds=59,
-                        microseconds=999999,
-                    )  # food price reference period is one month
-                    hapi_row["reference_period_end"] = iso_string_from_datetime(
-                        reference_period_end
-                    )
+                    (
+                        hapi_row["reference_period_start"],
+                        hapi_row["reference_period_end"],
+                    ) = get_reference_period(row["date"])
                     hapi_row["dataset_hdx_id"] = dataset_id
-                    hapi_row["resource_hdx_id"] = year_to_prices_resource_id[year]
-                    self.add_warnings_errors(hapi_row)
-                    yield hapi_row
-
-            if not output_dir:
-                output_dir = self._folder
-            filename = configuration["filename"].format(year)
-            filepath = join(output_dir, filename)
-            save_iterable(filepath, get_rows(), headers)
-            hapi_year_to_path[year] = filepath
+                    hapi_row["resource_hdx_id"] = resource_id
+                    writer.writerow(hapi_row)
+            hapi_year_to_path[year] = hapi_filepath
 
         return hapi_year_to_path
