@@ -48,6 +48,7 @@ def setup_currency(
     currency_codes = [x["code"] for x in currencies]
     wfp_fx = WFPExchangeRates(wfp_api)
     if wfp_rates_folder:
+        # See docs/decisions/0001
         filepath = join(wfp_rates_folder, "wfp_rates.json")
         if exists(filepath):
             logger.info(f"Loading WFP FX rates from {filepath}")

@@ -81,9 +81,7 @@ class WFPFood:
             process_source(sources, price_data.commodity_price_source_name)
             date = price_data.commodity_price_date
             if date.tzinfo is None:
-                # data_bridges_client parses WFP's timezone-less date strings
-                # into naive datetimes; assume UTC to match previous
-                # parse_date-based behaviour
+                # See docs/decisions/0004
                 date = date.replace(tzinfo=UTC)
             if date < start_date:
                 start_date = date
