@@ -65,3 +65,8 @@ Requires `~/.useragents.yaml` with a `hdx-scraper-wfp-foodprices` entry.
 ## Scope of Changes
 
 When fixing a bug or addressing PR feedback, change only what is necessary to resolve the specific issue. Do not refactor surrounding code, rename variables, adjust formatting, or make improvements in the same commit unless they are directly required by the fix.
+
+## Decision Records
+
+Non-trivial design decisions are recorded in `docs/decisions/` (see `docs/decisions/README.md`) —
+the distilled decision, not the full planning narrative, belongs here.
