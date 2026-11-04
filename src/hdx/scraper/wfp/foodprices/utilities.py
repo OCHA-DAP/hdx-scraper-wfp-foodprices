@@ -7,9 +7,9 @@ from hdx.location.currency import Currency
 from hdx.location.wfp_api import WFPAPI
 from hdx.location.wfp_exchangerates import WFPExchangeRates
 from hdx.utilities.dateparse import now_utc, parse_date
-from hdx.utilities.loader import load_text, load_yaml
+from hdx.utilities.loader import load_json, load_text
 from hdx.utilities.retriever import Retrieve
-from hdx.utilities.saver import save_text, save_yaml
+from hdx.utilities.saver import save_json, save_text
 from sigfig import round
 
 logger = logging.getLogger(__name__)
@@ -48,14 +48,18 @@ def setup_currency(
     currency_codes = [x["code"] for x in currencies]
     wfp_fx = WFPExchangeRates(wfp_api)
     if wfp_rates_folder:
-        filepath = join(wfp_rates_folder, "wfp_rates.yaml")
+        # JSON not YAML: load_yaml of 707,927 rates holds 1.46 GB, json 115 MB
+        filepath = join(wfp_rates_folder, "wfp_rates.json")
         if exists(filepath):
             logger.info(f"Loading WFP FX rates from {filepath}")
-            wfp_historic_rates = load_yaml(filepath)
+            wfp_historic_rates = {
+                currency: {int(timestamp): rate for timestamp, rate in rates.items()}
+                for currency, rates in load_json(filepath).items()
+            }
         else:
             wfp_historic_rates = wfp_fx.get_historic_rates(currency_codes)
             logger.info(f"Saving WFP FX rates to {filepath}")
-            save_yaml(wfp_historic_rates, filepath)
+            save_json(wfp_historic_rates, filepath)
     else:
         wfp_historic_rates = wfp_fx.get_historic_rates(currency_codes)
     Currency.setup(
