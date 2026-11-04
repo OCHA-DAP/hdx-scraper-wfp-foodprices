@@ -67,13 +67,12 @@ class TestWFP:
                     markets = get_markets(downloader, country_dir)
                     assert len(markets) == 205
 
-                    prices_generator = GlobalPricesGenerator(
-                        configuration, downloader, country_dir
+                    prices_generator = GlobalPricesGenerator(configuration, country_dir)
+                    start_date, end_date, year_to_pricespath = (
+                        prices_generator.create_prices_files(tempdir)
                     )
-                    start_date, end_date = prices_generator.get_years_per_country()
                     assert start_date == datetime(2000, 1, 15, 0, 0, tzinfo=UTC)
                     assert end_date == datetime(2024, 11, 15, 0, 0, tzinfo=UTC)
-                    year_to_pricespath = prices_generator.create_prices_files(tempdir)
                     assert year_to_pricespath == {
                         2000: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2000.csv",
                         2001: "/tmp/TestWFPFoodPricesGlobal/wfp_food_prices_global_2001.csv",
@@ -312,7 +311,6 @@ class TestWFP:
 
                     hapi_output = HAPIOutput(
                         configuration,
-                        downloader,
                         tempdir,
                         error_handler,
                     )

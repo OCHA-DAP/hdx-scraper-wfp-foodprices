@@ -44,9 +44,7 @@ def match_admins(configuration, admin_matching_dir: str) -> list[dict]:
                     save=False,
                     use_saved=True,
                 )
-                hapi_output = HAPIOutput(
-                    configuration, downloader, tempdir, error_handler
-                )
+                hapi_output = HAPIOutput(configuration, tempdir, error_handler)
                 hapi_output.setup_admins(retriever)
                 for case in cases:
                     row = {
@@ -109,9 +107,7 @@ class TestAdminMatching:
                         save=False,
                         use_saved=True,
                     )
-                    hapi_output = HAPIOutput(
-                        configuration, downloader, tempdir, error_handler
-                    )
+                    hapi_output = HAPIOutput(configuration, tempdir, error_handler)
                     hapi_output.setup_admins(retriever)
                     row = {
                         "market": "Buikwe",
