@@ -9,14 +9,11 @@ currency_headers:
   - code
   - name
 
-# This is where our definitions of admin levels differ so there is only admin 1
-# data available in admin 2
+# See docs/decisions/0002 for unused_adm1, unused_adm2 and adm1_only
 unused_adm1:
   - "CIV"
   - "KEN"
 
-# This is where our definitions of admin levels differ so there is only admin 2
-# data available in admin 1
 unused_adm2:
   - "DOM"
   - "RUS"
@@ -25,8 +22,7 @@ unused_adm2:
 adm1_only:
   - "SLV"
 
-# WFP admin names that AdminLevel matches wrongly or not at all. Admin 1 names
-# for countries in unused_adm1 are WFP's admin 2 names.
+# See docs/decisions/0003 for admin1_config and admin2_config
 admin1_config:
   admin_name_mappings:
     "BGD|Chittagong": "BD20"  # Chattogram
@@ -41,8 +37,6 @@ admin1_config:
     "VEN|Distrito Federal": "VE01"  # Distrito Capital
     "VEN|Vargas": "VE24"  # Renamed La Guaira
     "YEM|Al Hudaydah": "YE18"  # Al Hodeidah, not Al Bayda (YE14)
-  # Regions split, so the district decides the region: Brong Ahafo into Ahafo,
-  # Bono and Bono East, Vatovavy Fitovinany into Vatovavy and Fitovinany
   admin_fuzzy_dont:
     - "GHA|brong ahafo"
     - "MDG|vatovavy fitovinany"
