@@ -574,7 +574,7 @@ requires-dist = [
     { name = "hdx-python-api", specifier = ">=6.7.8" },
     { name = "hdx-python-country", extras = ["wfp"], specifier = ">=4.3.0" },
     { name = "hdx-python-utilities", specifier = ">=4.2.7" },
-    { name = "sigfig" },
+    { name = "sigfig", specifier = ">=1.4.0" },
 ]
 
 [package.metadata.requires-dev]
